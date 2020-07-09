@@ -1,0 +1,232 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://github.com/SteveLLamb/doc-registry/0.0.1",
+    "$comment": "Copyright, Steve LLamb <steve.llamb@gmail.com>",
+    "title": "Schema for the document repo",
+    "items": {
+        "anyOf": [
+            {
+                "$id": "#/items/anyOf/0",
+                "type": "object",
+                "required": [
+                    "docId",
+                    "publisher",
+                    "type",
+                    "label",
+                    "title",
+                    "status"
+                ],
+                "additionalProperties": true,
+                "properties": {
+                    "docId": {
+                        "$id": "#/items/anyOf/0/properties/docId",
+                        "type": "string",
+                        "uniqueItems": true
+                    },
+                    "publisher": {
+                        "$id": "#/items/anyOf/0/properties/publisher",
+                        "type": "string"
+                    },
+                    "group": {
+                        "$id": "#/items/anyOf/0/properties/group",
+                        "type": "string"
+                    },
+                    "type": {
+                        "$id": "#/items/anyOf/0/properties/type",
+                        "type": "string"
+                    },
+                    "label": {
+                        "$id": "#/items/anyOf/0/properties/label",
+                        "type": "string"
+                    },
+                    "title": {
+                        "$id": "#/items/anyOf/0/properties/title",
+                        "type": "string"
+                    },
+                    "status": {
+                        "$id": "#/items/anyOf/0/properties/status",
+                        "type": "string"
+                    },
+                    "stablized": {
+                        "$id": "#/items/anyOf/0/properties/stablized",
+                        "type": "boolean"
+                    },
+                    "stablizedDate": {
+                        "$id": "#/items/anyOf/0/properties/stablizedDate",
+                        "type": "string"
+                    },
+                    "reaffirmed": {
+                        "$id": "#/items/anyOf/0/properties/reaffirmed",
+                        "type": "boolean"
+                    },
+                    "reaffirmDate": {
+                        "$id": "#/items/anyOf/0/properties/reaffirmDate",
+                        "type": "string"
+                    },
+                    "withdrawn": {
+                        "$id": "#/items/anyOf/0/properties/withdrawn",
+                        "type": "boolean"
+                    },
+                    "withdrawnDate": {
+                        "$id": "#/items/anyOf/0/properties/withdrawnDate",
+                        "type": "string"
+                    },
+                    "superseded": {
+                        "$id": "#/items/anyOf/0/properties/superseded",
+                        "type": "boolean"
+                    },
+                    "supersededDate": {
+                        "$id": "#/items/anyOf/0/properties/supersededDate",
+                        "type": "string"
+                    },
+                    "supersededBy": {
+                        "$id": "#/items/anyOf/0/properties/supersededBy",
+                        "type": "array",
+                        "additionalItems": true,
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "$id": "#/items/anyOf/0/properties/supersededBy/items/anyOf/0",
+                                    "type": "string",
+                                    "minLength": 1
+                                }
+                            ],
+                            "$id": "#/items/anyOf/0/properties/supersededBy/items"
+                        }
+                    },
+                    "amended": {
+                        "$id": "#/items/anyOf/0/properties/amended",
+                        "type": "boolean"
+                    },
+                    "amendedDate": {
+                        "$id": "#/items/anyOf/0/properties/amendedDate",
+                        "type": "string"
+                    },
+                    "amendedBy": {
+                        "$id": "#/items/anyOf/0/properties/amendedBy",
+                        "type": "array",
+                        "additionalItems": true,
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "$id": "#/items/anyOf/0/properties/amendedBy/items/anyOf/0",
+                                    "type": "string",
+                                    "minLength": 1
+                                }
+                            ],
+                            "$id": "#/items/anyOf/0/properties/amendedBy/items"
+                        }
+                    },
+                    "details": {
+                        "$id": "#/items/anyOf/0/properties/details",
+                        "type": "string"
+                    },
+                    "url": {
+                        "$id": "#/items/anyOf/0/properties/url",
+                        "type": "string"
+                    },
+                    "publicationDate": {
+                        "$id": "#/items/anyOf/0/properties/publicationDate",
+                        "type": "string"
+                    },
+                    "draftInfo": {
+                        "$id": "#/items/anyOf/0/properties/draftInfo",
+                        "type": "object",
+                        "required": [
+                            "group"
+                        ],
+                        "additionalProperties": true,
+                        "properties": {
+                            "group": {
+                                "$id": "#/items/anyOf/0/properties/draftInfo/properties/group",
+                                "type": "string"
+                            },
+                            "recommendation": {
+                                "$id": "#/items/anyOf/0/properties/draftInfo/properties/recommendation",
+                                "type": "string"
+                            },
+                            "approved": {
+                                "$id": "#/items/anyOf/0/properties/draftInfo/properties/approved",
+                                "type": "boolean"
+                            },
+                            "notes": {
+                                "$id": "#/items/anyOf/0/properties/draftInfo/properties/notes",
+                                "type": "string"
+                            },
+                            "updateDependency": {
+                                "$id": "#/items/anyOf/0/properties/draftInfo/properties/updateDependency",
+                                "type": "array",
+                                "additionalItems": true,
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "$id": "#/items/anyOf/0/properties/draftInfo/properties/updateDependency/items/anyOf/0",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "$id": "#/items/anyOf/0/properties/draftInfo/properties/updateDependency/items"
+                                }
+                            },
+                            "assigned": {
+                                "$id": "#/items/anyOf/0/properties/draftInfo/properties/assigned",
+                                "type": "string"
+                            },
+                            "actionItems": {
+                                "$id": "#/items/anyOf/0/properties/draftInfo/properties/actionItems",
+                                "type": "string"
+                            },
+                            "projectLink": {
+                                "$id": "#/items/anyOf/0/properties/draftInfo/properties/projectLink",
+                                "type": "string"
+                            },
+                            "groupLink": {
+                                "$id": "#/items/anyOf/0/properties/draftInfo/properties/groupLink",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "references": {
+                        "$id": "#/items/anyOf/0/properties/references",
+                        "type": "object",
+                        "additionalProperties": true,
+                        "properties": {
+                            "normative": {
+                                "$id": "#/items/anyOf/0/properties/references/properties/normative",
+                                "type": "array",
+                                "additionalItems": true,
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "$id": "#/items/anyOf/0/properties/references/properties/normative/items/anyOf/0",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "$id": "#/items/anyOf/0/properties/references/properties/normative/items"
+                                }
+                            },
+                            "bibliographic": {
+                                "$id": "#/items/anyOf/0/properties/references/properties/bibliographic",
+                                "type": "array",
+                                "additionalItems": true,
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "$id": "#/items/anyOf/0/properties/references/properties/bibliographic/items/anyOf/0",
+                                            "type": "string"
+                                        }
+                                    ],
+                                    "$id": "#/items/anyOf/0/properties/references/properties/bibliographic/items"
+                                }
+                            }
+                        }
+                    },
+                    "github": {
+                        "$id": "#/items/anyOf/0/properties/github",
+                        "type": "string"
+                    }
+                }
+            }
+        ],
+        "$id": "#/items"
+    }
+}
