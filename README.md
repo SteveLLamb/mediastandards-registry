@@ -9,4 +9,5 @@ The list data is:
 * schema for contribution to the list at [`src/main/schemas`](src/main/schemas/)
 
 A build of the website from the `master` branch is automatically published at:
+
 https://stevellamb.github.io/doc-registry/documents.html
