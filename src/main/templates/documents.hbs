@@ -55,22 +55,22 @@
         <td class="label">
           <a class="anchor" id="{{docId}}" href="#{{docId}}"></a><code>{{label}}</code>
           {{#inprocess}}
-            <span class="mx-3 badge badge-success">In Process</span><br>    
+            <br><span class="mx-3 badge badge-success">In Process</span>    
           {{/inprocess}}
           {{#withdrawn}}
-            <span class="mx-3 badge badge-danger">Withdrawn</span><br>  
+            <br><span class="mx-3 badge badge-danger">Withdrawn</span>  
           {{/withdrawn}}
+          {{#superseded}}
+            <br><span class="mx-3 badge badge-warning">Superseded</span> 
+          {{/superseded}}
           {{#stablized}}
-            <span class="mx-3 badge badge-primary">Stablized</span><br>    
+            <br><span class="mx-3 badge badge-primary">Stablized</span>    
           {{/stablized}}
           {{#reaffirmed}}
-            <span class="mx-3 badge badge-info">Reaffirmed</span><br>    
+            <br><span class="mx-3 badge badge-info">Reaffirmed</span>   
           {{/reaffirmed}}
-          {{#superseded}}
-            <span class="mx-3 badge badge-warning">Superseded</span><br> 
-          {{/superseded}}
           {{#amended}}
-            <span class="mx-3 badge badge-secondary">Amended</span><br>    
+            <br><span class="mx-3 badge badge-secondary">Amended</span>    
           {{/amended}}
         </td>
         <td class="publisher">
