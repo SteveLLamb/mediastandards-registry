@@ -12,8 +12,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
-  <script type="application/javascript" src="documents.js" defer></script>
-  <script type="application/javascript" src="backtotop.js"></script>
+  <script type="application/javascript" src="features.js" defer></script>
 </head>
 
 <body>
@@ -31,8 +30,9 @@
           <a id="pdf-download" target="_blank" class="nav-link" title="Download as PDF" href="{{pdf_path}}">Download PDF</a>
         </li>
       </ul>
-        <form class="form-inline">
-          <input id="search" class="form-control" type="search" placeholder="Search Documents" aria-label="Search">
+        <form id="search-form" class="form-inline">
+          <input id="search" class="form-control mb-2" type="text" placeholder="Search Documents" aria-label="Search">
+          <input type="button" class="btn btn-secondary mb-2" value="x" id="clear-filter"/>
         </form>
     </div>
   </nav>
@@ -49,7 +49,7 @@
         <th scope="col"></th>    
       </tr>
     </thead>
-    <tbody>
+    <tbody id="searchTable">
       {{#data}}
       <tr id="document-{{docId}}">
         <td class="label">
@@ -180,13 +180,13 @@
                     <span>Normative References:<br></span>
                   {{/if}}
                     {{#references/normative}}
-                      <a class="document-link" href="#{{this}}">{{this}}</a><br> 
+                      <a class="document-link" id="clear-filter" href="#{{this}}">{{this}}</a><br> 
                     {{/references/normative}}
                   {{#if references/bibliographic}}
                     <span>Bibliographic References:<br></span>
                   {{/if}}
                     {{#references/bibliographic}}
-                      <a class="document-link" href="#{{this}}">{{this}}</a><br>                  
+                      <a class="document-link" id="clear-filter" href="#{{this}}">{{this}}</a><br>                  
                     {{/references/bibliographic}}
                 </div>
               {{/if}}
@@ -198,13 +198,13 @@
               <span>Amended by:<br></span>
             {{/if}}
             {{#amendedBy}}
-              <a class="document-link" href="#{{this}}">{{this}}</a><br> 
+              <a class="document-link" id="clear-filter" href="#{{this}}">{{this}}</a><br> 
           {{/amendedBy}}
           {{#if supersededBy}}
               <span>Superseded by:<br></span>
             {{/if}}
             {{#supersededBy}}
-              <a class="document-link" href="#{{this}}">{{this}}</a><br> 
+              <a class="document-link" id="clear-filter" href="#{{this}}">{{this}}</a><br> 
             {{/supersededBy}}
         </td>
       </tr>
