@@ -1211,9 +1211,85 @@
         "type": "Standard",
         "label": "RFC 2046",
         "title": "Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types",
-        "status": "Active",
+        "status": "Amended",
+        "amended": true,
+        "amendedBy": [
+            "IETF_RFC_2646",
+            "IETF_RFC_3798",
+            "IETF_RFC_5147",
+            "IETF_RFC_6657",
+            "IETF_RFC_8098"
+        ],
         "url": "https://tools.ietf.org/html/rfc2046",
-        "publicationDate": "1996-11-01T07:00:00.000Z"
+        "publicationDate": "1996-11-01T07:00:00.000Z",
+    },
+    {
+        "docId": "IETF_RFC_2646",
+        "publisher": "IETF",
+        "type": "Standard",
+        "label": "RFC 2646",
+        "title": "The Text/Plain Format Parameter",
+        "status": "Superseded",
+        "superseded": true,
+        "supersededBy": [
+            "IETF_RFC_3676"
+        ],
+        "url": "https://tools.ietf.org/html/rfc2646",
+        "publicationDate": "1999-08-01T07:00:00.000Z",
+    },
+    {
+        "docId": "IETF_RFC_3676",
+        "publisher": "IETF",
+        "type": "Standard",
+        "label": "RFC 3676",
+        "title": "The Text/Plain Format and DelSp Parameters",
+        "status": "Active",
+        "url": "https://tools.ietf.org/html/rfc3676",
+        "publicationDate": "2004-02-01T07:00:00.000Z",
+    },
+    {
+        "docId": "IETF_RFC_3798",
+        "publisher": "IETF",
+        "type": "Standard",
+        "label": "RFC 3798",
+        "title": "Message Disposition Notification",
+        "status": "Superseded",
+        "superseded": true,
+        "supersededBy": [
+            "IETF_RFC_8098"
+        ],
+        "url": "https://tools.ietf.org/html/rfc3798",
+        "publicationDate": "2004-05-01T07:00:00.000Z",
+    },
+    {
+        "docId": "IETF_RFC_5147",
+        "publisher": "IETF",
+        "type": "Standard",
+        "label": "RFC 5147",
+        "title": "URI Fragment Identifiers for the text/plain Media Type",
+        "status": "Active",
+        "url": "https://tools.ietf.org/html/rfc5147",
+        "publicationDate": "2008-04-01T07:00:00.000Z",
+    },
+    {
+        "docId": "IETF_RFC_6657",
+        "publisher": "IETF",
+        "type": "Standard",
+        "label": "RFC 6657",
+        "title": "Update to MIME regarding 'charset' Parameter Handling in Textual Media Types",
+        "status": "Active",
+        "url": "https://tools.ietf.org/html/rfc6657",
+        "publicationDate": "2012-07-01T07:00:00.000Z",
+    },
+    {
+        "docId": "IETF_RFC_8098",
+        "publisher": "IETF",
+        "type": "Standard",
+        "label": "RFC 8098",
+        "title": "Message Disposition Notification",
+        "status": "Active",
+        "url": "https://tools.ietf.org/html/rfc8098",
+        "publicationDate": "2017-02-01T07:00:00.000Z",
     },
     {
         "docId": "IETF_RFC_2104",
@@ -1393,14 +1469,14 @@
         "status": "Amended",
         "amended": true,
         "amendedBy": [
-            "IETF_RFC_2818",
+            "IETF_RFC_5785",
             "IETF_RFC_7230"
         ],
         "url": "https://tools.ietf.org/html/rfc2818",
         "publicationDate": "2000-05-01T07:00:00.000Z"
     },
     {
-        "docId": "IETF_RFC_2818",
+        "docId": "IETF_RFC_5785",
         "publisher": "IETF",
         "type": "Standard",
         "label": "RFC 5785",
@@ -6122,6 +6198,19 @@
             "approved": true,
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=80f77c28-d7d3-4488-bfd0-fda977ea9e7f",
             "projectLink": "https://kws.smpte.org/higherlogic/ws/projects/543"
+        },
+        "references": {
+            "normative": [
+                "W3C_XML_1_3rd_20040204",
+                "W3C_XMLSCH_P1_20041028",
+                "W3C_XMLSCH_P2_20041028",
+                "IETF_RFC_2396",
+                "IETF_RFC_4122",
+                "ISOIEC_15948_2004",
+                "ISOIEC_14496_P22_2009",
+                "ISOIEC_10646_1_2000",
+                "UNI_SA9_0610"
+            ]
         }
     },
     {
@@ -6499,6 +6588,47 @@
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "projectLink": "https://kws.smpte.org/higherlogic/ws/projects/239"
+        },
+        "references": {
+            "normative": [
+                "ST377_1_2011",
+                "ST377_4_2012",
+                "ST382_2007",
+                "ST400_2012",
+                "ST422_2006",
+                "ST428_1_2006",
+                "ST428_2_2006",
+                "ST428_7_2010",
+                "ST428_10_2008",
+                "ST428_12_2013",
+                "ST429_3_2007",
+                "ST429_4_2006",
+                "ST429_5_2009",
+                "ST429_6_2006",
+                "ST429_7_2006",
+                "ST429_8_2007",
+                "ST429_10_2008",
+                "ST429_12_2008",
+                "ST430_2_2006",
+                "ST2029_2009",
+                "ISOIEC_10646_2003",
+                "ISOIEC_15444_1_2004",
+                "ISOIEC_15444_1_2004_AMD1_2006",
+                "ISOIEC_15948_2004",
+                "IEC_61966_2_1_1999",
+                "IETF_RFC_4246",
+                "IETF_RFC_4122"
+            ],
+            "bibliographic": [
+                "ST336_2007",
+                "RP224",
+                "ST428_11_2013",
+                "ST429_13_2009",
+                "W3C_XML_1_3rd_20040204",
+                "W3C_XMLSCH_P1_20041028",
+                "W3C_XMLSCH_P2_20041028",
+                "IETF_RFC_2046"
+            ]
         }
     },
     {
@@ -6508,10 +6638,10 @@
         "type": "Standard",
         "label": "ST 429-2:2013 Am 1:2018",
         "title": "D-Cinema Packaging – DCP Operational Constraints",
-        "status": "Superseded",
+        "status": "In Process",
         "superseded": true,
         "supersededBy": [
-            "ST429_2_2020"
+            "ST429_2_2019"
         ],
         "details": "To be rolled up into 2020 Version",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-2.2013Am1.2018",
@@ -6522,6 +6652,44 @@
             "notes": "AFR DG",
             "assigned": "TC Chairs",
             "projectLink": "https://kws.smpte.org/higherlogic/ws/projects/510"
+        },
+        "references": {
+            "normative": [
+                "ST377_1_2011",
+                "ST377_4_2012",
+                "ST382_2007",
+                "ST400_2012",
+                "ST422_2006",
+                "ST428_1_20XX",
+                "ST428_2_2006",
+                "ST428_7_2010",
+                "ST428_10_2008",
+                "ST428_12_2013",
+                "ST429_3_2007",
+                "ST429_4_20XX",
+                "ST429_5_2009",
+                "ST429_6_2006",
+                "ST429_7_2006",
+                "ST429_8_2007",
+                "ST429_10_2008",
+                "ST429_12_2008",
+                "ST430_2_2006",
+                "ST2029_2009",
+                "ISOIEC_10646_2003",
+                "ISOIEC_15444_1_2016",
+                "ISOIEC_15948_2004",
+                "IEC_61966_2_1_1999",
+                "IETF_RFC_4246",
+                "IETF_RFC_4122"
+            ],
+            "bibliographic": [
+                "ST336_2007",
+                "RP224",
+                "W3C_XML_1_3rd_20040204",
+                "W3C_XMLSCH_P1_20041028",
+                "W3C_XMLSCH_P2_20041028",
+                "IETF_RFC_2046"
+            ]
         }
     },
     {
@@ -6531,12 +6699,8 @@
         "type": "Standard",
         "label": "ST 429-2:2019",
         "title": "D-Cinema Packaging — DCP Operational Constraints",
-        "status": "Superseded",
-        "superseded": true,
-        "supersededBy": [
-            "ST429_2_2020"
-        ],
-        "details": "updated",
+        "status": "Active",
+        "details": "To be updated, incorporating 2018 Amendment for new 2020 version",
         "url": "https://doi.org/10.5594/SMPTE.ST429-2.2019",
         "publicationDate": "2020-05-12T07:00:00.000Z",
         "notes": "Sub DG",
@@ -6544,6 +6708,50 @@
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=80f77c28-d7d3-4488-bfd0-fda977ea9e7f",
             "projectLink": "https://kws.smpte.org/higherlogic/ws/projects/239"
+        },
+        "references": {
+            "normative": [
+                "ST377_2004",
+                "ST377_4_2012",
+                "ST382_2007",
+                "ST400_2012",
+                "ST422_2006",
+                "ST428_1_2006",
+                "ST428_2_2006",
+                "ST428_7_2014",
+                "ST428_10_2008",
+                "ST428_12_2013",
+                "ST429_3_2007",
+                "ST429_4_2006",
+                "ST429_5_2017",
+                "ST429_6_2006",
+                "ST429_7_2006",
+                "ST429_8_2007",
+                "ST429_10_2008",
+                "ST429_12_2008",
+                "ST429_16_2014",
+                "ST430_2_2006",
+                "ST2029_2009",
+                "ST429_17_2017",
+                "ISOIEC_10646_2003",
+                "ISOIEC_15444_1_2004",
+                "ISOIEC_15444_1_2004_AMD1_2006",
+                "ISOIEC_15948_2004",
+                "IEC_61966_2_1_1999",
+                "IETF_RFC_7302",
+                "IETF_RFC_4246",
+                "IETF_RFC_4122"
+            ],
+            "bibliographic": [
+                "ST336_2007",
+                "RP224",
+                "ST428_11_2013",
+                "ST429_13_2009",
+                "W3C_XML_1_3rd_20040204",
+                "W3C_XMLSCH_P1_20041028",
+                "W3C_XMLSCH_P2_20041028",
+                "IETF_RFC_2046"
+            ]
         }
     },
     {
@@ -6569,13 +6777,13 @@
                 "ST382_2007",
                 "ST400_2012",
                 "ST422_2006",
-                "ST428_1_2019",
+                "ST428_1_2006",
                 "ST428_2_2006",
                 "ST428_7_2014",
                 "ST428_10_2008",
                 "ST428_12_2013",
                 "ST429_3_2007",
-                "ST429_4_2020",
+                "ST429_4_2006",
                 "ST429_5_2017",
                 "ST429_6_2006",
                 "ST429_7_2006",
@@ -6587,7 +6795,8 @@
                 "ST2029_2009",
                 "ST429_17_2017",
                 "ISOIEC_10646_2003",
-                "ISOIEC_15444_1_2016",
+                "ISOIEC_15444_1_2004",
+                "ISOIEC_15444_1_2004_AMD1_2006",
                 "ISOIEC_15948_2004",
                 "IEC_61966_2_1_1999",
                 "IETF_RFC_7302",
@@ -7116,7 +7325,6 @@
         "status": "Active",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-14.2015",
         "publicationDate": "2015-10-08T07:00:00.000Z",
-        "github": "https://github.com/SMPTE/st430-14/issues",
         "references": {
             "normative": [
                 "ST298_2009",
@@ -7154,9 +7362,26 @@
             "groupLink": "https://kws.smpte.org/communities/community-home?communitykey=cb62abd0-5373-44bc-9d11-5e94e6580718&tab=groupdetails",
             "projectLink": "https://kws.smpte.org/higherlogic/ws/projects/562"
         },
+        "github": "https://github.com/SMPTE/st430-14/issues",
         "references": {
             "normative": [
-                "TBD"
+                "ST298_2009",
+                "ST336_2007",
+                "ST377_2004",
+                "ST379_2004",
+                "ST429_2_2013",
+                "ST429_6_2006Am1_2018",
+                "ST429_14_2014",
+                "ST429_18_2019"
+                "ST430_10_2010",
+                "AES_3_2009",
+                "IETF_RFC_2616",
+                "IETF_RFC_2818",
+                "IETF_RFC_3986",
+                "IETF_RFC_6597",
+                "IETF_RFC_2234",
+                "IETF_RFC_4122",
+                "IETF_RFC_2046"
             ]
         }
     },
@@ -7255,6 +7480,19 @@
             "approved": true,
             "groupLink": "https://kws.smpte.org/communities/community-home?communitykey=cb62abd0-5373-44bc-9d11-5e94e6580718&tab=groupdetails",
             "projectLink": "https://kws.smpte.org/higherlogic/ws/projects/478"
+        },
+        "references": {
+            "normative": [
+                "ST429_7_2006",
+                "ST429_14_2014",
+                "ST429_18_2019",
+                "ST430_1_2017",
+                "ST430_1_2017Am1_2019",
+                "ST430_2_2017",
+                "ST430_5_2011",
+                "ST336_2007",
+                "IETF_RFC_3268"
+            ]
         }
     },
     {
