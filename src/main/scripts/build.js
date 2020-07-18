@@ -70,9 +70,9 @@ if (! validator(registry)) {
 const docStatuses = {}
 registry.forEach(item => { docStatuses[item.docId] = item.status} );
 
-hb.registerHelper("getStatus", function(keys) {
+hb.registerHelper("getStatus", function(docId) {
 
-  return docStatuses[keys];
+  return docStatuses[docId];
 
 });
 
