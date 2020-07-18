@@ -65,6 +65,17 @@ if (! validator(registry)) {
   throw "Registry fails validation";
 };
 
+/* load the doc statuses */
+
+const docStatuses = {}
+registry.forEach(item => { docStatuses[item.docId] = item.status} );
+
+hb.registerHelper("getStatus", function(keys) {
+
+  return docStatuses[keys];
+
+});
+
 /* is the registry sorted */
 
 for(let i = 1; i < registry.length; i++) {

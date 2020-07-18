@@ -95,7 +95,7 @@
             <div class="row">
               <div class="col-sm">
                 {{#if status}}
-                Current Status: {{status}}
+                <span class="font-weight-bold">Current Status: <em>{{status}}</em></span>
                 <br>
                 {{/if}}
                 {{#if publicationDate}}
@@ -169,7 +169,7 @@
                   <br><span>Dependent on updates to:</span>
                   {{/if}}
                     {{#draftInfo/updateDependency}}
-                      <br><a class="document-link" href="#{{this}}">{{this}}</a>
+                      <br><a class="document-link" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span>
                     {{/draftInfo/updateDependency}}
                 </div>
               {{/if}}
@@ -177,16 +177,16 @@
               {{#if references}}
                 <div class="col-sm">
                   {{#if references/normative}}
-                    <span>Normative References:<br></span>
+                    <span class="font-weight-bold">Normative References:<br></span>
                   {{/if}}
                     {{#references/normative}}
-                      <a class="document-link" id="clear-filter" href="#{{this}}">{{this}}</a><br> 
+                      <a class="document-link" id="clear-filter" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
                     {{/references/normative}}
                   {{#if references/bibliographic}}
-                    <span>Bibliographic References:<br></span>
+                    <span class="font-weight-bold">Bibliographic References:<br></span>
                   {{/if}}
                     {{#references/bibliographic}}
-                      <a class="document-link" id="clear-filter" href="#{{this}}">{{this}}</a><br>                  
+                      <a class="document-link" id="clear-filter" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br>
                     {{/references/bibliographic}}
                 </div>
               {{/if}}
@@ -195,16 +195,16 @@
         </td>
         <td>
           {{#if amendedBy}}
-              <span>Amended by:<br></span>
+              <span class="font-weight-bold">Amended by:<br></span>
             {{/if}}
             {{#amendedBy}}
-              <a class="document-link" id="clear-filter" href="#{{this}}">{{this}}</a><br> 
+              <a class="document-link" id="clear-filter" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
           {{/amendedBy}}
           {{#if supersededBy}}
-              <span>Superseded by:<br></span>
+              <span class="font-weight-bold">Superseded by:<br></span>
             {{/if}}
             {{#supersededBy}}
-              <a class="document-link" id="clear-filter" href="#{{this}}">{{this}}</a><br> 
+              <a class="document-link" id="clear-filter" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
             {{/supersededBy}}
         </td>
       </tr>

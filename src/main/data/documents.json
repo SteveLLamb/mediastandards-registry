@@ -938,25 +938,35 @@
     {
         "docId": "ETSI_ETR_154_e3",
         "publisher": "ETSI",
-        "type": "Standard",
+        "type": "Specification",
         "label": "ETR 154 Edition 3",
         "title": "Digital Video Broadcasting (DVB); Implementation guidelines for the use of MPEG-2 Systems, Video and Audio in satellite, cable and terrestrial broadcasting applications",
         "status": "Superseded",
         "superseded": true,
         "supersededBy": [
-            "ETSI_ETR_154_2000"
+            "ETSI_ETR_154_v141"
         ],
         "publicationDate": "1997-09-01T07:00:00.000Z"
     },
     {
         "docId": "ETSI_ETR_154_v141",
         "publisher": "ETSI",
-        "type": "Standard",
+        "type": "Specification",
         "label": "ETR 154 V1.4.1",
         "title": "Digital Video Broadcasting (DVB); Implementation guidelines for the use of MPEG-2 Systems, Video and Audio in satellite, cable and terrestrial broadcasting applications",
-        "status": "Active",
+        "status": "Superseded",
         "url": "https://www.etsi.org/deliver/etsi_tr/101100_101199/101154/01.04.01_60/tr_101154v010401p.pdf",
         "publicationDate": "2000-07-01T07:00:00.000Z"
+    },
+    {
+        "docId": "ETSI_ETR_154_e3T",
+        "publisher": "EBU/ETSI",
+        "type": "Specification",
+        "label": "ETSI TS 101 154 V1.9.1",
+        "title": "Digital Video Broadcasting (DVB); Specification for the use of Video and Audio Coding in Broadcasting Applications based on the MPEG-2 Transport Stream",
+        "status": "Superseded",
+        "url": "https://www.etsi.org/deliver/etsi_ts/101100_101199/101154/01.09.01_60/ts_101154v010901p.pdf",
+        "publicationDate": "2009-09-01T07:00:00.000Z"
     },
     {
         "docId": "IANA_LSR",
@@ -6277,7 +6287,7 @@
             "bibliographic": [
                 "ST336_2007",
                 "ST422_2006",
-                "ST429_4_20",
+                "ST429_4_2006",
                 "EG41_2004",
                 "EG42_2004"
             ]
@@ -6814,6 +6824,21 @@
                 "IETF_RFC_2046"
             ]
         }
+    },
+    {
+        "docId": "ST429_3_2006",
+        "publisher": "SMPTE",
+        "group": "21DC",
+        "type": "Standard",
+        "label": "ST 429-3:2006",
+        "title": "D-Cinema Packaging - Sound and Picture Track File",
+        "status": "Superseded",
+        "superseded": true,
+        "supersededBy": [
+            "ST429_3_2007"
+        ],
+        "publicationDate": "2006-08-03T07:00:00.000Z",
+        "details": "Unable to find"
     },
     {
         "docId": "ST429_3_2007",
