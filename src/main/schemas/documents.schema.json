@@ -46,7 +46,7 @@
                     "status": {
                         "$id": "#/items/anyOf/0/properties/status",
                         "type": "string",
-                        "enum": [ "In Process", "Active", "Amended", "Superseded", "Withdrawn", "Unknown"]
+                        "enum": [ "In Process", "Active", "Amended", "Superseded", "Superseded *", "Withdrawn", "Unknown"]
                     },
                     "stablized": {
                         "$id": "#/items/anyOf/0/properties/stablized",
