@@ -642,7 +642,11 @@
         "type": "Specification",
         "label": "DCSS v1.3 2018-0627",
         "title": "Digital Cinema System Specification Version 1.3",
-        "status": "Amended",
+        "status": "Superseded",
+        "superseded": true,
+        "supersededBy": [
+            "DCI_DCSS_v14"
+        ],
         "amended": true,
         "amendedBy": [
             "DCI_DCSS_v13_e1_9",
@@ -662,7 +666,11 @@
         "type": "Specification",
         "label": "DCSS v1.3 Errata 10-12 2018-1207",
         "title": "DCSS Errata 10-12",
-        "status": "Active",
+        "status": "Superseded",
+        "superseded": true,
+        "supersededBy": [
+            "DCI_DCSS_v14"
+        ],
         "url": "https://www.dcimovies.com/errata/v1_3/DCI_DCSS_Errata_10-12_2018-1207.pdf",
         "publicationDate": "2018-12-07T08:00:00.000Z"
     },
@@ -672,7 +680,11 @@
         "type": "Specification",
         "label": "DCSS v1.3 Errata 13-17 2019-0809",
         "title": "DCSS Errata 13-17",
-        "status": "Active",
+        "status": "Superseded",
+        "superseded": true,
+        "supersededBy": [
+            "DCI_DCSS_v14"
+        ],
         "url": "https://www.dcimovies.com/errata/v1_3/DCI_DCSS_Errata_13-17_2019-0809.pdf",
         "publicationDate": "2019-08-09T07:00:00.000Z"
     },
@@ -682,7 +694,11 @@
         "type": "Specification",
         "label": "DCSS v1.3 Errata 18-20 2019-1219",
         "title": "DCSS Errata 18-20",
-        "status": "Active",
+        "status": "Superseded",
+        "superseded": true,
+        "supersededBy": [
+            "DCI_DCSS_v14"
+        ],
         "url": "https://www.dcimovies.com/errata/v1_3/DCI_DCSS_Errata_18-20_2019-1219.pdf",
         "publicationDate": "2019-12-19T08:00:00.000Z"
     },
@@ -692,7 +708,11 @@
         "type": "Specification",
         "label": "DCSS v1.3 Errata 1-9 2018-1001",
         "title": "DCSS Errata 1-9",
-        "status": "Active",
+        "status": "Superseded",
+        "superseded": true,
+        "supersededBy": [
+            "DCI_DCSS_v14"
+        ],
         "url": "https://www.dcimovies.com/errata/v1_3/DCI_DCSS_Errata_1-9_2018-1001.pdf",
         "publicationDate": "2018-10-01T07:00:00.000Z"
     },
@@ -702,7 +722,11 @@
         "type": "Specification",
         "label": "DCSS v1.3 Erratum 21 2020-0206",
         "title": "DCSS Errata 21",
-        "status": "Active",
+        "status": "Superseded",
+        "superseded": true,
+        "supersededBy": [
+            "DCI_DCSS_v14"
+        ],
         "url": "https://www.dcimovies.com/errata/v1_3/DCI_DCSS_Erratum_21_2020-0206.pdf",
         "publicationDate": "2020-02-06T08:00:00.000Z"
     },
@@ -712,7 +736,11 @@
         "type": "Specification",
         "label": "DCSS v1.3 Errata 22-28 2020-0506",
         "title": "DCSS Errata 22-28",
-        "status": "Active",
+        "status": "Superseded",
+        "superseded": true,
+        "supersededBy": [
+            "DCI_DCSS_v14"
+        ],
         "url": "https://www.dcimovies.com/errata/v1_3/DCI_DCSS_Errata_22-28_2020-0506.pdf",
         "publicationDate": "2020-05-06T07:00:00.000Z"
     },
@@ -722,9 +750,23 @@
         "type": "Specification",
         "label": "DCSS v1.3 Errata 29 2020-0714",
         "title": "DCSS Errata 29",
-        "status": "Active",
+        "status": "Superseded",
+        "superseded": true,
+        "supersededBy": [
+            "DCI_DCSS_v14"
+        ],
         "url": "https://www.dcimovies.com/errata/v1_3/DCI_DCSS_Errata_29_2020-0714.pdf",
         "publicationDate": "2020-07-14T07:00:00.000Z"
+    },
+    {
+        "docId": "DCI_DCSS_v14",
+        "publisher": "DCI",
+        "type": "Specification",
+        "label": "DCSS v1.4 2020-0720",
+        "title": "Digital Cinema System Specification Version 1.4",
+        "status": "Active",
+        "url": "https://www.dcimovies.com/specification/DCI_DCSS_v1-4_20-July-2020.pdf",
+        "publicationDate": "2020-07-20T07:00:00.000Z"
     },
     {
         "docId": "DCI_m_2020_NIST",
