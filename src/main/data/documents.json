@@ -2053,10 +2053,10 @@
         "publicationDate": "2014-06-01T07:00:00.000Z"
     },
     {
-        "docId": "IETF_RFC_7279",
+        "docId": "IETF_RFC_7972",
         "publisher": "IETF",
         "type": "Informational",
-        "label": "RFC 7279",
+        "label": "RFC 7972",
         "title": "Entertainment Identifier Registry (EIDR) URN Namespace Definition",
         "status": "Active",
         "url": "https://tools.ietf.org/html/rfc7972",
@@ -2071,7 +2071,7 @@
         "status": "Superseded",
         "superseded": true,
         "supersededBy": [
-            "IETF_RFC_7279"
+            "IETF_RFC_7972"
         ],
         "url": "https://tools.ietf.org/html/rfc7302",
         "publicationDate": "2014-07-01T07:00:00.000Z"
@@ -6684,19 +6684,17 @@
         "type": "Standard",
         "label": "ST 429-2:2013 Am 1:2018",
         "title": "D-Cinema Packaging – DCP Operational Constraints",
-        "status": "In Process",
+        "status": "Superseded",
         "superseded": true,
         "supersededBy": [
             "ST429_2_2019"
         ],
-        "details": "Pushed back to FCD - To be rolled up into 2020 Version",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-2.2013Am1.2018",
         "publicationDate": "2019-01-25T08:00:00.000Z",
         "draftInfo": {
-            "group": "21DC DG_Doc_Mx",
-            "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
-            "notes": "AFR DG",
-            "assigned": "TC Chairs",
+            "group": "21DC AFR",
+            "groupLink": "https://kws.smpte.org/higherlogic/ws/groups/ec6e6ee8-8faf-4ad8-965c-a2e27eb52398",
+            "notes": "Pushed back to FCD - as ST 429-2:2019 Am 1:2020 - fix references and merge into 2020",
             "projectLink": "https://kws.smpte.org/higherlogic/ws/projects/510"
         },
         "references": {
@@ -6801,6 +6799,71 @@
         }
     },
     {
+        "docId": "ST429_2_2019Am1_2020",
+        "publisher": "SMPTE",
+        "group": "21DC",
+        "type": "Standard",
+        "label": "ST 429-2:2019 Am 1:2020",
+        "title": "D-Cinema Packaging – DCP Operational Constraints",
+        "status": "In Process",
+        "superseded": true,
+        "supersededBy": [
+            "ST429_2_2019"
+        ],
+        "url": "http://dx.doi.org/10.5594/SMPTE.ST429-2.2013Am1.2018",
+        "publicationDate": "2019-01-25T08:00:00.000Z",
+        "draftInfo": {
+            "group": "21DC DG_Doc_Mx",
+            "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
+            "assigned": "TC Chairs",
+            "notes": "429-2:2013 Am1:2018 back to FCD - as this doc - fix references and will be rolled into 2019 before publication to create 2020 version",
+            "actionItems": "https://kws.smpte.org/higherlogic/ws/groups/db60330e-84de-4faf-a59d-f8a29e10ce07/action_item?action_item_id=3606",
+            "projectLink": "https://kws.smpte.org/higherlogic/ws/projects/510"
+        },
+        "references": {
+            "normative": [
+                "ST377_2004",
+                "ST377_4_2012",
+                "ST382_2007",
+                "ST400_2012",
+                "ST422_2006",
+                "ST428_1_2019",
+                "ST428_2_2006",
+                "ST428_7_2014",
+                "ST428_10_2008",
+                "ST428_12_2013",
+                "ST429_3_2007",
+                "ST429_4_2020",
+                "ST429_5_2017",
+                "ST429_6_2006",
+                "ST429_6_2006Am1_2018",
+                "ST429_7_2006",
+                "ST429_8_2007",
+                "ST429_10_2008",
+                "ST429_12_2008",
+                "ST429_16_2014",
+                "ST430_2_2017",
+                "ST2029_2009",
+                "ST429_17_2017",
+                "ISOIEC_10646_2003",
+                "ISOIEC_15444_1_2019",
+                "ISOIEC_15948_2004",
+                "IEC_61966_2_1_1999",
+                "IETF_RFC_7972",
+                "IETF_RFC_4246",
+                "IETF_RFC_4122"
+            ],
+            "bibliographic": [
+                "ST336_2007",
+                "RP224",
+                "W3C_XML_1_3rd_20040204",
+                "W3C_XMLSCH_P1_20041028",
+                "W3C_XMLSCH_P2_20041028",
+                "IETF_RFC_2046"
+            ]
+        }
+    },
+    {
         "docId": "ST429_2_2020",
         "publisher": "SMPTE",
         "group": "21DC",
@@ -6823,37 +6886,35 @@
                 "ST382_2007",
                 "ST400_2012",
                 "ST422_2006",
-                "ST428_1_2006",
+                "ST428_1_2019",
                 "ST428_2_2006",
                 "ST428_7_2014",
                 "ST428_10_2008",
                 "ST428_12_2013",
                 "ST429_3_2007",
-                "ST429_4_2006",
+                "ST429_4_2020",
                 "ST429_5_2017",
                 "ST429_6_2006",
+                "ST429_6_2006Am1_2018",
                 "ST429_7_2006",
                 "ST429_8_2007",
                 "ST429_10_2008",
                 "ST429_12_2008",
                 "ST429_16_2014",
-                "ST430_2_2006",
+                "ST430_2_2017",
                 "ST2029_2009",
                 "ST429_17_2017",
                 "ISOIEC_10646_2003",
-                "ISOIEC_15444_1_2004",
-                "ISOIEC_15444_1_2004_AMD1_2006",
+                "ISOIEC_15444_1_2019",
                 "ISOIEC_15948_2004",
                 "IEC_61966_2_1_1999",
-                "IETF_RFC_7302",
+                "IETF_RFC_7972",
                 "IETF_RFC_4246",
                 "IETF_RFC_4122"
             ],
             "bibliographic": [
                 "ST336_2007",
                 "RP224",
-                "ST428_11_2013",
-                "ST429_13_2009",
                 "W3C_XML_1_3rd_20040204",
                 "W3C_XMLSCH_P1_20041028",
                 "W3C_XMLSCH_P2_20041028",
