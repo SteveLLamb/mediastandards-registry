@@ -11,7 +11,7 @@ $(document).ready(function(){
 
 /* Clear filtering*/
 
-$(document).on('click', '#clear-filter', function(){       
+$(document).on('click', '.clear-filter', function(){       
     $("#searchTable tr").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf('') > -1)
     });

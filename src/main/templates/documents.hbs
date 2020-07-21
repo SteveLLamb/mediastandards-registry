@@ -32,7 +32,7 @@
       </ul>
         <form id="search-form" class="form-inline">
           <span class="align-middle"><input id="search" class="form-control mb-2" type="text" placeholder="Search Documents" aria-label="Search">
-          <input type="button" class="btn btn-secondary btn-sm mb-2" value="x" id="clear-filter"/></span>
+          <input type="button" class="btn btn-secondary btn-sm mb-2 clear-filter" value="x"/></span>
         </form>
     </div>
   </nav>
@@ -180,13 +180,13 @@
                     <span class="font-weight-bold">Normative References:<br></span>
                   {{/if}}
                     {{#references/normative}}
-                      <a class="document-link" id="clear-filter" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
+                      <a class="document-link clear-filter" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
                     {{/references/normative}}
                   {{#if references/bibliographic}}
                     <span class="font-weight-bold">Bibliographic References:<br></span>
                   {{/if}}
                     {{#references/bibliographic}}
-                      <a class="document-link" id="clear-filter" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br>
+                      <a class="document-link clear-filter" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br>
                     {{/references/bibliographic}}
                 </div>
               {{/if}}
@@ -198,13 +198,13 @@
               <span class="font-weight-bold">Amended by:<br></span>
             {{/if}}
             {{#amendedBy}}
-              <a class="document-link" id="clear-filter" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
+              <a class="document-link clear-filter" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
           {{/amendedBy}}
           {{#if supersededBy}}
               <span class="font-weight-bold">Superseded by:<br></span>
             {{/if}}
             {{#supersededBy}}
-              <a class="document-link" id="clear-filter" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
+              <a class="document-link clear-filter" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
             {{/supersededBy}}
         </td>
       </tr>
