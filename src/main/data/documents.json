@@ -2275,6 +2275,7 @@
         "type": "Informational",
         "label": "ISDCF Doc 02",
         "title": "SMPTE-DCP compared to Interop-DCP Informational only",
+        "details": "The Digital Cinema industry is moving from Interop-DCP to SMPTE-DCP, hopefully starting in April 2012. Posted here is the comparison between these two delivery packages.",
         "status": "Active",
         "url": "https://isdcf.com/papers/ISDCF-Doc2-DCP-TransitionReview.pdf",
         "publicationDate": "2011-11-02T07:00:00.000Z"
@@ -2285,6 +2286,7 @@
         "type": "Technical Doc",
         "label": "ISDCF Doc 03",
         "title": "Hard Disc Drive formats",
+        "details": "Distribution Device File System Recommendations",
         "status": "Active",
         "url": "https://isdcf.com/papers/ISDCF-Doc3-Delivery-Recs.pdf",
         "publicationDate": "2017-06-29T07:00:00.000Z"
@@ -2295,6 +2297,7 @@
         "type": "Technical Doc",
         "label": "ISDCF Doc 04",
         "title": "Audio Channel Assignments",
+        "details": "16‐Channel Audio Packaging Guide for both Interop-DCP and SMPTE-DCP. Interop DCP does not have a standardized way of sending multichannel packages. The attached documents describe a common way of transporting multi-channel and the labeling to be consistent with SMPTE-DCP packages.",
         "status": "Active",
         "url": "https://isdcf.com/papers/ISDCF-Doc4-Audio-channel-recommendations.pdf",
         "publicationDate": "2017-06-29T07:00:00.000Z"
@@ -2305,6 +2308,7 @@
         "type": "Technical Doc",
         "label": "ISDCF Doc 05",
         "title": "Guideline formulations for SMPTE-KDMs",
+        "details": "Actual DCI-compliant systems are now starting to appear in the field. Some KDM providers have been sending KDMs containing ContentAuthenticator to be used with Interop content. This will not work on a DCI-compliant system. This document describes formulations for successful KDMs.",
         "status": "Active",
         "url": "https://isdcf.com/papers/ISDCF-Doc5-kdm-certs.pdf",
         "publicationDate": "2017-06-29T07:00:00.000Z"
@@ -2339,6 +2343,7 @@
         "type": "Informational",
         "label": "ISDCF Doc 08",
         "title": "Theater Key Retrieval",
+        "details": "Tired of using Email to send KDMs to theaters? Here is a very rough proposal for a TKR that uses open standards to deliver Keys. This is a WORKING DRAFT.",
         "status": "Withdrawn",
         "withdrawn": true,
         "url": "http://isdcf.com/papers/ISDCF-Doc8-TheaterKeyRetrieval-TKR-v03.pdf",
@@ -2350,6 +2355,7 @@
         "type": "Informational",
         "label": "ISDCF Doc 09",
         "title": "Closed Caption Authoring Best Practices",
+        "details": "Closed caption devices have some strange and unusual behavior – from limited number of display characters to limited number of lines to unique fonts. Captured here are some suggestions to maximize the quality of closed captions.",
         "status": "Active",
         "url": "https://isdcf.com/papers/ISDCF-Doc9-Closed-Caption-Authoring-Best-Practices.pdf",
         "publicationDate": "2016-02-11T08:00:00.000Z"
@@ -2360,9 +2366,21 @@
         "type": "Informational",
         "label": "ISDCF Doc 10",
         "title": "Subtitles and Captions in Digital Cinema",
+        "details": "Subtitles and Captions in Digital Cinema. Digital cinema provides for subtitles and captions, both on the main screen and off. This paper provides a brief description of these capabilities.",
         "status": "Active",
         "url": "https://isdcf.com/papers/ISDCF-Doc10-Subtitles-and-Captions-in%20Digital-Cinema-20160211.pdf",
         "publicationDate": "2016-02-11T08:00:00.000Z"
+    },
+    {
+        "docId": "ISDCF_RP_430_10",
+        "publisher": "ISDCF",
+        "type": "Informational",
+        "label": "ISDCF RP for 430-10",
+        "title": "SMPTE ST 430-10 Implementation Notes",
+        "details": "Harold Hallikainen created a document for recommended practices for SMPTE ST430-10. For convenience is it provided here. This is not an official ISDCF document, but may help authoring services in understanding how to prepare content.",
+        "status": "Active",
+        "url": "http://isdcf.com/papers/ISDCF-SMPTE-ST-430-10-Implementation-Notes20180308.pdf",
+        "publicationDate": "2018-03-08T08:00:00.000Z"
     },
     {
         "docId": "ISDCF_D11",
@@ -2370,6 +2388,7 @@
         "type": "Informational",
         "label": "ISDCF Doc 11",
         "title": "How Loud is a Movie? – a New Measurement Procedure",
+        "details": "Leq(m10)2.0 A procedure is introduced to measure the subjective loudness of an entire movie and to develop a suitable metric. Leq(m) has been used for over 15 years to measure and then control the level of trailers and commercials, both in the US and overseas. The method to be described takes a ten-minute rolling average of Leq(m) throughout an entire movie, and then integrates the values above a given threshold. The procedure is not intended to constrain the levels of movies, simply to come up with a metric to describe the subjective loudness. A suggested descriptive is Leq(m10). Reposted Accepted for publication and copyright SMPTE – reproduced by permission. Ioan Allen Author.",
         "status": "Active",
         "url": "https://isdcf.com/papers/ISDCF-Doc11-MovieLoudnessMeasurement20160315.pdf",
         "publicationDate": "2016-03-15T07:00:00.000Z"
@@ -2382,7 +2401,7 @@
         "title": "Ingest Behavior (a document under development)",
         "status": "In Process",
         "inprocess": true,
-        "details": "DRAFT",
+        "details": "DRAFT - NOT YET APPROVED",
         "url": "https://isdcf.com/papers/ISDCF-Doc12-Recommended-Practice-for-Ingest-Behavior-DRAFT-20170322.pdf",
         "publicationDate": "2017-03-22T07:00:00.000Z"
     },
@@ -2392,6 +2411,7 @@
         "type": "Technical Doc",
         "label": "ISDCF Doc 13",
         "title": "Sign Language Video Encoding for Digital Cinema",
+        "details": "To submit comments and corrections, go to GH",
         "status": "Active",
         "url": "https://isdcf.com/papers/ISDCF-Doc13-Sign-Language-Video-Encoding-for-Digital-Cinema.pdf",
         "publicationDate": "2018-07-18T07:00:00.000Z",
@@ -2403,6 +2423,7 @@
         "type": "Technical Doc",
         "label": "ISDCF Doc 14",
         "title": "Digital Delivery of DCPs – Informational",
+        "details": "This is an informational document on the safe transfer and delivery of DCPs between facilities. Due to the security built into the DCP structure the basic transfer can be based on cost and efficiency.",
         "status": "Active",
         "url": "https://isdcf.com/papers/ISDCF-Doc14-Digital-Delivery-of-DCPs.pdf",
         "publicationDate": "2019-01-03T08:00:00.000Z"
@@ -2423,11 +2444,13 @@
         "type": "Informational",
         "label": "ISDCF HighFrameRate DCP",
         "title": "P-HFR -- Prototype DCP for High Frame Rate Projection",
+        "details": "A high frame rate movie was distributed in SMPTE-DCP at the end of 2012. To facilitate the interoperability of the release, here is a very drafty specifications for 48 FPS per eye distribution.",
         "status": "Withdrawn",
         "withdrawn": true,
         "url": "https://isdcf.com/papers/ISDCF-HighFrameRate-DCP.pdf",
         "publicationDate": "2012-06-20T07:00:00.000Z"
     },
+
     {
         "docId": "ISOCIE_10527_1991",
         "publisher": "ISO/CIE",
@@ -3535,6 +3558,81 @@
         "status": "Active",
         "url": "https://doi.org/10.6028/NIST.SP.800-38A-Add",
         "publicationDate": "2010-10-21T07:00:00.000Z"
+    },
+    {
+        "docId": "NIST_SP_800_57_P1_R",
+        "publisher": "NIST",
+        "type": "Recommendation",
+        "label": "NIST SP 800-57 Part 1 Revised",
+        "title": "Recommendation for Key Management, Part 1: General (Revised)",
+        "status": "Withdrawn",
+        "withdrawn": true,
+        "superseded": true,
+        "supersededBy": [
+            "NIST_SP_800_57_P1_R5"
+        ],
+        "url": "https://doi.org/10.6028/NIST.SP.800-57p1r2007",
+        "publicationDate": "2007-03-01T07:00:00.000Z"
+    },
+    {
+        "docId": "NIST_SP_800_57_P1_R5",
+        "publisher": "NIST",
+        "type": "Recommendation",
+        "label": "NIST SP 800-57 Part 1 Rev. 5",
+        "title": "Recommendation for Key Management: Part 1 – General",
+        "status": "Active",
+        "url": "https://doi.org/10.6028/NIST.SP.800-57pt1r5",
+        "publicationDate": "2020-05-01T07:00:00.000Z"
+    },
+    {
+        "docId": "NIST_SP_800_57_P2",
+        "publisher": "NIST",
+        "type": "Recommendation",
+        "label": "SP 800-57 Part 2",
+        "title": "Recommendation for Key Management, Part 2: Best Practices for Key Management Organization",
+        "status": "Withdrawn",
+        "withdrawn": true,
+        "superseded": true,
+        "supersededBy": [
+            "NIST_SP_800_57_P2_R1"
+        ],
+        "url": "https://doi.org/10.6028/NIST.SP.800-57p2",
+        "publicationDate": "2005-08-01T07:00:00.000Z"
+    },
+    {
+        "docId": "NIST_SP_800_57_P2_R1",
+        "publisher": "NIST",
+        "type": "Recommendation",
+        "label": "SP 800-57 Part 2 Rev. 1",
+        "title": "Recommendation for Key Management: Part 2 – Best Practices for Key Management Organizations",
+        "status": "Active",
+        "url": "https://doi.org/10.6028/NIST.SP.800-57pt2r1",
+        "publicationDate": "2019-05-01T07:00:00.000Z"
+    },
+    {
+        "docId": "NIST_SP_800_57_P3",
+        "publisher": "NIST",
+        "type": "Recommendation",
+        "label": "SP 800-57 Part 3",
+        "title": "Recommendation for Key Management, Part 3: Application-Specific Key Management Guidance",
+        "status": "Withdrawn",
+        "withdrawn": true,
+        "superseded": true,
+        "supersededBy": [
+            "NIST_SP_800_57_P3_R1"
+        ],
+        "url": "https://doi.org/10.6028/NIST.SP.800-57p3",
+        "publicationDate": "2000-12-01T07:00:00.000Z"
+    },
+    {
+        "docId": "NIST_SP_800_57_P3_R1",
+        "publisher": "NIST",
+        "type": "Recommendation",
+        "label": "SP 800-57 Part 3 Rev. 1",
+        "title": "Recommendation for Key Management, Part 3: Application-Specific Key Management Guidance",
+        "status": "Active",
+        "url": "https://doi.org/10.6028/NIST.SP.800-57pt3r1",
+        "publicationDate": "2015-01-01T07:00:00.000Z"
     },
     {
         "docId": "OM_Mem_34",
