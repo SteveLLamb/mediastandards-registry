@@ -16,13 +16,13 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md navbar-light sticky-top bg-light d-print-none d-flex">
+  <nav class="navbar navbar-expand-md navbar-light sticky-top bg-light d-flex">
     <a class="navbar-brand" href="#">Industry Documents Registry</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav mr-auto d-print-none">
         <li class="nav-item">
           <a id="json-feed" target="_blank" class="nav-link" href="https://github.com/SteveLLamb/doc-registry">Get the JSON</a>
         </li>
@@ -30,7 +30,7 @@
           <a id="pdf-download" target="_blank" class="nav-link" title="Download as PDF" href="{{pdf_path}}">Download PDF</a>
         </li>
       </ul>
-        <form id="search-form" class="form-inline">
+        <form id="search-form" class="form-inline d-print-none">
           <div class="input-group mb-2">
             <input id="search" class="form-control" type="search" placeholder="Search Documents">
           </div>
@@ -39,7 +39,6 @@
   </nav>
   <a href="#" id="toTopBtn" class="cd-top text-replace js-cd-top cd-top--is-visible cd-top--fade-out" data-abc="true"></a>
   <a class="anchor" id="top" href="#top"></a>
-  <div class="d-none d-print-block"><h4>Industry Documents Registry</h4></div>
   <table class="table table-small table-hover">
     <thead class="thead-light">
       <tr>
