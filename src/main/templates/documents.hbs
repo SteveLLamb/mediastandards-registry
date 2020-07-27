@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light d-print-none d-flex">
+  <nav class="navbar navbar-expand-md navbar-light sticky-top bg-light d-print-none d-flex">
     <a class="navbar-brand" href="#">Industry Documents Registry</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -31,8 +31,9 @@
         </li>
       </ul>
         <form id="search-form" class="form-inline">
-          <span class="align-middle"><input id="search" class="form-control mb-2" type="text" placeholder="Search Documents" aria-label="Search">
-          <input type="button" class="btn btn-secondary btn-sm mb-2 clear-filter" value="x"/></span>
+          <div class="input-group mb-2">
+            <input id="search" class="form-control" type="search" placeholder="Search Documents">
+          </div>
         </form>
     </div>
   </nav>

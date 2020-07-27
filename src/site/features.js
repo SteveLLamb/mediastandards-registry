@@ -1,7 +1,7 @@
 /* Filter accross all collumns in table */
 
 $(document).ready(function(){
-  $("#search").on("keyup", function() {
+  $("#search").on("input", function() {
     var value = $(this).val().toLowerCase();
     $("#searchTable tr").filter(function() {
       $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
