@@ -8,131 +8,167 @@ You should have received a copy of the license along with this work.  If not, se
 
 /* pass the option --nopdf to disable PDF creation */
 
-const hb = require('handlebars');
-const fs = require('fs');
 const path = require('path');
+const fs = require('fs').promises;
+const { promisify } = require('util');
+const execFile = promisify(require('child_process').execFile);
+const hb = require('handlebars');
 const puppeteer = require('puppeteer');
-const proc = require('child_process');
 const ajv = require('ajv');
 
-
-const DATA_PATH = "src/main/data/documents.json";
-const DATA_SCHEMA_PATH = "src/main/schemas/documents.schema.json";
-const TEMPLATE_PATH = "src/main/templates/documents.hbs";
-const PAGE_JS_PATH = "src/site/features.js";
-const PAGE_CSS_PATH = "src/site/mobile.css";
+const REGISTRIES_REPO_PATH = "src/main";
+const SITE_PATH = "src/site";
 const BUILD_PATH = "build";
-const PAGE_SITE_PATH = "documents.html";
-const PDF_SITE_PATH = "documents.pdf";
 
-/* instantiate template */
+/* list the available registries type (lower case), id (single, for links), titles (Upper Case), and schema builds */
 
-let template = hb.compile(
-  fs.readFileSync(
-    TEMPLATE_PATH,
-    'utf8'
-  )
-);
+const registries = [
+  {
+    "listType": "documents",
+    "templateType": "documents",
+    "idType": "document",
+    "listTitle": "Documents"
+  }
+]
 
-if (!template) {
-  throw "Cannot load HTML template";
-}
+/* load and build the templates */
 
-/* load and validate the registry */
+async function buildRegistry ({ listType, templateType, idType, listTitle }) {
+  console.log(`Building ${templateType} started`)
 
-let registry = JSON.parse(
-  fs.readFileSync(
-    DATA_PATH
-  )
-);
+  var DATA_PATH = path.join(REGISTRIES_REPO_PATH, "data/" + listType + ".json");
+  var DATA_SCHEMA_PATH = path.join(REGISTRIES_REPO_PATH, "schemas/" + listType + ".schema.json");
+  var TEMPLATE_PATH = "src/main/templates/" + templateType + ".hbs";
+  var PAGE_SITE_PATH = templateType + ".html";
+  var PDF_SITE_PATH = templateType + ".pdf";
 
-if (!registry) {
-  throw "Cannot load registry";
-}
+  /* load header and footer for templates */
 
-var validator_factory = new ajv();
+  hb.registerPartial('header', await fs.readFile("src/main/templates/partials/header.hbs", 'utf8'));
+  hb.registerPartial('footer', await fs.readFile("src/main/templates/partials/footer.hbs", 'utf8'));
 
-let validator = validator_factory.compile(
-  JSON.parse(
-    fs.readFileSync(
-      DATA_SCHEMA_PATH
+  /* instantiate template */
+  
+  let template = hb.compile(
+    await fs.readFile(
+      TEMPLATE_PATH,
+      'utf8'
     )
-  )
-);
+  );
+  
+  if (!template) {
+    throw "Cannot load HTML template";
+  }
+  
+  /* load and validate the registry */
 
-if (! validator(registry)) {
-  console.log(validator.errors);
-  throw "Registry fails validation";
+  let registry = JSON.parse(
+    await fs.readFile(DATA_PATH)
+  );
+  
+  if (!registry) {
+    throw "Cannot load registry";
+  }
+  
+  console.log(`${listTitle} schema validation started`)
+
+  var validator_factory = new ajv();
+
+  let validator = validator_factory.compile(
+    JSON.parse(await fs.readFile(DATA_SCHEMA_PATH))
+  );
+  
+  if (! validator(registry)) {
+    console.log(validator.errors);
+    throw "Registry fails schema validation";
+  }
+  else {
+    console.log(`${listTitle} schema validation passed`)
+  };
+
+  /* load the doc statuses */
+  
+  const docStatuses = {}
+  registry.forEach(item => { docStatuses[item.docId] = item.status} );
+  
+  hb.registerHelper("getStatus", function(docId) {
+  
+    return docStatuses[docId];
+  
+  });
+  
+  /* is the registry sorted */
+  
+  for(let i = 1; i < registry.length; i++) {
+    if (registry[i-1].docID >= registry[i].docID) {
+      throw "Registry key " + registry[i-1].docID + " is " +
+        ((registry[i-1].docID === registry[i].docID) ? "duplicated" : "not sorted");
+    }
+  }
+  
+  /* get the version field */
+  
+  let site_version = "Unknown version"
+  
+  try {
+    site_version = (await execFile('git', [ 'rev-parse', 'HEAD' ])).stdout.trim()
+  } catch (e) {
+    console.warn(e);
+  }
+  
+  /* create build directory */
+  
+  await fs.mkdir(BUILD_PATH, { recursive: true });
+  
+  /* apply template */
+  
+  var html = template({
+    "data" : registry,
+    "date" :  new Date(),
+    "pdf_path": PDF_SITE_PATH,
+    "site_version": site_version,
+    "listType": listType,
+    "idType": idType,
+    "listTitle": listTitle
+  });
+  
+  /* write HTML file */
+  
+  await fs.writeFile(path.join(BUILD_PATH, PAGE_SITE_PATH), html, 'utf8');
+  
+  /* copy in static resources */
+  
+  await Promise.all((await fs.readdir(SITE_PATH)).map(
+    f => fs.copyFile(path.join(SITE_PATH, f), path.join(BUILD_PATH, f))
+  ))
+  
+  /* write pdf */
+  
+  if (process.argv.slice(2).includes("--nopdf")) return;
+  
+  /* set the CHROMEPATH environment variable to provide your own Chrome executable */
+  
+  var pptr_options = {};
+  
+  if (process.env.CHROMEPATH) {
+    pptr_options.executablePath = process.env.CHROMEPATH;
+  }
+  
+  try {
+    var browser = await puppeteer.launch(pptr_options);
+    var page = await browser.newPage();
+    await page.setContent(html);
+    await page.pdf({ path: path.join(BUILD_PATH, PDF_SITE_PATH).toString()});
+    await browser.close();
+  } catch (e) {
+    console.warn(e);
+  }
+
+  console.log(`Build of ${templateType} completed`)
 };
 
-/* load the doc statuses */
+void (async () => {
 
-const docStatuses = {}
-registry.forEach(item => { docStatuses[item.docId] = item.status} );
+  await Promise.all(registries.map(buildRegistry))
 
-hb.registerHelper("getStatus", function(docId) {
-
-  return docStatuses[docId];
-
-});
-
-/* is the registry sorted */
-
-for(let i = 1; i < registry.length; i++) {
-  if (registry[i-1].docID >= registry[i].docID) {
-    throw "Registry key " + registry[i-1].docID + " is " +
-      ((registry[i-1].docID === registry[i].docID) ? "duplicated" : "not sorted");
-  }
-}
-
-/* get the version field */
-
-let version = "Unknown version"
-
-try {
-  version = proc.execSync('git rev-parse HEAD').toString().trim();
-} catch (e) {
-}
-
-/* create build directory */
-
-fs.mkdirSync(BUILD_PATH, { recursive: true });
-
-/* apply template */
-
-var html = template({
-  "version" : version,
-  "data" : registry,
-  "date" :  new Date(),
-  "pdf_path": PDF_SITE_PATH
-});
-
-/* write HTML file */
-
-fs.writeFileSync(path.join(BUILD_PATH, PAGE_SITE_PATH), html, 'utf8');
-
-/* copy in js */
-fs.copyFileSync(PAGE_JS_PATH, path.join(BUILD_PATH, path.basename(PAGE_JS_PATH)));
-fs.copyFileSync(PAGE_CSS_PATH, path.join(BUILD_PATH, path.basename(PAGE_CSS_PATH)));
-
-/* write pdf */
-
-if (process.argv.slice(2).includes("--nopdf")) return;
-
-/* set the CHROMEPATH environment variable to provide your own Chrome executable */
-
-var pptr_options = {};
-
-if (process.env.CHROMEPATH) {
-  pptr_options.executablePath = process.env.CHROMEPATH;
-}
-
-(async () => {
-  const browser = await puppeteer.launch(pptr_options);
-  const page = await browser.newPage();
-  await page.setContent(html);
-  await page.pdf({ path: path.join(BUILD_PATH, PDF_SITE_PATH).toString() })
-  await browser.close();
-  process.exit();
-})();
-
+})().catch(console.error)
