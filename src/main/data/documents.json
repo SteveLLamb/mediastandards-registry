@@ -987,7 +987,29 @@
                 "ST202m_1998",
                 "RP200_2002"
             ]
-        }
+        },
+        "relatedDocs": [
+            "ISO_26432_2_2008"
+        ]
+    },
+    {
+        "docId": "ISO_26432_2_2008",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26432-2:2008",
+        "title": "Digital source processing — Part 2: Digital cinema (D-cinema) low frequency effects (LFE) channel audio characteristics",
+        "status": "Active",
+        "url": "https://www.iso.org/standard/50208.html",
+        "publicationDate": "2008-07-01T07:00:00.000Z",
+        "reaffirmed": true,
+        "reaffirmDate": "2017-01-01T07:00:00.000Z",
+        "workInfo": {
+            "group": "TC36 WG3"
+        },
+        "relatedDocs": [
+            "EG432_2_2006"
+        ]
     },
     {
         "docId": "EIDR_BP",
@@ -2325,7 +2347,10 @@
         "supersededBy": [
             "ST429_16_2014"
         ],
-        "details": "See SMPTE ST429-16"
+        "details": "This document was pushed over to SMPTE, see SMPTE ST429-16",
+        "relatedDocs": [
+            "ST429_16_2014"
+        ]
     },
     {
         "docId": "ISDCF_D07",
@@ -3812,7 +3837,7 @@
         "status": "In Process",
         "inprocess": true,
         "details": "Publication Queue",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_RDD_52",
             "approved": true,
             "assigned": "Jack Watts / Steve LLamb",
@@ -3850,7 +3875,7 @@
         "status": "In Process",
         "inprocess": true,
         "details": "DG Formed",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_RDD_53",
             "approved": true,
             "projectLink": "https://kws.smpte.org/higherlogic/ws/projects/617"
@@ -4116,7 +4141,7 @@
         "status": "Active",
         "url": "http://dx.doi.org/10.5594/SMPTE.RP428-4.2010",
         "publicationDate": "2010-03-31T07:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "Work being done",
@@ -4202,7 +4227,7 @@
         "status": "Withdrawn",
         "withdrawn": true,
         "details": "No longer needed",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC SMS OMB",
             "approved": true,
             "notes": "Closed project, deemed no longer needed by DG",
@@ -5591,7 +5616,7 @@
         "supersededBy": [
             "ST377_1_2009"
         ],
-        "details": "*Future versions are not appropriate for use in D-Cinema",
+        "statusNote": "Future versions are not appropriate for use in D-Cinema",
         "url": "https://doi.org/10.5594/SMPTE.ST377.2004",
         "publicationDate": "2004-09-22T07:00:00.000Z",
         "references": {
@@ -5705,7 +5730,8 @@
         "supersededBy": [
             "ST379_1_2009"
         ],
-        "details": "*Future versions are not appropriate for use in D-Cinema; Cannot locate",
+        "statusNote": "Future versions are not appropriate for use in D-Cinema",
+        "note": "Cannot locate",
         "publicationDate": "2004-09-22T07:00:00.000Z"
     },
     {
@@ -5883,7 +5909,7 @@
         "supersededBy": [
             "ST422_2013"
         ],
-        "details": "*Future versions are not appropriate for use in D-Cinema",
+        "statusNote": "Future versions are not appropriate for use in D-Cinema",
         "url": "https://doi.org/10.5594/SMPTE.ST422.2006",
         "publicationDate": "2006-08-28T07:00:00.000Z"
     },
@@ -6077,7 +6103,7 @@
         "status": "Active",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST428-10.2008",
         "publicationDate": "2008-12-03T08:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "Revise",
@@ -6114,7 +6140,28 @@
         ],
         "url": "http://dx.doi.org/10.5594/SMPTE.ST428-11.2009",
         "publicationDate": "2009-07-01T07:00:00.000Z",
-        "supersededDate": "2013-08-27T07:00:00.000Z"
+        "supersededDate": "2013-08-27T07:00:00.000Z","relatedDocs": [
+            "ISO_26428_11_2011"
+        ]
+    },
+    {
+        "docId": "ISO_26428_11_2011",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26428-11:2011",
+        "title": "Digital cinema (D-cinema) distribution master — Part 11: Additional frame rates",
+        "status": "Active",
+        "url": "https://www.iso.org/standard/57749.html",
+        "publicationDate": "2011-12-01T07:00:00.000Z",
+        "reaffirmed": true,
+        "reaffirmDate": "2017-01-01T07:00:00.000Z",
+        "workInfo": {
+            "group": "TC36 WG2"
+        },
+        "relatedDocs": [
+            "ST428_11_2009"
+        ]
     },
     {
         "docId": "ST428_11_2013",
@@ -6128,10 +6175,10 @@
         "publicationDate": "2013-08-27T07:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
-            "notes": "need to be withdrawn?"
+            "notes": "need to be withdrawn"
         },
         "references": {
             "normative": [
@@ -6195,7 +6242,32 @@
                 "ST424m_2006",
                 "ST425_2008"
             ]
-        }
+        },
+        "relatedDocs": [
+            "ISO_26428_19_2011"
+        ]
+    },
+    {
+        "docId": "ISO_26428_19_2011",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26428-19:2011",
+        "title": "Digital cinema (D-cinema) distribution master — Part 19: Serial digital interface signal formatting for additional frame rates level AFR2 and level AFR4",
+        "status": "Active",
+        "url": "https://www.iso.org/standard/57750.html",
+        "publicationDate": "2011-12-01T07:00:00.000Z",
+        "reaffirmed": true,
+        "reaffirmDate": "2017-01-01T07:00:00.000Z",
+        "references": {
+            "normative": [
+                "ST428_1_2006",
+                "ST428_11_2009"
+            ]
+        },
+        "relatedDocs": [
+            "ST428_19_2010"
+        ]
     },
     {
         "docId": "ST428_1_2006",
@@ -6213,7 +6285,39 @@
         "publicationDate": "2006-09-29T07:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
-        "supersededDate": "2019-02-12T08:00:00.000Z"
+        "supersededDate": "2019-02-12T08:00:00.000Z",
+        "references": {
+            "normative": [
+                "CIE_15_2004",
+                "ST431_1_2006"
+            ]
+        },
+        "relatedDocs": [
+            "ISO_26428_1_2008"
+        ]
+    },
+    {
+        "docId": "ISO_26428_1_2008",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26428-1:2008",
+        "title": "Digital cinema (D-cinema) distribution master — Part 1: Image characteristics",
+        "status": "Active",
+        "url": "https://www.iso.org/standard/50204.html",
+        "publicationDate": "2008-09-01T07:00:00.000Z",
+        "references": {
+            "normative": [
+                "CIE_15_2004",
+                "ST431_1_2006"
+            ]
+        },
+        "workInfo": {
+            "group": "TC36 WG2"
+        },
+        "relatedDocs": [
+            "ST428_1_2006"
+        ]
     },
     {
         "docId": "ST428_1_2019",
@@ -6225,7 +6329,7 @@
         "status": "Active",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST428-1.2019",
         "publicationDate": "2019-03-07T08:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "Revise",
@@ -6243,7 +6347,26 @@
                 "RP431_2_2011",
                 "EG432_1_2010"
             ]
-        }
+        },
+        "relatedDocs": [
+            "ISO_CD_26428_1"
+        ]
+    },
+    {
+        "docId": "ISO_CD_26428_1",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO CD 26428-1",
+        "title": "Digital cinema (D-cinema) distribution master — Part 1: Image characteristics",
+        "status": "In Process",
+        "url": "https://www.iso.org/standard/80068.html",
+        "workInfo": {
+            "group": "TC36 WG2"
+        },
+        "relatedDocs": [
+            "ST428_1_2019"
+        ]
     },
     {
         "docId": "ST428_21_2011",
@@ -6283,7 +6406,7 @@
         "publicationDate": "2006-08-16T07:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "notes": "Revise at next review (2023) - ISO TC 36 comments - https://kws.smpte.org/higherlogic/ws/groups/db60330e-84de-4faf-a59d-f8a29e10ce07/documents/201912xx8335/document?document_id=51993"
@@ -6298,7 +6421,34 @@
                 "AES_11_2003",
                 "AES_R2_2004"
             ]
-        }
+        },
+        "relatedDocs": [
+            "ISO_26428_2_2008"
+        ]
+    },
+    {
+        "docId": "ISO_26428_2_2008",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26428-2:2008",
+        "title": "Digital cinema (D-cinema) distribution master — Part 3: Audio channel mapping and channel labeling",
+        "status": "Active",
+        "url": "https://www.iso.org/standard/50218.html",
+        "publicationDate": "2008-07-01T07:00:00.000Z",
+        "reaffirmed": true,
+        "reaffirmDate": "2017-01-01T07:00:00.000Z",
+        "references": {
+            "normative": [
+                "AES_3_2003"
+            ]
+        },
+        "workInfo": {
+            "group": "TC36 WG3"
+        },
+        "relatedDocs": [
+            "ST428_2_2006"
+        ]
     },
     {
         "docId": "ST428_3_2006",
@@ -6311,7 +6461,34 @@
         "withdrawn": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.ST428-3.2006",
         "publicationDate": "2006-09-29T07:00:00.000Z",
-        "withdrawnDate": "2017-09-28T07:00:00.000Z"
+        "withdrawnDate": "2017-09-28T07:00:00.000Z",
+        "relatedDocs": [
+            "ISO_26428_3_2008"
+        ]
+    },
+    {
+        "docId": "ISO_26428_3_2008",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26428-3:2008",
+        "title": "Digital cinema (D-cinema) distribution master — Part 3: Audio channel mapping and channel labeling",
+        "status": "Active",
+        "url": "https://www.iso.org/standard/50219.html",
+        "publicationDate": "2008-09-01T07:00:00.000Z",
+        "reaffirmed": true,
+        "reaffirmDate": "2017-01-01T07:00:00.000Z",
+        "references": {
+            "normative": [
+                "AES_3_2003"
+            ]
+        },
+        "workInfo": {
+            "group": "TC36 WG2"
+        },
+        "relatedDocs": [
+            "ST428_3_2006"
+        ]
     },
     {
         "docId": "ST428_7_2007",
@@ -6379,7 +6556,7 @@
         "status": "In Process",
         "inprocess": true,
         "details": "Drafting WD",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Sub_AdHoc",
             "approved": true,
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=80f77c28-d7d3-4488-bfd0-fda977ea9e7f",
@@ -6422,7 +6599,35 @@
                 "ST424m_2006",
                 "ST425m_2006"
             ]
-        }
+        },
+        "relatedDocs": [
+            "ISO_26428_9_2009"
+        ]
+    },
+    {
+        "docId": "ISO_26428_9_2009",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26428-9:2009",
+        "title": "Digital cinema (D-cinema) distribution master — Part 9: Image pixel structure level 3 — Serial digital interface signal formatting",
+        "status": "Active",
+        "url": "https://www.iso.org/standard/52784.html",
+        "publicationDate": "2009-12-01T07:00:00.000Z",
+        "reaffirmed": true,
+        "reaffirmDate": "2015-01-01T07:00:00.000Z",
+        "references": {
+            "normative": [
+                "ST291m_2006",
+                "ST428_1_2006"
+            ]
+        },
+        "workInfo": {
+            "group": "TC36 WG4"
+        },
+        "relatedDocs": [
+            "ST428_9_2008"
+        ]
     },
     {
         "docId": "ST429_10_2008",
@@ -6434,7 +6639,7 @@
         "status": "Active",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-10.2008",
         "publicationDate": "2008-02-15T08:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "Revise",
@@ -6467,7 +6672,41 @@
                 "EG41_2004",
                 "EG42_2004"
             ]
-        }
+        },
+        "relatedDocs": [
+            "ISO_26429_10_2009"
+        ]
+    },
+    {
+        "docId": "ISO_26429_10_2009",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26429-10:2009",
+        "title": "Digital cinema (D-cinema) packaging — Part 10: Stereoscopic picture track file",
+        "status": "Active",
+        "url": "https://www.iso.org/standard/52787.html",
+        "publicationDate": "2009-12-01T07:00:00.000Z",
+        "references": {
+            "normative": [
+                "ST298m_1997",
+                "ST377_2004",
+                "ST429_3_2006",
+                "ST429_7_2006",
+                "RP210",
+                "W3C_XML_1_3rd_20040204",
+                "W3C_XMLSCH_P1_20041028",
+                "W3C_XMLSCH_P2_20041028",
+                "IETF_RFC_2396",
+                "IETF_RFC_4122"
+            ]
+        },
+        "workInfo": {
+            "group": "TC36 WG2"
+        },
+        "relatedDocs": [
+            "ST429_10_2008"
+        ]
     },
     {
         "docId": "ST429_12_2008",
@@ -6479,7 +6718,7 @@
         "status": "Active",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-12.2008",
         "publicationDate": "2008-12-03T08:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "Revise",
@@ -6516,7 +6755,7 @@
         "publicationDate": "2009-11-19T08:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "notes": "need to be withdrawn?"
@@ -6538,7 +6777,7 @@
         "status": "Active",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-14.2014",
         "publicationDate": "2014-05-13T07:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "Revise",
@@ -6577,7 +6816,7 @@
         "status": "Active",
         "url": "https://ieeexplore.ieee.org/document/7290477",
         "publicationDate": "2014-09-26T07:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "Revise",
@@ -6619,7 +6858,7 @@
         "status": "Active",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-17.2017",
         "publicationDate": "2017-12-27T08:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "Revise",
@@ -6677,7 +6916,7 @@
         "status": "Active",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-19.2019",
         "publicationDate": "2019-06-25T07:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "Revise",
@@ -6770,7 +7009,7 @@
         "publicationDate": "2013-09-28T07:00:00.000Z",
         "notes": "References need to be updated after other work",
         "github": "https://github.com/SMPTE/st429-2/issues",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "projectLink": "https://kws.smpte.org/higherlogic/ws/projects/239"
@@ -6831,7 +7070,7 @@
         ],
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-2.2013Am1.2018",
         "publicationDate": "2019-01-25T08:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC AFR",
             "groupLink": "https://kws.smpte.org/higherlogic/ws/groups/ec6e6ee8-8faf-4ad8-965c-a2e27eb52398",
             "notes": "Pushed back to FCD - as ST 429-2:2019 Am 1:2020 - fix references and merge into 2020",
@@ -6888,7 +7127,7 @@
         "url": "https://doi.org/10.5594/SMPTE.ST429-2.2019",
         "publicationDate": "2020-05-12T07:00:00.000Z",
         "notes": "Sub DG",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=80f77c28-d7d3-4488-bfd0-fda977ea9e7f",
             "projectLink": "https://kws.smpte.org/higherlogic/ws/projects/239"
@@ -6946,7 +7185,7 @@
         "label": "ST 429-2:2019 Am 1:2020",
         "title": "D-Cinema Packaging – DCP Operational Constraints",
         "status": "In Process",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "assigned": "TC Chairs",
@@ -7002,7 +7241,7 @@
         "status": "In Process",
         "inprocess": true,
         "details": "AI in Progress",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "actionItems": "https://kws.smpte.org/higherlogic/ws/groups/db60330e-84de-4faf-a59d-f8a29e10ce07/action_item?action_item_id=3606",
@@ -7087,7 +7326,38 @@
                 "EG42_2004",
                 "IETF_RFC_4539"
             ]
-        }
+        },
+        "relatedDocs": [
+            "ISO_26429_3_2008"
+        ]
+    },
+    {
+        "docId": "ISO_26429_3_2008",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26429-3:2008",
+        "title": "Digital cinema (D-cinema) packaging — Part 3: Sound and picture track file",
+        "status": "Active",
+        "url": "https://www.iso.org/standard/50205.html",
+        "publicationDate": "2008-07-01T07:00:00.000Z",
+        "reaffirmed": true,
+        "reaffirmDate": "2017-01-01T07:00:00.000Z",
+        "references": {
+            "normative": [
+                "ST330m_2004",
+                "ST377_2004",
+                "ST390m_2004",
+                "RP224",
+                "IETF_RFC_2046"
+            ]
+        },
+        "workInfo": {
+            "group": "TC36 WG2"
+        },
+        "relatedDocs": [
+            "ST429_3_2007"
+        ]
     },
     {
         "docId": "ST429_4_2006",
@@ -7104,7 +7374,49 @@
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-4.2006",
         "publicationDate": "2006-10-03T07:00:00.000Z",
         "reaffirmed": true,
-		"reaffirmDate": "2018-03-15T07:00:00.000Z"
+		"reaffirmDate": "2018-03-15T07:00:00.000Z",
+        "references": {
+            "normative": [
+                "ST377_2004",
+                "ST422_2006",
+                "ST428_1_2006",
+                "ST429_3_2006",
+                "ISOIEC_15444_1_2004",
+                "ISOIEC_15444_1_2004_AMD1_2006"
+            ]
+        },
+        "relatedDocs": [
+            "ISO_26429_4_2008"
+        ]
+    },
+    {
+        "docId": "ISO_26429_4_2008",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26429-4:2008",
+        "title": "Digital cinema (D-cinema) packaging — Part 4: MXF JPEG 2000 application",
+        "status": "Active",
+        "url": "https://www.iso.org/standard/50221.html",
+        "publicationDate": "2008-09-01T07:00:00.000Z",
+        "reaffirmed": true,
+        "reaffirmDate": "2018-01-01T07:00:00.000Z",
+        "references": {
+            "normative": [
+                "ST377_2004",
+                "ST422_2006",
+                "ST428_1_2006",
+                "ST429_3_2006",
+                "ISOIEC_15444_1_2004",
+                "ISOIEC_15444_1_2004_AMD1_2006"
+            ]
+        },
+        "workInfo": {
+            "group": "TC36 WG2"
+        },
+        "relatedDocs": [
+            "ST429_4_2006"
+        ]
     },
     {
         "docId": "ST429_4_2020",
@@ -7116,7 +7428,7 @@
         "status": "Active",
         "url": "https://ieeexplore.ieee.org/document/9097481",
         "publicationDate": "2020-03-23T07:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "approved": true,
             "notes": "AFR DG",
             "group": "21DC DG_AFR",
@@ -7169,7 +7481,7 @@
         "publicationDate": "2017-12-27T08:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2019-11-13T08:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "reaffirm",
@@ -7235,7 +7547,42 @@
                 "ISOIEC_14496_11_2005",
                 "AC_2E_1996"
             ]
-        }
+        },
+        "relatedDocs": [
+            "ISO_26429_6_2008"
+        ]
+    },
+    {
+        "docId": "ISO_26429_6_2008",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26429-6:2008",
+        "title": "Digital cinema (D-cinema) packaging — Part 6: MXF track file essence encryption",
+        "status": "Active",
+        "url": "https://www.iso.org/standard/50222.html",
+        "publicationDate": "2008-07-01T07:00:00.000Z",
+        "reaffirmed": true,
+        "reaffirmDate": "2017-01-01T07:00:00.000Z",
+        "details": "Forward incorrectly references wrong SMPTE doc year '(as SMPTE 429-6-2007)'. This version doesn't exist - should be '2006'",
+        "references": {
+            "normative": [
+                "ST336m_2001",
+                "ST377_2004",
+                "ST429_3_2006",
+                "IETF_RFC_2898",
+                "IETF_RFC_2104",
+                "NIST_SP_800_38A",
+                "NIST_FIPS_197",
+                "NIST_FIPS_186_2_CN1"
+            ]
+        },
+        "workInfo": {
+            "group": "TC36 WG2"
+        },
+        "relatedDocs": [
+            "ST429_6_2006"
+        ]
     },
     {
         "docId": "ST429_6_2006Am1_2018",
@@ -7249,7 +7596,7 @@
         "publicationDate": "2018-02-16T08:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2019-11-13T08:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "reaffirm",
@@ -7295,7 +7642,7 @@
         "publicationDate": "2006-10-03T07:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2012-02-24T08:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "Revise",
@@ -7326,7 +7673,44 @@
                 "W3C_QAF_SG_FL",
                 "W3C_XMLSP"
             ]
-        }
+        },
+        "relatedDocs": [
+            "ISO_26429_7_2008"
+        ]
+    },
+    {
+        "docId": "ISO_26429_7_2008",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26429-7:2008",
+        "title": "Digital cinema (D-cinema) packaging — Part 7: Composition playlist",
+        "status": "Active",
+        "url": "https://www.iso.org/standard/50223.html",
+        "publicationDate": "2008-09-01T07:00:00.000Z",
+        "reaffirmed": true,
+        "reaffirmDate": "2017-01-01T07:00:00.000Z",
+        "references": {
+            "normative": [
+                "W3C_XML_1_3rd_20040204",
+                "W3C_XMLSCH_P1_20041028",
+                "W3C_XMLSCH_P2_20041028",
+                "W3C_XMLSSP_20020212",
+                "IETF_RFC_2045",
+                "IETF_RFC_2046",
+                "IETF_RFC_2396",
+                "IETF_RFC_3174",
+                "IETF_RFC_2141",
+                "IETF_RFC_4051",
+                "IETF_RFC_4122"
+            ]
+        },
+        "workInfo": {
+            "group": "TC36 WG2"
+        },
+        "relatedDocs": [
+            "ST429_7_2006"
+        ]
     },
     {
         "docId": "ST429_8_2007",
@@ -7338,7 +7722,7 @@
         "status": "Active",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-8.2007",
         "publicationDate": "2007-06-25T07:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "Revise",
@@ -7370,7 +7754,43 @@
                 "ST429_3_2006",
                 "ST429_7_2006"
             ]
-        }
+        },
+        "relatedDocs": [
+            "ISO_26429_8_2009"
+        ]
+    },
+    {
+        "docId": "ISO_26429_8_2009",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26429-8:2009",
+        "title": "Digital cinema (D-cinema) packaging — Part 8: Packing list",
+        "status": "Active",
+        "url": "https://www.iso.org/standard/52785.html",
+        "publicationDate": "2009-12-01T07:00:00.000Z",
+        "reaffirmed": true,
+        "reaffirmDate": "2015-01-01T07:00:00.000Z",
+        "references": {
+            "normative": [
+                "W3C_XML_1_3rd_20040204",
+                "W3C_XMLSCH_P1_20041028",
+                "W3C_XMLSCH_P2_20041028",
+                "W3C_XMLSSP_20020212",
+                "IETF_RFC_3174",
+                "IETF_RFC_2045",
+                "IETF_RFC_2046",
+                "IETF_RFC_2396",
+                "IETF_RFC_4122",
+                "IETF_RFC_4051"
+            ]
+        },
+        "workInfo": {
+            "group": "TC36 WG2"
+        },
+        "relatedDocs": [
+            "ST429_8_2007"
+        ]
     },
     {
         "docId": "ST429_9_2007",
@@ -7391,7 +7811,38 @@
         "details": "Amended, Superseded",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-9.2007",
         "publicationDate": "2007-06-25T07:00:00.000Z",
-        "supersededDate": "2014-11-24T08:00:00.000Z"
+        "supersededDate": "2014-11-24T08:00:00.000Z",
+        "relatedDocs": [
+            "ISO_26429_9_2009"
+        ]
+    },
+    {
+        "docId": "ISO_26429_9_2009",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26429-9:2009",
+        "title": "Digital cinema (D-cinema) packaging — Part 9: Asset mapping and file segmentation",
+        "status": "Active",
+        "url": "https://www.iso.org/standard/52786.html",
+        "publicationDate": "2009-12-01T07:00:00.000Z",
+        "references": {
+            "normative": [
+                "ST429_8_2007",
+                "IETF_RFC_1738",
+                "IETF_RFC_2396",
+                "IETF_RFC_4122",
+                "W3C_XML_1_3rd_20040204",
+                "W3C_XMLSCH_P1_20041028",
+                "W3C_XMLSCH_P2_20041028"
+            ]
+        },
+        "workInfo": {
+            "group": "TC36 WG2"
+        },
+        "relatedDocs": [
+            "ST429_9_2007"
+        ]
     },
     {
         "docId": "ST429_9_2007Am1_2010",
@@ -7419,7 +7870,7 @@
         "status": "Active",
         "url": "https://ieeexplore.ieee.org/document/7290483",
         "publicationDate": "2014-12-29T08:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "Revise",
@@ -7439,7 +7890,7 @@
                 "IETF_RFC_4122",
                 "W3C_XML_1_3rd_20040204",
                 "W3C_XMLSCH_P1_20041028",
-                "W3C_XMLSCH_P1_20041028",
+                "W3C_XMLSCH_P2_20041028",
                 "W3C_NSXML_1_3rd_20091208"
             ]
         }
@@ -7454,7 +7905,7 @@
         "status": "Active",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-10.2010",
         "publicationDate": "2010-11-09T08:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "Revise",
@@ -7483,7 +7934,7 @@
         "status": "Active",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-11.2010",
         "publicationDate": "2010-11-09T08:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "Revise",
@@ -7524,7 +7975,7 @@
         "publicationDate": "2014-05-10T07:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2019-11-13T08:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "reaffirm",
@@ -7602,7 +8053,7 @@
         "status": "In Process",
         "inprocess": true,
         "details": "FCD Ballot - Comment Resolution",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_SMS_OMB",
             "approved": true,
             "groupLink": "https://kws.smpte.org/communities/community-home?communitykey=cb62abd0-5373-44bc-9d11-5e94e6580718&tab=groupdetails",
@@ -7641,7 +8092,7 @@
         "status": "Active",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-15.2017",
         "publicationDate": "2017-08-23T07:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "Revise",
@@ -7683,7 +8134,7 @@
         "status": "Active",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-16.2017",
         "publicationDate": "2017-08-23T07:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "Revise",
@@ -7721,7 +8172,7 @@
         "status": "In Process",
         "inprocess": true,
         "details": "DP Ballot - Comment Resolution",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_SMS_OMB",
             "approved": true,
             "groupLink": "https://kws.smpte.org/communities/community-home?communitykey=cb62abd0-5373-44bc-9d11-5e94e6580718&tab=groupdetails",
@@ -7760,7 +8211,39 @@
         "details": "Amended, Superseded",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-1.2006",
         "publicationDate": "2006-10-03T07:00:00.000Z",
-        "supersededDate": "2017-01-12T08:00:00.000Z"
+        "supersededDate": "2017-01-12T08:00:00.000Z",
+        "relatedDocs": [
+            "ISO_26430_1_2008"
+        ]
+    },
+    {
+        "docId": "ISO_26430_1_2008",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26430-1:2008",
+        "title": "Digital cinema (D-cinema) operations — Part 1: Key delivery message",
+        "status": "Active",
+        "url": "https://www.iso.org/standard/50206.html",
+        "publicationDate": "2008-07-01T07:00:00.000Z",
+        "reaffirmed": true,
+        "reaffirmDate": "2017-01-01T07:00:00.000Z",
+        "references": {
+            "normative": [
+                "ST429_6_2006",
+                "ST430_2_2006",
+                "ST430_3_2006",
+                "IETF_RFC_2253",
+                "IETF_RFC_3339",
+                "IETF_RFC_4122"
+            ]
+        },
+        "workInfo": {
+            "group": "TC36 WG2"
+        },
+        "relatedDocs": [
+            "ST430_1_2006"
+        ]
     },
     {
         "docId": "ST430_1_2006Am1_2009",
@@ -7792,7 +8275,7 @@
         ],
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-1.2017",
         "publicationDate": "2017-02-02T08:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "Revise",
@@ -7887,7 +8370,41 @@
         ],
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-2.2006",
         "publicationDate": "2006-10-03T07:00:00.000Z",
-        "supersededDate": "2017-01-12T08:00:00.000Z"
+        "supersededDate": "2017-01-12T08:00:00.000Z",
+        "relatedDocs": [
+            "ISO_26430_2_2008"
+        ]
+    },
+    {
+        "docId": "ISO_26430_2_2008",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26430-2:2008",
+        "title": "Digital cinema (D-cinema) operations — Part 2: Digital certificate",
+        "status": "Active",
+        "url": "https://www.iso.org/standard/50224.html",
+        "publicationDate": "2008-09-01T07:00:00.000Z",
+        "reaffirmed": true,
+        "reaffirmDate": "2017-01-01T07:00:00.000Z",
+        "references": {
+            "normative": [
+                "ISOIEC_8824_1_2002",
+                "IETF_RFC_1521",
+                "NIST_FIPS_180_2",
+                "IETF_RFC_3447",
+                "IETF_RFC_4055",
+                "IETF_RFC_3280",
+                "IETF_RFC_3339",
+                "ITUT_X509_199706E"
+            ]
+        },
+        "workInfo": {
+            "group": "TC36 WG2"
+        },
+        "relatedDocs": [
+            "ST430_2_2006"
+        ]
     },
     {
         "docId": "ST430_2_2017",
@@ -7899,7 +8416,7 @@
         "status": "Active",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-2.2017",
         "publicationDate": "2017-02-02T08:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "Revise",
@@ -7938,6 +8455,20 @@
         }
     },
     {
+        "docId": "ST430_3_2006",
+        "publisher": "SMPTE",
+        "group": "21DC",
+        "type": "Standard",
+        "label": "ST 430-3:2006",
+        "title": "D-Cinema Operations - Generic Extra-Theater Message Format",
+        "status": "Superseded",
+        "superseded": true,
+        "supersededBy": [
+            "ST430_3_2008"
+        ],
+        "details": "Cannot locate"
+    },
+    {
         "docId": "ST430_3_2008",
         "publisher": "SMPTE",
         "group": "21DC",
@@ -7956,7 +8487,45 @@
         "details": "Amended, Superseded",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-3.2008",
         "publicationDate": "2008-03-03T08:00:00.000Z",
-        "supersededDate": "2012-08-22T07:00:00.000Z"
+        "supersededDate": "2012-08-22T07:00:00.000Z",
+        "relatedDocs": [
+            "ISO_26430_3_2008"
+        ]
+    },
+    {
+        "docId": "ISO_26430_3_2008",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26430-3:2008",
+        "title": "Digital cinema (D-cinema) operations — Part 3: Generic extra-theater message format",
+        "status": "Active",
+        "url": "https://www.iso.org/standard/50225.html",
+        "publicationDate": "2008-07-01T07:00:00.000Z",
+        "reaffirmed": true,
+        "reaffirmDate": "2017-01-01T07:00:00.000Z",
+        "references": {
+            "normative": [
+                "ST430_2_2006",
+                "NIST_FIPS_180_2",
+                "NIST_FIPS_197",
+                "NIST_FIPS_198",
+                "IETF_RFC_3447",
+                "IETF_RFC_2253",
+                "IETF_RFC_4051",
+                "IETF_RFC_3339",
+                "IETF_RFC_4122",
+                "W3C_XMLSCH_P1_200105",
+                "W3C_XMLESP_20021210",
+                "W3C_XMLSSP_20020212"
+            ]
+        },
+        "workInfo": {
+            "group": "TC36 WG2"
+        },
+        "relatedDocs": [
+            "ST430_3_2008"
+        ]
     },
     {
         "docId": "ST430_3_2008Am2_2012",
@@ -7984,7 +8553,7 @@
         "status": "Active",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-3.2012",
         "publicationDate": "2012-08-22T07:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "Revise",
@@ -8038,7 +8607,42 @@
                 "NIST_FIPS_180_1",
                 "IETF_RFC_2253"
             ]
-        }
+        },
+        "relatedDocs": [
+            "ISO_26430_4_2009"
+        ]
+    },
+    {
+        "docId": "ISO_26430_4_2009",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26430-4:2009",
+        "title": "Digital cinema (D-cinema) operations — Part 4: Log record format specification",
+        "status": "Active",
+        "url": "https://www.iso.org/standard/52788.html",
+        "publicationDate": "2009-12-01T07:00:00.000Z",
+        "references": {
+            "normative": [
+                "W3C_XMLSCH_P1_20041028",
+                "W3C_XMLSCH_P2_20041028",
+                "IETF_RFC_2141",
+                "IETF_RFC_3280",
+                "W3C_CXML_1_20010315",
+                "W3C_XMLSSP_20020212",
+                "IETF_RFC_3275",
+                "ST433_2008",
+                "ST430_2_2006",
+                "NIST_FIPS_180_1",
+                "IETF_RFC_2253"
+            ]
+        },
+        "workInfo": {
+            "group": "TC36 WG4"
+        },
+        "relatedDocs": [
+            "ST430_4_2008"
+        ]
     },
     {
         "docId": "ST430_4_2008Am1_2011",
@@ -8050,7 +8654,7 @@
         "status": "Active",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-4.2008Am1.2011",
         "publicationDate": "2017-01-06T08:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "Revise",
@@ -8088,7 +8692,46 @@
         ],
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-5.2008",
         "publicationDate": "2008-03-03T08:00:00.000Z",
-        "supersededDate": "2011-09-24T07:00:00.000Z"
+        "supersededDate": "2011-09-24T07:00:00.000Z",
+        "relatedDocs": [
+            "ISO_26430_5_2009"
+        ]
+    },
+    {
+        "docId": "ISO_26430_5_2009",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26430-5:2009",
+        "title": "Digital cinema (D-cinema) operations — Part 5: Security log event class and constraints",
+        "status": "Active",
+        "url": "https://www.iso.org/standard/52789.html",
+        "publicationDate": "2009-12-01T07:00:00.000Z",
+        "reaffirmed": true,
+        "reaffirmDate": "2015-01-01T07:00:00.000Z",
+        "references": {
+            "normative": [
+                "IETF_RFC_3280",
+                "ST433_2008",
+                "ST430_4_2008",
+                "ST430_1_2006",
+                "ST430_2_2006",
+                "ST430_3_2006",
+                "ST430_6_2008",
+                "ST429_6_2006",
+                "ST429_7_2006",
+                "ST429_8_2007",
+                "ST429_3_2007",
+                "IETF_RFC_4051",
+                "IETF_RFC_2253"
+            ]
+        },
+        "workInfo": {
+            "group": "TC36 WG4"
+        },
+        "relatedDocs": [
+            "ST430_5_2008"
+        ]
     },
     {
         "docId": "ST430_5_2011",
@@ -8100,7 +8743,7 @@
         "status": "Active",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-5.2011",
         "publicationDate": "2011-12-29T08:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "Revise",
@@ -8142,7 +8785,40 @@
             "ST430_6_2010"
         ],
         "url": "Cannot locate",
-        "supersededDate": "2010-08-18T07:00:00.000Z"
+        "supersededDate": "2010-08-18T07:00:00.000Z",
+        "relatedDocs": [
+            "ISO_26430_6_2009"
+        ]
+    },
+    {
+        "docId": "ISO_26430_6_2009",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26430-6:2009",
+        "title": "Digital cinema (D-cinema) operations — Part 6: Auditorium security messages for intra-theater communications",
+        "status": "Active",
+        "url": "https://www.iso.org/standard/52790.html",
+        "publicationDate": "2009-12-01T07:00:00.000Z",
+        "reaffirmed": true,
+        "reaffirmDate": "2015-01-01T07:00:00.000Z",
+        "references": {
+            "normative": [
+                "ST336_2007",
+                "ST430_2_2006",
+                "IANA_PN",
+                "ST430_1_2006",
+                "ST430_5_2008",
+                "IETF_RFC_2246",
+                "IETF_RFC_3268"
+            ]
+        },
+        "workInfo": {
+            "group": "TC36 WG4"
+        },
+        "relatedDocs": [
+            "ST430_6_2008"
+        ]
     },
     {
         "docId": "ST430_6_2010",
@@ -8154,7 +8830,7 @@
         "status": "Active",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-6.2010",
         "publicationDate": "2010-08-18T07:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "Revise",
@@ -8229,7 +8905,7 @@
         ],
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-9.2008",
         "publicationDate": "2008-02-01T08:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "recommendation": "Revise",
@@ -8257,7 +8933,43 @@
                 "W3C_QAF_SG_FL",
                 "W3C_XMLSP"
             ]
-        }
+        },
+        "relatedDocs": [
+            "ISO_26430_9_2009"
+        ]
+    },
+    {
+        "docId": "ISO_26430_9_2009",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26430-9:2009",
+        "title": "Digital cinema (D-cinema) operations — Part 9: Key delivery bundle",
+        "status": "Active",
+        "url": "https://www.iso.org/standard/52791.html",
+        "publicationDate": "2009-12-01T07:00:00.000Z",
+        "reaffirmed": true,
+        "reaffirmDate": "2015-01-01T07:00:00.000Z",
+        "references": {
+            "normative": [
+                "W3C_XML_1_3rd_20040204",
+                "W3C_XMLSCH_P1_20041028",
+                "W3C_XMLSCH_P2_20041028",
+                "IETF_RFC_1738",
+                "IETF_RFC_2396",
+                "IETF_RFC_4122",
+                "ST429_7_2006",
+                "ST429_8_2007",
+                "ST430_1_2006",
+                "IEEE_STD1003_1_2004"
+            ]
+        },
+        "workInfo": {
+            "group": "TC36 WG2"
+        },
+        "relatedDocs": [
+            "ST430_9_2008"
+        ]
     },
     {
         "docId": "ST430_9_2008Am1_2011",
@@ -8289,7 +9001,23 @@
                 "W3C_QAF_SG_FL",
                 "W3C_XMLSP"
             ]
-        }
+        },
+        "relatedDocs": [
+            "ISO_26430_9_2009_AWI_AM1"
+        ]
+    },
+    {
+        "docId": "ISO_26430_9_2009_AWI_AM1",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26430-9:2009/AWI AMD 1",
+        "title": "Digital cinema (D-cinema) operations — Part 9: Key delivery bundle — Amendment 1",
+        "status": "In Process",
+        "url": "https://www.iso.org/standard/80075.html",
+        "relatedDocs": [
+            "ST430_9_2008Am1_2011"
+        ]
     },
     {
         "docId": "ST431_1_2006",
@@ -8303,7 +9031,7 @@
         "publicationDate": "2006-04-18T07:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
-        "draftInfo": {
+        "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
             "notes": "ISO TC 36 comments - https://kws.smpte.org/higherlogic/ws/groups/db60330e-84de-4faf-a59d-f8a29e10ce07/documents/201912xx8335/document?document_id=51993"
@@ -8317,7 +9045,35 @@
                 "ST196M_2003",
                 "RP98_1995"
             ]
-        }
+        },
+        "relatedDocs": [
+            "ISO_26431_1_2008"
+        ]
+    },
+    {
+        "docId": "ISO_26431_1_2008",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26431-1:2008",
+        "title": "Digital cinema (D-cinema) quality — Part 1: Screen luminance level, chromaticity and uniformity",
+        "status": "Active",
+        "url": "https://www.iso.org/standard/50207.html",
+        "publicationDate": "2008-09-01T07:00:00.000Z",
+        "reaffirmed": true,
+        "reaffirmDate": "2017-01-01T07:00:00.000Z",
+        "references": {
+            "normative": [
+                "ISO_10527_2007"
+            ]
+        },
+        "workInfo": {
+            "group": "TC36 WG4"
+        },
+        "details": "Normative reference is different than source SMPTE doc (year updated).",
+        "relatedDocs": [
+            "ST431_1_2006"
+        ]
     },
     {
         "docId": "ST433_2008",
@@ -8350,7 +9106,41 @@
                 "ISO_15924",
                 "UTF"
             ]
-        }
+        },
+        "relatedDocs": [
+            "ISO_26433_2009"
+        ]
+    },
+    {
+        "docId": "ISO_26433_2009",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26433:2009",
+        "title": "Digital cinema (D-cinema) — XML data types",
+        "status": "Active",
+        "url": "https://www.iso.org/standard/52793.html",
+        "publicationDate": "2009-12-01T07:00:00.000Z",
+        "reaffirmed": true,
+        "reaffirmDate": "2015-01-01T07:00:00.000Z",
+        "references": {
+            "normative": [
+                "W3C_XMLSCH_P1_20041028",
+                "W3C_XMLSCH_P2_20041028",
+                "ISO_639_2T_1998",
+                "ISO_3166_1_1997",
+                "IETF_RFC_4122",
+                "IETF_RFC_3066",
+                "IETF_RFC_3629",
+                "ST430_2_2006"
+            ]
+        },
+        "workInfo": {
+            "group": "TC36 WG2"
+        },
+        "relatedDocs": [
+            "ST433_2008"
+        ]
     },
     {
         "docId": "ST433_2008Am1_2011",
@@ -8379,7 +9169,23 @@
                 "ISO_15924",
                 "UTF"
             ]
-        }
+        },
+        "relatedDocs": [
+            "ISO_26433_2009_AWI_AM1"
+        ]
+    },
+    {
+        "docId": "ISO_26433_2009_AWI_AM1",
+        "publisher": "ISO",
+        "group": "TC36",
+        "type": "Standard",
+        "label": "ISO 26433:2009/AWI AMD 1",
+        "title": "Digital cinema (D-cinema) — XML data types — Amendment 1",
+        "status": "In Process",
+        "url": "https://www.iso.org/standard/80072.html",
+        "relatedDocs": [
+            "ST433_2008Am1_2011"
+        ]
     },
     {
         "docId": "ST55_2000",

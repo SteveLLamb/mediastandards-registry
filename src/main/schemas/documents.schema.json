@@ -48,6 +48,10 @@
                         "type": "string",
                         "enum": [ "In Process", "Active", "Amended", "Superseded", "Superseded *", "Withdrawn", "Unknown"]
                     },
+                    "statusNote": {
+                        "$id": "#/items/anyOf/0/properties/statusNote",
+                        "type": "string"
+                    },
                     "stablized": {
                         "$id": "#/items/anyOf/0/properties/stablized",
                         "type": "boolean"
@@ -130,8 +134,8 @@
                         "$id": "#/items/anyOf/0/properties/publicationDate",
                         "type": "string"
                     },
-                    "draftInfo": {
-                        "$id": "#/items/anyOf/0/properties/draftInfo",
+                    "workInfo": {
+                        "$id": "#/items/anyOf/0/properties/workInfo",
                         "type": "object",
                         "required": [
                             "group"
@@ -139,51 +143,66 @@
                         "additionalProperties": true,
                         "properties": {
                             "group": {
-                                "$id": "#/items/anyOf/0/properties/draftInfo/properties/group",
+                                "$id": "#/items/anyOf/0/properties/workInfo/properties/group",
                                 "type": "string"
                             },
                             "recommendation": {
-                                "$id": "#/items/anyOf/0/properties/draftInfo/properties/recommendation",
+                                "$id": "#/items/anyOf/0/properties/workInfo/properties/recommendation",
                                 "type": "string"
                             },
                             "approved": {
-                                "$id": "#/items/anyOf/0/properties/draftInfo/properties/approved",
+                                "$id": "#/items/anyOf/0/properties/workInfo/properties/approved",
                                 "type": "boolean"
                             },
                             "notes": {
-                                "$id": "#/items/anyOf/0/properties/draftInfo/properties/notes",
+                                "$id": "#/items/anyOf/0/properties/workInfo/properties/notes",
                                 "type": "string"
                             },
                             "updateDependency": {
-                                "$id": "#/items/anyOf/0/properties/draftInfo/properties/updateDependency",
+                                "$id": "#/items/anyOf/0/properties/workInfo/properties/updateDependency",
                                 "type": "array",
                                 "additionalItems": true,
                                 "items": {
                                     "anyOf": [
                                         {
-                                            "$id": "#/items/anyOf/0/properties/draftInfo/properties/updateDependency/items/anyOf/0",
+                                            "$id": "#/items/anyOf/0/properties/workInfo/properties/updateDependency/items/anyOf/0",
                                             "type": "string"
                                         }
                                     ],
-                                    "$id": "#/items/anyOf/0/properties/draftInfo/properties/updateDependency/items"
+                                    "$id": "#/items/anyOf/0/properties/workInfo/properties/updateDependency/items"
                                 }
                             },
                             "assigned": {
-                                "$id": "#/items/anyOf/0/properties/draftInfo/properties/assigned",
+                                "$id": "#/items/anyOf/0/properties/workInfo/properties/assigned",
                                 "type": "string"
                             },
                             "actionItems": {
-                                "$id": "#/items/anyOf/0/properties/draftInfo/properties/actionItems",
+                                "$id": "#/items/anyOf/0/properties/workInfo/properties/actionItems",
                                 "type": "string"
                             },
                             "projectLink": {
-                                "$id": "#/items/anyOf/0/properties/draftInfo/properties/projectLink",
+                                "$id": "#/items/anyOf/0/properties/workInfo/properties/projectLink",
                                 "type": "string"
                             },
                             "groupLink": {
-                                "$id": "#/items/anyOf/0/properties/draftInfo/properties/groupLink",
+                                "$id": "#/items/anyOf/0/properties/workInfo/properties/groupLink",
                                 "type": "string"
                             }
+                        }
+                    },
+                    "relatedDocs": {
+                        "$id": "#/items/anyOf/0/properties/relatedDocs",
+                        "type": "array",
+                        "additionalItems": true,
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "$id": "#/items/anyOf/0/properties/relatedDocs/items/anyOf/0",
+                                    "type": "string",
+                                    "minLength": 1
+                                }
+                            ],
+                            "$id": "#/items/anyOf/0/properties/relatedDocs/items"
                         }
                     },
                     "references": {

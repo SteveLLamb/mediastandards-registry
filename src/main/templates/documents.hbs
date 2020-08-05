@@ -60,8 +60,12 @@
               <div class="row">
                 <div class="col-sm">
                   {{#if status}}
-                  <span class="font-weight-bold">Current Status: <em>{{status}}</em></span>
-                  <br>
+                  <p><span class="font-weight-bold">Current Status: <em>{{status}}</em></span>{{#if statusNote}}<span class="small"><em> ({{statusNote}})</em></span>{{/if}}
+                  </p>
+                  {{#if details}}
+                  <p><span class="font-weight-bold">Details:</span> <em>{{details}}</em>
+                  </p>
+                  {{/if}}
                   {{/if}}
                   {{#if publicationDate}}
                   Publication Date: {{publicationDate}}
@@ -87,72 +91,86 @@
                   Amended Date: {{amendedDate}}
                   <br>
                   {{/if}}
-                  {{#if details}}
-                  Details: {{details}}
-                  <br>
-                  {{/if}}
                   {{#if github}}
                   GitHub: <a class="{{../idType}}-link" target="_blank" href="{{github}}">{{github}}</a>
                   <br>
                   {{/if}}
-                  {{#if draftInfo}}
-                  <div class="col-sm">
-                    <span class="font-weight-bold"><u>Draft Info</u><br></span>
+                  {{#if workInfo}}
+                  <p>
+                  <div class="col-sm border">
+                    <span class="font-weight-bold"><u>Work Info</u><br></span>
                     Group: 
-                    {{#if draftInfo/groupLink}}
-                    <a class="{{../idType}}-link" target="_blank" href="{{draftInfo/groupLink}}">
+                    {{#if workInfo/groupLink}}
+                    <a class="{{../idType}}-link" target="_blank" href="{{workInfo/groupLink}}">
                     {{/if}}
-                    {{draftInfo/group}}
-                    {{#if draftInfo/groupLink}}
+                    {{workInfo/group}}
+                    {{#if workInfo/groupLink}}
                     </a>
                     {{/if}}
-                    {{#if draftInfo/recommendation}}
+                    {{#if workInfo/recommendation}}
                     <br>
-                    Recommendation: {{draftInfo/recommendation}}
+                    Recommendation: {{workInfo/recommendation}}
                     {{/if}}
-                    {{#if draftInfo/approved}}
+                    {{#if workInfo/approved}}
                     <br>
                     TC Approved: Yes
                     {{/if}}
-                    {{#if draftInfo/notes}}
+                    {{#if workInfo/assigned}}
                     <br>
-                    Notes: {{draftInfo/notes}}
+                    Assigned to: {{workInfo/assigned}}
                     {{/if}}
-                    {{#if draftInfo/assigned}}
+                    {{#if workInfo/actionItems}}
                     <br>
-                    Assigned to: {{draftInfo/assigned}}
+                    <a class="{{../idType}}-link" target="_blank" href="{{workInfo/actionItems}}">Action Items</a>
                     {{/if}}
-                    {{#if draftInfo/actionItems}}
+                    {{#if workInfo/projectLink}}
                     <br>
-                    <a class="{{../idType}}-link" target="_blank" href="{{draftInfo/actionItems}}">Action Items</a>
+                    <a class="{{../idType}}-link" target="_blank" href="{{workInfo/projectLink}}">Project Link</a>
                     {{/if}}
-                    {{#if draftInfo/projectLink}}
-                    <br>
-                    <a class="{{../idType}}-link" target="_blank" href="{{draftInfo/projectLink}}">Project Link</a>
-                    {{/if}}
-                    {{#if draftInfo/updateDependency}}
+                    {{#if workInfo/updateDependency}}
                     <br><span>Dependent on updates to:</span>
                     {{/if}}
-                      {{#draftInfo/updateDependency}}
+                      {{#workInfo/updateDependency}}
                         <br><a class="{{../../idType}}-link" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span>
-                      {{/draftInfo/updateDependency}}
+                      {{/workInfo/updateDependency}}
+                    {{#if workInfo/notes}}
+                    <br>
+                    <span class="font-weight-bold">Notes:</span> <em>{{workInfo/notes}}</em>
+                    {{/if}}
                   </div>
+                </p>
+                {{/if}}
+                <br>
+                {{#if relatedDocs}}
+                <p><span class="font-weight-bold">Related Documents:</span>
+                {{/if}}
+                {{#relatedDocs}}
+                  <br><a class="{{../idType}}-link clear-filter" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span> 
+                {{/relatedDocs}}
+                {{#if relatedDocs}}
+                </p>
                 {{/if}}
                 </div>
                 {{#if references}}
                   <div class="col-sm">
                     {{#if references/normative}}
-                      <span class="font-weight-bold">Normative References:<br></span>
+                      <p><span class="font-weight-bold">Normative References:<br></span>
                     {{/if}}
                       {{#references/normative}}
                         <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
                       {{/references/normative}}
+                    {{#if references/normative}}
+                      </p>
+                    {{/if}}
                     {{#if references/bibliographic}}
-                      <span class="font-weight-bold">Bibliographic References:<br></span>
+                      <p><span class="font-weight-bold">Bibliographic References:<br></span>
                     {{/if}}
                       {{#references/bibliographic}}
                         <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br>
                       {{/references/bibliographic}}
+                    {{#if references/normative}}
+                      </p>
+                    {{/if}}
                   </div>
                 {{/if}}
               </div>
@@ -160,17 +178,23 @@
           </td>
           <td>
             {{#if amendedBy}}
-                <span class="font-weight-bold">Amended by:<br></span>
+                <p><span class="font-weight-bold">Amended by:<br></span>
               {{/if}}
               {{#amendedBy}}
                 <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
-            {{/amendedBy}}
+              {{/amendedBy}}
+              {{#if amendedBy}}
+                </p>
+            {{/if}}
             {{#if supersededBy}}
-                <span class="font-weight-bold">Superseded by:<br></span>
+                <p><span class="font-weight-bold">Superseded by:<br></span>
               {{/if}}
               {{#supersededBy}}
                 <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
               {{/supersededBy}}
+              {{#if supersededBy}}
+                </p>
+            {{/if}}
           </td>
         </tr>
         {{/data}}
