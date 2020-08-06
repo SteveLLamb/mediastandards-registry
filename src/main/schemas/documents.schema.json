@@ -146,6 +146,23 @@
                                 "$id": "#/items/anyOf/0/properties/workInfo/properties/group",
                                 "type": "string"
                             },
+                            "groupLink": {
+                                "$id": "#/items/anyOf/0/properties/workInfo/properties/groupLink",
+                                "type": "string"
+                            },
+                            "reviewNeeded": {
+                                "$id": "#/items/anyOf/0/properties/workInfo/properties/reviewNeeded",
+                                "type": "boolean"
+                            },
+                            "reviewPeriod": {
+                                "$id": "#/items/anyOf/0/properties/workInfo/properties/reviewPeriod",
+                                "type": "string",
+                                "enum": [ "1 Year", "5 Year", "Systematic"]
+                            },
+                            "reviewDate": {
+                                "$id": "#/items/anyOf/0/properties/reviewDate",
+                                "type": "string"
+                            },
                             "recommendation": {
                                 "$id": "#/items/anyOf/0/properties/workInfo/properties/recommendation",
                                 "type": "string"
@@ -156,6 +173,10 @@
                             },
                             "notes": {
                                 "$id": "#/items/anyOf/0/properties/workInfo/properties/notes",
+                                "type": "string"
+                            },
+                            "otherWork": {
+                                "$id": "#/items/anyOf/0/properties/workInfo/properties/otherWork",
                                 "type": "string"
                             },
                             "updateDependency": {
@@ -182,10 +203,6 @@
                             },
                             "projectLink": {
                                 "$id": "#/items/anyOf/0/properties/workInfo/properties/projectLink",
-                                "type": "string"
-                            },
-                            "groupLink": {
-                                "$id": "#/items/anyOf/0/properties/workInfo/properties/groupLink",
                                 "type": "string"
                             }
                         }

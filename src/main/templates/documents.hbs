@@ -47,7 +47,7 @@
           </td>
           <td>{{type}}</td>
           <td>
-            <span class="title">
+            <p><span class="title">
               {{#if url}}
                 <a class="{{../idType}}-link" target="_blank" href="{{url}}">
               {{/if}}
@@ -56,6 +56,7 @@
                 </a>
               {{/if}}
             </span>
+          </p>
             <div class="container bg-light">
               <div class="row">
                 <div class="col-sm">
@@ -107,6 +108,18 @@
                     {{#if workInfo/groupLink}}
                     </a>
                     {{/if}}
+                    {{#if workInfo/reviewNeeded}}
+                    <br>
+                    Review Needed: Yes
+                    {{/if}}
+                    {{#if workInfo/reviewPeriod}}
+                    <br>
+                    Review Period: {{workInfo/reviewPeriod}}
+                    {{/if}}
+                    {{#if workInfo/reviewDate}}
+                    <br>
+                    Review Date: {{workInfo/reviewDate}}
+                    {{/if}}
                     {{#if workInfo/recommendation}}
                     <br>
                     Recommendation: {{workInfo/recommendation}}
@@ -134,8 +147,12 @@
                         <br><a class="{{../../idType}}-link" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span>
                       {{/workInfo/updateDependency}}
                     {{#if workInfo/notes}}
-                    <br>
+                    <br><br>
                     <span class="font-weight-bold">Notes:</span> <em>{{workInfo/notes}}</em>
+                    {{/if}}
+                    {{#if workInfo/otherWork}}
+                    <br>
+                    <span class="font-weight-bold">Other Requested Work:</span> <em>{{workInfo/otherWork}}</em>
                     {{/if}}
                   </div>
                 </p>
