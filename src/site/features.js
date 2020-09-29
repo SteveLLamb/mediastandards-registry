@@ -18,6 +18,16 @@ $(document).on('click', '.clear-filter', function(){
     document.getElementById("search-form").reset();
 });
 
+/* DataTable options for sort headers*/
+
+$(document).ready(function() {
+    $('#sorttable').DataTable( {
+      "paging": false,
+      "info": false,
+      "searching": false
+    });
+} );
+
 /* "Back To Top" button functionality */
 
 $(document).ready(function() {
