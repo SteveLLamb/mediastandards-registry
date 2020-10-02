@@ -162,7 +162,7 @@
                 <p><span class="font-weight-bold">Related Documents:</span>
                 {{/if}}
                 {{#relatedDocs}}
-                  <br><a class="{{../idType}}-link clear-filter" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span> 
+                  <br><a class="{{../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span> 
                 {{/relatedDocs}}
                 {{#if relatedDocs}}
                 </p>
@@ -174,7 +174,7 @@
                       <p><span class="font-weight-bold">Normative References:<br></span>
                     {{/if}}
                       {{#references/normative}}
-                        <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
+                        <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
                       {{/references/normative}}
                     {{#if references/normative}}
                       </p>
@@ -183,7 +183,7 @@
                       <p><span class="font-weight-bold">Bibliographic References:<br></span>
                     {{/if}}
                       {{#references/bibliographic}}
-                        <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br>
+                        <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br>
                       {{/references/bibliographic}}
                     {{#if references/normative}}
                       </p>
@@ -198,7 +198,7 @@
                 <p><span class="font-weight-bold">Amended by:<br></span>
               {{/if}}
               {{#amendedBy}}
-                <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
+                <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
               {{/amendedBy}}
               {{#if amendedBy}}
                 </p>
@@ -207,7 +207,7 @@
                 <p><span class="font-weight-bold">Superseded by:<br></span>
               {{/if}}
               {{#supersededBy}}
-                <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
+                <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
               {{/supersededBy}}
               {{#if supersededBy}}
                 </p>

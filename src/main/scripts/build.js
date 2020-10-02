@@ -86,19 +86,24 @@ async function buildRegistry ({ listType, templateType, idType, listTitle }) {
     console.log(`${listTitle} schema validation passed`)
   };
 
-  /* load the doc statuses */
+  /* load the doc Statuses, Labels */
   
   const docStatuses = {}
+  const docLabels = {}
+
   registry.forEach(item => { docStatuses[item.docId] = item.status} );
-  
+  registry.forEach(item => { docLabels[item.docId] = (item.label)} );
+
   hb.registerHelper("getStatus", function(docId) {
-  
     return docStatuses[docId];
-  
   });
-  
+
+  hb.registerHelper("getLabel", function(docId) {
+    return docLabels[docId];
+  });
+
   /* is the registry sorted */
-  
+    
   for(let i = 1; i < registry.length; i++) {
     if (registry[i-1].docID >= registry[i].docID) {
       throw "Registry key " + registry[i-1].docID + " is " +
