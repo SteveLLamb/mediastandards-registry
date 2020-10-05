@@ -46,7 +46,7 @@
                     "status": {
                         "$id": "#/items/anyOf/0/properties/status",
                         "type": "string",
-                        "enum": [ "In Process", "Active", "Amended", "Superseded", "Superseded *", "Withdrawn", "Unknown"]
+                        "enum": [ "Draft", "Active", "Amended", "Superseded", "Superseded *", "Withdrawn", "Unknown"]
                     },
                     "statusNote": {
                         "$id": "#/items/anyOf/0/properties/statusNote",
@@ -67,6 +67,10 @@
                     "reaffirmDate": {
                         "$id": "#/items/anyOf/0/properties/reaffirmDate",
                         "type": "string"
+                    },
+                    "unknown": {
+                        "$id": "#/items/anyOf/0/properties/unknown",
+                        "type": "boolean"
                     },
                     "withdrawn": {
                         "$id": "#/items/anyOf/0/properties/withdrawn",

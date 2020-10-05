@@ -4,39 +4,21 @@
   {{>header}}
 
     <!-- Main content starts - do not edit above this line -->
-    <table id="sorttable" class="table table-small table-hover display">
+    <table id="sorttable" class="table table-small table-hover w-auto display">
       <thead class="thead-light">
         <tr>
-          <th scope="col" width="4em">Label</th>
+          <th scope="col" width="3em">Label</th>
           <th scope="col">Publisher</th>
           <th scope="col">Type</th>
-          <th scope="col">Title/Details</th>
-          <th scope="col"></th>    
+          <th scope="col">Status</th>
+          <th scope="col">Title/Details</th>    
         </tr>
       </thead>
       <tbody id="searchTable">
         {{#data}}
         <tr id="{{../idType}}-{{docId}}">
-          <td class="label">
+          <td class="doclabel">
             <a class="anchor" id="{{docId}}" href="#{{docId}}"></a><code>{{label}}</code>
-            {{#inprocess}}
-              <br><span class="mx-3 badge badge-success">In Process</span>    
-            {{/inprocess}}
-            {{#withdrawn}}
-              <br><span class="mx-3 badge badge-danger">Withdrawn</span>  
-            {{/withdrawn}}
-            {{#superseded}}
-              <br><span class="mx-3 badge badge-warning">Superseded</span> 
-            {{/superseded}}
-            {{#stablized}}
-              <br><span class="mx-3 badge badge-primary">Stablized</span>    
-            {{/stablized}}
-            {{#reaffirmed}}
-              <br><span class="mx-3 badge badge-info">Reaffirmed</span>   
-            {{/reaffirmed}}
-            {{#amended}}
-              <br><span class="mx-3 badge badge-secondary">Amended</span>    
-            {{/amended}}
           </td>
           <td class="publisher">
             {{publisher}}
@@ -47,171 +29,204 @@
           </td>
           <td>{{type}}</td>
           <td>
-            <p><span class="title">
-              {{#if url}}
-                <a class="{{../idType}}-link" target="_blank" href="{{url}}">
-              {{/if}}
-              {{title}}
-              {{#if url}}
-                </a>
-              {{/if}}
-            </span>
-          </p>
-            <div class="container bg-light">
-              <div class="row">
-                <div class="col-sm">
-                  {{#if status}}
-                  <p><span class="font-weight-bold">Current Status: <em>{{status}}</em></span>{{#if statusNote}}<span class="small"><em> ({{statusNote}})</em></span>{{/if}}
-                  </p>
-                  {{#if details}}
-                  <p><span class="font-weight-bold">Details:</span> <em>{{details}}</em>
-                  </p>
-                  {{/if}}
-                  {{/if}}
-                  {{#if publicationDate}}
-                  Publication Date: {{publicationDate}}
-                  <br>
-                  {{/if}}
-                  {{#if withdrawnDate}}
-                  Withdrawn Date: {{withdrawnDate}}
-                  <br>
-                  {{/if}}
-                  {{#if stablizedDate}}
-                  Stablized Date: {{stablizedDate}}
-                  <br>
-                  {{/if}}
-                  {{#if reaffirmDate}}
-                  Reaffirmed Date: {{reaffirmDate}}
-                  <br>
-                  {{/if}}
-                  {{#if supersededDate}}
-                  Superseded Date: {{supersededDate}}
-                  <br>
-                  {{/if}}
-                  {{#if amendedDate}}
-                  Amended Date: {{amendedDate}}
-                  <br>
-                  {{/if}}
-                  {{#if github}}
-                  GitHub: <a class="{{../idType}}-link" target="_blank" href="{{github}}">{{github}}</a>
-                  <br>
-                  {{/if}}
-                  {{#if workInfo}}
-                  <p>
-                  <div class="col-sm border">
-                    <span class="font-weight-bold"><u>Work Info</u><br></span>
-                    Group: 
-                    {{#if workInfo/groupLink}}
-                    <a class="{{../idType}}-link" target="_blank" href="{{workInfo/groupLink}}">
-                    {{/if}}
-                    {{workInfo/group}}
-                    {{#if workInfo/groupLink}}
-                    </a>
-                    {{/if}}
-                    {{#if workInfo/reviewNeeded}}
-                    <br>
-                    Review Needed: Yes
-                    {{/if}}
-                    {{#if workInfo/reviewPeriod}}
-                    <br>
-                    Review Period: {{workInfo/reviewPeriod}}
-                    {{/if}}
-                    {{#if workInfo/reviewDate}}
-                    <br>
-                    Review Date: {{workInfo/reviewDate}}
-                    {{/if}}
-                    {{#if workInfo/recommendation}}
-                    <br>
-                    Recommendation: {{workInfo/recommendation}}
-                    {{/if}}
-                    {{#if workInfo/approved}}
-                    <br>
-                    TC Approved: Yes
-                    {{/if}}
-                    {{#if workInfo/assigned}}
-                    <br>
-                    Assigned to: {{workInfo/assigned}}
-                    {{/if}}
-                    {{#if workInfo/actionItems}}
-                    <br>
-                    <a class="{{../idType}}-link" target="_blank" href="{{workInfo/actionItems}}">Action Items</a>
-                    {{/if}}
-                    {{#if workInfo/projectLink}}
-                    <br>
-                    <a class="{{../idType}}-link" target="_blank" href="{{workInfo/projectLink}}">Project Link</a>
-                    {{/if}}
-                    {{#if workInfo/updateDependency}}
-                    <br><span>Dependent on updates to:</span>
-                    {{/if}}
-                      {{#workInfo/updateDependency}}
-                        <br><a class="{{../../idType}}-link" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span>
-                      {{/workInfo/updateDependency}}
-                    {{#if workInfo/notes}}
-                    <br><br>
-                    <span class="font-weight-bold">Notes:</span> <em>{{workInfo/notes}}</em>
-                    {{/if}}
-                    {{#if workInfo/otherWork}}
-                    <br>
-                    <span class="font-weight-bold">Other Requested Work:</span> <em>{{workInfo/otherWork}}</em>
-                    {{/if}}
-                  </div>
-                </p>
-                {{/if}}
-                <br>
-                {{#if relatedDocs}}
-                <p><span class="font-weight-bold">Related Documents:</span>
-                {{/if}}
-                {{#relatedDocs}}
-                  <br><a class="{{../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span> 
-                {{/relatedDocs}}
-                {{#if relatedDocs}}
-                </p>
-                {{/if}}
-                </div>
-                {{#if references}}
-                  <div class="col-sm">
-                    {{#if references/normative}}
-                      <p><span class="font-weight-bold">Normative References:<br></span>
-                    {{/if}}
-                      {{#references/normative}}
-                        <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
-                      {{/references/normative}}
-                    {{#if references/normative}}
-                      </p>
-                    {{/if}}
-                    {{#if references/bibliographic}}
-                      <p><span class="font-weight-bold">Bibliographic References:<br></span>
-                    {{/if}}
-                      {{#references/bibliographic}}
-                        <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br>
-                      {{/references/bibliographic}}
-                    {{#if references/normative}}
-                      </p>
-                    {{/if}}
-                  </div>
-                {{/if}}
-              </div>
-            </div>
-          </td>
-          <td>
-            {{#if amendedBy}}
-                <p><span class="font-weight-bold">Amended by:<br></span>
-              {{/if}}
-              {{#amendedBy}}
-                <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
-              {{/amendedBy}}
-              {{#if amendedBy}}
-                </p>
-            {{/if}}
+            {{#unknown}}
+              <span class="label badge badge-danger">Status: Unknown</span><br> 
+            {{/unknown}}
+            {{#withdrawn}}
+              <span class="label badge badge-danger">Status: Withdrawn</span><br> 
+            {{/withdrawn}}
+            {{#superseded}}
+              <span class="label badge badge-warning">Status: Superseded</span><br>
+            {{/superseded}}
             {{#if supersededBy}}
-                <p><span class="font-weight-bold">Superseded by:<br></span>
+              <div class="border p-2">
+                <span class="font-weight-bold small">Superseding Document(s):</span><br>
               {{/if}}
               {{#supersededBy}}
                 <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
               {{/supersededBy}}
               {{#if supersededBy}}
-                </p>
+              </div>
             {{/if}}
+            {{#draft}}
+              <span class="label badge badge-warning">Status: Draft</span><br> 
+            {{/draft}}
+            {{#active}}
+              <span class="label badge badge-success">Status: Active</span><br>  
+            {{/active}}
+            {{#amended}}
+              <span class="label badge badge-secondary">Status: Amended</span><br>
+            {{/amended}}
+            {{#if amendedBy}}
+              <div class="border p-2">
+                <span class="font-weight-bold small">Amending Document(s):</span><br>
+              {{/if}}
+              {{#amendedBy}}
+                <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
+              {{/amendedBy}}
+              {{#if amendedBy}}
+              </div>
+            {{/if}}
+            {{#reaffirmed}}
+              <span class="label badge badge-info">Status: Reaffirmed</span><br>
+            {{/reaffirmed}}
+            {{#stablized}}
+              <span class="label badge badge-primary">Status: Stablized</span>  
+            {{/stablized}}         
+          </td>
+          <td>
+            <span class="title">
+            {{#if url}}
+              <a class="{{../idType}}-link" target="_blank" href="{{url}}">
+            {{/if}}
+            {{title}}
+            {{#if url}}
+              </a>
+            {{/if}}
+            </span>
+            <div class="container">
+              <div class="row">
+                <div class="col p-2">
+                  <p>
+                    <span class="font-weight-bold">Current Status: <em>{{status}}</em></span>{{#if statusNote}}<span class="small"><em> ({{statusNote}})</em></span>{{/if}}
+                  </p>
+                  {{#if details}}
+                  <p>
+                    <span class="font-weight-bold">Details:</span> <em>{{details}}</em>
+                  </p>
+                  <p>
+                    {{/if}}
+                    {{#if publicationDate}}
+                    Publication Date: {{publicationDate}}
+                    <br>
+                    {{/if}}
+                    {{#if withdrawnDate}}
+                    Withdrawn Date: {{withdrawnDate}}
+                    <br>
+                    {{/if}}
+                    {{#if stablizedDate}}
+                    Stablized Date: {{stablizedDate}}
+                    <br>
+                    {{/if}}
+                    {{#if reaffirmDate}}
+                    Reaffirmed Date: {{reaffirmDate}}
+                    <br>
+                    {{/if}}
+                    {{#if supersededDate}}
+                    Superseded Date: {{supersededDate}}
+                    <br>
+                    {{/if}}
+                    {{#if amendedDate}}
+                    Amended Date: {{amendedDate}}
+                    <br>
+                    {{/if}}
+                    {{#if github}}
+                    GitHub: <a class="{{../idType}}-link" target="_blank" href="{{github}}">{{github}}</a>
+                    <br>
+                    {{/if}}
+                  </p>
+                  {{#if workInfo}}
+                    <div class="border p-2">
+                        <span class="font-weight-bold"><u>Work Info</u><br></span>
+                        Group: 
+                        {{#if workInfo/groupLink}}
+                        <a class="{{../idType}}-link" target="_blank" href="{{workInfo/groupLink}}">
+                        {{/if}}
+                        {{workInfo/group}}
+                        {{#if workInfo/groupLink}}
+                        </a>
+                        {{/if}}
+                        {{#if workInfo/reviewNeeded}}
+                        <br>
+                        Review Needed: Yes
+                        {{/if}}
+                        {{#if workInfo/reviewPeriod}}
+                        <br>
+                        Review Period: {{workInfo/reviewPeriod}}
+                        {{/if}}
+                        {{#if workInfo/reviewDate}}
+                        <br>
+                        Review Date: {{workInfo/reviewDate}}
+                        {{/if}}
+                        {{#if workInfo/recommendation}}
+                        <br>
+                        Recommendation: {{workInfo/recommendation}}
+                        {{/if}}
+                        {{#if workInfo/approved}}
+                        <br>
+                        TC Approved: Yes
+                        {{/if}}
+                        {{#if workInfo/assigned}}
+                        <br>
+                        Assigned to: {{workInfo/assigned}}
+                        {{/if}}
+                        {{#if workInfo/actionItems}}
+                        <br>
+                        <a class="{{../idType}}-link" target="_blank" href="{{workInfo/actionItems}}">Action Items</a>
+                        {{/if}}
+                        {{#if workInfo/projectLink}}
+                        <br>
+                        <a class="{{../idType}}-link" target="_blank" href="{{workInfo/projectLink}}">Project Link</a>
+                        {{/if}}
+                        {{#if workInfo/updateDependency}}
+                        <br><span>Dependent on updates to:</span>
+                        {{/if}}
+                        {{#workInfo/updateDependency}}
+                        <br><a class="{{../../idType}}-link" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span>
+                        {{/workInfo/updateDependency}}
+                        {{#if workInfo/notes}}
+                        <br><br>
+                        <span class="font-weight-bold">Notes:</span> <em>{{workInfo/notes}}</em>
+                        {{/if}}
+                        {{#if workInfo/otherWork}}
+                        <br>
+                        <span class="font-weight-bold">Other Requested Work:</span> <em>{{workInfo/otherWork}}</em>
+                        {{/if}}
+                    </div>
+                  {{/if}}
+                {{#if relatedDocs}}
+                <div class="p-2">
+                    <span class="font-weight-bold small">Related Documents:</span>
+                    {{/if}}
+                    {{#relatedDocs}}
+                    <br><a class="{{../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span> 
+                    {{/relatedDocs}}
+                    {{#if relatedDocs}}
+                </div>
+                {{/if}}
+              </div>
+              <!-- {{#if references}}
+              <div class="col-sm border">
+              -->
+                {{#if references/normative}}
+                <div class="col-sm-3">
+                  <p><span class="font-weight-bold small">Normative References:<br></span>
+                {{/if}}
+                  {{#references/normative}}
+                    <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
+                  {{/references/normative}}
+                {{#if references/normative}}
+                  </p>
+                </div>
+                {{/if}}
+                {{#if references/bibliographic}}
+                <div class="col-sm-3">
+                  <p><span class="font-weight-bold small">Bibliographic References:<br></span>
+                {{/if}}
+                  {{#references/bibliographic}}
+                    <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br>
+                  {{/references/bibliographic}}
+                {{#if references/normative}}
+                  </p>
+                </div>
+                {{/if}}
+                <!--
+                </div>
+              {{/if}} -->
+
+
+              </div>
+            </div>
           </td>
         </tr>
         {{/data}}
