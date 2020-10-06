@@ -46,7 +46,15 @@
                     "status": {
                         "$id": "#/items/anyOf/0/properties/status",
                         "type": "string",
-                        "enum": [ "Draft", "Active", "Amended", "Superseded", "Superseded *", "Withdrawn", "Unknown"]
+                        "enum": [ 
+                            "Active",
+                            "Amended",
+                            "Draft",
+                            "Superseded *",
+                            "Superseded",
+                            "Unknown",
+                            "Withdrawn"
+                        ]
                     },
                     "statusNote": {
                         "$id": "#/items/anyOf/0/properties/statusNote",
@@ -161,7 +169,11 @@
                             "reviewPeriod": {
                                 "$id": "#/items/anyOf/0/properties/workInfo/properties/reviewPeriod",
                                 "type": "string",
-                                "enum": [ "1 Year", "5 Year", "Systematic"]
+                                "enum": [ 
+                                    "1 Year",
+                                    "5 Year",
+                                    "Systematic"
+                                ]
                             },
                             "reviewDate": {
                                 "$id": "#/items/anyOf/0/properties/reviewDate",
@@ -224,6 +236,57 @@
                                 }
                             ],
                             "$id": "#/items/anyOf/0/properties/relatedDocs/items"
+                        }
+                    },
+                    "usage": {
+                        "$id": "#/items/anyOf/0/properties/usage",
+                        "type": "array",
+                        "additionalItems": true,
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "$id": "#/items/anyOf/0/properties/usage/items/anyOf/0",
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "enum": [ 
+                                        "Accessibility",
+                                        "Archive",
+                                        "Audio",
+                                        "Aux Data",
+                                        "Captions",
+                                        "Cinema Sound",
+                                        "DCDM",
+                                        "DCinema",
+                                        "DCP Application",
+                                        "DCP Core",
+                                        "Digital Source",
+                                        "Distribution",
+                                        "Image",
+                                        "IMF",
+                                        "IMF Application",
+                                        "Immersive Audio",
+                                        "Interop",
+                                        "JPEG2000",
+                                        "KDM",
+                                        "Measurement",
+                                        "Metadata",
+                                        "MXF Application",
+                                        "MXF Core",
+                                        "Operations",
+                                        "Packaging",
+                                        "Processing",
+                                        "Projection",
+                                        "Quality",
+                                        "SDI",
+                                        "Security",
+                                        "Sign Language",
+                                        "Sound",
+                                        "Subtitles",
+                                        "XML"
+                                    ]
+                                }
+                            ],
+                            "$id": "#/items/anyOf/0/properties/usage/items"
                         }
                     },
                     "references": {

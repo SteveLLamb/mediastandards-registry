@@ -817,7 +817,16 @@
             "dci-dcss-v14-e1-2"
         ],
         "url": "https://www.dcimovies.com/specification/DCI_DCSS_v1-4_20-July-2020.pdf",
-        "publicationDate": "2020-07-20T07:00:00.000Z"
+        "publicationDate": "2020-07-20T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Distribution",
+            "Operations",
+            "Security",
+            "KDM"
+        ]
     },
     {
         "docId": "dci-dcss-v14-e1-2",
@@ -828,7 +837,16 @@
         "status": "Active",
 		"active": true,
         "url": "https://www.dcimovies.com/specification/DCI_DCSSv1-4_Errata_1-2_9-02-2020.pdf",
-        "publicationDate": "2020-09-02T07:00:00.000Z"
+        "publicationDate": "2020-09-02T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Distribution",
+            "Operations",
+            "Security",
+            "KDM"
+        ]
     },
     {
         "docId": "dci-m-2020-nist",
@@ -839,7 +857,11 @@
         "status": "Active",
 		"active": true,
         "url": "https://www.dcimovies.com/FIPS/DCI_Memo_on_NIST_Standards_transitions_and_Non-FIPS_mode_2020-07-01.pdf",
-        "publicationDate": "2010-07-01T07:00:00.000Z"
+        "publicationDate": "2010-07-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Security"
+        ]
     },
     {
         "docId": "dci-hfr-rp",
@@ -864,7 +886,11 @@
             "dci-a9-2018-oba"
         ],
         "url": "https://www.dcimovies.com/archives/spec_v1_2_With_Errata_Incorporated/DCI_Object-Based_Audio_Addendum_2013-0909.pdf",
-        "publicationDate": "2013-09-09T07:00:00.000Z"
+        "publicationDate": "2013-09-09T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Immersive Audio"
+        ]
     },
     {
         "docId": "dci-a9-2018-dvd",
@@ -899,7 +925,11 @@
         "status": "Active",
 		"active": true,
         "url": "https://www.dcimovies.com/specification/DCI_Object-Based_Audio_Addendum_2018-1001.pdf",
-        "publicationDate": "2018-10-01T07:00:00.000Z"
+        "publicationDate": "2018-10-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Immersive Audio"
+        ]
     },
     {
         "docId": "dci-a-2007-sdc",
@@ -952,9 +982,16 @@
         "label": "ISDCF Doc 01",
         "title": "Digital Cinema Content Naming Convention",
         "status": "Active",
+        "details": "ISDCF maintains the recommendation for naming DCP files.",
 		"active": true,
         "url": "http://isdcf.com/dcnc",
-        "github": "https://github.com/ISDCF/registries"
+        "github": "https://github.com/ISDCF/registries",
+        "usage": [
+            "DCinema",
+            "DCP Core",
+            "Packaging",
+            "Distribution"
+        ]
     },
     {
         "docId": "dlp-cc-11-rC",
@@ -965,7 +1002,15 @@
         "status": "Active",
 		"active": true,
         "url": "http://www.deluxecdn.com/dcinema/reference/ti_subtitling_spec_v1_1.pdf",
-        "publicationDate": "2005-03-31T08:00:00.000Z"
+        "publicationDate": "2005-03-31T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Interop",
+            "Subtitles",
+            "Captions"
+        ]
     },
     {
         "docId": "ebu-smpte-tf-hsepmbs",
@@ -1043,6 +1088,12 @@
         "publicationDate": "2010-11-10T08:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Digital Source",
+            "Processing",
+            "Image"
+        ],
         "github": "https://github.com/SMPTE/eg432-1/issues"
     },
     {
@@ -1058,6 +1109,12 @@
         "publicationDate": "2006-12-29T08:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Digital Source",
+            "Processing",
+            "Sound"
+        ],
         "references": {
             "bibliographic": [
                 "st202m-1998",
@@ -1081,6 +1138,12 @@
         "publicationDate": "2008-07-01T07:00:00.000Z",
         "reaffirmed": true,
         "reaffirmDate": "2017-01-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Digital Source",
+            "Processing",
+            "Sound"
+        ],
         "workInfo": {
             "group": "TC36 WG3",
             "reviewPeriod": "Systematic",
@@ -2469,7 +2532,11 @@
         "status": "Active",
 		"active": true,
         "url": "https://isdcf.com/papers/ISDCF-Doc2-DCP-TransitionReview.pdf",
-        "publicationDate": "2011-11-02T07:00:00.000Z"
+        "publicationDate": "2011-11-02T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Interop"
+        ]
     },
     {
         "docId": "isdcf-d03",
@@ -2481,7 +2548,13 @@
         "status": "Active",
 		"active": true,
         "url": "https://isdcf.com/papers/ISDCF-Doc3-Delivery-Recs.pdf",
-        "publicationDate": "2017-06-29T07:00:00.000Z"
+        "publicationDate": "2017-06-29T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Distribution",
+            "Packaging",
+            "Interop"
+        ]
     },
     {
         "docId": "isdcf-d04",
@@ -2489,11 +2562,18 @@
         "type": "Technical Doc",
         "label": "ISDCF Doc 04",
         "title": "Audio Channel Assignments",
-        "details": "16‐Channel Audio Packaging Guide for both Interop-DCP and SMPTE-DCP. Interop DCP does not have a standardized way of sending multichannel packages. The attached documents describe a common way of transporting multi-channel and the labeling to be consistent with SMPTE-DCP packages. Note: (As of 2020-08-18) The information contained within this document has been incorporated in whole into SMPTE RDD52. This document will no longer be updated, but will remain here for historical purposes. There may be future revisions to either SMPTE RDD52 or subsequent documents where this document becomes obsolete, and at that time this document will be marked as 'superseded'.",
+        "details": "16‐Channel Audio Packaging Guide for both Interop-DCP and SMPTE-DCP. Interop DCP does not have a standardized way of sending multichannel packages. The attached documents describe a common way of transporting multi-channel and the labeling to be consistent with SMPTE-DCP packages. Note: (As of 2020-08-18) The information contained within this document has been incorporated in whole into SMPTE RDD52. This document remains here for historical purposes and as the original base information contained with RDD52. If ISDCF decides that any changes must occur within this document, a new revision will be posted, and said changes will be submitted to SMPTE for an updated revision of RDD52, to keep the documents’ information in sync. If for some reason, there may be future revisions to either SMPTE RDD52 or subsequent documents where this document becomes obsolete, and at that time this document will be marked as “superseded”.",
         "status": "Active",
 		"active": true,
         "url": "https://isdcf.com/papers/ISDCF-Doc4-Audio-channel-recommendations.pdf",
         "publicationDate": "2017-06-29T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Audio",
+            "Distribution",
+            "Packaging",
+            "Interop"
+        ],
         "relatedDocs": [
             "rdd52-2020"
         ]
@@ -2508,7 +2588,11 @@
         "status": "Active",
 		"active": true,
         "url": "https://isdcf.com/papers/ISDCF-Doc5-kdm-certs.pdf",
-        "publicationDate": "2017-06-29T07:00:00.000Z"
+        "publicationDate": "2017-06-29T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "KDM"
+        ]
     },
     {
         "docId": "isdcf-d06",
@@ -2536,7 +2620,11 @@
         "status": "Active",
 		"active": true,
         "url": "https://isdcf.com/papers/ISDCF-Doc7-DigitalCinemaLanguageCodes.pdf",
-        "publicationDate": "2017-10-19T07:00:00.000Z"
+        "publicationDate": "2017-10-19T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "XML"
+        ]
     },
     {
         "docId": "isdcf-d08",
@@ -2560,7 +2648,12 @@
         "status": "Active",
 		"active": true,
         "url": "https://isdcf.com/papers/ISDCF-Doc9-Closed-Caption-Authoring-Best-Practices.pdf",
-        "publicationDate": "2016-02-11T08:00:00.000Z"
+        "publicationDate": "2016-02-11T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Captions",
+            "Accessibility"
+        ]
     },
     {
         "docId": "isdcf-d10",
@@ -2572,7 +2665,13 @@
         "status": "Active",
 		"active": true,
         "url": "https://isdcf.com/papers/ISDCF-Doc10-Subtitles-and-Captions-in%20Digital-Cinema-20160211.pdf",
-        "publicationDate": "2016-02-11T08:00:00.000Z"
+        "publicationDate": "2016-02-11T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Subtitles",
+            "Captions",
+            "Accessibility"
+        ]
     },
     {
         "docId": "ISDCF_RP_430_10",
@@ -2584,7 +2683,12 @@
         "status": "Active",
 		"active": true,
         "url": "http://isdcf.com/papers/ISDCF-SMPTE-ST-430-10-Implementation-Notes20180308.pdf",
-        "publicationDate": "2018-03-08T08:00:00.000Z"
+        "publicationDate": "2018-03-08T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Captions",
+            "Accessibility"
+        ]
     },
     {
         "docId": "isdcf-d11",
@@ -2596,7 +2700,13 @@
         "status": "Active",
 		"active": true,
         "url": "https://isdcf.com/papers/ISDCF-Doc11-MovieLoudnessMeasurement20160315.pdf",
-        "publicationDate": "2016-03-15T07:00:00.000Z"
+        "publicationDate": "2016-03-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Audio",
+            "Measurement",
+            "Cinema Sound"
+        ]
     },
     {
         "docId": "isdcf-d12",
@@ -2608,7 +2718,11 @@
         "draft": true,
         "details": "DRAFT - NOT YET APPROVED",
         "url": "https://isdcf.com/papers/ISDCF-Doc12-Recommended-Practice-for-Ingest-Behavior-DRAFT-20170322.pdf",
-        "publicationDate": "2017-03-22T07:00:00.000Z"
+        "publicationDate": "2017-03-22T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations"
+        ]
     },
     {
         "docId": "isdcf-d13",
@@ -2616,11 +2730,16 @@
         "type": "Technical Doc",
         "label": "ISDCF Doc 13",
         "title": "Sign Language Video Encoding for Digital Cinema",
-        "details": "To submit comments and corrections, go to GH. Note: (As of 2020-08-18) The information contained within this document has been incorporated in whole into SMPTE RDD52. This document will no longer be updated, but will remain here for historical purposes. There may be future revisions to either SMPTE RDD52 or subsequent documents where this document becomes obsolete, and at that time this document will be marked as 'superseded'.",
+        "details": "To submit comments and corrections, go to GH. Note: (As of 2020-08-18) The information contained within this document has been incorporated in whole into SMPTE RDD52. This document remains here for historical purposes and as the original base information contained with RDD52. If ISDCF decides that any changes must occur within this document, a new revision will be posted, and said changes will be submitted to SMPTE for an updated revision of RDD52, to keep the documents’ information in sync. If for some reason, there may be future revisions to either SMPTE RDD52 or subsequent documents where this document becomes obsolete, and at that time this document will be marked as “superseded”.",
         "status": "Active",
 		"active": true,
         "url": "https://isdcf.com/papers/ISDCF-Doc13-Sign-Language-Video-Encoding-for-Digital-Cinema.pdf",
         "publicationDate": "2018-07-18T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Sign Language",
+            "Accessibility"
+        ],
         "github": "https://github.com/ISDCF/Sign-Language-Video-Encoding",
         "relatedDocs": [
             "rdd52-2020"
@@ -2636,7 +2755,11 @@
         "status": "Active",
 		"active": true,
         "url": "https://isdcf.com/papers/ISDCF-Doc14-Digital-Delivery-of-DCPs.pdf",
-        "publicationDate": "2019-01-03T08:00:00.000Z"
+        "publicationDate": "2019-01-03T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Distribution"
+        ]
     },
     {
         "docId": "isdcf-d15",
@@ -2647,7 +2770,14 @@
         "status": "Active",
 		"active": true,
         "url": "https://isdcf.com/papers/ISDCF-Doc15-IAB-Profile-1-202006012.pdf",
-        "publicationDate": "2020-06-12T07:00:00.000Z"
+        "publicationDate": "2020-06-12T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCP Application",
+            "Packaging",
+            "Immersive Audio",
+            "Sound"
+        ]
     },
     {
         "docId": "isdcf-hfr",
@@ -2939,7 +3069,11 @@
         ],
         "details": "Amended, Superseded",
         "url": "https://www.iso.org/standard/37674.html",
-        "publicationDate": "2004-09-15T07:00:00.000Z"
+        "publicationDate": "2004-09-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "JPEG2000"       
+        ]
     },
     {
         "docId": "iso15444-1-2004-amd1-2006",
@@ -2953,7 +3087,11 @@
             "iso15444-1-2016"
         ],
         "url": "https://www.iso.org/standard/41719.html",
-        "publicationDate": "2006-01-01T08:00:00.000Z"
+        "publicationDate": "2006-01-01T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "JPEG2000"       
+        ]
     },
     {
         "docId": "iso15444-1-2004-amd2-2009",
@@ -2967,7 +3105,11 @@
             "iso15444-1-2016"
         ],
         "url": "iso.org/standard/52174.html",
-        "publicationDate": "2009-12-15T08:00:00.000Z"
+        "publicationDate": "2009-12-15T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "JPEG2000"       
+        ]
     },
     {
         "docId": "iso15444-1-2004-amd4-2013",
@@ -2981,7 +3123,11 @@
             "iso15444-1-2016"
         ],
         "url": "https://www.iso.org/standard/52176.html",
-        "publicationDate": "2013-04-15T07:00:00.000Z"
+        "publicationDate": "2013-04-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "JPEG2000"       
+        ]
     },
     {
         "docId": "iso15444-1-2004-amd8-2015",
@@ -2995,7 +3141,11 @@
             "iso15444-1-2016"
         ],
         "url": "https://www.iso.org/standard/65352.html",
-        "publicationDate": "2015-02-15T08:00:00.000Z"
+        "publicationDate": "2015-02-15T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "JPEG2000"       
+        ]
     },
     {
         "docId": "iso15444-1-2004-cor1-2007",
@@ -3009,7 +3159,11 @@
             "iso15444-1-2016"
         ],
         "url": "https://www.iso.org/standard/44343.html",
-        "publicationDate": "2007-07-15T07:00:00.000Z"
+        "publicationDate": "2007-07-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "JPEG2000"       
+        ]
     },
     {
         "docId": "iso15444-1-2004-cor2-2008",
@@ -3023,7 +3177,11 @@
             "iso15444-1-2016"
         ],
         "url": "https://www.iso.org/standard/46472.html",
-        "publicationDate": "2008-04-15T07:00:00.000Z"
+        "publicationDate": "2008-04-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "JPEG2000"       
+        ]
     },
     {
         "docId": "iso15444-1-2016",
@@ -3037,7 +3195,11 @@
             "iso15444-1-2019"
         ],
         "url": "https://www.iso.org/standard/70018.html",
-        "publicationDate": "2016-10-15T07:00:00.000Z"
+        "publicationDate": "2016-10-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "JPEG2000"       
+        ]
     },
     {
         "docId": "iso15444-1-2019",
@@ -3048,7 +3210,11 @@
         "status": "Active",
 		"active": true,
         "url": "https://www.iso.org/standard/78321.html",
-        "publicationDate": "2019-10-01T07:00:00.000Z"
+        "publicationDate": "2019-10-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "JPEG2000"       
+        ]
     },
     {
         "docId": "iso15948-2004",
@@ -3997,6 +4163,11 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.RDD20.2010",
         "publicationDate": "2010-04-12T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Security",
+            "Operations"
+        ],
         "references": {
             "normative": [
                 "st291m-2006",
@@ -4020,6 +4191,11 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.RDD28.2014",
         "publicationDate": "2014-08-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Immersive Audio",
+            "Sound"
+        ],
         "references": {
             "normative": [
                 "xml-names-20091208",
@@ -4044,7 +4220,12 @@
         ],
         "url": "http://dx.doi.org/10.5594/SMPTE.RDD29.2014",
         "publicationDate": "2014-08-01T07:00:00.000Z",
-        "supersededDate": "2019-01-25T08:00:00.000Z"
+        "supersededDate": "2019-01-25T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Immersive Audio",
+            "Sound"
+        ]
     },
     {
         "docId": "rdd29-2019",
@@ -4056,7 +4237,12 @@
         "status": "Active",
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.RDD29.2019",
-        "publicationDate": "2019-01-24T08:00:00.000Z"
+        "publicationDate": "2019-01-24T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Immersive Audio",
+            "Sound"
+        ]
     },
     {
         "docId": "rdd45-2017",
@@ -4079,7 +4265,16 @@
         "title": "SMPTE DCP Bv2.1 Application Profile",
         "status": "Active",
 		"active": true,
-        "url": "https://ieeexplore.ieee.org/document/9161348",
+        "url": "https://doi.org/10.5594/SMPTE.RDD52.2020",
+        "publicationDate": "2020-07-23T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCP Application",
+            "Packaging",
+            "DCP Core",
+            "Distribution",
+            "Metadata"
+        ],
         "workInfo": {
             "group": "21DC DG_RDD_52",
             "approved": true,
@@ -4145,7 +4340,13 @@
         "status": "Active",
 		"active": true,
         "url": "https://doi.org/10.5594/SMPTE.RP141.2005",
-        "publicationDate": "2005-01-01T08:00:00.000Z"
+        "publicationDate": "2005-01-01T08:00:00.000Z",
+        "usage": [
+            "Measurement",
+            "Operations",
+            "Audio",
+            "Cinema Sound"
+        ]
     },
     {
         "docId": "rp155-2004",
@@ -4372,6 +4573,12 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.RP428-4.2010",
         "publicationDate": "2010-03-31T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "Distribution",
+            "Sound"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -4409,6 +4616,12 @@
         "publicationDate": "2010-06-24T07:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "Distribution",
+            "Image"
+        ],
         "references": {
             "normative": [
                 "st428-1-2006",
@@ -4437,6 +4650,11 @@
         "publicationDate": "2009-06-03T07:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "Distribution"
+        ],
         "references": {
             "normative": [
                 "st428-1-2006",
@@ -4481,6 +4699,13 @@
         "superseded": true,
         "supersededBy": [
             "rp431-2-2011"
+        ],
+        "usage": [
+            "DCinema",
+            "Quality",
+            "Projection",
+            "Measurement",
+            "Image"
         ]
     },
     {
@@ -4496,6 +4721,13 @@
         "publicationDate": "2011-04-06T07:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Quality",
+            "Projection",
+            "Measurement",
+            "Image"
+        ],
         "references": {
             "normative": [
                 "st428-1-2006",
@@ -4514,7 +4746,13 @@
         "status": "Active",
 		"active": true,
         "url": "https://doi.org/10.5594/SMPTE.RP98.1995",
-        "publicationDate": "1995-01-01T07:00:00.000Z"
+        "publicationDate": "1995-01-01T07:00:00.000Z",
+        "usage": [
+            "Quality",
+            "Projection",
+            "Measurement",
+            "Image"
+        ]
     },
     {
         "docId": "rtf-asd-nbsa-2000",
@@ -4852,7 +5090,13 @@
         "status": "Active",
 		"active": true,
         "url": "https://doi.org/10.5594/SMPTE.ST2067-201.2019",
-        "publicationDate": "2019-07-23T07:00:00.000Z"
+        "publicationDate": "2019-07-23T07:00:00.000Z",
+        "usage": [
+            "IMF",
+            "Packaging",
+            "Immersive Audio",
+            "Audio"
+        ]
     },
     {
         "docId": "st2067-20-2013",
@@ -4921,7 +5165,11 @@
         "status": "Active",
 		"active": true,
         "url": "https://doi.org/10.5594/SMPTE.ST2067-21.2020",
-        "publicationDate": "2020-05-12T07:00:00.000Z"
+        "publicationDate": "2020-05-12T07:00:00.000Z",
+        "usage": [
+            "IMF",
+            "IMF Application"
+        ]
     },
     {
         "docId": "st2067-2-2013",
@@ -5236,7 +5484,15 @@
         "status": "Active",
 		"active": true,
         "url": "https://doi.org/10.5594/SMPTE.ST2098-1.2018",
-        "publicationDate": "2018-08-10T07:00:00.000Z"
+        "publicationDate": "2018-08-10T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Metadata",
+            "IMF",
+            "Immersive Audio",
+            "Cinema Sound",
+            "Audio"
+        ]
     },
     {
         "docId": "st2098-2-2018",
@@ -5251,7 +5507,13 @@
             "st2098-2-2019"
         ],
         "url": "https://doi.org/10.5594/SMPTE.ST2098-2.2018",
-        "publicationDate": "2018-08-10T07:00:00.000Z"
+        "publicationDate": "2018-08-10T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Immersive Audio",
+            "Cinema Sound",
+            "Audio"
+        ]
     },
     {
         "docId": "st2098-2-2019",
@@ -5263,7 +5525,13 @@
         "status": "Active",
 		"active": true,
         "url": "https://doi.org/10.5594/SMPTE.ST2098-2.2019",
-        "publicationDate": "2019-06-24T07:00:00.000Z"
+        "publicationDate": "2019-06-24T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Immersive Audio",
+            "Cinema Sound",
+            "Audio"
+        ]
     },
     {
         "docId": "st2098-5-2018",
@@ -5275,7 +5543,15 @@
         "status": "Active",
 		"active": true,
         "url": "https://doi.org/10.5594/SMPTE.ST2098-5.2018",
-        "publicationDate": "2018-02-16T08:00:00.000Z"
+        "publicationDate": "2018-02-16T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "IMF",
+            "Packaging",
+            "Immersive Audio",
+            "Cinema Sound",
+            "Audio"
+        ]
     },
     {
         "docId": "st2114-2017",
@@ -5697,7 +5973,11 @@
             "st336-2017"
         ],
         "url": "https://doi.org/10.5594/SMPTE.ST336.2007",
-        "publicationDate": "2007-08-22T07:00:00.000Z"
+        "publicationDate": "2007-08-22T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "MXF Core"       
+        ]
     },
     {
         "docId": "st336-2017",
@@ -5709,7 +5989,11 @@
         "status": "Active",
 		"active": true,
         "url": "https://doi.org/10.5594/SMPTE.ST336.2017",
-        "publicationDate": "2017-08-21T07:00:00.000Z"
+        "publicationDate": "2017-08-21T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "MXF Core"       
+        ]
     },
     {
         "docId": "st336m-2001",
@@ -5723,7 +6007,11 @@
         "supersededBy": [
             "st336-2007"
         ],
-        "details": "Cannot locate"
+        "details": "Cannot locate",
+        "usage": [
+            "DCinema",
+            "MXF Core"       
+        ]
     },
     {
         "docId": "st352-2010",
@@ -5913,6 +6201,10 @@
         "statusNote": "Future versions are not appropriate for use in D-Cinema",
         "url": "https://doi.org/10.5594/SMPTE.ST377.2004",
         "publicationDate": "2004-09-22T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "MXF Core"       
+        ],
         "references": {
             "normative": [
                 "st298m-1997",
@@ -5987,6 +6279,11 @@
 		"active": true,
         "url": "https://doi.org/10.5594/SMPTE.ST377-4.2012",
         "publicationDate": "2012-06-28T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Audio",
+            "MXF Application"       
+        ],
         "references": {
             "normative": [
                 "st335-2001",
@@ -6029,7 +6326,11 @@
         ],
         "statusNote": "Future versions are not appropriate for use in D-Cinema",
         "note": "Cannot locate",
-        "publicationDate": "2004-09-22T07:00:00.000Z"
+        "publicationDate": "2004-09-22T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "MXF Core"       
+        ]
     },
     {
         "docId": "st379-2-2010",
@@ -6041,7 +6342,11 @@
         "status": "Active",
 		"active": true,
         "url": "https://doi.org/10.5594/SMPTE.ST379-2.2010",
-        "publicationDate": "2010-02-23T08:00:00.000Z"
+        "publicationDate": "2010-02-23T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "MXF Core"       
+        ]
     },
     {
         "docId": "st381-2-2018",
@@ -6070,7 +6375,13 @@
             "ST382-2007am2-2013"
         ],
         "url": "https://doi.org/10.5594/SMPTE.ST382.2007",
-        "publicationDate": "2007-07-11T07:00:00.000Z"
+        "publicationDate": "2007-07-11T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "Audio",
+            "MXF Application"       
+        ]
     },
     {
         "docId": "ST382-2007am1-2012",
@@ -6082,7 +6393,13 @@
         "status": "Active",
 		"active": true,
         "url": "https://doi.org/10.5594/SMPTE.ST382.2007Am1.2012",
-        "publicationDate": "2012-06-28T07:00:00.000Z"
+        "publicationDate": "2012-06-28T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "Audio",
+            "MXF Application"       
+        ]
     },
     {
         "docId": "ST382-2007am2-2013",
@@ -6094,7 +6411,13 @@
         "status": "Active",
 		"active": true,
         "url": "https://doi.org/10.5594/SMPTE.ST382.2007Am2.2013",
-        "publicationDate": "2013-06-20T07:00:00.000Z"
+        "publicationDate": "2013-06-20T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "Audio",
+            "MXF Application"       
+        ]
     },
     {
         "docId": "st390-2011",
@@ -6108,7 +6431,11 @@
         "url": "https://doi.org/10.5594/SMPTE.ST390.2011",
         "publicationDate": "2011-03-31T07:00:00.000Z",
         "reaffirmed": true,
-		"reaffirmDate": "2016-09-13T07:00:00.000Z"
+		"reaffirmDate": "2016-09-13T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "MXF Core"       
+        ]
     },
     {
         "docId": "st390m-2004",
@@ -6122,7 +6449,11 @@
         "supersededBy": [
             "st390-2011"
         ],
-        "details": "Cannot locate"
+        "details": "Cannot locate",
+        "usage": [
+            "DCinema",
+            "MXF Core"       
+        ]
     },
     {
         "docId": "st395-2003",
@@ -6164,7 +6495,11 @@
             "st400-2012"
         ],
         "url": "https://doi.org/10.5594/SMPTE.ST400.2004",
-        "publicationDate": "2004-02-03T07:00:00.000Z"
+        "publicationDate": "2004-02-03T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "MXF Core"       
+        ]
     },
     {
         "docId": "st400-2012",
@@ -6176,19 +6511,11 @@
         "status": "Active",
 		"active": true,
         "url": "https://doi.org/10.5594/SMPTE.ST400.2012",
-        "publicationDate": "2012-08-27T07:00:00.000Z"
-    },
-    {
-        "docId": "st400-2012",
-        "group": "30MR",
-        "publisher": "SMPTE",
-        "type": "Standard",
-        "label": "ST 400:2012",
-        "title": "Labels Structure",
-        "status": "Active",
-		"active": true,
-        "url": "https://doi.org/10.5594/SMPTE.ST400.2012",
-        "publicationDate": "2012-08-28T07:00:00.000Z"
+        "publicationDate": "2012-08-27T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "MXF Core"       
+        ]
     },
     {
         "docId": "st410-2008",
@@ -6202,7 +6529,11 @@
         "url": "https://doi.org/10.5594/SMPTE.ST410.2008",
         "publicationDate": "2008-07-30T07:00:00.000Z",
         "reaffirmed": true,
-		"reaffirmDate": "2013-07-07T07:00:00.000Z"
+		"reaffirmDate": "2013-07-07T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "MXF Application"       
+        ]
     },
     {
         "docId": "st422-2006",
@@ -6218,7 +6549,14 @@
         ],
         "statusNote": "Future versions are not appropriate for use in D-Cinema",
         "url": "https://doi.org/10.5594/SMPTE.ST422.2006",
-        "publicationDate": "2006-08-28T07:00:00.000Z"
+        "publicationDate": "2006-08-28T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "Image",
+            "MXF Application",
+            "JPEG2000"        
+        ]
     },
     {
         "docId": "st422-2013",
@@ -6391,6 +6729,12 @@
         "publicationDate": "2009-03-11T07:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations",
+            "Security",
+            "SDI"
+        ],
         "references": {
             "normative": [
                 "st291m-2006",
@@ -6415,6 +6759,15 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.ST428-10.2008",
         "publicationDate": "2008-12-03T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "DCP Core",
+            "Distribution",
+            "Captions",
+            "Accessibility",
+            "Subtitles"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -6454,7 +6807,13 @@
         ],
         "url": "http://dx.doi.org/10.5594/SMPTE.ST428-11.2009",
         "publicationDate": "2009-07-01T07:00:00.000Z",
-        "supersededDate": "2013-08-27T07:00:00.000Z","relatedDocs": [
+        "supersededDate": "2013-08-27T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "Distribution"
+        ],
+        "relatedDocs": [
             "iso26428-11-2011"
         ]
     },
@@ -6471,6 +6830,11 @@
         "publicationDate": "2011-12-01T07:00:00.000Z",
         "reaffirmed": true,
         "reaffirmDate": "2017-01-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "Distribution"
+        ],
         "workInfo": {
             "group": "TC36 WG2",
             "reviewPeriod": "Systematic",
@@ -6494,6 +6858,11 @@
         "publicationDate": "2013-08-27T07:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "Distribution"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -6533,6 +6902,13 @@
         "publicationDate": "2013-02-26T08:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "DCP Core",
+            "Distribution",
+            "Sound"
+        ],
         "github": "https://github.com/SMPTE/st428-12/issues",
         "references": {
             "normative": [
@@ -6553,6 +6929,12 @@
         "publicationDate": "2010-08-09T07:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "Distribution",
+            "SDI"
+        ],
         "references": {
             "normative": [
                 "st428-1-2006",
@@ -6582,6 +6964,12 @@
         "publicationDate": "2011-12-01T07:00:00.000Z",
         "reaffirmed": true,
         "reaffirmDate": "2017-01-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "Distribution",
+            "SDI"
+        ],
         "workInfo": {
             "group": "TC36 WG2",
             "reviewPeriod": "Systematic",
@@ -6615,6 +7003,13 @@
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
         "supersededDate": "2019-02-12T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "DCP Core",
+            "Distribution",
+            "Image"
+        ],
         "references": {
             "normative": [
                 "cie15-2004",
@@ -6636,6 +7031,13 @@
 		"active": true,
         "url": "https://www.iso.org/standard/50204.html",
         "publicationDate": "2008-09-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "DCP Core",
+            "Distribution",
+            "Image"
+        ],
         "references": {
             "normative": [
                 "cie15-2004",
@@ -6663,6 +7065,13 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.ST428-1.2019",
         "publicationDate": "2019-03-07T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "DCP Core",
+            "Distribution",
+            "Image"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -6699,6 +7108,13 @@
         "status": "Draft",
         "draft": true,
         "url": "https://www.iso.org/standard/80068.html",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "DCP Core",
+            "Distribution",
+            "Image"
+        ],
         "workInfo": {
             "group": "TC36 WG2"
         },
@@ -6719,6 +7135,12 @@
         "publicationDate": "2011-02-22T08:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "Distribution",
+            "Archive"
+        ],
         "references": {
             "normative": [
                 "st428-1-2006",
@@ -6746,6 +7168,13 @@
         "publicationDate": "2006-08-16T07:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "DCP Core",
+            "Distribution",
+            "Sound"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -6778,6 +7207,13 @@
 		"active": true,
         "url": "https://www.iso.org/standard/50218.html",
         "publicationDate": "2008-07-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "DCP Core",
+            "Distribution",
+            "Sound"
+        ],
         "reaffirmed": true,
         "reaffirmDate": "2017-01-01T07:00:00.000Z",
         "references": {
@@ -6807,6 +7243,13 @@
         "url": "http://dx.doi.org/10.5594/SMPTE.ST428-3.2006",
         "publicationDate": "2006-09-29T07:00:00.000Z",
         "withdrawnDate": "2017-09-28T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "DCP Core",
+            "Distribution",
+            "Sound"
+        ],
         "relatedDocs": [
             "iso26428-3-2008"
         ]
@@ -6824,6 +7267,13 @@
         "publicationDate": "2008-09-01T07:00:00.000Z",
         "reaffirmed": true,
         "reaffirmDate": "2017-01-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "DCP Core",
+            "Distribution",
+            "Sound"
+        ],
         "references": {
             "normative": [
                 "aes3-2003"
@@ -6853,7 +7303,14 @@
         ],
         "url": "http://dx.doi.org/10.5594/SMPTE.ST428-7.2007",
         "publicationDate": "2007-04-12T07:00:00.000Z",
-        "supersededDate": "2010-12-15T08:00:00.000Z"
+        "supersededDate": "2010-12-15T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "DCP Core",
+            "Distribution",
+            "Subtitles"
+        ]
     },
     {
         "docId": "st428-7-2010",
@@ -6869,7 +7326,14 @@
         ],
         "url": "http://dx.doi.org/10.5594/SMPTE.ST428-7.2010",
         "publicationDate": "2010-12-15T08:00:00.000Z",
-        "supersededDate": "2014-02-11T08:00:00.000Z"
+        "supersededDate": "2014-02-11T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "DCP Core",
+            "Distribution",
+            "Subtitles"
+        ]
     },
     {
         "docId": "st428-7-2014",
@@ -6882,6 +7346,13 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.ST428-7.2014",
         "publicationDate": "2014-02-11T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "DCP Core",
+            "Distribution",
+            "Subtitles"
+        ],
         "references": {
             "normative": [
                 "xml-20040204",
@@ -6906,6 +7377,13 @@
         "status": "Draft",
         "draft": true,
         "details": "Drafting WD",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "DCP Core",
+            "Distribution",
+            "Subtitles"
+        ],
         "workInfo": {
             "group": "21DC DG_Sub_AdHoc",
             "approved": true,
@@ -6939,6 +7417,13 @@
         "publicationDate": "2008-02-14T08:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "Distribution",
+            "Image",
+            "SDI"
+        ],
         "references": {
             "normative": [
                 "st291m-2006",
@@ -6968,6 +7453,12 @@
         "publicationDate": "2009-12-01T07:00:00.000Z",
         "reaffirmed": true,
         "reaffirmDate": "2015-01-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCDM",
+            "Distribution",
+            "Image"
+        ],
         "references": {
             "normative": [
                 "st291m-2006",
@@ -6995,6 +7486,13 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-10.2008",
         "publicationDate": "2008-02-15T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCP Core",
+            "Distribution",
+            "Image",
+            "Packaging"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -7046,6 +7544,13 @@
 		"active": true,
         "url": "https://www.iso.org/standard/52787.html",
         "publicationDate": "2009-12-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "DCP Core",
+            "Distribution",
+            "Image",
+            "Packaging"
+        ],
         "references": {
             "normative": [
                 "st298m-1997",
@@ -7082,6 +7587,15 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-12.2008",
         "publicationDate": "2008-12-03T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Subtitles",
+            "Captions",
+            "Accessibility",
+            "MXF Application"          
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -7122,6 +7636,11 @@
         "publicationDate": "2009-11-19T08:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "Distribution"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -7145,6 +7664,13 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-14.2014",
         "publicationDate": "2014-05-13T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Aux Data",
+            "MXF Application"         
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -7187,6 +7713,13 @@
 		"active": true,
         "url": "https://ieeexplore.ieee.org/document/7290477",
         "publicationDate": "2014-09-26T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Distribution",
+            "Metadata"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -7232,6 +7765,13 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-17.2017",
         "publicationDate": "2017-12-27T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Distribution",
+            "XML"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -7266,6 +7806,13 @@
         "publicationDate": "2019-06-25T07:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2020-06-03T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "Immersive Audio",
+            "Sound",
+            "MXF Application"         
+        ],
         "github": "https://github.com/SMPTE/st429-18/issues",
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
@@ -7302,6 +7849,13 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-19.2019",
         "publicationDate": "2019-06-25T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "Distribution",
+            "Immersive Audio",
+            "Metadata"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -7337,7 +7891,13 @@
         ],
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-2.2009",
         "publicationDate": "2009-03-11T07:00:00.000Z",
-        "supersededDate": "2011-09-23T07:00:00.000Z"
+        "supersededDate": "2011-09-23T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Distribution"
+        ]
     },
     {
         "docId": "st429-2-2011",
@@ -7358,7 +7918,13 @@
         "details": "Amended, Superseded",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-2.2011",
         "publicationDate": "2011-09-23T07:00:00.000Z",
-        "supersededDate": "2013-09-28T07:00:00.000Z"
+        "supersededDate": "2013-09-28T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Distribution"
+        ]
     },
     {
         "docId": "st429-2-2011am1-2013",
@@ -7375,7 +7941,13 @@
         "details": "Rolled up",
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-2.2011Am1.2013",
         "publicationDate": "2013-01-16T08:00:00.000Z",
-        "supersededDate": "2013-09-28T07:00:00.000Z"
+        "supersededDate": "2013-09-28T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Distribution"
+        ]
     },
     {
         "docId": "st429-2-2013",
@@ -7395,6 +7967,12 @@
         ],
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-2.2013",
         "publicationDate": "2013-09-28T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Distribution"
+        ],
         "github": "https://github.com/SMPTE/st429-2/issues",
         "references": {
             "normative": [
@@ -7452,6 +8030,12 @@
         ],
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-2.2013Am1.2018",
         "publicationDate": "2019-01-25T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Distribution"
+        ],
         "workInfo": {
             "group": "21DC AFR",
             "groupLink": "https://kws.smpte.org/higherlogic/ws/groups/ec6e6ee8-8faf-4ad8-965c-a2e27eb52398",
@@ -7509,6 +8093,12 @@
         "details": "To be updated, incorporating 2018 Amendment for new 2020 version",
         "url": "https://doi.org/10.5594/SMPTE.ST429-2.2019",
         "publicationDate": "2020-05-12T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Distribution"
+        ],
         "notes": "Sub DG",
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
@@ -7569,6 +8159,12 @@
         "title": "D-Cinema Packaging – DCP Operational Constraints",
         "status": "Draft",
         "draft": true,
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Distribution"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -7625,6 +8221,12 @@
         "status": "Draft",
         "draft": true,
         "details": "AI in Progress",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Distribution"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -7682,6 +8284,15 @@
             "st429-3-2007"
         ],
         "publicationDate": "2006-08-03T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Image",
+            "Sound",
+            "MXF Application",
+            "JPEG2000"        
+        ],
         "details": "Unable to find"
     },
     {
@@ -7697,6 +8308,15 @@
         "publicationDate": "2007-08-14T07:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Image",
+            "Sound",
+            "MXF Application",
+            "JPEG2000"       
+        ],
         "references": {
             "normative": [
                 "st330m-2004",
@@ -7729,6 +8349,15 @@
         "publicationDate": "2008-07-01T07:00:00.000Z",
         "reaffirmed": true,
         "reaffirmDate": "2017-01-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Image",
+            "Sound",
+            "MXF Application",
+            "JPEG2000"          
+        ],
         "references": {
             "normative": [
                 "st330m-2004",
@@ -7764,6 +8393,14 @@
         "publicationDate": "2006-10-03T07:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Image",
+            "MXF Application",
+            "JPEG2000" 
+        ],
         "references": {
             "normative": [
                 "st377-2004",
@@ -7791,6 +8428,14 @@
         "publicationDate": "2008-09-01T07:00:00.000Z",
         "reaffirmed": true,
         "reaffirmDate": "2018-01-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Image",
+            "MXF Application",
+            "JPEG2000"        
+        ],
         "references": {
             "normative": [
                 "st377-2004",
@@ -7822,6 +8467,14 @@
 		"active": true,
         "url": "https://ieeexplore.ieee.org/document/9097481",
         "publicationDate": "2020-03-23T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Image",
+            "MXF Application",
+            "JPEG2000"
+        ],
         "workInfo": {
             "approved": true,
             "notes": "AFR DG",
@@ -7861,7 +8514,16 @@
         ],
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-5.2009",
         "publicationDate": "2009-03-09T07:00:00.000Z",
-        "supersededDate": "2017-12-27T08:00:00.000Z"
+        "supersededDate": "2017-12-27T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Subtitles",
+            "Captions",
+            "Accessibility",
+            "MXF Application"          
+        ]
     },
     {
         "docId": "st429-5-2017",
@@ -7876,6 +8538,15 @@
         "publicationDate": "2017-12-27T08:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2019-11-13T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Subtitles",
+            "Captions",
+            "Accessibility",
+            "MXF Application"          
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -7923,6 +8594,13 @@
         ],
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-6.2006",
         "publicationDate": "2006-10-03T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Security",
+            "MXF Application"
+        ],
         "references": {
             "normative": [
                 "st336m-2001",
@@ -7963,6 +8641,13 @@
         "publicationDate": "2008-07-01T07:00:00.000Z",
         "reaffirmed": true,
         "reaffirmDate": "2017-01-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Security",
+            "MXF Application"
+        ],
         "details": "Forward incorrectly references wrong SMPTE doc year '(as SMPTE 429-6-2007)'. This version doesn't exist - should be '2006'",
         "references": {
             "normative": [
@@ -8001,6 +8686,13 @@
         "publicationDate": "2018-02-16T08:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2019-11-13T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Security",
+            "MXF Application"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -8050,6 +8742,11 @@
         "publicationDate": "2006-10-03T07:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2012-02-24T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -8101,6 +8798,11 @@
         "publicationDate": "2008-09-01T07:00:00.000Z",
         "reaffirmed": true,
         "reaffirmDate": "2017-01-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core"
+        ],
         "references": {
             "normative": [
                 "xml-20040204",
@@ -8137,6 +8839,11 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-8.2007",
         "publicationDate": "2007-06-25T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -8189,6 +8896,11 @@
         "publicationDate": "2009-12-01T07:00:00.000Z",
         "reaffirmed": true,
         "reaffirmDate": "2015-01-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core"
+        ],
         "references": {
             "normative": [
                 "xml-20040204",
@@ -8233,6 +8945,12 @@
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-9.2007",
         "publicationDate": "2007-06-25T07:00:00.000Z",
         "supersededDate": "2014-11-24T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Distribution"
+        ],
         "relatedDocs": [
             "iso26429-9-2009"
         ]
@@ -8248,6 +8966,12 @@
 		"active": true,
         "url": "https://www.iso.org/standard/52786.html",
         "publicationDate": "2009-12-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Distribution"
+        ],
         "references": {
             "normative": [
                 "st429-8-2007",
@@ -8284,7 +9008,13 @@
         ],
         "url": "http://dx.doi.org/10.5594/SMPTE.ST429-9.2007Am1.2010",
         "publicationDate": "2010-03-21T07:00:00.000Z",
-        "supersededDate": "2014-11-24T08:00:00.000Z"
+        "supersededDate": "2014-11-24T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Distribution"
+        ]
     },
     {
         "docId": "st429-9-2014",
@@ -8297,6 +9027,12 @@
 		"active": true,
         "url": "https://ieeexplore.ieee.org/document/7290483",
         "publicationDate": "2014-12-29T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Packaging",
+            "DCP Core",
+            "Distribution"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -8336,6 +9072,10 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-10.2010",
         "publicationDate": "2010-11-09T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -8368,6 +9108,10 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-11.2010",
         "publicationDate": "2010-11-09T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -8412,6 +9156,10 @@
         "publicationDate": "2014-05-10T07:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2019-11-13T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -8441,6 +9189,10 @@
         "publicationDate": "2019-06-25T07:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2020-06-03T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -8472,6 +9224,10 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-14.2015",
         "publicationDate": "2015-10-08T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations"
+        ],
         "references": {
             "normative": [
                 "st298-2009",
@@ -8503,6 +9259,10 @@
         "status": "Draft",
         "draft": true,
         "details": "FCD Ballot - Comment Resolution",
+        "usage": [
+            "DCinema",
+            "Operations"
+        ],
         "workInfo": {
             "group": "21DC DG_SMS_OMB",
             "approved": true,
@@ -8543,6 +9303,10 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-15.2017",
         "publicationDate": "2017-08-23T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -8588,6 +9352,10 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-16.2017",
         "publicationDate": "2017-08-23T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -8626,6 +9394,10 @@
         "status": "Draft",
         "draft": true,
         "details": "DP Ballot - Comment Resolution",
+        "usage": [
+            "DCinema",
+            "Operations"
+        ],
         "workInfo": {
             "group": "21DC DG_SMS_OMB",
             "approved": true,
@@ -8666,6 +9438,12 @@
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-1.2006",
         "publicationDate": "2006-10-03T07:00:00.000Z",
         "supersededDate": "2017-01-12T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations",
+            "Security",
+            "KDM"
+        ],
         "relatedDocs": [
             "iso26430-1-2008"
         ]
@@ -8683,6 +9461,12 @@
         "publicationDate": "2008-07-01T07:00:00.000Z",
         "reaffirmed": true,
         "reaffirmDate": "2017-01-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations",
+            "Security",
+            "KDM"
+        ],
         "references": {
             "normative": [
                 "st429-6-2006",
@@ -8714,7 +9498,13 @@
         ],
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-1.2006Am1.2009",
         "publicationDate": "2009-01-09T08:00:00.000Z",
-        "supersededDate": "2017-01-12T08:00:00.000Z"
+        "supersededDate": "2017-01-12T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations",
+            "Security",
+            "KDM"
+        ]
     },
     {
         "docId": "st430-1-2017",
@@ -8731,6 +9521,12 @@
         ],
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-1.2017",
         "publicationDate": "2017-02-02T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations",
+            "Security",
+            "KDM"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -8785,6 +9581,12 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-1.2017Am1.2019",
         "publicationDate": "2019-08-16T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations",
+            "Security",
+            "KDM"
+        ],
         "references": {
             "normative": [
                 "st429-6-2006",
@@ -8831,6 +9633,14 @@
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-2.2006",
         "publicationDate": "2006-10-03T07:00:00.000Z",
         "supersededDate": "2017-01-12T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations",
+            "Packaging",
+            "DCP Core",
+            "Security",
+            "KDM"
+        ],
         "relatedDocs": [
             "iso26430-2-2008"
         ]
@@ -8848,6 +9658,13 @@
         "publicationDate": "2008-09-01T07:00:00.000Z",
         "reaffirmed": true,
         "reaffirmDate": "2017-01-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations",
+            "DCP Core",
+            "Security",
+            "KDM"
+        ],
         "references": {
             "normative": [
                 "iso8824-1-2002",
@@ -8881,6 +9698,13 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-2.2017",
         "publicationDate": "2017-02-02T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations",
+            "DCP Core",
+            "Security",
+            "KDM"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -8934,7 +9758,12 @@
         "supersededBy": [
             "st430-3-2008"
         ],
-        "details": "Cannot locate"
+        "details": "Cannot locate",
+        "usage": [
+            "DCinema",
+            "Operations",
+            "KDM"
+        ]
     },
     {
         "docId": "st430-3-2008",
@@ -8956,6 +9785,11 @@
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-3.2008",
         "publicationDate": "2008-03-03T08:00:00.000Z",
         "supersededDate": "2012-08-22T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations",
+            "KDM"
+        ],
         "relatedDocs": [
             "iso26430-3-2008"
         ]
@@ -8973,6 +9807,11 @@
         "publicationDate": "2008-07-01T07:00:00.000Z",
         "reaffirmed": true,
         "reaffirmDate": "2017-01-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations",
+            "KDM"
+        ],
         "references": {
             "normative": [
                 "st430-2-2006",
@@ -9013,7 +9852,12 @@
         ],
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-3.2008Am2.2012",
         "publicationDate": "2012-08-22T07:00:00.000Z",
-        "supersededDate": "2012-08-22T07:00:00.000Z"
+        "supersededDate": "2012-08-22T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations",
+            "KDM"
+        ]
     },
     {
         "docId": "st430-3-2012",
@@ -9026,6 +9870,11 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-3.2012",
         "publicationDate": "2012-08-22T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations",
+            "KDM"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -9070,6 +9919,10 @@
         ],
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-4.2008",
         "publicationDate": "2008-03-03T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations"
+        ],
         "references": {
             "normative": [
                 "xmlschema-1-20041028",
@@ -9100,6 +9953,10 @@
 		"active": true,
         "url": "https://www.iso.org/standard/52788.html",
         "publicationDate": "2009-12-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations"
+        ],
         "references": {
             "normative": [
                 "xmlschema-1-20041028",
@@ -9137,6 +9994,10 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-4.2008Am1.2011",
         "publicationDate": "2017-01-06T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -9178,6 +10039,11 @@
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-5.2008",
         "publicationDate": "2008-03-03T08:00:00.000Z",
         "supersededDate": "2011-09-24T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Security",
+            "Operations"
+        ],
         "relatedDocs": [
             "ISO26430_5_2009"
         ]
@@ -9195,6 +10061,11 @@
         "publicationDate": "2009-12-01T07:00:00.000Z",
         "reaffirmed": true,
         "reaffirmDate": "2015-01-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Security",
+            "Operations"
+        ],
         "references": {
             "normative": [
                 "rfc3280",
@@ -9230,6 +10101,10 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-5.2011",
         "publicationDate": "2011-12-29T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -9275,6 +10150,11 @@
         ],
         "url": "Cannot locate",
         "supersededDate": "2010-08-18T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Security",
+            "Operations"
+        ],
         "relatedDocs": [
             "iso26430-6-2009"
         ]
@@ -9292,6 +10172,11 @@
         "publicationDate": "2009-12-01T07:00:00.000Z",
         "reaffirmed": true,
         "reaffirmDate": "2015-01-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Security",
+            "Operations"
+        ],
         "references": {
             "normative": [
                 "st336-2007",
@@ -9324,6 +10209,11 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-6.2010",
         "publicationDate": "2010-08-18T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Security",
+            "Operations"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -9402,6 +10292,12 @@
         ],
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-9.2008",
         "publicationDate": "2008-02-01T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations",
+            "Security",
+            "KDM"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -9450,6 +10346,12 @@
         "publicationDate": "2009-12-01T07:00:00.000Z",
         "reaffirmed": true,
         "reaffirmDate": "2015-01-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations",
+            "Security",
+            "KDM"
+        ],
         "references": {
             "normative": [
                 "xml-20040204",
@@ -9487,6 +10389,12 @@
 		"active": true,
         "url": "http://dx.doi.org/10.5594/SMPTE.ST430-9.2008Am1.2011",
         "publicationDate": "2017-01-06T08:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Operations",
+            "Security",
+            "KDM"
+        ],
         "references": {
             "normative": [
                 "xml-20040204",
@@ -9522,6 +10430,12 @@
         "status": "Draft",
         "draft": true,
         "url": "https://www.iso.org/standard/80075.html",
+        "usage": [
+            "DCinema",
+            "Operations",
+            "Security",
+            "KDM"
+        ],
         "relatedDocs": [
             "st430-9-2008am1-2011"
         ]
@@ -9539,6 +10453,13 @@
         "publicationDate": "2006-04-18T07:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Quality",
+            "Projection",
+            "Measurement",
+            "Image"
+        ],
         "workInfo": {
             "group": "21DC DG_Doc_Mx",
             "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
@@ -9572,6 +10493,13 @@
         "publicationDate": "2008-09-01T07:00:00.000Z",
         "reaffirmed": true,
         "reaffirmDate": "2017-01-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "Quality",
+            "Projection",
+            "Measurement",
+            "Image"
+        ],
         "references": {
             "normative": [
                 "iso10527-2007"
@@ -9605,6 +10533,10 @@
         "publicationDate": "2008-03-03T08:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "XML"
+        ],
         "references": {
             "normative": [
                 "xmlschema-1-20041028",
@@ -9638,6 +10570,10 @@
         "publicationDate": "2009-12-01T07:00:00.000Z",
         "reaffirmed": true,
         "reaffirmDate": "2015-01-01T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "XML"
+        ],
         "references": {
             "normative": [
                 "xmlschema-1-20041028",
@@ -9675,6 +10611,10 @@
         "publicationDate": "2017-01-06T08:00:00.000Z",
         "reaffirmed": true,
 		"reaffirmDate": "2018-03-15T07:00:00.000Z",
+        "usage": [
+            "DCinema",
+            "XML"
+        ],
         "references": {
             "normative": [
                 "xmlschema-1-20041028",
@@ -9705,6 +10645,10 @@
         "status": "Draft",
         "draft": true,
         "url": "https://www.iso.org/standard/80072.html",
+        "usage": [
+            "DCinema",
+            "XML"
+        ],
         "relatedDocs": [
             "st433-2008am1-2011"
         ]

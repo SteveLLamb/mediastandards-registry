@@ -7,9 +7,10 @@
     <table id="sorttable" class="table table-small table-hover w-auto display">
       <thead class="thead-light">
         <tr>
-          <th scope="col" width="3em">Label</th>
-          <th scope="col">Publisher</th>
+          <th scope="col" width="75em">Label</th>
+          <th scope="col" width="75em">Publisher</th>
           <th scope="col">Type</th>
+          <th scope="col" width="75em">Usage</th>
           <th scope="col">Status</th>
           <th scope="col">Title/Details</th>    
         </tr>
@@ -21,13 +22,14 @@
             <a class="anchor" id="{{docId}}" href="#{{docId}}"></a><code>{{label}}</code>
           </td>
           <td class="publisher">
-            {{publisher}}
-            {{#if group}}
-              <br>
-              [{{group}}]
-            {{/if}}
+            {{publisher}}{{#if group}} [{{group}}]{{/if}}
           </td>
           <td>{{type}}</td>
+          <td>
+            {{#usage}}
+            <span class="small"><code>[{{this}}]</code></span><br>
+            {{/usage}}
+          </td>
           <td>
             {{#unknown}}
               <span class="label badge badge-danger">Status: Unknown</span><br> 
