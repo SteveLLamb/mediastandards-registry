@@ -32,13 +32,13 @@
           </td>
           <td>
             {{#unknown}}
-              <span class="label badge badge-danger">Label: Unknown</span><br> 
+              <span class="label badge badge-danger">[ Unknown ]</span><br> 
             {{/unknown}}
             {{#withdrawn}}
-              <span class="label badge badge-danger">Label: Withdrawn</span><br> 
+              <span class="label badge badge-danger">[ Withdrawn ]</span><br> 
             {{/withdrawn}}
             {{#superseded}}
-              <span class="label badge badge-warning">Label: Superseded</span><br>
+              <span class="label badge badge-warning">[ Superseded ]</span><br>
             {{/superseded}}
             {{#if supersededBy}}
               <div class="border p-2">
@@ -51,13 +51,13 @@
               </div>
             {{/if}}
             {{#draft}}
-              <span class="label badge badge-warning">Label: Draft</span><br> 
+              <span class="label badge badge-warning">[ Draft ]</span><br> 
             {{/draft}}
             {{#active}}
-              <span class="label badge badge-success">Label: Active</span><br>  
+              <span class="label badge badge-success">[ Active ]</span><br>  
             {{/active}}
             {{#amended}}
-              <span class="label badge badge-secondary">Label: Amended</span><br>
+              <span class="label badge badge-secondary">[ Amended ]</span><br>
             {{/amended}}
             {{#if amendedBy}}
               <div class="border p-2">
@@ -70,10 +70,10 @@
               </div>
             {{/if}}
             {{#reaffirmed}}
-              <span class="label badge badge-info">Label: Reaffirmed</span><br>
+              <span class="label badge badge-info">[ Reaffirmed ]</span><br>
             {{/reaffirmed}}
             {{#stablized}}
-              <span class="label badge badge-primary">Label: Stablized</span>  
+              <span class="label badge badge-primary">[ Stablized ]</span>  
             {{/stablized}}         
           </td>
           <td>
@@ -197,9 +197,6 @@
                 </div>
                 {{/if}}
               </div>
-              <!-- {{#if references}}
-              <div class="col-sm border">
-              -->
                 {{#if references/normative}}
                 <div class="col-sm-3">
                   <p><span class="font-weight-bold small">Normative References:<br></span>
@@ -222,11 +219,6 @@
                   </p>
                 </div>
                 {{/if}}
-                <!--
-                </div>
-              {{/if}} -->
-
-
               </div>
             </div>
           </td>
