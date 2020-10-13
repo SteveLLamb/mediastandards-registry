@@ -30,6 +30,7 @@ $(document).ready(function() {
 
     var dt = $('#sorttable').DataTable( {
       "paging": false,
+      responsive: true,
       searchPanes:{
         cascadePanes: true,
         emptyMessage:"<i><b>Empty</b></i>",
@@ -45,6 +46,11 @@ $(document).ready(function() {
       dom: "<'row'<'col-sm-12'P>>" +
           "<'row'<'col-sm-6'i><'col-sm-6'f>>" +
           "<'row'<'col-sm-12't>>",
+      language: {
+          searchPanes: {
+              loadMessage: 'Loading filtering options...'
+          }
+      },
       columnDefs:[
         {
           searchPanes: {
@@ -320,6 +326,7 @@ $(document).ready(function() {
         },
       ]
     });
+
     dt.on('select.dt', () => {          
       dt.searchPanes.rebuildPane(0, true);
     });
