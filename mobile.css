@@ -5,9 +5,21 @@ html {
 a.anchor {
     display: block;
     position: relative;
-    top: -57px;
+    top: -50px;
     visibility: hidden;
-}  
+}
+
+.dataTables_info {
+    padding: 8px;
+}
+
+.dataTables_filter {
+    padding: 5px;
+}
+
+body {
+    margin-top: 42px;
+}
 
 .scroll {
     color: #fff;
