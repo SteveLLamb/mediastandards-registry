@@ -12,7 +12,7 @@
           <th scope="col" width="8em">Type</th>
           <th scope="col" width="8em">Usage</th>
           <th scope="col" width="13em">Status</th>
-          <th scope="col-lg-8">Title/Details</th>    
+          <th scope="col-lg-8">Details</th>    
         </tr>
       </thead>
       <tbody id="searchTable">
@@ -24,71 +24,79 @@
           <td class="publisher">
             {{publisher}}{{#if group}} [{{group}}]{{/if}}
           </td>
-          <td>{{type}}</td>
           <td>
-            {{#usage}}
-            <span class="small"><code>[{{this}}]</code></span><br>
-            {{/usage}}
+            {{type}}
           </td>
           <td>
-            {{#unknown}}
-              <span class="label badge badge-danger">[ Unknown ]</span><br> 
-            {{/unknown}}
-            {{#withdrawn}}
-              <span class="label badge badge-danger">[ Withdrawn ]</span><br> 
-            {{/withdrawn}}
-            {{#superseded}}
-              <span class="label badge badge-warning">[ Superseded ]</span><br>
-            {{/superseded}}
-            {{#if supersededBy}}
-              <div class="border p-2">
-                <span class="font-weight-bold small">Superseding Document(s):</span><br>
-              {{/if}}
-              {{#supersededBy}}
-                <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
-              {{/supersededBy}}
+            <div class="container-fluid">
+              {{#usage}}
+              <span class="small"><code>[{{this}}]</code></span><br>
+              {{/usage}}
+            </div>
+          </td>
+          <td>
+            <div class="container-fluid">
+              {{#unknown}}
+                <span class="label badge badge-danger">[ Unknown ]</span><br> 
+              {{/unknown}}
+              {{#withdrawn}}
+                <span class="label badge badge-danger">[ Withdrawn ]</span><br> 
+              {{/withdrawn}}
+              {{#superseded}}
+                <span class="label badge badge-warning">[ Superseded ]</span><br>
+              {{/superseded}}
               {{#if supersededBy}}
-              </div>
-            {{/if}}
-            {{#draft}}
-              <span class="label badge badge-warning">[ Draft ]</span><br> 
-            {{/draft}}
-            {{#active}}
-              <span class="label badge badge-success">[ Active ]</span><br>  
-            {{/active}}
-            {{#amended}}
-              <span class="label badge badge-secondary">[ Amended ]</span><br>
-            {{/amended}}
-            {{#if amendedBy}}
-              <div class="border p-2">
-                <span class="font-weight-bold small">Amending Document(s):</span><br>
+                <div class="p-1">
+                  <span class="font-weight-bold small">Superseding Document(s):</span><br>
+                {{/if}}
+                {{#supersededBy}}
+                  <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
+                {{/supersededBy}}
+                {{#if supersededBy}}
+                </div>
               {{/if}}
-              {{#amendedBy}}
-                <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
-              {{/amendedBy}}
+              {{#draft}}
+                <span class="label badge badge-warning">[ Draft ]</span><br> 
+              {{/draft}}
+              {{#active}}
+                <span class="label badge badge-success">[ Active ]</span><br>  
+              {{/active}}
+              {{#amended}}
+                <span class="label badge badge-secondary">[ Amended ]</span><br>
+              {{/amended}}
               {{#if amendedBy}}
-              </div>
-            {{/if}}
-            {{#reaffirmed}}
-              <span class="label badge badge-info">[ Reaffirmed ]</span><br>
-            {{/reaffirmed}}
-            {{#stablized}}
-              <span class="label badge badge-primary">[ Stablized ]</span>  
-            {{/stablized}}         
+                <div class="p-1">
+                  <span class="font-weight-bold small">Amending Document(s):</span><br>
+                {{/if}}
+                {{#amendedBy}}
+                  <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
+                {{/amendedBy}}
+                {{#if amendedBy}}
+                </div>
+              {{/if}}
+              {{#reaffirmed}}
+                <span class="label badge badge-info">[ Reaffirmed ]</span><br>
+              {{/reaffirmed}}
+              {{#stablized}}
+                <span class="label badge badge-primary">[ Stablized ]</span>  
+              {{/stablized}}   
+            </div>      
           </td>
           <td>
-            <span class="title">
-            {{#if url}}
-              <a class="{{../idType}}-link" target="_blank" href="{{url}}">
-            {{/if}}
-            {{title}}
-            {{#if url}}
-              </a>
-            {{/if}}
-            </span>
-            <div class="container-fluid p-2">
-              <div class="row border">
-                <div class="col-md-8 p-2">
+            <div class="container-fluid">
+              <div class="row">
+                <span class="title">
+                {{#if url}}
+                  <a class="{{../idType}}-link" target="_blank" href="{{url}}">
+                {{/if}}
+                {{title}}
+                {{#if url}}
+                  </a>
+                {{/if}}
+                </span>
+              </div>
+              <div class="row p-2">
+                <div class="col p-2">
                   <p>
                     <span class="font-weight-bold">Current Status: <em>{{status}}</em></span>{{#if statusNote}}<span class="small"><em> ({{statusNote}})</em></span>{{/if}}
                   </p>
@@ -198,7 +206,7 @@
                 {{/if}}
               </div>
                 {{#if references/normative}}
-                <div class="col-sm">
+                <div class="col-sm-3">
                   <p><span class="font-weight-bold small">Normative References:<br></span>
                 {{/if}}
                   {{#references/normative}}
@@ -206,10 +214,10 @@
                   {{/references/normative}}
                 {{#if references/normative}}
                   </p>
-           
+                </div>
                 {{/if}}
                 {{#if references/bibliographic}}
-            
+                <div class="col-sm-3">
                   <p><span class="font-weight-bold small">Bibliographic References:<br></span>
                 {{/if}}
                   {{#references/bibliographic}}
