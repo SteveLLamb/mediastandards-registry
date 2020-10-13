@@ -10,8 +10,8 @@
           <th scope="col" width="10em">Label</th>
           <th scope="col" width="8em">Publisher</th>
           <th scope="col" width="8em">Type</th>
-          <th scope="col" width="8em">Usage</th>
-          <th scope="col" width="13em">Status</th>
+          <th scope="col" width="10em">Usage</th>
+          <th scope="col" width="15em">Status</th>
           <th scope="col-lg-8">Details</th>    
         </tr>
       </thead>
@@ -46,8 +46,8 @@
                 <span class="label badge badge-warning">[ Superseded ]</span><br>
               {{/superseded}}
               {{#if supersededBy}}
-                <div class="p-1">
-                  <span class="font-weight-bold small">Superseding Document(s):</span><br>
+                <div class="border-left p-1">
+                  <span class="font-weight-bold small">Superseded by:</span><br>
                 {{/if}}
                 {{#supersededBy}}
                   <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
@@ -65,8 +65,8 @@
                 <span class="label badge badge-secondary">[ Amended ]</span><br>
               {{/amended}}
               {{#if amendedBy}}
-                <div class="p-1">
-                  <span class="font-weight-bold small">Amending Document(s):</span><br>
+                <div class="border-left p-1">
+                  <span class="font-weight-bold small">Amended by:</span><br>
                 {{/if}}
                 {{#amendedBy}}
                   <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
@@ -136,7 +136,7 @@
                     {{/if}}
                   </p>
                   {{#if workInfo}}
-                    <div class="border p-2">
+                    <div class="border-left p-2">
                         <span class="font-weight-bold"><u>Work Info</u><br></span>
                         Group: 
                         {{#if workInfo/groupLink}}
@@ -194,39 +194,38 @@
                         {{/if}}
                     </div>
                   {{/if}}
-                {{#if relatedDocs}}
-                <div class="p-2">
-                    <span class="font-weight-bold small">Related Documents:</span>
-                    {{/if}}
-                    {{#relatedDocs}}
-                    <br><a class="{{../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span> 
-                    {{/relatedDocs}}
-                    {{#if relatedDocs}}
+                  {{#if relatedDocs}}
+                  <div class="p-2">
+                      <span class="font-weight-bold small">Related Documents:</span>
+                      {{/if}}
+                      {{#relatedDocs}}
+                      <br><a class="{{../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span> 
+                      {{/relatedDocs}}
+                      {{#if relatedDocs}}
+                  </div>
+                  {{/if}}
                 </div>
-                {{/if}}
-              </div>
+
                 {{#if references/normative}}
                 <div class="col-sm-3">
                   <p><span class="font-weight-bold small">Normative References:<br></span>
-                {{/if}}
                   {{#references/normative}}
                     <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
                   {{/references/normative}}
-                {{#if references/normative}}
                   </p>
                 </div>
                 {{/if}}
+
                 {{#if references/bibliographic}}
                 <div class="col-sm-3">
                   <p><span class="font-weight-bold small">Bibliographic References:<br></span>
-                {{/if}}
                   {{#references/bibliographic}}
                     <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br>
                   {{/references/bibliographic}}
-                {{#if references/normative}}
                   </p>
                 </div>
                 {{/if}}
+
               </div>
             </div>
           </td>
