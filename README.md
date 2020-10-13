@@ -10,4 +10,4 @@ The list data is:
 
 A build of the website from the `master` branch is automatically published at:
 
-https://stevellamb.github.io/doc-registry/documents.html
+https://stevellamb.github.io/mediastandards-registry/documents.html
