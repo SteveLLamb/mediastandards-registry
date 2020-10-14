@@ -98,47 +98,46 @@
               <div class="row p-2">
                 <div class="col p-2">
                   <p>
-                    <span class="font-weight-bold">Current Status: <em>{{status}}</em></span>{{#if statusNote}}<span class="small"><em> ({{statusNote}})</em></span>{{/if}}
-                  </p>
+                    <span class="font-weight-bold small">Current Status:</span> <em>{{status}}</em>{{#if statusNote}}<span class="small"><em> ({{statusNote}})</em></span>{{/if}}
                   {{#if details}}
-                  <p>
-                    <span class="font-weight-bold">Details:</span> <em>{{details}}</em>
+                  <br>
+                    <span class="font-weight-bold small">Details:</span> <em>{{details}}</em>
+                  {{/if}}
                   </p>
                   <p>
-                    {{/if}}
                     {{#if publicationDate}}
-                    Publication Date: {{publicationDate}}
+                    <span class="font-weight-bold small">Publication Date:</span> {{publicationDate}}
                     <br>
                     {{/if}}
                     {{#if withdrawnDate}}
-                    Withdrawn Date: {{withdrawnDate}}
+                    <span class="font-weight-bold small">Withdrawn Date:</span> {{withdrawnDate}}
                     <br>
                     {{/if}}
                     {{#if stablizedDate}}
-                    Stablized Date: {{stablizedDate}}
+                    <span class="font-weight-bold small">Stablized Date:</span> {{stablizedDate}}
                     <br>
                     {{/if}}
                     {{#if reaffirmDate}}
-                    Reaffirmed Date: {{reaffirmDate}}
+                    <span class="font-weight-bold small">Reaffirmed Date:</span> {{reaffirmDate}}
                     <br>
                     {{/if}}
                     {{#if supersededDate}}
-                    Superseded Date: {{supersededDate}}
+                    <span class="font-weight-bold small">Superseded Date:</span> {{supersededDate}}
                     <br>
                     {{/if}}
                     {{#if amendedDate}}
-                    Amended Date: {{amendedDate}}
+                    <span class="font-weight-bold small">Amended Date:</span> {{amendedDate}}
                     <br>
                     {{/if}}
                     {{#if github}}
-                    GitHub: <a class="{{../idType}}-link" target="_blank" href="{{github}}">{{github}}</a>
+                    <span class="font-weight-bold small">GitHub:</span> <a class="{{../idType}}-link" target="_blank" href="{{github}}">{{github}}</a>
                     <br>
                     {{/if}}
                   </p>
                   {{#if workInfo}}
                     <div class="border-left p-2">
                         <span class="font-weight-bold"><u>Work Info</u><br></span>
-                        Group: 
+                        <span class="font-weight-bold small">Assigned Group: </span>
                         {{#if workInfo/groupLink}}
                         <a class="{{../idType}}-link" target="_blank" href="{{workInfo/groupLink}}">
                         {{/if}}
@@ -146,69 +145,69 @@
                         {{#if workInfo/groupLink}}
                         </a>
                         {{/if}}
+                        {{#if workInfo/actionItems}} | <a class="{{../idType}}-link" target="_blank" href="{{workInfo/actionItems}}">Action Items</a>{{/if}}
+                        {{#if workInfo/projectLink}} | <a class="{{../idType}}-link" target="_blank" href="{{workInfo/projectLink}}">Project Link</a>{{/if}}
                         {{#if workInfo/reviewNeeded}}
                         <br>
-                        Review Needed: Yes
+                        <span class="font-weight-bold small">Review Needed:</span> Yes
                         {{/if}}
                         {{#if workInfo/reviewPeriod}}
                         <br>
-                        Review Period: {{workInfo/reviewPeriod}}
+                        <span class="font-weight-bold small">Review Period:</span> {{workInfo/reviewPeriod}}
                         {{/if}}
                         {{#if workInfo/reviewDate}}
                         <br>
-                        Review Date: {{workInfo/reviewDate}}
+                        <span class="font-weight-bold small">Review Date:</span> {{workInfo/reviewDate}}
                         {{/if}}
                         {{#if workInfo/recommendation}}
                         <br>
-                        Recommendation: {{workInfo/recommendation}}
+                        <span class="font-weight-bold small">Recommendation:</span> {{workInfo/recommendation}}
                         {{/if}}
                         {{#if workInfo/approved}}
                         <br>
-                        TC Approved: Yes
+                        <span class="font-weight-bold small">TC Approved:</span> Yes
                         {{/if}}
                         {{#if workInfo/assigned}}
                         <br>
-                        Assigned to: {{workInfo/assigned}}
-                        {{/if}}
-                        {{#if workInfo/actionItems}}
-                        <br>
-                        <a class="{{../idType}}-link" target="_blank" href="{{workInfo/actionItems}}">Action Items</a>
-                        {{/if}}
-                        {{#if workInfo/projectLink}}
-                        <br>
-                        <a class="{{../idType}}-link" target="_blank" href="{{workInfo/projectLink}}">Project Link</a>
+                        <span class="font-weight-bold small">Assigned to:</span> {{workInfo/assigned}}
                         {{/if}}
                         {{#if workInfo/updateDependency}}
-                        <br><span>Dependent on updates to:</span>
+                        <br><span class="font-weight-bold small">Dependent on updates to:</span>
                         {{/if}}
                         {{#workInfo/updateDependency}}
                         <br><a class="{{../../idType}}-link" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span>
                         {{/workInfo/updateDependency}}
                         {{#if workInfo/notes}}
                         <br><br>
-                        <span class="font-weight-bold">Notes:</span> <em>{{workInfo/notes}}</em>
+                        <span class="font-weight-bold small">Notes:</span> <em>{{workInfo/notes}}</em>
                         {{/if}}
                         {{#if workInfo/otherWork}}
                         <br>
-                        <span class="font-weight-bold">Other Requested Work:</span> <em>{{workInfo/otherWork}}</em>
+                        <span class="font-weight-bold small">Other Requested Work:</span> <em>{{workInfo/otherWork}}</em>
                         {{/if}}
                     </div>
                   {{/if}}
+                  {{#if xmlNamespace}}
+                  <div class="p-2">
+                      <span class="font-weight-bold small">XML Namespace(s) Defined:</span>
+                      {{#xmlNamespace}}
+                      <br><a target="_blank" href="{{this}}">{{this}}</a>
+                      {{/xmlNamespace}}
+                  </div>
+                  {{/if}}
                   {{#if relatedDocs}}
                   <div class="p-2">
-                      <span class="font-weight-bold small">Related Documents:</span>
-                      {{/if}}
+                      <span class="font-weight-bold small">Related Document(s):</span>
                       {{#relatedDocs}}
                       <br><a class="{{../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span> 
                       {{/relatedDocs}}
-                      {{#if relatedDocs}}
                   </div>
                   {{/if}}
                 </div>
 
                 {{#if references/normative}}
                 <div class="col-sm-3">
-                  <p><span class="font-weight-bold small">Normative References:<br></span>
+                  <p><span class="font-weight-bold small">Normative Reference(s):<br></span>
                   {{#references/normative}}
                     <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
                   {{/references/normative}}
@@ -218,7 +217,7 @@
 
                 {{#if references/bibliographic}}
                 <div class="col-sm-3">
-                  <p><span class="font-weight-bold small">Bibliographic References:<br></span>
+                  <p><span class="font-weight-bold small">Bibliographic Reference(s):<br></span>
                   {{#references/bibliographic}}
                     <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br>
                   {{/references/bibliographic}}

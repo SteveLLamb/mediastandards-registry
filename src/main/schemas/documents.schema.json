@@ -238,6 +238,21 @@
                             "$id": "#/items/anyOf/0/properties/relatedDocs/items"
                         }
                     },
+                    "xmlNamespace": {
+                        "$id": "#/items/anyOf/0/properties/xmlNamespace",
+                        "type": "array",
+                        "additionalItems": true,
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "$id": "#/items/anyOf/0/properties/xmlNamespace/items/anyOf/0",
+                                    "type": "string",
+                                    "minLength": 1
+                                }
+                            ],
+                            "$id": "#/items/anyOf/0/properties/xmlNamespace/items"
+                        }
+                    },
                     "usage": {
                         "$id": "#/items/anyOf/0/properties/usage",
                         "type": "array",
