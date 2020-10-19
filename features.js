@@ -30,6 +30,7 @@ $(document).ready(function() {
 
     var dt = $('#sorttable').DataTable( {
       "paging": false,
+      fixedHeader: true,
       responsive: true,
       searchPanes:{
         cascadePanes: true,
