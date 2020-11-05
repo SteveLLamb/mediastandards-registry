@@ -301,6 +301,20 @@ $(document).ready(function() {
 
               },
               {
+                label: 'Reaffirmed',
+                value: function(rowData, rowIdx){
+                  return rowData[4].includes('[ Reaffirmed ]');
+                }
+
+              },
+              {
+                label: 'Stabilized',
+                value: function(rowData, rowIdx){
+                  return rowData[4].includes('[ Stabilized ]');
+                }
+
+              },
+              {
                 label: 'Superseded',
                 value: function(rowData, rowIdx){
                   return rowData[4].includes('[ Superseded ]');
