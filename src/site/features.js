@@ -117,12 +117,6 @@ $(document).ready(function() {
                 }
               },
               {
-                label: 'DCinema',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[DCinema]');
-                }
-              },
-              {
                 label: 'Digital Source',
                 value: function(rowData, rowIdx){
                     return rowData[3].includes('[Digital Source]');
