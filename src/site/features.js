@@ -30,6 +30,7 @@ $(document).ready(function() {
 
     var dt = $('#sorttable').DataTable( {
       "paging": false,
+      fixedHeader: true,
       responsive: true,
       searchPanes:{
         cascadePanes: true,
@@ -113,12 +114,6 @@ $(document).ready(function() {
                 label: 'DCP Core',
                 value: function(rowData, rowIdx){
                     return rowData[3].includes('[DCP Core]');
-                }
-              },
-              {
-                label: 'DCinema',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[DCinema]');
                 }
               },
               {
@@ -296,6 +291,20 @@ $(document).ready(function() {
                 label: 'Draft',
                 value: function(rowData, rowIdx){
                   return rowData[4].includes('[ Draft ]');
+                }
+
+              },
+              {
+                label: 'Reaffirmed',
+                value: function(rowData, rowIdx){
+                  return rowData[4].includes('[ Reaffirmed ]');
+                }
+
+              },
+              {
+                label: 'Stabilized',
+                value: function(rowData, rowIdx){
+                  return rowData[4].includes('[ Stabilized ]');
                 }
 
               },
