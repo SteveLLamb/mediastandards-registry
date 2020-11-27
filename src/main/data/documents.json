@@ -3793,17 +3793,69 @@
         "details": "Cannot locate supersededBy doc"
     },
     {
+        "docId": "bt601-4-199510",
+        "publisher": "ITU-R",
+        "type": "Recommendation",
+        "label": "BT.601.4 (10/95)",
+        "title": "Studio encoding parameters of digital television for standard 4:3 and wide screen 16:9 aspect ratios",
+        "superseded": true,
+        "supersededBy": [
+            "bt601-5-199510"
+        ],
+        "url": "https://www.itu.int/dms_pubrec/itu-r/rec/bt/R-REC-BT.601-4-199407-S!!MSW-E.doc",
+        "publicationDate": "1994-07-30T07:00:00.000Z"
+    },    
+    {
         "docId": "bt601-5-199510",
         "publisher": "ITU-R",
         "type": "Recommendation",
         "label": "BT.601.5 (10/95)",
         "title": "Studio encoding parameters of digital television for standard 4:3 and wide screen 16:9 aspect ratios",
-        "status": "Superseded",
         "superseded": true,
+        "supersededBy": [
+            "bt601-6-200701"
+        ],
         "url": "https://www.itu.int/dms_pubrec/itu-r/rec/bt/R-REC-BT.601-5-199510-S!!PDF-E.pdf",
-        "publicationDate": "1995-10-01T07:00:00.000Z",
-        "details": "Cannot locate supersededBy doc"
+        "publicationDate": "1995-10-01T07:00:00.000Z"
     },
+    {
+        "docId": "bt601-6-200701",
+        "publisher": "ITU-R",
+        "type": "Recommendation",
+        "label": "BT.601.6 (01/07)",
+        "title": "Studio encoding parameters of digital television for standard 4:3 and wide screen 16:9 aspect ratios",
+        "superseded": true,
+        "supersededBy": [
+            "bt6-270-rev1-201103"
+        ],
+        "url": "https://www.itu.int/dms_pubrec/itu-r/rec/bt/R-REC-BT.601-6-200701-S!!PDF-E.pdf",
+        "publicationDate": "2007-01-26T07:00:00.000Z"
+    },
+    {
+        "docId": "bt6-270-rev1-201103",
+        "publisher": "ITU-R",
+        "type": "Recommendation",
+        "label": "BT.6/270(Rev1) (03/11)",
+        "title": "Studio encoding parameters of digital television for standard 4:3 and wide screen 16:9 aspect ratios",
+        "superseded": true,
+        "supersededBy": [
+            "bt601-7-201103"
+        ],
+        "url": "https://www.itu.int/rec/R-REC-BT.601-7-201103-P/en",
+        "publicationDate": "2011-03-08T07:00:00.000Z",
+        "details": "Approved but stayed in pre-publised status before being rolled up into and superseded by BT. 601-7"
+    },    
+    {
+        "docId": "bt601-7-201103",
+        "publisher": "ITU-R",
+        "type": "Recommendation",
+        "label": "BT.601.7 (03/2011)",
+        "title": "Studio encoding parameters of digital television for standard 4:3 and wide screen 16:9 aspect ratios",
+        "status": "Active",
+        "active": true,
+        "url": "https://www.itu.int/dms_pubrec/itu-r/rec/bt/R-REC-BT.601-7-201103-I!!PDF-E.pdf",
+        "publicationDate": "2011-03-08T07:00:00.000Z"
+    },        
     {
         "docId": "bt656-199802",
         "publisher": "ITU-R",
