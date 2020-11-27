@@ -1024,16 +1024,30 @@
         "publicationDate": "1998-08-30T07:00:00.000Z"
     },
     {
-        "docId": "ebu-tech-3350",
+        "docId": "ebu-tech-3350-1.0",
         "publisher": "EBU",
         "type": "Specification",
-        "label": "EBU Tech 3350",
+        "label": "EBU Tech 3350 v1.0",
+        "title": "EBU-TT Part 1 - Subtitling Format Definition",
+        "status": "Superseded",
+        "superseded": true,
+        "supersededBy": [
+            "ebu-tech-3350-1.1"
+        ],
+        "url": "https://tech.ebu.ch/docs/tech/tech3350v1-0.pdf",
+        "publicationDate": "2012-07-30T07:00:00.000Z"
+    },
+    {
+        "docId": "ebu-tech-3350-1.1",
+        "publisher": "EBU",
+        "type": "Specification",
+        "label": "EBU Tech 3350 v1.1",
         "title": "EBU-TT Part 1 - Subtitling Format Definition",
         "status": "Active",
 		"active": true,
-        "url": "https://tech.ebu.ch/docs/tech/tech3350v1-0.pdf",
-        "publicationDate": "2012-07-30T07:00:00.000Z"
-    },    
+        "url": "https://tech.ebu.ch/docs/tech/tech3350v1_1.pdf",
+        "publicationDate": "2015-09-30T07:00:00.000Z"
+    },          
     {
         "docId": "eg17-2002",
         "publisher": "SMPTE",
