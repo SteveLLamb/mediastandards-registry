@@ -8394,8 +8394,12 @@
         "type": "Standard",
         "label": "ST 429-2:2019",
         "title": "D-Cinema Packaging — DCP Operational Constraints",
-        "status": "Active",
-		"active": true,
+        "status": "Superseded",
+        "superseded": true,
+        "supersededBy": [
+            "st429-2-2020"
+        ],
+		"active": false,
         "details": "To be updated, incorporating 2018 Amendment for new 2020 version",
         "url": "https://doi.org/10.5594/SMPTE.ST429-2.2019",
         "publicationDate": "2020-05-12T07:00:00.000Z",
@@ -8463,8 +8467,12 @@
         "type": "Standard",
         "label": "ST 429-2:2019 Am 1:2020",
         "title": "D-Cinema Packaging – DCP Operational Constraints",
-        "status": "Draft",
-        "draft": true,
+        "status": "Superseded",
+        "superseded": true,
+        "supersededBy": [
+            "st429-2-2020"
+        ],
+        "draft": false,
         "usage": [
             "DCinema",
             "Packaging",
@@ -8524,21 +8532,16 @@
         "type": "Standard",
         "label": "ST 429-2:2020",
         "title": "D-Cinema Packaging — DCP Operational Constraints",
-        "status": "Draft",
-        "draft": true,
-        "details": "AI in Progress",
+        "status": "Active",
+        "draft": false,
+        "active": true,
+        "url": "https://doi.org/10.5594/SMPTE.ST429-2.2020",
         "usage": [
             "DCinema",
             "Packaging",
             "DCP Core",
             "Distribution"
         ],
-        "workInfo": {
-            "group": "21DC DG_Doc_Mx",
-            "groupLink": "https://kws.smpte.org/communities/community-home?CommunityKey=d55d5ea8-d574-4f61-a995-4ce539f2eee3",
-            "actionItems": "https://kws.smpte.org/higherlogic/ws/groups/db60330e-84de-4faf-a59d-f8a29e10ce07/action_item?action_item_id=3606",
-            "assigned": "TC Chairs"
-        },
         "references": {
             "normative": [
                 "st377-2004",
