@@ -1,8 +1,6 @@
 Media Standards Registry
 ========================
 
-_EXPERIMENTAL, Work in Progress_
-
 The list data is:
 
 * stored as JSON at [`src/main/data`](src/main/data/)
