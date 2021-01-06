@@ -172,6 +172,10 @@ async function buildRegistry ({ listType, templateType, idType, listTitle }) {
   console.log(`Build of ${templateType} completed`)
 };
 
+module.exports = {
+  buildRegistry,
+}
+
 void (async () => {
 
   await Promise.all(registries.map(buildRegistry))

@@ -3,7 +3,9 @@
   "version": "1.0.0-beta.1",
   "description": "Doc Registry",
   "scripts": {
-    "build": "node src/main/scripts/build.js"
+    "build": "node src/main/scripts/build.js",
+    "validate": "node src/main/scripts/validate.js",
+    "canonicalize": "node src/main/scripts/canonicalize.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,7 @@
     "puppeteer": "^2.1.1"
   },
   "dependencies": {
-    "bootstrap-icons": "^1.0.0"
+    "bootstrap-icons": "^1.0.0",
+    "json-stable-stringify": "^1.0.1"
   }
 }
