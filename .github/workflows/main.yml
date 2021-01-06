@@ -13,8 +13,31 @@ jobs:
     - uses: actions/setup-node@v1
       with:
         node-version: '12'
+
     - run: npm install
+
+    - name: validate registries
+      run: npm run validate
+
+    - name: verify that the registries are canonicalized
+      if: github.ref == 'refs/heads/master' || github.event_name == 'pull_request'
+      run: |
+          npm run canonicalize
+          git add src/main/data
+          git diff-index --quiet HEAD src/main/data
+
+    - name: commit canonicalized registries
+      if: github.ref != 'refs/heads/master' && github.event_name != 'pull_request'
+      run: |
+          npm run canonicalize
+          git add src/main/data
+          git config --global user.name 'Steve LLamb'
+          git config --global user.email 'steve.llamb@bydeluxe.com'
+          git diff-index --quiet HEAD src/main/data || git commit -m "Registries have been canonicalized"
+          git push
+
     - run: npm run build
+
     - uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/master'
       with:
