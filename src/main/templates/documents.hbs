@@ -36,50 +36,50 @@
           </td>
           <td>
             <div class="container-fluid">
-              {{#unknown}}
+              {{#status/unknown}}
                 <span class="label badge badge-danger">[ Unknown ]</span><br> 
-              {{/unknown}}
-              {{#withdrawn}}
+              {{/status/unknown}}
+              {{#status/withdrawn}}
                 <span class="label badge badge-danger">[ Withdrawn ]</span><br> 
-              {{/withdrawn}}
-              {{#superseded}}
+              {{/status/withdrawn}}
+              {{#status/superseded}}
                 <span class="label badge badge-warning">[ Superseded ]</span><br>
-              {{/superseded}}
-              {{#if supersededBy}}
+              {{/status/superseded}}
+              {{#if status/supersededBy}}
                 <div class="border-left p-1">
                   <span class="font-weight-bold small">Superseded by:</span><br>
                 {{/if}}
-                {{#supersededBy}}
+                {{#status/supersededBy}}
                   <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
-                {{/supersededBy}}
-                {{#if supersededBy}}
+                {{/status/supersededBy}}
+                {{#if status/supersededBy}}
                 </div>
               {{/if}}
-              {{#draft}}
+              {{#status/draft}}
                 <span class="label badge badge-warning">[ Draft ]</span><br> 
-              {{/draft}}
-              {{#active}}
+              {{/status/draft}}
+              {{#status/active}}
                 <span class="label badge badge-success">[ Active ]</span><br>  
-              {{/active}}
-              {{#amended}}
+              {{/status/active}}
+              {{#status/amended}}
                 <span class="label badge badge-secondary">[ Amended ]</span><br>
-              {{/amended}}
-              {{#if amendedBy}}
+              {{/status/amended}}
+              {{#if status/amendedBy}}
                 <div class="border-left p-1">
                   <span class="font-weight-bold small">Amended by:</span><br>
                 {{/if}}
-                {{#amendedBy}}
+                {{#status/amendedBy}}
                   <a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span><br> 
-                {{/amendedBy}}
-                {{#if amendedBy}}
+                {{/status/amendedBy}}
+                {{#if status/amendedBy}}
                 </div>
               {{/if}}
-              {{#reaffirmed}}
+              {{#status/reaffirmed}}
                 <span class="label badge badge-info">[ Reaffirmed ]</span><br>
-              {{/reaffirmed}}
-              {{#stabilized}}
+              {{/status/reaffirmed}}
+              {{#status/stabilized}}
                 <span class="label badge badge-primary">[ Stabilized ]</span>  
-              {{/stabilized}}   
+              {{/status/stabilized}}   
             </div>      
           </td>
           <td>
@@ -98,7 +98,7 @@
               <div class="row p-2">
                 <div class="col p-2">
                   <p>
-                    <span class="font-weight-bold small">Current Status:</span> <em>{{status}}</em>{{#if statusNote}}<span class="small"><em> ({{statusNote}})</em></span>{{/if}}
+                    <span class="font-weight-bold small">Current Status:</span> <em>{{currentStatus}}</em>{{#if status/statusNote}}<span class="small"><em> ({{status/statusNote}})</em></span>{{/if}}
                   {{#if details}}
                   <br>
                     <span class="font-weight-bold small">Details:</span> <em>{{details}}</em>
