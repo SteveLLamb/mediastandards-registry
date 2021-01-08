@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$id": "https://github.com/SteveLLamb/doc-registry/0.0.1",
+    "$id": "https://github.com/SteveLLamb/mediastandards-registry/0.1.0",
     "$comment": "Copyright, Steve LLamb <steve.llamb@gmail.com>",
-    "title": "Schema for the document repo",
+    "title": "Schema for the Media Standards repo",
     "items": {
         "anyOf": [
             {
@@ -45,93 +45,74 @@
                     },
                     "status": {
                         "$id": "#/items/anyOf/0/properties/status",
-                        "type": "string",
-                        "enum": [ 
-                            "Active",
-                            "Amended",
-                            "Draft",
-                            "Superseded*",
-                            "Superseded",
-                            "Unknown",
-                            "Withdrawn"
-                        ]
-                    },
-                    "statusNote": {
-                        "$id": "#/items/anyOf/0/properties/statusNote",
-                        "type": "string"
-                    },
-                    "stablized": {
-                        "$id": "#/items/anyOf/0/properties/stablized",
-                        "type": "boolean"
-                    },
-                    "stablizedDate": {
-                        "$id": "#/items/anyOf/0/properties/stablizedDate",
-                        "type": "string"
-                    },
-                    "reaffirmed": {
-                        "$id": "#/items/anyOf/0/properties/reaffirmed",
-                        "type": "boolean"
-                    },
-                    "reaffirmDate": {
-                        "$id": "#/items/anyOf/0/properties/reaffirmDate",
-                        "type": "string"
-                    },
-                    "unknown": {
-                        "$id": "#/items/anyOf/0/properties/unknown",
-                        "type": "boolean"
-                    },
-                    "withdrawn": {
-                        "$id": "#/items/anyOf/0/properties/withdrawn",
-                        "type": "boolean"
-                    },
-                    "withdrawnDate": {
-                        "$id": "#/items/anyOf/0/properties/withdrawnDate",
-                        "type": "string"
-                    },
-                    "superseded": {
-                        "$id": "#/items/anyOf/0/properties/superseded",
-                        "type": "boolean"
-                    },
-                    "supersededDate": {
-                        "$id": "#/items/anyOf/0/properties/supersededDate",
-                        "type": "string"
-                    },
-                    "supersededBy": {
-                        "$id": "#/items/anyOf/0/properties/supersededBy",
-                        "type": "array",
-                        "additionalItems": true,
-                        "items": {
-                            "anyOf": [
-                                {
-                                    "$id": "#/items/anyOf/0/properties/supersededBy/items/anyOf/0",
-                                    "type": "string",
-                                    "minLength": 1
+                        "type": "object",
+                        "properties": { 
+                            "statusNote": {
+                                "type": "string"
+                            },
+                            "draft": {
+                                "type": "boolean"
+                            },
+                            "active": {
+                                "type": "boolean"
+                            },
+                            "amended": {
+                                "type": "boolean"
+                            },
+                            "amendedDate": {
+                                "type": "string"
+                            },
+                            "amendedBy": {
+                                "type": "array",
+                                "additionalItems": true,
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "type": "string",
+                                            "minLength": 1
+                                        }
+                                    ]
                                 }
-                            ],
-                            "$id": "#/items/anyOf/0/properties/supersededBy/items"
-                        }
-                    },
-                    "amended": {
-                        "$id": "#/items/anyOf/0/properties/amended",
-                        "type": "boolean"
-                    },
-                    "amendedDate": {
-                        "$id": "#/items/anyOf/0/properties/amendedDate",
-                        "type": "string"
-                    },
-                    "amendedBy": {
-                        "$id": "#/items/anyOf/0/properties/amendedBy",
-                        "type": "array",
-                        "additionalItems": true,
-                        "items": {
-                            "anyOf": [
-                                {
-                                    "$id": "#/items/anyOf/0/properties/amendedBy/items/anyOf/0",
-                                    "type": "string",
-                                    "minLength": 1
+                            },
+                            "stablized": {
+                                "type": "boolean"
+                            },
+                            "stablizedDate": {
+                                "type": "string"
+                            },
+                            "reaffirmed": {
+                                "type": "boolean"
+                            },
+                            "reaffirmDate": {
+                                "type": "string"
+                            },
+                            "withdrawn": {
+                                "type": "boolean"
+                            },
+                            "withdrawnDate": {
+                                "type": "string"
+                            },
+                            "superseded": {
+                                "type": "boolean"
+                            },
+                            "supersededDate": {
+                                "type": "string"
+                            },
+                            "supersededBy": {
+                                "type": "array",
+                                "additionalItems": true,
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "type": "string",
+                                            "minLength": 1
+                                        }
+                                    ]
                                 }
-                            ],
-                            "$id": "#/items/anyOf/0/properties/amendedBy/items"
+                            },
+                            "unknown": {
+                                "type": "boolean"
+                            }
                         }
                     },
                     "details": {

@@ -86,17 +86,61 @@ async function buildRegistry ({ listType, templateType, idType, listTitle }) {
     console.log(`${listTitle} schema validation passed`)
   };
 
-  /* load the doc Statuses, Labels */
-  
-  const docStatuses = {}
-  const docLabels = {}
+  /* load the doc Current Statuses and Labels */
 
-  registry.forEach(item => { docStatuses[item.docId] = item.status} );
-  registry.forEach(item => { docLabels[item.docId] = (item.label)} );
+  for (let i in registry) {
+
+    let status = registry[i]["status"];
+    var cS = ""
+
+    if(status.draft){
+      cS = "Draft"
+    }
+    else if(status.unknown){
+      cS = "Unknown"
+    }
+    else if(status.withdrawn){
+      cS = "Withdrawn"
+    }
+    else if(status.superseded){
+      cS = "Superseded"
+    }
+    else if(status.active){
+      cS = "Active"
+
+      if (status.amended){
+        cS = cS.concat(", Amended");
+      }
+      
+      if (status.stabilized){
+        cS = cS.concat(", Stabilized");
+      }
+      else if(status.reaffirmed){
+        cS = cS.concat(", Reaffirmed");
+      }
+
+    }
+    else{
+      cS = "Unknown"
+    }
+
+    if(status.statusNote){
+      cS = cS.concat("*");
+    }
+
+    registry[i].currentStatus = cS;
+
+  }
+
+  const docStatuses = {}
+  registry.forEach(item => { docStatuses[item.docId] = item.currentStatus} );
 
   hb.registerHelper("getStatus", function(docId) {
     return docStatuses[docId];
   });
+
+  const docLabels = {}
+  registry.forEach(item => { docLabels[item.docId] = (item.label)} );
 
   hb.registerHelper("getLabel", function(docId) {
     return docLabels[docId];
