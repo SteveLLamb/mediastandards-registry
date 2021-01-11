@@ -17,5 +17,14 @@ module.exports = (registry, name) => {
     }
     keys.push(registry[i].docId)
   }
+
+  /* is the registry sorted */
+
+  for (let i = 1; i < registry.length; i++) {
+    if (registry[i-1].docId >= registry[i].docId) {
+      throw name + " sort order " + registry[i-1].docId + " is " +
+        ((registry[i-1].docId === registry[i].docId) ? "duplicated" : "not sorted");
+    }
+  }
   
 }
