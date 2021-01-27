@@ -59,6 +59,33 @@ async function buildRegistry ({ listType, templateType, idType, listTitle }) {
   if (!template) {
     throw "Cannot load HTML template";
   }
+
+  /* if Conditional helpers */
+
+  hb.registerHelper('ifeq', function (a, b, options) {
+    if (a == b) { 
+      return options.fn(this); 
+    }
+    return options.inverse(this);
+  });
+
+  hb.registerHelper('ifactive', function (a, b, options) {
+      return a + '-' + b
+  });
+
+  hb.registerHelper('ifnoteq', function (a, b, options) {
+    if (a !== b) { 
+      return options.fn(this); 
+    }
+    return options.inverse(this);
+  });
+
+  hb.registerHelper('ifinc', function (a, b, options) {
+    if (a.includes(b)) { 
+      return options.fn(this); 
+    }
+    return options.inverse(this);
+  });
   
   /* load and validate the registry */
 
