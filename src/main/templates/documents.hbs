@@ -135,56 +135,67 @@
                     {{/if}}
                   </p>
                   {{#if workInfo}}
-                    <div class="border-left p-2">
-                        <span class="font-weight-bold"><u>Work Info</u><br></span>
-                        <span class="font-weight-bold small">Assigned Group: </span>
-                        {{#if workInfo/groupLink}}
-                        <a class="{{../idType}}-link" target="_blank" href="{{workInfo/groupLink}}">
-                        {{/if}}
-                        {{workInfo/group}}
-                        {{#if workInfo/groupLink}}
-                        </a>
-                        {{/if}}
-                        {{#if workInfo/actionItems}} | <a class="{{../idType}}-link" target="_blank" href="{{workInfo/actionItems}}">Action Items</a>{{/if}}
-                        {{#if workInfo/projectLink}} | <a class="{{../idType}}-link" target="_blank" href="{{workInfo/projectLink}}">Project Link</a>{{/if}}
-                        {{#if workInfo/reviewNeeded}}
-                        <br>
-                        <span class="font-weight-bold small">Review Needed:</span> Yes
-                        {{/if}}
-                        {{#if workInfo/reviewPeriod}}
-                        <br>
-                        <span class="font-weight-bold small">Review Period:</span> {{workInfo/reviewPeriod}}
-                        {{/if}}
-                        {{#if workInfo/reviewDate}}
-                        <br>
-                        <span class="font-weight-bold small">Review Date:</span> {{workInfo/reviewDate}}
-                        {{/if}}
-                        {{#if workInfo/recommendation}}
-                        <br>
-                        <span class="font-weight-bold small">Recommendation:</span> {{workInfo/recommendation}}
-                        {{/if}}
-                        {{#if workInfo/approved}}
-                        <br>
-                        <span class="font-weight-bold small">TC Approved:</span> Yes
-                        {{/if}}
-                        {{#if workInfo/assigned}}
-                        <br>
-                        <span class="font-weight-bold small">Assigned to:</span> {{workInfo/assigned}}
-                        {{/if}}
-                        {{#if workInfo/updateDependency}}
-                        <br><span class="font-weight-bold small">Dependent on updates to:</span>
-                        {{/if}}
-                        {{#workInfo/updateDependency}}
-                        <br><a class="{{../../idType}}-link" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span>
-                        {{/workInfo/updateDependency}}
-                        {{#if workInfo/notes}}
-                        <br><br>
-                        <span class="font-weight-bold small">Notes:</span> <em>{{workInfo/notes}}</em>
-                        {{/if}}
-                        {{#if workInfo/otherWork}}
-                        <br>
-                        <span class="font-weight-bold small">Other Requested Work:</span> <em>{{workInfo/otherWork}}</em>
-                        {{/if}}
+                    <div class="border-left p-2 bg-dark">
+                        <span class="font-weight-bold text-light">Work Info<br></span>
+                        {{#workInfo}}
+
+                        <div class="border p-2 bg-light">
+
+                          <span class="font-weight-bold small">Work Type: </span>{{workType}}
+                          <br>
+                          <span class="font-weight-bold small">Assigned Group: </span>
+                          {{#if groupLink}}
+                          <a class="{{../idType}}-link" target="_blank" href="{{groupLink}}">
+                          {{/if}}
+                          {{group}}
+                          {{#if groupLink}}
+                          </a>
+                          {{/if}}
+                          {{#if actionItems}} | <a class="{{../../idType}}-link" target="_blank" href="{{actionItems}}">Action Items</a>{{/if}}
+                          {{#if projectLink}} | <a class="{{../../idType}}-link" target="_blank" href="{{projectLink}}">Project Link</a>{{/if}}
+                          {{#if reviewNeeded}}
+                          <br>
+                          <span class="font-weight-bold small">Review Needed:</span> Yes
+                          {{/if}}
+                          {{#if reviewPeriod}}
+                          <br>
+                          <span class="font-weight-bold small">Review Period:</span> {{reviewPeriod}}
+                          {{/if}}
+                          {{#if reviewDate}}
+                          <br>
+                          <span class="font-weight-bold small">Review Date:</span> {{reviewDate}}
+                          {{/if}}
+                          {{#if recommendation}}
+                          <br>
+                          <span class="font-weight-bold small">Recommendation:</span> {{recommendation}}
+                          {{/if}}
+                          {{#if approved}}
+                          <br>
+                          <span class="font-weight-bold small">TC Approved:</span> Yes
+                          {{/if}}
+                          {{#if assigned}}
+                          <br>
+                          <span class="font-weight-bold small">Assigned to:</span> {{assigned}}
+                          {{/if}}
+                          {{#if updateDependency}}
+                          <br><span class="font-weight-bold small">Dependent on updates to:</span>
+                          {{/if}}
+                          {{#updateDependency}}
+                          <br><a class="{{../../idType}}-link" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span>
+                          {{/updateDependency}}
+                          {{#if notes}}
+                          <br><br>
+                          <span class="font-weight-bold small">Notes:</span> <em>{{notes}}</em>
+                          {{/if}}
+                          {{#if otherWork}}
+                          <br>
+                          <span class="font-weight-bold small">Other Requested Work:</span> <em>{{otherWork}}</em>
+                          {{/if}}
+
+                        </div>
+
+
+                        {{/workInfo}}
                     </div>
                   {{/if}}
                   {{#if xmlNamespace}}
