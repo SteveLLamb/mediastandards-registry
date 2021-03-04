@@ -20,6 +20,10 @@ const REGISTRIES_REPO_PATH = "src/main";
 const SITE_PATH = "src/site";
 const BUILD_PATH = "build";
 
+const argv = require('yargs').argv;
+const { readFile, writeFile } = require('fs').promises;
+const { json2csvAsync } = require('json-2-csv');
+
 /* list the available registries type (lower case), id (single, for links), titles (Upper Case), and schema builds */
 
 const registries = [
@@ -41,6 +45,9 @@ async function buildRegistry ({ listType, templateType, idType, listTitle }) {
   var TEMPLATE_PATH = "src/main/templates/" + templateType + ".hbs";
   var PAGE_SITE_PATH = templateType + ".html";
   var PDF_SITE_PATH = templateType + ".pdf";
+  var CSV_SITE_PATH = templateType + ".csv";
+  const inputFileName = DATA_PATH;
+  const outputFileName = BUILD_PATH + "/" + CSV_SITE_PATH;
 
   /* load header and footer for templates */
 
@@ -202,6 +209,7 @@ async function buildRegistry ({ listType, templateType, idType, listTitle }) {
     "data" : registry,
     "date" :  new Date(),
     "pdf_path": PDF_SITE_PATH,
+    "csv_path": CSV_SITE_PATH,
     "site_version": site_version,
     "listType": listType,
     "idType": idType,
@@ -239,6 +247,26 @@ async function buildRegistry ({ listType, templateType, idType, listTitle }) {
   } catch (e) {
     console.warn(e);
   }
+
+  async function parseJSONFile (fileName) {
+    try {
+      const file = await readFile(fileName);
+      return JSON.parse(file);
+    } catch (err) {
+      console.log(err);
+      process.exit(1);
+    }
+  }
+
+  async function writeCSV (fileName, data) {
+    await writeFile(fileName, data, 'utf8');
+  }
+
+  (async () => {
+    const data = await parseJSONFile(inputFileName);
+    const csv = await json2csvAsync(data);
+    await writeCSV(outputFileName, csv);
+  })();
 
   console.log(`Build of ${templateType} completed`)
 };
