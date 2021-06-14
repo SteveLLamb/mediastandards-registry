@@ -1293,7 +1293,8 @@
         "dci-dcss-v14-e1-2",
         "dci-dcss-v14-e3-15",
         "dci-dcss-v14-e16-17",
-        "dci-dcss-v14-e18-19"
+        "dci-dcss-v14-e18-19",
+        "dci-dcss-v14-e20-23"
       ]
     },
     "title": "Digital Cinema System Specification Version 1.4",
@@ -1362,6 +1363,27 @@
     "title": "DCSS Errata 18-19",
     "type": "Specification",
     "url": "https://www.dcimovies.com/specification/DCI_DCSSv1-4_Errata-18-19_2021-03-24.pdf",
+    "usage": [
+      "DCinema",
+      "Packaging",
+      "DCP Core",
+      "Distribution",
+      "Operations",
+      "Security",
+      "KDM"
+    ]
+  },
+  {
+    "docId": "dci-dcss-v14-e20-23",
+    "label": "DCSS v1.4 Errata 20-23 2021-0512",
+    "publicationDate": "2021-05-12T07:00:00.000Z",
+    "publisher": "DCI",
+    "status": {
+      "active": true
+    },
+    "title": "DCSS Errata 20-23",
+    "type": "Specification",
+    "url": "https://www.dcimovies.com/specification/DCI_DCSSv1-4_Errata_20-23_05-12-2021.pdf",
     "usage": [
       "DCinema",
       "Packaging",
@@ -2577,7 +2599,7 @@
     "publicationDate": "2020-06-12T07:00:00.000Z",
     "publisher": "ISDCF",
     "relatedDocs": [
-      "rdd57-20XX"
+      "rdd57-2021"
     ],
     "status": {
       "active": true
@@ -5085,9 +5107,9 @@
     ]
   },
   {
-    "docId": "rdd57-20XX",
+    "docId": "rdd57-2021",
     "group": "21DC",
-    "label": "RDD 57:20XX",
+    "label": "RDD 57:2021",
     "publisher": "SMPTE",
     "references": {
       "normative": [
@@ -5103,10 +5125,11 @@
       "isdcf-d15"
     ],
     "status": {
-      "draft": true
+      "active": true
     },
     "title": "SMPTE ST 2098-2 Immersive Audio Bitstream and Packaging Constraints: IAB Application Profile 1",
     "type": "Registered Disclosure Document",
+    "url": "https://doi.org/10.5594/SMPTE.RDD57.2021",
     "usage": [
       "Audio",
       "DCinema",
@@ -8681,11 +8704,42 @@
       ]
     },
     "status": {
-      "active": true
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "st377-4-2021"
+      ],
+      "supersededDate": "2021-06-04T07:00:00.000Z"
     },
     "title": "MXF Multichannel Audio Labeling Framework",
     "type": "Standard",
     "url": "https://doi.org/10.5594/SMPTE.ST377-4.2012",
+    "usage": [
+      "DCinema",
+      "Audio",
+      "MXF Application"
+    ]
+  },
+  {
+    "docId": "st377-4-2021",
+    "group": "31FS",
+    "label": "ST 377-4:2021",
+    "publicationDate": "2021-06-04T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "st336-2007",
+        "st377-1-2011",
+        "st377-1-2011am1-2012",
+        "rfc5646"
+      ]
+    },
+    "status": {
+      "active": true
+    },
+    "title": "MXF Multichannel Audio Labeling Framework",
+    "type": "Standard",
+    "url": "https://doi.org/10.5594/SMPTE.ST377-4.2021",
     "usage": [
       "DCinema",
       "Audio",

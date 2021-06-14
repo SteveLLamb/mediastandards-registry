@@ -67,22 +67,16 @@
                                     ]
                                 }
                             },
-                            "stablized": {
-                                "type": "boolean"
-                            },
-                            "stablizedDate": {
-                                "type": "string"
-                            },
                             "reaffirmed": {
                                 "type": "boolean"
                             },
                             "reaffirmDate": {
                                 "type": "string"
                             },
-                            "withdrawn": {
+                            "stabilized": {
                                 "type": "boolean"
                             },
-                            "withdrawnDate": {
+                            "stabilizedDate": {
                                 "type": "string"
                             },
                             "superseded": {
@@ -102,6 +96,12 @@
                                         }
                                     ]
                                 }
+                            },
+                            "withdrawn": {
+                                "type": "boolean"
+                            },
+                            "withdrawnDate": {
+                                "type": "string"
                             },
                             "unknown": {
                                 "type": "boolean"
@@ -136,7 +136,8 @@
                                         "Revision",
                                         "Amendment",
                                         "Review",
-                                        "WithdrawSystematic"
+                                        "Withdraw",
+                                        "Systematic"
                                     ]
                                 },
                                 "workDoc": {
