@@ -30,6 +30,7 @@ const registries = [
   {
     "listType": "documents",
     "templateType": "documents",
+    "templateName": "index",
     "idType": "document",
     "listTitle": "Documents"
   }
@@ -37,13 +38,13 @@ const registries = [
 
 /* load and build the templates */
 
-async function buildRegistry ({ listType, templateType, idType, listTitle }) {
+async function buildRegistry ({ listType, templateType, templateName, idType, listTitle }) {
   console.log(`Building ${templateType} started`)
 
   var DATA_PATH = path.join(REGISTRIES_REPO_PATH, "data/" + listType + ".json");
   var DATA_SCHEMA_PATH = path.join(REGISTRIES_REPO_PATH, "schemas/" + listType + ".schema.json");
-  var TEMPLATE_PATH = "src/main/templates/" + templateType + ".hbs";
-  var PAGE_SITE_PATH = templateType + ".html";
+  var TEMPLATE_PATH = "src/main/templates/" + templateName + ".hbs";
+  var PAGE_SITE_PATH = templateName + ".html";
   var PDF_SITE_PATH = templateType + ".pdf";
   var CSV_SITE_PATH = templateType + ".csv";
   const inputFileName = DATA_PATH;
@@ -120,6 +121,52 @@ async function buildRegistry ({ listType, templateType, idType, listTitle }) {
     console.log(`${listTitle} schema validation passed`)
   };
 
+  /* load the SMPTE abreviated docType */
+
+  for (let i in registry) {
+
+    if (registry[i]["publisher"] == "SMPTE"){
+
+      let docType = registry[i]["docType"];
+      var dTA = ""
+
+      if(docType == "Administrative Guideline"){
+        dTA = "AG"
+      }
+      else if(docType == "Advisory Note"){
+        dTA = "AN"
+      }
+      else if(docType == "Engineering Guideline"){
+        dTA = "EG"
+      }
+      else if(docType == "Engineering Report"){
+        dTA = "ER"
+      }
+      else if(docType == "Operations Manual"){
+        dTA = "OM"
+      }
+      else if(docType == "Overview Document"){
+        dTA = "EG"
+      }
+      else if(docType == "Recommended Practice"){
+        dTA = "RP"
+      }
+      else if(docType == "Registered Disclosure Document"){
+        dTA = "RDD"
+      }
+      else if(docType == 'Specification'){
+        dTA = "TSP"
+      }
+      else if(docType == 'Standard'){
+        dTA = "ST"
+      }
+      else if(docType == 'Study Group Report'){
+        dTA = "SGR"
+      }
+      registry[i].docTypeAbr = dTA;
+    }
+  }
+
   /* load the doc Current Statuses and Labels */
 
   for (let i in registry) {
@@ -163,7 +210,6 @@ async function buildRegistry ({ listType, templateType, idType, listTitle }) {
     }
 
     registry[i].currentStatus = cS;
-
   }
 
   const docStatuses = {}
@@ -174,7 +220,7 @@ async function buildRegistry ({ listType, templateType, idType, listTitle }) {
   });
 
   const docLabels = {}
-  registry.forEach(item => { docLabels[item.docId] = (item.label)} );
+  registry.forEach(item => { docLabels[item.docId] = (item.docLabel)} );
 
   hb.registerHelper("getLabel", function(docId) {
     return docLabels[docId];

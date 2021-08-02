@@ -2,7 +2,7 @@
     "$schema": "http://json-schema.org/schema#",
     "$id": "https://github.com/SteveLLamb/mediastandards-registry/0.1.0",
     "$comment": "Copyright, Steve LLamb <steve.llamb@gmail.com>",
-    "title": "Schema for the Media Standards repo",
+    "docTitle": "Schema for the Media Standards repo",
     "items": {
         "anyOf": [
             {
@@ -10,50 +10,197 @@
                 "type": "object",
                 "required": [
                     "docId",
+                    "docLabel",
+                    "docTitle",
+                    "docType",
                     "publisher",
-                    "type",
-                    "label",
-                    "title",
                     "status"
                 ],
                 "additionalProperties": true,
                 "properties": {
+                    "details": {
+                        "type": "string"
+                    },
+                    "docElement": {
+                        "type": "string"
+                    },
                     "docId": {
                         "type": "string",
                         "uniqueItems": true
                     },
-                    "publisher": {
+                    "docLabel": {
                         "type": "string"
+                    },
+                    "docNumber": {
+                        "type": "integer"
+                    },
+                    "docPart": {
+                        "type": "integer"
+                    },
+                    "docTitle": {
+                        "type": "string"
+                    },
+                    "docType": {
+                        "type": "string",
+                        "enum": [
+                            "Best Practice",
+                            "Book",
+                            "Dissertation",
+                            "Draft Standard",
+                            "Experimental",
+                            "Guideline",
+                            "Informational",
+                            "Memo",
+                            "Notation",
+                            "Note",
+                            "Patent",
+                            "Recommendation",
+                            "Registry",
+                            "Report",
+                            "Specification",
+                            "Statement",
+                            "StyleGuide",
+                            "Technical Doc",
+                            "Technical Note",
+                            "Technical Report",
+                            "Administrative Guideline",
+                            "Advisory Note",
+                            "Engineering Guideline",
+                            "Engineering Report",
+                            "Operations Manual",
+                            "Overview Document",
+                            "Recommended Practice",
+                            "Registered Disclosure Document",
+                            "Standard",
+                            "Study Group Report"                            
+                        ]
                     },
                     "group": {
                         "type": "string"
                     },
-                    "type": {
+                    "href": {
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "keywords": {
+                        "type": "array",
+                        "additionalItems": true,
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "type": "string",
+                                    "minLength": 1,
+                                    "enum": [ 
+                                        "Accessibility",
+                                        "Archive",
+                                        "Audio",
+                                        "Aux Data",
+                                        "Captions",
+                                        "Cinema Sound",
+                                        "DCDM",
+                                        "DCinema",
+                                        "DCP Application",
+                                        "DCP Core",
+                                        "Digital Source",
+                                        "Distribution",
+                                        "Image",
+                                        "IMF",
+                                        "IMF Application",
+                                        "Immersive Audio",
+                                        "Interop",
+                                        "JPEG2000",
+                                        "KDM",
+                                        "Measurement",
+                                        "Metadata",
+                                        "MXF Application",
+                                        "MXF Core",
+                                        "Operations",
+                                        "Packaging",
+                                        "Processing",
+                                        "Projection",
+                                        "Quality",
+                                        "SDI",
+                                        "Security",
+                                        "Sign Language",
+                                        "Sound",
+                                        "Subtitles",
+                                        "XML"
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    "publicationDate": {
                         "type": "string"
                     },
-                    "label": {
+                    "publicationDateDay": {
+                        "type": "string",
+                        "pattern": "^(3[01]|[12][0-9]|[1-9])$"
+                    },
+                    "publicationDateMonth": {
+                        "type": "string",
+                        "pattern": "^(1[0-2]|[1-9])$"
+                    },
+                    "publicationDateYear": {
+                        "type": "string",
+                        "minLength": 4,
+                        "maxLength": 4
+                    },
+                    "publisher": {
                         "type": "string"
                     },
-                    "title": {
-                        "type": "string"
+                    "references": {
+                        "type": "object",
+                        "additionalProperties": true,
+                        "properties": {
+                            "normative": {
+                                "type": "array",
+                                "additionalItems": true,
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            },
+                            "bibliographic": {
+                                "type": "array",
+                                "additionalItems": true,
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },   
+                    "relatedDocs": {
+                        "type": "array",
+                        "additionalItems": true,
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "type": "string",
+                                    "minLength": 1
+                                }
+                            ]
+                        }
+                    },
+                    "repo": {
+                        "type": "string",
+                        "format": "uri"
                     },
                     "status": {
                         "type": "object",
                         "properties": { 
-                            "statusNote": {
-                                "type": "string"
-                            },
-                            "draft": {
-                                "type": "boolean"
-                            },
                             "active": {
                                 "type": "boolean"
                             },
                             "amended": {
                                 "type": "boolean"
-                            },
-                            "amendedDate": {
-                                "type": "string"
                             },
                             "amendedBy": {
                                 "type": "array",
@@ -67,6 +214,15 @@
                                     ]
                                 }
                             },
+                            "amendedDate": {
+                                "type": "string"
+                            },
+                            "draft": {
+                                "type": "boolean"
+                            },
+                            "publiccd": {
+                                "type": "boolean"
+                            },
                             "reaffirmed": {
                                 "type": "boolean"
                             },
@@ -79,11 +235,11 @@
                             "stabilizedDate": {
                                 "type": "string"
                             },
+                            "statusNote": {
+                                "type": "string"
+                            },
                             "superseded": {
                                 "type": "boolean"
-                            },
-                            "supersededDate": {
-                                "type": "string"
                             },
                             "supersededBy": {
                                 "type": "array",
@@ -97,25 +253,34 @@
                                     ]
                                 }
                             },
+                            "supersededDate": {
+                                "type": "string"
+                            },
+                            "unknown": {
+                                "type": "boolean"
+                            },
                             "withdrawn": {
                                 "type": "boolean"
                             },
                             "withdrawnDate": {
                                 "type": "string"
-                            },
-                            "unknown": {
-                                "type": "boolean"
                             }
                         }
                     },
-                    "details": {
-                        "type": "string"
-                    },
-                    "url": {
-                        "type": "string"
-                    },
-                    "publicationDate": {
-                        "type": "string"
+                    "versions": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                            "versionNum": {
+                                "type": "string"
+                            },
+                            "versionHref": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                            }
+                        }
                     },
                     "workInfo": {
                         "type": "array",
@@ -192,18 +357,6 @@
                             }
                         }
                     },
-                    "relatedDocs": {
-                        "type": "array",
-                        "additionalItems": true,
-                        "items": {
-                            "anyOf": [
-                                {
-                                    "type": "string",
-                                    "minLength": 1
-                                }
-                            ]
-                        }
-                    },
                     "xmlNamespace": {
                         "type": "array",
                         "additionalItems": true,
@@ -211,89 +364,11 @@
                             "anyOf": [
                                 {
                                     "type": "string",
-                                    "minLength": 1
-                                }
-                            ]
-                        }
-                    },
-                    "usage": {
-                        "type": "array",
-                        "additionalItems": true,
-                        "items": {
-                            "anyOf": [
-                                {
-                                    "type": "string",
                                     "minLength": 1,
-                                    "enum": [ 
-                                        "Accessibility",
-                                        "Archive",
-                                        "Audio",
-                                        "Aux Data",
-                                        "Captions",
-                                        "Cinema Sound",
-                                        "DCDM",
-                                        "DCinema",
-                                        "DCP Application",
-                                        "DCP Core",
-                                        "Digital Source",
-                                        "Distribution",
-                                        "Image",
-                                        "IMF",
-                                        "IMF Application",
-                                        "Immersive Audio",
-                                        "Interop",
-                                        "JPEG2000",
-                                        "KDM",
-                                        "Measurement",
-                                        "Metadata",
-                                        "MXF Application",
-                                        "MXF Core",
-                                        "Operations",
-                                        "Packaging",
-                                        "Processing",
-                                        "Projection",
-                                        "Quality",
-                                        "SDI",
-                                        "Security",
-                                        "Sign Language",
-                                        "Sound",
-                                        "Subtitles",
-                                        "XML"
-                                    ]
+                                    "format": "uri"
                                 }
                             ]
                         }
-                    },
-                    "references": {
-                        "type": "object",
-                        "additionalProperties": true,
-                        "properties": {
-                            "normative": {
-                                "type": "array",
-                                "additionalItems": true,
-                                "items": {
-                                    "anyOf": [
-                                        {
-                                            "type": "string"
-                                        }
-                                    ]
-                                }
-                            },
-                            "bibliographic": {
-                                "type": "array",
-                                "additionalItems": true,
-                                "items": {
-                                    "anyOf": [
-                                        {
-                                            "type": "string"
-                                        }
-                                    ]
-                                }
-                            }
-                        }
-                    },
-                    "github": {
-                        "type": "string"
                     }
                 }
             }
