@@ -195,12 +195,6 @@ $(document).ready(function() {
                 }
               },
               {
-                label: 'None Defined',
-                value: function(rowData, rowIdx){
-                    return rowData[3] == '';
-                }
-              },
-              {
                 label: 'Operations',
                 value: function(rowData, rowIdx){
                     return rowData[3].includes('[Operations]');

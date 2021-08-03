@@ -92,6 +92,13 @@ pre {
     transform: rotate(0deg);
 }
 
+[data-toggle="collapse"].collapsed .if-not-collapsed {
+  display: none;
+}
+[data-toggle="collapse"]:not(.collapsed) .if-collapsed {
+  display: none;
+}
+
 .js .cd-top--fade-out {
     opacity: .5
 }
