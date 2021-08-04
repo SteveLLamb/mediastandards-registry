@@ -39,48 +39,52 @@
           <td>
             <div class="container-fluid">
               {{#status/unknown}}
-                <span class="label badge badge-danger">[ Unknown ]</span><br> 
+                <span class="label badge badge-danger">[ UNKNOWN ]</span><br> 
               {{/status/unknown}}
               {{#status/withdrawn}}
-                <span class="label badge badge-danger">[ Withdrawn ]</span><br> 
+                <span class="label badge badge-danger">[ WITHDRAWN ]</span><br> 
               {{/status/withdrawn}}
               {{#status/superseded}}
-                <span class="label badge badge-warning">[ Superseded ]</span><br>
+                <span class="label badge badge-warning">[ SUPERSEDED ]</span><br>
               {{/status/superseded}}
               {{#if status/supersededBy}}
                 <div class="border-left p-1">
                   <span class="font-weight-bold small">Superseded by:</span>
                   <ul class="list-group list-group-flush">
                 {{#status/supersededBy}}
-                    <li class="list-group-item"><span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <em>[{{getStatus this}}]</em></span></li> 
+                    <li class="list-group-item">
+                      <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <em>[{{getStatus this}}]</em></span>
+                    </li> 
                 {{/status/supersededBy}}
                   </ul>
                 </div>
               {{/if}}
               {{#status/draft}}
-                <span class="label badge badge-warning">[ Draft ]</span><br> 
+                <span class="label badge badge-warning">[ DRAFT ]</span><br> 
               {{/status/draft}}
               {{#status/active}}
-                <span class="label badge badge-success">[ Active ]</span><br>  
+                <span class="label badge badge-success">[ ACTIVE ]</span><br>  
               {{/status/active}}
               {{#status/amended}}
-                <span class="label badge badge-secondary">[ Amended ]</span><br>
+                <span class="label badge badge-secondary">[ AMENDED ]</span><br>
               {{/status/amended}}
               {{#if status/amendedBy}}
                 <div class="border-left p-1">
                   <span class="font-weight-bold small">Amended by:</span>
                   <ul class="list-group list-group-flush">
                 {{#status/amendedBy}}
-                    <li class="list-group-item"><span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <em>[{{getStatus this}}]</em></span></li>
+                    <li class="list-group-item">
+                      <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <em>[{{getStatus this}}]</em></span>
+                    </li>
                 {{/status/amendedBy}}
                 </ul>
                 </div>
               {{/if}}
               {{#status/reaffirmed}}
-                <span class="label badge badge-info">[ Reaffirmed ]</span><br>
+                <span class="label badge badge-info">[ REAFFIRMED ]</span><br>
               {{/status/reaffirmed}}
               {{#status/stabilized}}
-                <span class="label badge badge-primary">[ Stabilized ]</span>  
+                <span class="label badge badge-primary">[ STABILIZED ]</span>  
               {{/status/stabilized}}   
             </div>      
           </td>
@@ -97,7 +101,6 @@
                 {{/if}}
                 </span>
               </div>
-
               <div class="detaillink d-flex row border-top border-bottom justify-content-end">
                 <div class="col">
                   <a href="#details-{{docId}}" data-target="#details-{{docId}}" class="collapsed" data-toggle="collapse">
@@ -112,14 +115,16 @@
               </div>
               <div class="row p-2 collapse" id="details-{{docId}}">
                 <div class="col">
-                  <p>
-                    <span class="font-weight-bold small">Current Status:</span> <em>{{currentStatus}}</em>{{#if status/statusNote}}<span class="small"><em> ({{status/statusNote}})</em></span>{{/if}}
+                  <div class="pb-2">
+                    <span class="font-weight-bold small">Current Status:</span> {{currentStatus}}{{#ifinc currentStatus "Active"}} <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#0c9c16" class="bi bi-check-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/></svg> {{/ifinc}}{{#ifinc currentStatus "Superseded"}} <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#ff0000" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg> {{/ifinc}}{{#ifinc currentStatus "Withdrawn"}} <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="#ff0000" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg> {{/ifinc}}
+                    {{#if status/statusNote}}<br><span class="small"><em> *({{status/statusNote}})</em></span>{{/if}}
                   {{#if details}}
-                  <br>
-                    <span class="font-weight-bold small">Details:</span> <em>{{details}}</em>
+                    <div>
+                      <span class="font-weight-bold small">Details:</span> <em>{{details}}</em>
+                    </div>
                   {{/if}}
-                  </p>
-                  <p>
+                  </div>
+                  <div>
                     {{#if publicationDate}}
                     <span class="font-weight-bold small">Publication Date:</span> {{publicationDate}}
                     <br>
@@ -148,9 +153,9 @@
                     <span class="font-weight-bold small">Repo:</span> <a class="{{../idType}}-link" target="_blank" href="{{repo}}">{{repo}}</a>
                     <br>
                     {{/if}}
-                  </p>
+                  </div>
                   {{#if workInfo}}
-                    <div class="p-2 bg-dark">
+                    <div class="mt-2 p-2 bg-dark">
                         <span class="font-weight-bold text-light">Work Info<br></span>
                         {{#workInfo}}
                         <div class="border p-2 bg-light">
@@ -215,17 +220,25 @@
                   {{#if xmlNamespace}}
                   <div class="p-2">
                       <span class="font-weight-bold small">XML Namespace(s) Defined:</span>
+                      <ul class="list-group list-group-flush">
                       {{#xmlNamespace}}
-                      <br><a target="_blank" href="{{this}}">{{this}}</a>
+                        <li class="list-group-item">
+                          <span class="small"><a target="_blank" href="{{this}}">{{this}}</a></span>
+                        </li>
                       {{/xmlNamespace}}
+                      </ul>
                   </div>
                   {{/if}}
                   {{#if relatedDocs}}
                   <div class="border-left p-2">
                       <span class="font-weight-bold small">Related Document(s):</span>
+                      <ul class="list-group list-group-flush">
                       {{#relatedDocs}}
-                      <br><a class="{{../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span> 
+                        <li class="list-group-item">
+                          <span class="small"><a class="{{../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <em>[{{getStatus this}}]</em></span>
+                        </li>
                       {{/relatedDocs}}
+                      </ul>
                   </div>
                   {{/if}}
                 </div>
@@ -236,7 +249,9 @@
             <div class="col">
               <ul class="list-group list-group-flush">
               {{#references/normative}}
-                <li class="list-group-item"><span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <em>[{{getStatus this}}]</em></span></li>
+                <li class="list-group-item">
+                  <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <em>[{{getStatus this}}]</em></span>
+                </li>
               {{/references/normative}}
               </ul>
             </div>
@@ -247,7 +262,9 @@
             <div class="col">
               <ul class="list-group list-group-flush">
               {{#references/bibliographic}}
-                <li class="list-group-item"><span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <em>[{{getStatus this}}]</em></span></li>
+                <li class="list-group-item">
+                  <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <em>[{{getStatus this}}]</em></span>
+                </li>
               {{/references/bibliographic}}
               </ul>
             </div>

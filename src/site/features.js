@@ -270,56 +270,56 @@ $(document).ready(function() {
               {
                 label: 'Active',
                 value: function(rowData, rowIdx){
-                  return rowData[4].includes('[ Active ]');
+                  return rowData[4].includes('[ ACTIVE ]');
                 }
 
               },
               {
                 label: 'Amended',
                 value: function(rowData, rowIdx){
-                  return rowData[4].includes('[ Amended ]');
+                  return rowData[4].includes('[ AMENDED ]');
                 }
 
               },
               {
                 label: 'Draft',
                 value: function(rowData, rowIdx){
-                  return rowData[4].includes('[ Draft ]');
+                  return rowData[4].includes('[ DRAFT ]');
                 }
 
               },
               {
                 label: 'Reaffirmed',
                 value: function(rowData, rowIdx){
-                  return rowData[4].includes('[ Reaffirmed ]');
+                  return rowData[4].includes('[ REAFFIRMED ]');
                 }
 
               },
               {
                 label: 'Stabilized',
                 value: function(rowData, rowIdx){
-                  return rowData[4].includes('[ Stabilized ]');
+                  return rowData[4].includes('[ STABILIZED ]');
                 }
 
               },
               {
                 label: 'Superseded',
                 value: function(rowData, rowIdx){
-                  return rowData[4].includes('[ Superseded ]');
+                  return rowData[4].includes('[ SUPERSEDED ]');
                 }
 
               },
               {
                 label: 'Unknown',
                 value: function(rowData, rowIdx){
-                  return rowData[4].includes('[ Unknown ]');
+                  return rowData[4].includes('[ UNKNOWN ]');
                 }
 
               },
               {
                 label: 'Withdrawn',
                 value: function(rowData, rowIdx){
-                  return rowData[4].includes('[ Withdrawn ]');
+                  return rowData[4].includes('[ WITHDRAWN ]');
                 }
 
               }
