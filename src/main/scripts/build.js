@@ -219,6 +219,23 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
     return docStatuses[docId];
   });
 
+  hb.registerHelper("getstatusButton", function(docId, btnSize) {
+    
+    var status = docStatuses[docId]
+
+    if (status.includes("Active")) { 
+      return '<svg xmlns="http://www.w3.org/2000/svg" width="' + btnSize + '" height="' + btnSize + '" fill="#0c9c16" class="bi bi-check-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/></svg>'; 
+    }
+    else if (status.includes("Superseded") || status.includes("Withdrawn")){
+      return '<svg xmlns="http://www.w3.org/2000/svg" width="' + btnSize + '" height="' + btnSize + '" fill="#ff0000" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg>'
+    }
+    else {
+      return "";
+    }
+
+    return docStatuses[docId];
+  });
+
   const docLabels = {}
   registry.forEach(item => { docLabels[item.docId] = (item.docLabel)} );
 
