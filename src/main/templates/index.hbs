@@ -3,6 +3,7 @@
 
   {{>header}}
 
+
     <!-- Main content starts - do not edit above this line -->
     <table id="sorttable" class="table table-small table-hover w-auto display">
       <thead class="thead-light">
@@ -24,7 +25,7 @@
             <a class="anchor" id="{{docId}}" href="#{{docId}}"></a><code>{{docLabel}}</code>
           </td>
           <td class="publisher">
-            {{publisher}}{{#if group}} [{{group}}]{{/if}}
+            {{publisher}}{{#if group}} [{{#with (groupIdLookup ../data_groups group)}}{{groupName}} {{groupDesc}}{{/with}}]{{/if}}
           </td>
           <td>
             {{docType}}
@@ -32,7 +33,7 @@
           <td>
             <div class="container-fluid">
               {{#keywords}}
-              <span class="small"><code>[{{this}}]</code></span><br>
+              <span class="small"><code>[{{this}}]</code></span>{{#unless @last}}<br>{{/unless}}
               {{/keywords}}
             </div>
           </td>
@@ -145,7 +146,7 @@
                     {{/if}}
                   </div>
                   {{#if workInfo}}
-                    <div class="detaillink d-flex row border-top border-bottom justify-content-end">
+                    <div class="mt-2 detaillink d-flex row border-top border-bottom justify-content-end">
                       <div class="col">
                         <a href="#details-{{docId}}" data-target="#details-{{docId}}" class="collapsed" data-toggle="collapse">
                           <div class="p-2">
@@ -155,61 +156,73 @@
                         </a>
                       </div>
                     </div>
-                    <div class="p-2 border-bottom border-left border-right collapse" id="details-{{docId}}">
+                    <div class="border-bottom border-left border-right collapse" id="details-{{docId}}">
                     {{#workInfo}}
-                      <span class="font-weight-bold small">Work Type: </span>{{workType}}
-                      <br>
-                      <span class="font-weight-bold small">Assigned Group: </span>
-                      {{#if groupLink}}
-                      <a class="{{../idType}}-link" target="_blank" href="{{groupLink}}">
+                      {{#if project}}
+                      <div>
+                        <div class="p-2 border-bottom bg-secondary">
+                          <span class="text-light"><b>Project(s)</b></span>
+                        </div>
+                        {{#project}}
+                        <div class="p-2{{#unless @last}} border-bottom{{/unless}}"> 
+                          <span class="font-weight-bold small">Work Type: </span>{{#if projectLink}}<a href="{{projectLink}}" target="_blank">{{/if}}{{workType}}{{#if projectLink}}</a>{{/if}}
+                          {{#if assignedGroup}}
+                          <br>
+                          <span class="font-weight-bold small">Assigned Group: </span>{{#with (groupIdLookup ../../../data_groups assignedGroup)}}{{#if groupLink}}<a href="{{groupLink}}" target="_blank">{{/if}}{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../../../data_groups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}{{/with}}
+                          {{/if}}
+                          {{#if updateDependency}}
+                          <div class="p-2">
+                            <span class="font-weight-bold small">Dependent on updates to:</span>
+                            {{#updateDependency}}
+                            <br><span class="small"><a class="{{../../../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}}
+                            {{/updateDependency}}
+                          </div>
+                          {{/if}}
+                          {{#if workNotes}}
+                          <div class="p-2">
+                            <span class="font-weight-bold small">Notes:</span> <em>{{workNotes}}</em>
+                          </div>
+                          {{/if}}
+                        </div>
+                        {{/project}}
+                      </div>
                       {{/if}}
-                      {{group}}
-                      {{#if groupLink}}
-                      </a>
-                      {{/if}}
-                      {{#if actionItems}} | <a class="{{../../idType}}-link" target="_blank" href="{{actionItems}}">Action Items</a>{{/if}}
-                      {{#if projectLink}} | <a class="{{../../idType}}-link" target="_blank" href="{{projectLink}}">Project Link</a>{{/if}}
-                      {{#if reviewNeeded}}
-                      <br>
-                      <span class="font-weight-bold small">Review Needed:</span> Yes
-                      {{/if}}
-                      {{#if reviewPeriod}}
-                      <br>
-                      <span class="font-weight-bold small">Review Period:</span> {{reviewPeriod}}
-                      {{/if}}
-                      {{#if reviewDate}}
-                      <br>
-                      <span class="font-weight-bold small">Review Date:</span> {{reviewDate}}
-                      {{/if}}
-                      {{#if recommendation}}
-                      <br>
-                      <span class="font-weight-bold small">Recommendation:</span> {{recommendation}}
-                      {{/if}}
-                      {{#if approved}}
-                      <br>
-                      <span class="font-weight-bold small">TC Approved:</span> Yes
-                      {{/if}}
-                      {{#if assigned}}
-                      <br>
-                      <span class="font-weight-bold small">Assigned to:</span> {{assigned}}
-                      {{/if}}
-                      {{#if updateDependency}}
-                      <br><span class="font-weight-bold small">Dependent on updates to:</span>
-                      {{/if}}
-                      {{#updateDependency}}
-                      <br><a class="{{../../idType}}-link" href="#{{this}}">{{this}}</a> <span class="small"><em>[{{getStatus this}}]</em></span>
-                      {{/updateDependency}}
-                      {{#if notes}}
-                      <br><br>
-                      <span class="font-weight-bold small">Notes:</span> <em>{{notes}}</em>
-                      {{/if}}
-                      {{#if otherWork}}
-                      <br>
-                      <span class="font-weight-bold small">Other Requested Work:</span> <em>{{otherWork}}</em>
-                      {{/if}}
-                      {{#if workDoc}}
-                      <br>
-                      <span class="font-weight-bold small">Work Document: </span><a class="{{../../idType}}-link clear-filter" href="#{{workDoc}}">{{getLabel workDoc}}</a> <span class="small"><em>[{{getStatus workDoc}}]</em></span> 
+                      {{#if review}}
+                      <div>
+                        <div class="p-2 border-bottom bg-secondary">
+                          <span class="text-light"><b>Review(s)</b></span>
+                        </div>
+                        {{#review}}
+                        <div class="p-2{{#unless @last}} border-bottom{{/unless}}">
+                          <span class="font-weight-bold small">Review Period: </span>{{reviewPeriod}}
+                          {{#if reviewNeeded}}
+                          <br>
+                          <span class="font-weight-bold small">Review Needed:</span> <span class="text-light bg-danger"> Yes </span>
+                          {{/if}}
+                          {{#if assignedGroup}}
+                          <br>
+                          <span class="font-weight-bold small">Assigned Group: </span>{{#with (groupIdLookup ../../../data_groups assignedGroup)}}{{#if groupLink}}<a href="{{groupLink}}" target="_blank">{{/if}}{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../../../data_groups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}{{/with}}
+                          {{/if}}
+                          {{#if reviewDate}}
+                          <br>
+                          <span class="font-weight-bold small">Review Date:</span> {{reviewDate}}
+                          {{/if}}
+                          {{#if reviewRec}}
+                          <br>
+                          <span class="font-weight-bold small">Review Recommendation:</span> {{reviewRec}}
+                          {{/if}}
+                          {{#if recApproved}}
+                          <br>
+                          <span class="font-weight-bold small">Recomendation Approved:</span> Yes
+                          {{/if}}
+                          {{#if reviewNotes}}
+                          <div class="p-2">
+                            <span class="font-weight-bold small">Notes:</span> <em>{{reviewNotes}}</em>
+                          </div>
+                          {{/if}}
+                        </div>
+                        {{/review}}
+                      </div>
                       {{/if}}
                     {{/workInfo}}
                     </div>

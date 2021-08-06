@@ -1,0 +1,54 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://github.com/SteveLLamb/mediastandards-groups/0.9.0",
+    "$comment": "Copyright, Steve LLamb <steve.llamb@gmail.com>",
+    "docTitle": "Schema for the Media Standards Registry - Groups",
+    "items": {
+        "anyOf": [
+            {
+                "$id": "#/items/anyOf/0",
+                "type": "object",
+                "required": [
+                    "groupId",
+                    "groupName",
+                    "groupOrg",
+                    "groupType"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                    "groupDesc": {
+                        "type": "string"
+                    },
+                    "groupId": {
+                        "type": "string",
+                        "uniqueItems": true
+                    },
+                    "groupLink": {
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "groupName": {
+                        "type": "string"
+                    },
+                    "groupOrg": {
+                        "type": "string"
+                    },
+                    "groupType": {
+                        "type": "string",
+                        "enum": [
+                            "TC", 
+                            "AHG", 
+                            "WG", 
+                            "DG",
+                            "SG",
+                            "TF"                          
+                        ]
+                    },
+                    "parentgroupId": {
+                        "type": "string"
+                    }
+                }
+            }
+        ]
+    }
+}

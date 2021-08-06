@@ -1,8 +1,8 @@
 {
     "$schema": "http://json-schema.org/schema#",
-    "$id": "https://github.com/SteveLLamb/mediastandards-registry/0.1.0",
+    "$id": "https://github.com/SteveLLamb/mediastandards-documents/0.9.0",
     "$comment": "Copyright, Steve LLamb <steve.llamb@gmail.com>",
-    "docTitle": "Schema for the Media Standards repo",
+    "docTitle": "Schema for the Media Standards Registry - Documents",
     "items": {
         "anyOf": [
             {
@@ -16,7 +16,7 @@
                     "publisher",
                     "status"
                 ],
-                "additionalProperties": true,
+                "additionalProperties": false,
                 "properties": {
                     "details": {
                         "type": "string"
@@ -151,7 +151,7 @@
                     },
                     "references": {
                         "type": "object",
-                        "additionalProperties": true,
+                        "additionalProperties": false,
                         "properties": {
                             "normative": {
                                 "type": "array",
@@ -272,87 +272,111 @@
                         "items": {
                             "type": "object",
                             "properties": {
-                            "versionNum": {
-                                "type": "string"
-                            },
-                            "versionHref": {
-                                "type": "string",
-                                "format": "uri"
-                            }
+                                "versionNum": {
+                                    "type": "string"
+                                },
+                                "versionHref": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
                         }
                     },
                     "workInfo": {
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "required": [
-                                "group", "workType"
-                            ],
-                            "additionalProperties": true,
-                            "properties": {
-                                "group": {
-                                    "type": "string"
-                                },
-                                "workType": {
-                                    "type": "string",
-                                    "enum": [ 
-                                        "Intial Draft",
-                                        "Revision",
-                                        "Amendment",
-                                        "Review",
-                                        "Withdraw",
-                                        "Systematic"
-                                    ]
-                                },
-                                "workDoc": {
-                                    "type": "string"
-                                },
-                                "groupLink": {
-                                    "type": "string"
-                                },
-                                "reviewNeeded": {
-                                    "type": "boolean"
-                                },
-                                "reviewPeriod": {
-                                    "type": "string",
-                                    "enum": [ 
-                                        "1 Year",
-                                        "5 Year",
-                                        "Systematic"
-                                    ]
-                                },
-                                "reviewDate": {
-                                    "type": "string"
-                                },
-                                "recommendation": {
-                                    "type": "string"
-                                },
-                                "approved": {
-                                    "type": "boolean"
-                                },
-                                "notes": {
-                                    "type": "string"
-                                },
-                                "otherWork": {
-                                    "type": "string"
-                                },
-                                "updateDependency": {
-                                    "type": "array",
-                                    "additionalItems": true,
-                                    "items": {
-                                        "anyOf": [
-                                            {
-                                                "type": "string"
-                                            }
-                                        ]
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "review": {
+                                "type": "array",
+                                "additionalItems": true,
+                                "items": {
+                                    "type": "object",
+                                    "additionalProperties": true,
+                                    "required": [
+                                        "reviewPeriod"
+                                    ],
+                                    "properties": {
+                                        "assignedGroup": {
+                                            "type": "string"
+                                        },
+                                        
+                                        "recApproved": {
+                                            "type": "boolean"
+                                        },
+                                        "reviewDate": {
+                                            "type": "string"
+                                        },
+                                        "reviewNeeded": {
+                                            "type": "boolean"
+                                        },
+                                        "reviewNotes": {
+                                            "type": "string"
+                                        },
+                                        "reviewPeriod": {
+                                            "type": "string",
+                                            "enum": [ 
+                                                "1 Year",
+                                                "5 Year",
+                                                "Systematic"
+                                            ]
+                                        },
+                                        "reviewRec": {
+                                            "type": "string",
+                                            "enum": [ 
+                                                "Amend",
+                                                "Reaffirm",
+                                                "Stabilize",
+                                                "Revise",
+                                                "Withdraw",
+                                                "Reassign",
+                                                "No Recommendation"
+                                            ]
+                                        }
                                     }
-                                },
-                                "assigned": {
-                                    "type": "string"
-                                },
-                                "projectLink": {
-                                    "type": "string"
+                                }
+                            },
+                            "project": {
+                                "type": "array",
+                                "additionalItems": true,
+                                "items": {
+                                    "type": "object",
+                                    "required": [
+                                        "workType"
+                                    ],
+                                    "additionalProperties": false,
+                                    "properties": {
+                                        "assignedGroup": {
+                                            "type": "string"
+                                        },
+                                        "projectLink": {
+                                            "type": "string",
+                                            "minLength": 1,
+                                            "format": "uri"
+                                        },
+                                        "updateDependency": {
+                                            "type": "array",
+                                            "additionalItems": true,
+                                            "items": {
+                                                "anyOf": [
+                                                    {
+                                                        "type": "string"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "workNotes": {
+                                            "type": "string"
+                                        },
+                                        "workType": {
+                                            "type": "string",
+                                            "enum": [ 
+                                                "Intial Draft",
+                                                "Revision",
+                                                "Amendment",
+                                                "Withdraw"
+                                            ]
+                                        }
+                                    }
                                 }
                             }
                         }

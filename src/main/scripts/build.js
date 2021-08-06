@@ -32,13 +32,16 @@ const registries = [
     "templateType": "documents",
     "templateName": "index",
     "idType": "document",
-    "listTitle": "Documents"
+    "listTitle": "Documents",
+    "subRegistry": [
+      "groups"
+    ]
   }
 ]
 
 /* load and build the templates */
 
-async function buildRegistry ({ listType, templateType, templateName, idType, listTitle }) {
+async function buildRegistry ({ listType, templateType, templateName, idType, listTitle, subRegistry }) {
   console.log(`Building ${templateType} started`)
 
   var DATA_PATH = path.join(REGISTRIES_REPO_PATH, "data/" + listType + ".json");
@@ -96,30 +99,55 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
   });
   
   /* load and validate the registry */
-
-  let registry = JSON.parse(
-    await fs.readFile(DATA_PATH)
-  );
   
-  if (!registry) {
-    throw "Cannot load registry";
+  const validateRegistries = [
+    {
+      type: listType,
+      DATA_PATH: DATA_PATH,
+      DATA_SCHEMA_PATH: DATA_SCHEMA_PATH 
+    }
+  ]
+
+  for (let i in subRegistry) {
+    var subReg = {}
+    subReg["type"] = subRegistry[i]
+    subReg["DATA_PATH"] = DATA_PATH.replace(listType, subRegistry[i])
+    subReg["DATA_SCHEMA_PATH"] = DATA_SCHEMA_PATH.replace(listType, subRegistry[i])
+    validateRegistries.push(subReg);
   }
-  
-  console.log(`${listTitle} schema validation started`)
 
-  var validator_factory = new ajv();
-
-  let validator = validator_factory.compile(
-    JSON.parse(await fs.readFile(DATA_SCHEMA_PATH))
-  );
+  for (let i in validateRegistries) {
   
-  if (! validator(registry)) {
-    console.log(validator.errors);
-    throw "Registry fails schema validation";
+    validateRegistries[i].registry = JSON.parse(
+      await fs.readFile(validateRegistries[i].DATA_PATH)
+    );
+    if (!validateRegistries[i].registry) {
+      throw "Cannot load registry";
+    }
+
+    if (validateRegistries[i].type == "documents") {
+      registry = validateRegistries[i].registry
+    }
+    else if (validateRegistries[i].type == "groups") {
+      groupRegistry = validateRegistries[i].registry
+    }
+    
+    console.log(`${validateRegistries[i].DATA_PATH} schema validation started`)
+
+    var validator_factory = new ajv();
+    let validator = validator_factory.compile(
+      JSON.parse(await fs.readFile(validateRegistries[i].DATA_SCHEMA_PATH))
+    );
+    
+    if (! validator(validateRegistries[i].registry)) {
+      console.log(validator.errors);  
+      throw "Registry fails schema validation";
+    }
+    else {
+      console.log(`${validateRegistries[i].DATA_PATH} schema validation passed`)
+    };
+
   }
-  else {
-    console.log(`${listTitle} schema validation passed`)
-  };
 
   /* load the SMPTE abreviated docType */
 
@@ -243,6 +271,19 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
     return docLabels[docId];
   });
 
+  /* external json lookup helpers */
+
+hb.registerHelper('groupIdLookup', function(collection, id) {
+    var collectionLength = collection.length;
+
+    for (var i = 0; i < collectionLength; i++) {
+        if (collection[i].groupId === id) {
+            return collection[i];
+        }
+    }
+    return null;
+});
+
   /* is the registry sorted */
     
   for(let i = 1; i < registry.length; i++) {
@@ -270,6 +311,7 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
   
   var html = template({
     "data" : registry,
+    "data_groups" : groupRegistry,
     "date" :  new Date(),
     "pdf_path": PDF_SITE_PATH,
     "csv_path": CSV_SITE_PATH,
