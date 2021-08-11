@@ -340,41 +340,13 @@
                                 "additionalItems": true,
                                 "items": {
                                     "type": "object",
-                                    "required": [
-                                        "workType"
-                                    ],
                                     "additionalProperties": false,
+                                    "required": [
+                                        "projectId"
+                                    ],
                                     "properties": {
-                                        "assignedGroup": {
+                                        "projectId": {
                                             "type": "string"
-                                        },
-                                        "projectLink": {
-                                            "type": "string",
-                                            "minLength": 1,
-                                            "format": "uri"
-                                        },
-                                        "updateDependency": {
-                                            "type": "array",
-                                            "additionalItems": true,
-                                            "items": {
-                                                "anyOf": [
-                                                    {
-                                                        "type": "string"
-                                                    }
-                                                ]
-                                            }
-                                        },
-                                        "workNotes": {
-                                            "type": "string"
-                                        },
-                                        "workType": {
-                                            "type": "string",
-                                            "enum": [ 
-                                                "Intial Draft",
-                                                "Revision",
-                                                "Amendment",
-                                                "Withdraw"
-                                            ]
                                         }
                                     }
                                 }

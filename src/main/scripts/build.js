@@ -34,7 +34,8 @@ const registries = [
     "idType": "document",
     "listTitle": "Documents",
     "subRegistry": [
-      "groups"
+      "groups",
+      "projects"
     ]
   }
 ]
@@ -130,6 +131,9 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
     }
     else if (validateRegistries[i].type == "groups") {
       groupRegistry = validateRegistries[i].registry
+    }
+    else if (validateRegistries[i].type == "projects") {
+      projectRegistry = validateRegistries[i].registry
     }
     
     console.log(`${validateRegistries[i].DATA_PATH} schema validation started`)
@@ -247,6 +251,8 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
     return docStatuses[docId];
   });
 
+  /* create Status Button and Label based on current document status */
+
   hb.registerHelper("getstatusButton", function(docId, btnSize) {
     
     var status = docStatuses[docId]
@@ -271,18 +277,61 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
     return docLabels[docId];
   });
 
+  /* lookup if any projects exist for current document */
+
+  const docProjs = []
+  for (let i in projectRegistry) {
+
+    
+    let projs = projectRegistry[i]["docAffected"]
+
+    for (let p in projs) {
+
+      var docProj = {}
+
+      docProj["docId"] = projs[p]
+      docProj["workType"] = projectRegistry[i]["workType"]
+      docProj["projectStatus"] = projectRegistry[i]["projectStatus"]
+      docProj["newDoc"] = projectRegistry[i]["docId"]
+      docProjs.push(docProj)
+
+    }
+  }
+
+  hb.registerHelper('docProjLookup', function(collection, id) {
+      var collectionLength = collection.length;
+
+      for (var i = 0; i < collectionLength; i++) {
+          if (collection[i].docId === id) {
+              return collection[i];
+          }
+      }
+      return null;
+  });
+
   /* external json lookup helpers */
 
-hb.registerHelper('groupIdLookup', function(collection, id) {
-    var collectionLength = collection.length;
+  hb.registerHelper('groupIdLookup', function(collection, id) {
+      var collectionLength = collection.length;
 
-    for (var i = 0; i < collectionLength; i++) {
-        if (collection[i].groupId === id) {
-            return collection[i];
-        }
-    }
-    return null;
-});
+      for (var i = 0; i < collectionLength; i++) {
+          if (collection[i].groupId === id) {
+              return collection[i];
+          }
+      }
+      return null;
+  });
+
+  hb.registerHelper('projectIdLookup', function(collection, id) {
+      var collectionLength = collection.length;
+
+      for (var i = 0; i < collectionLength; i++) {
+          if (collection[i].projectId === id) {
+              return collection[i];
+          }
+      }
+      return null;
+  });
 
   /* is the registry sorted */
     
@@ -312,6 +361,8 @@ hb.registerHelper('groupIdLookup', function(collection, id) {
   var html = template({
     "data" : registry,
     "data_groups" : groupRegistry,
+    "data_projects" : projectRegistry,
+    "docProjs": docProjs,
     "date" :  new Date(),
     "pdf_path": PDF_SITE_PATH,
     "csv_path": CSV_SITE_PATH,

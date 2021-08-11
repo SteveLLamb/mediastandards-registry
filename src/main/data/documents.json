@@ -5111,8 +5111,7 @@
     "workInfo": {
       "project": [
         {
-          "assignedGroup": "smpte-tc-21dc",
-          "workType": "Intial Draft"
+          "projectId": "rdd-53-20xx-id"
         }
       ]
     }
@@ -9358,12 +9357,6 @@
       "active": true
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -9408,15 +9401,6 @@
       "active": true
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "updateDependency": [
-            "st428-7-20XX"
-          ],
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -9493,15 +9477,6 @@
       "active": true,
       "reaffirmDate": "2018-03-15T07:00:00.000Z",
       "reaffirmed": true
-    },
-    "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workNotes": "Should be updated as per GH issue",
-          "workType": "Revision"
-        }
-      ]
     }
   },
   {
@@ -9603,15 +9578,6 @@
       "active": true,
       "reaffirmDate": "2018-03-15T07:00:00.000Z",
       "reaffirmed": true
-    },
-    "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workNotes": "Revise at next review (2023) - See GitHub for ISO TC 36 comment responses",
-          "workType": "Revision"
-        }
-      ]
     }
   },
   {
@@ -9756,14 +9722,6 @@
     "status": {
       "active": true
     },
-    "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-stsub",
-          "workType": "Revision"
-        }
-      ]
-    },
     "xmlNamespace": [
       "http://www.smpte-ra.org/schemas/428-7/2010/DCST",
       "http://www.smpte-ra.org/schemas/428-7/2014/DCST"
@@ -9799,6 +9757,13 @@
     },
     "status": {
       "draft": true
+    },
+    "workInfo": {
+      "project": [
+        {
+          "projectId": "st428-7-2014-rev-001"
+        }
+      ]
     },
     "xmlNamespace": [
       "http://www.smpte-ra.org/schemas/428-7/2010/DCST",
@@ -9887,15 +9852,6 @@
       "active": true
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "updateDependency": [
-            "st429-7-2006"
-          ],
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -9946,15 +9902,6 @@
       "active": true
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "updateDependency": [
-            "st429-7-2006"
-          ],
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -9995,15 +9942,6 @@
       "active": true,
       "reaffirmDate": "2018-03-15T07:00:00.000Z",
       "reaffirmed": true
-    },
-    "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workNotes": "Need to update based on any updates made to 428-11",
-          "workType": "Revision"
-        }
-      ]
     }
   },
   {
@@ -10045,12 +9983,6 @@
       "active": true
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -10108,12 +10040,6 @@
       "active": true
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -10160,12 +10086,6 @@
       "active": true
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -10216,12 +10136,6 @@
       "reaffirmed": true
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -10264,12 +10178,6 @@
       "active": true
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -10675,14 +10583,6 @@
     "status": {
       "active": true,
       "draft": false
-    },
-    "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workType": "Revision"
-        }
-      ]
     }
   },
   {
@@ -10752,14 +10652,6 @@
       "active": true,
       "reaffirmDate": "2018-03-15T07:00:00.000Z",
       "reaffirmed": true
-    },
-    "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workType": "Revision"
-        }
-      ]
     }
   },
   {
@@ -10839,14 +10731,6 @@
     "repo": "https://github.com/SMPTE/st429-4/issues",
     "status": {
       "active": true
-    },
-    "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workType": "Revision"
-        }
-      ]
     }
   },
   {
@@ -10923,12 +10807,6 @@
       "reaffirmed": true
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -10989,15 +10867,6 @@
       "amended": true,
       "amendedBy": [
         "st429-6-2006am1-2018"
-      ]
-    },
-    "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workNotes": "Roll in ST 429-6:2006 Am1:2018",
-          "workType": "Revision"
-        }
       ]
     }
   },
@@ -11107,12 +10976,6 @@
       "reaffirmed": true
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -11173,12 +11036,6 @@
       "active": true
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -11281,15 +11138,6 @@
       "active": true
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "updateDependency": [
-            "st429-8-2007"
-          ],
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -11418,13 +11266,6 @@
       ]
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workNotes": "Roll in ST 430-1:2017 Am 1:2019 ",
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -11512,12 +11353,6 @@
       "active": true
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -11562,12 +11397,6 @@
       "active": true
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -11612,13 +11441,6 @@
       "reaffirmed": true
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workNotes": "Roll in ST 430-12:2014 Am1:2019",
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -11707,15 +11529,6 @@
     },
     "status": {
       "active": true
-    },
-    "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-smsomb",
-          "projectLink": "https://teams.microsoft.com/l/entity/com.microsoft.teamspace.tab.planner/_djb2_msteams_prefix_4016256768?webUrl=https%3a%2f%2ftasks.office.com%2fc6051a58-269b-4f08-835f-eedebf4596b3%2fHome%2fPlanViews%2fDXYjfEA-3UG8pNOGLf4A5WQAFrHT%3fType%3dPlanLink%26Channel%3dTeamsTab&docLabel=21DC+ST+430-14+Revision+-+Digital+Sync+Signal+and+Aux+Data+Transfer+Protocol+(ST)+(OLC+Legacy)+in+Projects+(ST%2c+RP%2c+EG)&context=%7b%0d%0a++%22subEntityId%22%3a+%22sfXBl-Ci8UWpVT_YbD8gqGQAMMIf%22%2c%0d%0a++%22channelId%22%3a+%2219%3a735c25b5260d47c09a2712650f590dd4%40thread.tacv2%22%0d%0a%7d&tenantId=c6051a58-269b-4f08-835f-eedebf4596b3",
-          "workType": "Revision"
-        }
-      ]
     }
   },
   {
@@ -11758,8 +11571,7 @@
     "workInfo": {
       "project": [
         {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workType": "Revision"
+          "projectId": "st430-14-2015-rev-001"
         }
       ]
     }
@@ -11801,15 +11613,6 @@
       "active": true
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "updateDependency": [
-            "st430-16-2017"
-          ],
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -11860,12 +11663,6 @@
       "active": true
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -11912,12 +11709,7 @@
     "workInfo": {
       "project": [
         {
-          "assignedGroup": "smpte-dg-21dc-smsomb",
-          "workType": "Intial Draft"
-        },
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workType": "Revision"
+          "projectId": "st430-17-20XX-id"
         }
       ]
     }
@@ -12000,12 +11792,6 @@
       "active": true
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -12128,12 +11914,6 @@
       "active": true
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -12186,15 +11966,6 @@
       "amended": true,
       "amendedBy": [
         "st430-4-2008am1-2011"
-      ]
-    },
-    "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workNotes": "Roll in ST 430-4:2008 Am1:2011",
-          "workType": "Revision"
-        }
       ]
     }
   },
@@ -12306,12 +12077,6 @@
       "active": true
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -12389,12 +12154,6 @@
       "active": true
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -12490,13 +12249,6 @@
       ]
     },
     "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workNotes": "Roll in ST 430-9:2008 Am1:2011",
-          "workType": "Revision"
-        }
-      ],
       "review": [
         {
           "assignedGroup": "smpte-dg-21dc-docmx",
@@ -12587,15 +12339,6 @@
       "active": true,
       "reaffirmDate": "2018-03-15T07:00:00.000Z",
       "reaffirmed": true
-    },
-    "workInfo": {
-      "project": [
-        {
-          "assignedGroup": "smpte-dg-21dc-docmx",
-          "workNotes": "See GitHub for ISO TC 36 comment responses",
-          "workType": "Revision"
-        }
-      ]
     }
   },
   {

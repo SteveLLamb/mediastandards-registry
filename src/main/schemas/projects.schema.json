@@ -1,0 +1,90 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "$id": "https://github.com/SteveLLamb/mediastandards-projects/0.9.0",
+    "$comment": "Copyright, Steve LLamb <steve.llamb@gmail.com>",
+    "docTitle": "Schema for the Media Standards Registry - Projects",
+    "items": {
+        "anyOf": [
+            {
+                "$id": "#/items/anyOf/0",
+                "type": "object",
+                "required": [
+                    "assignedGroup",
+                    "projectId",
+                    "projApproved",
+                    "workType"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                    "assignedGroup": {
+                        "type": "string"
+                    },
+                    "assignedTC": {
+                        "type": "string"
+                    },
+                    "docAffected": {
+                        "type": "array",
+                        "additionalItems": true,
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "type": "string",
+                                    "minLength": 1
+                                }
+                            ]
+                        }
+                    },
+                    "docId": {
+                        "type": "string"
+                    },
+                    "projApproved": {
+                        "type": "boolean"
+                    },
+                    "projApprovedDate": {
+                        "type": "string"
+                    },
+                    "projectId": {
+                        "type": "string",
+                        "uniqueItems": true
+                    },
+                    "projectLink": {
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "projectStatus": {
+                        "type": "string",
+                        "enum": [ 
+                            "Pending",
+                            "Open",
+                            "Complete"
+                        ]
+                    },
+                    "updateDependency": {
+                        "type": "array",
+                        "additionalItems": true,
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "type": "string",
+                                    "minLength": 1
+                                }
+                            ]
+                        }
+                    },
+                    "workNotes": {
+                        "type": "string"
+                    },
+                    "workType": {
+                        "type": "string",
+                        "enum": [ 
+                            "Intial Draft",
+                            "Revision",
+                            "Amendment",
+                            "Withdraw"
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}

@@ -1,11 +1,47 @@
 [
   {
-    "groupDesc": "Digital Cinema",
-    "groupId": "smpte-tc-21dc",
-    "groupLink": "https://teams.microsoft.com/l/team/19%3a93ba666aeaf245e6a6fd8838266a31c8%40thread.tacv2/conversations?groupId=45429333-33fc-40f2-a73b-190245416b1a&tenantId=c6051a58-269b-4f08-835f-eedebf4596b3",
-    "groupName": "21DC",
-    "groupOrg": "SMPTE",
+    "groupDesc": "Cinematography",
+    "groupId": "iso-tc-tc36",
+    "groupLink": "https://www.iso.org/committee/48090.html",
+    "groupName": "TC36",
+    "groupOrg": "ISO",
     "groupType": "TC"
+  },
+  {
+    "groupDesc": "Production technology",
+    "groupId": "iso-wg-tc36-wg1",
+    "groupLink": "https://www.iso.org/committee/48090.html",
+    "groupName": "WG1",
+    "groupOrg": "ISO",
+    "groupType": "WG",
+    "parentgroupId": "iso-tc-tc36"
+  },
+  {
+    "groupDesc": "Laboratory and distribution services technology",
+    "groupId": "iso-wg-tc36-wg2",
+    "groupLink": "https://www.iso.org/committee/48090.html",
+    "groupName": "WG2",
+    "groupOrg": "ISO",
+    "groupType": "WG",
+    "parentgroupId": "iso-tc-tc36"
+  },
+  {
+    "groupDesc": "Audio technology",
+    "groupId": "iso-wg-tc36-wg3",
+    "groupLink": "https://www.iso.org/committee/48090.html",
+    "groupName": "WG3",
+    "groupOrg": "ISO",
+    "groupType": "WG",
+    "parentgroupId": "iso-tc-tc36"
+  },
+  {
+    "groupDesc": "Presentation technology",
+    "groupId": "iso-wg-tc36-wg4",
+    "groupLink": "https://www.iso.org/committee/48090.html",
+    "groupName": "WG4",
+    "groupOrg": "ISO",
+    "groupType": "WG",
+    "parentgroupId": "iso-tc-tc36"
   },
   {
     "groupId": "smpte-dg-21dc-docmx",
@@ -16,17 +52,17 @@
     "parentgroupId": "smpte-tc-21dc"
   },
   {
-    "groupId": "smpte-dg-21dc-stsub",
-    "groupLink": "https://teams.microsoft.com/l/team/19%3ab6c1c9d5a83c4c409bbf72f10323cf59%40thread.tacv2/conversations?groupId=39c9b607-bb0a-48db-bc3a-c0941fb06de2&tenantId=c6051a58-269b-4f08-835f-eedebf4596b3",
-    "groupName": "Stereo Subtitling",
+    "groupId": "smpte-dg-21dc-smsomb",
+    "groupLink": "https://teams.microsoft.com/l/team/19%3a94583870de164d5a8e63ed9ed09a12cb%40thread.tacv2/conversations?groupId=2908db80-7281-44d2-95f7-a7554ac2afd1&tenantId=c6051a58-269b-4f08-835f-eedebf4596b3",
+    "groupName": "SMS OMB Comm",
     "groupOrg": "SMPTE",
     "groupType": "DG",
     "parentgroupId": "smpte-tc-21dc"
   },
   {
-    "groupId": "smpte-dg-21dc-smsomb",
-    "groupLink": "https://teams.microsoft.com/l/team/19%3a94583870de164d5a8e63ed9ed09a12cb%40thread.tacv2/conversations?groupId=2908db80-7281-44d2-95f7-a7554ac2afd1&tenantId=c6051a58-269b-4f08-835f-eedebf4596b3",
-    "groupName": "SMS OMB Comm",
+    "groupId": "smpte-dg-21dc-stsub",
+    "groupLink": "https://teams.microsoft.com/l/team/19%3ab6c1c9d5a83c4c409bbf72f10323cf59%40thread.tacv2/conversations?groupId=39c9b607-bb0a-48db-bc3a-c0941fb06de2&tenantId=c6051a58-269b-4f08-835f-eedebf4596b3",
+    "groupName": "Stereo Subtitling",
     "groupOrg": "SMPTE",
     "groupType": "DG",
     "parentgroupId": "smpte-tc-21dc"
@@ -44,6 +80,14 @@
     "groupId": "smpte-tc-20f",
     "groupLink": "https://teams.microsoft.com/l/team/19%3ad05ac56a79864deeb839e164f90333b1%40thread.tacv2/conversations?groupId=4794fd78-7c29-4044-acee-fcc720c8e51f&tenantId=c6051a58-269b-4f08-835f-eedebf4596b3",
     "groupName": "20F",
+    "groupOrg": "SMPTE",
+    "groupType": "TC"
+  },
+  {
+    "groupDesc": "Digital Cinema",
+    "groupId": "smpte-tc-21dc",
+    "groupLink": "https://teams.microsoft.com/l/team/19%3a93ba666aeaf245e6a6fd8838266a31c8%40thread.tacv2/conversations?groupId=45429333-33fc-40f2-a73b-190245416b1a&tenantId=c6051a58-269b-4f08-835f-eedebf4596b3",
+    "groupName": "21DC",
     "groupOrg": "SMPTE",
     "groupType": "TC"
   },
@@ -102,49 +146,5 @@
     "groupName": "35PM",
     "groupOrg": "SMPTE",
     "groupType": "TC"
-  },
-  {
-    "groupDesc": "Cinematography",
-    "groupId": "iso-tc-tc36",
-    "groupLink": "https://www.iso.org/committee/48090.html",
-    "groupName": "TC36",
-    "groupOrg": "ISO",
-    "groupType": "TC"
-  },
-  {
-    "groupDesc": "Production technology",
-    "groupId": "iso-wg-tc36-wg1",
-    "groupLink": "https://www.iso.org/committee/48090.html",
-    "groupName": "WG1",
-    "groupOrg": "ISO",
-    "groupType": "WG",
-    "parentgroupId": "iso-tc-tc36"
-  },
-  {
-    "groupDesc": "Laboratory and distribution services technology",
-    "groupId": "iso-wg-tc36-wg2",
-    "groupLink": "https://www.iso.org/committee/48090.html",
-    "groupName": "WG2",
-    "groupOrg": "ISO",
-    "groupType": "WG",
-    "parentgroupId": "iso-tc-tc36"
-  },
-  {
-    "groupDesc": "Audio technology",
-    "groupId": "iso-wg-tc36-wg3",
-    "groupLink": "https://www.iso.org/committee/48090.html",
-    "groupName": "WG3",
-    "groupOrg": "ISO",
-    "groupType": "WG",
-    "parentgroupId": "iso-tc-tc36"
-  },
-  {
-    "groupDesc": "Presentation technology",
-    "groupId": "iso-wg-tc36-wg4",
-    "groupLink": "https://www.iso.org/committee/48090.html",
-    "groupName": "WG4",
-    "groupOrg": "ISO",
-    "groupType": "WG",
-    "parentgroupId": "iso-tc-tc36"
   }
 ]

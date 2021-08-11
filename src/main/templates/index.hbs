@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-
   {{>header}}
-
-
     <!-- Main content starts - do not edit above this line -->
     <table id="sorttable" class="table table-small table-hover w-auto display">
       <thead class="thead-light">
@@ -109,6 +106,12 @@
                   <div class="pb-2">
                     <span class="font-weight-bold small">Current Status:</span> {{currentStatus}} {{{getstatusButton docId "12"}}}
                     {{#if status/statusNote}}<br><span class="small"><em> *({{status/statusNote}})</em></span>{{/if}}
+                    {{#with (docProjLookup ../docProjs docId)}}
+                    {{#ifnoteq projectStatus "Complete"}}
+                    <br>
+                    <span class="label badge badge-warning">{{workType}} {{projectStatus}}</span> {{#if newDoc}}<span class="small">Under Development: <a class="{{../idType}}-link clear-filter" href="#{{newDoc}}">{{getLabel newDoc}}</a> [{{getStatus newDoc}}]</span>{{/if}}
+                    {{/ifnoteq}}
+                    {{/with}}
                   {{#if details}}
                     <div>
                       <span class="font-weight-bold small">Details:</span> <em>{{details}}</em>
@@ -165,23 +168,50 @@
                         </div>
                         {{#project}}
                         <div class="p-2{{#unless @last}} border-bottom{{/unless}}"> 
-                          <span class="font-weight-bold small">Work Type: </span>{{#if projectLink}}<a href="{{projectLink}}" target="_blank">{{/if}}{{workType}}{{#if projectLink}}</a>{{/if}}
-                          {{#if assignedGroup}}
+
+                          {{#if projectId}}
+                          {{#with (projectIdLookup ../../../data_projects projectId)}}
+
+                          <span class="font-weight-bold small">Work Type: </span>{{#if projectLink}}<a href="{{projectLink}}" target="_blank">{{/if}}{{workType}}{{#if projectLink}}</a>{{/if}} {{#if projApproved}}<span class="label badge badge-success float-right">Project Approved</span>{{/if}}
+                          {{#if projectStatus}}
                           <br>
-                          <span class="font-weight-bold small">Assigned Group: </span>{{#with (groupIdLookup ../../../data_groups assignedGroup)}}{{#if groupLink}}<a href="{{groupLink}}" target="_blank">{{/if}}{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../../../data_groups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}{{/with}}
+                          <span class="font-weight-bold small">Work Status: </span>
+                          {{projectStatus}}
                           {{/if}}
-                          {{#if updateDependency}}
-                          <div class="p-2">
-                            <span class="font-weight-bold small">Dependent on updates to:</span>
-                            {{#updateDependency}}
-                            <br><span class="small"><a class="{{../../../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}}
-                            {{/updateDependency}}
-                          </div>
+                          {{#if assignedTC}}
+                          {{#with (groupIdLookup ../../../../data_groups assignedTC)}}
+                          <br>
+                          <span class="font-weight-bold small">Assigned TC: </span>{{#if groupLink}}<a href="{{groupLink}}" target="_blank">{{/if}}{{groupOrg}} {{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}
+                          {{/with}}
+                          {{/if}}
+                          {{#if assignedGroup}}
+                          {{#with (groupIdLookup ../../../../data_groups assignedGroup)}}
+                          <br>
+                          <span class="font-weight-bold small">Assigned Group: </span>{{#if groupLink}}<a href="{{groupLink}}" target="_blank">{{/if}}{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../../../../data_groups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}
+                          {{/with}}
                           {{/if}}
                           {{#if workNotes}}
                           <div class="p-2">
                             <span class="font-weight-bold small">Notes:</span> <em>{{workNotes}}</em>
                           </div>
+                          {{/if}}
+                          {{#if docAffected}}
+                          <div class="p-2">
+                            <span class="font-weight-bold small">Document(s) affected by this work:</span>
+                            {{#docAffected}}
+                            <br><span class="small"><a class="{{../../../../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}}
+                            {{/docAffected}}
+                          </div>
+                          {{/if}}
+                          {{#if updateDependency}}
+                          <div class="p-2">
+                            <span class="font-weight-bold small">Dependent on update(s) to:</span>
+                            {{#updateDependency}}
+                            <br><span class="small"><a class="{{../../../../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}}
+                            {{/updateDependency}}
+                          </div>
+                          {{/if}}
+                          {{/with}}
                           {{/if}}
                         </div>
                         {{/project}}
@@ -197,11 +227,13 @@
                           <span class="font-weight-bold small">Review Period: </span>{{reviewPeriod}}
                           {{#if reviewNeeded}}
                           <br>
-                          <span class="font-weight-bold small">Review Needed:</span> <span class="text-light bg-danger"> Yes </span>
+                          <span class="font-weight-bold small">Review Needed:</span> <span class="label badge badge-danger">Yes</span>
                           {{/if}}
                           {{#if assignedGroup}}
+                          {{#with (groupIdLookup ../../../data_groups assignedGroup)}}
                           <br>
-                          <span class="font-weight-bold small">Assigned Group: </span>{{#with (groupIdLookup ../../../data_groups assignedGroup)}}{{#if groupLink}}<a href="{{groupLink}}" target="_blank">{{/if}}{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../../../data_groups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}{{/with}}
+                          <span class="font-weight-bold small">Assigned Group: </span>{{#if groupLink}}<a href="{{groupLink}}" target="_blank">{{/if}}{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../../../data_groups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}
+                          {{/with}}
                           {{/if}}
                           {{#if reviewDate}}
                           <br>
@@ -245,7 +277,7 @@
                       <ul class="list-group list-group-flush">
                       {{#relatedDocs}}
                         <li class="list-group-item">
-                          <span class="small"><a class="{{../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> <em>[{{getStatus this}}]</em></span>
+                          <span class="small"><a class="{{../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}}
                         </li>
                       {{/relatedDocs}}
                       </ul>
