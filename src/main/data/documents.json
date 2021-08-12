@@ -847,6 +847,16 @@
     }
   },
   {
+    "docId": "csg-14",
+    "docLabel": "ISBN 978-0226103891",
+    "docTitle": "CHICAGO DOCUMENTATION STYLE (14th Edition)",
+    "docType": "Book",
+    "publisher": "University of Chicago Press",
+    "status": {
+      "unknown": true
+    }
+  },
+  {
     "docId": "dci-a-2007-sdc",
     "docLabel": "Stereoscopic DC Addendum v1.0",
     "docTitle": "Stereoscopic Digital Cinema Addendum",
@@ -1672,6 +1682,26 @@
     }
   },
   {
+    "docId": "eg2074-2013",
+    "docLabel": "EG 2074:2013",
+    "docTitle": "SMPTE Metadata Naming Guidelines",
+    "docType": "Engineering Guideline",
+    "group": "smpte-tc-30mr",
+    "href": "https://doi.org/10.5594/SMPTE.EG2074.2013",
+    "publicationDate": "2013-05-13T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "st336-2007",
+        "mw-coldict-11-200307",
+        "csg-14"
+      ]
+    },
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "eg2098-3-2020",
     "docLabel": "EG 2098-3:2020",
     "docTitle": "Immersive Audio Renderer Expectations and Testing Recommendations",
@@ -1775,7 +1805,7 @@
     ],
     "publicationDate": "2010-11-10T08:00:00.000Z",
     "publisher": "SMPTE",
-    "repo": "https://github.com/SMPTE/eg432-1/issues",
+    "repo": "https://github.com/SMPTE/eg432-1",
     "status": {
       "active": true,
       "reaffirmDate": "2018-03-15T07:00:00.000Z",
@@ -2271,7 +2301,7 @@
     "href": "https://www.imfug.com/TR/timecode-in-imf/",
     "publicationDate": "2020-04-22T08:00:00.000Z",
     "publisher": "IMFUG",
-    "repo": "https://github.com/imfug/001-timecode-in-imf/issues",
+    "repo": "https://github.com/imfug/001-timecode-in-imf",
     "status": {
       "active": true
     }
@@ -2284,7 +2314,7 @@
     "href": "https://www.imfug.com/TR/pkg-and-delivery/",
     "publicationDate": "2020-11-10T08:00:00.000Z",
     "publisher": "IMFUG",
-    "repo": "https://github.com/imfug/002-pkg-and-delivery/issues",
+    "repo": "https://github.com/imfug/002-pkg-and-delivery",
     "status": {
       "active": true
     }
@@ -2297,7 +2327,7 @@
     "href": "https://www.imfug.com/TR/imsc-authoring/",
     "publicationDate": "2020-10-13T08:00:00.000Z",
     "publisher": "IMFUG",
-    "repo": "https://github.com/imfug/003-imsc-authoring/issues",
+    "repo": "https://github.com/imfug/003-imsc-authoring",
     "status": {
       "active": true
     }
@@ -2310,7 +2340,7 @@
     "href": "https://www.imfug.com/TR/audio-track-files/",
     "publicationDate": "2020-11-10T08:00:00.000Z",
     "publisher": "IMFUG",
-    "repo": "https://github.com/imfug/004-audio-track-files/issues",
+    "repo": "https://github.com/imfug/004-audio-track-files",
     "status": {
       "active": true
     }
@@ -2323,7 +2353,7 @@
     "href": "https://imfug.github.io/delivery-schema/documentation/specification",
     "publicationDate": "2020-02-24T08:00:00.000Z",
     "publisher": "IMFUG",
-    "repo": "https://github.com/imfug/delivery-schema/issues",
+    "repo": "https://github.com/imfug/delivery-schema",
     "status": {
       "active": true
     }
@@ -2790,6 +2820,35 @@
     "docType": "Standard",
     "href": "https://www.iso.org/standard/73773.html",
     "publicationDate": "2019-06-01T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "iso11179-1-2004",
+    "docLabel": "ISO 11179-1: 2004",
+    "docTitle": "Information technology — Metadata registries (MDR) — Part 1: Framework",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/35343.html",
+    "publicationDate": "2004-09-01T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "iso11179-1-2015"
+      ],
+      "withdrawn": true
+    }
+  },
+  {
+    "docId": "iso11179-1-2015",
+    "docLabel": "ISO 11179-1: 2015",
+    "docTitle": "Information technology — Metadata registries (MDR) — Part 1: Framework",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/61932.html",
+    "publicationDate": "2015-12-01T07:00:00.000Z",
     "publisher": "ISO/IEC",
     "status": {
       "active": true
@@ -4471,6 +4530,18 @@
     }
   },
   {
+    "docId": "iso7185-1990",
+    "docLabel": "ISO 7185:1990",
+    "docTitle": "Information technology — Programming languages — Pascal",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/13802.html",
+    "publicationDate": "1990-10-01T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "iso8824-1-2002",
     "docLabel": "ISO 8824-1:2002 (ITU-T X.680)",
     "docTitle": "Information technology — Abstract Syntax Notation One (ASN.1): Specification of basic notation — Part 1",
@@ -4635,6 +4706,52 @@
     }
   },
   {
+    "docId": "iso9899-1999",
+    "docLabel": "ISO 9899: 1999",
+    "docTitle": "Programming languages — C",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/29237.html",
+    "publicationDate": "1999-12-01T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "iso9899-2011"
+      ],
+      "withdrawn": true
+    }
+  },
+  {
+    "docId": "iso9899-2011",
+    "docLabel": "ISO 9899: 2011",
+    "docTitle": "Information technology — Programming languages — C",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/57853.html",
+    "publicationDate": "2011-12-01T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "iso9899-2018"
+      ],
+      "withdrawn": true
+    }
+  },
+  {
+    "docId": "iso9899-2018",
+    "docLabel": "ISO 9899: 2018",
+    "docTitle": "Information technology — Programming languages — C",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/74528.html",
+    "publicationDate": "2018-06-01T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "isocd26428-1",
     "docLabel": "ISO CD 26428-1",
     "docTitle": "Digital cinema (D-cinema) distribution master — Part 1: Image characteristics",
@@ -4681,6 +4798,17 @@
     "href": "https://www.iso.org/standard/74164.html",
     "publicationDate": "2019-06-01T07:00:00.000Z",
     "publisher": "ISO/CIE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "mw-coldict-11-200307",
+    "docLabel": "ISBN 978-0-87779-807-1",
+    "docTitle": "Merriam-Webster's Collegiate Dictionary, Eleventh Edition",
+    "docType": "Book",
+    "href": "https://shop.merriam-webster.com/products/merriam-websters-collegiate-dictionary-eleventh-edition",
+    "publisher": "Merriam-Webster",
     "status": {
       "active": true
     }
@@ -5092,7 +5220,7 @@
         "dcnc"
       ]
     },
-    "repo": "https://github.com/SMPTE/rdd52/issues",
+    "repo": "https://github.com/SMPTE/rdd52",
     "status": {
       "active": true
     }
@@ -5147,6 +5275,34 @@
     ],
     "status": {
       "active": true
+    }
+  },
+  {
+    "details": "DPP",
+    "docId": "rdd59-1-20XX",
+    "docLabel": "RDD 59-1: 20XX",
+    "docTitle": "Interoperable Master Format — Application DPP (ProRes)",
+    "docType": "Registered Disclosure Document",
+    "group": "smpte-tc-35pm",
+    "publisher": "SMPTE",
+    "repo": "https://github.com/SMPTE/rdd59-1",
+    "status": {
+      "draft": true,
+      "publicCd": true
+    }
+  },
+  {
+    "details": "DPP",
+    "docId": "rdd59-4-20XX",
+    "docLabel": "RDD 59-4: 20XX",
+    "docTitle": "Interoperable Master Format — Application Constraint DPP (JPEG2000)",
+    "docType": "Registered Disclosure Document",
+    "group": "smpte-tc-35pm",
+    "publisher": "SMPTE",
+    "repo": "https://github.com/SMPTE/rdd59-4",
+    "status": {
+      "draft": true,
+      "publicCd": true
     }
   },
   {
@@ -5605,6 +5761,18 @@
     "docType": "Specification",
     "href": "https://www.ietf.org/rfc/rfc2898.txt",
     "publicationDate": "2000-09-01T07:00:00.000Z",
+    "publisher": "IETF",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "rfc3061",
+    "docLabel": "RFC 3061",
+    "docTitle": "A URN Namespace of Object Identifiers",
+    "docType": "Best Practice",
+    "href": "https://www.rfc-editor.org/rfc/inline-errata/rfc3061.html",
+    "publicationDate": "2001-02-01T07:00:00.000Z",
     "publisher": "IETF",
     "status": {
       "active": true
@@ -6791,6 +6959,39 @@
     }
   },
   {
+    "docId": "rp428-22-20XX",
+    "docLabel": "RP 428-22:2022",
+    "docTitle": "D-Cinema Distribution Master – Minimal Timed Text XML Requirements",
+    "docType": "Recommended Practice",
+    "group": "smpte-tc-21dc",
+    "keywords": [
+      "DCinema",
+      "DCDM",
+      "Subtitles"
+    ],
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "rdd52-2020"
+      ],
+      "normative": [
+        "st429-2-2020",
+        "st428-7-2014"
+      ]
+    },
+    "repo": "https://github.com/SMPTE/rp428-22",
+    "status": {
+      "draft": true
+    },
+    "workInfo": {
+      "project": [
+        {
+          "projectId": "rp428-22-20XX-id"
+        }
+      ]
+    }
+  },
+  {
     "docId": "rp428-4-2010",
     "docLabel": "RP 428-4:2010",
     "docTitle": "D-Cinema Distribution Master - Audio File Format and Delivery Constraints",
@@ -6815,7 +7016,7 @@
         "iso639-2-1998"
       ]
     },
-    "repo": "https://github.com/SMPTE/rp428-4/issues",
+    "repo": "https://github.com/SMPTE/rp428-4",
     "status": {
       "active": true
     },
@@ -7141,6 +7342,40 @@
     "href": "https://doi.org/10.5594/SMPTE.ISDCF-SMPTE-ST-430-10-Implementation-Notes2018030801-1.2015",
     "publicationDate": "2016-03-10T08:00:00.000Z",
     "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "st2003-2012",
+    "docLabel": "ST 2003: 2012",
+    "docTitle": "Types Dictionary Structure",
+    "docType": "Standard",
+    "group": "smpte-tc-30mr",
+    "href": "https://doi.org/10.5594/SMPTE.ST2003.2012",
+    "publicationDate": "2012-01-19T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "st335-2012",
+        "st395-2003",
+        "st400-2004",
+        "iso646-1991",
+        "iso7185-1990",
+        "iso9899-1999",
+        "iso11179-1-2004",
+        "unicode-5-1-0",
+        "xml-20081126",
+        "mw-coldict-11-200307"
+      ],
+      "normative": [
+        "st298-2009",
+        "st336-2007",
+        "st2029-2009",
+        "iso646-1991",
+        "xml-names-20060816"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -7704,6 +7939,19 @@
   {
     "docId": "st2085-2015",
     "docLabel": "ST 2085:2015",
+    "docTitle": "Mastering Display Color Volume Metadata Supporting High Luminance and Wide Color Gamut Images",
+    "docType": "Standard",
+    "group": "smpte-tc-10e",
+    "href": "https://doi.org/10.5594/SMPTE.ST2086.2018",
+    "publicationDate": "2018-04-28T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "st2086-2018",
+    "docLabel": "ST 2086:2018",
     "docTitle": "Y′D′ - D′ - Color-Difference Computations for High Dynamic Range X′Y′Z′ Signals",
     "docType": "Standard",
     "group": "smpte-tc-10e",
@@ -7736,6 +7984,35 @@
     "href": "https://doi.org/10.5594/SMPTE.ST2094-10.2016",
     "publicationDate": "2016-06-13T07:00:00.000Z",
     "publisher": "SMPTE",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "st2094-10-2021"
+      ],
+      "supersededDate": "2021-04-09T07:00:00.000Z"
+    }
+  },
+  {
+    "docId": "st2094-10-2021",
+    "docLabel": "ST 2094-10:2021",
+    "docTitle": "Dynamic Metadata for Color Volume Transform — Application #1",
+    "docType": "Standard",
+    "group": "smpte-tc-10e",
+    "href": "https://doi.org/10.5594/SMPTE.ST2094-10.2021",
+    "publicationDate": "2021-04-09T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "rp431-2-2011",
+        "eg432-1-2010",
+        "st2086-2018"
+      ],
+      "normative": [
+        "st2084-2014",
+        "st2094-1-2016"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -7885,6 +8162,27 @@
     "href": "https://doi.org/10.5594/SMPTE.ST2114.2017",
     "publicationDate": "2017-08-16T07:00:00.000Z",
     "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "st2123-2021-01",
+    "docLabel": "ST 2123:2021-1",
+    "docTitle": "SMPTE Metadata Registers",
+    "docType": "Standard",
+    "group": "smpte-tc-30mr",
+    "href": "https://doi.org/10.5594/SMPTE.ST2123.2021-01",
+    "publicationDate": "2021-01-27T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "st335-2012",
+        "st395-2014",
+        "st400-2012",
+        "st2003-2012"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -8321,6 +8619,26 @@
     "href": "https://doi.org/10.5594/SMPTE.ST335.2012",
     "publicationDate": "2012-01-13T07:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "st330m-2004",
+        "st395-2003",
+        "st400-2004",
+        "iso646-1991",
+        "iso11179-1-2004",
+        "unicode-5-1-0",
+        "xml-20081126",
+        "mw-coldict-11-200307"
+      ],
+      "normative": [
+        "st298-2009",
+        "st336-2007",
+        "st2003-2012",
+        "st2029-2009",
+        "iso8825-1-2008",
+        "xml-names-20060816"
+      ]
+    },
     "status": {
       "active": true,
       "amended": true,
@@ -8338,6 +8656,25 @@
     "href": "https://doi.org/10.5594/SMPTE.ST335.2012Am1.2019",
     "publicationDate": "2019-01-11T07:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "st330m-2004",
+        "st395-2003",
+        "st400-2004",
+        "iso646-1991",
+        "iso11179-1-2004",
+        "xml-20081126",
+        "mw-coldict-11-200307"
+      ],
+      "normative": [
+        "st298-2009",
+        "st336-2007",
+        "st2003-2012",
+        "st2029-2009",
+        "iso8825-1-2008",
+        "xml-names-20060816"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -8991,6 +9328,28 @@
     "href": "https://doi.org/10.5594/SMPTE.ST395.2012",
     "publicationDate": "2012-08-01T07:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "st335-2012",
+        "st377-1-2011",
+        "st377-1-2011am1-2012",
+        "st377-1-2011am2-2012",
+        "st2003-2012",
+        "xml-20081126",
+        "iso11179-1-2004",
+        "mw-coldict-11-200307"
+      ],
+      "normative": [
+        "st298-2009",
+        "st336-2007",
+        "st2029-2009",
+        "xml-names-19990114",
+        "rfc2141",
+        "rfc3061",
+        "xmlschema-1-20041028",
+        "xmlschema-2-20041028"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -9029,6 +9388,23 @@
     ],
     "publicationDate": "2012-08-27T07:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "eg2074-2013",
+        "st335-2012",
+        "st395-2003",
+        "st2003-2012",
+        "xml-20081126",
+        "iso11179-1-2004",
+        "mw-coldict-11-200307"
+      ],
+      "normative": [
+        "st298-2009",
+        "st336-2007",
+        "st2029-2009",
+        "xml-names-20060816"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -9352,7 +9728,7 @@
     "relatedDocs": [
       "isocd26428-1"
     ],
-    "repo": "https://github.com/SMPTE/st428-1/issues",
+    "repo": "https://github.com/SMPTE/st428-1",
     "status": {
       "active": true
     },
@@ -9396,7 +9772,7 @@
         "rfc2396"
       ]
     },
-    "repo": "https://github.com/SMPTE/st428-10/issues",
+    "repo": "https://github.com/SMPTE/st428-10",
     "status": {
       "active": true
     },
@@ -9472,7 +9848,7 @@
         "st428-2-2006"
       ]
     },
-    "repo": "https://github.com/SMPTE/st428-11/issues",
+    "repo": "https://github.com/SMPTE/st428-11",
     "status": {
       "active": true,
       "reaffirmDate": "2018-03-15T07:00:00.000Z",
@@ -9500,7 +9876,7 @@
         "st400-2012"
       ]
     },
-    "repo": "https://github.com/SMPTE/st428-12/issues",
+    "repo": "https://github.com/SMPTE/st428-12",
     "status": {
       "active": true,
       "reaffirmDate": "2018-03-15T07:00:00.000Z",
@@ -9537,7 +9913,7 @@
     "relatedDocs": [
       "iso26428-19-2011"
     ],
-    "repo": "https://github.com/SMPTE/st428-19/issues",
+    "repo": "https://github.com/SMPTE/st428-19",
     "status": {
       "active": true,
       "reaffirmDate": "2018-03-15T07:00:00.000Z",
@@ -9573,7 +9949,7 @@
     "relatedDocs": [
       "iso26428-2-2008"
     ],
-    "repo": "https://github.com/SMPTE/st428-2/issues",
+    "repo": "https://github.com/SMPTE/st428-2",
     "status": {
       "active": true,
       "reaffirmDate": "2018-03-15T07:00:00.000Z",
@@ -9608,7 +9984,7 @@
         "st428-2-2006"
       ]
     },
-    "repo": "https://github.com/SMPTE/st428-21/issues",
+    "repo": "https://github.com/SMPTE/st428-21",
     "status": {
       "active": true,
       "reaffirmDate": "2018-03-15T07:00:00.000Z",
@@ -9847,7 +10223,7 @@
     "relatedDocs": [
       "iso26429-10-2009"
     ],
-    "repo": "https://github.com/SMPTE/st429-10/issues",
+    "repo": "https://github.com/SMPTE/st429-10",
     "status": {
       "active": true
     },
@@ -9897,7 +10273,7 @@
         "rfc2396"
       ]
     },
-    "repo": "https://github.com/SMPTE/st429-12/issues",
+    "repo": "https://github.com/SMPTE/st429-12",
     "status": {
       "active": true
     },
@@ -9939,9 +10315,11 @@
       ]
     },
     "status": {
-      "active": true,
+      "active": false,
       "reaffirmDate": "2018-03-15T07:00:00.000Z",
-      "reaffirmed": true
+      "reaffirmed": true,
+      "withdrawn": true,
+      "withdrawnDate": "2021-05-28T07:00:00.000Z"
     }
   },
   {
@@ -9978,7 +10356,7 @@
         "rfc2396"
       ]
     },
-    "repo": "https://github.com/SMPTE/st429-14/issues",
+    "repo": "https://github.com/SMPTE/st429-14",
     "status": {
       "active": true
     },
@@ -10035,7 +10413,7 @@
         "xmlschema-2-20041028"
       ]
     },
-    "repo": "https://github.com/SMPTE/st429-16/issues",
+    "repo": "https://github.com/SMPTE/st429-16",
     "status": {
       "active": true
     },
@@ -10081,7 +10459,7 @@
         "iso10646-1-2000"
       ]
     },
-    "repo": "https://github.com/SMPTE/st429-17/issues",
+    "repo": "https://github.com/SMPTE/st429-17",
     "status": {
       "active": true
     },
@@ -10129,7 +10507,7 @@
         "rfc2396"
       ]
     },
-    "repo": "https://github.com/SMPTE/st429-18/issues",
+    "repo": "https://github.com/SMPTE/st429-18",
     "status": {
       "active": true,
       "reaffirmDate": "2020-06-03T07:00:00.000Z",
@@ -10173,7 +10551,7 @@
         "st430-12-2014am1-2019"
       ]
     },
-    "repo": "https://github.com/SMPTE/st429-19/issues",
+    "repo": "https://github.com/SMPTE/st429-19",
     "status": {
       "active": true
     },
@@ -10324,7 +10702,7 @@
         "rfc4122"
       ]
     },
-    "repo": "https://github.com/SMPTE/st429-2/issues",
+    "repo": "https://github.com/SMPTE/st429-2",
     "status": {
       "active": false,
       "amended": true,
@@ -10579,10 +10957,44 @@
         "rfc4122"
       ]
     },
-    "repo": "https://github.com/SMPTE/st429-2/issues",
+    "repo": "https://github.com/SMPTE/st429-2",
     "status": {
       "active": true,
       "draft": false
+    }
+  },
+  {
+    "docId": "st429-20-20XX",
+    "docLabel": "ST 429-20:20XX",
+    "docTitle": "D-Cinema Packaging — MXF Constraints",
+    "docType": "Standard",
+    "group": "smpte-tc-21dc",
+    "keywords": [
+      "DCinema",
+      "Packaging",
+      "MXF Application"
+    ],
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "st429-6-2006",
+        "st2123-2021-01"
+      ],
+      "normative": [
+        "st377-1-2019"
+      ]
+    },
+    "repo": "https://github.com/SMPTE/st429-20",
+    "status": {
+      "draft": true,
+      "publicCd": true
+    },
+    "workInfo": {
+      "project": [
+        {
+          "projectId": "st429-20-20XX-id"
+        }
+      ]
     }
   },
   {
@@ -10647,7 +11059,7 @@
     "relatedDocs": [
       "iso26429-3-2008"
     ],
-    "repo": "https://github.com/SMPTE/st429-3/issues",
+    "repo": "https://github.com/SMPTE/st429-3",
     "status": {
       "active": true,
       "reaffirmDate": "2018-03-15T07:00:00.000Z",
@@ -10728,7 +11140,7 @@
         "iso15444-1-2016"
       ]
     },
-    "repo": "https://github.com/SMPTE/st429-4/issues",
+    "repo": "https://github.com/SMPTE/st429-4",
     "status": {
       "active": true
     }
@@ -10800,7 +11212,7 @@
         "iso10646-2014"
       ]
     },
-    "repo": "https://github.com/SMPTE/st429-5/issues",
+    "repo": "https://github.com/SMPTE/st429-5",
     "status": {
       "active": true,
       "reaffirmDate": "2019-11-13T08:00:00.000Z",
@@ -10861,7 +11273,7 @@
     "relatedDocs": [
       "iso26429-6-2008"
     ],
-    "repo": "https://github.com/SMPTE/st429-6/issues",
+    "repo": "https://github.com/SMPTE/st429-6",
     "status": {
       "active": true,
       "amended": true,
@@ -10969,7 +11381,7 @@
     "relatedDocs": [
       "iso26429_7_2008"
     ],
-    "repo": "https://github.com/SMPTE/st429-7/issues",
+    "repo": "https://github.com/SMPTE/st429-7",
     "status": {
       "active": true,
       "reaffirmDate": "2012-02-24T08:00:00.000Z",
@@ -11031,7 +11443,7 @@
     "relatedDocs": [
       "iso26429-8-2009"
     ],
-    "repo": "https://github.com/SMPTE/st429-8/issues",
+    "repo": "https://github.com/SMPTE/st429-8",
     "status": {
       "active": true
     },
@@ -11133,7 +11545,7 @@
         "xml-names-20091208"
       ]
     },
-    "repo": "https://github.com/SMPTE/st429-9/issues",
+    "repo": "https://github.com/SMPTE/st429-9",
     "status": {
       "active": true
     },
@@ -11257,7 +11669,7 @@
         "rfc4122"
       ]
     },
-    "repo": "https://github.com/SMPTE/st430-1/issues",
+    "repo": "https://github.com/SMPTE/st430-1",
     "status": {
       "active": true,
       "amended": true,
@@ -11348,7 +11760,7 @@
         "st430-11-2010"
       ]
     },
-    "repo": "https://github.com/SMPTE/st430-10/issues",
+    "repo": "https://github.com/SMPTE/st430-10",
     "status": {
       "active": true
     },
@@ -11392,7 +11804,7 @@
         "st429-7-2006"
       ]
     },
-    "repo": "https://github.com/SMPTE/st430-11/issues",
+    "repo": "https://github.com/SMPTE/st430-11",
     "status": {
       "active": true
     },
@@ -11430,7 +11842,7 @@
         "st429-3-2007"
       ]
     },
-    "repo": "https://github.com/SMPTE/st430-12/issues",
+    "repo": "https://github.com/SMPTE/st430-12",
     "status": {
       "active": true,
       "amended": true,
@@ -11564,7 +11976,7 @@
         "rfc2046"
       ]
     },
-    "repo": "https://github.com/SMPTE/st430-14/issues",
+    "repo": "https://github.com/SMPTE/st430-14",
     "status": {
       "draft": true
     },
@@ -11608,7 +12020,7 @@
         "xlink11-20100506"
       ]
     },
-    "repo": "https://github.com/SMPTE/st430-15/issues",
+    "repo": "https://github.com/SMPTE/st430-15",
     "status": {
       "active": true
     },
@@ -11658,7 +12070,7 @@
         "xmldsig-core-20020212"
       ]
     },
-    "repo": "https://github.com/SMPTE/st430-16/issues",
+    "repo": "https://github.com/SMPTE/st430-16",
     "status": {
       "active": true
     },
@@ -11702,7 +12114,7 @@
         "rfc3268"
       ]
     },
-    "repo": "https://github.com/SMPTE/st430-17/issues",
+    "repo": "https://github.com/SMPTE/st430-17",
     "status": {
       "draft": true
     },
@@ -11787,7 +12199,7 @@
         "x509-199706e"
       ]
     },
-    "repo": "https://github.com/SMPTE/st430-2/issues",
+    "repo": "https://github.com/SMPTE/st430-2",
     "status": {
       "active": true
     },
@@ -11909,7 +12321,7 @@
         "xmldsig-core-20020212"
       ]
     },
-    "repo": "https://github.com/SMPTE/st430-3/issues",
+    "repo": "https://github.com/SMPTE/st430-3",
     "status": {
       "active": true
     },
@@ -11960,7 +12372,7 @@
     "relatedDocs": [
       "iso26430-4-2009"
     ],
-    "repo": "https://github.com/SMPTE/st430-4/issues",
+    "repo": "https://github.com/SMPTE/st430-4",
     "status": {
       "active": true,
       "amended": true,
@@ -12072,7 +12484,7 @@
         "rfc2253"
       ]
     },
-    "repo": "https://github.com/SMPTE/st430-5/issues",
+    "repo": "https://github.com/SMPTE/st430-5",
     "status": {
       "active": true
     },
@@ -12149,7 +12561,7 @@
         "rfc3268"
       ]
     },
-    "repo": "https://github.com/SMPTE/st430-6/issues",
+    "repo": "https://github.com/SMPTE/st430-6",
     "status": {
       "active": true
     },
@@ -12240,7 +12652,7 @@
     "relatedDocs": [
       "iso26430-9-2009"
     ],
-    "repo": "https://github.com/SMPTE/st430-9/issues",
+    "repo": "https://github.com/SMPTE/st430-9",
     "status": {
       "active": true,
       "amended": true,
@@ -12334,7 +12746,7 @@
     "relatedDocs": [
       "iso26431-1-2008"
     ],
-    "repo": "https://github.com/SMPTE/st431-1/issues",
+    "repo": "https://github.com/SMPTE/st431-1",
     "status": {
       "active": true,
       "reaffirmDate": "2018-03-15T07:00:00.000Z",
@@ -12611,7 +13023,7 @@
     "docLabel": "Unicode 13.0.0 Annex #9",
     "docTitle": "UNICODE BIDIRECTIONAL ALGORITHM",
     "docType": "Specification",
-    "href": "hhttps://www.unicode.org/reports/tr9/tr9-42.html",
+    "href": "https://www.unicode.org/reports/tr9/tr9-42.html",
     "publicationDate": "2020-02-12T07:00:00.000Z",
     "publisher": "Unicode Consortium",
     "status": {
@@ -12628,6 +13040,34 @@
     "publisher": "UNSD",
     "status": {
       "active": true
+    }
+  },
+  {
+    "docId": "unicode-13-0-0",
+    "docLabel": "Unicode 13.0.0",
+    "docTitle": "The Unicode Standard",
+    "docType": "Standard",
+    "href": "http://www.unicode.org/versions/Unicode13.0.0/",
+    "publicationDate": "2010-03-10T07:00:00.000Z",
+    "publisher": "Unicode Consortium",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "unicode-5-1-0",
+    "docLabel": "Unicode 5.1.0",
+    "docTitle": "The Unicode Standard",
+    "docType": "Standard",
+    "href": "http://www.unicode.org/versions/Unicode5.1.0/",
+    "publicationDate": "2008-04-04T07:00:00.000Z",
+    "publisher": "Unicode Consortium",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "unicode-13-0-0"
+      ]
     }
   },
   {
@@ -12776,6 +13216,22 @@
     "publisher": "W3C",
     "status": {
       "active": true
+    }
+  },
+  {
+    "docId": "xml-names-19990114",
+    "docLabel": "NS XML",
+    "docTitle": "Namespaces in XML 1.0 (Second Edition)",
+    "docType": "Recommendation",
+    "href": "https://www.w3.org/TR/1999/REC-xml-names-19990114/",
+    "publicationDate": "1999-01-14T08:00:00.000Z",
+    "publisher": "W3C",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "xml-names-20060816"
+      ]
     }
   },
   {

@@ -51,6 +51,56 @@
                         "type": "string",
                         "format": "uri"
                     },
+                    "projectMilestone": {
+                        "type": "array",
+                        "additionalItems": true,
+                        "items": {
+                            "type": "object",
+                            "additionalProperties": false,
+                            "required": [
+                              "milestoneAct"
+                            ],    
+                            "properties": {
+                                "miledateEnd": {
+                                    "type": "string"
+                                },
+                                "miledateStart": {
+                                    "type": "string"
+                                },
+                                "milestoneAct": {
+                                    "type": "string",
+                                    "enum": [
+                                        "Awaiting ST Objection Disposition Vote (5%)",
+                                        "Waiting for Group Assignment (15%)",
+                                        "WG/DG working on WD (20%)",
+                                        "WD (22.5%)",
+                                        "CD (25%)",
+                                        "Pre-FCD Review (30%)",
+                                        "Pre-RDD Review (30%)",
+                                        "CD Waiting for FCD Ballot (40%)",
+                                        "CD Waiting for RDD Ballot (40%)",
+                                        "CD Waiting for Submission to SVP (40%)",
+                                        "PCD (45%)",
+                                        "FCD Ballot (50%)",
+                                        "RDD Ballot (50%)",
+                                        "FCD Ballot Comment Resolution (60%)",
+                                        "RDD Ballot Comment Resolution (60%)",
+                                        "FCD (65%)",
+                                        "Pre-DP Review (70%)",
+                                        "RDD (75%)",
+                                        "DP Ballot (80%)",
+                                        "SVP Review",
+                                        "DP (85%)",
+                                        "ST Audit (90%)",
+                                        "Document in HQ (95%)",
+                                        "Published (100%)",
+                                        "Uploaded to TC Ref Docs",
+                                        "Archive"
+                                    ]
+                                }
+                            }
+                        }
+                    },
                     "projectStatus": {
                         "type": "string",
                         "enum": [ 

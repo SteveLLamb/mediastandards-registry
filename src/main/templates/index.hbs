@@ -51,7 +51,7 @@
                   <ul class="list-group list-group-flush">
                 {{#status/supersededBy}}
                     <li class="list-group-item">
-                      <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}}
+                      <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}} {{#with (docProjLookup ../../docProjs this)}}{{#ifnoteq projectStatus "Complete"}}<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#F6BE00" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg>{{/ifnoteq}}{{/with}}
                     </li> 
                 {{/status/supersededBy}}
                   </ul>
@@ -60,6 +60,9 @@
               {{#status/draft}}
                 <span class="label badge badge-warning">[ DRAFT ]</span><br> 
               {{/status/draft}}
+              {{#status/publicCd}}
+                <span class="label badge badge-success">[ PUBLIC CD ]</span><br>  
+              {{/status/publicCd}}
               {{#status/active}}
                 <span class="label badge badge-success">[ ACTIVE ]</span><br>  
               {{/status/active}}
@@ -72,7 +75,7 @@
                   <ul class="list-group list-group-flush">
                 {{#status/amendedBy}}
                     <li class="list-group-item">
-                      <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}}
+                      <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}} {{#with (docProjLookup ../../docProjs this)}}{{#ifnoteq projectStatus "Complete"}}<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#F6BE00" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg>{{/ifnoteq}}{{/with}}
                     </li>
                 {{/status/amendedBy}}
                 </ul>
@@ -119,10 +122,6 @@
                   {{/if}}
                   </div>
                   <div>
-                    {{#if publicationDate}}
-                    <span class="font-weight-bold small">Publication Date:</span> {{publicationDate}}
-                    <br>
-                    {{/if}}
                     {{#if status/withdrawnDate}}
                     <span class="font-weight-bold small">Withdrawn Date:</span> {{status/withdrawnDate}}
                     <br>
@@ -141,6 +140,10 @@
                     {{/if}}
                     {{#if status/amendedDate}}
                     <span class="font-weight-bold small">Amended Date:</span> {{status/amendedDate}}
+                    <br>
+                    {{/if}}
+                    {{#if publicationDate}}
+                    <span class="font-weight-bold small">Publication Date:</span> {{publicationDate}}
                     <br>
                     {{/if}}
                     {{#if repo}}
@@ -178,6 +181,11 @@
                           <span class="font-weight-bold small">Work Status: </span>
                           {{projectStatus}}
                           {{/if}}
+                          {{#if projApprovedDate}}
+                          <br>
+                          <span class="font-weight-bold small">Project Approved: </span>
+                          {{projApprovedDate}}
+                          {{/if}}
                           {{#if assignedTC}}
                           {{#with (groupIdLookup ../../../../data_groups assignedTC)}}
                           <br>
@@ -210,6 +218,23 @@
                             <br><span class="small"><a class="{{../../../../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}}
                             {{/updateDependency}}
                           </div>
+                          {{/if}}
+                          {{#if projectMilestone}}
+                          <br>
+                          <span class="font-weight-bold small">Milestone(s):</span>
+                          {{#projectMilestone}}
+                          <div class="p-2{{#if @first}} border-top{{/if}}{{#unless @last}} border-bottom{{/unless}}">
+                            {{milestoneAct}}
+                            {{#if miledateStart}}
+                              <br>
+                              <span class="font-weight-bold small">Start Date:</span> {{miledateStart}}
+                            {{/if}}
+                            {{#if miledateEnd}}
+                              <br>
+                              <span class="font-weight-bold small">End Date:</span> {{miledateEnd}}
+                            {{/if}}
+                          </div>
+                          {{/projectMilestone}}
                           {{/if}}
                           {{/with}}
                           {{/if}}
@@ -277,7 +302,7 @@
                       <ul class="list-group list-group-flush">
                       {{#relatedDocs}}
                         <li class="list-group-item">
-                          <span class="small"><a class="{{../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}}
+                          <span class="small"><a class="{{../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}} {{#with (docProjLookup ../../docProjs this)}}{{#ifnoteq projectStatus "Complete"}}<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#F6BE00" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg>{{/ifnoteq}}{{/with}}
                         </li>
                       {{/relatedDocs}}
                       </ul>
@@ -292,7 +317,7 @@
               <ul class="list-group list-group-flush">
               {{#references/normative}}
                 <li class="list-group-item">
-                  <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}}
+                  <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}} {{#with (docProjLookup ../../docProjs this)}}{{#ifnoteq projectStatus "Complete"}}<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#F6BE00" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg>{{/ifnoteq}}{{/with}}
                 </li>
               {{/references/normative}}
               </ul>
@@ -305,7 +330,7 @@
               <ul class="list-group list-group-flush">
               {{#references/bibliographic}}
                 <li class="list-group-item">
-                  <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}}
+                  <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}} {{#with (docProjLookup ../../docProjs this)}}{{#ifnoteq projectStatus "Complete"}}<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#F6BE00" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg>{{/ifnoteq}}{{/with}}
                 </li>
               {{/references/bibliographic}}
               </ul>

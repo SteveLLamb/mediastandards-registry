@@ -208,6 +208,9 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
 
     if(status.draft){
       cS = "Draft"
+      if (status.publicCd){
+        cS = cS.concat(", Public CD");
+      }
     }
     else if(status.unknown){
       cS = "Unknown"

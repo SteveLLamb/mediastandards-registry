@@ -289,6 +289,13 @@ $(document).ready(function() {
 
               },
               {
+                label: 'Public CD',
+                value: function(rowData, rowIdx){
+                  return rowData[4].includes('[ PUBLIC CD ]');
+                }
+
+              },
+              {
                 label: 'Reaffirmed',
                 value: function(rowData, rowIdx){
                   return rowData[4].includes('[ REAFFIRMED ]');
