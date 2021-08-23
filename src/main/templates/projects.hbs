@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{>header}}
+    <!-- Main content starts - do not edit above this line -->
+    <table id="sorttableProjs" class="table table-small table-hover w-auto display">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col">Project</th>
+          <th scope="col">Document</th>
+          <th scope="col" class="col-1">Work Type</th>
+          <th scope="col" class="cleanFilter"></th>
+          <th scope="col">Approved</th>
+          <th scope="col" class="cleanFilter"></th>
+          <th scope="col">Status</th>
+          <th scope="col">Group</th>
+          <th scope="col" class="cleanFilter"></th>
+          <th scope="col">Affects</th>
+          <th scope="col"></th>
+          <th scope="col" class="col-3">Milestone</th>
+          <th scope="col">Dependency</th>
+          <th scope="col">Notes</th>
+        </tr>
+      </thead>
+      <tbody id="searchTable">
+        {{#dataProjects}}
+        <tr id="{{../idType}}-{{projectId}}">
+          <td class="doclabel">
+            <a class="anchor" id="{{projectId}}" href="#{{projectId}}"></a><code>{{projectId}}</code>
+            {{#if repo}}
+            <br>[<a href="{{repo}}" target="_blank">Repo</a>]
+            {{/if}}
+          </td>
+          <td>
+            {{#if docId}}
+             <a class="document-link clear-filter" href="../{{../htmlLink}}#{{docId}}">{{getLabel docId}}</a> [{{getStatus docId}}] {{{getstatusButton docId "12"}}}
+            {{/if}}
+          </td>
+          <td>
+            {{#if projectLink}}<a href="{{projectLink}}" target="_blank">{{/if}}{{workType}}{{#if projectLink}}</a>{{/if}}
+          </td>
+          <td>
+            {{workType}}
+          </td>
+          <td>
+            {{#if projApproved}}<span class="label badge badge-success">Yes</span>{{/if}}
+            {{#if projApprovedDate}}
+            <br><span class="small">[Approved Date: {{projApprovedDate}}]</span>
+            {{/if}}
+            {{#unless projApproved}}<span class="label badge badge-warning">Pending</span>{{/unless}}
+          </td>
+          <td>
+            {{#if projApproved}}Yes{{/if}}
+            {{#unless projApproved}}Pending{{/unless}}
+          </td>
+          <td>
+            {{projectStatus}}
+          </td>
+          <td>
+            {{#if assignedGroup}}
+            {{#with (groupIdLookup ../dataGroups assignedGroup)}}
+            {{#if groupLink}}<a href="{{groupLink}}" target="_blank">{{/if}}{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../dataGroups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}
+            {{/with}}
+            {{/if}}
+          </td>
+          <td>
+            {{#if assignedGroup}}
+            {{#with (groupIdLookup ../dataGroups assignedGroup)}}
+            {{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../dataGroups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}
+            {{/with}}
+            {{/if}}
+          </td>
+          <td>
+            {{#if docAffected}}
+             <div class="col">
+                <ul class="list-group list-group-flush">
+                {{#docAffected}}
+                  <li class="list-group-item">
+                    <span class="small"><a class="document-link clear-filter" href="../{{../../htmlLink}}#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}}
+                  </li>
+                {{/docAffected}}
+                </ul>
+              </div>
+            {{/if}}
+          </td>
+          <td>
+            {{#if projectMilestone}}
+            {{#projectMilestone}}
+            {{#if current}}
+              {{milestoneAct}}
+              {{#if miledateStart}}
+                <br>
+                <span class="font-weight-bold small">Start Date:</span> {{miledateStart}}
+              {{/if}}
+              {{#if miledateEnd}}
+                <br>
+                <span class="font-weight-bold small">End Date:</span> {{miledateEnd}}
+              {{/if}}
+            {{/if}}
+            {{/projectMilestone}}
+            {{/if}}
+          </td>
+          <td>
+            {{#if projectMilestone}}
+            {{#projectMilestone}}
+            <div class="p-2{{#unless @last}} border-bottom{{/unless}}">
+              {{milestoneAct}} {{#if current}}<span class="label badge badge-info float-right">Current</span>{{/if}}
+              {{#if miledateStart}}
+                <br>
+                <span class="font-weight-bold small">Start Date:</span> {{miledateStart}}
+              {{/if}}
+              {{#if miledateEnd}}
+                <br>
+                <span class="font-weight-bold small">End Date:</span> {{miledateEnd}}
+              {{/if}}
+            </div>
+            {{/projectMilestone}}
+            {{/if}}
+          </td>
+          <td>
+            {{#if updateDependency}}
+             <div class="col">
+                <ul class="list-group list-group-flush">
+                {{#updateDependency}}
+                  <li class="list-group-item">
+                    <span class="small"><a class="document-link clear-filter" href="../{{../../htmlLink}}#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}}
+                  </li>
+                {{/updateDependency}}
+                </ul>
+              </div>
+            {{/if}}
+          </td>
+          <td>
+            {{workNotes}}
+          </td>
+        </tr>
+        {{/dataProjects}}
+      </tbody>
+    </table>
+    <!-- Main content ends - do not edit below this line -->
+{{>footer}}
+
+</html>

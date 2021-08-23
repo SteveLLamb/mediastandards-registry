@@ -2,37 +2,43 @@
 <html lang="en">
   {{>header}}
     <!-- Main content starts - do not edit above this line -->
-    <table id="sorttable" class="table table-small table-hover w-auto display">
+    <table id="sorttableDocs" class="table table-small table-hover w-auto display">
       <thead class="thead-light">
         <tr>
           <th scope="col" class="col-1">Label</th>
           <th scope="col" class="col-1">Publisher</th>
+          <th scope="col" class="col-1">Group</th>
+          <th scope="col" class="cleanFilter"></th>
           <th scope="col" class="col-1">Doc Type</th>
           <th scope="col" class="col-1">Keywords</th>
-          <th scope="col">Status</th>
+          <th scope="col" class="col-1">Status</th>
           <th scope="col" class="col-3">Title/Details</th>
           <th scope="col">Normative Reference(s)</th>
           <th scope="col">Bibliographic Reference(s)</th>
         </tr>
       </thead>
       <tbody id="searchTable">
-        {{#data}}
+        {{#dataDocuments}}
         <tr id="{{../idType}}-{{docId}}">
           <td class="doclabel">
             <a class="anchor" id="{{docId}}" href="#{{docId}}"></a><code>{{docLabel}}</code>
           </td>
           <td class="publisher">
-            {{publisher}}{{#if group}} [{{#with (groupIdLookup ../data_groups group)}}{{groupName}} {{groupDesc}}{{/with}}]{{/if}}
+            {{publisher}}
+          </td>
+          <td class="group">
+            {{#if group}}{{#with (groupIdLookup ../dataGroups group)}}{{#if groupLink}}<a href="{{groupLink}}" target="_blank">{{/if}}{{groupOrg}} {{groupName}} {{groupDesc}}{{#if groupLink}}</a>{{/if}}{{/with}}{{/if}}
+          </td>
+          <td class="group">
+            {{#if group}}{{#with (groupIdLookup ../dataGroups group)}}{{groupOrg}} {{groupName}} {{groupDesc}}{{/with}}{{/if}}
           </td>
           <td>
             {{docType}}
           </td>
           <td>
-            <div class="container-fluid">
-              {{#keywords}}
-              <span class="small"><code>[{{this}}]</code></span>{{#unless @last}}<br>{{/unless}}
-              {{/keywords}}
-            </div>
+            {{#keywords}}
+            <span class="small"><code>{{this}}</code></span>{{#unless @last}}<br> {{/unless}}
+            {{/keywords}}
           </td>
           <td>
             <div class="container-fluid">
@@ -173,13 +179,13 @@
                         <div class="p-2{{#unless @last}} border-bottom{{/unless}}"> 
 
                           {{#if projectId}}
-                          {{#with (projectIdLookup ../../../data_projects projectId)}}
+                          {{#with (projectIdLookup ../../../dataProjects projectId)}}
 
                           <span class="font-weight-bold small">Work Type: </span>{{#if projectLink}}<a href="{{projectLink}}" target="_blank">{{/if}}{{workType}}{{#if projectLink}}</a>{{/if}} {{#if projApproved}}<span class="label badge badge-success float-right">Project Approved</span>{{/if}}
                           {{#if projectStatus}}
                           <br>
                           <span class="font-weight-bold small">Work Status: </span>
-                          {{projectStatus}}
+                          <a class="project-link clear-filter" href="projects/{{../../../../htmlLink}}#{{projectId}}">{{projectStatus}}</a>
                           {{/if}}
                           {{#if projApprovedDate}}
                           <br>
@@ -187,15 +193,15 @@
                           {{projApprovedDate}}
                           {{/if}}
                           {{#if assignedTC}}
-                          {{#with (groupIdLookup ../../../../data_groups assignedTC)}}
+                          {{#with (groupIdLookup ../../../../dataGroups assignedTC)}}
                           <br>
                           <span class="font-weight-bold small">Assigned TC: </span>{{#if groupLink}}<a href="{{groupLink}}" target="_blank">{{/if}}{{groupOrg}} {{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}
                           {{/with}}
                           {{/if}}
                           {{#if assignedGroup}}
-                          {{#with (groupIdLookup ../../../../data_groups assignedGroup)}}
+                          {{#with (groupIdLookup ../../../../dataGroups assignedGroup)}}
                           <br>
-                          <span class="font-weight-bold small">Assigned Group: </span>{{#if groupLink}}<a href="{{groupLink}}" target="_blank">{{/if}}{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../../../../data_groups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}
+                          <span class="font-weight-bold small">Assigned Group: </span>{{#if groupLink}}<a href="{{groupLink}}" target="_blank">{{/if}}{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../../../../dataGroups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}
                           {{/with}}
                           {{/if}}
                           {{#if workNotes}}
@@ -224,7 +230,7 @@
                           <span class="font-weight-bold small">Milestone(s):</span>
                           {{#projectMilestone}}
                           <div class="p-2{{#if @first}} border-top{{/if}}{{#unless @last}} border-bottom{{/unless}}">
-                            {{milestoneAct}}
+                            {{milestoneAct}} {{#if current}}<span class="label badge badge-info float-right">Current</span>{{/if}}
                             {{#if miledateStart}}
                               <br>
                               <span class="font-weight-bold small">Start Date:</span> {{miledateStart}}
@@ -255,9 +261,9 @@
                           <span class="font-weight-bold small">Review Needed:</span> <span class="label badge badge-danger">Yes</span>
                           {{/if}}
                           {{#if assignedGroup}}
-                          {{#with (groupIdLookup ../../../data_groups assignedGroup)}}
+                          {{#with (groupIdLookup ../../../dataGroups assignedGroup)}}
                           <br>
-                          <span class="font-weight-bold small">Assigned Group: </span>{{#if groupLink}}<a href="{{groupLink}}" target="_blank">{{/if}}{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../../../data_groups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}
+                          <span class="font-weight-bold small">Assigned Group: </span>{{#if groupLink}}<a href="{{groupLink}}" target="_blank">{{/if}}{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../../../dataGroups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}
                           {{/with}}
                           {{/if}}
                           {{#if reviewDate}}
@@ -338,7 +344,7 @@
             {{/if}}
           </td>
         </tr>
-        {{/data}}
+        {{/dataDocuments}}
       </tbody>
     </table>
     <!-- Main content ends - do not edit below this line -->

@@ -6,14 +6,13 @@ This work is licensed under the Creative Commons Attribution 4.0 International L
 You should have received a copy of the license along with this work.  If not, see <https://creativecommons.org/licenses/by/4.0/>.
 */
 
-/* pass the option --nopdf to disable PDF creation */
+/* pass the option  */
 
 const path = require('path');
 const fs = require('fs').promises;
 const { promisify } = require('util');
 const execFile = promisify(require('child_process').execFile);
 const hb = require('handlebars');
-const puppeteer = require('puppeteer');
 const ajv = require('ajv');
 
 const REGISTRIES_REPO_PATH = "src/main";
@@ -37,6 +36,17 @@ const registries = [
       "groups",
       "projects"
     ]
+  },
+  {
+    "listType": "projects",
+    "templateType": "projects",
+    "templateName": "projects",
+    "idType": "project",
+    "listTitle": "Projects",
+    "subRegistry": [
+      "groups",
+      "documents"
+    ]
   }
 ]
 
@@ -48,11 +58,18 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
   var DATA_PATH = path.join(REGISTRIES_REPO_PATH, "data/" + listType + ".json");
   var DATA_SCHEMA_PATH = path.join(REGISTRIES_REPO_PATH, "schemas/" + listType + ".schema.json");
   var TEMPLATE_PATH = "src/main/templates/" + templateName + ".hbs";
-  var PAGE_SITE_PATH = templateName + ".html";
-  var PDF_SITE_PATH = templateType + ".pdf";
+  var PAGE_SITE_PATH
+  if (templateName == "index") {
+      PAGE_SITE_PATH = templateName + ".html";
+    }
+    else {
+      PAGE_SITE_PATH = templateName + "/index.html";
+    }
+
   var CSV_SITE_PATH = templateType + ".csv";
   const inputFileName = DATA_PATH;
   const outputFileName = BUILD_PATH + "/" + CSV_SITE_PATH;
+
 
   /* load header and footer for templates */
 
@@ -127,13 +144,13 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
     }
 
     if (validateRegistries[i].type == "documents") {
-      registry = validateRegistries[i].registry
+      registryDocument = validateRegistries[i].registry
     }
     else if (validateRegistries[i].type == "groups") {
-      groupRegistry = validateRegistries[i].registry
+      registryGroup = validateRegistries[i].registry
     }
     else if (validateRegistries[i].type == "projects") {
-      projectRegistry = validateRegistries[i].registry
+      registryProject = validateRegistries[i].registry
     }
     
     console.log(`${validateRegistries[i].DATA_PATH} schema validation started`)
@@ -155,11 +172,11 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
 
   /* load the SMPTE abreviated docType */
 
-  for (let i in registry) {
+  for (let i in registryDocument) {
 
-    if (registry[i]["publisher"] == "SMPTE"){
+    if (registryDocument[i]["publisher"] == "SMPTE"){
 
-      let docType = registry[i]["docType"];
+      let docType = registryDocument[i]["docType"];
       var dTA = ""
 
       if(docType == "Administrative Guideline"){
@@ -195,15 +212,15 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
       else if(docType == 'Study Group Report'){
         dTA = "SGR"
       }
-      registry[i].docTypeAbr = dTA;
+      registryDocument[i].docTypeAbr = dTA;
     }
   }
 
   /* load the doc Current Statuses and Labels */
 
-  for (let i in registry) {
+  for (let i in registryDocument) {
 
-    let status = registry[i]["status"];
+    let status = registryDocument[i]["status"];
     var cS = ""
 
     if(status.draft){
@@ -244,11 +261,11 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
       cS = cS.concat("*");
     }
 
-    registry[i].currentStatus = cS;
+    registryDocument[i].currentStatus = cS;
   }
 
   const docStatuses = {}
-  registry.forEach(item => { docStatuses[item.docId] = item.currentStatus} );
+  registryDocument.forEach(item => { docStatuses[item.docId] = item.currentStatus} );
 
   hb.registerHelper("getStatus", function(docId) {
     return docStatuses[docId];
@@ -274,7 +291,7 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
   });
 
   const docLabels = {}
-  registry.forEach(item => { docLabels[item.docId] = (item.docLabel)} );
+  registryDocument.forEach(item => { docLabels[item.docId] = (item.docLabel)} );
 
   hb.registerHelper("getLabel", function(docId) {
     return docLabels[docId];
@@ -283,23 +300,59 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
   /* lookup if any projects exist for current document */
 
   const docProjs = []
-  for (let i in projectRegistry) {
+  for (let i in registryProject) {
 
     
-    let projs = projectRegistry[i]["docAffected"]
+    let projs = registryProject[i]["docAffected"]
 
     for (let p in projs) {
 
       var docProj = {}
 
       docProj["docId"] = projs[p]
-      docProj["workType"] = projectRegistry[i]["workType"]
-      docProj["projectStatus"] = projectRegistry[i]["projectStatus"]
-      docProj["newDoc"] = projectRegistry[i]["docId"]
+      docProj["workType"] = registryProject[i]["workType"]
+      docProj["projectStatus"] = registryProject[i]["projectStatus"]
+      docProj["newDoc"] = registryProject[i]["docId"]
       docProjs.push(docProj)
 
     }
   }
+
+  /* lookup if Repo exists for any project */
+
+  for (let i in registryProject) {
+    var repo
+    
+    let doc = registryProject[i]["docId"]
+    if (typeof doc !== "undefined") {
+      for (let d in registryDocument) {
+        if (registryDocument[d]["docId"] === doc) {
+          if (typeof registryDocument[d]["repo"] !== "undefined") {
+            r = registryDocument[d]["repo"]
+            registryProject[i].repo = r
+          }
+        }
+      }
+    }
+
+    let docAff = registryProject[i]["docAffected"]
+    for (let dA in docAff) {
+      let doc = docAff[dA]
+      if (typeof doc !== "undefined") {
+        for (let d in registryDocument) {
+          if (registryDocument[d]["docId"] === doc) {
+            if (typeof registryDocument[d]["repo"] !== "undefined") {
+              r = registryDocument[d]["repo"]
+              registryProject[i].repo = r
+            }
+          }
+        }
+      }
+    }  
+
+  }
+
+  /* external json lookup helpers */
 
   hb.registerHelper('docProjLookup', function(collection, id) {
       var collectionLength = collection.length;
@@ -311,8 +364,6 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
       }
       return null;
   });
-
-  /* external json lookup helpers */
 
   hb.registerHelper('groupIdLookup', function(collection, id) {
       var collectionLength = collection.length;
@@ -338,10 +389,10 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
 
   /* is the registry sorted */
     
-  for(let i = 1; i < registry.length; i++) {
-    if (registry[i-1].docID >= registry[i].docID) {
-      throw "Registry key " + registry[i-1].docID + " is " +
-        ((registry[i-1].docID === registry[i].docID) ? "duplicated" : "not sorted");
+  for(let i = 1; i < registryDocument.length; i++) {
+    if (registryDocument[i-1].docID >= registryDocument[i].docID) {
+      throw "Registry key " + registryDocument[i-1].docID + " is " +
+        ((registryDocument[i-1].docID === registryDocument[i].docID) ? "duplicated" : "not sorted");
     }
   }
   
@@ -358,21 +409,33 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
   /* create build directory */
   
   await fs.mkdir(BUILD_PATH, { recursive: true });
+    if (templateName != "index") { 
+      await fs.mkdir(BUILD_PATH + "/" + templateName, { recursive: true });
+    }
+
+  /* determine if build on GH to remove "index.html" from internal link */
+
+  let htmlLink = "index.html"
+
+  if ('GH_PAGES_BUILD' in process.env) {
+    htmlLink = ""
+  }
   
   /* apply template */
   
   var html = template({
-    "data" : registry,
-    "data_groups" : groupRegistry,
-    "data_projects" : projectRegistry,
+    "dataDocuments" : registryDocument,
+    "dataGroups" : registryGroup,
+    "dataProjects" : registryProject,
+    "htmlLink": htmlLink,
     "docProjs": docProjs,
     "date" :  new Date(),
-    "pdf_path": PDF_SITE_PATH,
     "csv_path": CSV_SITE_PATH,
     "site_version": site_version,
     "listType": listType,
     "idType": idType,
-    "listTitle": listTitle
+    "listTitle": listTitle,
+    "templateName": templateName
   });
   
   /* write HTML file */
@@ -385,9 +448,6 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
     f => fs.copyFile(path.join(SITE_PATH, f), path.join(BUILD_PATH, f))
   ))
   
-  /* write pdf */
-  
-  if (process.argv.slice(2).includes("--nopdf")) return;
   
   /* set the CHROMEPATH environment variable to provide your own Chrome executable */
   
@@ -395,16 +455,6 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
   
   if (process.env.CHROMEPATH) {
     pptr_options.executablePath = process.env.CHROMEPATH;
-  }
-  
-  try {
-    var browser = await puppeteer.launch(pptr_options);
-    var page = await browser.newPage();
-    await page.setContent(html);
-    await page.pdf({ path: path.join(BUILD_PATH, PDF_SITE_PATH).toString()});
-    await browser.close();
-  } catch (e) {
-    console.warn(e);
   }
 
   async function parseJSONFile (fileName) {

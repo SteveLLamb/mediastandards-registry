@@ -13,23 +13,23 @@ $(document).ready(function(){
 
 $(document).on('click', '.clear-filter', function(){       
 
-  var table = $('#sorttable').DataTable();
+  var table = $('#sorttableDocs').DataTable();
   table
    .search( '' )
    .columns().search( '' )
    .draw();
 
-  $('#sorttable').DataTable().searchPanes.rebuildPane();
-  $('#sorttable').DataTable().order([0, 'asc']).draw();
+  $('#sorttableDocs').DataTable().searchPanes.rebuildPane();
+  $('#sorttableDocs').DataTable().order([0, 'asc']).draw();
 
 });
 
-/* DataTable options for sort headers and filtering */
+/* DataTable options for sort headers and filtering - Documents*/
 
 $(document).ready(function() {
 
-    var dt = $('#sorttable').DataTable( {
-      "paging": false,
+    var dt = $('#sorttableProjs').DataTable( {
+      paging: false,
       fixedHeader: true,
       responsive: true,
       searchPanes:{
@@ -39,13 +39,13 @@ $(document).ready(function() {
           select: {
               style: 'multi'
           }
-        },  
-        layout: 'columns-4',
+        }, 
+        layout: 'columns-5',
         viewTotal: true,
-        columns: [1, 2, 3, 4]
+        columns: [8, 3, 5, 6, 10]
       },
-      dom: "<'row'<'col-sm-12'P>>" +
-          "<'row'<'col-sm-6'i><'col-sm-6'f>>" +
+      dom: "<'row'<'col-sm-12 d-print-none'P>>" +
+          "<'row'<'col-sm-6'i><'col-sm-6 d-print-none'f>>" +
           "<'row'<'col-sm-12't>>",
       language: {
           searchPanes: {
@@ -54,215 +54,267 @@ $(document).ready(function() {
       },
       columnDefs:[
         {
+          visible: false,
+          targets:[3],
           searchPanes: {
+            header: "Work Type"
+          }
+        },
+        {
+          visible: false,
+          targets:[5],
+          searchPanes: {
+            header: "Approved"
+          }
+        },
+        {
+          visible: false,
+          targets:[8],
+          searchPanes: {
+            header: "Group"
+          }
+        },
+        {
+          visible: false,
+          searchPanes: {
+            header: "Milestone",
+            dtOpts: {
+              order: [[1, 'desc']]
+            },
             options:[
               {
-                label: 'Accessibility',
+                label: 'Awaiting ST Objection Disposition Vote (5%)',
                 value: function(rowData, rowIdx){
-                    return rowData[3].includes('[Accessibility]');
+                  return rowData[10].includes('Awaiting ST Objection Disposition Vote (5%)');
+                }
+              },
+              {
+                label: 'Waiting for Group Assignment (15%)',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('Waiting for Group Assignment (15%)');
+                }
+              },
+              {
+                label: 'WG/DG working on WD (20%)',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('WG/DG working on WD (20%)');
+                }
+              },
+              {
+                label: 'WD (22.5%)',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('WD (22.5%)');
+                }
+              },
+              {
+                label: 'CD (25%)',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('CD (25%)');
+                }
+              },
+              {
+                label: 'Pre-FCD Review (30%)',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('Pre-FCD Review (30%)');
+                }
+              },
+              {
+                label: 'Pre-RDD Review (30%)',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('Pre-RDD Review (30%)');
+                }
+              },
+              {
+                label: 'CD Waiting for FCD Ballot (40%)',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('CD Waiting for FCD Ballot (40%)');
+                }
+              },
+              {
+                label: 'CD Waiting for RDD Ballot (40%)',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('CD Waiting for RDD Ballot (40%)');
+                }
+              },
+              {
+                label: 'CD Waiting for Submission to SVP (40%)',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('CD Waiting for Submission to SVP (40%)');
+                }
+              },
+              {
+                label: 'PCD (45%)',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('PCD (45%)');
+                }
+              },
+              {
+                label: 'FCD Ballot (50%)',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('FCD Ballot (50%)');
+                }
+              },
+              {
+                label: 'RDD Ballot (50%)',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('RDD Ballot (50%)');
+                }
+              },
+              {
+                label: 'FCD Ballot Comment Resolution (60%)',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('FCD Ballot Comment Resolution (60%)');
+                }
+              },
+              {
+                label: 'RDD Ballot Comment Resolution (60%)',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('RDD Ballot Comment Resolution (60%)');
+                }
+              },
+              {
+                label: 'FCD (65%)',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('FCD (65%)');
+                }
+              },
+              {
+                label: 'Pre-DP Review (70%)',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('Pre-DP Review (70%)');
+                }
+              },
+              {
+                label: 'RDD (75%)',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('RDD (75%)');
+                }
+              },
+              {
+                label: 'DP Ballot (80%)',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('DP Ballot (80%)');
+                }
+              },
+              {
+                label: 'SVP Review',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('SVP Review');
+                }
+              },
+              {
+                label: 'DP (85%)',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('DP (85%)');
+                }
+              },
+              {
+                label: 'ST Audit (90%)',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('ST Audit (90%)');
+                }
+              },
+              {
+                label: 'Document in HQ (95%)',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('Document in HQ (95%)');
+                }
+              },
+              {
+                label: 'Published (100%)',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('Published (100%)');
+                }
+              },
+              {
+                label: 'Uploaded to TC Ref Docs',
+                value: function(rowData, rowIdx){
+                  return rowData[10].includes('Uploaded to TC Ref Docs');
                 }
               },
               {
                 label: 'Archive',
                 value: function(rowData, rowIdx){
-                    return rowData[3].includes('[Archive]');
-                }
-              },
-              {
-                label: 'Audio',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[Audio]');
-                }
-              },
-              {
-                label: 'Aux Data',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[Aux Data]');
-                }
-              },
-              {
-                label: 'Captions',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[Captions]');
-                }
-              },
-              {
-                label: 'Cinema Sound',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[Cinema Sound]');
-                }
-              },
-              {
-                label: 'DCDM',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[DCDM]');
-                } 
-              },
-              {
-                label: 'DCinema',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[DCinema]');
-                }
-              },
-              {
-                label: 'DCP Application',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[DCP Application]');
-                }
-              },
-              {
-                label: 'DCP Core',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[DCP Core]');
-                }
-              },
-              {
-                label: 'Digital Source',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[Digital Source]');
-                }
-              },
-              {
-                label: 'Distribution',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[Distribution]');
-                }
-              },
-              {
-                label: 'Image',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[Image]');
-                }
-              },
-              {
-                label: 'IMF',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[IMF]');
-                }
-              },
-              {
-                label: 'IMF Application',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[IMF Application]');
-                }
-              },
-              {
-                label: 'Immersive Audio',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[Immersive Audio]');
-                }
-              },
-              {
-                label: 'Interop',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[Interop]');
-                }
-              },
-              {
-                label: 'JPEG2000',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[JPEG2000]');
-                }
-              },
-              {
-                label: 'KDM',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[KDM]');
-                }
-              },
-              {
-                label: 'Measurement',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[Measurement]');
-                }
-              },
-              {
-                label: 'Metadata',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[Metadata]');
-                }
-              },
-              {
-                label: 'MXF Application',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[MXF Application]');
-                }
-              },
-              {
-                label: 'MXF Core',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[MXF Core]');
-                }
-              },
-              {
-                label: 'Operations',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[Operations]');
-                }
-              },
-              {
-                label: 'Packaging',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[Packaging]');
-                }
-              },
-              {
-                label: 'Processing',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[Processing]');
-                }
-              },
-              {
-                label: 'Projection',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[Projection]');
-                }
-              },
-              {
-                label: 'Quality',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[Quality]');
-                }
-              },
-              {
-                label: 'SDI',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[SDI]');
-                }
-              },
-              {
-                label: 'Security',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[Security]');
-                }
-              },
-              {
-                label: 'Sign Language',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[Sign Language]');
-                }
-              },
-              {
-                label: 'Sound',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[Sound]');
-                }
-              },
-              {
-                label: 'Subtitles',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[Subtitles]');
-                }
-              },
-              {
-                label: 'XML',
-                value: function(rowData, rowIdx){
-                    return rowData[3].includes('[XML]');
+                  return rowData[10].includes('Archive');
                 }
               }
             ]
           },
+          targets: [10]
+        }
+      ]
+
+    });
+
+    dt.on('select.dt', () => {          
+      dt.searchPanes.rebuildPane(0, true);
+    });
+ 
+    dt.on('deselect.dt', () => {
+      dt.searchPanes.rebuildPane(0, true);
+    });
+});
+
+
+/* DataTable options for sort headers and filtering - Documents*/
+
+$(document).ready(function() {
+
+    var dt = $('#sorttableDocs').DataTable( {
+      paging: false,
+      fixedHeader: true,
+      processing: true,
+      responsive: true,
+      searchPanes:{
+        cascadePanes: true,
+        emptyMessage:"<i><b>No Value</b></i>",
+        dtOpts: {
+          select: {
+              style: 'multi'
+          }
+        },  
+        layout: 'columns-5',
+        viewTotal: true,
+        columns: [1, 3, 4, 5, 6]
+      },
+      dom: "<'row'<'col-sm-12 d-print-none'r>>" +
+          "<'row'<'col-sm-12 d-print-none'P>>" +
+          "<'row'<'col-sm-6'i><'col-sm-6 d-print-none'f>>" +
+          "<'row'<'col-sm-12't>>",
+      language: {
+          processing: "Loading filtering options..."
+      },
+      columnDefs:[
+        {
+          visible: false,
           targets:[3],
+          searchPanes: {
+            header: "Group"
+          }
+        },
+        {
+          searchPanes: {
+            orthogonal: 'sp',
+          },
+          render: function (data, type, row) {
+          
+          if (type === 'sp') {
+            
+            var keywords = [];
+          
+            $( $(data), "i" ).each(function( index ) {
+              var val = $( this ).text();
+              val = val.trim();
+              if (val.length > 0) {
+                keywords.push(val);
+              }
+            });
+           
+           return keywords;
+          }
+          return data;
+          },
+          targets:[5],
         },
         {
           searchPanes: {
@@ -270,70 +322,61 @@ $(document).ready(function() {
               {
                 label: 'Active',
                 value: function(rowData, rowIdx){
-                  return rowData[4].includes('[ ACTIVE ]');
+                  return rowData[6].includes('[ ACTIVE ]');
                 }
-
               },
               {
                 label: 'Amended',
                 value: function(rowData, rowIdx){
-                  return rowData[4].includes('[ AMENDED ]');
+                  return rowData[6].includes('[ AMENDED ]');
                 }
-
               },
               {
                 label: 'Draft',
                 value: function(rowData, rowIdx){
-                  return rowData[4].includes('[ DRAFT ]');
+                  return rowData[6].includes('[ DRAFT ]');
                 }
-
               },
               {
                 label: 'Public CD',
                 value: function(rowData, rowIdx){
-                  return rowData[4].includes('[ PUBLIC CD ]');
+                  return rowData[6].includes('[ PUBLIC CD ]');
                 }
-
               },
               {
                 label: 'Reaffirmed',
                 value: function(rowData, rowIdx){
-                  return rowData[4].includes('[ REAFFIRMED ]');
+                  return rowData[6].includes('[ REAFFIRMED ]');
                 }
-
               },
               {
                 label: 'Stabilized',
                 value: function(rowData, rowIdx){
-                  return rowData[4].includes('[ STABILIZED ]');
+                  return rowData[6].includes('[ STABILIZED ]');
                 }
-
               },
               {
                 label: 'Superseded',
                 value: function(rowData, rowIdx){
-                  return rowData[4].includes('[ SUPERSEDED ]');
+                  return rowData[6].includes('[ SUPERSEDED ]');
                 }
-
               },
               {
                 label: 'Unknown',
                 value: function(rowData, rowIdx){
-                  return rowData[4].includes('[ UNKNOWN ]');
+                  return rowData[6].includes('[ UNKNOWN ]');
                 }
-
               },
               {
                 label: 'Withdrawn',
                 value: function(rowData, rowIdx){
-                  return rowData[4].includes('[ WITHDRAWN ]');
+                  return rowData[6].includes('[ WITHDRAWN ]');
                 }
-
               }
             ]
           },
-          targets: [4]
-        },
+          targets: [6]
+        }
       ]
     });
 

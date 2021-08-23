@@ -16,7 +16,7 @@
                     "publisher",
                     "status"
                 ],
-                "additionalProperties": false,
+                "additionalProperties": true,
                 "properties": {
                     "details": {
                         "type": "string"
@@ -32,10 +32,10 @@
                         "type": "string"
                     },
                     "docNumber": {
-                        "type": "integer"
+                        "type": "string"
                     },
                     "docPart": {
-                        "type": "integer"
+                        "type": "string"
                     },
                     "docTitle": {
                         "type": "string"
