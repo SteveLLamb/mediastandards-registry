@@ -2,6 +2,8 @@ html {
   font-size: 12px;
 }
 
+@media print{@page {size: landscape}}
+
 a.anchor {
     display: block;
     position: relative;
