@@ -533,6 +533,18 @@
     }
   },
   {
+    "docId": "bbc-whp-198-2011",
+    "docLabel": "White Paper WHP 198",
+    "docTitle": "Audio Description Studio Signal",
+    "docType": "White Paper",
+    "href": "http://downloads.bbc.co.uk/rd/pubs/whp/whp-pdf-files/WHP198.pdf",
+    "publicationDate": "2011-01-01T07:00:00.000Z",
+    "publisher": "BBC",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "details": "Cannot locate supersededBy doc",
     "docId": "br1352-1-2002-a1",
     "docLabel": "BR.1352-1: (2002)",
@@ -5006,6 +5018,25 @@
     "publicationDate": "2018-06-25T07:00:00.000Z",
     "publisher": "SMPTE",
     "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "ov2067-0-2021"
+      ]
+    }
+  },
+  {
+    "docId": "ov2067-0-2021",
+    "docLabel": "OV 2067-0:2021",
+    "docNumber": "2067",
+    "docPart": "0",
+    "docTitle": "SMPTE Overview - Interoperable Master Format",
+    "docType": "Overview Document",
+    "group": "smpte-tc-35pm",
+    "href": "https://doi.org/10.5594/SMPTE.OV2067-0.2021",
+    "publicationDate": "2021-08-16T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
       "active": true
     }
   },
@@ -5268,6 +5299,32 @@
           "projectId": "rdd53-20xx-id"
         }
       ]
+    }
+  },
+  {
+    "docId": "rdd56-2021",
+    "docLabel": "RDD 56:2021",
+    "docNumber": "56",
+    "docTitle": "Track File for JPEG 2000 Codestreams with TimeSynchronous Metadata",
+    "docType": "Registered Disclosure Document",
+    "group": "smpte-tc-35pm",
+    "href": "https://doi.org/10.5594/SMPTE.RDD56.2021",
+    "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "st410-2008",
+        "st422-2019",
+        "st429-17-2017",
+        "st2067-2-2020",
+        "st2067-5-2020",
+        "st2067-21-2020",
+        "xml-20040204",
+        "iso10646-2017",
+        "iso15444-1-2016"
+      ]
+    },
+    "status": {
+      "active": true
     }
   },
   {
@@ -9327,6 +9384,64 @@
         "st377-1-2011",
         "st377-1-2011am1-2012",
         "rfc5646"
+      ]
+    },
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "st377-41-2021",
+    "docLabel": "ST 377-41:2021",
+    "docNumber": "377",
+    "docPart": "41",
+    "docTitle": "MXF Multichannel Audio Controlled Vocabulary",
+    "docType": "Standard",
+    "group": "smpte-tc-31fs",
+    "href": "https://doi.org/10.5594/SMPTE.ST377-41.2021",
+    "keywords": [
+      "Audio",
+      "MXF Application"
+    ],
+    "publicationDate": "2021-08-16T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "st377-4-2021",
+        "st2067-8-2013"
+      ]
+    },
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "st377-42-2021",
+    "docLabel": "ST 377-42:2021",
+    "docNumber": "377",
+    "docPart": "42",
+    "docTitle": "MCA Label Controlled Vocabulary",
+    "docType": "Standard",
+    "group": "smpte-tc-31fs",
+    "href": "https://doi.org/10.5594/SMPTE.ST377-42.2021",
+    "keywords": [
+      "Audio",
+      "MXF Application"
+    ],
+    "publicationDate": "2021-08-16T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "st377-41-2021",
+        "st429-2-2020",
+        "st2067-2-2020",
+        "bbc-whp-198-2011"
+      ],
+      "normative": [
+        "st377-4-2021",
+        "st428-12-2013",
+        "st2067-8-2013",
+        "st2098-5-2018"
       ]
     },
     "status": {
