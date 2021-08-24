@@ -274,7 +274,6 @@ $(document).ready(function() {
       paging: false,
       processing: true,
       responsive: true,      
-      fixedHeader: true,
       buttons: [
           {
           extend: 'searchPanes',
