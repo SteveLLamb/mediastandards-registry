@@ -31,7 +31,6 @@ $(document).ready(function() {
     var dt = $('#sorttableProjs').DataTable( {
       paging: false,
       responsive: true,
-      fixedHeader: true,
       buttons: [
         {
           extend: 'searchPanes',
