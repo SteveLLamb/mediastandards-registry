@@ -8,12 +8,12 @@
           <th scope="col">Project</th>
           <th scope="col">Document</th>
           <th scope="col" class="col-1">Work Type</th>
-          <th scope="col" class="cleanFilter"></th>
+          <th scope="col" class="cleanFilter d-none"></th>
           <th scope="col">Approved</th>
-          <th scope="col" class="cleanFilter"></th>
+          <th scope="col" class="cleanFilter d-none"></th>
           <th scope="col">Status</th>
           <th scope="col">Group</th>
-          <th scope="col" class="cleanFilter"></th>
+          <th scope="col" class="cleanFilter d-none"></th>
           <th scope="col">Affects</th>
           <th scope="col"></th>
           <th scope="col" class="col-3">Milestone</th>
@@ -38,7 +38,7 @@
           <td>
             {{#if projectLink}}<a href="{{projectLink}}" target="_blank">{{/if}}{{workType}}{{#if projectLink}}</a>{{/if}}
           </td>
-          <td>
+          <td class="d-none">
             {{workType}}
           </td>
           <td>
@@ -48,7 +48,7 @@
             {{/if}}
             {{#unless projApproved}}<span class="label badge badge-warning">Pending</span>{{/unless}}
           </td>
-          <td>
+          <td class="d-none">
             {{#if projApproved}}Yes{{/if}}
             {{#unless projApproved}}Pending{{/unless}}
           </td>
@@ -62,7 +62,7 @@
             {{/with}}
             {{/if}}
           </td>
-          <td>
+          <td class="d-none">
             {{#if assignedGroup}}
             {{#with (groupIdLookup ../dataGroups assignedGroup)}}
             {{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../dataGroups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}

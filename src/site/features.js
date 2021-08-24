@@ -19,7 +19,7 @@ $(document).on('click', '.clear-filter', function(){
    .columns().search( '' )
    .draw();
 
-  $('#sorttableDocs').DataTable().searchPanes.rebuildPane();
+  $('#sorttableDocs').DataTable().searchPanes.clearSelections();
   $('#sorttableDocs').DataTable().order([0, 'asc']).draw();
 
 });
@@ -30,27 +30,46 @@ $(document).ready(function() {
 
     var dt = $('#sorttableProjs').DataTable( {
       paging: false,
-      fixedHeader: true,
       responsive: true,
-      searchPanes:{
-        cascadePanes: true,
-        emptyMessage:"<i><b>Empty</b></i>",
-        dtOpts: {
-          select: {
-              style: 'multi'
+      fixedHeader: true,
+      buttons: [
+        {
+          extend: 'searchPanes',
+          config:{
+            cascadePanes: true,
+            emptyMessage:"<i><b>Empty</b></i>",
+            dtOpts: {
+              select: {
+                  style: 'multi'
+              }
+            }, 
+            layout: 'columns-5',
+            viewTotal: true,
+            columns: [8, 3, 5, 6, 10]
           }
-        }, 
-        layout: 'columns-5',
-        viewTotal: true,
-        columns: [8, 3, 5, 6, 10]
-      },
-      dom: "<'row'<'col-sm-12 d-print-none'P>>" +
-          "<'row'<'col-sm-6'i><'col-sm-6 d-print-none'f>>" +
-          "<'row'<'col-sm-12't>>",
+        },
+        {
+          text: 'Clear All Filters',
+          action: function ( e, dt, node, config ) {
+            var table = $('#sorttableProjs').DataTable();
+            table
+             .search( '' )
+             .columns().search( '' )
+             .draw();
+
+            $('#sorttableProjs').DataTable().searchPanes.clearSelections();
+            $('#sorttableProjs').DataTable().order([0, 'asc']).draw();
+          }
+        }
+      ],
+      dom: 
+        "<'row'<'col d-print-none d-flex align-items-center'B><'col d-flex justify-content-center align-items-center'i><'col d-print-none d-flex justify-content-end align-items-center'f>>" +
+        "<'row'<'col-sm-12't>>",
       language: {
-          searchPanes: {
-              loadMessage: 'Loading filtering options...'
-          }
+        processing: "Loading filtering options...",
+        searchPanes: {
+          collapse: {0: 'Filter Options', _: 'Filter Options (%d)'}
+        }
       },
       columnDefs:[
         {
@@ -243,18 +262,9 @@ $(document).ready(function() {
           targets: [10]
         }
       ]
-
     });
 
-    dt.on('select.dt', () => {          
-      dt.searchPanes.rebuildPane(0, true);
-    });
- 
-    dt.on('deselect.dt', () => {
-      dt.searchPanes.rebuildPane(0, true);
-    });
 });
-
 
 /* DataTable options for sort headers and filtering - Documents*/
 
@@ -262,27 +272,47 @@ $(document).ready(function() {
 
     var dt = $('#sorttableDocs').DataTable( {
       paging: false,
-      fixedHeader: true,
       processing: true,
-      responsive: true,
-      searchPanes:{
-        cascadePanes: true,
-        emptyMessage:"<i><b>No Value</b></i>",
-        dtOpts: {
-          select: {
-              style: 'multi'
+      responsive: true,      
+      fixedHeader: true,
+      buttons: [
+          {
+          extend: 'searchPanes',
+          config:{
+            cascadePanes: true,
+            emptyMessage:"<i><b>Empty</b></i>",
+            dtOpts: {
+              select: {
+                  style: 'multi'
+              }
+            }, 
+            layout: 'columns-5',
+            viewTotal: true,
+            columns: [1, 3, 4, 5, 6]
           }
-        },  
-        layout: 'columns-5',
-        viewTotal: true,
-        columns: [1, 3, 4, 5, 6]
-      },
-      dom: "<'row'<'col-sm-12 d-print-none'r>>" +
-          "<'row'<'col-sm-12 d-print-none'P>>" +
-          "<'row'<'col-sm-6'i><'col-sm-6 d-print-none'f>>" +
-          "<'row'<'col-sm-12't>>",
+        },
+        {
+          text: 'Clear All Filters',
+          action: function ( e, dt, node, config ) {
+            var table = $('#sorttableDocs').DataTable();
+            table
+             .search( '' )
+             .columns().search( '' )
+             .draw();
+
+            $('#sorttableDocs').DataTable().searchPanes.clearSelections();
+            $('#sorttableDocs').DataTable().order([0, 'asc']).draw();
+          }
+        }
+      ],
+      dom: 
+        "<'row'<'col d-print-none d-flex align-items-center'B><'col d-flex justify-content-center align-items-center'i><'col d-print-none d-flex justify-content-end align-items-center'f>>" +
+        "<'row'<'col-sm-12't>>",
       language: {
-          processing: "Loading filtering options..."
+        processing: "Loading filtering options...",
+        searchPanes: {
+          collapse: {0: 'Filter Options', _: 'Filter Options (%d)'}
+        }
       },
       columnDefs:[
         {
@@ -301,7 +331,6 @@ $(document).ready(function() {
           if (type === 'sp') {
             
             var keywords = [];
-          
             $( $(data), "i" ).each(function( index ) {
               var val = $( this ).text();
               val = val.trim();
@@ -309,7 +338,7 @@ $(document).ready(function() {
                 keywords.push(val);
               }
             });
-           
+
            return keywords;
           }
           return data;
@@ -380,13 +409,6 @@ $(document).ready(function() {
       ]
     });
 
-    dt.on('select.dt', () => {          
-      dt.searchPanes.rebuildPane(0, true);
-    });
- 
-    dt.on('deselect.dt', () => {
-      dt.searchPanes.rebuildPane(0, true);
-    });
 });
 
 /* "Back To Top" button functionality */

@@ -8,7 +8,7 @@
           <th scope="col" class="col-1">Label</th>
           <th scope="col" class="col-1">Publisher</th>
           <th scope="col" class="col-1">Group</th>
-          <th scope="col" class="cleanFilter"></th>
+          <th scope="col" class="cleanFilter d-none"></th>
           <th scope="col" class="col-1">Doc Type</th>
           <th scope="col" class="col-1">Keywords</th>
           <th scope="col" class="col-1">Status</th>
@@ -29,7 +29,7 @@
           <td class="group">
             {{#if group}}{{#with (groupIdLookup ../dataGroups group)}}{{#if groupLink}}<a href="{{groupLink}}" target="_blank">{{/if}}{{groupOrg}} {{groupName}} {{groupDesc}}{{#if groupLink}}</a>{{/if}}{{/with}}{{/if}}
           </td>
-          <td class="group">
+          <td class="group d-none">
             {{#if group}}{{#with (groupIdLookup ../dataGroups group)}}{{groupOrg}} {{groupName}} {{groupDesc}}{{/with}}{{/if}}
           </td>
           <td>
