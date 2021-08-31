@@ -31,6 +31,7 @@ $(document).ready(function() {
   var searchOptions = $.fn.dataTable.ext.deepLink( ['search.search' ] );
 
   var defaultOptions = {
+    autoWidth: false,
     paging: false,
     responsive: true,
     buttons: [
@@ -65,11 +66,23 @@ $(document).ready(function() {
     ],
     columnDefs:[
       {
+        width: '16.6%',
+        targets:[2]
+      },
+      {
+        width: '25%',
+        targets:[4]
+      },
+      {
         visible: false,
         targets:[5],
         searchPanes: {
           header: "Technical Committee"
         }
+      },
+      {
+        width: '16.6%',
+        targets:[6]
       }
     ],
     dom: 
@@ -326,6 +339,14 @@ $(document).ready(function() {
           ]
         },
         targets: [10]
+      },
+      {
+        width: '25%',
+        targets: [11]
+      },
+      {
+        width: '16.6%',
+        targets: [13]
       }
     ]
   }
@@ -473,6 +494,10 @@ $(document).ready(function() {
           ]
         },
         targets: [6]
+      },
+      {
+        width: '25%',
+        targets: [7]
       },
       {
         visible: false,
