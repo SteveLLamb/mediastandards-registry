@@ -85,24 +85,16 @@
             </ul>
             {{/if}}
           </td>
-          <td>
+          <td class="d-none">
             {{#if projectMilestone}}
             {{#projectMilestone}}
             {{#if current}}
               {{milestoneAct}}
-              {{#if miledateStart}}
-                <br>
-                <span class="font-weight-bold small">Start Date:</span> {{miledateStart}}
-              {{/if}}
-              {{#if miledateEnd}}
-                <br>
-                <span class="font-weight-bold small">End Date:</span> {{miledateEnd}}
-              {{/if}}
             {{/if}}
             {{/projectMilestone}}
             {{/if}}
           </td>
-          <td class="p-1 col-3">
+          <td class="p-1">
             {{#if projectMilestone}}
             {{#projectMilestone}}
             <div class="p-2{{#unless @last}} border-bottom{{/unless}}">
@@ -130,7 +122,7 @@
             </ul>
             {{/if}}
           </td>
-          <td class="col-2">
+          <td>
             {{workNotes}}
           </td>
         </tr>
