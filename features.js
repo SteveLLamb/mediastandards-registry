@@ -109,6 +109,7 @@ $(document).ready(function() {
   var searchOptions = $.fn.dataTable.ext.deepLink( ['search.search' ] );
 
   var defaultOptions = {
+    autoWidth: false,
     paging: false,
     responsive: true,
     buttons: [
@@ -175,7 +176,7 @@ $(document).ready(function() {
       {
         visible: false,
         searchPanes: {
-          header: "Milestone",
+          header: "Current Milestone",
           dtOpts: {
             order: [[1, 'desc']]
           },
