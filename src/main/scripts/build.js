@@ -47,6 +47,17 @@ const registries = [
       "groups",
       "documents"
     ]
+  },
+  {
+    "listType": "groups",
+    "templateType": "groups",
+    "templateName": "groups",
+    "idType": "group",
+    "listTitle": "Groups",
+    "subRegistry": [
+      "projects",
+      "documents"
+    ]
   }
 ]
 
@@ -301,14 +312,11 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
 
   const docProjs = []
   for (let i in registryProject) {
-
     
     let projs = registryProject[i]["docAffected"]
-
     for (let p in projs) {
 
       var docProj = {}
-
       docProj["docId"] = projs[p]
       docProj["workType"] = registryProject[i]["workType"]
       docProj["projectStatus"] = registryProject[i]["projectStatus"]
@@ -316,6 +324,53 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
       docProjs.push(docProj)
 
     }
+  }
+
+  /* Load Current Work on Doc for filtering */
+
+  for (let i in registryDocument) {
+
+    const currentWork = []
+
+    let works = registryDocument[i]["workInfo"]
+    for (let w in works) {
+
+      if (w === "review") {
+        for (let r in works[w]) {
+          let rP = works[w][r]["reviewPeriod"]
+          let rN = works[w][r]["reviewNeeded"]
+
+          if (rN === true) {
+            currentWork.push(rP + " Review Needed")
+          }
+        }
+      }
+    }
+
+    for (let p in registryProject) {
+      let pD = registryProject[p]["docId"]
+      let pW = registryProject[p]["workType"]
+      let pS = registryProject[p]["projectStatus"]
+
+      if (pD === registryDocument[i]["docId"]) {
+        currentWork.push(pW + " " + pS)
+      }
+    }
+
+    for (let ps in docProjs) {
+      let psD = docProjs[ps]["docId"]
+      let psW = docProjs[ps]["workType"]
+      let psS = docProjs[ps]["projectStatus"]
+
+      if (psD === registryDocument[i]["docId"]) {
+        currentWork.push(psW + " " + psS)
+      }
+    }
+
+    if (currentWork.length !== 0) {
+      registryDocument[i]["currentWork"] = currentWork
+    }
+
   }
 
   /* lookup if Repo exists for any project */
@@ -385,6 +440,12 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
           }
       }
       return null;
+  });
+
+  /* helper to replace spaces for links */
+
+  hb.registerHelper('spaceReplace', function(str) {
+      return str.replace(/\s/g , '%20')
   });
 
   /* is the registry sorted */

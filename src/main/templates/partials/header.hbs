@@ -20,6 +20,7 @@
   <script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
   <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
   <script src="https://cdn.datatables.net/buttons/1.7.1/js/dataTables.buttons.min.js"></script>
+  <script src="https://cdn.datatables.net/plug-ins/1.10.19/features/deepLink/dataTables.deepLink.min.js"></script>
 </head>
 <body>
   <nav class="navbar navbar-default navbar-expand-md navbar-light fixed-top fh-fixedHeader bg-light d-flex">
@@ -34,6 +35,7 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="{{#ifnoteq templateName "index"}}../{{/ifnoteq}}{{htmlLink}}">Documents</a>
             <a class="dropdown-item" href="{{#ifnoteq templateName "index"}}../{{/ifnoteq}}projects/{{htmlLink}}">Projects</a>
+            <a class="dropdown-item" href="{{#ifnoteq templateName "index"}}../{{/ifnoteq}}groups/{{htmlLink}}">Groups</a>
           </div>
         </li>
       </ul>

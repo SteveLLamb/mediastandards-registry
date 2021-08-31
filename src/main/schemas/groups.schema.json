@@ -11,13 +11,28 @@
                 "required": [
                     "groupId",
                     "groupName",
-                    "groupOrg",
-                    "groupType"
+                    "groupOrg"
                 ],
                 "additionalProperties": false,
                 "properties": {
+                    "groupAIs": {
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "groupBallots": {
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "groupCal": {
+                        "type": "string",
+                        "format": "uri"
+                    },
                     "groupDesc": {
                         "type": "string"
+                    },
+                    "groupDocs": {
+                        "type": "string",
+                        "format": "uri"
                     },
                     "groupId": {
                         "type": "string",
@@ -33,6 +48,13 @@
                     "groupOrg": {
                         "type": "string"
                     },
+                    "groupRepo": {
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "groupSummary": {
+                        "type": "string"
+                    },
                     "groupType": {
                         "type": "string",
                         "enum": [
@@ -41,7 +63,7 @@
                             "WG", 
                             "DG",
                             "SG",
-                            "TF"                          
+                            "TF"                       
                         ]
                     },
                     "parentgroupId": {

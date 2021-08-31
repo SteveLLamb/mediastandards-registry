@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{>header}}
+    <!-- Main content starts - do not edit above this line -->
+    <table id="sorttableGroups" class="table table-small table-hover w-auto display">
+      <thead class="thead-light">
+        <tr>
+          <th scope="col" class="d-none"></th>
+          <th scope="col">Organization</th>
+          <th scope="col" class="col-2">Group</th>
+          <th scope="col" class="text-center text-nowrap">Group Type</th>
+          <th scope="col" class="col-3">Description</th>
+          <th scope="col" class="d-none"></th>
+          <th scope="col" class="col-2 text-nowrap">Parent Group</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody id="searchTable">
+        {{#dataGroups}}
+        <tr id="{{../idType}}-{{groupId}}">
+          <td class="grouplabel d-none">
+            <code>{{groupId}}</code>
+          </td>
+          <td>
+            <a class="anchor" id="{{groupId}}" href="#{{groupId}}"></a>{{groupOrg}}
+          </td>
+          <td>
+            {{#if groupLink}}<a href="{{groupLink}}" target="_blank">{{/if}}{{#if parentgroupId}}{{#with (groupIdLookup ../dataGroups parentgroupId)}}{{groupName}} {{/with}}{{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}
+          </td>
+          <td class="text-center">
+            {{groupType}}
+          </td>
+          <td>
+            {{groupSummary}}
+          </td>
+          <td class="d-none">
+            {{#ifeq groupType "TC"}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{/ifeq}}
+            {{#if parentgroupId}}{{#with (groupIdLookup ../dataGroups parentgroupId)}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{/with}}{{/if}}
+          </td>
+          <td>
+            {{#if parentgroupId}}{{#with (groupIdLookup ../dataGroups parentgroupId)}}{{#if groupLink}}<a href="#{{groupId}}" target="_blank">{{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}{{/with}}{{/if}}
+          </td>
+          <td>
+            {{#if groupType}}
+            <a href="../projects/{{../htmlLink}}?search.search={{spaceReplace groupOrg}}{{#if parentgroupId}}{{#with (groupIdLookup ../dataGroups parentgroupId)}}%20{{spaceReplace groupName}}{{/with}}{{/if}}%20{{spaceReplace groupName}}{{#if groupDesc}}%20{{spaceReplace groupDesc}}{{/if}}">Projects</a>
+            {{/if}}
+          </td>
+          <td class="text-center">
+            {{#if groupDocs}}
+            <a href="{{groupDocs}}" target="_blank">Documents</a>
+            {{/if}}
+          </td>
+          <td class="text-center">
+            {{#if groupCal}}
+            <a href="{{groupCal}}" target="_blank">Calendar</a>
+            {{/if}}
+          </td>
+          <td class="text-center">
+            {{#if groupBallots}}
+            <a href="{{groupBallots}}" target="_blank">Ballots</a>
+            {{/if}}
+          </td>
+          <td class="text-center">
+            {{#if groupAIs}}
+            <a href="{{groupAIs}}" target="_blank">Action Items</a>
+            {{/if}}
+          </td>
+          <td class="text-center">
+            {{#if groupRepo}}
+            <a href="{{groupRepo}}" target="_blank">Repo</a>
+            {{/if}}
+          </td>
+        </tr>
+        {{/dataGroups}}
+      </tbody>
+    </table>
+    <!-- Main content ends - do not edit below this line -->
+{{>footer}}
+
+</html>

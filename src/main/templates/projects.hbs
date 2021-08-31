@@ -7,15 +7,15 @@
         <tr>
           <th scope="col">Project</th>
           <th scope="col">Document</th>
-          <th scope="col" class="col-1">Work Type</th>
-          <th scope="col" class="cleanFilter d-none"></th>
+          <th scope="col" class="text-center text-nowrap">Work Type</th>
           <th scope="col">Approved</th>
-          <th scope="col" class="cleanFilter d-none"></th>
+          <th scope="col" class="d-none"></th>
           <th scope="col">Status</th>
+          <th scope="col" class="d-none"></th>
           <th scope="col">Group</th>
-          <th scope="col" class="cleanFilter d-none"></th>
+          <th scope="col" class="d-none"></th>
           <th scope="col">Affects</th>
-          <th scope="col"></th>
+          <th scope="col" class="d-none"></th>
           <th scope="col" class="col-3">Milestone</th>
           <th scope="col">Dependency</th>
           <th scope="col">Notes</th>
@@ -24,24 +24,26 @@
       <tbody id="searchTable">
         {{#dataProjects}}
         <tr id="{{../idType}}-{{projectId}}">
-          <td class="doclabel">
+          <td class="projectlabel">
             <a class="anchor" id="{{projectId}}" href="#{{projectId}}"></a><code>{{projectId}}</code>
-            {{#if repo}}
-            <br>[<a href="{{repo}}" target="_blank">Repo</a>]
-            {{/if}}
           </td>
           <td>
             {{#if docId}}
-             <a class="document-link clear-filter" href="../{{../htmlLink}}#{{docId}}">{{getLabel docId}}</a> [{{getStatus docId}}] {{{getstatusButton docId "12"}}}
+            <a class="document-link clear-filter" href="../{{../htmlLink}}#{{docId}}">{{getLabel docId}}</a>
+            <br>
+            [{{getStatus docId}}] {{{getstatusButton docId "12"}}}
+            {{/if}}
+            {{#if repo}}
+            {{#if docId}}
+            <br>
+            {{/if}}
+            [<a href="{{repo}}" target="_blank">Repo</a>]
             {{/if}}
           </td>
           <td>
-            {{#if projectLink}}<a href="{{projectLink}}" target="_blank">{{/if}}{{workType}}{{#if projectLink}}</a>{{/if}}
-          </td>
-          <td class="d-none">
             {{workType}}
           </td>
-          <td>
+          <td class="text-center">
             {{#if projApproved}}<span class="label badge badge-success">Yes</span>{{/if}}
             {{#if projApprovedDate}}
             <br><span class="small">[Approved Date: {{projApprovedDate}}]</span>
@@ -52,13 +54,16 @@
             {{#if projApproved}}Yes{{/if}}
             {{#unless projApproved}}Pending{{/unless}}
           </td>
-          <td>
+          <td class="text-center">
+            {{#if projectLink}}<a href="{{projectLink}}" target="_blank">{{/if}}{{projectStatus}}{{#if projectLink}}</a>{{/if}}
+          </td>
+          <td class="d-none">
             {{projectStatus}}
           </td>
           <td>
             {{#if assignedGroup}}
             {{#with (groupIdLookup ../dataGroups assignedGroup)}}
-            {{#if groupLink}}<a href="{{groupLink}}" target="_blank">{{/if}}{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../dataGroups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}
+            {{#if groupLink}}<a href="../groups/{{../../htmlLink}}#{{groupId}}">{{/if}}{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../dataGroups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}
             {{/with}}
             {{/if}}
           </td>
@@ -69,17 +74,15 @@
             {{/with}}
             {{/if}}
           </td>
-          <td>
+          <td class="p-1">
             {{#if docAffected}}
-             <div class="col">
-                <ul class="list-group list-group-flush">
-                {{#docAffected}}
-                  <li class="list-group-item">
-                    <span class="small"><a class="document-link clear-filter" href="../{{../../htmlLink}}#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}}
-                  </li>
-                {{/docAffected}}
-                </ul>
-              </div>
+            <ul class="list-group list-group-flush">
+            {{#docAffected}}
+              <li class="list-group-item">
+                <span class="small"><a class="document-link clear-filter" href="../{{../../htmlLink}}#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}}
+              </li>
+            {{/docAffected}}
+            </ul>
             {{/if}}
           </td>
           <td>
@@ -99,7 +102,7 @@
             {{/projectMilestone}}
             {{/if}}
           </td>
-          <td>
+          <td class="p-1">
             {{#if projectMilestone}}
             {{#projectMilestone}}
             <div class="p-2{{#unless @last}} border-bottom{{/unless}}">
@@ -116,17 +119,15 @@
             {{/projectMilestone}}
             {{/if}}
           </td>
-          <td>
+          <td class="p-1">
             {{#if updateDependency}}
-             <div class="col">
-                <ul class="list-group list-group-flush">
-                {{#updateDependency}}
-                  <li class="list-group-item">
-                    <span class="small"><a class="document-link clear-filter" href="../{{../../htmlLink}}#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}}
-                  </li>
-                {{/updateDependency}}
-                </ul>
-              </div>
+            <ul class="list-group list-group-flush">
+            {{#updateDependency}}
+              <li class="list-group-item">
+                <span class="small"><a class="document-link clear-filter" href="../{{../../htmlLink}}#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}}
+              </li>
+            {{/updateDependency}}
+            </ul>
             {{/if}}
           </td>
           <td>

@@ -5,16 +5,17 @@
     <table id="sorttableDocs" class="table table-small table-hover w-auto display">
       <thead class="thead-light">
         <tr>
-          <th scope="col" class="col-1">Label</th>
-          <th scope="col" class="col-1">Publisher</th>
-          <th scope="col" class="col-1">Group</th>
+          <th scope="col">Label</th>
+          <th scope="col">Publisher</th>
+          <th scope="col">Group</th>
           <th scope="col" class="cleanFilter d-none"></th>
-          <th scope="col" class="col-1">Doc Type</th>
-          <th scope="col" class="col-1">Keywords</th>
-          <th scope="col" class="col-1">Status</th>
+          <th scope="col" class="text-nowrap">Doc Type</th>
+          <th scope="col">Keywords</th>
+          <th scope="col">Status</th>
           <th scope="col" class="col-3">Title/Details</th>
-          <th scope="col">Normative Reference(s)</th>
-          <th scope="col">Bibliographic Reference(s)</th>
+          <th scope="col" class="d-none"></th>
+          <th scope="col" class="text-nowrap">Normative Reference(s)</th>
+          <th scope="col" class="text-nowrap">Bibliographic Reference(s)</th>
         </tr>
       </thead>
       <tbody id="searchTable">
@@ -27,7 +28,7 @@
             {{publisher}}
           </td>
           <td class="group">
-            {{#if group}}{{#with (groupIdLookup ../dataGroups group)}}{{#if groupLink}}<a href="{{groupLink}}" target="_blank">{{/if}}{{groupOrg}} {{groupName}} {{groupDesc}}{{#if groupLink}}</a>{{/if}}{{/with}}{{/if}}
+            {{#if group}}{{#with (groupIdLookup ../dataGroups group)}}{{#if groupLink}}<a href="groups/{{../../htmlLink}}#{{groupId}}">{{/if}}{{groupOrg}} {{groupName}} {{groupDesc}}{{#if groupLink}}</a>{{/if}}{{/with}}{{/if}}
           </td>
           <td class="group d-none">
             {{#if group}}{{#with (groupIdLookup ../dataGroups group)}}{{groupOrg}} {{groupName}} {{groupDesc}}{{/with}}{{/if}}
@@ -37,63 +38,61 @@
           </td>
           <td>
             {{#keywords}}
-            <span class="small"><code>{{this}}</code></span>{{#unless @last}}<br> {{/unless}}
+            <span class="small text-nowrap"><code>{{this}}</code></span>{{#unless @last}}<br>{{/unless}}
             {{/keywords}}
           </td>
           <td>
-            <div class="container-fluid">
-              {{#status/unknown}}
-                <span class="label badge badge-danger">[ UNKNOWN ]</span><br> 
-              {{/status/unknown}}
-              {{#status/withdrawn}}
-                <span class="label badge badge-danger">[ WITHDRAWN ]</span><br> 
-              {{/status/withdrawn}}
-              {{#status/superseded}}
-                <span class="label badge badge-warning">[ SUPERSEDED ]</span><br>
-              {{/status/superseded}}
-              {{#if status/supersededBy}}
-                <div class="border-left p-1">
-                  <span class="font-weight-bold small">Superseded by:</span>
-                  <ul class="list-group list-group-flush">
-                {{#status/supersededBy}}
-                    <li class="list-group-item">
-                      <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}} {{#with (docProjLookup ../../docProjs this)}}{{#ifnoteq projectStatus "Complete"}}<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#F6BE00" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg>{{/ifnoteq}}{{/with}}
-                    </li> 
-                {{/status/supersededBy}}
-                  </ul>
-                </div>
-              {{/if}}
-              {{#status/draft}}
-                <span class="label badge badge-warning">[ DRAFT ]</span><br> 
-              {{/status/draft}}
-              {{#status/publicCd}}
-                <span class="label badge badge-success">[ PUBLIC CD ]</span><br>  
-              {{/status/publicCd}}
-              {{#status/active}}
-                <span class="label badge badge-success">[ ACTIVE ]</span><br>  
-              {{/status/active}}
-              {{#status/amended}}
-                <span class="label badge badge-secondary">[ AMENDED ]</span><br>
-              {{/status/amended}}
-              {{#if status/amendedBy}}
-                <div class="border-left p-1">
-                  <span class="font-weight-bold small">Amended by:</span>
-                  <ul class="list-group list-group-flush">
-                {{#status/amendedBy}}
-                    <li class="list-group-item">
-                      <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}} {{#with (docProjLookup ../../docProjs this)}}{{#ifnoteq projectStatus "Complete"}}<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#F6BE00" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg>{{/ifnoteq}}{{/with}}
-                    </li>
-                {{/status/amendedBy}}
+            {{#status/unknown}}
+              <span class="label badge badge-danger">[ UNKNOWN ]</span><br> 
+            {{/status/unknown}}
+            {{#status/withdrawn}}
+              <span class="label badge badge-danger">[ WITHDRAWN ]</span><br> 
+            {{/status/withdrawn}}
+            {{#status/superseded}}
+              <span class="label badge badge-warning">[ SUPERSEDED ]</span><br>
+            {{/status/superseded}}
+            {{#if status/supersededBy}}
+              <div class="border-left p-1">
+                <span class="font-weight-bold small">Superseded by:</span>
+                <ul class="list-group list-group-flush">
+              {{#status/supersededBy}}
+                  <li class="list-group-item">
+                    <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}} {{#with (docProjLookup ../../docProjs this)}}{{#ifnoteq projectStatus "Complete"}}<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#F6BE00" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg>{{/ifnoteq}}{{/with}}
+                  </li> 
+              {{/status/supersededBy}}
                 </ul>
-                </div>
-              {{/if}}
-              {{#status/reaffirmed}}
-                <span class="label badge badge-info">[ REAFFIRMED ]</span><br>
-              {{/status/reaffirmed}}
-              {{#status/stabilized}}
-                <span class="label badge badge-primary">[ STABILIZED ]</span>  
-              {{/status/stabilized}}   
-            </div>      
+              </div>
+            {{/if}}
+            {{#status/draft}}
+              <span class="label badge badge-warning">[ DRAFT ]</span><br> 
+            {{/status/draft}}
+            {{#status/publicCd}}
+              <span class="label badge badge-success">[ PUBLIC CD ]</span><br>  
+            {{/status/publicCd}}
+            {{#status/active}}
+              <span class="label badge badge-success">[ ACTIVE ]</span><br>  
+            {{/status/active}}
+            {{#status/amended}}
+              <span class="label badge badge-secondary">[ AMENDED ]</span><br>
+            {{/status/amended}}
+            {{#if status/amendedBy}}
+              <div class="border-left p-1">
+                <span class="font-weight-bold small">Amended by:</span>
+                <ul class="list-group list-group-flush">
+              {{#status/amendedBy}}
+                  <li class="list-group-item">
+                    <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}} {{#with (docProjLookup ../../docProjs this)}}{{#ifnoteq projectStatus "Complete"}}<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#F6BE00" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg>{{/ifnoteq}}{{/with}}
+                  </li>
+              {{/status/amendedBy}}
+              </ul>
+              </div>
+            {{/if}}
+            {{#status/reaffirmed}}
+              <span class="label badge badge-info">[ REAFFIRMED ]</span><br>
+            {{/status/reaffirmed}}
+            {{#status/stabilized}}
+              <span class="label badge badge-primary">[ STABILIZED ]</span>  
+            {{/status/stabilized}}   
           </td>
           <td>
             <div class="container-fluid">
@@ -108,7 +107,6 @@
                 {{/if}}
                 </span>
               </div>
-              
               </div>
               <div class="row p-2">
                 <div class="col">
@@ -177,15 +175,13 @@
                         </div>
                         {{#project}}
                         <div class="p-2{{#unless @last}} border-bottom{{/unless}}"> 
-
                           {{#if projectId}}
                           {{#with (projectIdLookup ../../../dataProjects projectId)}}
-
-                          <span class="font-weight-bold small">Work Type: </span>{{#if projectLink}}<a href="{{projectLink}}" target="_blank">{{/if}}{{workType}}{{#if projectLink}}</a>{{/if}} {{#if projApproved}}<span class="label badge badge-success float-right">Project Approved</span>{{/if}}
+                          <span class="font-weight-bold small">Work Type: </span><a class="project-link clear-filter" href="projects/{{../../../../htmlLink}}#{{projectId}}">{{workType}}</a> {{#if projApproved}}<span class="label badge badge-success float-right">Project Approved</span>{{/if}}
                           {{#if projectStatus}}
                           <br>
                           <span class="font-weight-bold small">Work Status: </span>
-                          <a class="project-link clear-filter" href="projects/{{../../../../htmlLink}}#{{projectId}}">{{projectStatus}}</a>
+                          {{projectStatus}}
                           {{/if}}
                           {{#if projApprovedDate}}
                           <br>
@@ -195,13 +191,13 @@
                           {{#if assignedTC}}
                           {{#with (groupIdLookup ../../../../dataGroups assignedTC)}}
                           <br>
-                          <span class="font-weight-bold small">Assigned TC: </span>{{#if groupLink}}<a href="{{groupLink}}" target="_blank">{{/if}}{{groupOrg}} {{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}
+                          <span class="font-weight-bold small">Assigned TC: </span><a href="groups/{{../../../../../htmlLink}}#{{groupId}}">{{groupOrg}} {{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}</a>
                           {{/with}}
                           {{/if}}
                           {{#if assignedGroup}}
                           {{#with (groupIdLookup ../../../../dataGroups assignedGroup)}}
                           <br>
-                          <span class="font-weight-bold small">Assigned Group: </span>{{#if groupLink}}<a href="{{groupLink}}" target="_blank">{{/if}}{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../../../../dataGroups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}
+                          <span class="font-weight-bold small">Assigned Group: </span><a href="groups/{{../../../../../htmlLink}}#{{groupId}}">{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../../../../dataGroups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}</a>
                           {{/with}}
                           {{/if}}
                           {{#if workNotes}}
@@ -263,7 +259,7 @@
                           {{#if assignedGroup}}
                           {{#with (groupIdLookup ../../../dataGroups assignedGroup)}}
                           <br>
-                          <span class="font-weight-bold small">Assigned Group: </span>{{#if groupLink}}<a href="{{groupLink}}" target="_blank">{{/if}}{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../../../dataGroups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}
+                          <span class="font-weight-bold small">Assigned Group: </span><a href="groups/{{../../../../htmlLink}}#{{groupId}}">{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../../../dataGroups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}</a>
                           {{/with}}
                           {{/if}}
                           {{#if reviewDate}}
@@ -317,30 +313,31 @@
                 </div>
               </div>
           </td>
-          <td>
+          <td class="d-none">
+            {{#currentWork}}
+            <span class="text-nowrap">{{this}}</span>{{#unless @last}}<br>{{/unless}}
+            {{/currentWork}}
+          </td>
+          <td class="p-1">
             {{#if references/normative}}
-            <div class="col">
-              <ul class="list-group list-group-flush">
-              {{#references/normative}}
-                <li class="list-group-item">
-                  <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}} {{#with (docProjLookup ../../docProjs this)}}{{#ifnoteq projectStatus "Complete"}}<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#F6BE00" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg>{{/ifnoteq}}{{/with}}
-                </li>
-              {{/references/normative}}
-              </ul>
-            </div>
+            <ul class="list-group list-group-flush">
+            {{#references/normative}}
+              <li class="list-group-item">
+                <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}} {{#with (docProjLookup ../../docProjs this)}}{{#ifnoteq projectStatus "Complete"}}<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#F6BE00" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg>{{/ifnoteq}}{{/with}}
+              </li>
+            {{/references/normative}}
+            </ul>
             {{/if}}
           </td>
-          <td>
+          <td class="p-1">
             {{#if references/bibliographic}}
-            <div class="col">
-              <ul class="list-group list-group-flush">
-              {{#references/bibliographic}}
-                <li class="list-group-item">
-                  <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}} {{#with (docProjLookup ../../docProjs this)}}{{#ifnoteq projectStatus "Complete"}}<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#F6BE00" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg>{{/ifnoteq}}{{/with}}
-                </li>
-              {{/references/bibliographic}}
-              </ul>
-            </div>
+            <ul class="list-group list-group-flush">
+            {{#references/bibliographic}}
+              <li class="list-group-item">
+                <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}} {{#with (docProjLookup ../../docProjs this)}}{{#ifnoteq projectStatus "Complete"}}<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#F6BE00" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg>{{/ifnoteq}}{{/with}}
+              </li>
+            {{/references/bibliographic}}
+            </ul>
             {{/if}}
           </td>
         </tr>
