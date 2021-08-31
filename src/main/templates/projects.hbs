@@ -2,7 +2,7 @@
 <html lang="en">
   {{>header}}
     <!-- Main content starts - do not edit above this line -->
-    <table id="sorttableProjs" class="table table-small table-hover w-auto display">
+    <table id="sorttableProjs" class="table table-small table-hover">
       <thead class="thead-light">
         <tr>
           <th scope="col">Project</th>
@@ -18,7 +18,7 @@
           <th scope="col" class="d-none"></th>
           <th scope="col" class="col-3">Milestone</th>
           <th scope="col">Dependency</th>
-          <th scope="col">Notes</th>
+          <th scope="col" class="col-2">Notes</th>
         </tr>
       </thead>
       <tbody id="searchTable">
@@ -102,7 +102,7 @@
             {{/projectMilestone}}
             {{/if}}
           </td>
-          <td class="p-1">
+          <td class="p-1 col-3">
             {{#if projectMilestone}}
             {{#projectMilestone}}
             <div class="p-2{{#unless @last}} border-bottom{{/unless}}">
@@ -130,7 +130,7 @@
             </ul>
             {{/if}}
           </td>
-          <td>
+          <td class="col-2">
             {{workNotes}}
           </td>
         </tr>
