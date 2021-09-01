@@ -43,7 +43,7 @@
             {{#if parentgroupId}}{{#with (groupIdLookup ../dataGroups parentgroupId)}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{/with}}{{/if}}
           </td>
           <td>
-            {{#if parentgroupId}}{{#with (groupIdLookup ../dataGroups parentgroupId)}}{{#if groupLink}}<a href="#{{groupId}}" target="_blank">{{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}{{/with}}{{/if}}
+            {{#if parentgroupId}}{{#with (groupIdLookup ../dataGroups parentgroupId)}}{{#if groupLink}}<a href="#{{groupId}}">{{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}{{/with}}{{/if}}
           </td>
           <td>
             {{#if groupType}}
