@@ -381,7 +381,7 @@ $(document).ready(function() {
           }, 
           layout: 'columns-6',
           viewTotal: true,
-          columns: [1, 3, 4, 5, 6, 8]
+          columns: [2, 4, 5, 6, 7, 9]
         }
       },
       {
@@ -410,7 +410,7 @@ $(document).ready(function() {
     columnDefs:[
       {
         visible: false,
-        targets:[3],
+        targets:[4],
         searchPanes: {
           header: "Group"
         }
@@ -433,7 +433,7 @@ $(document).ready(function() {
             }
           return data;
         },
-        targets:[5]
+        targets:[6]
       },
       {
         searchPanes: {
@@ -441,64 +441,64 @@ $(document).ready(function() {
             {
               label: 'Active',
               value: function(rowData, rowIdx){
-                return rowData[6].includes('[ ACTIVE ]');
+                return rowData[7].includes('[ ACTIVE ]');
               }
             },
             {
               label: 'Amended',
               value: function(rowData, rowIdx){
-                return rowData[6].includes('[ AMENDED ]');
+                return rowData[7].includes('[ AMENDED ]');
               }
             },
             {
               label: 'Draft',
               value: function(rowData, rowIdx){
-                return rowData[6].includes('[ DRAFT ]');
+                return rowData[7].includes('[ DRAFT ]');
               }
             },
             {
               label: 'Public CD',
               value: function(rowData, rowIdx){
-                return rowData[6].includes('[ PUBLIC CD ]');
+                return rowData[7].includes('[ PUBLIC CD ]');
               }
             },
             {
               label: 'Reaffirmed',
               value: function(rowData, rowIdx){
-                return rowData[6].includes('[ REAFFIRMED ]');
+                return rowData[7].includes('[ REAFFIRMED ]');
               }
             },
             {
               label: 'Stabilized',
               value: function(rowData, rowIdx){
-                return rowData[6].includes('[ STABILIZED ]');
+                return rowData[7].includes('[ STABILIZED ]');
               }
             },
             {
               label: 'Superseded',
               value: function(rowData, rowIdx){
-                return rowData[6].includes('[ SUPERSEDED ]');
+                return rowData[7].includes('[ SUPERSEDED ]');
               }
             },
             {
               label: 'Unknown',
               value: function(rowData, rowIdx){
-                return rowData[6].includes('[ UNKNOWN ]');
+                return rowData[7].includes('[ UNKNOWN ]');
               }
             },
             {
               label: 'Withdrawn',
               value: function(rowData, rowIdx){
-                return rowData[6].includes('[ WITHDRAWN ]');
+                return rowData[7].includes('[ WITHDRAWN ]');
               }
             }
           ]
         },
-        targets: [6]
+        targets: [7]
       },
       {
         width: '25%',
-        targets: [7]
+        targets: [8]
       },
       {
         visible: false,
@@ -521,7 +521,7 @@ $(document).ready(function() {
             }
           return data;
         },
-        targets:[8]
+        targets:[9]
       }
     ]
   }

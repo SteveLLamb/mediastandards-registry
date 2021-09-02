@@ -18,6 +18,18 @@
                 ],
                 "additionalProperties": true,
                 "properties": {
+                    "authors": {
+                        "type": "array",
+                        "additionalItems": true,
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "type": "string",
+                                    "minLength": 1
+                                }
+                            ]
+                        }
+                    },
                     "details": {
                         "type": "string"
                     },
