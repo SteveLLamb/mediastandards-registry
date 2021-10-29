@@ -1061,32 +1061,6 @@
     }
   },
   {
-    "details": "DRAFT",
-    "docId": "dci-a9-2018-dvd",
-    "docLabel": "DRAFT Direct View Display D-Cinema Addendum v09 2018-1116",
-    "docTitle": "DRAFT Direct View Display D-Cinema Addendum DRAFT Version 0.9",
-    "docType": "Specification",
-    "href": "https://www.dcimovies.com/drafts/DCI-DRAFT-Direct-View-Display-D-Cinema-Addendum_v09_2018-1116.pdf",
-    "publicationDate": "2018-11-16T08:00:00.000Z",
-    "publisher": "DCI",
-    "status": {
-      "draft": true
-    }
-  },
-  {
-    "details": "DRAFT",
-    "docId": "dci-a9-2018-hdr",
-    "docLabel": "DRAFT HDR D-Cinema Addendum v09 2018-1116",
-    "docTitle": "DRAFT High Dynamic Range D-Cinema Addendum DRAFT Version 0.9",
-    "docType": "Specification",
-    "href": "https://www.dcimovies.com/drafts/DCI-DRAFT-HDR-D-Cinema-Addendum_v09_2018-1116.pdf",
-    "publicationDate": "2018-11-16T08:00:00.000Z",
-    "publisher": "DCI",
-    "status": {
-      "draft": true
-    }
-  },
-  {
     "docId": "dci-a9-2018-oba",
     "docLabel": "Object-Based Audio Addendum 2018-1001",
     "docTitle": "Digital Cinema Object-Based Audio Addendum",
@@ -1100,6 +1074,32 @@
     "publisher": "DCI",
     "status": {
       "active": true
+    }
+  },
+  {
+    "details": "DRAFT",
+    "docId": "dci-a9-2021-dvd",
+    "docLabel": "DRAFT Direct View Display D-Cinema Addendum v096 2021-0701",
+    "docTitle": "DRAFT Direct View Display D-Cinema Addendum DRAFT Version 0.96",
+    "docType": "Specification",
+    "href": "https://www.dcimovies.com/drafts/DCI-Draft-Direct-View-Display-Addendum-v096_2021-0701.pdf",
+    "publicationDate": "2021-0701T08:00:00.000Z",
+    "publisher": "DCI",
+    "status": {
+      "draft": true
+    }
+  },
+  {
+    "details": "DRAFT",
+    "docId": "dci-a9-2021-hdr",
+    "docLabel": "DRAFT HDR D-Cinema Addendum v096 2021-0701",
+    "docTitle": "DRAFT High Dynamic Range D-Cinema Addendum DRAFT Version 0.96",
+    "docType": "Specification",
+    "href": "https://www.dcimovies.com/drafts/DCI-Draft-HDR-Addendum-v096_2021-0701.pdf",
+    "publicationDate": "2021-0701T08:00:00.000Z",
+    "publisher": "DCI",
+    "status": {
+      "draft": true
     }
   },
   {
@@ -1481,7 +1481,7 @@
     "publicationDate": "2020-07-20T07:00:00.000Z",
     "publisher": "DCI",
     "status": {
-      "active": true,
+      "active": false,
       "amended": true,
       "amendedBy": [
         "dci-dcss-v14-e1-2",
@@ -1489,7 +1489,12 @@
         "dci-dcss-v14-e16-17",
         "dci-dcss-v14-e18-19",
         "dci-dcss-v14-e20-23"
-      ]
+      ],
+      "superseded": true,
+      "supersededBy": [
+        "dci-dcss-v141"
+      ],
+      "supersededDate": "2021-10-13T07:00:00.000Z"
     }
   },
   {
@@ -1510,7 +1515,12 @@
     "publicationDate": "2020-09-02T07:00:00.000Z",
     "publisher": "DCI",
     "status": {
-      "active": true
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "dci-dcss-v141"
+      ],
+      "supersededDate": "2021-10-13T07:00:00.000Z"
     }
   },
   {
@@ -1531,7 +1541,12 @@
     "publicationDate": "2021-01-06T07:00:00.000Z",
     "publisher": "DCI",
     "status": {
-      "active": true
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "dci-dcss-v141"
+      ],
+      "supersededDate": "2021-10-13T07:00:00.000Z"
     }
   },
   {
@@ -1552,7 +1567,12 @@
     "publicationDate": "2021-03-24T07:00:00.000Z",
     "publisher": "DCI",
     "status": {
-      "active": true
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "dci-dcss-v141"
+      ],
+      "supersededDate": "2021-10-13T07:00:00.000Z"
     }
   },
   {
@@ -1573,7 +1593,12 @@
     "publicationDate": "2021-05-12T07:00:00.000Z",
     "publisher": "DCI",
     "status": {
-      "active": true
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "dci-dcss-v141"
+      ],
+      "supersededDate": "2021-10-13T07:00:00.000Z"
     }
   },
   {
@@ -1594,7 +1619,34 @@
     "publicationDate": "2020-11-18T07:00:00.000Z",
     "publisher": "DCI",
     "status": {
-      "active": true
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "dci-dcss-v141"
+      ],
+      "supersededDate": "2021-10-13T07:00:00.000Z"
+    }
+  },
+  {
+    "docId": "dci-dcss-v141",
+    "docLabel": "DCSS v1.4.1",
+    "docTitle": "Digital Cinema System Specification Version 1.4.1",
+    "docType": "Specification",
+    "href": "https://dcss.dcimovies.com/87da0904badd1e28efc83e860d0d572a6cf4399a/dcss.html",
+    "keywords": [
+      "DCinema",
+      "Packaging",
+      "DCP Core",
+      "Distribution",
+      "Operations",
+      "Security",
+      "KDM"
+    ],
+    "publicationDate": "2021-10-13T07:00:00.000Z",
+    "publisher": "DCI",
+    "status": {
+      "active": true,
+      "statusNote": "build 87da090"
     }
   },
   {
@@ -1644,6 +1696,18 @@
       "Security"
     ],
     "publicationDate": "2010-07-01T07:00:00.000Z",
+    "publisher": "DCI",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "dci-m-2021-hdrdbt",
+    "docLabel": "Memo HDR Double-Blind Testing 20210701",
+    "docTitle": "DCI Memorandum on HDR Double-Blind Image Testing",
+    "docType": "Memo",
+    "href": "https://www.dcimovies.com/announcements/DCI-Memo-on-HDR-Image-Testing_2021-0701.pdf",
+    "publicationDate": "2021-07-01T07:00:00.000Z",
     "publisher": "DCI",
     "status": {
       "active": true
