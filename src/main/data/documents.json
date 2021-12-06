@@ -2034,6 +2034,27 @@
     "href": "https://doi.org/10.5594/SMPTE.EG42.2015",
     "publicationDate": "2015-11-18T07:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "st326m-2000",
+        "st331-2011",
+        "st380-2004",
+        "rp210",
+        "rp224",
+        "smpte-j200007-v109-n7-dcpd",
+        "isbn-0201571684",
+        "isbn-0201325632"
+      ],
+      "normative": [
+        "st298-2009",
+        "st336-2007",
+        "st377-1-2011",
+        "st377-1-2011am1-2012",
+        "st377-1-2011am2-2012",
+        "st400-2012",
+        "eg377-3-2013"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -2100,6 +2121,52 @@
     "docTitle": "EIDR Best Practices, Technical Documentation, Standards and Interoperability",
     "docType": "Best Practice",
     "href": "https://eidr.org/technology/",
+    "publisher": "EIDR",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "eidr-id-102",
+    "docLabel": "EIDR ID 1.02",
+    "docTitle": "EIDR ID Format Ver. 1.02",
+    "docType": "Best Practice",
+    "href": "http://eidr.org/documents/EIDR_ID_Format_v1.02_Jan2012.pdf",
+    "publicationDate": "2012-01-30:00:00.000Z",
+    "publisher": "EIDR",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "eidr-id-15"
+      ],
+      "supersededDate": "2017-02-14:00:00.000Z"
+    }
+  },
+  {
+    "docId": "eidr-id-15",
+    "docLabel": "EIDR ID 1.5",
+    "docTitle": "EIDR ID Format Ver. 1.5",
+    "docType": "Best Practice",
+    "href": "http://eidr.org/documents/EIDR_ID_Format.pdf",
+    "publicationDate": "2017-02-14:00:00.000Z",
+    "publisher": "EIDR",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "eidr-id-151"
+      ],
+      "supersededDate": "2017-10-05:00:00.000Z"
+    }
+  },
+  {
+    "docId": "eidr-id-151",
+    "docLabel": "EIDR ID 1.51",
+    "docTitle": "EIDR ID Format Ver. 1.51",
+    "docType": "Best Practice",
+    "href": "http://eidr.org/documents/EIDR_ID_Format.pdf",
+    "publicationDate": "2017-10-05:00:00.000Z",
     "publisher": "EIDR",
     "status": {
       "active": true
@@ -2625,6 +2692,34 @@
         "iso10646-2011"
       ],
       "withdrawn": true
+    }
+  },
+  {
+    "authors": [
+      "Martin Fowler"
+    ],
+    "docId": "isbn-0201325632",
+    "docLabel": "ISBN 0-201-32563-2",
+    "docTitle": "UML Distilled - Applying the standard object modelling language",
+    "docType": "Book",
+    "publicationDate": "1998-01-01T07:00:00.000Z",
+    "publisher": "Addison-Wesley",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "authors": [
+      "Grady Booch"
+    ],
+    "docId": "isbn-0201571684",
+    "docLabel": "ISBN 0-201-57168-4",
+    "docTitle": "The Unified Modelling Language User Guide",
+    "docType": "Book",
+    "publicationDate": "1998-01-01T07:00:00.000Z",
+    "publisher": "Addison-Wesley",
+    "status": {
+      "active": true
     }
   },
   {
@@ -3635,6 +3730,18 @@
     "href": "https://www.iso.org/standard/75484.html",
     "publicationDate": "2020-08-01T07:00:00.000Z",
     "publisher": "ISO/IEC",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "iso26324-2012",
+    "docLabel": "ISO 26324:2012",
+    "docTitle": "Information and documentation — Digital object identifier system",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/43506.html",
+    "publicationDate": "2012-05-01T07:00:00.000Z",
+    "publisher": "ISO",
     "status": {
       "active": true
     }
@@ -4779,6 +4886,18 @@
     "docType": "Standard",
     "href": "https://www.iso.org/standard/4777.html",
     "publicationDate": "1991-12-01T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "iso7064-2003",
+    "docLabel": "ISO/IEC 7064:2003",
+    "docTitle": "Information technology — Security techniques — Check character systems",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/31531.html",
+    "publicationDate": "2003-02-01T07:00:00.000Z",
     "publisher": "ISO/IEC",
     "status": {
       "active": true
@@ -6411,6 +6530,18 @@
     }
   },
   {
+    "docId": "rfc4452",
+    "docLabel": "RFC 4452",
+    "docTitle": "The 'info' URI Scheme for Information Assets with Identifiers in Public Namespaces",
+    "docType": "Informational",
+    "href": "https://datatracker.ietf.org/doc/html/rfc4452",
+    "publicationDate": "2006-04-01T07:00:00.000Z",
+    "publisher": "IETF",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "rfc4510",
     "docLabel": "RFC 4510",
     "docTitle": "Lightweight Directory Access Protocol (LDAP): Technical Specification Road Map",
@@ -7212,6 +7343,70 @@
     }
   },
   {
+    "docId": "rp2079-2013",
+    "docLabel": "RP 2079:2013",
+    "docNumber": "2079",
+    "docTitle": "Digital Object Identifier (DOI) Name and Entertainment ID Registry (EIDR) Identifier Representations`",
+    "docType": "Recommended Practice",
+    "group": "smpte-30mr-tc",
+    "href": "https://doi.org/10.5594/SMPTE.RP2079.2013",
+    "publicationDate": "2013-12-13T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "eidr-id-102"
+      ],
+      "normative": [
+        "iso7064-2003",
+        "iso26324-2012",
+        "st335-2012",
+        "st2003-2012",
+        "rfc4452",
+        "rfc5234"
+      ]
+    },
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "rp2079-2017"
+      ],
+      "supersededDate": "2017-08-21T07:00:00.000Z"
+    }
+  },
+  {
+    "docId": "rp2079-2017",
+    "docLabel": "RP 2079:2017",
+    "docNumber": "2079",
+    "docTitle": "Digital Object Identifier (DOI) Name and Entertainment ID Registry (EIDR) Identifier Representations`",
+    "docType": "Recommended Practice",
+    "group": "smpte-30mr-tc",
+    "href": "https://doi.org/10.5594/SMPTE.RP2079.2017",
+    "publicationDate": "2017-08-21T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "eidr-id-15"
+      ],
+      "normative": [
+        "iso7064-2003",
+        "iso26324-2012",
+        "st335-2012",
+        "st2003-2012",
+        "rfc5234",
+        "rfc7972"
+      ]
+    },
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "rp2079-2018"
+      ],
+      "supersededDate": "2018-08-31T07:00:00.000Z"
+    }
+  },
+  {
     "docId": "rp2079-2018",
     "docLabel": "RP 2079:2018",
     "docNumber": "2079",
@@ -7221,6 +7416,19 @@
     "href": "https://doi.org/10.5594/SMPTE.RP2079.2018",
     "publicationDate": "2018-08-31T07:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "eidr-id-151"
+      ],
+      "normative": [
+        "iso7064-2003",
+        "iso26324-2012",
+        "st335-2012",
+        "st2003-2012",
+        "rfc5234",
+        "rfc7972"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -7235,8 +7443,17 @@
     "href": "https://doi.org/10.5594/SMPTE.RP2089.2014",
     "publicationDate": "2014-10-30T07:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "st377-1-2009",
+        "st377-2004",
+        "rp2079-2013"
+      ]
+    },
     "status": {
-      "active": true
+      "active": true,
+      "reaffirmDate": "2016-10-05T07:00:00.000Z",
+      "reaffirmed": true
     }
   },
   {
@@ -7607,6 +7824,17 @@
     }
   },
   {
+    "docId": "smpte-j200003-v109-n3-sdti",
+    "docLabel": "SMPTE SDTI JW",
+    "docTitle": "SMPTE Journal, Vol 109, No 3, March 2000, pp 205..210, 'A Tutorial on SDTI-CP'",
+    "docType": "Engineering Report",
+    "publicationDate": "2000-03-01T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "smpte-j200007-v109-n7-dcpd",
     "docLabel": "SMPTE DCPD JW",
     "docTitle": "The SMPTE Data Coding Protocol and Dictionaries, Jim Wilkinson, SMPTE Journal, July 2000 Vol. 109, No. 7, Page(s): 579 - 586 - Engineering Report",
@@ -7738,9 +7966,31 @@
     "docTitle": "XML Representation of SMPTE Registered Data (Reg-XML) — Mapping Rules",
     "docType": "Standard",
     "group": "smpte-31fs-tc",
-    "href": "https://doi.org/10.5594/SMPTE.ISDCF-SMPTE-ST-430-10-Implementation-Notes2018030801-1.2015",
+    "href": "https://doi.org/10.5594/SMPTE.SMPTEST2001-1.2015",
     "publicationDate": "2016-03-10T08:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "st298-2009",
+        "st330-2011",
+        "st335-2012",
+        "st395-2014",
+        "st400-2012",
+        "st2003-2012",
+        "st2029-2009",
+        "xml-20040204",
+        "xml-names-20091208",
+        "xmlschema-1-20041028",
+        "xmlschema-2-20041028",
+        "xlink11-20100506",
+        "xpath-19991116",
+        "rfc1738",
+        "rfc2141",
+        "rfc2396",
+        "rfc3061",
+        "rfc4122"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -9096,8 +9346,23 @@
   },
   {
     "docElement": "m",
+    "docId": "st326m-2000",
+    "docLabel": "ST 326(m):2000",
+    "docNumber": "326",
+    "docTitle": "Television — SDTI Content Package Format (SDTI-CP)",
+    "docType": "Standard",
+    "group": "smpte-32nf-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST326.2000",
+    "publicationDate": "2000-01-31T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docElement": "m",
     "docId": "st330-2011",
-    "docLabel": "ST 330(m):2004",
+    "docLabel": "ST 330(m):2011",
     "docNumber": "330",
     "docTitle": "Unique Material Identifier (UMID)",
     "docType": "Standard",
@@ -9125,6 +9390,40 @@
       "superseded": true,
       "supersededBy": [
         "st330-2011"
+      ]
+    }
+  },
+  {
+    "docElement": "m",
+    "docId": "st331-2011",
+    "docLabel": "ST 331:2011",
+    "docNumber": "331",
+    "docTitle": "Element and Metadata Definitions for the SDTI-CP",
+    "docType": "Standard",
+    "group": "smpte-30mr-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST331.2011",
+    "publicationDate": "2011-05-12T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": false
+    }
+  },
+  {
+    "docElement": "m",
+    "docId": "st331m-2004",
+    "docLabel": "ST 331(m):2004",
+    "docNumber": "331",
+    "docTitle": "Element and Metadata Definitions for the SDTI-CP",
+    "docType": "Standard",
+    "group": "smpte-30mr-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST331.2004",
+    "publicationDate": "2004-02-03T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "st331-2011"
       ]
     }
   },
@@ -9741,8 +10040,28 @@
     ],
     "publicationDate": "2010-02-23T08:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "st298-2009",
+        "st326m-2000",
+        "st379-1-2009",
+        "rp210",
+        "rp224",
+        "eg41-2004",
+        "iso13818-2-2000",
+        "ebu-smpte-tf-hsepmbs",
+        "smpte-j200003-v109-n3-sdti"
+      ],
+      "normative": [
+        "st331m-2004",
+        "st336-2007",
+        "st377-1-2009"
+      ]
+    },
     "status": {
-      "active": true
+      "active": true,
+      "stabilized": true,
+      "stabilizedDate": "2016-09-13T07:00:00.000Z"
     }
   },
   {
@@ -9766,6 +10085,20 @@
       "supersededBy": [
         "st379-1-2009"
       ]
+    }
+  },
+  {
+    "docId": "st380-2004",
+    "docLabel": "ST 380:2004",
+    "docNumber": "380",
+    "docTitle": "For Television — Material Exchange Format (MXF) — Descriptive Metadata Scheme-1 (Standard, Dynamic)",
+    "docType": "Standard",
+    "group": "smpte-31fs-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST380.2004",
+    "publicationDate": "2004-09-22T08:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
     }
   },
   {
@@ -9922,10 +10255,21 @@
     ],
     "publicationDate": "2011-03-31T07:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "st298-2009",
+        "st336-2007",
+        "st377-2004"
+      ],
+      "normative": [
+        "st377-1-2009"
+      ]
+    },
     "status": {
       "active": true,
-      "reaffirmDate": "2016-09-13T07:00:00.000Z",
-      "reaffirmed": true
+      "reaffirmed": true,
+      "stabilized": true,
+      "stabilizedDate": "2016-09-13T07:00:00.000Z"
     }
   },
   {
