@@ -18,6 +18,7 @@
           <th scope="col"></th>
           <th scope="col"></th>
           <th scope="col"></th>
+          <th scope="col"></th>
         </tr>
       </thead>
       <tbody id="searchTable">
@@ -43,7 +44,12 @@
             {{#if parentgroupId}}{{#with (groupIdLookup ../dataGroups parentgroupId)}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{/with}}{{/if}}
           </td>
           <td>
-            {{#if parentgroupId}}{{#with (groupIdLookup ../dataGroups parentgroupId)}}{{#if groupLink}}<a href="#{{groupId}}">{{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}{{/with}}{{/if}}
+            {{#if parentgroupId}}{{#with (groupIdLookup ../dataGroups parentgroupId)}}{{#if groupLink}}<a class="group-link clear-filter" href="#{{groupId}}">{{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}{{/with}}{{/if}}
+          </td>
+          <td>
+            {{#ifeq groupType "TC"}}
+            <a href="../{{../htmlLink}}?search.search={{spaceReplace groupOrg}}{{#if parentgroupId}}{{#with (groupIdLookup ../dataGroups parentgroupId)}}%20{{spaceReplace groupName}}{{/with}}{{/if}}%20{{spaceReplace groupName}}{{#if groupDesc}}%20{{spaceReplace groupDesc}}{{/if}}">Published</a>
+            {{/ifeq}}
           </td>
           <td>
             {{#if groupType}}

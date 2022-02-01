@@ -32,7 +32,7 @@
             {{publisher}}
           </td>
           <td class="group">
-            {{#if group}}{{#with (groupIdLookup ../dataGroups group)}}{{#if groupLink}}<a href="groups/{{../../htmlLink}}#{{groupId}}">{{/if}}{{groupOrg}} {{groupName}} {{groupDesc}}{{#if groupLink}}</a>{{/if}}{{/with}}{{/if}}
+            {{#if group}}{{#with (groupIdLookup ../dataGroups group)}}{{#if groupLink}}<a href="groups/{{../../htmlLink}}?search.search={{groupId}}">{{/if}}{{groupOrg}} {{groupName}} {{groupDesc}}{{#if groupLink}}</a>{{/if}}{{/with}}{{/if}}
           </td>
           <td class="group d-none">
             {{#if group}}{{#with (groupIdLookup ../dataGroups group)}}{{groupOrg}} {{groupName}} {{groupDesc}}{{/with}}{{/if}}
@@ -185,7 +185,7 @@
                         <div class="p-2{{#unless @last}} border-bottom{{/unless}}"> 
                           {{#if projectId}}
                           {{#with (projectIdLookup ../../../dataProjects projectId)}}
-                          <span class="font-weight-bold small">Work Type: </span><a class="project-link clear-filter" href="projects/{{../../../../htmlLink}}#{{projectId}}">{{workType}}</a> {{#if projApproved}}<span class="label badge badge-success float-right">Project Approved</span>{{/if}}
+                          <span class="font-weight-bold small">Work Type: </span><a class="project-link clear-filter" href="projects/{{../../../../htmlLink}}?search.search={{projectId}}">{{workType}}</a> {{#if projApproved}}<span class="label badge badge-success float-right">Project Approved</span>{{/if}}
                           {{#if projectStatus}}
                           <br>
                           <span class="font-weight-bold small">Work Status: </span>
@@ -199,13 +199,13 @@
                           {{#if assignedTC}}
                           {{#with (groupIdLookup ../../../../dataGroups assignedTC)}}
                           <br>
-                          <span class="font-weight-bold small">Assigned TC: </span><a href="groups/{{../../../../../htmlLink}}#{{groupId}}">{{groupOrg}} {{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}</a>
+                          <span class="font-weight-bold small">Assigned TC: </span><a href="groups/{{../../../../../htmlLink}}?search.search={{groupId}}">{{groupOrg}} {{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}</a>
                           {{/with}}
                           {{/if}}
                           {{#if assignedGroup}}
                           {{#with (groupIdLookup ../../../../dataGroups assignedGroup)}}
                           <br>
-                          <span class="font-weight-bold small">Assigned Group: </span><a href="groups/{{../../../../../htmlLink}}#{{groupId}}">{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../../../../dataGroups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}</a>
+                          <span class="font-weight-bold small">Assigned Group: </span><a href="groups/{{../../../../../htmlLink}}?search.search={{groupId}}">{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../../../../dataGroups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}</a>
                           {{/with}}
                           {{/if}}
                           {{#if workNotes}}
@@ -267,7 +267,7 @@
                           {{#if assignedGroup}}
                           {{#with (groupIdLookup ../../../dataGroups assignedGroup)}}
                           <br>
-                          <span class="font-weight-bold small">Assigned Group: </span><a href="groups/{{../../../../htmlLink}}#{{groupId}}">{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../../../dataGroups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}</a>
+                          <span class="font-weight-bold small">Assigned Group: </span><a href="groups/{{../../../../htmlLink}}?search.search={{groupId}}">{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../../../dataGroups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}</a>
                           {{/with}}
                           {{/if}}
                           {{#if reviewDate}}

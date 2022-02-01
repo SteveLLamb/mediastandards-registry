@@ -29,7 +29,7 @@
           </td>
           <td>
             {{#if docId}}
-            <a class="document-link clear-filter" href="../{{../htmlLink}}#{{docId}}">{{getLabel docId}}</a>
+            <a class="document-link clear-filter" href="../{{../htmlLink}}?search.search={{docId}}">{{getLabel docId}}</a>
             <br>
             [{{getStatus docId}}] {{{getstatusButton docId "12"}}}
             {{/if}}
@@ -63,7 +63,7 @@
           <td>
             {{#if assignedGroup}}
             {{#with (groupIdLookup ../dataGroups assignedGroup)}}
-            {{#if groupLink}}<a href="../groups/{{../../htmlLink}}#{{groupId}}">{{/if}}{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../dataGroups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}
+            {{#if groupLink}}<a href="../groups/{{../../htmlLink}}?search.search={{groupId}}">{{/if}}{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../dataGroups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}
             {{/with}}
             {{/if}}
           </td>
@@ -79,7 +79,7 @@
             <ul class="list-group list-group-flush">
             {{#docAffected}}
               <li class="list-group-item">
-                <span class="small"><a class="document-link clear-filter" href="../{{../../htmlLink}}#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}}
+                <span class="small"><a class="document-link clear-filter" href="../{{../../htmlLink}}?search.search={{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}}
               </li>
             {{/docAffected}}
             </ul>
@@ -116,7 +116,7 @@
             <ul class="list-group list-group-flush">
             {{#updateDependency}}
               <li class="list-group-item">
-                <span class="small"><a class="document-link clear-filter" href="../{{../../htmlLink}}#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}}
+                <span class="small"><a class="document-link clear-filter" href="../{{../../htmlLink}}?search.search={{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}}
               </li>
             {{/updateDependency}}
             </ul>

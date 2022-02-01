@@ -13,14 +13,35 @@ $(document).ready(function(){
 
 $(document).on('click', '.clear-filter', function(){       
 
-  var table = $('#sorttableDocs').DataTable();
-  table
+  var docTable = $('#sorttableDocs').DataTable();
+  docTable
    .search( '' )
    .columns().search( '' )
    .draw();
 
   $('#sorttableDocs').DataTable().searchPanes.clearSelections();
   $('#sorttableDocs').DataTable().order([0, 'asc']).draw();
+
+  var groupTable = $('#sorttableGroups').DataTable();
+  groupTable
+   .search( '' )
+   .columns().search( '' )
+   .draw();
+
+  $('#sorttableGroups').DataTable().searchPanes.clearSelections();
+  $('#sorttableGroups').DataTable().order([0, 'asc']).draw();
+
+  var groupProj = $('#sorttableProjs').DataTable();
+  groupProj
+   .search( '' )
+   .columns().search( '' )
+   .draw();
+
+  $('#sorttableProjs').DataTable().searchPanes.clearSelections();
+  $('#sorttableProjs').DataTable().order([0, 'asc']).draw();
+
+  var url= document.location.href;
+  window.history.pushState({}, "", url.split("?")[0]);
 
 });
 
@@ -61,6 +82,9 @@ $(document).ready(function() {
 
           $('#sorttableGroups').DataTable().searchPanes.clearSelections();
           $('#sorttableGroups').DataTable().order([0, 'asc']).draw();
+
+          var url= document.location.href;
+          window.history.pushState({}, "", url.split("?")[0]);
         }
       }
     ],
@@ -74,7 +98,7 @@ $(document).ready(function() {
         targets:[4]
       },
       {
-        visible: false,
+        visible: true,
         targets:[5],
         searchPanes: {
           header: "Technical Committee"
@@ -111,7 +135,7 @@ $(document).ready(function() {
   var defaultOptions = {
     autoWidth: false,
     paging: false,
-    responsive: true,
+    responsive: false,
     buttons: [
       {
         extend: 'searchPanes',
@@ -139,6 +163,9 @@ $(document).ready(function() {
 
           $('#sorttableProjs').DataTable().searchPanes.clearSelections();
           $('#sorttableProjs').DataTable().order([0, 'asc']).draw();
+
+          var url= document.location.href;
+          window.history.pushState({}, "", url.split("?")[0]);
         }
       }
     ],
@@ -395,6 +422,9 @@ $(document).ready(function() {
 
           $('#sorttableDocs').DataTable().searchPanes.clearSelections();
           $('#sorttableDocs').DataTable().order([0, 'asc']).draw();
+
+          var url= document.location.href;
+          window.history.pushState({}, "", url.split("?")[0]);
         }
       }
     ],
