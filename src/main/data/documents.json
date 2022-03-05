@@ -578,6 +578,460 @@
     }
   },
   {
+    "docId": "ampas-p-2013-001",
+    "docLabel": "AMPAS P-2013-001",
+    "docTitle": "Recommended Procedures for the Creation and Use of Digital Camera System Input Device Transforms (IDTs)",
+    "docType": "Procedure",
+    "href": "http://j.mp/P-2013-001",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2020-01-23T07:00:00.000Z",
+    "publisher": "The Academy of Motion Picture Arts and Sciences",
+    "references": {
+      "normative": [
+        "st2065-1-2012",
+        "iso7589-2002",
+        "iso17321-2",
+        "rp177-1993"
+      ]
+    },
+    "status": {
+      "draft": true
+    }
+  },
+  {
+    "docId": "ampas-p-2019-001",
+    "docLabel": "AMPAS P-2019-001",
+    "docTitle": "ACES Project Organization and Development Procedure",
+    "docType": "Procedure",
+    "href": "https://aces.mp/P_2019-001",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2019-04-08T07:00:00.000Z",
+    "publisher": "The Academy of Motion Picture Arts and Sciences",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "ampas-s-2008-001",
+    "docLabel": "AMPAS S-2008-001",
+    "docTitle": "Academy Color Encoding Specification (ACES)",
+    "docType": "Specification",
+    "keywords": [
+      "ACES"
+    ],
+    "publisher": "The Academy of Motion Picture Arts and Sciences",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "st2065-1-2012"
+      ]
+    }
+  },
+  {
+    "docId": "ampas-s-2013-001",
+    "docLabel": "AMPAS S-2013-001",
+    "docTitle": "ACESproxy – An Integer Log Encoding of ACES Image Data",
+    "docType": "Specification",
+    "href": "http://j.mp/S-2013-001",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-07-18T07:00:00.000Z",
+    "publisher": "The Academy of Motion Picture Arts and Sciences",
+    "references": {
+      "normative": [
+        "st2065-1-2012",
+        "rp177-1993"
+      ]
+    },
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "ampas-s-2014-002",
+    "docLabel": "AMPAS S-2014-002",
+    "docTitle": "Academy Color Encoding System – Versioning System",
+    "docType": "Specification",
+    "href": "http://j.mp/S-2014-002",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2019-12-13T07:00:00.000Z",
+    "publisher": "The Academy of Motion Picture Arts and Sciences",
+    "references": {
+      "normative": [
+        "ampas-tb-2014-002",
+        "ampas-tb-2014-012",
+        "st2065-1-2012"
+      ]
+    },
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "ampas-s-2014-003",
+    "docLabel": "AMPAS S-2014-003",
+    "docTitle": "ACEScc – A Logarithmic Encoding of ACES Data for use within Color Grading Systems",
+    "docType": "Specification",
+    "href": "http://j.mp/S-2014-003",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-07-18T07:00:00.000Z",
+    "publisher": "The Academy of Motion Picture Arts and Sciences",
+    "references": {
+      "normative": [
+        "ampas-s-2013-001",
+        "st2065-1-2012",
+        "rp177-1993"
+      ]
+    },
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "ampas-s-2014-004",
+    "docLabel": "AMPAS S-2014-004",
+    "docTitle": "ACEScg – A Working Space for CGI Render and Compositing",
+    "docType": "Specification",
+    "href": "http://j.mp/S-2014-004",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-03-29T07:00:00.000Z",
+    "publisher": "The Academy of Motion Picture Arts and Sciences",
+    "references": {
+      "normative": [
+        "st2065-1-2012",
+        "rp177-1993",
+        "ampas-s-2013-001",
+        "ampas-s-2014-003"
+      ]
+    },
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "ampas-s-2014-006",
+    "docLabel": "AMPAS S-2014-006",
+    "docTitle": "Common LUT Format (CLF) – A Common File Format for Look-Up Tables",
+    "docType": "Specification",
+    "href": "http://j.mp/S-2014-006",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2021-07-22T07:00:00.000Z",
+    "publisher": "The Academy of Motion Picture Arts and Sciences",
+    "references": {
+      "normative": [
+        "rfc3066",
+        "ampas-s-2014-002",
+        "ampas-tb-2014-002",
+        "asc-cdl-r1-2"
+      ]
+    },
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "ampas-s-2016-001",
+    "docLabel": "AMPAS S-2016-001",
+    "docTitle": "ACEScct – A Quasi-Logarithmic Encoding of ACES Data for use within Color Grading Systems",
+    "docType": "Specification",
+    "href": "http://j.mp/S-2016-001",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-09-20T07:00:00.000Z",
+    "publisher": "The Academy of Motion Picture Arts and Sciences",
+    "references": {
+      "normative": [
+        "st2065-1-2012",
+        "rp177-1993"
+      ]
+    },
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "ampas-s-2019-001",
+    "docLabel": "AMPAS S-2019-001",
+    "docTitle": "ACES Metadata File (AMF)",
+    "docType": "Specification",
+    "href": "https://aces.mp/S-2019-001",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2020-03-10T07:00:00.000Z",
+    "publisher": "The Academy of Motion Picture Arts and Sciences",
+    "references": {
+      "normative": [
+        "ampas-s-2014-002",
+        "st2065-1-2012",
+        "st2065-4-2013",
+        "ampas-tb-2014-010",
+        "iso8601-2004",
+        "iso11578-1998",
+        "st2067-50-2018",
+        "rdd47-2018",
+        "st2067-9-2018"
+      ]
+    },
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "ampas-tb-2014-001",
+    "docLabel": "AMPAS TB-2014-001",
+    "docTitle": "Academy Color Encoding System (ACES) Documentation Guide",
+    "docType": "Technical Bulletin",
+    "href": "http://j.mp/TB-2014-001",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2020-04-01T07:00:00.000Z",
+    "publisher": "The Academy of Motion Picture Arts and Sciences",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "ampas-tb-2014-002",
+    "docLabel": "AMPAS TB-2014-002",
+    "docTitle": "Academy Color Encoding System (ACES) Version 1.0 User Experience Guidelines",
+    "docType": "Technical Bulletin",
+    "href": "http://j.mp/TB-2014-002",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-03-29T07:00:00.000Z",
+    "publisher": "The Academy of Motion Picture Arts and Sciences",
+    "references": {
+      "normative": [
+        "st2065-1-2012",
+        "st2065-2-2012",
+        "st2065-3-2012",
+        "st2065-4-2013",
+        "ampas-p-2013-001",
+        "ampas-s-2014-002",
+        "ampas-s-2014-006",
+        "ampas-tb-2014-009",
+        "ampas-tb-2014-010"
+      ]
+    },
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "ampas-tb-2014-004",
+    "docLabel": "AMPAS TB-2014-004",
+    "docTitle": "Informative Notes on SMPTE ST 2065-1 – Academy Color Encoding Specification (ACES)",
+    "docType": "Technical Bulletin",
+    "href": "http://j.mp/TB-2014-004",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-03-29T07:00:00.000Z",
+    "publisher": "The Academy of Motion Picture Arts and Sciences",
+    "references": {
+      "normative": [
+        "st2065-1-2012",
+        "ampas-s-2008-001"
+      ]
+    },
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "ampas-tb-2014-005",
+    "docLabel": "AMPAS TB-2014-005",
+    "docTitle": "Informative Notes on SMPTE ST 2065-2 – Academy Printing Density (APD) – Spectral Responsivities, Reference Measurement Device and Spectral Calculation and SMPTE ST 2065-3 Academy Density Exchange Encoding (ADX) – Encoding Printing Density (APD) Values",
+    "docType": "Technical Bulletin",
+    "href": "http://j.mp/TB-2014-005",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-03-29T07:00:00.000Z",
+    "publisher": "The Academy of Motion Picture Arts and Sciences",
+    "references": {
+      "normative": [
+        "st2065-2-2012",
+        "st2065-3-2012"
+      ]
+    },
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "ampas-tb-2014-006",
+    "docLabel": "AMPAS TB-2014-006",
+    "docTitle": "Informative Notes on SMPTE ST 2065-4 – ACES Image Container File Layout",
+    "docType": "Technical Bulletin",
+    "href": "http://j.mp/TB-2014-006",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-03-29T07:00:00.000Z",
+    "publisher": "The Academy of Motion Picture Arts and Sciences",
+    "references": {
+      "normative": [
+        "st2065-4-2013"
+      ]
+    },
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "ampas-tb-2014-007",
+    "docLabel": "AMPAS TB-2014-007",
+    "docTitle": "Informative Notes on SMPTE ST 268:2014 – File Format for Digital Moving Picture Exchange (DPX)",
+    "docType": "Technical Bulletin",
+    "href": "http://j.mp/TB-2014-007",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-03-29T07:00:00.000Z",
+    "publisher": "The Academy of Motion Picture Arts and Sciences",
+    "references": {
+      "normative": [
+        "st268-2014"
+      ]
+    },
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "ampas-tb-2014-009",
+    "docLabel": "AMPAS TB-2014-009",
+    "docTitle": "Academy Color Encoding System (ACES) Clip-level Metadata File Format Definition and Usage",
+    "docType": "Technical Bulletin",
+    "keywords": [
+      "ACES"
+    ],
+    "publisher": "The Academy of Motion Picture Arts and Sciences",
+    "status": {
+      "unknown": true
+    }
+  },
+  {
+    "docId": "ampas-tb-2014-010",
+    "docLabel": "AMPAS TB-2014-010",
+    "docTitle": "Design, Integration and Use of ACES Look Modification Transforms",
+    "docType": "Technical Bulletin",
+    "href": "http://j.mp/TB-2014-010",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-03-29T07:00:00.000Z",
+    "publisher": "The Academy of Motion Picture Arts and Sciences",
+    "references": {
+      "normative": [
+        "st2065-1-2012",
+        "ampas-s-2013-001",
+        "ampas-s-2014-003",
+        "ampas-s-2014-006",
+        "ampas-tb-2014-009",
+        "asc-cdl-r1-2"
+      ]
+    },
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "ampas-tb-2014-012",
+    "docLabel": "AMPAS TB-2014-012",
+    "docTitle": "Academy Color Encoding System Version 1.0 Component Names",
+    "docType": "Technical Bulletin",
+    "href": "http://j.mp/TB-2014-012",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-03-29T07:00:00.000Z",
+    "publisher": "The Academy of Motion Picture Arts and Sciences",
+    "references": {
+      "normative": [
+        "bt2020-2-201510",
+        "st2065-1-2012",
+        "st2065-4-2013",
+        "asc-cdl-r1-2",
+        "ampas-s-2013-001",
+        "ampas-s-2014-003",
+        "ampas-s-2014-004",
+        "ampas-s-2014-006",
+        "ampas-p-2013-001",
+        "ampas-tb-2014-002",
+        "ampas-tb-2014-009",
+        "ampas-tb-2014-010"
+      ]
+    },
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "ampas-tb-2014-013",
+    "docLabel": "AMPAS TB-2014-013",
+    "docTitle": "Alternate ACES Viewing Pipeline User Experience",
+    "docType": "Technical Bulletin",
+    "href": "http://j.mp/TB-2014-013",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-03-29T07:00:00.000Z",
+    "publisher": "The Academy of Motion Picture Arts and Sciences",
+    "status": {
+      "draft": true
+    }
+  },
+  {
+    "docId": "ampas-tb-2018-001",
+    "docLabel": "AMPAS TB-2018-01",
+    "docTitle": "Derivation of the ACES White Point CIE Chromaticity Coordinates",
+    "docType": "Technical Bulletin",
+    "href": "http://j.mp/TB-2018-001",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2018-06-15T07:00:00.000Z",
+    "publisher": "The Academy of Motion Picture Arts and Sciences",
+    "references": {
+      "normative": [
+        "st2065-1-2012",
+        "isbn-978-0-470-51244-9",
+        "rp177-1993",
+        "ampas-s-2014-004",
+        "ampas-s-2014-003",
+        "ampas-s-2016-001",
+        "ampas-p-2013-001",
+        "cie15-2004",
+        "isbn-978-0-471-39918-6",
+        "issn-15502716",
+        "issn-0036-1682"
+      ]
+    },
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "ansis1-11-2004",
     "docLabel": "ANSI/ASA S1.11-2004 (R2009)",
     "docTitle": "Octave-Band And Fractional-Octave-Band Analog And Digital Filters",
@@ -626,12 +1080,38 @@
     }
   },
   {
+    "docId": "as-11",
+    "docLabel": "AS-11",
+    "docTitle": "Media Contribution File Formats",
+    "docType": "Specification",
+    "href": "https://www.amwa.tv/as-11",
+    "publisher": "AMWA",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "details": "Cannot locate",
     "docId": "asa-ph22-55-1966",
     "docLabel": "ASA PH22.55-1966",
     "docTitle": "(SMPTE Universal Leader) Leaders and Cue Marks for 35-mm and 16-mm Sound Motion-Picture Release Prints, 1966.",
     "docType": "Standard",
     "publisher": "ASA/SMPTE",
+    "status": {
+      "unknown": true
+    }
+  },
+  {
+    "authors": [
+      "Joshua Pines",
+      "David Reisner"
+    ],
+    "docId": "asc-cdl-r1-2",
+    "docLabel": "ASC-CDL Release 1.2",
+    "docTitle": "ASC Color Decision List (ASC CDL) Transfer Functions and Interchange Syntax",
+    "docType": "White Paper",
+    "publicationDate": "2009-05-04T07:00:00.000Z",
+    "publisher": "ASC",
     "status": {
       "unknown": true
     }
@@ -749,6 +1229,19 @@
     }
   },
   {
+    "docId": "br1384-2-201103",
+    "docLabel": "BR.1384-2 (03/2011)",
+    "docTitle": "Parameters for international exchange of multi-channel sound recordings with or without accompanying picture",
+    "docType": "Recommendation",
+    "href": "https://www.itu.int/dms_pubrec/itu-r/rec/br/R-REC-BR.1384-2-201103-W!!PDF-E.pdf",
+    "publicationDate": "2011-03-08T07:00:00.000Z",
+    "publisher": "ITU-R",
+    "status": {
+      "active": false,
+      "withdrawn": true
+    }
+  },
+  {
     "details": "Cannot locate supersededBy doc",
     "docId": "bs1196-1995-a2",
     "docLabel": "BS.1196 (1995) Annex 2",
@@ -760,6 +1253,46 @@
     "status": {
       "active": false,
       "superseded": true
+    }
+  },
+  {
+    "docId": "bt2020-2-201510",
+    "docLabel": "BT.2020-2 (10/2015)",
+    "docTitle": "Parameter values for ultra-high definition television systems for production and international programme exchange",
+    "docType": "Recommendation",
+    "href": "https://www.itu.int/rec/R-REC-BT.2020-2-201510-I/en",
+    "publicationDate": "2015-10-14T07:00:00.000Z",
+    "publisher": "ITU-R",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "bt2035-201307",
+    "docLabel": "BT.2035 (07/2013)",
+    "docTitle": "A reference viewing environment for evaluation of HDTV program material or completed programmes",
+    "docType": "Recommendation",
+    "href": "https://www.itu.int/rec/R-REC-BT.2035-0-201307-I",
+    "publicationDate": "2013-07-16T07:00:00.000Z",
+    "publisher": "ITU-R",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "bt2100-1-201706",
+    "docLabel": "BT.2100-1 (06/2017)",
+    "docTitle": "Image parameter values for high dynamic range television for use in production and international programme exchange",
+    "docType": "Recommendation",
+    "href": "https://www.itu.int/rec/R-REC-BT.2100-1-201706-S/en",
+    "publicationDate": "2017-06-20T07:00:00.000Z",
+    "publisher": "ITU-R",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "bt2100-2-201807"
+      ]
     }
   },
   {
@@ -775,6 +1308,34 @@
     }
   },
   {
+    "docId": "bt2390-10-202111",
+    "docLabel": "BT.2390-10 (11/2021)",
+    "docTitle": "High dynamic range television for production and international programme exchange",
+    "docType": "Report",
+    "href": "https://www.itu.int/pub/R-REP-BT.2390-10-2021",
+    "publicationDate": "2021-11-01T07:00:00.000Z",
+    "publisher": "ITU-R",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "bt2390-4-201804",
+    "docLabel": "BT.2390-4 (04/2018)",
+    "docTitle": "High dynamic range television for production and international programme exchange",
+    "docType": "Report",
+    "href": "https://www.itu.int/pub/R-REP-BT.2390-4-2018",
+    "publicationDate": "2018-04-01T07:00:00.000Z",
+    "publisher": "ITU-R",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "bt2390-8-202002"
+      ]
+    }
+  },
+  {
     "docId": "bt2390-8-202002",
     "docLabel": "BT.2390-8 (02/2020)",
     "docTitle": "High dynamic range television for production and international programme exchange",
@@ -783,7 +1344,11 @@
     "publicationDate": "2020-02-01T07:00:00.000Z",
     "publisher": "ITU-R",
     "status": {
-      "active": true
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "bt2390-10-202111"
+      ]
     }
   },
   {
@@ -982,6 +1547,73 @@
     }
   },
   {
+    "docId": "cea-608-e-2008-ansi",
+    "docLabel": "CEA 608-E-2008 (ANSI)",
+    "docTitle": "Line 21 Data Services",
+    "docType": "Standard",
+    "href": "https://webstore.ansi.org/Standards/CEA/CEA6082008ANSI",
+    "publisher": "CEA",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "cea-608-e-r2014-ansi"
+      ]
+    }
+  },
+  {
+    "docId": "cea-608-e-r2014-ansi",
+    "docLabel": "CEA 608-E-2008 (R2014) (ANSI)",
+    "docTitle": "Line 21 Data Services",
+    "docType": "Standard",
+    "href": "https://webstore.ansi.org/Standards/CEA/CEA6082008R2014ANSI",
+    "publisher": "CEA",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "cea-708-d-2008",
+    "docLabel": "CEA 708-D-2008",
+    "docTitle": "Digital Television (DTV) Closed Captioning",
+    "docType": "Standard",
+    "href": "https://webstore.ansi.org/standards/cea/cea7082008",
+    "publisher": "CEA",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "cea-708-e-2013"
+      ]
+    }
+  },
+  {
+    "docId": "cea-708-e-2013",
+    "docLabel": "CEA 708-E-2013",
+    "docTitle": "Digital Television (DTV) Closed Captioning",
+    "docType": "Standard",
+    "href": "https://webstore.ansi.org/Standards/CEA/CEA7082013",
+    "publisher": "CEA",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "cea-708-e-2013-ansi"
+      ]
+    }
+  },
+  {
+    "docId": "cea-708-e-2013-ansi",
+    "docLabel": "CEA 708-E-2013 (ANSI)",
+    "docTitle": "Digital Television (DTV) Closed Captioning",
+    "docType": "Standard",
+    "href": "https://webstore.ansi.org/Standards/CEA/CEA7082013ANSI",
+    "publisher": "CEA",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "cie15-2-1986",
     "docLabel": "CIE 15.2:1986",
     "docTitle": "Colorimetry (Second Edition)",
@@ -1056,6 +1688,17 @@
     "publisher": "University of Chicago Press",
     "status": {
       "unknown": true
+    }
+  },
+  {
+    "docId": "cta861-g-2016",
+    "docLabel": "CTA 861-G-2016",
+    "docTitle": "A DTV Profile For Uncompressed High Speed Digital Interfaces",
+    "docType": "Standard",
+    "href": "https://webstore.ansi.org/standards/ansi/cta8612016",
+    "publisher": "ANSI",
+    "status": {
+      "active": true
     }
   },
   {
@@ -1798,6 +2441,48 @@
     }
   },
   {
+    "docId": "dpp003",
+    "docLabel": "DPP003",
+    "docTitle": "Carriage of AMWA AS-11 Metadata in IMF",
+    "docType": "Recommendation",
+    "href": "https://www.thedpp.com/downloads#dpp003",
+    "keywords": [
+      "IMF"
+    ],
+    "publisher": "DPP",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "dpp004",
+    "docLabel": "DPP004",
+    "docTitle": "IMF QC Workflows",
+    "docType": "Recommendation",
+    "href": "https://www.thedpp.com/downloads#dpp004",
+    "keywords": [
+      "IMF"
+    ],
+    "publisher": "DPP",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "dpp005",
+    "docLabel": "DPP005",
+    "docTitle": "IMF Operational Guidance",
+    "docType": "Recommendation",
+    "href": "https://www.thedpp.com/downloads#dpp005",
+    "keywords": [
+      "IMF"
+    ],
+    "publisher": "DPP",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "ebu-r-128",
     "docLabel": "EBU R 128",
     "docTitle": "Loudness Normalisation and Permitted Maximum Level of Audio Signals",
@@ -2203,6 +2888,18 @@
     }
   },
   {
+    "docId": "eidr-sv-209-df-20151227",
+    "docLabel": "EIDR SV 2.0.9 DFR",
+    "docTitle": "EIDR SYSTEM VERSION 2.0.9 DATA FIELDS REFERENCE",
+    "docType": "Informational",
+    "href": "https://eidr.org/documents/EIDR_2.0_Data_Fields.pdf",
+    "publicationDate": "2015-12-27:00:00.000Z",
+    "publisher": "EIDR",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "etsi-etr-154-e3",
     "docLabel": "ETR 154 Edition 3",
     "docTitle": "Digital Video Broadcasting (DVB); Implementation guidelines for the use of MPEG-2 Systems, Video and Audio in satellite, cable and terrestrial broadcasting applications",
@@ -2554,6 +3251,34 @@
     }
   },
   {
+    "docId": "iec-61966-2-4-2006",
+    "docLabel": "IEC 61966-2-4:2006",
+    "docTitle": "Multimedia systems and equipment - Colour measurement and management - Part 2-4: Colour management - Extended-gamut YCC colour space for video applications - xvYCC",
+    "docType": "Standard",
+    "href": "https://webstore.iec.ch/publication/6173",
+    "publicationDate": "2006-01-17T07:00:00.000Z",
+    "publisher": "IEC",
+    "status": {
+      "active": true,
+      "amended": true,
+      "amendedBy": [
+        "iec-61966-2-4-2006-amd1-2016-amd2-2021"
+      ]
+    }
+  },
+  {
+    "docId": "iec-61966-2-4-2006-amd1-2016-amd2-2021",
+    "docLabel": "IEC 61966-2-4:2006+AMD1:2016+AMD2:2021",
+    "docTitle": "Multimedia systems and equipment - Colour measurement and management - Part 2-4: Colour management - Extended-gamut YCC colour space for video applications - xvYCC",
+    "docType": "Standard",
+    "href": "https://webstore.iec.ch/publication/69929",
+    "publicationDate": "2021-07-13T07:00:00.000Z",
+    "publisher": "IEC",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "ieee-754-1985",
     "docLabel": "IEEE 754:1985",
     "docTitle": "Binary Floating-Point Arithmetic",
@@ -2761,6 +3486,36 @@
     "docTitle": "SSL and TLS: Designing and Building Secure Systems",
     "docType": "Book",
     "publicationDate": "2000-10-00T07:00:00.000Z",
+    "publisher": "Addison-Wesley",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "authors": [
+      "Edward J Giorgianni",
+      "Thomas E Madden"
+    ],
+    "docId": "isbn-978-0-470-51244-9",
+    "docLabel": "ISBN 978-0-470-51244-9",
+    "docTitle": "Digital Color Management: Encoding Solutions, 2nd Edition",
+    "docType": "Book",
+    "publicationDate": "2009-01-00T07:00:00.000Z",
+    "publisher": "Addison-Wesley",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "authors": [
+      "Günther Wyszecki",
+      "W. S. Stiles"
+    ],
+    "docId": "isbn-978-0-471-39918-6",
+    "docLabel": "ISBN 978-0-471-39918-6",
+    "docTitle": "Color Science: Concepts and Methods, Quantitative Data and Formulae, 2nd Edition",
+    "docType": "Book",
+    "publicationDate": "2000-08-00T07:00:00.000Z",
     "publisher": "Addison-Wesley",
     "status": {
       "active": true
@@ -3235,8 +3990,8 @@
     }
   },
   {
-    "docId": "iso11578-1-1998",
-    "docLabel": "ISO 11578-1:1998",
+    "docId": "iso11578-1998",
+    "docLabel": "ISO 11578:1998",
     "docTitle": "Information technology — Open Systems Interconnection — Remote Procedure Call (RPC)",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/2229.html",
@@ -3259,6 +4014,23 @@
       "superseded": true,
       "supersededBy": [
         "isocie11664-1-2019"
+      ],
+      "withdrawn": true
+    }
+  },
+  {
+    "docId": "iso11664-3-2012",
+    "docLabel": "ISO 11664-3:2012",
+    "docTitle": "Colorimetry — Part 3: CIE tristimulus values",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/60331.html",
+    "publicationDate": "2012-04-01T07:00:00.000Z",
+    "publisher": "ISO",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "isocie11664-3-2019"
       ],
       "withdrawn": true
     }
@@ -3362,7 +4134,7 @@
     }
   },
   {
-    "docId": "iso14496-11-2005",
+    "docId": "iso14496-10-2005",
     "docLabel": "ISO 14496-10:2005",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 10: Advanced Video Coding",
     "docType": "Standard",
@@ -3373,13 +4145,13 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "iso14496-11-2014"
+        "iso14496-10-2014"
       ],
       "withdrawn": true
     }
   },
   {
-    "docId": "iso14496-11-2014",
+    "docId": "iso14496-10-2014",
     "docLabel": "ISO 14496-10:2014",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 10: Advanced Video Coding",
     "docType": "Standard",
@@ -3387,16 +4159,20 @@
     "publicationDate": "2014-09-01T07:00:00.000Z",
     "publisher": "ISO/IEC",
     "status": {
-      "active": true,
+      "active": false,
       "amended": true,
       "amendedBy": [
-        "iso14496-11-2014-amd1-2015",
-        "iso14496-11-2014-amd3-2016"
+        "iso14496-10-2014-amd1-2015",
+        "iso14496-10-2014-amd3-2016"
+      ],
+      "superseded": true,
+      "supersededBy": [
+        "iso14496-10-2020"
       ]
     }
   },
   {
-    "docId": "iso14496-11-2014-amd1-2015",
+    "docId": "iso14496-10-2014-amd1-2015",
     "docLabel": "ISO 14496-10:2014/AMD 1:2015",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 10: Advanced Video Coding — Amendment 1: Multi-Resolution frame compatible stereoscopic video with depth maps, additional supplemental enhancement information and video usability information",
     "docType": "Standard",
@@ -3404,16 +4180,197 @@
     "publicationDate": "2015-11-01T07:00:00.000Z",
     "publisher": "ISO/IEC",
     "status": {
-      "active": true
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "iso14496-10-2020"
+      ]
     }
   },
   {
-    "docId": "iso14496-11-2014-amd3-2016",
+    "docId": "iso14496-10-2014-amd3-2016",
     "docLabel": "ISO 14496-10:2014/AMD 3:2016",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 10: Advanced Video Coding — Amendment 3: Additional supplemental enhancement information",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/69728.html",
     "publicationDate": "2016-12-01T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "iso14496-10-2020"
+      ]
+    }
+  },
+  {
+    "docId": "iso14496-10-2020",
+    "docLabel": "ISO/IEC 14496-10:2020",
+    "docTitle": "Information technology — Coding of audio-visual objects — Part 10: Advanced Video Coding",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/75400.html",
+    "publicationDate": "2020-12-01T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": true,
+      "amended": true,
+      "amendedBy": [
+        "iso14496-10-2020-cd-amd1"
+      ]
+    }
+  },
+  {
+    "docId": "iso14496-10-2020-cd-amd1",
+    "docLabel": "ISO/IEC 14496-10:2020/CD AMD 1",
+    "docTitle": "Information technology — Coding of audio-visual objects — Part 10: Advanced video coding — Amendment 1: Additional SEI messages",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/82534.html",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": false,
+      "withdrawn": false
+    }
+  },
+  {
+    "docId": "iso14496-2-2004",
+    "docLabel": "ISO/IEC 14496-2:2004",
+    "docTitle": "Information technology — Coding of audio-visual objects — Part 2: Visual",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/39259.html",
+    "publicationDate": "2004-06-01T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": true,
+      "amended": true,
+      "amendedBy": [
+        "iso14496-2-2004-amd1-2004",
+        "iso14496-2-2004-cor1-2004",
+        "iso14496-2-2004-amd2-2005",
+        "iso14496-2-2004-cor2-2007",
+        "iso14496-2-2004-amd3-2007",
+        "iso14496-2-2004-cor3-2008",
+        "iso14496-2-2004-amd4-2008",
+        "iso14496-2-2004-cor4-2010",
+        "iso14496-2-2004-amd5-2009",
+        "iso14496-2-2004-cor5-2013"
+      ]
+    }
+  },
+  {
+    "docId": "iso14496-2-2004-amd1-2004",
+    "docLabel": "ISO/IEC 14496-2:2004/AMD 1:2004",
+    "docTitle": "Information technology — Coding of audio-visual objects — Part 2: Visual — Amendment 1: Error resilient simple scalable profile",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/39365.html",
+    "publicationDate": "2004-06-01T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "iso14496-2-2004-amd2-2005",
+    "docLabel": "ISO/IEC 14496-2:2004/AMD 2:2005",
+    "docTitle": "Information technology — Coding of audio-visual objects — Part 2: Visual — Amendment 2: New Levels for Simple Profile",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/41483.html",
+    "publicationDate": "2005-10-01T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "iso14496-2-2004-amd3-2007",
+    "docLabel": "ISO/IEC 14496-2:2004/AMD 3:2007",
+    "docTitle": "Information technology — Coding of audio-visual objects — Part 2: Visual — Amendment 3: Support for colour spaces",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/43658.html",
+    "publicationDate": "2007-07-01T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "iso14496-2-2004-amd4-2008",
+    "docLabel": "ISO/IEC 14496-2:2004/AMD 4:2008",
+    "docTitle": "Information technology — Coding of audio-visual objects — Part 2: Visual — Amendment 4: Simple profile level 6",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/46285.html",
+    "publicationDate": "2008-05-01T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "iso14496-2-2004-amd5-2009",
+    "docLabel": "ISO/IEC 14496-2:2004/AMD 5:2009",
+    "docTitle": "Information technology — Coding of audio-visual objects — Part 2: Visual — Amendment 5: Simple studio profile levels 5 and 6",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/51748.html",
+    "publicationDate": "2009-06-01T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "iso14496-2-2004-cor1-2004",
+    "docLabel": "ISO/IEC 14496-2:2004/COR 1:2004",
+    "docTitle": "Information technology — Coding of audio-visual objects — Part 2: Visual — Technical Corrigendum 1",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/40742.html",
+    "publicationDate": "2004-06-01T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "iso14496-2-2004-cor2-2007",
+    "docLabel": "ISO/IEC 14496-2:2004/COR 2:2007",
+    "docTitle": "Information technology — Coding of audio-visual objects — Part 2: Visual — Technical Corrigendum 2",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/43970.html",
+    "publicationDate": "2007-12-01T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "iso14496-2-2004-cor3-2008",
+    "docLabel": "ISO/IEC 14496-2:2004/COR 3:2008",
+    "docTitle": "Information technology — Coding of audio-visual objects — Part 2: Visual — Technical Corrigendum 3: .",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/50995.html",
+    "publicationDate": "2008-11-01T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "iso14496-2-2004-cor4-2010",
+    "docLabel": "ISO/IEC 14496-2:2004/COR 4:2010",
+    "docTitle": "Information technology — Coding of audio-visual objects — Part 2: Visual — Technical Corrigendum 4",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/55899.html",
+    "publicationDate": "2010-09-01T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "iso14496-2-2004-cor5-2013",
+    "docLabel": "ISO/IEC 14496-2:2004/COR 5:2013",
+    "docTitle": "Information technology — Coding of audio-visual objects — Part 2: Visual — Technical Corrigendum 5",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/63524.html",
+    "publicationDate": "2013-11-01T07:00:00.000Z",
     "publisher": "ISO/IEC",
     "status": {
       "active": true
@@ -3496,9 +4453,15 @@
       "amendedBy": [
         "iso15444-1-2004-amd1-2006",
         "iso15444-1-2004-cor1-2007",
-        "iso15444-1-2004-cor2-2008",
         "iso15444-1-2004-amd2-2009",
+        "iso15444-1-2004-cor2-2008",
+        "iso15444-1-2004-amd3-2010",
+        "iso15444-1-2004-cor3-2015",
         "iso15444-1-2004-amd4-2013",
+        "iso15444-1-2004-cor4-2015",
+        "iso15444-1-2004-amd5-2013",
+        "iso15444-1-2004-amd6-2013",
+        "iso15444-1-2004-amd7-2015",
         "iso15444-1-2004-amd8-2015"
       ],
       "superseded": true,
@@ -3548,6 +4511,25 @@
     }
   },
   {
+    "docId": "iso15444-1-2004-amd3-2010",
+    "docLabel": "ISO/IEC 15444-1:2004/AMD 3:2010",
+    "docTitle": "Information technology — JPEG 2000 image coding system: Core coding system — Part 1: — Amendment 3: Profiles for broadcast applications",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/53333.html",
+    "keywords": [
+      "JPEG2000"
+    ],
+    "publicationDate": "2010-12-15T08:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "iso15444-1-2016"
+      ]
+    }
+  },
+  {
     "docId": "iso15444-1-2004-amd4-2013",
     "docLabel": "ISO 15444-1:2004 Amd 4:2013(en)",
     "docTitle": "Information technology — JPEG 2000 image coding system: Core coding system AMENDMENT 4: Guidelines for digital cinema applications",
@@ -3558,6 +4540,64 @@
       "JPEG2000"
     ],
     "publicationDate": "2013-04-15T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "iso15444-1-2016"
+      ]
+    }
+  },
+  {
+    "docId": "iso15444-1-2004-amd5-2013",
+    "docLabel": "ISO/IEC 15444-1:2004/AMD 5:2013",
+    "docTitle": "Information technology — JPEG 2000 image coding system: Core coding system — Part 1: — Amendment 5: Enhancements for digital cinema and archive profiles (additional frame rates)",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/55503.html",
+    "keywords": [
+      "JPEG2000"
+    ],
+    "publicationDate": "2013-05-15T08:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "iso15444-1-2016"
+      ]
+    }
+  },
+  {
+    "docId": "iso15444-1-2004-amd6-2013",
+    "docLabel": "ISO/IEC 15444-1:2004/AMD 6:2013",
+    "docTitle": "Information technology — JPEG 2000 image coding system: Core coding system — Part 1: — Amendment 6: Updated ICC profile support, bit depth and resolution clarifications",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/59863.html",
+    "keywords": [
+      "JPEG2000"
+    ],
+    "publicationDate": "2013-05-15T08:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "iso15444-1-2016"
+      ]
+    }
+  },
+  {
+    "docId": "iso15444-1-2004-amd7-2015",
+    "docLabel": "ISO/IEC 15444-1:2004/AMD 7:2015",
+    "docTitle": "Information technology — JPEG 2000 image coding system: Core coding system — Part 1: — Amendment 7: Profiles for an interoperable master format (IMF)",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/69390.html",
+    "keywords": [
+      "JPEG2000",
+      "IMF"
+    ],
+    "publicationDate": "2015-11-15T08:00:00.000Z",
     "publisher": "ISO/IEC",
     "status": {
       "active": false,
@@ -3628,6 +4668,44 @@
     }
   },
   {
+    "docId": "iso15444-1-2004-cor3-2015",
+    "docLabel": "ISO/IEC 15444-1:2004/COR 3:2015",
+    "docTitle": "Information technology — JPEG 2000 image coding system: Core coding system — Part 1: — Technical Corrigendum 3",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/66389.html",
+    "keywords": [
+      "JPEG2000"
+    ],
+    "publicationDate": "2015-03-15T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "iso15444-1-2016"
+      ]
+    }
+  },
+  {
+    "docId": "iso15444-1-2004-cor4-2015",
+    "docLabel": "ISO/IEC 15444-1:2004/COR 4:2015",
+    "docTitle": "Information technology — JPEG 2000 image coding system: Core coding system — Part 1: — Technical Corrigendum 4",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/67166.html",
+    "keywords": [
+      "JPEG2000"
+    ],
+    "publicationDate": "2015-04-15T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "iso15444-1-2016"
+      ]
+    }
+  },
+  {
     "docId": "iso15444-1-2016",
     "docLabel": "ISO 15444-1:2016(en)",
     "docTitle": "Information technology — JPEG 2000 image coding system: Core coding system",
@@ -3683,6 +4761,18 @@
     "href": "https://www.iso.org/standard/29581.html",
     "publicationDate": "2004-03-01T07:00:00.000Z",
     "publisher": "ISO/IEC",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "iso17321-2",
+    "docLabel": "ISO/TR 17321-2:2012",
+    "docTitle": "Graphic technology and photography — Colour characterization of digital still cameras (DSCs) — Part 2: Considerations for determining scene analysis transforms",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/58003.html",
+    "publicationDate": "2012-10-01T07:00:00.000Z",
+    "publisher": "ISO",
     "status": {
       "active": true
     }
@@ -4946,6 +6036,60 @@
     }
   },
   {
+    "docId": "iso7589-2002",
+    "docLabel": "ISO 7589:2002",
+    "docTitle": "Photography — Illuminants for sensitometry — Specifications for daylight, incandescent tungsten and printer",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/33979.html",
+    "publicationDate": "2002-02-01T07:00:00.000Z",
+    "publisher": "ISO",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "iso8601-1-2019",
+    "docLabel": "ISO 8601-1:2019",
+    "docTitle": "Date and time — Representations for information interchange — Part 1: Basic rules",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/70907.html",
+    "publicationDate": "2019-02-01T07:00:00.000Z",
+    "publisher": "ISO",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "iso8601-2-2019",
+    "docLabel": "ISO 8601-2:2019",
+    "docTitle": "Date and time — Representations for information interchange — Part 2: Extensions",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/70908.html",
+    "publicationDate": "2019-02-01T07:00:00.000Z",
+    "publisher": "ISO",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "iso8601-2004",
+    "docLabel": "ISO 8601:2004",
+    "docTitle": "Data elements and interchange formats — Information interchange — Representation of dates and times",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/40874.html",
+    "publicationDate": "2004-12-01T07:00:00.000Z",
+    "publisher": "ISO",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "iso8601-1-2019",
+        "iso8601-2-2019"
+      ],
+      "withdrawn": true
+    }
+  },
+  {
     "docId": "iso8824-1-2002",
     "docLabel": "ISO 8824-1:2002 (ITU-T X.680)",
     "docTitle": "Information technology — Abstract Syntax Notation One (ASN.1): Specification of basic notation — Part 1",
@@ -5207,6 +6351,48 @@
     }
   },
   {
+    "docId": "isocie11664-3-2019",
+    "docLabel": "ISO/CIE 11664-3:2019",
+    "docTitle": "Colorimetry — Part 3: CIE tristimulus values",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/74165.html",
+    "publicationDate": "2019-06-01T07:00:00.000Z",
+    "publisher": "ISO",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "authors": [
+      "Yoshi Ohno"
+    ],
+    "docId": "issn-0036-1682",
+    "docLabel": "ISSN: 0036-1682",
+    "docTitle": "A Simplified Motion-Picture Laboratory Control Method for Improved Color Duplication",
+    "docType": "Technical Journal",
+    "publicationDate": "1976-10-00T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    },
+    "url": "https://doi.org/10.5594/J07544"
+  },
+  {
+    "authors": [
+      "Yoshi Ohno"
+    ],
+    "docId": "issn-15502716",
+    "docLabel": "ISSN: 15502716",
+    "docTitle": "Practical use and calculation of cct and duv",
+    "docType": "Technical Journal",
+    "publicationDate": "2000-08-00T07:00:00.000Z",
+    "publisher": "The Journal of the Illuminating Engineering Society",
+    "status": {
+      "active": true
+    },
+    "url": "http://dx.doi.org/10.1080/15502724.2014.839020"
+  },
+  {
     "docId": "mw-coldict-11-200307",
     "docLabel": "ISBN 978-0-87779-807-1",
     "docTitle": "Merriam-Webster's Collegiate Dictionary, Eleventh Edition",
@@ -5414,7 +6600,10 @@
     "docTitle": "SMPTE Overview - Interoperable Master Format",
     "docType": "Overview Document",
     "group": "smpte-35pm-tc",
-    "href": "https://doi.org/10.5594/SMPTE.OV2067-0.2021",
+    "href": "https://doi.org/10.5594/SMPTE.OV2067-0-2021",
+    "keywords": [
+      "IMF"
+    ],
     "publicationDate": "2021-08-16T07:00:00.000Z",
     "publisher": "SMPTE",
     "status": {
@@ -5627,6 +6816,76 @@
     }
   },
   {
+    "docId": "rdd36-2015",
+    "docLabel": "RDD 36:2015",
+    "docNumber": "36",
+    "docTitle": "Apple ProRes Bitstream Syntax and Decoding Process",
+    "docType": "Registered Disclosure Document",
+    "group": "smpte-10e-tc",
+    "href": "https://doi.org/10.5594/SMPTE.RDD36.2015",
+    "publicationDate": "2016-02-02T08:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "rdd36-20xx",
+    "docLabel": "RDD 36:20XX",
+    "docNumber": "36",
+    "docTitle": "Apple ProRes Bitstream Syntax and Decoding Process",
+    "docType": "Registered Disclosure Document",
+    "group": "smpte-10e-tc",
+    "publisher": "SMPTE",
+    "status": {
+      "draft": true
+    }
+  },
+  {
+    "docId": "rdd44-2017",
+    "docLabel": "RDD 44:2017",
+    "docNumber": "44",
+    "docTitle": "Material Exchange Format — Mapping and Aplication of Apple ProRes",
+    "docType": "Registered Disclosure Document",
+    "group": "smpte-31fs-tc",
+    "href": "https://doi.org/10.5594/SMPTE.RDD44.2017",
+    "publicationDate": "2017-04-21T08:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "rdd44-2017-11"
+      ]
+    }
+  },
+  {
+    "docId": "rdd44-2017-11",
+    "docLabel": "RDD 44:2017-11",
+    "docNumber": "44",
+    "docTitle": "Material Exchange Format — Mapping and Aplication of Apple ProRes",
+    "docType": "Registered Disclosure Document",
+    "group": "smpte-31fs-tc",
+    "href": "https://doi.org/10.5594/SMPTE.RDD44.2017-11",
+    "publicationDate": "2017-11-29T08:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "rdd44-20xx",
+    "docLabel": "RDD 44:20XX",
+    "docNumber": "44",
+    "docTitle": "Material Exchange Format — Mapping and Aplication of Apple ProRes",
+    "docType": "Registered Disclosure Document",
+    "group": "smpte-31fs-tc",
+    "publisher": "SMPTE",
+    "status": {
+      "draft": true
+    }
+  },
+  {
     "docId": "rdd45-2017",
     "docLabel": "RDD 45:2017",
     "docNumber": "45",
@@ -5634,8 +6893,85 @@
     "docType": "Registered Disclosure Document",
     "group": "smpte-35pm-tc",
     "href": "https://doi.org/10.5594/SMPTE.RDD45.2017",
+    "keywords": [
+      "IMF"
+    ],
     "publicationDate": "2017-12-18T08:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "bt2100-1-201706"
+      ],
+      "normative": [
+        "rdd36-2015",
+        "rdd44-2017",
+        "st2067-2-2016",
+        "st2067-21-2016"
+      ]
+    },
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "rdd45-20xx",
+    "docLabel": "RDD 45:20XX",
+    "docNumber": "45",
+    "docTitle": "Interoperable Master Format — Application ProRes",
+    "docType": "Registered Disclosure Document",
+    "group": "smpte-35pm-tc",
+    "keywords": [
+      "IMF"
+    ],
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "bt2100-1-201706"
+      ],
+      "normative": [
+        "rdd36-20xx",
+        "rdd44-20xx",
+        "st2067-2-2020",
+        "st2067-21-2020",
+        "st2067-21-2020-am1-2020"
+      ]
+    },
+    "status": {
+      "draft": true
+    }
+  },
+  {
+    "docId": "rdd47-2018",
+    "docLabel": "RDD 47:2018",
+    "docNumber": "47",
+    "docTitle": "Interoperable Master Format — Isochronous Stream of XML Documents (ISXD) Plugin",
+    "docType": "Registered Disclosure Document",
+    "group": "smpte-35pm-tc",
+    "href": "https://doi.org/10.5594/SMPTE.RDD47.2018",
+    "keywords": [
+      "IMF"
+    ],
+    "publicationDate": "2018-11-19T08:00:00.000Z",
+    "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "st377-1-2011",
+        "st377-1-2011am1-2012",
+        "st377-1-2011am2-2012",
+        "st379-2-2010",
+        "st429-17-2017",
+        "rp2057-2011",
+        "rp2057-2011am1-2013",
+        "st2067-2-2016",
+        "st2067-3-2016",
+        "st2067-5-2013",
+        "st2067-5-2013am1-2016",
+        "xml-20040204",
+        "xmlschema-1-20041028",
+        "xmlschema-2-20041028",
+        "iso10646-2017"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -5711,7 +7047,8 @@
     "docTitle": "Track File for JPEG 2000 Codestreams with TimeSynchronous Metadata",
     "docType": "Registered Disclosure Document",
     "group": "smpte-35pm-tc",
-    "href": "https://doi.org/10.5594/SMPTE.RDD56.2021",
+    "href": "https://doi.org/10.5594/SMPTE.SMPTERDD56.2021",
+    "publicationDate": "2021-08-17T08:00:00.000Z",
     "publisher": "SMPTE",
     "references": {
       "normative": [
@@ -5766,14 +7103,38 @@
   },
   {
     "details": "DPP",
-    "docId": "rdd59-1-20XX",
-    "docLabel": "RDD 59-1: 20XX",
+    "docId": "rdd59-1-20xx",
+    "docLabel": "RDD 59-1:20XX",
     "docNumber": "59",
     "docPart": "1",
     "docTitle": "Interoperable Master Format — Application DPP (ProRes)",
     "docType": "Registered Disclosure Document",
     "group": "smpte-35pm-tc",
+    "keywords": [
+      "IMF",
+      "IMF Application"
+    ],
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "as-11",
+        "rdd44-2017",
+        "bt2390-8-202002",
+        "st2067-8-2013",
+        "st2067-9-2018",
+        "dpp005",
+        "dpp004"
+      ],
+      "normative": [
+        "rdd45-2017",
+        "st2067-2-2020",
+        "st2067-3-2020",
+        "st2067-21-2020",
+        "st2067-21-2020-am1-2020",
+        "dpp003",
+        "st377-42-20xx"
+      ]
+    },
     "repo": "https://github.com/SMPTE/rdd59-1",
     "status": {
       "draft": true,
@@ -5782,18 +7143,57 @@
   },
   {
     "details": "DPP",
-    "docId": "rdd59-4-20XX",
-    "docLabel": "RDD 59-4: 20XX",
+    "docId": "rdd59-2-20xx",
+    "docLabel": "RDD 59-2:20XX",
     "docNumber": "59",
-    "docPart": "4",
+    "docPart": "2",
     "docTitle": "Interoperable Master Format — Application Constraint DPP (JPEG2000)",
     "docType": "Registered Disclosure Document",
     "group": "smpte-35pm-tc",
+    "keywords": [
+      "IMF",
+      "IMF Application"
+    ],
     "publisher": "SMPTE",
-    "repo": "https://github.com/SMPTE/rdd59-4",
+    "references": {
+      "bibliographic": [
+        "rdd59-1-20xx",
+        "as-11",
+        "bt2390-10-202111",
+        "st2067-200-2018",
+        "st2067-9-2018",
+        "dpp003",
+        "dpp004",
+        "dpp005"
+      ],
+      "normative": [
+        "st2067-2-2020",
+        "st2067-8-2013",
+        "st2067-21-2020",
+        "st2067-21-2020-am1-2020",
+        "bt2100-2-201807",
+        "st428-12-2013",
+        "st377-41-20xx"
+      ]
+    },
+    "repo": "https://github.com/SMPTE/rdd59-2",
     "status": {
       "draft": true,
       "publicCd": true
+    }
+  },
+  {
+    "docId": "rdd6-2008",
+    "docLabel": "RDD 6:2008",
+    "docNumber": "6",
+    "docTitle": "For Television — Description and Guide to the Use of the Dolby~ E Audio Metadata Serial Bitstream",
+    "docType": "Registered Disclosure Document",
+    "group": "smpte-10e-tc",
+    "href": "https://doi.org/10.5594/SMPTE.RDD6.2008",
+    "publicationDate": "2008-03-12T08:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
     }
   },
   {
@@ -6105,6 +7505,22 @@
     }
   },
   {
+    "docId": "rfc2302",
+    "docLabel": "RFC 2302",
+    "docTitle": "Tag Image File Format (TIFF) - image/tiff MIME Sub-type Registration",
+    "docType": "Draft Standard",
+    "href": "https://datatracker.ietf.org/doc/html/rfc2302",
+    "publicationDate": "1998-03-01T07:00:00.000Z",
+    "publisher": "IETF",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "rfc3302"
+      ]
+    }
+  },
+  {
     "docId": "rfc2396",
     "docLabel": "RFC 2396",
     "docTitle": "Uniform Resource Identifiers (URI): Generic Syntax",
@@ -6266,6 +7682,22 @@
     }
   },
   {
+    "docId": "rfc3023",
+    "docLabel": "IETF 3023",
+    "docTitle": "XML Media Types",
+    "docType": "Specification",
+    "href": "https://datatracker.ietf.org/doc/html/rfc3023",
+    "publicationDate": "2001-01-01T07:00:00.000Z",
+    "publisher": "IETF",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "rfc7303"
+      ]
+    }
+  },
+  {
     "docId": "rfc3061",
     "docLabel": "RFC 3061",
     "docTitle": "A URN Namespace of Object Identifiers",
@@ -6353,6 +7785,18 @@
       "supersededBy": [
         "rfc5280"
       ]
+    }
+  },
+  {
+    "docId": "rfc3302",
+    "docLabel": "RFC 2302",
+    "docTitle": "Tag Image File Format (TIFF) - image/tiff MIME Sub-type Registration",
+    "docType": "Draft Standard",
+    "href": "https://datatracker.ietf.org/doc/html/rfc3302",
+    "publicationDate": "2002-09-01T07:00:00.000Z",
+    "publisher": "IETF",
+    "status": {
+      "active": true
     }
   },
   {
@@ -6984,6 +8428,18 @@
     }
   },
   {
+    "docId": "rfc7303",
+    "docLabel": "IETF 7303",
+    "docTitle": "XML Media Types",
+    "docType": "Specification",
+    "href": "https://datatracker.ietf.org/doc/html/rfc7303",
+    "publicationDate": "2014-7-01T07:00:00.000Z",
+    "publisher": "IETF",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "rfc7320",
     "docLabel": "RFC 7320",
     "docTitle": "URI Design and Ownership",
@@ -7267,6 +8723,20 @@
     }
   },
   {
+    "docId": "rp177-1993",
+    "docLabel": "RP 177:1993",
+    "docNumber": "177",
+    "docTitle": "Derivation of Basic Television Color Equations",
+    "docType": "Recommended Practice",
+    "group": "smpte-10e-tc",
+    "href": "https://doi.org/10.5594/SMPTE.RP177.1993",
+    "publicationDate": "1993-11-01T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "rp187-1995",
     "docLabel": "RP 187:1995",
     "docNumber": "187",
@@ -7369,6 +8839,87 @@
     "group": "smpte-30mr-tc",
     "href": "https://doi.org/10.5594/SMPTE.RP205.2014",
     "publicationDate": "2014-12-29T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "rp2052-10-2012",
+    "docLabel": "RP 2052-10:2012",
+    "docNumber": "2052",
+    "docPart": "10",
+    "docTitle": "Conversion from CEA-608 Data to SMPTE-TT",
+    "docType": "Recommended Practice",
+    "group": "smpte-24tb-tc",
+    "href": "https://doi.org/10.5594/SMPTE.RP2052-10.2012",
+    "publicationDate": "2012-01-03T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "rp2052-10-2013"
+      ]
+    }
+  },
+  {
+    "docId": "rp2052-10-2013",
+    "docLabel": "RP 2052-10:2013",
+    "docNumber": "2052",
+    "docPart": "10",
+    "docTitle": "Conversion from CEA-608 Data to SMPTE-TT",
+    "docType": "Recommended Practice",
+    "group": "smpte-24tb-tc",
+    "href": "https://doi.org/10.5594/SMPTE.RP2052-10.2013",
+    "publicationDate": "2013-06-05T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "rp2052-11-2013",
+    "docLabel": "RP 2052-11:2013",
+    "docNumber": "2052",
+    "docPart": "11",
+    "docTitle": "Conversion from CEA-708 Caption Data to SMPTE-TT",
+    "docType": "Recommended Practice",
+    "group": "smpte-24tb-tc",
+    "href": "https://doi.org/10.5594/SMPTE.RP2052-11.2013",
+    "publicationDate": "2013-06-05T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "rp2057-2011",
+    "docLabel": "RP 2057:2013",
+    "docNumber": "2057",
+    "docTitle": "Text-Based Metadata Carriage in MXF",
+    "docType": "Recommended Practice",
+    "group": "smpte-31fs-tc",
+    "href": "https://doi.org/10.5594/SMPTE.RP2057.2011",
+    "publicationDate": "2011-04-15T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true,
+      "amended": true,
+      "amendedBy": [
+        "rp2057-2011am1-2013"
+      ]
+    }
+  },
+  {
+    "docId": "rp2057-2011am1-2013",
+    "docLabel": "RP 2057:2013 Am1:2013",
+    "docNumber": "2057",
+    "docTitle": "Text-Based Metadata Carriage in MXF - Amendment 1",
+    "docType": "Recommended Practice",
+    "group": "smpte-31fs-tc",
+    "href": "https://doi.org/10.5594/SMPTE.RP2057.2011Am1.2013",
+    "publicationDate": "2013-01-28T07:00:00.000Z",
     "publisher": "SMPTE",
     "status": {
       "active": true
@@ -7893,28 +9444,10 @@
     }
   },
   {
-    "docElement": "m",
-    "docId": "st12-2008",
-    "docLabel": "ST 12(m):2008",
+    "docId": "st12-1-2014",
+    "docLabel": "ST 12-1:2014",
     "docNumber": "12",
-    "docTitle": "For Television — Time and Control Code",
-    "docType": "Standard",
-    "group": "smpte-32nf-tc",
-    "href": "https://doi.org/10.5594/SMPTE.ST12-1.2008",
-    "publicationDate": "2008-02-0707:00:00.000Z",
-    "publisher": "SMPTE",
-    "status": {
-      "active": false,
-      "superseded": true,
-      "supersededBy": [
-        "st12-2014"
-      ]
-    }
-  },
-  {
-    "docId": "st12-2014",
-    "docLabel": "ST 12:2014",
-    "docNumber": "12",
+    "docPart": "1",
     "docTitle": "Time and Control Code",
     "docType": "Standard",
     "group": "smpte-32nf-tc",
@@ -7959,6 +9492,26 @@
     }
   },
   {
+    "docElement": "m",
+    "docId": "st12m-1-2008",
+    "docLabel": "ST 12(m)-1:2008",
+    "docNumber": "12",
+    "docPart": "1",
+    "docTitle": "For Television — Time and Control Code",
+    "docType": "Standard",
+    "group": "smpte-32nf-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST12-1.2008",
+    "publicationDate": "2008-02-0707:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "st12-1-2014"
+      ]
+    }
+  },
+  {
     "details": "Cannot locate",
     "docElement": "m",
     "docId": "st12m-1999",
@@ -7972,7 +9525,7 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "st12-2008"
+        "st12m-1-2008"
       ]
     }
   },
@@ -8064,6 +9617,21 @@
     }
   },
   {
+    "docId": "st2016-1-2009",
+    "docLabel": "ST 2016-1:2009",
+    "docNumber": "2016",
+    "docPart": "1",
+    "docTitle": "Format for Active Format Description and Bar Data",
+    "docType": "Standard",
+    "group": "smpte-24tb-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2016-1.2009",
+    "publicationDate": "2009-12-23T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "st202-2010",
     "docLabel": "ST 202:2010",
     "docNumber": "202",
@@ -8144,6 +9712,36 @@
     }
   },
   {
+    "docId": "st2036-1-2014",
+    "docLabel": "ST 2036-1:2014",
+    "docNumber": "2036",
+    "docPart": "1",
+    "docTitle": "Ultra High Definition Television — Image Parameter Values for Program Production",
+    "docType": "Standard",
+    "group": "smpte-10e-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2036-1.2014",
+    "publicationDate": "2014-10-30T08:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "st2048-1-2011",
+    "docLabel": "ST 2048-1:2011",
+    "docNumber": "2048",
+    "docPart": "1",
+    "docTitle": "2048 × 1080 and 4096 × 2160 Digital Cinematography Production Image Formats FS/709",
+    "docType": "Standard",
+    "group": "smpte-10e-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2048-1.2011",
+    "publicationDate": "2011-03-30T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "st2052-1-2013",
     "docLabel": "ST 2052-1:2013",
     "docNumber": "2052",
@@ -8159,6 +9757,163 @@
     }
   },
   {
+    "docId": "st2065-1-2012",
+    "docLabel": "ST 2065-1:2012",
+    "docNumber": "2065",
+    "docPart": "1",
+    "docTitle": "Academy Color Encoding Specification (ACES)",
+    "docType": "Standard",
+    "group": "smpte-10e-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2065-1.2012",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2012-04-17T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "st2065-1-2021"
+      ]
+    }
+  },
+  {
+    "docId": "st2065-1-2021",
+    "docLabel": "ST 2065-1:2021",
+    "docNumber": "2065",
+    "docPart": "1",
+    "docTitle": "Academy Color Encoding Specification (ACES)",
+    "docType": "Standard",
+    "group": "smpte-10e-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2065-1.2021",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2021-01-27T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "st2065-2-2012",
+    "docLabel": "ST 2065-2:2012",
+    "docNumber": "2065",
+    "docPart": "2",
+    "docTitle": "Academy Printing Density (APD) — Spectral Responsivities, Reference Measurement Device and Spectral Calculation",
+    "docType": "Standard",
+    "group": "smpte-10e-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2065-2.2012",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2012-04-17T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "st2065-2-2020"
+      ]
+    }
+  },
+  {
+    "docId": "st2065-2-2020",
+    "docLabel": "ST 2065-2:2020",
+    "docNumber": "2065",
+    "docPart": "2",
+    "docTitle": "Academy Printing Density (APD) — Spectral Responsivities, Reference Measurement Device and Spectral Calculation",
+    "docType": "Standard",
+    "group": "smpte-10e-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2065-2.2020",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2020-10-02T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "st2065-3-2012",
+    "docLabel": "ST 2065-3:2012",
+    "docNumber": "2065",
+    "docPart": "3",
+    "docTitle": "Academy Density Exchange Encoding (ADX) — Encoding Academy Printing Density (APD) Values",
+    "docType": "Standard",
+    "group": "smpte-10e-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2065-3.2012",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2012-04-17T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "st2065-3-2020"
+      ]
+    }
+  },
+  {
+    "docId": "st2065-3-2020",
+    "docLabel": "ST 2065-3:2020",
+    "docNumber": "2065",
+    "docPart": "3",
+    "docTitle": "Academy Density Exchange Encoding (ADX) — Encoding Academy Printing Density (APD) Values",
+    "docType": "Standard",
+    "group": "smpte-10e-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2065-3.2020",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2020-11-30T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "st2065-4-2013",
+    "docLabel": "ST 2065-4:2013",
+    "docNumber": "2065",
+    "docPart": "4",
+    "docTitle": "ACES Image Container File Layout",
+    "docType": "Standard",
+    "group": "smpte-31fs-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2065-4.2013",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2013-05-10T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "st2065-5-2016",
+    "docLabel": "ST 2065-5:2016",
+    "docNumber": "2065",
+    "docPart": "5",
+    "docTitle": "Material Exchange Format — Mapping ACES Image Sequences into the MXF Generic Container",
+    "docType": "Standard",
+    "group": "smpte-31fs-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2065-5.2016",
+    "keywords": [
+      "ACES",
+      "MXF"
+    ],
+    "publicationDate": "2016-10-20T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "st2067-100-2014",
     "docLabel": "ST 2067-100:2014",
     "docNumber": "2067",
@@ -8167,8 +9922,24 @@
     "docType": "Standard",
     "group": "smpte-35pm-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST2067-100.2014",
+    "keywords": [
+      "IMF",
+      "OPL"
+    ],
     "publicationDate": "2015-01-30T08:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "st433-2008",
+        "st2067-3-2013",
+        "rfc3986",
+        "rfc4288",
+        "xml-20040204",
+        "xmlschema-1-20041028",
+        "xmlschema-2-20041028",
+        "xmldsig-core-20020212"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -8201,10 +9972,44 @@
     "docType": "Standard",
     "group": "smpte-35pm-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST2067-101.2018",
+    "keywords": [
+      "IMF",
+      "OPL"
+    ],
     "publicationDate": "2018-03-14T07:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "st377-1-2011",
+        "st377-1-2011am1-2012",
+        "st377-1-2011am2-2012",
+        "st2067-2-2016",
+        "st2067-100-2014",
+        "ieee-754-2008",
+        "rfc3986",
+        "xmlschema-1-20041028",
+        "xmlschema-2-20041028"
+      ]
+    },
     "status": {
       "active": true
+    }
+  },
+  {
+    "docId": "st2067-101-20xx",
+    "docLabel": "ST 2067-101:20XX",
+    "docNumber": "2067",
+    "docPart": "101",
+    "docTitle": "Interoperable Master Format — Output Profile List — Common Image Definitions and Macros",
+    "docType": "Standard",
+    "group": "smpte-35pm-tc",
+    "keywords": [
+      "IMF",
+      "OPL"
+    ],
+    "publisher": "SMPTE",
+    "status": {
+      "draft": true
     }
   },
   {
@@ -8235,10 +10040,47 @@
     "docType": "Standard",
     "group": "smpte-35pm-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST2067-102.2017",
+    "keywords": [
+      "IMF"
+    ],
     "publicationDate": "2017-09-21T07:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "st2067-20-2016",
+        "st2067-21-2016",
+        "st2067-101-2014",
+        "xmlschema-1-20041028",
+        "xmlschema-2-20041028"
+      ]
+    },
     "status": {
       "active": true
+    }
+  },
+  {
+    "docId": "st2067-102-20xx",
+    "docLabel": "ST 2067-102:20XX",
+    "docNumber": "2067",
+    "docPart": "102",
+    "docTitle": "Interoperable Master Format — Common Image Pixel Color Schemes",
+    "docType": "Standard",
+    "group": "smpte-35pm-tc",
+    "keywords": [
+      "IMF"
+    ],
+    "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "st2067-21-2020",
+        "st2067-21-2020-am1-2020",
+        "st2067-101-2018",
+        "xmlschema-1-20041028",
+        "xmlschema-2-20041028"
+      ]
+    },
+    "status": {
+      "draft": true
     }
   },
   {
@@ -8253,7 +10095,90 @@
     "publicationDate": "2015-01-03T08:00:00.000Z",
     "publisher": "SMPTE",
     "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "st2067-103-2021"
+      ],
+      "supersededDate": "2021-01-27T08:00:00.000Z"
+    }
+  },
+  {
+    "docId": "st2067-103-2021",
+    "docLabel": "ST 2067-103:2021",
+    "docNumber": "2067",
+    "docPart": "103",
+    "docTitle": "Interoperable Master Format — Output Profile List — Common Audio Definition and Macros",
+    "docType": "Standard",
+    "group": "smpte-35pm-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2067-103.2021",
+    "keywords": [
+      "IMF",
+      "OPL"
+    ],
+    "publicationDate": "2021-01-27T08:00:00.000Z",
+    "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "st377-4-2012",
+        "st2067-100-2014",
+        "xmlschema-1-20041028",
+        "xmlschema-2-20041028"
+      ]
+    },
+    "status": {
       "active": true
+    }
+  },
+  {
+    "docId": "st2067-104-20xx",
+    "docLabel": "ST 2067-104:20XX",
+    "docNumber": "2067",
+    "docPart": "104",
+    "docTitle": "Interoperable Master Format — Output Profile List — Composite and Blend Macros",
+    "docType": "Standard",
+    "group": "smpte-35pm-tc",
+    "keywords": [
+      "IMF",
+      "OPL"
+    ],
+    "publisher": "SMPTE",
+    "status": {
+      "draft": true
+    }
+  },
+  {
+    "docId": "st2067-105-20xx",
+    "docLabel": "ST 2067-105:20XX",
+    "docNumber": "2067",
+    "docPart": "105",
+    "docTitle": "Interoperable Master Format — Output Profile List — Output Macros",
+    "docType": "Standard",
+    "group": "smpte-35pm-tc",
+    "keywords": [
+      "IMF",
+      "OPL"
+    ],
+    "publisher": "SMPTE",
+    "status": {
+      "draft": true
+    }
+  },
+  {
+    "docId": "st2067-106-20xx",
+    "docLabel": "ST 2067-106:20XX",
+    "docNumber": "2067",
+    "docPart": "106",
+    "docTitle": "Interoperable Master Format — Output Profile List — EssenceType Transform Macros",
+    "docType": "Standard",
+    "group": "smpte-35pm-tc",
+    "keywords": [
+      "IMF",
+      "OPL"
+    ],
+    "publisher": "SMPTE",
+    "status": {
+      "draft": true
     }
   },
   {
@@ -8303,8 +10228,55 @@
     "docType": "Standard",
     "group": "smpte-35pm-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST2067-2.2020",
+    "keywords": [
+      "IMF"
+    ],
     "publicationDate": "2020-05-12T07:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "st334-2-2015",
+        "st2016-1-2009",
+        "rp2052-10-2012",
+        "rp2052-11-2013",
+        "cea-608-e-2008-ansi",
+        "cea-708-d-2008",
+        "rfc4246",
+        "rfc4452"
+      ],
+      "normative": [
+        "st330-2011",
+        "st334-1-2015",
+        "st377-1-2011",
+        "st377-4-2012",
+        "st382-2007",
+        "st400-2012",
+        "st429-5-2017",
+        "st429-6-2006",
+        "st429-8-2007",
+        "st429-9-2014",
+        "st430-2-2017",
+        "st436-1-2013",
+        "st2001-1-2015",
+        "st2029-2009",
+        "st2067-3-2020",
+        "st2067-5-2020",
+        "st2067-8-2013",
+        "st2067-9-2018",
+        "st2067-100-2014",
+        "iso14496-22-2019",
+        "iec-61966-2-1-1999",
+        "rfc2253",
+        "rfc4051",
+        "rfc4122",
+        "rfc4539",
+        "rfc5646",
+        "xml-20081126",
+        "ttml-imsc1-1-20181108",
+        "xmlschema-1-20041028",
+        "xmldsig-core1-20130411"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -8353,8 +10325,23 @@
     "docType": "Standard",
     "group": "smpte-35pm-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST2067-200.2018",
+    "keywords": [
+      "IMF",
+      "IMF Plug-in"
+    ],
     "publicationDate": "2018-07-31T07:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "st2067-2-2016",
+        "st2067-3-2016",
+        "st2094-2-2017",
+        "xml-20040204",
+        "xml-names-20091208",
+        "xmlschema-1-20041028",
+        "xmlschema-2-20041028"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -8372,12 +10359,68 @@
       "IMF",
       "Packaging",
       "Immersive Audio",
-      "Audio"
+      "Audio",
+      "IMF Plug-in"
     ],
     "publicationDate": "2019-07-23T07:00:00.000Z",
     "publisher": "SMPTE",
     "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "st2067-201-2021"
+      ],
+      "supersededDate": "2021-01-27T07:00:00.000Z"
+    }
+  },
+  {
+    "docId": "st2067-201-2021",
+    "docLabel": "ST 2067-201:2021",
+    "docNumber": "2067",
+    "docPart": "201",
+    "docTitle": "Immersive Audio Bitstream Level 0 Plug-in",
+    "docType": "Standard",
+    "group": "smpte-35pm-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2067-201.2021",
+    "keywords": [
+      "IMF",
+      "Packaging",
+      "Immersive Audio",
+      "Audio",
+      "IMF Plug-in"
+    ],
+    "publicationDate": "2021-01-27T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "st377-1-2019",
+        "st377-4-2012",
+        "st429-18-2019",
+        "st2067-2-2020",
+        "st2067-3-2020",
+        "st2067-5-2020",
+        "st2098-2-2019"
+      ]
+    },
+    "status": {
       "active": true
+    }
+  },
+  {
+    "docId": "st2067-20x-20xx",
+    "docLabel": "ST 2067-20x:20XX",
+    "docNumber": "2067",
+    "docPart": "20x",
+    "docTitle": "Interoperable Master Format — ISXD Plugin",
+    "docType": "Standard",
+    "group": "smpte-35pm-tc",
+    "keywords": [
+      "IMF",
+      "IMF Plug-in"
+    ],
+    "publisher": "SMPTE",
+    "status": {
+      "draft": true
     }
   },
   {
@@ -8433,6 +10476,31 @@
     ],
     "publicationDate": "2020-05-12T07:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "rp177-1993",
+        "bt2035-201307",
+        "re-h265-20191129"
+      ],
+      "normative": [
+        "st377-1-2011",
+        "st379-1-2009",
+        "st422-2014",
+        "st2067-2-2020",
+        "st2084-2014",
+        "st2086-2018",
+        "st2113-2018",
+        "bt601-7-201103",
+        "bt709-6-201506",
+        "bt2020-2-201510",
+        "cta861-g-2016",
+        "iec-61966-2-4-2006",
+        "iso15444-1-2016",
+        "iso11664-3-2012",
+        "xmlschema-1-20041028"
+      ]
+    },
+    "repo": "https://github.com/SMPTE/st2067-21",
     "status": {
       "active": true,
       "amended": true,
@@ -8459,14 +10527,76 @@
     "publisher": "SMPTE",
     "references": {
       "bibliographic": [
+        "rp177-1993",
+        "bt2035-201307",
+        "re-h265-20191129",
         "bt2390-8-202002"
       ],
       "normative": [
+        "st377-1-2011",
+        "st379-1-2009",
+        "st422-2014",
+        "st2067-2-2020",
+        "st2084-2014",
+        "st2086-2018",
+        "st2113-2018",
+        "bt601-7-201103",
+        "bt709-6-201506",
+        "bt2020-2-201510",
+        "cta861-g-2016",
+        "iec-61966-2-4-2006",
+        "iso15444-1-2016",
+        "iso11664-3-2012",
+        "xmlschema-1-20041028",
         "bt2100-2-201807"
       ]
     },
+    "repo": "https://github.com/SMPTE/st2067-21",
     "status": {
       "active": true
+    }
+  },
+  {
+    "docId": "st2067-21-20xx",
+    "docLabel": "ST 2067-21:20XX",
+    "docNumber": "2067",
+    "docPart": "21",
+    "docTitle": "Interoperable Master Format — Application #2E",
+    "docType": "Standard",
+    "group": "smpte-35pm-tc",
+    "keywords": [
+      "IMF",
+      "IMF Application"
+    ],
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "rp177-1993",
+        "bt2035-201307",
+        "re-h265-20191129",
+        "bt2390-8-202002"
+      ],
+      "normative": [
+        "st377-1-2011",
+        "st379-1-2009",
+        "st422-2014",
+        "st2067-2-2020",
+        "st2084-2014",
+        "st2086-2018",
+        "st2113-2018",
+        "bt601-7-201103",
+        "bt709-6-201506",
+        "bt2020-2-201510",
+        "iec-61966-2-4-2006",
+        "iso15444-1-2019",
+        "iso11664-3-2012",
+        "xmlschema-1-20041028"
+      ]
+    },
+    "repo": "https://github.com/SMPTE/st2067-21",
+    "status": {
+      "draft": true,
+      "publicCd": true
     }
   },
   {
@@ -8516,14 +10646,36 @@
     "docType": "Standard",
     "group": "smpte-35pm-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST2067-3.2020",
+    "keywords": [
+      "IMF"
+    ],
     "publicationDate": "2020-05-12T07:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "st377-1-2011",
+        "st434-2014",
+        "eidr-sv-209-df-20151227"
+      ],
+      "normative": [
+        "st12-1-2014",
+        "st433-2008",
+        "st433-2008am1-2011",
+        "rfc2045",
+        "rfc2046",
+        "rfc5646",
+        "xml-20081126",
+        "xmlschema-1-20041028",
+        "xmlschema-2-20041028",
+        "xmldsig-core1-20130411"
+      ]
+    },
     "status": {
       "active": true
     }
   },
   {
-    "docId": "st2067-30-2012",
+    "docId": "st2067-30-2013",
     "docLabel": "ST 2067-30:2013",
     "docNumber": "2067",
     "docPart": "30",
@@ -8531,8 +10683,31 @@
     "docType": "Standard",
     "group": "smpte-35pm-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST2067-30.2013",
+    "keywords": [
+      "IMF",
+      "IMF Application"
+    ],
     "publicationDate": "2013-08-29T07:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "st274-2008",
+        "st296-2012",
+        "st377-1-2011",
+        "st377-1-2011am1-2012",
+        "st377-1-2011am2-2012",
+        "st379-2-2010",
+        "st381-2-2011",
+        "st428-1-2006",
+        "st428-11-2013",
+        "st2048-1-2011",
+        "st2067-2-2013",
+        "rp224",
+        "iso14496-2-2004",
+        "iso14496-2-2004-amd5-2009",
+        "bt709-5-200204"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -8546,8 +10721,30 @@
     "docType": "Standard",
     "group": "smpte-35pm-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST2067-40.2016",
+    "keywords": [
+      "IMF",
+      "IMF Application"
+    ],
     "publicationDate": "2016-09-07T07:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "eg432-1-2010",
+        "rp431-2-2011"
+      ],
+      "normative": [
+        "rp224",
+        "st379-1-2009",
+        "st422-2014",
+        "st431-1-2006",
+        "st2067-2-2016",
+        "st2067-21-2016",
+        "iso11664-3-2012",
+        "iso15444-1-2004",
+        "iso15444-1-2004-amd7-2015"
+      ]
+    },
+    "repo": "https://github.com/SMPTE/st2067-40",
     "status": {
       "active": true,
       "amended": true,
@@ -8565,8 +10762,31 @@
     "docType": "Standard",
     "group": "smpte-35pm-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST2067-40.2016Am1.2017",
+    "keywords": [
+      "IMF",
+      "IMF Application"
+    ],
     "publicationDate": "2017-12-27T08:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "eg432-1-2010",
+        "rp431-2-2011",
+        "st428-21-2011"
+      ],
+      "normative": [
+        "rp224",
+        "st379-1-2009",
+        "st422-2014",
+        "st431-1-2006",
+        "st2067-2-2016",
+        "st2067-21-2016",
+        "iso11664-3-2012",
+        "iso15444-1-2004",
+        "iso15444-1-2004-amd7-2015"
+      ]
+    },
+    "repo": "https://github.com/SMPTE/st2067-40",
     "status": {
       "active": true
     }
@@ -8623,8 +10843,23 @@
     "docType": "Standard",
     "group": "smpte-35pm-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST2067-5.2020",
+    "keywords": [
+      "IMF"
+    ],
     "publicationDate": "2020-05-12T07:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "st330-2011",
+        "st377-1-2011",
+        "st378-2004",
+        "st379-1-2009",
+        "st379-2-2010",
+        "st380-2004",
+        "st410-2008",
+        "st436-1-2013"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -8638,10 +10873,102 @@
     "docType": "Standard",
     "group": "smpte-35pm-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST2067-50.2018",
+    "keywords": [
+      "IMF",
+      "IMF Application"
+    ],
     "publicationDate": "2018-02-16T08:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "tiff-r6f-06031992",
+        "ampas-s-2014-002",
+        "ampas-tb-2014-012"
+      ],
+      "normative": [
+        "ieee-754-2008",
+        "iec-61966-2-1-1999",
+        "iso646-1991",
+        "iso12639-2004-e",
+        "iso15948-2004",
+        "rfc2045",
+        "rfc2302",
+        "rfc4122",
+        "bt2100-1-201706",
+        "rp431-2-2011",
+        "st377-1-2011",
+        "st429-5-2009",
+        "st2065-1-2012",
+        "st2065-4-2013",
+        "st2065-5-2016",
+        "st2067-2-2016",
+        "st2067-3-2016",
+        "st2067-21-2016",
+        "st2067-101-2014",
+        "st2067-102-2014",
+        "st2080-3-2017",
+        "xmlschema-1-20041028",
+        "xmlschema-2-20041028"
+      ]
+    },
     "status": {
       "active": true
+    }
+  },
+  {
+    "docId": "st2067-60-20xx",
+    "docLabel": "ST 2067-60:20XX",
+    "docNumber": "2067",
+    "docPart": "60",
+    "docTitle": "Interoperable Master Format — Application #6 UHDTV program workflow (AVC)",
+    "docType": "Standard",
+    "group": "smpte-35pm-tc",
+    "keywords": [
+      "IMF",
+      "IMF Application"
+    ],
+    "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "st274-2008",
+        "st296-2012",
+        "st377-1-2019",
+        "st379-2-2010",
+        "st381-3-2017",
+        "st2036-1-2014",
+        "st2067-2-2020",
+        "st2067-21-2020",
+        "st2067-21-2020-am1-2020",
+        "st2067-101-2018",
+        "st2067-102-20xx",
+        "st2115-2019",
+        "iso14496-10-2014",
+        "bt2020-2-201510",
+        "bt2100-2-201807",
+        "xmlschema-1-20041028"
+      ]
+    },
+    "repo": "https://github.com/SMPTE/st2067-60",
+    "status": {
+      "draft": true,
+      "publicCd": true
+    }
+  },
+  {
+    "docId": "st2067-70-20xx",
+    "docLabel": "ST 2067-70:20XX",
+    "docNumber": "2067",
+    "docPart": "70",
+    "docTitle": "IMF Application of ST 2019-1 (VC-3)",
+    "docType": "Standard",
+    "group": "smpte-35pm-tc",
+    "keywords": [
+      "IMF",
+      "IMF Application"
+    ],
+    "publisher": "SMPTE",
+    "status": {
+      "draft": true
     }
   },
   {
@@ -8653,8 +10980,22 @@
     "docType": "Standard",
     "group": "smpte-35pm-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST2067-8.2013",
+    "keywords": [
+      "IMF"
+    ],
     "publicationDate": "2013-08-29T07:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "st377-4-2012",
+        "st2067-2-2013",
+        "br1384-2-201103"
+      ],
+      "normative": [
+        "st400-2012",
+        "st428-12-2013"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -8668,7 +11009,40 @@
     "docType": "Standard",
     "group": "smpte-35pm-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST2067-9.2018",
+    "keywords": [
+      "IMF"
+    ],
     "publicationDate": "2018-06-12T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "st433-2008",
+        "st433-2008am1-2011",
+        "st2067-3-2016",
+        "xml-names-20091208"
+      ],
+      "normative": [
+        "st2067-2-2016",
+        "xml-20081126",
+        "xmlschema-1-20041028",
+        "xmldsig-core-20080610",
+        "rfc3023"
+      ]
+    },
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "st2080-3-2017",
+    "docLabel": "ST 2080-3:2017",
+    "docNumber": "2080",
+    "docPart": "3",
+    "docTitle": "Reference Viewing Environment for Evaluation of HDTV Images",
+    "docType": "Standard",
+    "group": "smpte-10e-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2080-3.2017",
+    "publicationDate": "2017-04-21T07:00:00.000Z",
     "publisher": "SMPTE",
     "status": {
       "active": true
@@ -8930,6 +11304,20 @@
     }
   },
   {
+    "docId": "st2113-2018",
+    "docLabel": "ST 2113:2018",
+    "docNumber": "2113",
+    "docTitle": "Colorimetry of P3 Color Spaces",
+    "docType": "Standard",
+    "group": "smpte-10e-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2113.2018",
+    "publicationDate": "2019-01-09T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "st2114-2017",
     "docLabel": "ST 2114:2017",
     "docNumber": "2114",
@@ -8938,6 +11326,20 @@
     "group": "smpte-30mr-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST2114.2017",
     "publicationDate": "2017-08-16T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "st2115-2019",
+    "docLabel": "ST 2115:2019",
+    "docNumber": "2115",
+    "docTitle": "Free Scale Gamut and Free Scale Log Characteristics of Camera",
+    "docType": "Standard",
+    "group": "smpte-10e-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2115.2019",
+    "publicationDate": "2019-06-03T07:00:00.000Z",
     "publisher": "SMPTE",
     "status": {
       "active": true
@@ -9084,6 +11486,24 @@
     }
   },
   {
+    "docElement": "m",
+    "docId": "st274-2008",
+    "docLabel": "ST 274:2008",
+    "docNumber": "274",
+    "docTitle": "Television — 1920 × 1080 Image Sample Structure, Digital Representation and Digital Timing Reference Sequences for Multiple Picture Rates",
+    "docType": "Standard",
+    "group": "smpte-10e-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST274.2008",
+    "publicationDate": "2008-01-29T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true,
+      "reaffirmDate": "2013-07-08T07:00:00.000Z",
+      "reaffirmed": true,
+      "stabilized": true
+    }
+  },
+  {
     "details": "Cannot locate",
     "docElement": "m",
     "docId": "st274m-2003",
@@ -9115,26 +11535,8 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "st274m-2008"
+        "st274-2008"
       ]
-    }
-  },
-  {
-    "docElement": "m",
-    "docId": "st274m-2008",
-    "docLabel": "ST 274(m):2008",
-    "docNumber": "274",
-    "docTitle": "Television — 1920 × 1080 Image Sample Structure, Digital Representation and Digital Timing Reference Sequences for Multiple Picture Rates",
-    "docType": "Standard",
-    "group": "smpte-10e-tc",
-    "href": "https://doi.org/10.5594/SMPTE.ST274.2008",
-    "publicationDate": "2008-01-29T07:00:00.000Z",
-    "publisher": "SMPTE",
-    "status": {
-      "active": true,
-      "reaffirmDate": "2013-07-08T07:00:00.000Z",
-      "reaffirmed": true,
-      "stabilized": true
     }
   },
   {
@@ -9458,6 +11860,36 @@
       "supersededBy": [
         "st331-2011"
       ]
+    }
+  },
+  {
+    "docId": "st334-1-2015",
+    "docLabel": "ST 334-1:2015",
+    "docNumber": "334",
+    "docPart": "1",
+    "docTitle": "Vertical Ancillary Data Mapping of Caption Data and Other Related Data",
+    "docType": "Standard",
+    "group": "smpte-24tb-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST334-1.2015",
+    "publicationDate": "2015-01-30T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "st334-2-2015",
+    "docLabel": "ST 334-2:2015",
+    "docNumber": "334",
+    "docPart": "2",
+    "docTitle": "Caption Distribution Packet (CDP) Definition",
+    "docType": "Standard",
+    "group": "smpte-24tb-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST334-2.2015",
+    "publicationDate": "2015-01-30T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
     }
   },
   {
@@ -9905,7 +12337,7 @@
         "rp224",
         "ieee-754-1985",
         "bs1196-1995-a2",
-        "iso11578-1-1998"
+        "iso11578-1998"
       ]
     },
     "status": {
@@ -10011,6 +12443,23 @@
     }
   },
   {
+    "docId": "st377-41-20xx",
+    "docLabel": "ST 377-41:20XX",
+    "docNumber": "377",
+    "docPart": "41",
+    "docTitle": "MXF Multichannel Audio Controlled Vocabulary",
+    "docType": "Standard",
+    "group": "smpte-31fs-tc",
+    "keywords": [
+      "Audio",
+      "MXF Application"
+    ],
+    "publisher": "SMPTE",
+    "status": {
+      "draft": true
+    }
+  },
+  {
     "docId": "st377-42-2021",
     "docLabel": "ST 377-42:2021",
     "docNumber": "377",
@@ -10041,6 +12490,38 @@
     },
     "status": {
       "active": true
+    }
+  },
+  {
+    "docId": "st377-42-20xx",
+    "docLabel": "ST 377-42:20XX",
+    "docNumber": "377",
+    "docPart": "42",
+    "docTitle": "MCA Label Controlled Vocabulary",
+    "docType": "Standard",
+    "group": "smpte-31fs-tc",
+    "keywords": [
+      "Audio",
+      "MXF Application"
+    ],
+    "publisher": "SMPTE",
+    "status": {
+      "draft": true
+    }
+  },
+  {
+    "docId": "st378-2004",
+    "docLabel": "ST 378:2004",
+    "docNumber": "378",
+    "docTitle": "Material Exchange Format (MXF) — Operational pattern 1A (Single Item, Single Package)",
+    "docType": "Standard",
+    "group": "smpte-31fs-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST378.2004",
+    "publicationDate": "2004-09-22T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true,
+      "stabilized": true
     }
   },
   {
@@ -10148,6 +12629,27 @@
     "status": {
       "active": true,
       "stabilized": true
+    }
+  },
+  {
+    "docId": "st381-2-2011",
+    "docLabel": "ST 381-2:2011",
+    "docNumber": "381",
+    "docPart": "2",
+    "docTitle": "Material Exchange Format (MXF) — Mapping MPEG Streams into the MXF Constrained Generic Container",
+    "docType": "Standard",
+    "group": "smpte-31fs-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST381-2.2011",
+    "publicationDate": "2011-08-23T08:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": false,
+      "reaffirmDate": "2016-10-05T08:00:00.000Z",
+      "reaffirmed": true,
+      "superseded": true,
+      "supersededBy": [
+        "st381-2-2018"
+      ]
     }
   },
   {
@@ -12379,7 +14881,7 @@
         "rp224",
         "eg41-2004",
         "eg42-2004",
-        "iso14496-11-2005",
+        "iso14496-10-2005",
         "ac-2e-1996"
       ],
       "normative": [
@@ -12432,7 +14934,7 @@
         "rp224",
         "eg41-2004",
         "eg42-2004",
-        "iso14496-11-2005",
+        "iso14496-10-2005",
         "ac-2e-1996",
         "st2067-5-2013",
         "st379-2004",
@@ -14035,6 +16537,37 @@
     ]
   },
   {
+    "docId": "st434-2014",
+    "docLabel": "ST 434:2014",
+    "docNumber": "434",
+    "docTitle": "Material Exchange Format — XML Encoding for Metadata and File Structure Information",
+    "docType": "Standard",
+    "group": "smpte-31fs-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST434.2014",
+    "publicationDate": "2015-06-21T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "st436-1-2013",
+    "docLabel": "ST 436-1:2013",
+    "docNumber": "436",
+    "docPart": "1",
+    "docTitle": "MXF Mappings for VI Lines and Ancillary Data Packets",
+    "docType": "Standard",
+    "group": "smpte-31fs-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST436-1.2013",
+    "publicationDate": "2013-11-06T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true,
+      "reaffirmDate": "2016-10-05T07:00:00.000Z",
+      "reaffirmed": true
+    }
+  },
+  {
     "docId": "st55-2000",
     "docLabel": "ST 55:2000",
     "docNumber": "55",
@@ -14100,9 +16633,34 @@
     "docTitle": "Interoperable Master Format — Application DPP (ProRes)",
     "docType": "Specification",
     "group": "smpte-35pm-tc",
-    "href": "https://www.smpte.org/sites/default/files/tsp2121-1-2018_1.pdf",
+    "href": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/tsp2121-1-2018_1.pdf",
+    "keywords": [
+      "IMF",
+      "IMF Application"
+    ],
     "publicationDate": "2018-08-16T07:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "as-11",
+        "bt2390-4-201804",
+        "st2067-200-2018",
+        "st2094-1-2016",
+        "rdd6-2008"
+      ],
+      "normative": [
+        "rdd44-2017",
+        "rdd45-2017",
+        "st2067-2-2016",
+        "st2067-8-2013",
+        "st2067-9-2018",
+        "st2067-21-2016",
+        "st2067-101-2014",
+        "st2067-102-2017",
+        "bt2100-1-201706",
+        "bbc-whp-198-2011"
+      ]
+    },
     "repo": "https://github.com/SMPTE/tsp2121-1",
     "status": {
       "active": true
@@ -14117,9 +16675,31 @@
     "docTitle": "Interoperable Master Format — Application Constraint DPP (JPEG2000)",
     "docType": "Specification",
     "group": "smpte-35pm-tc",
-    "href": "https://www.smpte.org/sites/default/files/tsp2121-4-2019.pdf",
+    "href": "https://f.hubspotusercontent00.net/hubfs/5253154/tsp2121-4-2019.pdf",
+    "keywords": [
+      "IMF",
+      "IMF Application"
+    ],
     "publicationDate": "2019-07-19T07:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "tsp2121-1-2018",
+        "as-11",
+        "bt2390-4-201804",
+        "st2067-200-2018",
+        "st2094-1-2016",
+        "rdd6-2008",
+        "st2067-9-2018"
+      ],
+      "normative": [
+        "st2067-2-2016",
+        "st2067-8-2013",
+        "st2067-21-2016",
+        "bt2100-1-201706",
+        "st428-12-2013"
+      ]
+    },
     "repo": "https://github.com/SMPTE/tsp2121-1",
     "status": {
       "active": true
@@ -14150,7 +16730,7 @@
     "authors": [
       "Pierre-Anthony Lemieux"
     ],
-    "docId": "ttml-imsc1.0.1-20180424",
+    "docId": "ttml-imsc1-0-1-20180424",
     "docLabel": "TTML IMSC 1.0.1",
     "docTitle": "TTML Profiles for Internet Media Subtitles and Captions 1.0.1 (IMSC1)",
     "docType": "Recommendation",
@@ -14165,7 +16745,7 @@
     "authors": [
       "Pierre-Anthony Lemieux"
     ],
-    "docId": "ttml-imsc1.1-20181108",
+    "docId": "ttml-imsc1-1-20181108",
     "docLabel": "TTML IMSC 1.1",
     "docTitle": "TTML Profiles for Internet Media Subtitles and Captions 1.1",
     "docType": "Recommendation",
@@ -14181,7 +16761,7 @@
     "authors": [
       "Pierre-Anthony Lemieux"
     ],
-    "docId": "ttml-imsc1.2-20200804",
+    "docId": "ttml-imsc1-2-20200804",
     "docLabel": "TTML IMSC 1.2",
     "docTitle": "TTML Profiles for Internet Media Subtitles and Captions 1.2",
     "docType": "Recommendation",
@@ -14554,6 +17134,34 @@
     "docType": "Recommendation",
     "href": "https://www.w3.org/TR/2002/REC-xmldsig-core-20020212/",
     "publicationDate": "2013-02-12T07:00:00.000Z",
+    "publisher": "W3C",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "xmldsig-core-20080610"
+      ]
+    }
+  },
+  {
+    "authors": [
+      "Donald Eastlake",
+      "Joseph Reagle",
+      "David Solo",
+      "Frederick Hirsch",
+      "Thomas Roessler",
+      "Mark Bartel",
+      "John Boyer",
+      "Barb Fox",
+      "Brian LaMacchia",
+      "Ed Simon"
+    ],
+    "docId": "xmldsig-core-20080610",
+    "docLabel": "XML DSIG Core",
+    "docTitle": "XML Signature Syntax and Processing (Second Edition)",
+    "docType": "Recommendation",
+    "href": "https://www.w3.org/TR/2008/REC-xmldsig-core-20080610/",
+    "publicationDate": "2008-06-10T07:00:00.000Z",
     "publisher": "W3C",
     "status": {
       "active": false,

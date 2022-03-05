@@ -120,7 +120,7 @@
                     {{#with (docProjLookup ../docProjs docId)}}
                     {{#ifnoteq projectStatus "Complete"}}
                     <br>
-                    <span class="label badge badge-warning">{{workType}} {{projectStatus}}</span> {{#if newDoc}}<span class="small">Under Development: <a class="{{../idType}}-link clear-filter" href="#{{newDoc}}">{{getLabel newDoc}}</a> [{{getStatus newDoc}}]</span>{{/if}}
+                    <span class="label badge badge-warning">{{workType}} {{projectStatus}}</span> {{#if newDoc}}<br><span class="small">Under Development: <a class="{{../idType}}-link clear-filter" href="#{{newDoc}}">{{getLabel newDoc}}</a> [{{getStatus newDoc}}]</span>{{/if}}
                     {{/ifnoteq}}
                     {{/with}}
                   {{#if details}}
