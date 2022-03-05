@@ -118,10 +118,11 @@
                     <span class="font-weight-bold small">Current Status:</span> {{currentStatus}} {{{getstatusButton docId "12"}}}
                     {{#if status/statusNote}}<br><span class="small"><em> *({{status/statusNote}})</em></span>{{/if}}
                     {{#with (docProjLookup ../docProjs docId)}}
-                    {{#ifnoteq projectStatus "Complete"}}
                     <br>
-                    <span class="label badge badge-warning">{{workType}} {{projectStatus}}</span> {{#if newDoc}}<br><span class="small">Under Development: <a class="{{../idType}}-link clear-filter" href="#{{newDoc}}">{{getLabel newDoc}}</a> [{{getStatus newDoc}}]</span>{{/if}}
-                    {{/ifnoteq}}
+                    <span class="label badge badge-warning">{{workType}} {{projectStatus}}</span>
+                    {{#if newDoc}}
+                    <br><span class="small">Under Development: <a class="{{../idType}}-link clear-filter" href="#{{newDoc}}">{{getLabel newDoc}}</a> [{{getStatus newDoc}}]</span>
+                    {{/if}}
                     {{/with}}
                   {{#if details}}
                     <div>
