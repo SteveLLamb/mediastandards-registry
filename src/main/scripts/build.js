@@ -353,7 +353,7 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
       let pS = registryProject[p]["projectStatus"]
 
       if (pD === registryDocument[i]["docId"]) {
-        currentWork.push(pW + " " + pS)
+        currentWork.push(pW + " - " + pS)
       }
     }
 
@@ -363,7 +363,7 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
       let psS = docProjs[ps]["projectStatus"]
 
       if (psD === registryDocument[i]["docId"]) {
-        currentWork.push(psW + " " + psS)
+        currentWork.push(psW + " - " + psS)
       }
     }
 
