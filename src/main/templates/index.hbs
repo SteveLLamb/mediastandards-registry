@@ -140,6 +140,10 @@
                   {{/if}}
                   </div>
                   <div>
+                    {{#if doi}}
+                    <span class="font-weight-bold small">DOI:</span> {{doi}}
+                    <br>
+                    {{/if}}
                     {{#if authors}}
                     <span class="font-weight-bold small">Author(s):</span> {{#authors}}{{this}}{{#unless @last}}, {{/unless}}{{/authors}}
                     <br>
