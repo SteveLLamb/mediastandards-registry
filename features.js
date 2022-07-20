@@ -20,7 +20,7 @@ $(document).on('click', '.clear-filter', function(){
    .draw();
 
   $('#sorttableDocs').DataTable().searchPanes.clearSelections();
-  $('#sorttableDocs').DataTable().order([0, 'asc']).draw();
+  $('#sorttableDocs').DataTable().order([1, 'asc']).draw();
 
   var groupTable = $('#sorttableGroups').DataTable();
   groupTable
@@ -394,7 +394,8 @@ $(document).ready(function() {
   var defaultOptions = {
     paging: false,
     processing: true,
-    responsive: true,      
+    responsive: true,
+    order: [[1, 'asc']],   
     buttons: [
         {
         extend: 'searchPanes',
@@ -421,7 +422,7 @@ $(document).ready(function() {
            .draw();
 
           $('#sorttableDocs').DataTable().searchPanes.clearSelections();
-          $('#sorttableDocs').DataTable().order([0, 'asc']).draw();
+          $('#sorttableDocs').DataTable().order([1, 'asc']).draw();
 
           var url= document.location.href;
           window.history.pushState({}, "", url.split("?")[0]);
