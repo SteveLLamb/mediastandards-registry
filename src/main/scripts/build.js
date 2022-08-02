@@ -442,10 +442,14 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
       return null;
   });
 
-  /* helper to replace spaces for links */
+  /* helpers to replace spaces and dots for links */
 
   hb.registerHelper('spaceReplace', function(str) {
       return str.replace(/\s/g , '%20')
+  });
+
+  hb.registerHelper('dotReplace', function(str) {
+      return str.replace(/\./g, '-')
   });
 
   /* is the registry sorted */
