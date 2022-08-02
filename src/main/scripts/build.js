@@ -321,6 +321,7 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
       docProj["workType"] = registryProject[i]["workType"]
       docProj["projectStatus"] = registryProject[i]["projectStatus"]
       docProj["newDoc"] = registryProject[i]["docId"]
+      docProj["projApproved"] = registryProject[i]["projApproved"]
       docProjs.push(docProj)
 
     }
