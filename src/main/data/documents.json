@@ -1910,8 +1910,35 @@
     "publicationDate": "2021-10-13T07:00:00.000Z",
     "publisher": "DCI",
     "status": {
+      "active": false,
+      "statusNote": "build 87da090",
+      "superseded": true,
+      "supersededBy": [
+        "dci-dcss-v142"
+      ],
+      "supersededDate": "2022-06-15T07:00:00.000Z"
+    }
+  },
+  {
+    "docId": "dci-dcss-v142",
+    "docLabel": "DCSS v1.4.2",
+    "docTitle": "Digital Cinema System Specification Version 1.4.2",
+    "docType": "Specification",
+    "href": "https://dcss.dcimovies.com/0c0cff34d231b516cb89ae3fad352d5cf37a9515/dcss.html",
+    "keywords": [
+      "DCinema",
+      "Packaging",
+      "DCP Core",
+      "Distribution",
+      "Operations",
+      "Security",
+      "KDM"
+    ],
+    "publicationDate": "2022-06-15T07:00:00.000Z",
+    "publisher": "DCI",
+    "status": {
       "active": true,
-      "statusNote": "build 87da090"
+      "statusNote": "build 0c0cff3"
     }
   },
   {
