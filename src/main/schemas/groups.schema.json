@@ -11,7 +11,9 @@
                 "required": [
                     "groupId",
                     "groupName",
-                    "groupOrg"
+                    "groupOrg",
+                    "groupType",
+                    "groupStatus"
                 ],
                 "additionalProperties": false,
                 "properties": {
@@ -52,12 +54,34 @@
                         "type": "string",
                         "format": "uri"
                     },
+                    "groupStatus": {
+                        "type": "object",
+                        "properties": { 
+                            "active": {
+                                "type": "boolean"
+                            },
+                            "assignedGroup": {
+                                "type": "array",
+                                "items": {
+                                    "anyOf": [
+                                        {
+                                            "type": "string"
+                                        }
+                                    ]
+                                }
+                            },
+                            "pending": {
+                                "type": "boolean"
+                            }
+                        }
+                    },
                     "groupSummary": {
                         "type": "string"
                     },
                     "groupType": {
                         "type": "string",
                         "enum": [
+                            "SC",
                             "TC",
                             "ST", 
                             "AHG", 

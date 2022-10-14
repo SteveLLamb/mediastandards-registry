@@ -66,9 +66,9 @@ $(document).ready(function() {
                 style: 'multi'
             }
           }, 
-          layout: 'columns-3',
+          layout: 'columns-4',
           viewTotal: true,
-          columns: [1, 5, 3]
+          columns: [1, 7, 3, 4]
         }
       },
       {
@@ -94,19 +94,19 @@ $(document).ready(function() {
         targets:[2]
       },
       {
-        width: '25%',
-        targets:[4]
+        width: '20%',
+        targets:[6]
       },
       {
         visible: true,
-        targets:[5],
+        targets:[7],
         searchPanes: {
           header: "Technical Committee"
         }
       },
       {
         width: '16.6%',
-        targets:[6]
+        targets:[8]
       }
     ],
     dom: 

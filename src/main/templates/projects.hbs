@@ -23,7 +23,7 @@
       </thead>
       <tbody id="searchTable">
         {{#dataProjects}}
-        <tr id="{{../idType}}-{{projectId}}">
+        <tr id="{{../idType}}-{{projectId}}" {{#ifeq projectStatus "Cancelled"}}class="cancelled"{{/ifeq}}{{#ifeq projectStatus "Pending"}}class="pending"{{/ifeq}}>
           <td class="projectlabel">
             <a class="anchor" id="{{projectId}}" href="#{{projectId}}"></a><code>{{projectId}}</code>
           </td>
@@ -63,7 +63,7 @@
           <td>
             {{#if assignedGroup}}
             {{#with (groupIdLookup ../dataGroups assignedGroup)}}
-            {{#if groupLink}}<a href="../groups/{{../../htmlLink}}?search.search={{groupId}}">{{/if}}{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../dataGroups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}
+            {{#if groupId}}<a href="../groups/{{../../htmlLink}}#{{groupId}}">{{/if}}{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../dataGroups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupId}}</a>{{/if}}
             {{/with}}
             {{/if}}
           </td>

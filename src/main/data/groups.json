@@ -5,6 +5,9 @@
     "groupName": "Science and Technology Council Academy Color Encoding System (ACES) Project Committee",
     "groupOrg": "AMPAS",
     "groupRepo": "https://github.com/ampas/aces-docs",
+    "groupStatus": {
+      "active": true
+    },
     "groupType": "TC"
   },
   {
@@ -13,6 +16,9 @@
     "groupLink": "https://www.iso.org/committee/48090.html",
     "groupName": "TC36",
     "groupOrg": "ISO",
+    "groupStatus": {
+      "active": true
+    },
     "groupType": "TC"
   },
   {
@@ -21,6 +27,9 @@
     "groupLink": "https://www.iso.org/committee/48090.html",
     "groupName": "WG1",
     "groupOrg": "ISO",
+    "groupStatus": {
+      "active": true
+    },
     "groupType": "WG",
     "parentgroupId": "iso-tc36-tc"
   },
@@ -30,6 +39,9 @@
     "groupLink": "https://www.iso.org/committee/48090.html",
     "groupName": "WG2",
     "groupOrg": "ISO",
+    "groupStatus": {
+      "active": true
+    },
     "groupType": "WG",
     "parentgroupId": "iso-tc36-tc"
   },
@@ -39,6 +51,9 @@
     "groupLink": "https://www.iso.org/committee/48090.html",
     "groupName": "WG3",
     "groupOrg": "ISO",
+    "groupStatus": {
+      "active": true
+    },
     "groupType": "WG",
     "parentgroupId": "iso-tc36-tc"
   },
@@ -48,6 +63,9 @@
     "groupLink": "https://www.iso.org/committee/48090.html",
     "groupName": "WG4",
     "groupOrg": "ISO",
+    "groupStatus": {
+      "active": true
+    },
     "groupType": "WG",
     "parentgroupId": "iso-tc36-tc"
   },
@@ -57,25 +75,41 @@
     "groupId": "smpte-00c-sc",
     "groupLink": "https://teams.microsoft.com/l/team/19%3ae19516f36d1549c1b8e2ac122f1dd214%40thread.tacv2/conversations?groupId=8a648854-73b1-4fa3-8001-6b62a49efe53&tenantId=c6051a58-269b-4f08-835f-eedebf4596b3",
     "groupName": "Standards Community",
-    "groupOrg": "SMPTE"
+    "groupOrg": "SMPTE",
+    "groupStatus": {
+      "active": true
+    },
+    "groupType": "SC"
   },
   {
     "groupDocs": "https://smpte.sharepoint.com/sites/SCStandardsCommunity/Shared%20Documents/Forms/AllItems.aspx?RootFolder=%2Fsites%2FSCStandardsCommunity%2FShared%20Documents%2FPatent%20Statements&FolderCTID=0x012000BC8721B008348D48A6FE8E7C9298A177",
     "groupId": "smpte-01c-ps",
     "groupName": "Patent Statements",
-    "groupOrg": "SMPTE"
+    "groupOrg": "SMPTE",
+    "groupStatus": {
+      "active": true
+    },
+    "groupType": "SC"
   },
   {
     "groupDocs": "https://www.smpte.org/2020-standard-policies-and-governance",
     "groupId": "smpte-01c-spg",
     "groupName": "Standard Policies and Governance",
-    "groupOrg": "SMPTE"
+    "groupOrg": "SMPTE",
+    "groupStatus": {
+      "active": true
+    },
+    "groupType": "SC"
   },
   {
     "groupId": "smpte-02c-cg",
     "groupLink": "https://smpte.sharepoint.com/:o:/s/SCStandardsCommunity/Esh5K3ZEwEJIl3-F4Oucr_cBZZx5u_o0whef7SiAwZ2VZw?e=PnleCA",
     "groupName": "Committee Guide",
-    "groupOrg": "SMPTE"
+    "groupOrg": "SMPTE",
+    "groupStatus": {
+      "active": true
+    },
+    "groupType": "SC"
   },
   {
     "groupCal": "https://teams.microsoft.com/_#/tab::4f37236d-1c25-4dea-989c-93f3c99a508b/General?threadId=19:d5675181cbc24c5591eebdea2b436ca3@thread.tacv2&ctx=channel",
@@ -84,7 +118,11 @@
     "groupLink": "https://teams.microsoft.com/l/team/19%3ad5675181cbc24c5591eebdea2b436ca3%40thread.tacv2/conversations?groupId=0d0e1b11-f188-46e9-8c59-c81c82a9f975&tenantId=c6051a58-269b-4f08-835f-eedebf4596b3",
     "groupName": "Liaisons Committee",
     "groupOrg": "SMPTE",
-    "groupSummary": "The SMPTE Standards Liaisons Committee manages incoming and outgoing liaisons communications with associated organizations. The Liaisons Team is open to all SC members, but maintenance of the Files and Liaisons Board is mostly carried out at the closed Standards Committee meetings. "
+    "groupStatus": {
+      "active": true
+    },
+    "groupSummary": "The SMPTE Standards Liaisons Committee manages incoming and outgoing liaisons communications with associated organizations. The Liaisons Team is open to all SC members, but maintenance of the Files and Liaisons Board is mostly carried out at the closed Standards Committee meetings. ",
+    "groupType": "SC"
   },
   {
     "groupBallots": "https://teams.microsoft.com/l/channel/19%3ad24c644d33964ecaa11ade74868f96f9%40thread.tacv2/ST%2520Audit?groupId=45b18962-fd04-4863-8158-4f1aab05f83b",
@@ -95,13 +133,20 @@
     "groupName": "ST Standards Committee",
     "groupOrg": "SMPTE",
     "groupRepo": "https://github.com/orgs/SMPTE/teams/standards-committee",
+    "groupStatus": {
+      "active": true
+    },
     "groupType": "TC"
   },
   {
     "groupDocs": "https://smpte.sharepoint.com/sites/SCStandardsCommunity/Shared%20Documents/Forms/AllItems.aspx?RootFolder=%2Fsites%2FSCStandardsCommunity%2FShared%20Documents%2FReference%20Documents&FolderCTID=0x012000BC8721B008348D48A6FE8E7C9298A177",
     "groupId": "smpte-02c-tcrd",
     "groupName": "TC Reference Docs",
-    "groupOrg": "SMPTE"
+    "groupOrg": "SMPTE",
+    "groupStatus": {
+      "active": true
+    },
+    "groupType": "SC"
   },
   {
     "groupCal": "https://teams.microsoft.com/_#/tab::73bb9b78-aa4f-4d47-b2fa-18d10ab64396/General?threadId=19:4c0f3ec5a76a4de2b319f7f6cf68ec84@thread.tacv2&ctx=channel",
@@ -110,6 +155,9 @@
     "groupLink": "https://teams.microsoft.com/l/team/19%3a4c0f3ec5a76a4de2b319f7f6cf68ec84%40thread.tacv2/conversations?groupId=aa47ea2d-999d-41aa-9391-b88238206c75&tenantId=c6051a58-269b-4f08-835f-eedebf4596b3",
     "groupName": "Joint ETC Task Force on Artificial Intelligence and Media",
     "groupOrg": "SMPTE",
+    "groupStatus": {
+      "active": true
+    },
     "groupSummary": "Identify Machine Learning / Artificial Intelligence areas and liaisons activities affecting professional media where SMPTE and the ETC can encourage interoperability and technology advancements.",
     "groupType": "TF"
   },
@@ -120,6 +168,9 @@
     "groupLink": "https://teams.microsoft.com/l/team/19%3a380402f61c90498ca1f4e59f7a906db1%40thread.tacv2/conversations?groupId=e1ae856f-573a-41a5-846a-fbb53b2175aa&tenantId=c6051a58-269b-4f08-835f-eedebf4596b3",
     "groupName": "Joint Task Force on Professional Networked Streamed Media",
     "groupOrg": "SMPTE",
+    "groupStatus": {
+      "active": true
+    },
     "groupSummary": "The JT-NM (Joint Taskforce on Networked Media) is a self-coordinating group of industry bodies working together on the development of IP technologies for professional media systems. Admin Group Members include the Advanced Media Workflow Association (AMWA), the European Broadcasting Union (EBU), the Society of Motion Picture and Television Engineers (SMPTE), and the Video Services Forum (VSF).",
     "groupType": "TF"
   },
@@ -131,6 +182,9 @@
     "groupName": "Software Task Force ",
     "groupOrg": "SMPTE",
     "groupRepo": "https://github.com/orgs/SMPTE/teams/sg-software",
+    "groupStatus": {
+      "active": true
+    },
     "groupSummary": "The Software Task Force was originally a study group (SG) reporting to the Standards Committee (ST). The mission of the study group was the research software issues related to the work of the Standards Community (SC) and make recommendations for changes in policies and procedures to ST.",
     "groupType": "TF"
   },
@@ -145,6 +199,9 @@
     "groupName": "10E",
     "groupOrg": "SMPTE",
     "groupRepo": "https://github.com/orgs/SMPTE/teams/10e",
+    "groupStatus": {
+      "active": true
+    },
     "groupSummary": "The application of the General Scope as it applies to electronic capture, generation, editing, mastering, archiving, and reproduction of image, audio, subtitles, captions, and any other master elements required for distribution across multiple applications.",
     "groupType": "TC"
   },
@@ -158,6 +215,12 @@
     "groupLink": "https://teams.microsoft.com/l/team/19%3ad05ac56a79864deeb839e164f90333b1%40thread.tacv2/conversations?groupId=4794fd78-7c29-4044-acee-fcc720c8e51f&tenantId=c6051a58-269b-4f08-835f-eedebf4596b3",
     "groupName": "20F",
     "groupOrg": "SMPTE",
+    "groupStatus": {
+      "active": false,
+      "assignedGroup": [
+        "smpte-27c-tc"
+      ]
+    },
     "groupSummary": "The application of the General Scope as it applies to application of mastered essence to theatrical film distribution, including, media and component creation, marking, laboratory methods, reproduction, packaging, projection, and related topics. Additionally film capture, editing and recording.",
     "groupType": "TC"
   },
@@ -172,6 +235,12 @@
     "groupName": "21DC",
     "groupOrg": "SMPTE",
     "groupRepo": "https://github.com/orgs/SMPTE/teams/21dc",
+    "groupStatus": {
+      "active": false,
+      "assignedGroup": [
+        "smpte-27c-tc"
+      ]
+    },
     "groupSummary": "The application of the General Scope as it applies to application of mastered essence to theatrical digital distribution, including compression, encryption, wrapping, marking, packaging, media, logging, playout, projection, reproduction, and related topics.",
     "groupType": "TC"
   },
@@ -183,6 +252,12 @@
     "groupLink": "https://teams.microsoft.com/l/team/19%3ac3ff6a01de044d65b533856f97106ccb%40thread.tacv2/conversations?groupId=3e990441-c8ba-4b93-8a37-825355479680&tenantId=c6051a58-269b-4f08-835f-eedebf4596b3",
     "groupName": "DX Document Maintenance",
     "groupOrg": "SMPTE",
+    "groupStatus": {
+      "active": false,
+      "assignedGroup": [
+        "smpte-27c-tcwg-dx"
+      ]
+    },
     "groupType": "DG",
     "parentgroupId": "smpte-21dc-tc"
   },
@@ -193,6 +268,9 @@
     "groupLink": "https://teams.microsoft.com/l/team/19%3a94583870de164d5a8e63ed9ed09a12cb%40thread.tacv2/conversations?groupId=2908db80-7281-44d2-95f7-a7554ac2afd1&tenantId=c6051a58-269b-4f08-835f-eedebf4596b3",
     "groupName": "SMS OMB Comm",
     "groupOrg": "SMPTE",
+    "groupStatus": {
+      "active": false
+    },
     "groupType": "DG",
     "parentgroupId": "smpte-21dc-tc"
   },
@@ -203,6 +281,12 @@
     "groupLink": "https://teams.microsoft.com/l/team/19%3ab6c1c9d5a83c4c409bbf72f10323cf59%40thread.tacv2/conversations?groupId=39c9b607-bb0a-48db-bc3a-c0941fb06de2&tenantId=c6051a58-269b-4f08-835f-eedebf4596b3",
     "groupName": "Stereo Subtitling",
     "groupOrg": "SMPTE",
+    "groupStatus": {
+      "active": false,
+      "assignedGroup": [
+        "smpte-27c-tcdg-sub"
+      ]
+    },
     "groupType": "DG",
     "parentgroupId": "smpte-21dc-tc"
   },
@@ -213,6 +297,12 @@
     "groupLink": "https://teams.microsoft.com/l/team/19%3ab231f399668a47969253c325bdb0746d%40thread.tacv2/conversations?groupId=574bfa06-b3ac-457f-ab2b-501b28d9112c&tenantId=c6051a58-269b-4f08-835f-eedebf4596b3",
     "groupName": "FIPS Revision",
     "groupOrg": "SMPTE",
+    "groupStatus": {
+      "active": false,
+      "assignedGroup": [
+        "smpte-27c-tcsg-nist"
+      ]
+    },
     "groupType": "SG",
     "parentgroupId": "smpte-21dc-tc"
   },
@@ -227,6 +317,15 @@
     "groupName": "24TB",
     "groupOrg": "SMPTE",
     "groupRepo": "https://github.com/orgs/SMPTE/teams/24tb",
+    "groupStatus": {
+      "active": false,
+      "assignedGroup": [
+        "smpte-10e-tc",
+        "smpte-31fs-tc",
+        "smpte-32nf-tc",
+        "smpte-34cs-tc"
+      ]
+    },
     "groupSummary": "The application of the General Scope as it applies to mastered essence for television and broadband distribution (both separately and for hybrid television/broadband environments), including compression, encryption, wrapping, marking, packaging, media, tracking/control, presentation, reproduction, and related topics.",
     "groupType": "TC"
   },
@@ -241,8 +340,162 @@
     "groupName": "25CSS",
     "groupOrg": "SMPTE",
     "groupRepo": "https://github.com/orgs/SMPTE/teams/25css",
+    "groupStatus": {
+      "active": false,
+      "assignedGroup": [
+        "smpte-27c-tc"
+      ]
+    },
     "groupSummary": "The application of the General Scope as it applies to standards for cinema sound and cinema B-Chain systems, including performance, measurements, setup, calibration, acoustics and related topics.",
     "groupType": "TC"
+  },
+  {
+    "groupId": "smpte-25css-tcwg-bcce",
+    "groupLink": "https://teams.microsoft.com/l/team/19%3ab9381788f44f44cda803220b079cfbe7%40thread.tacv2/conversations?groupId=7c5ef60e-9336-499c-bf05-376fbcd617b1&tenantId=c6051a58-269b-4f08-835f-eedebf4596b3",
+    "groupName": "Cinema B-Chain Characteristics and Expectations",
+    "groupOrg": "SMPTE",
+    "groupStatus": {
+      "active": false,
+      "assignedGroup": [
+        "smpte-27c-tcwg-snd"
+      ]
+    },
+    "groupType": "WG",
+    "parentgroupId": "smpte-25css-tc"
+  },
+  {
+    "groupId": "smpte-25css-tcwg-bcce-dg-bc-ca",
+    "groupLink": "https://teams.microsoft.com/l/team/19%3a40d0a1981bbb40258c8179029cb3cf77%40thread.tacv2/conversations?groupId=0da3a379-f58c-4921-a5dd-d1f414201270&tenantId=c6051a58-269b-4f08-835f-eedebf4596b3",
+    "groupName": "B-Chain Characteristics Clip Analysis",
+    "groupOrg": "SMPTE",
+    "groupStatus": {
+      "active": false,
+      "assignedGroup": [
+        "smpte-27c-tcwg-snd-dg-bc-ca"
+      ]
+    },
+    "groupType": "DG",
+    "parentgroupId": "smpte-25css-tcwg-bcce"
+  },
+  {
+    "groupId": "smpte-25css-tcwg-bcce-dg-bc-isa",
+    "groupLink": "https://teams.microsoft.com/l/team/19%3a1f5fd3d3a6d9467d8a656e829b09b8bb%40thread.tacv2/conversations?groupId=11453347-22fe-49ae-a93c-32e5e4d8308a&tenantId=c6051a58-269b-4f08-835f-eedebf4596b3",
+    "groupName": "B-Chain Characteristics In-Situ Analysis",
+    "groupOrg": "SMPTE",
+    "groupStatus": {
+      "active": false,
+      "assignedGroup": [
+        "smpte-27c-tcwg-snd-dg-bc-isa"
+      ]
+    },
+    "groupType": "DG",
+    "parentgroupId": "smpte-25css-tcwg-bcce"
+  },
+  {
+    "groupId": "smpte-25css-tcwg-bcce-dg-bc-td",
+    "groupLink": "https://teams.microsoft.com/l/team/19%3ae2a95943514c40eb92539e884526b3a1%40thread.tacv2/conversations?groupId=2a861342-abc1-4b8f-9e26-f82d4e6aeef5&tenantId=c6051a58-269b-4f08-835f-eedebf4596b3",
+    "groupName": "B-Chain Characteristics Technical Documents",
+    "groupOrg": "SMPTE",
+    "groupStatus": {
+      "active": false,
+      "assignedGroup": [
+        "smpte-27c-tcwg-snd-dg-bc-td"
+      ]
+    },
+    "groupType": "DG",
+    "parentgroupId": "smpte-25css-tcwg-bcce"
+  },
+  {
+    "groupDesc": "Cinema",
+    "groupId": "smpte-27c-tc",
+    "groupName": "27C",
+    "groupOrg": "SMPTE",
+    "groupRepo": "https://github.com/orgs/SMPTE/teams/27c",
+    "groupStatus": {
+      "pending": true
+    },
+    "groupSummary": "The application of the General Scope as it applies to theatrical distribution, reproduction and operations, both analog and digital.",
+    "groupType": "TC"
+  },
+  {
+    "groupId": "smpte-27c-tcdg-sub",
+    "groupName": "Subtitling",
+    "groupOrg": "SMPTE",
+    "groupStatus": {
+      "pending": true
+    },
+    "groupType": "DG",
+    "parentgroupId": "smpte-27c-tc"
+  },
+  {
+    "groupId": "smpte-27c-tcsg-nist",
+    "groupName": "NIST",
+    "groupOrg": "SMPTE",
+    "groupStatus": {
+      "pending": true
+    },
+    "groupType": "SG",
+    "parentgroupId": "smpte-27c-tc"
+  },
+  {
+    "groupId": "smpte-27c-tcwg-dx",
+    "groupName": "Document Maintenance (DX)",
+    "groupOrg": "SMPTE",
+    "groupStatus": {
+      "pending": true
+    },
+    "groupType": "WG",
+    "parentgroupId": "smpte-27c-tc"
+  },
+  {
+    "groupId": "smpte-27c-tcwg-dx-dg-2095-1-rev",
+    "groupName": "2095-1 Revision",
+    "groupOrg": "SMPTE",
+    "groupStatus": {
+      "pending": true
+    },
+    "groupType": "DG",
+    "parentgroupId": "smpte-27c-tcwg-dx"
+  },
+  {
+    "groupId": "smpte-27c-tcwg-snd",
+    "groupName": "Sound",
+    "groupOrg": "SMPTE",
+    "groupStatus": {
+      "pending": true
+    },
+    "groupType": "WG",
+    "parentgroupId": "smpte-27c-tc"
+  },
+  {
+    "groupId": "smpte-27c-tcwg-snd-dg-bc-ca",
+    "groupName": "B-Chain Characteristics Clip Analysis",
+    "groupOrg": "SMPTE",
+    "groupStatus": {
+      "pending": true
+    },
+    "groupType": "DG",
+    "parentgroupId": "smpte-27c-tcwg-snd"
+  },
+  {
+    "groupId": "smpte-27c-tcwg-snd-dg-bc-isa",
+    "groupName": "B-Chain Characteristics In-Situ Analysis",
+    "groupOrg": "SMPTE",
+    "groupStatus": {
+      "pending": true
+    },
+    "groupType": "DG",
+    "parentgroupId": "smpte-27c-tcwg-snd"
+  },
+  {
+    "groupId": "smpte-27c-tcwg-snd-dg-bc-td",
+    "groupName": "B-Chain Characteristics Technical Documents",
+    "groupOrg": "SMPTE",
+    "groupStatus": {
+      "pending": true
+    },
+    "groupType": "DG",
+    "parentgroupId": "smpte-27c-tcwg-snd"
   },
   {
     "groupAIs": "https://teams.microsoft.com/_#/tab::370c1b41-7311-42fb-b2fb-7fa898a8dbf8/General?threadId=19:8dd04908847f41e7b124a88623ca6c69@thread.tacv2&ctx=channel",
@@ -255,6 +508,9 @@
     "groupName": "30MR",
     "groupOrg": "SMPTE",
     "groupRepo": "https://github.com/orgs/SMPTE/teams/30mr",
+    "groupStatus": {
+      "active": true
+    },
     "groupSummary": "The application of the General Scope as it applies to the definition and implementation of the SMPTE Registration Authority, used to identify digital assets and associated metadata such as the definition of shared metadata semantics across multiple committees.",
     "groupType": "TC"
   },
@@ -269,6 +525,9 @@
     "groupName": "31FS",
     "groupOrg": "SMPTE",
     "groupRepo": "https://github.com/orgs/SMPTE/teams/31fs",
+    "groupStatus": {
+      "active": true
+    },
     "groupSummary": "The application of the General Scope as it applies to definition of common wrapper and file structures for storage, transmission, and use in the carriage of all forms of digital content components.",
     "groupType": "TC"
   },
@@ -283,6 +542,9 @@
     "groupName": "32NF",
     "groupOrg": "SMPTE",
     "groupRepo": "https://github.com/orgs/SMPTE/teams/32nf",
+    "groupStatus": {
+      "active": true
+    },
     "groupSummary": "The application of the General Scope as it applies to definition and control of elements supporting the infrastructures of content production and distribution facilities, including file management, transfer protocols, switching mechanisms, and physical networks that are both internal and external to the facility excluding unique final distribution methods.",
     "groupType": "TC"
   },
@@ -297,6 +559,9 @@
     "groupName": "34CS",
     "groupOrg": "SMPTE",
     "groupRepo": "https://github.com/orgs/SMPTE/teams/34cs",
+    "groupStatus": {
+      "active": true
+    },
     "groupSummary": "The application of the General Scope as it applies to the implementation of media services, methods of managing and controlling hardware devices and software systems, and the management of media workflow processes, including associated signaling and control mechanisms.",
     "groupType": "TC"
   },
@@ -311,6 +576,9 @@
     "groupName": "35PM",
     "groupOrg": "SMPTE",
     "groupRepo": "https://github.com/orgs/SMPTE/teams/35pm",
+    "groupStatus": {
+      "active": true
+    },
     "groupSummary": "The application of the General Scope as it applies to the packaging of media elements, to facilitate interchange and interoperability of formats within specific integrated application ecosystems in the professional fields of media creation, production, post-production archiving and related topics.",
     "groupType": "TC"
   },
@@ -321,6 +589,9 @@
     "groupLink": "https://teams.microsoft.com/_#/conversations/General?threadId=19:6d0f85f013154809868566f6a7b3d1ec@thread.tacv2&ctx=channel",
     "groupName": "DX Document Maintenance",
     "groupOrg": "SMPTE",
+    "groupStatus": {
+      "active": true
+    },
     "groupType": "DG",
     "parentgroupId": "smpte-35pm-tc"
   },
@@ -331,6 +602,9 @@
     "groupLink": "https://teams.microsoft.com/_#/conversations/General?threadId=19:f72b95713dc74ce8aec706cd16dc6ad3@thread.tacv2&ctx=channel",
     "groupName": "IMF OPL",
     "groupOrg": "SMPTE",
+    "groupStatus": {
+      "active": true
+    },
     "groupType": "DG",
     "parentgroupId": "smpte-35pm-tc"
   },
@@ -341,6 +615,9 @@
     "groupLink": "https://teams.microsoft.com/_#/conversations/General?threadId=19:4b4ed0fc41bd42778dc01c6e8ee7c20c@thread.tacv2&ctx=channel",
     "groupName": "IMF Plugfest",
     "groupOrg": "SMPTE",
+    "groupStatus": {
+      "active": true
+    },
     "groupType": "DG",
     "parentgroupId": "smpte-35pm-tc"
   },
@@ -351,6 +628,9 @@
     "groupLink": "https://teams.microsoft.com/_#/conversations/General?threadId=19:a559da2aa66f41fe8779611243ab67a6@thread.tacv2&ctx=channel",
     "groupName": "IMF Application DPP",
     "groupOrg": "SMPTE",
+    "groupStatus": {
+      "active": true
+    },
     "groupType": "WG",
     "parentgroupId": "smpte-35pm-tc"
   }

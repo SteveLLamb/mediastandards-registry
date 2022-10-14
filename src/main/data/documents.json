@@ -4136,6 +4136,23 @@
     }
   },
   {
+    "docId": "iso15444-15-2019",
+    "docLabel": "ISO/IEC 15444-15:2019",
+    "docTitle": "Information technology — JPEG 2000 image coding system — Part 15: High-Throughput JPEG 2000",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/76621.html",
+    "keywords": [
+      "DCinema",
+      "JPEG2000",
+      "HTJ2K"
+    ],
+    "publicationDate": "2019-10-01T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "iso15924-2004",
     "docLabel": "ISO 15924:2004",
     "docTitle": "Information and documentation — Codes for the representation of names of scripts",
@@ -5752,6 +5769,34 @@
     "href": "https://www.iso.org/standard/74165.html",
     "publicationDate": "2019-06-01T07:00:00.000Z",
     "publisher": "ISO",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "isoiecdir-p2-8th-2018",
+    "docLabel": "ISO/IEC Directives, Part 2",
+    "docTitle": "Principles and rules for the structure and drafting of ISO and IEC documents (Eighth edition, 2018)",
+    "docType": "Directive",
+    "href": "https://isotc.iso.org/livelink/livelink/fetch/2000/2122/4230450/4230456/4230520/ISO_IEC_Directives%2C_Part_2%2C_Principles_and_rules_for_the_structure_and_drafting_of_ISO_and_IEC_documents_-_2018_%288th_edition%29_-_PDF.pdf?nodeid=19685788&vernum=-2",
+    "publicationDate": "2018-01-01T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "isoiecdir-p2-9th-2021"
+      ]
+    }
+  },
+  {
+    "docId": "isoiecdir-p2-9th-2021",
+    "docLabel": "ISO/IEC Directives, Part 2",
+    "docTitle": "Principles and rules for the structure and drafting of ISO and IEC documents (Ninth edition, 2021)",
+    "docType": "Directive",
+    "href": "https://www.iso.org/sites/directives/current/part2/index.xhtml",
+    "publicationDate": "2021-01-01T07:00:00.000Z",
+    "publisher": "ISO/IEC",
     "status": {
       "active": true
     }
@@ -8028,7 +8073,7 @@
     "docTitle": "Digital Source Processing - Color Processing for D-Cinema",
     "docType": "Engineering Guideline",
     "doi": "10.5594/SMPTE.EG432-1.2010",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.EG432-1.2010",
     "keywords": [
       "DCinema",
@@ -8053,7 +8098,7 @@
     "docTitle": "Digital Source Processing - D-Cinema Low Frequency Effects (LFE) Channel Audio Characteristics",
     "docType": "Engineering Guideline",
     "doi": "10.5594/SMPTE.EG432-2.2006",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.EG432-2.2006",
     "keywords": [
       "DCinema",
@@ -8238,7 +8283,7 @@
     "docTitle": "Cinelink 2 Specification",
     "docType": "Registered Disclosure Document",
     "doi": "10.5594/SMPTE.RDD20.2010",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.RDD20.2010",
     "keywords": [
       "DCinema",
@@ -8269,7 +8314,7 @@
     "docTitle": "Dolby Atmos® Print Master File Specification",
     "docType": "Registered Disclosure Document",
     "doi": "10.5594/SMPTE.RDD28.2014",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.RDD28.2014",
     "keywords": [
       "DCinema",
@@ -8323,7 +8368,7 @@
     "docTitle": "Dolby Atmos® Bitstream Specification",
     "docType": "Registered Disclosure Document",
     "doi": "10.5594/SMPTE.RDD29.2019",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.RDD29.2019",
     "keywords": [
       "DCinema",
@@ -8509,7 +8554,7 @@
     "docTitle": "SMPTE DCP Bv2.1 Application Profile",
     "docType": "Registered Disclosure Document",
     "doi": "10.5594/SMPTE.RDD52.2020",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.RDD52.2020",
     "keywords": [
       "DCinema",
@@ -8554,7 +8599,7 @@
     "docNumber": "53",
     "docTitle": "Hybrid Tone Mapping of digital cinema content for distribution of multiple dynamic range",
     "docType": "Registered Disclosure Document",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "publisher": "SMPTE",
     "status": {
       "draft": true
@@ -8602,7 +8647,7 @@
     "docTitle": "SMPTE ST 2098-2 Immersive Audio Bitstream and Packaging Constraints: IAB Application Profile 1",
     "docType": "Registered Disclosure Document",
     "doi": "10.5594/SMPTE.RDD57.2021",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.RDD57.2021",
     "keywords": [
       "Audio",
@@ -8707,8 +8752,9 @@
     },
     "repo": "https://github.com/SMPTE/rdd59-2",
     "status": {
-      "draft": true,
-      "publicCd": true
+      "draft": false,
+      "publicCd": false,
+      "withdrawn": true
     }
   },
   {
@@ -8912,6 +8958,18 @@
     }
   },
   {
+    "docId": "SMPTE.RP200.20XX",
+    "docLabel": "SMPTE RP 200:20XX",
+    "docNumber": "200",
+    "docTitle": "Relative and Absolute Sound Pressure Levels for Motion-Picture Multichannel Sound Systems — Applicable for Analog Photographic Film Audio, Digital Photographic Film Audio and D-Cinema",
+    "docType": "Recommended Practice",
+    "group": "smpte-20f-tc",
+    "publisher": "SMPTE",
+    "status": {
+      "draft": true
+    }
+  },
+  {
     "docId": "SMPTE.RP202.2008",
     "docLabel": "SMPTE RP 202:2010",
     "docNumber": "202",
@@ -8984,7 +9042,7 @@
     "docTitle": "Conversion from CEA-608 Data to SMPTE-TT",
     "docType": "Recommended Practice",
     "doi": "10.5594/SMPTE.RP2052-10.2012",
-    "group": "smpte-24tb-tc",
+    "group": "smpte-10e-tc",
     "href": "https://doi.org/10.5594/SMPTE.RP2052-10.2012",
     "publicationDate": "2012-01-03T07:00:00.000Z",
     "publisher": "SMPTE",
@@ -9004,7 +9062,7 @@
     "docTitle": "Conversion from CEA-608 Data to SMPTE-TT",
     "docType": "Recommended Practice",
     "doi": "10.5594/SMPTE.RP2052-10.2013",
-    "group": "smpte-24tb-tc",
+    "group": "smpte-10e-tc",
     "href": "https://doi.org/10.5594/SMPTE.RP2052-10.2013",
     "publicationDate": "2013-06-05T07:00:00.000Z",
     "publisher": "SMPTE",
@@ -9020,7 +9078,7 @@
     "docTitle": "Conversion from CEA-708 Caption Data to SMPTE-TT",
     "docType": "Recommended Practice",
     "doi": "10.5594/SMPTE.RP2052-11.2013",
-    "group": "smpte-24tb-tc",
+    "group": "smpte-10e-tc",
     "href": "https://doi.org/10.5594/SMPTE.RP2052-11.2013",
     "publicationDate": "2013-06-05T07:00:00.000Z",
     "publisher": "SMPTE",
@@ -9283,7 +9341,7 @@
     "docPart": "22",
     "docTitle": "D-Cinema Distribution Master – Minimal Timed Text XML Requirements",
     "docType": "Recommended Practice",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "keywords": [
       "DCinema",
       "DCDM",
@@ -9320,7 +9378,7 @@
     "docTitle": "D-Cinema Distribution Master - Audio File Format and Delivery Constraints",
     "docType": "Recommended Practice",
     "doi": "10.5594/SMPTE.RP428-4.2010",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.RP428-4.2010",
     "keywords": [
       "DCinema",
@@ -9364,7 +9422,7 @@
     "docTitle": "D-Cinema Distribution Master - Mapping of Images into Constrained Tag Image File",
     "docType": "Recommended Practice",
     "doi": "10.5594/SMPTE.RP428-5.2010",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.RP428-5.2010",
     "keywords": [
       "DCinema",
@@ -9402,7 +9460,7 @@
     "docTitle": "D-Cinema Distribution Master —Digital Leader",
     "docType": "Recommended Practice",
     "doi": "10.5594/SMPTE.RP428-6.2009",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.RP428-6.2009",
     "keywords": [
       "DCinema",
@@ -9464,7 +9522,7 @@
     "docTitle": "D-Cinema Quality — Reference Projector and Environment",
     "docType": "Recommended Practice",
     "doi": "10.5594/SMPTE.RP431-2.2011",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.RP431-2.2011",
     "keywords": [
       "DCinema",
@@ -9515,7 +9573,7 @@
     "docLabel": "SMPTE SGR DC28 AFR 072007",
     "docTitle": "DC28 Study Group Report on Additional Frame Rates, July 2007",
     "docType": "Study Group Report",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "publisher": "SMPTE",
     "status": {
       "unknown": true
@@ -9527,7 +9585,7 @@
     "docLabel": "SMPTE SGR 21DC HFR 112011",
     "docTitle": "Second Interim Study Group Report on High Frame Rates, November 2011",
     "docType": "Study Group Report",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "publisher": "SMPTE",
     "status": {
       "unknown": true
@@ -9539,7 +9597,7 @@
     "docLabel": "SMPTE SGR DC28 Stereography 2005",
     "docTitle": "DC28.0 Stereoscopic D-Cinema Study Group Report, 2005",
     "docType": "Study Group Report",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "publisher": "SMPTE",
     "status": {
       "unknown": true
@@ -9733,7 +9791,7 @@
     "docTitle": "Format for Active Format Description and Bar Data",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST2016-1.2009",
-    "group": "smpte-24tb-tc",
+    "group": "smpte-10e-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST2016-1.2009",
     "publicationDate": "2009-12-23T07:00:00.000Z",
     "publisher": "SMPTE",
@@ -9865,7 +9923,7 @@
     "docTitle": "Timed Text Format (SMPTE-TT)",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST2052-1.2013",
-    "group": "smpte-24tb-tc",
+    "group": "smpte-10e-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST2052-1.2013",
     "publicationDate": "2013-06-05T07:00:00.000Z",
     "publisher": "SMPTE",
@@ -10547,10 +10605,10 @@
     }
   },
   {
-    "docId": "SMPTE.ST2067-20X.20XX",
-    "docLabel": "SMPTE ST 2067-20x:20XX",
+    "docId": "SMPTE.ST2067-202.20XX",
+    "docLabel": "SMPTE ST 2067-202:20XX",
     "docNumber": "2067",
-    "docPart": "20x",
+    "docPart": "202",
     "docTitle": "Interoperable Master Format — ISXD Plugin",
     "docType": "Standard",
     "group": "smpte-35pm-tc",
@@ -10895,11 +10953,16 @@
     },
     "repo": "https://github.com/SMPTE/st2067-40",
     "status": {
-      "active": true,
+      "active": false,
       "amended": true,
       "amendedBy": [
         "SMPTE.ST2067-40.2016Am1.2017"
-      ]
+      ],
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST2067-40.2021"
+      ],
+      "supersededDate": "2021-10-12T07:00:00.000Z"
     }
   },
   {
@@ -10934,6 +10997,59 @@
         "iso11664-3-2012",
         "iso15444-1-2004",
         "iso15444-1-2004-amd7-2015"
+      ]
+    },
+    "repo": "https://github.com/SMPTE/st2067-40",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST2067-40.2021"
+      ],
+      "supersededDate": "2021-10-12T07:00:00.000Z"
+    }
+  },
+  {
+    "docId": "SMPTE.ST2067-40.2021",
+    "docLabel": "SMPTE ST 2067-40:2021",
+    "docNumber": "2067",
+    "docPart": "40",
+    "docTitle": "Interoperable Master Format — Application #4 Cinema Mezzanine",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST2067-40.2021",
+    "group": "smpte-35pm-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2067-40.2021",
+    "keywords": [
+      "IMF",
+      "IMF Application"
+    ],
+    "publicationDate": "2021-10-12T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "SMPTE.EG432-1.2010",
+        "SMPTE.RP431-2.2011",
+        "SMPTE.ST2113.2018"
+      ],
+      "normative": [
+        "SMPTE.ST400.2012",
+        "SMPTE.ST379-1.2009",
+        "SMPTE.ST422.2019",
+        "SMPTE.ST428-1.2019",
+        "SMPTE.ST428-7.2014",
+        "SMPTE.ST428-10.2008",
+        "SMPTE.ST428-11.2013",
+        "SMPTE.ST428-21.2011",
+        "SMPTE.ST429-5.2017",
+        "SMPTE.ST2067-2.2020",
+        "SMPTE.ST2067-21.2020",
+        "SMPTE.ST2067-101.2018",
+        "SMPTE.ST2067-102.2017",
+        "iso11664-3-2012",
+        "iso15444-1-2019",
+        "iso15444-15-2019",
+        "xmlschema-1-20041028",
+        "xmlschema-2-20041028"
       ]
     },
     "repo": "https://github.com/SMPTE/st2067-40",
@@ -12111,7 +12227,7 @@
     "docTitle": "Vertical Ancillary Data Mapping of Caption Data and Other Related Data",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST334-1.2015",
-    "group": "smpte-24tb-tc",
+    "group": "smpte-32nf-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST334-1.2015",
     "publicationDate": "2015-01-30T07:00:00.000Z",
     "publisher": "SMPTE",
@@ -12127,7 +12243,7 @@
     "docTitle": "Caption Distribution Packet (CDP) Definition",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST334-2.2015",
-    "group": "smpte-24tb-tc",
+    "group": "smpte-32nf-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST334-2.2015",
     "publicationDate": "2015-01-30T07:00:00.000Z",
     "publisher": "SMPTE",
@@ -13475,7 +13591,7 @@
     "docTitle": "Link Encryption for 1.5 Gb/s Serial Digital Interface",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST427.2009",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST427.2009",
     "keywords": [
       "DCinema",
@@ -13551,7 +13667,7 @@
     "docTitle": "D-Cinema Distribution Master — Image Characteristics",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST428-1.2019",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST428-1.2019",
     "keywords": [
       "DCinema",
@@ -13600,7 +13716,7 @@
     "docTitle": "D-Cinema Distribution Master —Closed Caption and Closed Subtitle",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST428-10.2008",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST428-10.2008",
     "keywords": [
       "DCinema",
@@ -13676,7 +13792,7 @@
     "docTitle": "Additional Frame Rates for D-Cinema",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST428-11.2013",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST428-11.2013",
     "keywords": [
       "DCinema",
@@ -13719,7 +13835,7 @@
     "docTitle": "D-Cinema Distribution Master Common Audio Channels and Soundfield Groups",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST428-12.2013",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST428-12.2013",
     "keywords": [
       "DCinema",
@@ -13750,7 +13866,7 @@
     "docTitle": "D-Cinema Distribution Master —Additional Frame RatesLevel AFR2 and Level AFR4 —Serial Digital Interface Signal Formatting",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST428-19.2010",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST428-19.2010",
     "keywords": [
       "DCinema",
@@ -13790,7 +13906,7 @@
     "docTitle": "D-Cinema Distribution Master - Audio Characteristics",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST428-2.2006",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST428-2.2006",
     "keywords": [
       "DCinema",
@@ -13829,7 +13945,7 @@
     "docTitle": "Archive Frame Rates for D-Cinema",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST428-21.2011",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST428-21.2011",
     "keywords": [
       "DCinema",
@@ -13951,7 +14067,7 @@
     "docTitle": "Digital Cinema Distribution Master – Subtitle",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST428-7.2014",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST428-7.2014",
     "keywords": [
       "DCinema",
@@ -13992,7 +14108,7 @@
     "docTitle": "D-Cinema Distribution Master - Image Pixel Structure Level 3 - Serial Digital Interface Signal Formatting",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST428-9.2008",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST428-9.2008",
     "keywords": [
       "DCinema",
@@ -14033,7 +14149,7 @@
     "docTitle": "D-Cinema Packaging - Stereoscopic Picture Track File",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST429-10.2008",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST429-10.2008",
     "keywords": [
       "DCinema",
@@ -14097,7 +14213,7 @@
     "docTitle": "D-Cinema Packaging — Caption and Closed Subtitle",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST429-12.2008",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST429-12.2008",
     "keywords": [
       "DCinema",
@@ -14181,7 +14297,7 @@
     "docTitle": "D-Cinema Packaging — Aux Data Track File",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST429-14.2014",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST429-14.2014",
     "keywords": [
       "DCinema",
@@ -14238,7 +14354,7 @@
     "docTitle": "Additional Composition Metadata and Guidelines",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST429-16.2014",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST429-16.2014",
     "keywords": [
       "DCinema",
@@ -14299,7 +14415,7 @@
     "docTitle": "XML Constraints",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST429-17.2017",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST429-17.2017",
     "keywords": [
       "DCinema",
@@ -14343,7 +14459,7 @@
     "docTitle": "D-Cinema Packaging - Immersive Audio Track File",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST429-18.2019",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST429-18.2019",
     "keywords": [
       "DCinema",
@@ -14395,7 +14511,7 @@
     "docTitle": "D-Cinema Packaging — DCP Operational Constraints for Immersive Audio",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST429-19.2019",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST429-19.2019",
     "keywords": [
       "DCinema",
@@ -14798,7 +14914,7 @@
     "docTitle": "D-Cinema Packaging — DCP Operational Constraints",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST429-2.2020",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST429-2.2020",
     "keywords": [
       "DCinema",
@@ -14858,7 +14974,7 @@
     "docPart": "20",
     "docTitle": "D-Cinema Packaging — MXF Constraints",
     "docType": "Standard",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "keywords": [
       "DCinema",
       "Packaging",
@@ -14923,7 +15039,7 @@
     "docTitle": "D-Cinema Packaging - Sound and Picture Track File",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST429-3.2007",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST429-3.2007",
     "keywords": [
       "DCinema",
@@ -15012,7 +15128,7 @@
     "docTitle": "D-Cinema Packaging - MXF JPEG 2000 Application",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST429-4.2020",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST429-4.2020",
     "keywords": [
       "DCinema",
@@ -15084,7 +15200,7 @@
     "docTitle": "D-Cinema Packaging — Timed Text Track File",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST429-5.2017",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST429-5.2017",
     "keywords": [
       "DCinema",
@@ -15146,7 +15262,7 @@
     "docTitle": "D-Cinema Packaging - MXF Track File Essence Encryption",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST429-6.2006",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST429-6.2006",
     "keywords": [
       "DCinema",
@@ -15200,7 +15316,7 @@
     "docTitle": "D-Cinema Packaging – MXF Track File Essence Encryption",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST429-6.2006Am1.2018",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST429-6.2006Am1.2018",
     "keywords": [
       "DCinema",
@@ -15263,7 +15379,7 @@
     "docTitle": "D-Cinema Packaging - Composition Playlist",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST429-7.2006",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST429-7.2006",
     "keywords": [
       "DCinema",
@@ -15327,7 +15443,7 @@
     "docTitle": "D-Cinema Packaging —Packing List",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST429-8.2007",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST429-8.2007",
     "keywords": [
       "DCinema",
@@ -15452,7 +15568,7 @@
     "docTitle": "D-Cinema Packaging — Asset Mapping and File Segmentation",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST429-9.2014",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST429-9.2014",
     "keywords": [
       "DCinema",
@@ -15567,7 +15683,7 @@
     "docTitle": "D-Cinema Operations - Key Delivery Message",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST430-1.2017",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST430-1.2017",
     "keywords": [
       "DCinema",
@@ -15635,7 +15751,7 @@
     "docTitle": "D-Cinema Operations – Key Delivery Message",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST430-1.2017Am1.2019",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST430-1.2017Am1.2019",
     "keywords": [
       "DCinema",
@@ -15688,7 +15804,7 @@
     "docTitle": "D-Cinema Operations – Auxiliary Content Synchronization Protocol",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST430-10.2010",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST430-10.2010",
     "keywords": [
       "DCinema",
@@ -15729,7 +15845,7 @@
     "docTitle": "D-Cinema Operations – Auxiliary Resource Presentation List",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST430-11.2010",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST430-11.2010",
     "keywords": [
       "DCinema",
@@ -15779,7 +15895,7 @@
     "docTitle": "D-Cinema Operations — FSK Synchronization Signal",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST430-12.2014",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST430-12.2014",
     "keywords": [
       "DCinema",
@@ -15823,7 +15939,7 @@
     "docTitle": "D-Cinema Operations – FSK Synchronization Signal",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST430-12.2014Am1.2019",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST430-12.2014Am1.2019",
     "keywords": [
       "DCinema",
@@ -15868,7 +15984,7 @@
     "docTitle": "D-Cinema Operations - Digital Sync Signal and Aux Data Transfer Protocol",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST430-14.2015",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST430-14.2015",
     "keywords": [
       "DCinema",
@@ -15908,7 +16024,7 @@
     "docTitle": "D-Cinema Operations - Digital Sync Signal and Aux Data Transfer Protocol",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST430-14.2022",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST430-14.2022",
     "keywords": [
       "DCinema",
@@ -15957,7 +16073,7 @@
     "docTitle": "D-Cinema Operations – Facility List Message Exchange Protocol",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST430-15.2017",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST430-15.2017",
     "keywords": [
       "DCinema",
@@ -16012,7 +16128,7 @@
     "docTitle": "D-Cinema Operations – Extended Facility List Message",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST430-16.2017",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST430-16.2017",
     "keywords": [
       "DCinema",
@@ -16064,7 +16180,7 @@
     "docTitle": "SMS-OMB Communications Protocol Specification",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST430-17.2022",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST430-17.2022",
     "keywords": [
       "DCinema",
@@ -16137,7 +16253,7 @@
     "docTitle": "D-Cinema Operations - Digital Certificate",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST430-2.2017",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST430-2.2017",
     "keywords": [
       "DCinema",
@@ -16284,7 +16400,7 @@
     "docTitle": "D-Cinema Operations — Generic Extra-Theater Message Format",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST430-3.2012",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST430-3.2012",
     "keywords": [
       "DCinema",
@@ -16337,7 +16453,7 @@
     "docTitle": "D-Cinema Operations - Log Record Format Specification",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST430-4.2008",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST430-4.2008",
     "keywords": [
       "DCinema",
@@ -16380,7 +16496,7 @@
     "docTitle": "D-Cinema Operations - Log Record Format Specification - Amendment 1",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST430-4.2008Am1.2011",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST430-4.2008Am1.2011",
     "keywords": [
       "DCinema",
@@ -16459,7 +16575,7 @@
     "docTitle": "D-Cinema Operations — Security Log Event Class and Constraints",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST430-5.2011",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST430-5.2011",
     "keywords": [
       "DCinema",
@@ -16539,7 +16655,7 @@
     "docTitle": "D-Cinema Operations - Auditorium Security Messages for Intra-Theater Communications",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST430-6.2010",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST430-6.2010",
     "keywords": [
       "DCinema",
@@ -16633,7 +16749,7 @@
     "docTitle": "D-Cinema Operations - Key Delivery Bundle",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST430-9.2008",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST430-9.2008",
     "keywords": [
       "DCinema",
@@ -16698,7 +16814,7 @@
     "docTitle": "D-Cinema Operations - Key Delivery Bundle - Amendment 1",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST430-9.2008Am1.2011",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST430-9.2008Am1.2011",
     "keywords": [
       "DCinema",
@@ -16745,7 +16861,7 @@
     "docTitle": "D-Cinema Quality - Screen Luminance Level, Chromaticity and Uniformity",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST431-1.2006",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST431-1.2006",
     "keywords": [
       "DCinema",
@@ -16782,7 +16898,7 @@
     "docTitle": "D-Cinema - XML Data Types",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST433.2008",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST433.2008",
     "keywords": [
       "DCinema",
@@ -16827,7 +16943,7 @@
     "docTitle": "D-Cinema - XML Data Types - Amendment 1",
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST433.2008Am1.2011",
-    "group": "smpte-21dc-tc",
+    "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST433.2008Am1.2011",
     "keywords": [
       "DCinema",
@@ -17011,7 +17127,8 @@
     },
     "repo": "https://github.com/SMPTE/tsp2121-1",
     "status": {
-      "active": true
+      "active": false,
+      "withdrawn": true
     }
   },
   {

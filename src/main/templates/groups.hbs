@@ -9,6 +9,8 @@
           <th scope="col">Organization</th>
           <th scope="col" class="col-2">Group</th>
           <th scope="col" class="text-center text-nowrap">Group Type</th>
+          <th scope="col" class="d-none"></th>
+          <th scope="col">Status</th>
           <th scope="col" class="col-3">Description</th>
           <th scope="col" class="d-none"></th>
           <th scope="col" class="col-2 text-nowrap">Parent Group</th>
@@ -23,7 +25,7 @@
       </thead>
       <tbody id="searchTable">
         {{#dataGroups}}
-        <tr id="{{../idType}}-{{groupId}}">
+        <tr id="{{../idType}}-{{groupId}}" {{#ifeq groupStatus/pending true}}class="pending"{{/ifeq}}>
           <td class="grouplabel d-none">
             <code>{{groupId}}</code>
           </td>
@@ -31,20 +33,29 @@
             <a class="anchor" id="{{groupId}}" href="#{{groupId}}"></a>{{groupOrg}}
           </td>
           <td>
-            {{#if groupLink}}<a href="{{groupLink}}" target="_blank">{{/if}}{{#if parentgroupId}}{{#with (groupIdLookup ../dataGroups parentgroupId)}}{{groupName}} {{/with}}{{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}
+            {{#if groupLink}}<a href="{{groupLink}}" target="_blank">{{/if}}{{#if parentgroupId}}{{#with (groupIdLookup ../dataGroups parentgroupId)}}{{#ifnoteq groupType "TC"}}{{#with (groupIdLookup ../../dataGroups parentgroupId)}}{{groupName}}{{/with}} {{/ifnoteq}}{{#ifeq groupType "TC"}}{{groupName}}{{/ifeq}} - {{/with}}{{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}
           </td>
           <td class="text-center">
             {{groupType}}
           </td>
+          <td class="d-none">
+            {{#ifeq groupStatus/active true}}Active{{/ifeq}}{{#ifeq groupStatus/active false}}Closed{{/ifeq}}{{#ifeq groupStatus/pending true}}Pending{{/ifeq}}
+          </td>
+          <td>
+            {{#ifeq groupStatus/active true}}<span class="label badge badge-success">Active</span>{{/ifeq}}{{#ifeq groupStatus/active false}}<span class="label badge badge-warning">Closed</span>{{/ifeq}}{{#ifeq groupStatus/pending true}}<span class="label badge badge-warning">Pending</span>{{/ifeq}}
+          </td>
           <td>
             {{groupSummary}}
+            {{#ifeq groupStatus/active false}}<span class="font-weight-bold small"><em>** NOTE: This group is no longer active{{#if groupStatus/assignedGroup}}; all work and documents (published, in draft, and repos) have been reassigned to: {{#groupStatus/assignedGroup}}{{#unless @first}}, {{/unless}}{{#with (groupIdLookup ../../dataGroups this)}}<a class="group-link clear-filter" href="#{{groupId}}">{{groupOrg}} {{#if parentgroupId}}{{#with (groupIdLookup ../../../dataGroups parentgroupId)}}{{#if parentgroupId}}{{#with (groupIdLookup ../../../../dataGroups parentgroupId)}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{/with}} {{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}{{/if}}</a>{{/with}}{{/groupStatus/assignedGroup}}{{/if}}. **</em></span>{{/ifeq}}
           </td>
           <td class="d-none">
             {{#ifeq groupType "TC"}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{/ifeq}}
-            {{#if parentgroupId}}{{#with (groupIdLookup ../dataGroups parentgroupId)}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{/with}}{{/if}}
+            {{#if parentgroupId}}{{#with (groupIdLookup ../dataGroups parentgroupId)}}
+            {{#ifeq groupType "TC"}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{/ifeq}}
+            {{#ifnoteq groupType "TC"}}{{#with (groupIdLookup ../../dataGroups parentgroupId)}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{/with}}{{/ifnoteq}}{{/with}}{{/if}}
           </td>
           <td>
-            {{#if parentgroupId}}{{#with (groupIdLookup ../dataGroups parentgroupId)}}{{#if groupLink}}<a class="group-link clear-filter" href="#{{groupId}}">{{/if}}{{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}}{{#if groupLink}}</a>{{/if}}{{/with}}{{/if}}
+            {{#if parentgroupId}}{{#with (groupIdLookup ../dataGroups parentgroupId)}}<a class="group-link clear-filter" href="#{{groupId}}">{{groupOrg}} {{#ifnoteq groupType "TC"}}{{#with (groupIdLookup ../../dataGroups parentgroupId)}}{{groupName}}{{/with}} - {{/ifnoteq}} {{groupName}}{{#if groupDesc}} {{groupDesc}}{{/if}} {{groupType}}</a>{{/with}}{{/if}}
           </td>
           <td>
             {{#ifeq groupType "TC"}}

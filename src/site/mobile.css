@@ -47,6 +47,15 @@ a:hover {
   text-decoration: underline;
 }
 
+.cancelled {
+    text-decoration:line-through;
+    font-style:italic;
+}
+
+.pending {
+    font-style:italic;
+}
+
 code {
   color: #9e0000;
 }
