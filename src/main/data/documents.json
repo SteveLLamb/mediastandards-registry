@@ -2060,6 +2060,18 @@
     }
   },
   {
+    "docId": "dma-tr-8350-2-wgs",
+    "docLabel": "DMA TR 8350.2 WGS",
+    "docTitle": "DEPARTMENT OF DEFENSE WORLD GEODETIC SYSTEM 1984 - ITS DEFINITION AND RELATIONSHIPS WITH LOCAL GEODETIC SYSTEMS",
+    "docType": "Recommendation",
+    "href": "https://global.ihs.com/doc_detail.cfm?document_name=DMA%20TR%208350.2%20WGS&item_s_key=00135849",
+    "publicationDate": "2004-06-23T08:00:00.000Z",
+    "publisher": "US Army",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "dpp003",
     "docLabel": "DPP003",
     "docTitle": "Carriage of AMWA AS-11 Metadata in IMF",
@@ -2121,18 +2133,6 @@
     "href": "https://tech.ebu.ch/docs/r/r128s1.pdf",
     "publicationDate": "2020-08-18T02:00:00.000Z",
     "publisher": "EBU",
-    "status": {
-      "active": true
-    }
-  },
-  {
-    "docId": "ebu-smpte-tf-hsepmbs",
-    "docLabel": "EBU / SMPTE HSEPMBS — 1998",
-    "docTitle": "EBU / SMPTE Task Force for Harmonized Standards for the Exchange of Programme Material as Bitstreams",
-    "docType": "Technical Report",
-    "href": "https://tech.ebu.ch/docs/techreview/ebu-smpte-tf-bitstreams.pdf",
-    "publicationDate": "1998-08-30T07:00:00.000Z",
-    "publisher": "EBU/SMPTE",
     "status": {
       "active": true
     }
@@ -2745,7 +2745,7 @@
     "docLabel": "IEEE Std 1003.1:2004",
     "docTitle": "Portable Operating System Interface (POSIX(R)) - Base Definitions",
     "docType": "Standard",
-    "doi": "",
+    "doi": "10.1109/IEEESTD.2004.94570",
     "href": "https://doi.org/10.1109/IEEESTD.2004.94570",
     "publicationDate": "2004-04-30T07:00:00.000Z",
     "publisher": "IEEE",
@@ -2763,7 +2763,7 @@
     "docLabel": "IEEE Std 1003.1:2008",
     "docTitle": "Portable Operating System Interface (POSIX(R)) - Base Definitions",
     "docType": "Standard",
-    "doi": "",
+    "doi": "10.1109/IEEESTD.2008.4694976",
     "href": "https://doi.org/10.1109/IEEESTD.2008.4694976",
     "publicationDate": "2008-12-01T07:00:00.000Z",
     "publisher": "IEEE",
@@ -2776,11 +2776,71 @@
     }
   },
   {
+    "docId": "ieee-std1394-1995",
+    "docLabel": "IEEE Std 1394:1995",
+    "docTitle": "IEEE Standard for a High Performance Serial Bus",
+    "docType": "Standard",
+    "doi": "10.1109/IEEESTD.1996.81049",
+    "href": "https://doi.org/10.1109/IEEESTD.1996.81049",
+    "publicationDate": "1996-08-30T07:00:00.000Z",
+    "publisher": "IEEE",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "ieee-std1394-2008"
+      ]
+    }
+  },
+  {
+    "docId": "ieee-std1394-2008",
+    "docLabel": "IEEE Std 1394:2008",
+    "docTitle": "IEEE Standard for a High Performance Serial Bus",
+    "docType": "Standard",
+    "doi": "10.1109/IEEESTD.2008.4659233",
+    "href": "https://doi.org/10.1109/IEEESTD.2008.4659233",
+    "publicationDate": "2008-10-21T07:00:00.000Z",
+    "publisher": "IEEE",
+    "status": {
+      "active": false
+    }
+  },
+  {
+    "docId": "ieee-std802-1990",
+    "docLabel": "IEEE Std 802:1990",
+    "docTitle": "Local and Metropolitan Area Networks: IEEE Standard: Overview and Architecture",
+    "docType": "Standard",
+    "doi": "10.1109/IEEESTD.1990.122158",
+    "href": "https://doi.org/10.1109/IEEESTD.1990.122158",
+    "publicationDate": "1990-12-31T07:00:00.000Z",
+    "publisher": "IEEE",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "ieee-std802-2014"
+      ]
+    }
+  },
+  {
+    "docId": "ieee-std802-2014",
+    "docLabel": "IEEE Std 802:2014",
+    "docTitle": "Local and Metropolitan Area Networks: IEEE Standard: Overview and Architecture",
+    "docType": "Standard",
+    "doi": "10.1109/IEEESTD.2014.6847097",
+    "href": "https://doi.org/10.1109/IEEESTD.2014.6847097",
+    "publicationDate": "2014-06-30T07:00:00.000Z",
+    "publisher": "IEEE",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "ieee-std9945-2009",
     "docLabel": "IEEE Std 9945:2009",
     "docTitle": "Portable Operating System Interface (POSIX(R)) - Base Definitions",
     "docType": "Standard",
-    "doi": "",
+    "doi": "10.1109/IEEESTD.2009.5393893",
     "href": "https://doi.org/10.1109/IEEESTD.2009.5393893",
     "publicationDate": "2009-09-15T07:00:00.000Z",
     "publisher": "IEEE",
@@ -5692,6 +5752,18 @@
     }
   },
   {
+    "docId": "iso8859-1-1998",
+    "docLabel": "ISO/IEC 8859-1:1998",
+    "docTitle": "Information technology — 8-bit single-byte coded graphic character sets — Part 1: Latin alphabet No. 1",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/28245.html",
+    "publicationDate": "1998-04-01T07:00:00.000Z",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "iso9899-1999",
     "docLabel": "ISO 9899: 1999",
     "docTitle": "Programming languages — C",
@@ -6222,6 +6294,22 @@
     }
   },
   {
+    "docId": "rfc1321",
+    "docLabel": "IETF 1321",
+    "docTitle": "The MD5 Message-Digest Algorithm",
+    "docType": "Informational",
+    "href": "https://www.rfc-editor.org/rfc/rfc1321",
+    "publicationDate": "1992-04-01T07:00:00.000Z",
+    "publisher": "IETF",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "rfc6151"
+      ]
+    }
+  },
+  {
     "docId": "rfc1521",
     "docLabel": "RFC 1521",
     "docTitle": "MIME (Multipurpose Internet Mail Extensions) Part One: Mechanisms for Specifying and Describing the Format of Internet Message Bodies",
@@ -6465,6 +6553,22 @@
       "superseded": true,
       "supersededBy": [
         "rfc3280"
+      ]
+    }
+  },
+  {
+    "docId": "rfc2518",
+    "docLabel": "RFC 2518",
+    "docTitle": " HTTP Extensions for Distributed Authoring -- WEBDAV",
+    "docType": "Standard",
+    "href": "https://www.rfc-editor.org/rfc/rfc2518",
+    "publicationDate": "1999-02-01T07:00:00.000Z",
+    "publisher": "IETF",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "rfc4918"
       ]
     }
   },
@@ -6982,6 +7086,22 @@
     }
   },
   {
+    "docId": "rfc4918",
+    "docLabel": "RFC 4918",
+    "docTitle": " HTTP Extensions for Web Distributed Authoring and Versioning (WebDAV)",
+    "docType": "Standard",
+    "href": "https://www.rfc-editor.org/rfc/rfc4918",
+    "publicationDate": "2007-06-01T07:00:00.000Z",
+    "publisher": "IETF",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "rfc5689"
+      ]
+    }
+  },
+  {
     "docId": "rfc5147",
     "docLabel": "RFC 5147",
     "docTitle": "URI Fragment Identifiers for the text/plain Media Type",
@@ -7065,6 +7185,18 @@
     "docTitle": "Tags for Identifying Languages",
     "docType": "Best Practice",
     "href": "https://tools.ietf.org/html/rfc5646",
+    "publicationDate": "2009-09-01T07:00:00.000Z",
+    "publisher": "IETF",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "rfc5689",
+    "docLabel": "RFC 5689",
+    "docTitle": " Extended MKCOL for Web Distributed Authoring and Versioning (WebDAV)",
+    "docType": "Standard",
+    "href": "https://www.rfc-editor.org/rfc/rfc5689",
     "publicationDate": "2009-09-01T07:00:00.000Z",
     "publisher": "IETF",
     "status": {
@@ -8171,6 +8303,18 @@
     "docType": "Engineering Report",
     "publicationDate": "2000-03-01T07:00:00.000Z",
     "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "SMPTE.J107.9.603.815",
+    "docLabel": "SMPTE J. 107(9):603-815",
+    "docTitle": "EBU/SMPTE Task Force for Harmonized Standards for the Exchange of Programme Material as Bit Streams, Final Report: Analyses and Results, July 1998",
+    "docType": "Technical Report",
+    "href": "https://tech.ebu.ch/docs/techreview/ebu-smpte-tf-bitstreams.pdf",
+    "publicationDate": "1998-08-30T07:00:00.000Z",
+    "publisher": "EBU/SMPTE",
     "status": {
       "active": true
     }
@@ -12159,6 +12303,40 @@
     }
   },
   {
+    "docId": "SMPTE.ST309.1999",
+    "docLabel": "SMPTE ST 309:1999",
+    "docNumber": "309",
+    "docTitle": "For Television — Transmission of Date and Time Zone Information in Binary Groups of Time and Control Code",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST309.1999",
+    "group": "smpte-32nf-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST309.1999",
+    "publicationDate": "1999-09-01T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST309.2012"
+      ]
+    }
+  },
+  {
+    "docId": "SMPTE.ST309.2012",
+    "docLabel": "SMPTE ST 309:2012",
+    "docNumber": "309",
+    "docTitle": "Transmission of Date and Time Zone Information in Binary Groups of Time and Control Code",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST309.2012",
+    "group": "smpte-32nf-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST309.2012",
+    "publicationDate": "2012-10-05T07:00:00.000Z",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docElement": "m",
     "docId": "SMPTE.ST326.2000",
     "docLabel": "SMPTE ST 326(m):2000",
@@ -12206,6 +12384,32 @@
     "href": "https://doi.org/10.5594/SMPTE.ST330.2011",
     "publicationDate": "2011-08-23T07:00:00.000Z",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST335.2001",
+        "SMPTE.RP205.2009",
+        "rfc1321",
+        "ieee-std802-1990",
+        "SMPTE.J107.9.603.815",
+        "rfc2518",
+        "SMPTE.PubReg",
+        "xmlschema-2-20041028"
+      ],
+      "normative": [
+        "SMPTE.ST298.2009",
+        "SMPTE.ST12-1.2008",
+        "SMPTE.ST309.1999",
+        "SMPTE.ST2029.2009",
+        "SMPTE.ST336.2007",
+        "SMPTE.RP210.10.2007",
+        "aes3-2009",
+        "ieee-std1394-1995",
+        "iso3166-1-2006",
+        "iso8859-1-1998",
+        "rfc4122",
+        "dma-tr-8350-2-wgs"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -12893,7 +13097,7 @@
         "bt601-5-199510",
         "bt656-199802",
         "aaf",
-        "ebu-smpte-tf-hsepmbs",
+        "SMPTE.J107.9.603.815",
         "SMPTE.ERJ05297"
       ],
       "normative": [
@@ -12972,7 +13176,7 @@
         "SMPTE.RP224v12.2012",
         "SMPTE.EG41.2004",
         "iso13818-2-2000",
-        "ebu-smpte-tf-hsepmbs",
+        "SMPTE.J107.9.603.815",
         "SMPTE.ERJ200003.V109.N3.SDTI"
       ],
       "normative": [
