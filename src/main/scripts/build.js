@@ -306,8 +306,9 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
       for (let docRefs in refs) {
 
         let docId = refs[docRefs]
-        allRefs.push(docId)
-
+        if (allRefs.includes(docId) !== true) {
+          allRefs.push(docId)
+        } 
 
         if (Object.keys(docReferences).includes(docId) === true)  {
 
@@ -328,7 +329,11 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
 
     }
 
-    getAllDocs();    
+    getAllDocs();   
+    allRefs.sort();
+    console.log(i)
+    console.log(allRefs)
+
     docsAffected[i] = allRefs
 
   }
