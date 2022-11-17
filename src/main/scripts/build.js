@@ -242,6 +242,7 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
       let bibRefs = references.bibliographic
 
       if (normRefs) {
+        normRefs.sort();
         let norm = normRefs.values();
         for (let n of norm) {
           refs.push(n);
@@ -249,6 +250,7 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
       }
 
       if (bibRefs) {
+        bibRefs.sort();
         let bib = bibRefs.values();
         for (let b of bib) {
           refs.push(b);
@@ -285,6 +287,7 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
         return
       }
       registryDocument[i].referencedBy = referencedBy;
+      referencedBy.sort();
       return referencedBy; 
 
     };
@@ -306,33 +309,93 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
       for (let docRefs in refs) {
 
         let docId = refs[docRefs]
+        //console.log("-----")
+
         if (allRefs.includes(docId) !== true) {
+          //console.log(" -  ref add: " + docId)
           allRefs.push(docId)
         } 
+        //else {
+        //  console.log(" - ref skip: " + docId)
+        //}
 
-        if (Object.keys(docReferences).includes(docId) === true)  {
+        let nestedDocs = []
+        let nestLevel = 1
 
-          let docs = docReferences[docId]
-          let arrayLength = docs.length
+        function docLookup() {
+        
+          if (Object.keys(docReferences).includes(docId) === true)  {
 
-          for (var d = 0; d < arrayLength; d++) {
+            //console.log(" >> lookup " + docId)
+            let docs = docReferences[docId]
+            let arrayLength = docs.length
 
-            if (allRefs.includes(docs[d]) !== true) {
-              allRefs.push(docs[d])
+            //count = 0
+
+            for (var d = 0; d < arrayLength; d++) {
+
+              nestedDocs.push(docs[d])
+
+              if (allRefs.includes(docs[d]) !== true) {
+                //count++
+                //console.log(nestLevel + " + add " + count + ": " + docs[d])
+                allRefs.push(docs[d])              
+              } 
+              //else {
+              //  console.log(nestLevel + " +  skip: " + docs[d])
+              //}
+
             }
-      
+
+          } 
+          //else {
+          //  console.log(" << no lookup")
+          //}
+
+          if (nestedDocs.length) {
+
+            nestLevel++
+            while (nestLevel < 4) {
+              for (let nD in nestedDocs) {
+                //console.log(">>>> checking nesting " + nestLevel + " - "+ nestedDocs[nD])
+                docId = nestedDocs[nD]
+                docLookup();
+              }
+            }
+            
           }
 
         }
+
+        docLookup();
 
       }
 
     }
 
+    //console.log("===============================")
+    //console.log(i)
+    //console.log(docReferences[i])
+    //let countOrg = 0
+    //for (let oC in refs) {
+    //  countOrg++
+    //}
+    //console.log("<=== original refs: " + countOrg)
+    //console.log()
+
     getAllDocs();   
     allRefs.sort();
-    console.log(i)
-    console.log(allRefs)
+   
+    //console.log(allRefs)
+    //let countNew = 0
+    //for (let oN in allRefs) {
+    //  countNew++
+    //}
+    //console.log("<=== new refs: " + countNew)
+    //if (countNew > countOrg) {
+    //  let countTotal = countNew - countOrg
+    //  console.log("*** " + countTotal + " references added ***")
+    //}
 
     docsAffected[i] = allRefs
 
