@@ -38,6 +38,18 @@ const registries = [
     ]
   },
   {
+    "listType": "documents",
+    "templateType": "documents",
+    "templateName": "dependancies",
+    "idType": "document",
+    "listTitle": "Dependancies",
+    "subRegistry": [
+      "documents",
+      "groups",
+      "projects"
+    ]
+  },
+  {
     "listType": "projects",
     "templateType": "projects",
     "templateName": "projects",
@@ -64,7 +76,7 @@ const registries = [
 /* load and build the templates */
 
 async function buildRegistry ({ listType, templateType, templateName, idType, listTitle, subRegistry }) {
-  console.log(`Building ${templateType} started`)
+  console.log(`Building ${templateName} started`)
 
   var DATA_PATH = path.join(REGISTRIES_REPO_PATH, "data/" + listType + ".json");
   var DATA_SCHEMA_PATH = path.join(REGISTRIES_REPO_PATH, "schemas/" + listType + ".schema.json");
@@ -491,6 +503,13 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
     return docLabels[docId];
   });
 
+  const docTitles = {}
+  registryDocument.forEach(item => { docTitles[item.docId] = (item.docTitle)} );
+
+  hb.registerHelper("getTitle", function(docId) {
+    return docTitles[docId];
+  });
+
   /* lookup if any projects exist for current document */
 
   const docProjs = []
@@ -726,7 +745,7 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
     await writeCSV(outputFileName, csv);
   })();
 
-  console.log(`Build of ${templateType} completed`)
+  console.log(`Build of ${templateName} completed`)
 };
 
 module.exports = {

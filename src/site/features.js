@@ -563,6 +563,53 @@ $(document).ready(function() {
 
 });
 
+/* DataTable options for sort headers and filtering - Dependancies */
+
+$(document).ready(function() {
+
+  var searchOptions = $.fn.dataTable.ext.deepLink( ['search.search' ] );
+
+  var defaultOptions = {
+    paging: false,
+    processing: true,
+    responsive: true,
+    order: [[0, 'asc']],   
+    buttons: [
+     
+      {
+        text: 'Clear All Filters',
+        action: function ( e, dt, node, config ) {
+          var table = $('#sorttableDep').DataTable();
+          table
+           .search( '' )
+           .columns().search( '' )
+           .draw();
+
+          $('#sorttableDep').DataTable().searchPanes.clearSelections();
+          $('#sorttableDep').DataTable().order([1, 'asc']).draw();
+
+          var url= document.location.href;
+          window.history.pushState({}, "", url.split("?")[0]);
+        }
+      }
+    ],
+    dom: 
+      "<'row'<'col d-print-none d-flex align-items-center'B><'col d-flex justify-content-center align-items-center'i><'col d-print-none d-flex justify-content-end align-items-center'f>>" +
+      "<'row'<'col-sm-12't>>",
+    language: {
+      processing: "Loading filtering options...",
+      searchPanes: {
+        collapse: {0: 'Filter Options', _: 'Filter Options (%d)'}
+      }
+    }
+  }
+
+  var dt = $('#sorttableDep').DataTable( 
+    $.extend( defaultOptions, searchOptions )
+  );
+
+});
+
 /* "Back To Top" button functionality */
 
 $(document).ready(function() {
