@@ -42,7 +42,7 @@ const registries = [
     "templateType": "documents",
     "templateName": "dependancies",
     "idType": "document",
-    "listTitle": "Dependancies",
+    "listTitle": "Document Dependancies",
     "subRegistry": [
       "documents",
       "groups",
