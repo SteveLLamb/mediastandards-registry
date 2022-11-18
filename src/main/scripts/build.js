@@ -272,8 +272,6 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
     }   
   }
 
-  // console.log(docReferences)
-
   /* load referenced by docs */
 
   for (let i in registryDocument) {
@@ -307,9 +305,9 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
     findReferenceBy();
   }
 
-  /* load all nested docs affected */
+  /* load reference tree */
 
-  const docsAffected = []
+  const referenceTree = []
 
   for (let i in docReferences) {
 
@@ -321,15 +319,10 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
       for (let docRefs in refs) {
 
         let docId = refs[docRefs]
-        //console.log("-----")
 
         if (allRefs.includes(docId) !== true) {
-          //console.log(" -  ref add: " + docId)
           allRefs.push(docId)
         } 
-        //else {
-        //  console.log(" - ref skip: " + docId)
-        //}
 
         let nestedDocs = []
         let nestLevel = 1
@@ -338,88 +331,75 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
         
           if (Object.keys(docReferences).includes(docId) === true)  {
 
-            //console.log(" >> lookup " + docId)
             let docs = docReferences[docId]
             let arrayLength = docs.length
-
-            //count = 0
 
             for (var d = 0; d < arrayLength; d++) {
 
               nestedDocs.push(docs[d])
 
               if (allRefs.includes(docs[d]) !== true) {
-                //count++
-                //console.log(nestLevel + " + add " + count + ": " + docs[d])
                 allRefs.push(docs[d])              
               } 
-              //else {
-              //  console.log(nestLevel + " +  skip: " + docs[d])
-              //}
 
             }
 
           } 
-          //else {
-          //  console.log(" << no lookup")
-          //}
 
           if (nestedDocs.length) {
-
             nestLevel++
             while (nestLevel < 4) {
               for (let nD in nestedDocs) {
-                //console.log(">>>> checking nesting " + nestLevel + " - "+ nestedDocs[nD])
                 docId = nestedDocs[nD]
                 docLookup();
               }
             }
-            
           }
 
         }
-
         docLookup();
-
       }
 
     }
 
-    //console.log("===============================")
-    //console.log(i)
-    //console.log(docReferences[i])
-    //let countOrg = 0
-    //for (let oC in refs) {
-    //  countOrg++
-    //}
-    //console.log("<=== original refs: " + countOrg)
-    //console.log()
-
     getAllDocs();   
     allRefs.sort();
-   
-    //console.log(allRefs)
-    //let countNew = 0
-    //for (let oN in allRefs) {
-    //  countNew++
-    //}
-    //console.log("<=== new refs: " + countNew)
-    //if (countNew > countOrg) {
-    //  let countTotal = countNew - countOrg
-    //  console.log("*** " + countTotal + " references added ***")
-    //}
-
-    docsAffected[i] = allRefs
+    referenceTree[i] = allRefs
 
   }
 
   for (let i in registryDocument) {
 
     let docId = registryDocument[i].docId
-    if (Object.keys(docsAffected).includes(docId) === true) {
-      registryDocument[i].docsAffected = docsAffected[docId]
+    if (Object.keys(referenceTree).includes(docId) === true) {
+      registryDocument[i].referenceTree = referenceTree[docId]
     }
 
+  }
+
+  /* check if referenced by or reference tree exist (for rendering on page) */ 
+
+  let docDependancy
+
+  for (let i in registryDocument) {
+    
+    let depCheck = true
+    let depPresent
+  
+    if (registryDocument[i].referencedBy && registryDocument[i].referenceTree) {
+      docDependancy = true
+    }
+    else if (registryDocument[i].referencedBy) {
+      docDependancy = true
+    }
+    else if (registryDocument[i].referenceTree) {
+      docDependancy = true
+    }
+    else {
+      docDependancy = false
+    } 
+
+    registryDocument[i].docDependancy = docDependancy
   }
 
   /* load the doc Current Statuses and Labels */
