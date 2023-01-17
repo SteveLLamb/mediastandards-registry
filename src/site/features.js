@@ -395,7 +395,7 @@ $(document).ready(function() {
     paging: false,
     processing: true,
     responsive: true,
-    order: [[1, 'asc']],   
+    order: [[0, 'asc']],   
     buttons: [
         {
         extend: 'searchPanes',

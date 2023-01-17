@@ -27,6 +27,9 @@
           </td>
           <td class="doclabel">
             <a class="anchor" id="{{docId}}" href="#{{docId}}"></a><code>{{docLabel}}</code>
+            {{#if latestDoc}}
+            <br><span class="small">(Latest Version of "{{docBase}}")</span>
+            {{/if}}
           </td>
           <td class="publisher">
             {{publisher}}

@@ -10,7 +10,6 @@ const fs = require('fs');
 const { basename, join } = require('path')
 const { readFile, access, readdir } = require('fs').promises;
 const ajv = require('ajv');
-const jsonSourceMap = require('json-source-map');
 
 const DATA_PATH = "src/main/data/";
 const DATA_SCHEMA_PATH = "src/main/schemas/%s.schema.json";
@@ -18,10 +17,7 @@ const DATA_VALIDATE_PATH = "src/main/scripts/%s.validate.js"; // additional chec
 
 /* load and validate the registry */
 
-var validator_factory = new ajv({
-  allErrors: true,  // do not bail, optional
-  jsonPointers: true,  // totally needed for this
-});
+var validator_factory = new ajv();
 
 async function registries() {
   /* create a mapping of schema/data name to validator */
@@ -35,8 +31,6 @@ async function registries() {
     const schemaValidate = validator_factory.compile(schema)
     const dataFilePath = join(DATA_PATH, dataFile)
     const data = JSON.parse(await readFile(dataFilePath))
-    const valid = validator_factory.validate(schema, data);
-
 
     let additionalChecks = () => {}
 
@@ -50,22 +44,16 @@ async function registries() {
         throw e
     }
 
-    if (!valid) {
-      let errorMessage = '';
-      const sourceMap = jsonSourceMap.stringify(data, null, 2);
-      const jsonLines = sourceMap.json.split('\n');
-      validator_factory.errors.forEach(error => {
-        errorMessage += '\n\n' + validator_factory.errorsText([ error ]);
-        let errorPointer = sourceMap.pointers[error.dataPath];
-        errorMessage += '\n> ' + jsonLines.slice(errorPointer.value.line, errorPointer.valueEnd.line).join('\n> ');
-      });
-      throw new Error(errorMessage);
+    const validate = (registry = data) => {
+      /* first check schema */
+      if (!schemaValidate(registry))
+        throw `${name} registry fails schema validation`
+
+      /* then invoke any additional checks not covered by JSON schema: */
+      additionalChecks(registry, name)
     }
 
-    /* then invoke any additional checks not covered by JSON schema: */
-    additionalChecks(data, name)
-
-    return { ...a, [name]: { schemaVersion, valid, data, name, dataFilePath }}
+    return { ...a, [name]: { schemaVersion, validate, data, name, dataFilePath }}
   }, {})
 
 }
@@ -73,7 +61,7 @@ async function registries() {
 async function validateAll() {
   Object.values(await registries()).map(({ name, validate }) => {
     console.log(`Checking ${name}`)
-    registries()
+    validate()
   })
 }
 
