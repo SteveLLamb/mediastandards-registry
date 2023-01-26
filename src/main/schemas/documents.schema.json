@@ -63,6 +63,8 @@
                             "Experimental",
                             "Guideline",
                             "Informational",
+                            "Journal Article",
+                            "Magazine Article",
                             "Memo",
                             "Notation",
                             "Note",
@@ -113,11 +115,16 @@
                                     "enum": [ 
                                         "ACES",
                                         "Accessibility",
+                                        "Acoustics",
+                                        "Anamorph",
                                         "Archive",
                                         "Audio",
                                         "Aux Data",
+                                        "B-Chain",
+                                        "Camera",
                                         "Captions",
                                         "Cinema Sound",
+                                        "Color",
                                         "Compression",
                                         "Control",
                                         "DCDM",
@@ -125,11 +132,18 @@
                                         "DCP Application",
                                         "DCP Core",
                                         "Digital Source",
+                                        "Dimension",
                                         "Distribution",
+                                        "Edit",
+                                        "Exposure",
                                         "File Format",
+                                        "Formats",
                                         "Film",
+                                        "Glossary",
                                         "HTJ2K",
+                                        "Identification",
                                         "Image",
+                                        "Image Formats",
                                         "IMF",
                                         "IMF Application",
                                         "IMF Plug-in",
@@ -137,6 +151,11 @@
                                         "Interop",
                                         "JPEG2000",
                                         "KDM",
+                                        "Leader",
+                                        "Lens",
+                                        "Lubrication",
+                                        "Luminance",
+                                        "Magnetic",
                                         "Measurement",
                                         "Metadata",
                                         "MXF",
@@ -147,36 +166,34 @@
                                         "Packaging",
                                         "Processing",
                                         "Projection",
+                                        "Projector",
                                         "Quality",
+                                        "Recording",
+                                        "Screen",
                                         "SDI",
                                         "Security",
                                         "Sign Language",
                                         "Sound",
                                         "Subtitles",
                                         "Test & Measurement",
+                                        "Time & Sync",
                                         "Theater",
+                                        "Telecine",
                                         "Television",
-                                        "XML"
+                                        "XML",
+                                        "8mm",
+                                        "16mm",
+                                        "35mm",
+                                        "65mm",
+                                        "70mm"
                                     ]
                                 }
                             ]
                         }
                     },
                     "publicationDate": {
-                        "type": "string"
-                    },
-                    "publicationDateDay": {
                         "type": "string",
-                        "pattern": "^(3[01]|[12][0-9]|[1-9])$"
-                    },
-                    "publicationDateMonth": {
-                        "type": "string",
-                        "pattern": "^(1[0-2]|[1-9])$"
-                    },
-                    "publicationDateYear": {
-                        "type": "string",
-                        "minLength": 4,
-                        "maxLength": 4
+                        "format": "date"
                     },
                     "publisher": {
                         "type": "string"
@@ -247,7 +264,8 @@
                                 }
                             },
                             "amendedDate": {
-                                "type": "string"
+                                "type": "string",
+                                "format": "date"
                             },
                             "draft": {
                                 "type": "boolean"
@@ -259,13 +277,15 @@
                                 "type": "boolean"
                             },
                             "reaffirmDate": {
-                                "type": "string"
+                                "type": "string",
+                                "format": "date"
                             },
                             "stabilized": {
                                 "type": "boolean"
                             },
                             "stabilizedDate": {
-                                "type": "string"
+                                "type": "string",
+                                "format": "date"
                             },
                             "statusNote": {
                                 "type": "string"
@@ -286,7 +306,8 @@
                                 }
                             },
                             "supersededDate": {
-                                "type": "string"
+                                "type": "string",
+                                "format": "date"
                             },
                             "unknown": {
                                 "type": "boolean"
@@ -295,7 +316,8 @@
                                 "type": "boolean"
                             },
                             "withdrawnDate": {
-                                "type": "string"
+                                "type": "string",
+                                "format": "date"
                             }
                         }
                     },
@@ -336,7 +358,8 @@
                                             "type": "boolean"
                                         },
                                         "reviewDate": {
-                                            "type": "string"
+                                            "type": "string",
+                                            "format": "date"
                                         },
                                         "reviewNeeded": {
                                             "type": "boolean"

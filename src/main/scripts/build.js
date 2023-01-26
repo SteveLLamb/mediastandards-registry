@@ -239,7 +239,93 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
     }
   }
 
-  /* load all references per doc */
+  /* load "latest" and altDocId aliases per doc */
+
+  const docLatest = []
+
+  for (let i in registryDocument) {
+
+    let docId = registryDocument[i].docId
+    let publicationDate = registryDocument[i].publicationDate
+    let publisher = registryDocument[i].publisher
+
+    //if (publisher === "SMPTE" || publisher === "W3C" || publisher === "AES" || publisher === "IEC" || publisher === "IEEE" || publisher === "NIST" || publisher.includes("ANSI") || publisher.includes("ITU") || publisher.includes("ISO")) {
+
+      var docStripAm = docId.replace(/\.\d\d\d\dam\d/i, '').replace(/\.\d\d\d\damd\d/i, '').replace(/\.\d\d\d\dad\d/i, '').replace(/\.\d\d\d\dcor\d/i, '').replace(/\.\d\d\d\de\d/i, '')
+      var docBase = docStripAm.replace(/(\.[^.]*)$/, '')
+      var docDate = docId.replace(/(.*(?=\.)\.)/, '')
+
+      if (docDate === "XXXX") {
+        var docDate = "9999"
+      }
+
+      var docBases = {}
+      var docDates = []
+      var docDateDetails = {}
+
+      docDateDetails.docDate = docDate;
+      docDateDetails.docId = docId;
+      docDates.push(docDateDetails)
+
+      var checkDocBase = docLatest.find(function(doc, index) {
+        if(doc.docBase == docBase)
+          return true;
+      });
+
+      if (!checkDocBase) { 
+        docBases.docBase = docBase
+        docBases.docDates = docDates
+        docLatest.push(docBases)
+      } else {
+        checkDocBase.docDates.push(docDateDetails)
+      }
+
+      registryDocument[i].docBase = docBase;
+      registryDocument[i].docDate = docDate;
+
+    }
+
+  //}
+
+  for (let i in docLatest) {
+
+    var dateList = []
+    let docBase = docLatest[i].docBase
+
+    for (d in docLatest[i].docDates) {
+      docDateDec = docLatest[i].docDates[d].docDate.replace(/\-/g, '.')
+      if (docDateDec !== "20XX") {
+        dateList.push(Number(docDateDec))
+      }
+    }
+
+    if (dateList.length !== 0) {
+      var latestDoc = Math.max.apply(null, dateList)
+      for (dD in docLatest[i].docDates) {
+        var doc = docLatest[i].docDates[dD].docDate
+        if (doc === latestDoc.toString().replace(/\./g, '-')) {
+          docLatest[i].docDates[dD].latestDoc = true
+        } 
+      }
+    }
+
+    for (dB in docLatest[i].docDates) {
+      if (docLatest[i].docDates[dB].latestDoc === true) {
+        let docId = docLatest[i].docDates[dB].docId
+        let checkDocId = registryDocument.find(function(doc, index) {
+          if(doc.docId === docId)
+            return true;
+        });
+        //if (!checkDocId.status.superseded) {
+          checkDocId.latestDoc = true
+          checkDocId.altDocId = docBase + ".LATEST"
+       //}
+      }
+    }
+
+  }
+
+  /* load all references per doc */   
 
   const docReferences = []
 
@@ -253,21 +339,44 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
       let normRefs = references.normative
       let bibRefs = references.bibliographic
 
+      function getLatestRef (r) {
+        let ref = ''
+        if (r.endsWith("LATEST")) {
+
+          let checkAltDocId = registryDocument.find(function(doc, index) {
+            if(doc.altDocId === r)
+              return true;
+          });
+          ref = checkAltDocId.docId
+        } else {
+          ref = r
+        }
+        refs.push(ref); 
+        return ref
+      }
+
       if (normRefs) {
         normRefs.sort();
-        let norm = normRefs.values();
-        for (let n of norm) {
-          refs.push(n);
+        let refs = normRefs
+        for (let r of refs) {
+          var index = refs.indexOf(r);
+          if (index !== -1) {
+            refs[index] = getLatestRef(r);
+          }
         }
       }
 
       if (bibRefs) {
         bibRefs.sort();
-        let bib = bibRefs.values();
-        for (let b of bib) {
-          refs.push(b);
+        let refs = bibRefs
+        for (let r of refs) {
+          var index = refs.indexOf(r);
+          if (index !== -1) {
+            refs[index] = getLatestRef(r);
+          }
         }
       }
+
       docReferences[docId] = refs
     }   
   }
@@ -451,6 +560,7 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
   }
 
   const docStatuses = {}
+
   registryDocument.forEach(item => { docStatuses[item.docId] = item.currentStatus} );
 
   hb.registerHelper("getStatus", function(docId) {
@@ -463,21 +573,31 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
     
     var status = docStatuses[docId]
 
-    if (status.includes("Active")) { 
-      return '<svg xmlns="http://www.w3.org/2000/svg" width="' + btnSize + '" height="' + btnSize + '" fill="#0c9c16" class="bi bi-check-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/></svg>'; 
-    }
-    else if (status.includes("Superseded") || status.includes("Withdrawn")){
-      return '<svg xmlns="http://www.w3.org/2000/svg" width="' + btnSize + '" height="' + btnSize + '" fill="#ff0000" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg>'
-    }
-    else {
-      return "";
+    if (status !== undefined) {
+      if (status.includes("Active")) { 
+        return '<svg xmlns="http://www.w3.org/2000/svg" width="' + btnSize + '" height="' + btnSize + '" fill="#0c9c16" class="bi bi-check-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/></svg>'; 
+      }
+      else if (status.includes("Superseded") || status.includes("Withdrawn")){
+        return '<svg xmlns="http://www.w3.org/2000/svg" width="' + btnSize + '" height="' + btnSize + '" fill="#ff0000" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg>'
+      }
+      else {
+        return "";
+      }
+    } else {
+      console.error(`Cannot find the status for referenced document: ${docId}`);
     }
 
     return docStatuses[docId];
   });
 
   const docLabels = {}
-  registryDocument.forEach(item => { docLabels[item.docId] = (item.docLabel)} );
+  registryDocument.forEach(item => { 
+    if (item.docType === "Journal Article" || item.docType === "White Paper")  {
+      docLabels[item.docId] = (item.docTitle)
+    } else {
+      docLabels[item.docId] = (item.docLabel)
+    }    
+  } );
 
   hb.registerHelper("getLabel", function(docId) {
     return docLabels[docId];

@@ -41,7 +41,8 @@
                         "type": "boolean"
                     },
                     "projApprovedDate": {
-                        "type": "string"
+                        "type": "string",
+                        "format": "date"
                     },
                     "projectId": {
                         "type": "string",
@@ -65,10 +66,12 @@
                                     "type": "boolean"
                                 },
                                 "miledateEnd": {
-                                    "type": "string"
+                                    "type": "string",
+                                    "format": "date"
                                 },
                                 "miledateStart": {
-                                    "type": "string"
+                                    "type": "string",
+                                    "format": "date"
                                 },
                                 "milestoneAct": {
                                     "type": "string",
