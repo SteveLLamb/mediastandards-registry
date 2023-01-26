@@ -122,8 +122,8 @@
       "G.F. Hudson",
       "L.D. Hackett"
     ],
-    "docId": "20.179492.1992",
     "details": "need to add references",
+    "docId": "20.179492.1992",
     "docLabel": "IEEE Transactions on Magnetics ( Volume: 28, Issue: 5, September 1992)",
     "docTitle": "A detailed study of the environmental stability of metal particle tapes",
     "docType": "Journal Article",
@@ -143,8 +143,8 @@
       "A. Sato",
       "T. Hirano"
     ],
-    "docId": "20.179493.1992",
     "details": "need to add references",
+    "docId": "20.179493.1992",
     "docLabel": "IEEE Transactions on Magnetics ( Volume: 28, Issue: 5, September 1992)",
     "docTitle": "Estimating the archival life of metal particulate tape",
     "docType": "Journal Article",
@@ -162,8 +162,8 @@
       "S. Venkataram",
       "D. DeSmet"
     ],
-    "docId": "20.179494.1992",
     "details": "need to add references",
+    "docId": "20.179494.1992",
     "docLabel": "IEEE Transactions on Magnetics ( Volume: 28, Issue: 5, September 1992)",
     "docTitle": "Magnetic and magneto-photoellipsometric evaluation of corrosion in metal-particle media",
     "docType": "Journal Article",
@@ -180,8 +180,8 @@
       "D.E. Speliotis",
       "K.J. Peter"
     ],
-    "docId": "20.278927.1991",
     "details": "need to add references",
+    "docId": "20.278927.1991",
     "docLabel": "IEEE Transactions on Magnetics ( Volume: 27, Issue: 6, November 1991)",
     "docTitle": "Corrosion study of metal particle, metal film, and Ba-ferrite tape",
     "docType": "Journal Article",
@@ -200,8 +200,8 @@
       "J. Van Bogart",
       "R. Ensminger"
     ],
-    "docId": "20.312264.1994",
     "details": "need to add references",
+    "docId": "20.312264.1994",
     "docLabel": "IEEE Transactions on Magnetics ( Volume: 30, Issue: 2, March 1994)",
     "docTitle": "Heat and moisture diffusion in magnetic tape packs",
     "docType": "Journal Article",
@@ -209,6 +209,21 @@
     "href": "https://doi.org/10.1109/20.312264",
     "publicationDate": "1994-03-01",
     "publisher": "IEEE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "authors": [
+      "John M. Calhoun"
+    ],
+    "docId": "40290752.1967",
+    "docLabel": "Vol. 30, No. 3 (Jul., 1967), pp. 517-525 (9 pages)",
+    "docTitle": "The Preservation of Motion-Picture Film",
+    "docType": "Journal Article",
+    "href": "https://www.jstor.org/stable/40290752",
+    "publicationDate": "1967-07-01",
+    "publisher": "Society of American Archivists",
     "status": {
       "active": true
     }
@@ -939,6 +954,18 @@
     }
   },
   {
+    "docId": "ANSI.52.1.2019",
+    "docLabel": "ANSI/ASHRAE 52.1-1992",
+    "docTitle": "Gravimetric And Dust Spot Procedures For Testing Air-Cleaning Devices Used In General Ventilation For Removing Particulate Matter",
+    "docType": "Standard",
+    "href": "https://webstore.ansi.org/standards/ashrae/ansiashrae521992",
+    "publicationDate": "1992-01-25",
+    "publisher": "ASHRAE",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "ANSI.IT7.231.1998",
     "docLabel": "ANSI IT7.231 1998 Edition, 1998",
     "docTitle": "AUDIOVISUAL SYSTMS - PROJECTION IN INDOOR ROOMS - PART 1: SCREEN ILLUMINATION TEST FOR STILL PROJECTORS",
@@ -1046,7 +1073,9 @@
     "status": {
       "active": false,
       "superseded": true,
-      "supersededBy": "ANSI.IT9.2.1998",
+      "supersededBy": [
+        "ANSI.IT9.2.1998"
+      ],
       "withdrawn": true
     }
   },
@@ -1077,8 +1106,8 @@
     "docLabel": "ANSI/NAPM IT9.5-1994",
     "docTitle": "Imaging Materials - Ammonia-Processed Diazo Photographic Film - Specifications For Stability (Revision And Redesignation Of ANSI IT9.5-1992) (Same As ANSI/ISO 8225-1995)",
     "docType": "Standard",
-    "publisher": "ANSI/NAPM",
     "publicationDate": "1994-08-01",
+    "publisher": "ANSI/NAPM",
     "status": {
       "active": false,
       "superseded": true,
@@ -1277,18 +1306,6 @@
         "aes7.2000"
       ],
       "withdrawn": true
-    }
-  },
-  {
-    "docId": "ANSI.S12.2.2019",
-    "docLabel": "ANSI/ASHRAE 52.1-1992",
-    "docTitle": "Gravimetric And Dust Spot Procedures For Testing Air-Cleaning Devices Used In General Ventilation For Removing Particulate Matter",
-    "docType": "Standard",
-    "href": "https://webstore.ansi.org/standards/ashrae/ansiashrae521992",
-    "publisher": "ASHRAE",
-    "publicationDate": "1992-01-25",
-    "status": {
-      "active": true
     }
   },
   {
@@ -1953,7 +1970,7 @@
       ],
       "superseded": true,
       "supersededBy": [
-        "DCI.DCSS.v1.4.2020-0720"
+        "DCI.DCSS.v1.4.0.2020-0720"
       ]
     }
   },
@@ -1969,7 +1986,7 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "DCI.DCSS.v1.4.2020-0720"
+        "DCI.DCSS.v1.4.0.2020-0720"
       ]
     }
   },
@@ -1985,7 +2002,7 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "DCI.DCSS.v1.4.2020-0720"
+        "DCI.DCSS.v1.4.0.2020-0720"
       ]
     }
   },
@@ -2001,7 +2018,7 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "DCI.DCSS.v1.4.2020-0720"
+        "DCI.DCSS.v1.4.0.2020-0720"
       ]
     }
   },
@@ -2017,7 +2034,7 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "DCI.DCSS.v1.4.2020-0720"
+        "DCI.DCSS.v1.4.0.2020-0720"
       ]
     }
   },
@@ -2033,7 +2050,7 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "DCI.DCSS.v1.4.2020-0720"
+        "DCI.DCSS.v1.4.0.2020-0720"
       ]
     }
   },
@@ -2049,7 +2066,7 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "DCI.DCSS.v1.4.2020-0720"
+        "DCI.DCSS.v1.4.0.2020-0720"
       ]
     }
   },
@@ -2065,12 +2082,12 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "DCI.DCSS.v1.4.2020-0720"
+        "DCI.DCSS.v1.4.0.2020-0720"
       ]
     }
   },
   {
-    "docId": "DCI.DCSS.v1.4.2020-0720",
+    "docId": "DCI.DCSS.v1.4.0.2020-0720",
     "docLabel": "DCSS v1.4 2020-0720",
     "docTitle": "Digital Cinema System Specification Version 1.4",
     "docType": "Specification",
@@ -2090,11 +2107,11 @@
       "active": false,
       "amended": true,
       "amendedBy": [
-        "DCI.DCSS.v1.4.2020-0902",
+        "DCI.DCSS.v1.4.0.2020-0902",
         "DCI.DCSS.v1.4.1.2021-1013",
-        "DCI.DCSS.v1.4.2021-0106",
-        "DCI.DCSS.v1.4.2021-0324",
-        "DCI.DCSS.v1.4.2021-0512"
+        "DCI.DCSS.v1.4.0.2021-0106",
+        "DCI.DCSS.v1.4.0.2021-0324",
+        "DCI.DCSS.v1.4.0.2021-0512"
       ],
       "superseded": true,
       "supersededBy": [
@@ -2104,7 +2121,7 @@
     }
   },
   {
-    "docId": "DCI.DCSS.v1.4.2020-0902",
+    "docId": "DCI.DCSS.v1.4.0.2020-0902",
     "docLabel": "DCSS v1.4 Errata 1-2 2020-0902",
     "docTitle": "DCSS Errata 1-2",
     "docType": "Specification",
@@ -2130,7 +2147,7 @@
     }
   },
   {
-    "docId": "DCI.DCSS.v1.4.2020-1118",
+    "docId": "DCI.DCSS.v1.4.0.2020-1118",
     "docLabel": "DCSS v1.4 Errata 3-15 2020-1118",
     "docTitle": "DCSS Errata 3-15",
     "docType": "Specification",
@@ -2156,7 +2173,7 @@
     }
   },
   {
-    "docId": "DCI.DCSS.v1.4.2021-0106",
+    "docId": "DCI.DCSS.v1.4.0.2021-0106",
     "docLabel": "DCSS v1.4 Errata 16-17 2021-0106",
     "docTitle": "DCSS Errata 16-17",
     "docType": "Specification",
@@ -2182,7 +2199,7 @@
     }
   },
   {
-    "docId": "DCI.DCSS.v1.4.2021-0324",
+    "docId": "DCI.DCSS.v1.4.0.2021-0324",
     "docLabel": "DCSS v1.4 Errata 18-19 2021-0324",
     "docTitle": "DCSS Errata 18-19",
     "docType": "Specification",
@@ -2208,7 +2225,7 @@
     }
   },
   {
-    "docId": "DCI.DCSS.v1.4.2021-0512",
+    "docId": "DCI.DCSS.v1.4.0.2021-0512",
     "docLabel": "DCSS v1.4 Errata 20-23 2021-0512",
     "docTitle": "DCSS Errata 20-23",
     "docType": "Specification",
@@ -8663,6 +8680,23 @@
     }
   },
   {
+    "authors": [
+      "Adelaide L Emley",
+      "Arthur E Kimberly"
+    ],
+    "docId": "NBS.MP.142.1933",
+    "docLabel": "NBS MP 142",
+    "docTitle": "A study of the removal of sulphur dioxide from library air",
+    "docType": "Report",
+    "doi": "10.6028/NBS.MP.142",
+    "href": "https://nvlpubs.nist.gov/nistpubs/Legacy/MP/nbsmiscellaneouspub142.pdf",
+    "publicationDate": "1933-10-17",
+    "publisher": "US Dept of Commerce",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "NFPA232.1995",
     "docLabel": "NFPA 232-1995",
     "docTitle": "NFPA 232: Standard For The Protection Of Records, 1995 Edition",
@@ -9114,23 +9148,6 @@
     "href": "https://doi.org/10.6028/NIST.SP.800-57pt3r1",
     "publicationDate": "2015-01-01",
     "publisher": "NIST",
-    "status": {
-      "active": true
-    }
-  },
-  {
-    "authors": [
-      "Adelaide L Emley",
-      "Arthur E Kimberly"
-    ],
-    "docId": "NBS.MP.142.1933",
-    "docLabel": "NBS MP 142",
-    "docTitle": "A study of the removal of sulphur dioxide from library air",
-    "docType": "Report",
-    "doi": "10.6028/NBS.MP.142",
-    "href": "https://nvlpubs.nist.gov/nistpubs/Legacy/MP/nbsmiscellaneouspub142.pdf",
-    "publicationDate": "1933-10-17",
-    "publisher": "US Dept of Commerce",
     "status": {
       "active": true
     }
@@ -14448,7 +14465,7 @@
         "NFPA90A.1993",
         "NFPA232.1995",
         "ANSIUL.900.1995",
-        "ANSI.S12.2.2019",
+        "ANSI.52.1.2019",
         "TMAG.1061957.1982",
         "20.105066.1991",
         "BK.v20p150-162.1952",
@@ -14467,8 +14484,8 @@
     },
     "status": {
       "active": true,
-      "reaffirmed": true,
       "reaffirmDate": "2006-05-30",
+      "reaffirmed": true,
       "stabilized": true,
       "stabilizedDate": "2012-01-01"
     }
@@ -26058,24 +26075,6 @@
   },
   {
     "authors": [
-      "H. Bertram",
-      "E. Cuddihy"
-    ],
-    "docId": "TMAG.1061957.1982",
-    "details": "need to add references",
-    "docLabel": "IEEE Transactions on Magnetics ( Volume: 18, Issue: 5, September 1982)",
-    "docTitle": "Kinetics of the humid aging of magnetic recording tape",
-    "docType": "Journal Article",
-    "doi": "10.1109/TMAG.1982.1061957",
-    "href": "https://doi.org/10.1109/TMAG.1982.1061957",
-    "publicationDate": "1982-09-01",
-    "publisher": "IEEE",
-    "status": {
-      "active": true
-    }
-  },
-  {
-    "authors": [
       "Tim Ryan"
     ],
     "docId": "TI.DLP-CCC.1.1-rC.2005",
@@ -26116,6 +26115,24 @@
     "docType": "Guideline",
     "href": "https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html",
     "publisher": "OWASP",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "authors": [
+      "H. Bertram",
+      "E. Cuddihy"
+    ],
+    "details": "need to add references",
+    "docId": "TMAG.1061957.1982",
+    "docLabel": "IEEE Transactions on Magnetics ( Volume: 18, Issue: 5, September 1982)",
+    "docTitle": "Kinetics of the humid aging of magnetic recording tape",
+    "docType": "Journal Article",
+    "doi": "10.1109/TMAG.1982.1061957",
+    "href": "https://doi.org/10.1109/TMAG.1982.1061957",
+    "publicationDate": "1982-09-01",
+    "publisher": "IEEE",
     "status": {
       "active": true
     }
