@@ -1685,7 +1685,11 @@
     "publicationDate": "2018-10-01",
     "publisher": "DCI",
     "status": {
-      "active": true
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "DCI.DCSS.v1.4.2.2022-0615"
+      ]
     }
   },
   {
@@ -1697,7 +1701,11 @@
     "publicationDate": "2007-07-11",
     "publisher": "DCI",
     "status": {
-      "active": true
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "DCI.DCSS.v1.4.2.2022-0615"
+      ]
     }
   },
   {
@@ -2083,14 +2091,14 @@
       "amended": true,
       "amendedBy": [
         "DCI.DCSS.v1.4.2020-0902",
-        "DCI.DCSS.v1.4.2021-1013",
+        "DCI.DCSS.v1.4.1.2021-1013",
         "DCI.DCSS.v1.4.2021-0106",
         "DCI.DCSS.v1.4.2021-0324",
         "DCI.DCSS.v1.4.2021-0512"
       ],
       "superseded": true,
       "supersededBy": [
-        "DCI.DCSS.v1.4.2021-1013"
+        "DCI.DCSS.v1.4.1.2021-1013"
       ],
       "supersededDate": "2021-10-13"
     }
@@ -2116,7 +2124,7 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "DCI.DCSS.v1.4.2021-1013"
+        "DCI.DCSS.v1.4.1.2021-1013"
       ],
       "supersededDate": "2021-10-13"
     }
@@ -2142,7 +2150,7 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "DCI.DCSS.v1.4.2021-1013"
+        "DCI.DCSS.v1.4.1.2021-1013"
       ],
       "supersededDate": "2021-10-13"
     }
@@ -2168,7 +2176,7 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "DCI.DCSS.v1.4.2021-1013"
+        "DCI.DCSS.v1.4.1.2021-1013"
       ],
       "supersededDate": "2021-10-13"
     }
@@ -2194,7 +2202,7 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "DCI.DCSS.v1.4.2021-1013"
+        "DCI.DCSS.v1.4.1.2021-1013"
       ],
       "supersededDate": "2021-10-13"
     }
@@ -2220,13 +2228,13 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "DCI.DCSS.v1.4.2021-1013"
+        "DCI.DCSS.v1.4.1.2021-1013"
       ],
       "supersededDate": "2021-10-13"
     }
   },
   {
-    "docId": "DCI.DCSS.v1.4.2021-1013",
+    "docId": "DCI.DCSS.v1.4.1.2021-1013",
     "docLabel": "DCSS v1.4.1",
     "docTitle": "Digital Cinema System Specification Version 1.4.1",
     "docType": "Specification",
@@ -2247,13 +2255,13 @@
       "statusNote": "build 87da090",
       "superseded": true,
       "supersededBy": [
-        "DCI.DCSS.v1.4.2022-0615"
+        "DCI.DCSS.v1.4.2.2022-0615"
       ],
       "supersededDate": "2022-06-15"
     }
   },
   {
-    "docId": "DCI.DCSS.v1.4.2022-0615",
+    "docId": "DCI.DCSS.v1.4.2.2022-0615",
     "docLabel": "DCSS v1.4.2",
     "docTitle": "Digital Cinema System Specification Version 1.4.2",
     "docType": "Specification",
