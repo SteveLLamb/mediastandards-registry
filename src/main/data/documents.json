@@ -3249,6 +3249,21 @@
     }
   },
   {
+    "docId": "IEEE.STD1180.1990",
+    "docLabel": "IEEE Std 1180-1990",
+    "docTitle": "Specifications for the Implementations of 8x8 Inverse Discrete Cosine Transform",
+    "docType": "Standard",
+    "href": "https://standards.ieee.org/ieee/1180/1789/",
+    "publicationDate": "1991-03-18",
+    "publisher": "IEEE",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "withdrawn": true,
+      "withdrawnDate": "2003-02-07"
+    }
+  },
+  {
     "docId": "IEEE.STD1394.1995",
     "docLabel": "IEEE Std 1394:1995",
     "docTitle": "IEEE Standard for a High Performance Serial Bus",
@@ -10086,6 +10101,20 @@
     }
   },
   {
+    "details": "need to add amendedBy docs",
+    "docId": "rfc1035",
+    "docLabel": "RFC 1035",
+    "docTitle": "DOMAIN NAMES - IMPLEMENTATION AND SPECIFICATION",
+    "docType": "Informational",
+    "href": "https://www.rfc-editor.org/rfc/rfc1035",
+    "publicationDate": "1987-11-01",
+    "publisher": "IETF",
+    "status": {
+      "active": false,
+      "amended": true
+    }
+  },
+  {
     "docId": "rfc1321",
     "docLabel": "RFC 1321",
     "docTitle": "The MD5 Message-Digest Algorithm",
@@ -10660,7 +10689,8 @@
       "amended": true,
       "amendedBy": [
         "rfc6874",
-        "rfc7320"
+        "rfc7320",
+        "rfc8820"
       ]
     }
   },
@@ -11256,7 +11286,11 @@
     "publicationDate": "2014-07-01",
     "publisher": "IETF",
     "status": {
-      "active": true
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "rfc8820"
+      ]
     }
   },
   {
@@ -11410,6 +11444,18 @@
     "docType": "Standard",
     "href": "https://tools.ietf.org/html/rfc8615",
     "publicationDate": "2019-05-01",
+    "publisher": "IETF",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "rfc8820",
+    "docLabel": "RFC 8820",
+    "docTitle": "URI Design and Ownership",
+    "docType": "Standard",
+    "href": "https://www.rfc-editor.org/rfc/rfc8820",
+    "publicationDate": "2022-06-01",
     "publisher": "IETF",
     "status": {
       "active": true
@@ -12646,7 +12692,7 @@
     "publicationDate": "2014-03-01",
     "publisher": "SMPTE",
     "status": {
-      "unknown": true
+      "active": true
     }
   },
   {
@@ -12656,6 +12702,33 @@
     "docType": "Engineering Report",
     "href": "https://f.hubspotusercontent00.net/hubfs/5253154/er0994-2014.pdf",
     "publicationDate": "2014-10-01",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "SMPTE.ER1006.2021",
+    "docLabel": "SMPTE ER 1006:2021",
+    "docTitle": "35PM Study – Automated Processing with IMF OPL for TSP 2121 AMWA AS11 Applications",
+    "docType": "Engineering Report",
+    "href": "https://f.hubspotusercontent00.net/hubfs/5253154/er1006-2021%20(1).pdf",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "SMPTE.ER1008.2022",
+    "docLabel": "SMPTE ER 1008:2022",
+    "docTitle": "Digital Cinema – Overview for the SMPTE 428, 429, 430, 431, 432, and 433 Document Suites",
+    "docType": "Engineering Report",
+    "group": "smpte-27c-tc",
+    "href": "https://5253154.fs1.hubspotusercontent-na1.net/hubfs/5253154/SMPTE-ER-DigitalCinemaOverviewDocumentSuties.pdf",
+    "keywords": [
+      "DCinema"
+    ],
+    "publicationDate": "2022-12-20",
     "publisher": "SMPTE",
     "status": {
       "active": true
@@ -12856,6 +12929,18 @@
     }
   },
   {
+    "docId": "SMPTE.RA.2021",
+    "docLabel": "SMPTE-RA",
+    "docTitle": "SMPTE Registration Authority, LLC",
+    "docType": "Registry",
+    "group": "smpte-30mr-tc",
+    "href": "https://smpte-ra.org/",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "SMPTE.RDD20.2010",
     "docLabel": "SMPTE RDD 20:2010",
     "docNumber": "20",
@@ -12972,19 +13057,42 @@
     "publicationDate": "2016-02-02",
     "publisher": "SMPTE",
     "status": {
-      "active": true
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.RDD36.2022"
+      ]
     }
   },
   {
-    "docId": "SMPTE.RDD36.20XX",
-    "docLabel": "SMPTE RDD 36:20XX",
+    "docId": "SMPTE.RDD36.2022",
+    "docLabel": "SMPTE RDD 36:2022",
     "docNumber": "36",
     "docTitle": "Apple ProRes Bitstream Syntax and Decoding Process",
     "docType": "Registered Disclosure Document",
+    "doi": "10.5594/SMPTE.RDD36.2022",
     "group": "smpte-10e-tc",
+    "href": "https://doi.org/10.5594/SMPTE.RDD36.2022",
+    "keywords": [
+      "Compression"
+    ],
+    "publicationDate": "2022-12-20",
     "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "IEEE.STD1180.1990",
+        "ISO.13818-2.2013",
+        "R-REC-BT.601-7.201103",
+        "R-REC-BT.709-6.201506",
+        "R-REC-BT.2020-2.201510",
+        "R-REC-BT.2100-2.201807",
+        "T-REC-H.264.202108",
+        "T-REC-H.273.202107",
+        "SMPTE.ST2084.2014"
+      ]
+    },
     "status": {
-      "draft": true
+      "active": true
     }
   },
   {
@@ -13108,19 +13216,50 @@
     "publicationDate": "2017-11-29",
     "publisher": "SMPTE",
     "status": {
-      "active": true
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.RDD44.2022"
+      ]
     }
   },
   {
-    "docId": "SMPTE.RDD44.20XX",
-    "docLabel": "SMPTE RDD 44:20XX",
+    "docId": "SMPTE.RDD44.2022",
+    "docLabel": "SMPTE RDD 44:2022",
     "docNumber": "44",
     "docTitle": "Material Exchange Format — Mapping and Aplication of Apple ProRes",
     "docType": "Registered Disclosure Document",
+    "doi": "10.5594/SMPTE.RDD44.2022",
     "group": "smpte-31fs-tc",
+    "href": "https://doi.org/10.5594/SMPTE.RDD44.2022",
+    "keywords": [
+      "MXF",
+      "File Format",
+      "Label"
+    ],
+    "publicationDate": "2022-12-20",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "SMPTE.RA.2021",
+        "SMPTE.EG377-3.LATEST",
+        "R-REC-BT.601-7.201103",
+        "R-REC-BT.709-6.201506",
+        "R-REC-BT.2020-2.201510",
+        "R-REC-BT.2100-2.201807",
+        "SMPTE.ST2067-21.LATEST",
+        "SMPTE.ST400.LATEST"
+      ],
+      "normative": [
+        "SMPTE.ST377-1.2019",
+        "SMPTE.RDD36.LATEST",
+        "SMPTE.ST379-2.2010",
+        "SMPTE.ST2049.2012",
+        "SMPTE.ST2067-5.2020"
+      ]
+    },
     "status": {
-      "draft": true
+      "active": true
     }
   },
   {
@@ -13149,34 +13288,44 @@
       ]
     },
     "status": {
-      "active": true
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.RDD45.2022"
+      ]
     }
   },
   {
-    "docId": "SMPTE.RDD45.20XX",
-    "docLabel": "SMPTE RDD 45:20XX",
+    "docId": "SMPTE.RDD45.2022",
+    "docLabel": "SMPTE RDD 45:2022",
     "docNumber": "45",
     "docTitle": "Interoperable Master Format — Application ProRes",
     "docType": "Registered Disclosure Document",
+    "doi": "10.5594/SMPTE.RDD45.2022",
     "group": "smpte-35pm-tc",
+    "href": "https://doi.org/10.5594/SMPTE.RDD45.2022",
     "keywords": [
-      "IMF"
+      "IMF",
+      "MXF",
+      "File Format",
+      "Label"
     ],
+    "publicationDate": "2022-12-20",
     "publisher": "SMPTE",
     "references": {
       "bibliographic": [
         "R-REC-BT.2100-1.201706"
       ],
       "normative": [
-        "SMPTE.RDD36.20XX",
-        "SMPTE.RDD44.20XX",
+        "SMPTE.RDD36.2022",
+        "SMPTE.RDD44.2022",
         "SMPTE.ST2067-2.2020",
         "SMPTE.ST2067-21.2020",
         "SMPTE.ST2067-21.2020Am1.2020"
       ]
     },
     "status": {
-      "draft": true
+      "active": true
     }
   },
   {
@@ -13346,84 +13495,43 @@
   },
   {
     "details": "DPP",
-    "docId": "SMPTE.RDD59.1.20XX",
-    "docLabel": "SMPTE RDD 59-1:20XX",
+    "docId": "SMPTE.RDD59-1.2022",
+    "docLabel": "SMPTE RDD 59-1:2022",
     "docNumber": "59",
     "docPart": "1",
     "docTitle": "Interoperable Master Format — Application DPP (ProRes)",
     "docType": "Registered Disclosure Document",
+    "doi": "10.5594/SMPTE.RDD59-1.2022",
     "group": "smpte-35pm-tc",
+    "href": "https://doi.org/10.5594/SMPTE.RDD59-1.2022",
     "keywords": [
       "IMF",
-      "IMF Application"
+      "IMF Application",
+      "Compression",
+      "File Format"
     ],
+    "publicationDate": "2022-12-20",
     "publisher": "SMPTE",
     "references": {
       "bibliographic": [
-        "as-11",
-        "SMPTE.RDD44.2017",
-        "R-REC-BT.2390-8.202002",
-        "SMPTE.ST2067-8.2013",
         "SMPTE.ST2067-9.2018",
+        "SMPTE.ER1006.2021",
         "dpp005",
         "dpp004"
       ],
       "normative": [
-        "SMPTE.RDD45.2017",
-        "SMPTE.ST2067-2.2020",
+        "SMPTE.RDD45.2022",
+        "SMPTE.ST2067-2.LATEST",
         "SMPTE.ST2067-3.2020",
-        "SMPTE.ST2067-21.2020",
-        "SMPTE.ST2067-21.2020Am1.2020",
         "dpp003",
-        "SMPTE.ST377-42.20XX"
+        "SMPTE.ST377-42.LATEST",
+        "SMPTE.ST2067-8.LATEST",
+        "as-11"
       ]
     },
     "repo": "https://github.com/SMPTE/rdd59-1",
     "status": {
-      "draft": true,
-      "publicCd": true
-    }
-  },
-  {
-    "details": "DPP",
-    "docId": "SMPTE.RDD59.2.20XX",
-    "docLabel": "SMPTE RDD 59-2:20XX",
-    "docNumber": "59",
-    "docPart": "2",
-    "docTitle": "Interoperable Master Format — Application Constraint DPP (JPEG2000)",
-    "docType": "Registered Disclosure Document",
-    "group": "smpte-35pm-tc",
-    "keywords": [
-      "IMF",
-      "IMF Application"
-    ],
-    "publisher": "SMPTE",
-    "references": {
-      "bibliographic": [
-        "SMPTE.RDD59.1.20XX",
-        "as-11",
-        "R-REC-BT.2390-10.202111",
-        "SMPTE.ST2067-200.2018",
-        "SMPTE.ST2067-9.2018",
-        "dpp003",
-        "dpp004",
-        "dpp005"
-      ],
-      "normative": [
-        "SMPTE.ST2067-2.2020",
-        "SMPTE.ST2067-8.2013",
-        "SMPTE.ST2067-21.2020",
-        "SMPTE.ST2067-21.2020Am1.2020",
-        "R-REC-BT.2100-2.201807",
-        "SMPTE.ST428-12.2013",
-        "SMPTE.ST377-41.20XX"
-      ]
-    },
-    "repo": "https://github.com/SMPTE/rdd59-2",
-    "status": {
-      "draft": false,
-      "publicCd": false,
-      "withdrawn": true
+      "active": true
     }
   },
   {
@@ -16206,6 +16314,119 @@
     }
   },
   {
+    "docId": "SMPTE.RP50.1995",
+    "docLabel": "SMPTE RP 50:1995",
+    "docNumber": "50",
+    "docTitle": "Dimensions for 8-mm Type S Motion-Picture Projector Reel Spindles",
+    "docType": "Recommended Practice",
+    "doi": "10.5594/SMPTE.RP50.1995",
+    "group": "smpte-27c-tc",
+    "href": "https://doi.org/10.5594/SMPTE.RP50.1995",
+    "keywords": [
+      "Film",
+      "Projection",
+      "8mm",
+      "Projector"
+    ],
+    "publicationDate": "1995-01-05",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST160.1990"
+      ]
+    },
+    "status": {
+      "active": true,
+      "reaffirmed": true,
+      "stabilized": true,
+      "stabilizedDate": "2004-11-08"
+    }
+  },
+  {
+    "docId": "SMPTE.RP51.1995",
+    "docLabel": "SMPTE RP 51:1995",
+    "docNumber": "51",
+    "docTitle": "Screen Luminance and Viewing Conditions for 8-mm Review Rooms",
+    "docType": "Recommended Practice",
+    "doi": "10.5594/SMPTE.RP51.1995",
+    "group": "smpte-27c-tc",
+    "href": "https://doi.org/10.5594/SMPTE.RP51.1995",
+    "keywords": [
+      "Film",
+      "Projection",
+      "8mm",
+      "Projector"
+    ],
+    "publicationDate": "1995-01-01",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST196.1993"
+      ]
+    },
+    "status": {
+      "active": true,
+      "reaffirmed": true,
+      "stabilized": true,
+      "stabilizedDate": "2004-11-08"
+    }
+  },
+  {
+    "docId": "SMPTE.RP53.1993",
+    "docLabel": "SMPTE RP 53:1993",
+    "docNumber": "53",
+    "docTitle": "Scene-Change Methods for Printing 35-mm, 16-mm and 8-mm Type S Motion-Picture Film",
+    "docType": "Recommended Practice",
+    "doi": "10.5594/SMPTE.RP53.1993",
+    "group": "smpte-27c-tc",
+    "href": "https://doi.org/10.5594/SMPTE.RP53.1993",
+    "keywords": [
+      "Film",
+      "Identification",
+      "Projection",
+      "16mm",
+      "Projector"
+    ],
+    "publicationDate": "1993-01-01",
+    "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "SMPTE.ST83.1996"
+      ]
+    },
+    "status": {
+      "active": true,
+      "reaffirmed": true,
+      "stabilized": true
+    }
+  },
+  {
+    "docId": "SMPTE.RP54.1999",
+    "docLabel": "SMPTE RP 54:1999",
+    "docNumber": "54",
+    "docTitle": "Edge Numbering on 16-mm Release Prints",
+    "docType": "Recommended Practice",
+    "doi": "10.5594/SMPTE.RP54.1999",
+    "group": "smpte-27c-tc",
+    "href": "https://doi.org/10.5594/SMPTE.RP54.1999",
+    "keywords": [
+      "Film",
+      "Printer",
+      "8mm",
+      "16mm",
+      "35mm",
+      "Light"
+    ],
+    "publicationDate": "1999-01-01",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true,
+      "reaffirmed": true,
+      "stabilized": true,
+      "stabilizedDate": "2004-11-08"
+    }
+  },
+  {
     "docId": "SMPTE.RP59.1986",
     "docLabel": "SMPTE RP 59:1986",
     "docNumber": "59",
@@ -17516,6 +17737,46 @@
     }
   },
   {
+    "docId": "SMPTE.ST160.1990",
+    "docLabel": "SMPTE ST 160:1990",
+    "docNumber": "160",
+    "docTitle": "For Motion-Picture Equipment (8-mm Type S) — Projection Reels — 100- to 312-mm Diameter",
+    "docType": "Standard",
+    "group": "smpte-20f-tc",
+    "publisher": "SMPTE",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST160.1995"
+      ]
+    }
+  },
+  {
+    "docId": "SMPTE.ST160.1995",
+    "docLabel": "SMPTE ST 160:1995",
+    "docNumber": "160",
+    "docTitle": "For Motion-Picture Equipment (8-mm Type S) — Projection Reels — 100- to 312-mm Diameter",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST160.1995",
+    "group": "smpte-27c-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST160.1995",
+    "keywords": [
+      "Film",
+      "8mm",
+      "Dimension"
+    ],
+    "publicationDate": "1995-09-12",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true,
+      "reaffirmDate": "2003-07-06",
+      "reaffirmed": true,
+      "stabilized": true,
+      "stabilizedDate": "2012-01-01"
+    }
+  },
+  {
     "docId": "SMPTE.ST161.1998",
     "docLabel": "SMPTE ST 161:1998",
     "docNumber": "161",
@@ -18645,6 +18906,35 @@
     "publisher": "SMPTE",
     "status": {
       "active": true
+    }
+  },
+  {
+    "docId": "SMPTE.ST2049.2012",
+    "docLabel": "SMPTE ST 2049:2012",
+    "docNumber": "2049",
+    "docTitle": "Low Latency Streaming MXF OP 1a",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST2049.2012",
+    "group": "smpte-31fs-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2049.2012",
+    "keywords": [
+      "MXF",
+      "File Format"
+    ],
+    "publicationDate": "2011-03-30",
+    "publisher": "2012-06-11",
+    "references": {
+      "normative": [
+        "SMPTE.ST377-1.2011",
+        "SMPTE.ST377-1.2011Am1.2012",
+        "SMPTE.ST378.2004",
+        "SMPTE.ST379-2.2010"
+      ]
+    },
+    "status": {
+      "active": true,
+      "reaffirmDate": "2016-10-05",
+      "reaffirmed": true
     }
   },
   {
@@ -20453,33 +20743,46 @@
       ]
     },
     "status": {
-      "active": true
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST2098-2.2022"
+      ]
     }
   },
   {
-    "docId": "SMPTE.ST2098-2.20XX",
-    "docLabel": "SMPTE ST 2098-2:20XX",
+    "docId": "SMPTE.ST2098-2.2022",
+    "docLabel": "SMPTE ST 2098-2:2022",
     "docNumber": "2098",
     "docPart": "2",
     "docTitle": "Immersive Audio Bitstream Specification",
     "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST2098-2.2022",
     "group": "smpte-27c-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2098-2.2022",
     "keywords": [
       "DCinema",
       "Immersive Audio",
       "Cinema Sound",
-      "Audio"
+      "Audio",
+      "Control",
+      "Metadata"
     ],
+    "publicationDate": "2022-12-20",
     "publisher": "SMPTE",
-    "status": {
-      "draft": true
-    },
-    "workInfo": {
-      "project": [
-        {
-          "projectId": "st2098-2-20xx-rev-001"
-        }
+    "references": {
+      "normative": [
+        "SMPTE.ST2098-1.2018",
+        "SMPTE.ST298.2009",
+        "SMPTE.ST428-12.2013",
+        "SMPTE.ST2098-5.2018",
+        "rfc3986",
+        "rfc1035",
+        "R-REC-BS.2051-2.201807"
       ]
+    },
+    "status": {
+      "active": true
     }
   },
   {
@@ -27298,6 +27601,30 @@
     }
   },
   {
+    "docId": "SMPTE.ST83.1996",
+    "docLabel": "SMPTE ST 83:1996",
+    "docNumber": "83",
+    "docTitle": "For Motion-Picture Film (16-mm) — Edge Numbers — Location and Spacing",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST83.1996",
+    "group": "smpte-27c-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST83.1996",
+    "keywords": [
+      "Film",
+      "Identification",
+      "16mm"
+    ],
+    "publicationDate": "1996-02-08",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true,
+      "reaffirmDate": "2003-03-10",
+      "reaffirmed": true,
+      "stabilized": true,
+      "stabilizedDate": "2015-07-01"
+    }
+  },
+  {
     "docId": "SMPTE.ST86.1996",
     "docLabel": "SMPTE ST 86:1996",
     "docNumber": "86",
@@ -27527,7 +27854,11 @@
     },
     "repo": "https://github.com/SMPTE/tsp2121-1",
     "status": {
-      "active": true
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.RDD59-1.2022"
+      ]
     }
   },
   {
@@ -27612,6 +27943,18 @@
     }
   },
   {
+    "docId": "T-REC-H.264.202108",
+    "docLabel": "REC H.264",
+    "docTitle": "Advanced video coding for generic audiovisual services",
+    "docType": "Recommendation",
+    "href": "https://www.itu.int/rec/https://www.itu.int/rec/T-REC-H.264-202108-I/en/en",
+    "publicationDate": "2021-08-22",
+    "publisher": "ITU-T",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "T-REC-H.265.201612",
     "docLabel": "REC H.265",
     "docTitle": "High efficiency video coding",
@@ -27646,6 +27989,22 @@
     "docType": "Recommendation",
     "href": "https://www.itu.int/rec/T-REC-H.273-201612-I/en",
     "publicationDate": "2016-12-22",
+    "publisher": "ITU-T",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "T-REC-H.273.202107"
+      ]
+    }
+  },
+  {
+    "docId": "T-REC-H.273.202107",
+    "docLabel": "REC H.273",
+    "docTitle": "Coding-independent code points for video signal type identification",
+    "docType": "Recommendation",
+    "href": "https://www.itu.int/rec/T-REC-H.273-202107-I/en",
+    "publicationDate": "2021-07-14",
     "publisher": "ITU-T",
     "status": {
       "active": true
