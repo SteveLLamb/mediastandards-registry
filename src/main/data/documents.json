@@ -3360,7 +3360,6 @@
       "active": true
     }
   },
-  
   {
     "docId": "IESNA.RP16.1996",
     "docLabel": "ANSI/IESNA RP-16-1996",
@@ -3387,7 +3386,6 @@
       ]
     }
   },
-  
   {
     "docId": "IETF.FLS.2001",
     "docLabel": "IETF Statement",
@@ -6995,7 +6993,6 @@
       "active": true
     }
   },
-  
   {
     "docId": "ISO.8601-1.2019",
     "docLabel": "ISO 8601-1:2019",
@@ -9890,7 +9887,6 @@
       "active": true
     }
   },
-  
   {
     "docId": "R-REC-BR.1352-1.2002",
     "docLabel": "BR.1352-1: (2002)",
@@ -11859,8 +11855,8 @@
     "docType": "Administrative Guideline",
     "group": "smpte-02c-st",
     "href": "https://doc.smpte-doc.org/ag-01/4e44ce0f5da1596d2a1cf7e88c502093e5789266/",
-    "publisher": "SMPTE",
     "publicationDate": "2022-12-06",
+    "publisher": "SMPTE",
     "references": {
       "normative": [
         "SMPTE.OM.Std.LATEST"
@@ -11913,8 +11909,8 @@
     "docType": "Administrative Guideline",
     "group": "smpte-02c-st",
     "href": "https://doc.smpte-doc.org/ag-02/4b17ef0f1d612ab8c7b8b060784e07f38a6bb374/",
-    "publisher": "SMPTE",
     "publicationDate": "2022-12-06",
+    "publisher": "SMPTE",
     "references": {
       "normative": [
         "SMPTE.OM.Std.LATEST"
@@ -11949,8 +11945,8 @@
     "docType": "Administrative Guideline",
     "group": "smpte-02c-st",
     "href": "https://doc.smpte-doc.org/ag-03/3d52bf5896efbcbf22adddf2a64823df3d0bb69d/",
-    "publisher": "SMPTE",
     "publicationDate": "2022-12-20",
+    "publisher": "SMPTE",
     "references": {
       "normative": [
         "SMPTE.OM.Std.LATEST"
@@ -12043,9 +12039,15 @@
     "docType": "Administrative Guideline",
     "group": "smpte-02c-st",
     "href": "https://doc.smpte-doc.org/ag-05/28dab089ea9458d62cc8e2805b9cf10d17d646ea/",
-    "publisher": "SMPTE",
     "publicationDate": "2022-12-20",
+    "publisher": "SMPTE",
     "references": {
+      "bibliographic": [
+        "qaframe.spec.20050817",
+        "IETF.FLS.2001",
+        "SMPTE.AG04.ST.LATEST",
+        "SMPTE.AG04.EG.LATEST"
+      ],
       "normative": [
         "xmlschema-1.20041028",
         "xml.20081126",
@@ -12053,12 +12055,6 @@
         "REC-html52.20171214",
         "rfc3986",
         "rfc7405"
-      ],
-      "bibliographic": [
-        "qaframe.spec.20050817",
-        "IETF.FLS.2001",
-        "SMPTE.AG04.ST.LATEST",
-        "SMPTE.AG04.EG.LATEST"
       ]
     },
     "status": {
@@ -12142,15 +12138,15 @@
     "docType": "Administrative Guideline",
     "group": "smpte-02c-st",
     "href": "https://doc.smpte-doc.org/ag-06/58545c096ff3f6f09b5f7970dc04f9d690c287ec/",
-    "publisher": "SMPTE",
     "publicationDate": "2023-01-31",
+    "publisher": "SMPTE",
     "references": {
-      "normative": [
-        "SMPTE.OM.Std.LATEST"
-      ],
       "bibliographic": [
         "SMPTE.AG02.LATEST",
         "SMPTE.AG22.LATEST"
+      ],
+      "normative": [
+        "SMPTE.OM.Std.LATEST"
       ]
     },
     "status": {
@@ -12182,8 +12178,8 @@
     "docType": "Administrative Guideline",
     "group": "smpte-02c-st",
     "href": "https://doc.smpte-doc.org/ag-07/dceca0fbfabc046cda502f4baa96a5b2dedcfeeb/",
-    "publisher": "SMPTE",
     "publicationDate": "2022-12-20",
+    "publisher": "SMPTE",
     "references": {
       "normative": [
         "SMPTE.OM.Std.LATEST"
@@ -12218,8 +12214,8 @@
     "docType": "Administrative Guideline",
     "group": "smpte-02c-st",
     "href": "https://doc.smpte-doc.org/ag-08/47ab7a6649b1ba8707bd573cbae0f84b12bee46e/",
-    "publisher": "SMPTE",
     "publicationDate": "2023-01-31",
+    "publisher": "SMPTE",
     "references": {
       "normative": [
         "SMPTE.OM.Std.LATEST"
@@ -12267,8 +12263,8 @@
     "docType": "Administrative Guideline",
     "group": "smpte-02c-st",
     "href": "https://doc.smpte-doc.org/ag-10b/f3e7fe4bd2e0f379bf6b1fa4e9670b2155b30c09/",
-    "publisher": "SMPTE",
     "publicationDate": "2023-01-31",
+    "publisher": "SMPTE",
     "references": {
       "bibliographic": [
         "SMPTE.AG10.LATEST"
@@ -12320,8 +12316,8 @@
     "docType": "Administrative Guideline",
     "group": "smpte-02c-st",
     "href": "https://doc.smpte-doc.org/ag-12/b1d277355a58b6bb74a104a259675d438668cf5f/",
-    "publisher": "SMPTE",
     "publicationDate": "2023-01-31",
+    "publisher": "SMPTE",
     "references": {
       "normative": [
         "SMPTE.OM.Std.LATEST"
@@ -12356,8 +12352,8 @@
     "docType": "Administrative Guideline",
     "group": "smpte-02c-st",
     "href": "https://doc.smpte-doc.org/ag-14/3e23bd69cffde17ad783ecc61ac0587a33725f1c/",
-    "publisher": "SMPTE",
     "publicationDate": "2023-01-31",
+    "publisher": "SMPTE",
     "references": {
       "normative": [
         "SMPTE.OM.Std.LATEST",
@@ -12423,9 +12419,13 @@
     "docType": "Administrative Guideline",
     "group": "smpte-02c-st",
     "href": "https://doc.smpte-doc.org/ag-16/8520f69a15780eab721f2a99b4dbf9b89aa8eb42/",
-    "publisher": "SMPTE",
     "publicationDate": "2022-12-06",
+    "publisher": "SMPTE",
     "references": {
+      "bibliographic": [
+        "IETF.draft-bhutton-json-schema-00",
+        "ISO.80000-1.LATEST"
+      ],
       "normative": [
         "SMPTE.OM.Std.LATEST",
         "SMPTE.AG02.LATEST",
@@ -12451,10 +12451,6 @@
         "ISO.10646.LATEST",
         "isbn-9780205309023",
         "isbn-0195392884"
-      ],
-      "bibliographic": [
-        "IETF.draft-bhutton-json-schema-00",
-        "ISO.80000-1.LATEST"
       ]
     },
     "status": {
@@ -12508,13 +12504,9 @@
     "docType": "Administrative Guideline",
     "group": "smpte-02c-st",
     "href": "https://doc.smpte-doc.org/ag-21/6e7ad6fa44dfa6998d9d1a2508eac08e57f75751/",
-    "publisher": "SMPTE",
     "publicationDate": "2022-12-06",
+    "publisher": "SMPTE",
     "references": {
-      "normative": [
-        "SMPTE.OM.Std.LATEST",
-        "rfc6838"
-      ],
       "bibliographic": [
         "rfc1494",
         "rfc2045",
@@ -12523,6 +12515,10 @@
         "rfc3986",
         "rfc6657",
         "rfc7303"
+      ],
+      "normative": [
+        "SMPTE.OM.Std.LATEST",
+        "rfc6838"
       ]
     },
     "status": {
