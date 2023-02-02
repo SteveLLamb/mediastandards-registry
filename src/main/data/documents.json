@@ -1431,6 +1431,18 @@
     }
   },
   {
+    "docId": "ARIB.STD-B32.v2.1.2001",
+    "docLabel": "ARIB STD-B32 v2.1",
+    "docTitle": "Video Coding, Audio Coding and Multiplexing Specifications for Digital Broadcasting Version 2.1 (2007)",
+    "docType": "Standard",
+    "href": "https://www.arib.or.jp/english/std_tr/broadcasting/desc/std-b32.html",
+    "publicationDate": "2007-03-14",
+    "publisher": "ARIB",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "as-11",
     "docLabel": "AS-11",
     "docTitle": "Media Contribution File Formats",
@@ -3087,6 +3099,18 @@
     }
   },
   {
+    "docId": "IEC.60958s.2023",
+    "docLabel": "IEC 60958:2023 SER Series",
+    "docTitle": "Digital audio interface - ALL PARTS",
+    "docType": "Standard",
+    "href": "https://webstore.iec.ch/publication/4048",
+    "publicationDate": "2023-01-03",
+    "publisher": "IEC",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "IEC.61260-1.2014",
     "docLabel": "IEC 61260-1 Ed. 1.0 b:2014",
     "docTitle": "Electroacoustics - Octave-Band And Fractional-Octave-Band Filters - Part 1: Specifications",
@@ -4340,6 +4364,23 @@
     }
   },
   {
+    "docId": "ISO.13818-1.2015",
+    "docLabel": "ISO/IEC 13818-1:2015",
+    "docTitle": "Information technology — Generic coding of moving pictures and associated audio information — Part 1: Systems",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/67331.html",
+    "publicationDate": "2015-07-01",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "ISO.13818-1.2022"
+      ],
+      "withdrawn": true
+    }
+  },
+  {
     "docId": "ISO.13818-1.2019",
     "docLabel": "ISO/IEC 13818-1:2019",
     "docTitle": "Information technology — Generic coding of moving pictures and associated audio information — Part 1: Systems",
@@ -4348,12 +4389,17 @@
     "publicationDate": "2016-09-01",
     "publisher": "ISO/IEC",
     "status": {
-      "active": true,
+      "active": false,
       "amended": true,
       "amendedBy": [
         "ISO.13818-1.2019amd1.2020",
         "ISO.13818-1.2019cor1.2020"
-      ]
+      ],
+      "superseded": true,
+      "supersededBy": [
+        "ISO.13818-1.2022"
+      ],
+      "withdrawn": true
     }
   },
   {
@@ -4365,7 +4411,12 @@
     "publicationDate": "2020-01-01",
     "publisher": "ISO/IEC",
     "status": {
-      "active": true
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "ISO.13818-1.2022"
+      ],
+      "withdrawn": true
     }
   },
   {
@@ -4375,6 +4426,23 @@
     "docType": "Standard",
     "href": "https://www.iso.org/standard/80196.html",
     "publicationDate": "2020-10-01",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "ISO.13818-1.2022"
+      ],
+      "withdrawn": true
+    }
+  },
+  {
+    "docId": "ISO.13818-1.2022",
+    "docLabel": "ISO/IEC 13818-1:2022",
+    "docTitle": "Information technology — Generic coding of moving pictures and associated audio information — Part 1: Systems",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/83239.html",
+    "publicationDate": "2022-09-01",
     "publisher": "ISO/IEC",
     "status": {
       "active": true
@@ -4404,6 +4472,18 @@
     "docType": "Standard",
     "href": "https://www.iso.org/standard/61152.html",
     "publicationDate": "2013-10-01",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "ISO.13818-7.2006",
+    "docLabel": "ISO 13818-7:2006",
+    "docTitle": "Information technology — Generic coding of moving pictures and associated audio information — Part 7: Advanced Audio Coding (AAC)",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/43345.html",
+    "publicationDate": "2006-01-01",
     "publisher": "ISO/IEC",
     "status": {
       "active": true
@@ -4444,7 +4524,8 @@
       "superseded": true,
       "supersededBy": [
         "ISO.14496-10.2020"
-      ]
+      ],
+      "withdrawn": true
     }
   },
   {
@@ -4460,7 +4541,8 @@
       "superseded": true,
       "supersededBy": [
         "ISO.14496-10.2020"
-      ]
+      ],
+      "withdrawn": true
     }
   },
   {
@@ -4476,7 +4558,8 @@
       "superseded": true,
       "supersededBy": [
         "ISO.14496-10.2020"
-      ]
+      ],
+      "withdrawn": true
     }
   },
   {
@@ -4677,6 +4760,56 @@
     "docType": "Standard",
     "href": "https://www.iso.org/standard/74461.html",
     "publicationDate": "2019-01-01",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "ISO.14496-3.2009",
+    "docLabel": "ISO/IEC 14496-3:2009",
+    "docTitle": "Information technology — Coding of audio-visual objects — Part 3: Audio",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/53943.html",
+    "publicationDate": "2009-09-01",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": false,
+      "amended": true,
+      "amendedBy": [
+        "ISO.14496-3.2009amd4.2013"
+      ],
+      "superseded": true,
+      "supersededBy": [
+        "ISO.14496-3.2019"
+      ],
+      "withdrawn": true
+    }
+  },
+  {
+    "docId": "ISO.14496-3.2009amd4.2013",
+    "docLabel": "ISO/IEC 14496-3:2009/Amd 4:2013",
+    "docTitle": "Information technology — Coding of audio-visual objects — Part 3: Audio — Amendment 4: New levels for AAC profiles",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/63022.html",
+    "publicationDate": "2013-12-01",
+    "publisher": "ISO/IEC",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "ISO.14496-3.2019"
+      ],
+      "withdrawn": true
+    }
+  },
+  {
+    "docId": "ISO.14496-3.2019",
+    "docLabel": "ISO/IEC 14496-3:2019",
+    "docTitle": "Information technology — Coding of audio-visual objects — Part 3: Audio",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/76383.html",
+    "publicationDate": "2019-12-01",
     "publisher": "ISO/IEC",
     "status": {
       "active": true
@@ -11679,6 +11812,18 @@
     }
   },
   {
+    "docId": "rfc8259",
+    "docLabel": "RFC 8259",
+    "docTitle": "The JavaScript Object Notation (JSON) Data Interchange Format",
+    "docType": "Standard",
+    "href": "https://www.rfc-editor.org/rfc/rfc8259",
+    "publicationDate": "2017-12-01",
+    "publisher": "IETF",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "rfc8398",
     "docLabel": "RFC 8398",
     "docTitle": "Internationalized Email Addresses in X.509 Certificates",
@@ -12239,6 +12384,26 @@
     }
   },
   {
+    "docId": "SMPTE.AG10.XXXX",
+    "docLabel": "SMPTE AG 10",
+    "docNumber": "10",
+    "docTitle": "Liaisons Delegates Rapporteurs",
+    "docType": "Administrative Guideline",
+    "group": "smpte-02c-st",
+    "href": "https://smpte.github.io/ag-10/",
+    "publicationDate": "2022-04-12",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "SMPTE.AG10B.LATEST",
+        "SMPTE.AG10C.LATEST"
+      ]
+    },
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "SMPTE.AG10b.2020",
     "docLabel": "SMPTE AG 10b:2020",
     "docTitle": "Standards Administrative Guideline - Liaisons Agreements",
@@ -12270,6 +12435,19 @@
         "SMPTE.AG10.LATEST"
       ]
     },
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "details": "SMTPE ST member access only",
+    "docId": "SMPTE.AG10C.XXXX",
+    "docLabel": "SMPTE AG 10c",
+    "docNumber": "10c",
+    "docTitle": "Liaisons Individual Contact Information",
+    "docType": "Administrative Guideline",
+    "group": "smpte-02c-st",
+    "publisher": "SMPTE",
     "status": {
       "active": true
     }
@@ -12378,6 +12556,26 @@
     }
   },
   {
+    "docId": "SMPTE.AG15.XXXX",
+    "docLabel": "SMPTE AG 15",
+    "docNumber": "15",
+    "docTitle": "Guest Participation Agreement",
+    "docType": "Administrative Guideline",
+    "group": "smpte-02c-st",
+    "href": "https://doc.smpte-doc.org/ag-15/main/",
+    "publicationDate": "2023-01-18",
+    "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "SMPTE.OM.Std.LATEST",
+        "SMPTE.OM.BL.LATEST"
+      ]
+    },
+    "status": {
+      "draft": true
+    }
+  },
+  {
     "docId": "SMPTE.AG16.2020",
     "docLabel": "SMPTE AG 16:2020",
     "docTitle": "Standards Administrative Guideline - Standards Style Guide",
@@ -12471,6 +12669,36 @@
     }
   },
   {
+    "docId": "SMPTE.AG18.XXXX",
+    "docLabel": "SMPTE AG 18",
+    "docNumber": "18",
+    "docTitle": "Metadata Registers Procedures",
+    "docType": "Administrative Guideline",
+    "group": "smpte-02c-st",
+    "href": "https://doc.smpte-doc.org/ag-18/a8e2afca77af87de5dc9e7bbcfb90b2922cdfb99/",
+    "publicationDate": "2023-01-18",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "SMPTE.AG02.LATEST"
+      ],
+      "normative": [
+        "SMPTE.ST2003.LATEST",
+        "SMPTE.ST335.2012",
+        "SMPTE.ST335.2012Am1.2019",
+        "SMPTE.ST395.LATEST",
+        "SMPTE.ST400.LATEST",
+        "SMPTE.ST298.LATEST",
+        "SMPTE.ST336.LATEST",
+        "SMPTE.OM.Std.LATEST",
+        "SMPTE.AG03.LATEST"
+      ]
+    },
+    "status": {
+      "draft": true
+    }
+  },
+  {
     "docId": "SMPTE.AG19.2019",
     "docLabel": "SMPTE AG 19:2019",
     "docTitle": "Standards Administrative Guideline - Project Status Values",
@@ -12484,6 +12712,26 @@
     }
   },
   {
+    "docId": "SMPTE.AG19.XXXX",
+    "docLabel": "SMPTE AG 19",
+    "docNumber": "19",
+    "docTitle": "Project Status Values",
+    "docType": "Administrative Guideline",
+    "group": "smpte-02c-st",
+    "href": "https://doc.smpte-doc.org/ag-19/main/",
+    "publicationDate": "2023-01-19",
+    "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "SMPTE.OM.Std.LATEST",
+        "SMPTE.AG22.LATEST"
+      ]
+    },
+    "status": {
+      "draft": true
+    }
+  },
+  {
     "docId": "SMPTE.AG20.2019",
     "docLabel": "SMPTE AG 20:2019",
     "docTitle": "Standards Administrative Guideline - Overview Documents (OV)",
@@ -12494,6 +12742,20 @@
     "publisher": "SMPTE",
     "status": {
       "active": true
+    }
+  },
+  {
+    "docId": "SMPTE.AG20.XXXX",
+    "docLabel": "SMPTE AG 20",
+    "docNumber": "20",
+    "docTitle": "Overview Documents (OV)",
+    "docType": "Administrative Guideline",
+    "group": "smpte-02c-st",
+    "href": "https://doc.smpte-doc.org/ag-20/main/",
+    "publicationDate": "2023-01-18",
+    "publisher": "SMPTE",
+    "status": {
+      "draft": true
     }
   },
   {
@@ -12556,6 +12818,25 @@
     }
   },
   {
+    "docId": "SMPTE.AG22.XXXX",
+    "docLabel": "SMPTE AG 22",
+    "docNumber": "22",
+    "docTitle": "Public Committee Draft (Public CD) Process",
+    "docType": "Administrative Guideline",
+    "group": "smpte-02c-st",
+    "href": "https://doc.smpte-doc.org/ag-22/main/",
+    "publicationDate": "2023-01-20",
+    "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "SMPTE.OM.Std.LATEST"
+      ]
+    },
+    "status": {
+      "draft": true
+    }
+  },
+  {
     "docId": "SMPTE.AG24.2019",
     "docLabel": "SMPTE AG 24:2019",
     "docTitle": "Standards Administrative Guideline -  MXF UL Style Guidelines",
@@ -12564,6 +12845,67 @@
     "href": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-24-MXF-UL-Style-Guide.pdf",
     "publicationDate": "2019-07-02",
     "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "SMPTE.AG24.XXXX",
+    "docLabel": "SMPTE AG 24",
+    "docNumber": "24",
+    "docTitle": "MXF UL Style Guidelines",
+    "docType": "Administrative Guideline",
+    "group": "smpte-02c-st",
+    "href": "https://doc.smpte-doc.org/ag-24/0cda94e7470a65b57f1762bcd3a1820277b81803/",
+    "publicationDate": "2023-02-02",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "ISO.Dir-P2.2021",
+        "SMPTE.AG04.ST.LATEST",
+        "SMPTE.AG04.RP.LATEST",
+        "SMPTE.AG04.EG.LATEST",
+        "SMPTE.ST2094-2.2017",
+        "SMPTE.ST381-4.2017",
+        "SMPTE.ST377-1.2019",
+        "ISO.13818-7.2006",
+        "ISO.14496-3.2009",
+        "ISO.14496-3.2009amd4.2013"
+      ],
+      "normative": [
+        "SMPTE.OM.Std.LATEST",
+        "SMPTE.AG02.LATEST",
+        "SMPTE.AG16.LATEST",
+        "SMPTE.AG18.LATEST"
+      ]
+    },
+    "status": {
+      "draft": true
+    }
+  },
+  {
+    "docId": "SMPTE.AG25.XXXX",
+    "docLabel": "SMPTE AG 25",
+    "docNumber": "25",
+    "docTitle": "Use of JSON in Engineering Documents",
+    "docType": "Administrative Guideline",
+    "group": "smpte-02c-st",
+    "href": "https://smpte.github.io/ag-25/",
+    "publicationDate": "2022-07-05",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "SMPTE.OM.Std.LATEST",
+        "SMPTE.AG03.LATEST",
+        "IETF.draft-bhutton-json-schema-00"
+      ],
+      "normative": [
+        "rfc3986",
+        "rfc5234",
+        "rfc7405",
+        "rfc8259"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -19511,6 +19853,52 @@
     }
   },
   {
+    "docId": "SMPTE.ST2041-2.2010",
+    "docLabel": "SMPTE ST 2041-2:2010",
+    "docNumber": "2041",
+    "docPart": "2",
+    "docTitle": "Format for Non-PCM Audioin AES3 — MPEG-2 AAC and HE AAC Audio in ADTS",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST2041-2.2010",
+    "group": "smpte-32nf-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2041-2.2010",
+    "keywords": [
+      "Interface",
+      "AES",
+      "MPEG"
+    ],
+    "publicationDate": "2010-08-02",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true,
+      "reaffirmDate": "2017-03-21",
+      "reaffirmed": true
+    }
+  },
+  {
+    "docId": "SMPTE.ST2041-3.2010",
+    "docLabel": "SMPTE ST 2041-3:2010",
+    "docNumber": "2041",
+    "docPart": "3",
+    "docTitle": "Format for Non-PCM Audio and Data in AES3 — MPEG-4 AAC and HE AAC Compressed Digital Audio in ADTS and LATM / LOAS Wrappers",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST2041-3.2010",
+    "group": "smpte-32nf-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2041-3.2010",
+    "keywords": [
+      "Interface",
+      "AES",
+      "MPEG"
+    ],
+    "publicationDate": "2010-10-01",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true,
+      "reaffirmDate": "2017-03-21",
+      "reaffirmed": true
+    }
+  },
+  {
     "docId": "SMPTE.ST2048-1.2011",
     "docLabel": "SMPTE ST 2048-1:2011",
     "docNumber": "2048",
@@ -23211,6 +23599,52 @@
     }
   },
   {
+    "docId": "SMPTE.ST337.2008",
+    "docLabel": "SMPTE ST 337:2008",
+    "docNumber": "337",
+    "docTitle": "Format for Non-PCM Audio and Data in an AES3 Serial Digital Audio Interface",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST337.2008",
+    "group": "smpte-32nf-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST337.2008",
+    "keywords": [
+      "Sound",
+      "Interface",
+      "AES",
+      "SDI"
+    ],
+    "publicationDate": "2008-01-23",
+    "publisher": "SMPTE",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST337.2015"
+      ]
+    }
+  },
+  {
+    "docId": "SMPTE.ST337.2015",
+    "docLabel": "SMPTE ST 337:2015",
+    "docNumber": "337",
+    "docTitle": "Format for Non-PCM Audio and Data in an AES3 Serial Digital Audio Interface",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST337.2015",
+    "group": "smpte-32nf-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST337.2015",
+    "keywords": [
+      "Sound",
+      "Interface",
+      "AES",
+      "SDI"
+    ],
+    "publicationDate": "2015-05-06",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docElement": "m",
     "docId": "SMPTE.ST352.2002",
     "docLabel": "SMPTE ST 352(m):2002",
@@ -23864,6 +24298,46 @@
     "publisher": "SMPTE",
     "status": {
       "active": true
+    }
+  },
+  {
+    "docId": "SMPTE.ST381-4.2017",
+    "docLabel": "SMPTE ST 381-4:2017",
+    "docNumber": "381",
+    "docPart": "4",
+    "docTitle": "Mapping AAC Compressed Audio into the MXF Generic Container",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST381-4.2017",
+    "group": "smpte-31fs-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST381-4.2017",
+    "publicationDate": "2017-06-09",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST336.2007",
+        "SMPTE.ST377-4.2012",
+        "SMPTE.ST381-1.2005",
+        "SMPTE.ST400.2012",
+        "SMPTE.ST2041-2.2010",
+        "SMPTE.ST2041-3.2010",
+        "SMPTE.PubReg.2018",
+        "ISO.13818-1.2015"
+      ],
+      "normative": [
+        "SMPTE.ST377-1.2011",
+        "SMPTE.ST377-1.2011Am1.2012",
+        "SMPTE.ST377-1.2011Am2.2012",
+        "SMPTE.ST379-2.2010",
+        "SMPTE.ST381-2.2011",
+        "ISO.13818-7.2006",
+        "ISO.14496-3.2009",
+        "ISO.14496-3.2009amd4.2013"
+      ]
+    },
+    "status": {
+      "active": true,
+      "reaffirmDate": "2018-09-22",
+      "reaffirmed": true
     }
   },
   {
