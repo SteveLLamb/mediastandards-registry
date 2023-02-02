@@ -592,7 +592,7 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
 
   const docLabels = {}
   registryDocument.forEach(item => { 
-    if (item.docType === "Journal Article" || item.docType === "White Paper" || item.docType === "Book")  {
+    if (item.docType === "Journal Article" || item.docType === "White Paper" || item.docType === "Book" || item.docType === "Guideline" || item.docType === "Registry" )  {
       docLabels[item.docId] = (item.docTitle)
     } else {
       docLabels[item.docId] = (item.docLabel)
