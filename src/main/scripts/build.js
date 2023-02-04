@@ -564,7 +564,11 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
   registryDocument.forEach(item => { docStatuses[item.docId] = item.currentStatus} );
 
   hb.registerHelper("getStatus", function(docId) {
-    return docStatuses[docId];
+    if (!docStatuses.hasOwnProperty(docId)) {
+      return "NOT IN REGISTRY";
+    } else {
+      return docStatuses[docId];
+    }
   });
 
   /* create Status Button and Label based on current document status */
@@ -600,7 +604,11 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
   } );
 
   hb.registerHelper("getLabel", function(docId) {
-    return docLabels[docId];
+    if (!docLabels.hasOwnProperty(docId)) {
+      return docId;
+    } else {
+      return docLabels[docId];
+    }
   });
 
   const docTitles = {}
