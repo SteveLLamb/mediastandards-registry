@@ -365,6 +365,18 @@
     }
   },
   {
+    "docId": "aes31-2.2019",
+    "docLabel": "AES31-2-2019",
+    "docTitle": "AES standard on network and file transfer of audio - Audio-file transfer and exchange - File format for transferring digital audio data between systems of different type and manufacture",
+    "docType": "Standard",
+    "href": "https://www.aes.org/publications/standards/search.cfm?docID=53",
+    "publicationDate": "2019-07-08",
+    "publisher": "AES",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "aes5.2003",
     "docLabel": "AES5-2003",
     "docTitle": "AES recommended practice for professional digital audio - Preferred sampling frequencies for applications employing pulse-code modulation",
@@ -1634,6 +1646,30 @@
     }
   },
   {
+    "docId": "cen.en-17650.2022",
+    "docLabel": "CEN EN 17650:2022",
+    "docTitle": "A framework for digital preservation of cinematographic works - The Cinema Preservation Package",
+    "docType": "Standard",
+    "href": "https://standards.iteh.ai/catalog/standards/cen/cd05d0f8-88aa-46e7-957d-28b4e638cb68/en-17650-2022",
+    "publicationDate": "2022-08-22",
+    "publisher": "CEN",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "cen.tr-17862.2022",
+    "docLabel": "CEN/TR 17862:2022",
+    "docTitle": "Guideline for the implementation of the Cinema Preservation Package (CPP) in EN 17650",
+    "docType": "Guideline",
+    "href": "https://standards.iteh.ai/catalog/standards/cen/151d64f0-54b0-43be-86cb-4a35cb89d3dd/cen-tr-17862-2022",
+    "publicationDate": "2022-08-22",
+    "publisher": "CEN",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "cie15-2.1986",
     "docLabel": "CIE 15.2:1986",
     "docTitle": "Colorimetry (Second Edition)",
@@ -1720,16 +1756,48 @@
     "publicationDate": "2022-03-03",
     "publisher": "DCI",
     "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "DCI.DCA-DVD.2023-0301"
+      ]
+    }
+  },
+  {
+    "docId": "DCI.DCA-DVD.2023-0301",
+    "docLabel": "DVD D-Cinema Addendum v1.1",
+    "docTitle": "Direct View Display D-Cinema Addendum Version 1.1",
+    "docType": "Specification",
+    "href": "https://documents.dcimovies.com/Direct-View-Addendum/bcddea8e1760a0b83eb240f6b8e8fa462e055384/",
+    "publicationDate": "2023-03-01",
+    "publisher": "DCI",
+    "status": {
       "active": true
     }
   },
   {
-    "docId": "DCI.DCA-HDR.2022-0303",
-    "docLabel": "HDR D-Cinema Addendum v1 2022-0303",
+    "docId": "DCI.DCA-HDR.2022-1014",
+    "docLabel": "HDR D-Cinema Addendum v1 2022-1014",
     "docTitle": "High Dynamic Range D-Cinema Addendum Version 1.0",
     "docType": "Specification",
-    "href": "https://www.dcimovies.com/specification/DCI-HDR-Addendum-v100_2022-0330.pdf",
-    "publicationDate": "2022-03-03",
+    "href": "https://docs.dcimovies.com/hdr-addendum/f18141e7bf5acfd5ecb90da80261fec3e762bcf7/",
+    "publicationDate": "2022-10-14",
+    "publisher": "DCI",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "DCI.DCA-HDR.2023-0301"
+      ]
+    }
+  },
+  {
+    "docId": "DCI.DCA-HDR.2023-0301",
+    "docLabel": "HDR D-Cinema Addendum v1.1",
+    "docTitle": "High Dynamic Range D-Cinema Addendum Version 1.1",
+    "docType": "Specification",
+    "href": "https://documents.dcimovies.com/HDR-Addendum/21e54ee3c65987ce09d692cfef791e19bf103d91/",
+    "publicationDate": "2023-03-01",
     "publisher": "DCI",
     "status": {
       "active": true
@@ -2946,6 +3014,17 @@
     }
   },
   {
+    "docId": "ICAO.REF08-Doc9674.1984",
+    "docLabel": "Doc 9674 AN/946",
+    "docTitle": "World Geodetic System — 1984 (WGS-84) Manual",
+    "docType": "Manual",
+    "href": "https://www.icao.int/NACC/Documents/Meetings/2014/ECARAIM/REF08-Doc9674.pdf",
+    "publisher": "International Civil Aviation Organization",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "ICC.1.2004",
     "docLabel": "ICC.1:2004-10",
     "docTitle": "Image technology colour management — Architecture, profile format, and data structure",
@@ -2992,6 +3071,8 @@
   {
     "docId": "IEC.60268-10.1991",
     "docLabel": "IEC 60268-10:1991",
+    "docNumber": "60268",
+    "docPart": "10",
     "docTitle": "Sound system equipment - Part 10: Peak programme level meters",
     "docType": "Standard",
     "href": "https://webstore.iec.ch/publication/1205",
@@ -3004,6 +3085,8 @@
   {
     "docId": "IEC.60268-17.1990",
     "docLabel": "IEC 60268-17:1990",
+    "docNumber": "60268",
+    "docPart": "17",
     "docTitle": "Sound system equipment - Part 17: Standard volume indicators",
     "docType": "Standard",
     "href": "https://webstore.iec.ch/publication/1216",
@@ -3020,6 +3103,8 @@
   {
     "docId": "IEC.60268-17.1990cor1.1991",
     "docLabel": "IEC 60268-17:1990/COR1:1991",
+    "docNumber": "60268",
+    "docPart": "17",
     "docTitle": "Sound system equipment - Part 17: Standard volume indicators",
     "docType": "Standard",
     "href": "https://webstore.iec.ch/publication/1215",
@@ -3032,6 +3117,8 @@
   {
     "docId": "IEC.60268-3.2000",
     "docLabel": "IEC 60268-3:2000",
+    "docNumber": "60268",
+    "docPart": "3",
     "docTitle": "Sound system equipment - Part 3: Amplifiers",
     "docType": "Standard",
     "href": "https://webstore.iec.ch/publication/32788",
@@ -3049,6 +3136,8 @@
   {
     "docId": "IEC.60268-3.2018",
     "docLabel": "IEC 60268-3:2018",
+    "docNumber": "60268",
+    "docPart": "3",
     "docTitle": "Sound system equipment - Part 3: Amplifiers",
     "docType": "Standard",
     "href": "https://webstore.iec.ch/publication/32788",
@@ -3059,20 +3148,9 @@
     }
   },
   {
-    "docId": "IEC.60268.17.1990",
-    "docLabel": "IEC 60268-17:1990",
-    "docTitle": "Sound system equipment. Part 17: Standard volume indicators",
-    "docType": "Standard",
-    "href": "https://webstore.iec.ch/publication/1216",
-    "publicationDate": "1990-10-29",
-    "publisher": "IEC",
-    "status": {
-      "active": true
-    }
-  },
-  {
     "docId": "IEC.60942.2003",
     "docLabel": "IEC 60942 Ed. 3.0 b:2003",
+    "docNumber": "60942",
     "docTitle": "Electroacoustics - Sound Calibrators",
     "docType": "Standard",
     "href": "https://webstore.ansi.org/Standards/IEC/iec60942ed2003?gclid=Cj0KCQiA1NebBhDDARIsAANiDD26JsPj8OzVkY4eaEyEyyY44AuCibUBoWJFkJElQxCBEhSUf6p6XtgaAnHDEALw_wcB",
@@ -3089,6 +3167,7 @@
   {
     "docId": "IEC.60942.2017",
     "docLabel": "IEC 60942 Ed. 4.0 b:2017",
+    "docNumber": "60942",
     "docTitle": "Electroacoustics - Sound Calibrators",
     "docType": "Standard",
     "href": "https://webstore.ansi.org/Standards/IEC/IEC60942Ed2017",
@@ -3101,6 +3180,7 @@
   {
     "docId": "IEC.60958s.2023",
     "docLabel": "IEC 60958:2023 SER Series",
+    "docNumber": "60958",
     "docTitle": "Digital audio interface - ALL PARTS",
     "docType": "Standard",
     "href": "https://webstore.iec.ch/publication/4048",
@@ -3113,6 +3193,8 @@
   {
     "docId": "IEC.61260-1.2014",
     "docLabel": "IEC 61260-1 Ed. 1.0 b:2014",
+    "docNumber": "61260",
+    "docPart": "1",
     "docTitle": "Electroacoustics - Octave-Band And Fractional-Octave-Band Filters - Part 1: Specifications",
     "docType": "Standard",
     "href": "https://webstore.ansi.org/Standards/IEC/IEC61260Ed2014?gclid=Cj0KCQiA1NebBhDDARIsAANiDD3jVHcsJVmzFtzXv0qlg7FwAo4R0ITV4qqj5yLfXDuC7x24gxEBDFwaAiHbEALw_wcB",
@@ -3125,6 +3207,8 @@
   {
     "docId": "IEC.61672-1.2013",
     "docLabel": "IEC 61672-1:2013",
+    "docNumber": "61672",
+    "docPart": "1",
     "docTitle": "Electroacoustics - Sound level meters - Part 1: Specifications",
     "docType": "Standard",
     "href": "https://webstore.iec.ch/publication/5708#additionalinfo",
@@ -3138,6 +3222,8 @@
   {
     "docId": "IEC.61966-2-1.1999",
     "docLabel": "IEC 61966-2-1:1999",
+    "docNumber": "61966",
+    "docPart": "2-1",
     "docTitle": "Multimedia systems and equipment - Colour measurement and management - Part 2-1: Colour management - Default RGB colour space - sRGB",
     "docType": "Standard",
     "href": "https://webstore.iec.ch/publication/6169",
@@ -3155,6 +3241,8 @@
   {
     "docId": "IEC.61966-2-1.1999amd1.2003",
     "docLabel": "IEC 61966-2-1:1999/Amd1:2003",
+    "docNumber": "61966",
+    "docPart": "2-1",
     "docTitle": "Amendment 1 - Multimedia systems and equipment - Colour measurement and management - Part 2-1: Colour management - Default RGB colour space - sRGB",
     "docType": "Standard",
     "href": "https://webstore.iec.ch/publication/6168",
@@ -3167,6 +3255,8 @@
   {
     "docId": "IEC.61966-2-1.1999cor1.2014",
     "docLabel": "IEC 61966-2-1:1999/Cor1:2014",
+    "docNumber": "61966",
+    "docPart": "2-1",
     "docTitle": "Corrigendum 1 - Multimedia systems and equipment - Colour measurement and management - Part 2-1: Colour management - Default RGB colour space - sRGB",
     "docType": "Standard",
     "href": "https://webstore.iec.ch/publication/6170",
@@ -3179,6 +3269,8 @@
   {
     "docId": "IEC.61966-2-4.2006",
     "docLabel": "IEC 61966-2-4:2006",
+    "docNumber": "61966",
+    "docPart": "2-4",
     "docTitle": "Multimedia systems and equipment - Colour measurement and management - Part 2-4: Colour management - Extended-gamut YCC colour space for video applications - xvYCC",
     "docType": "Standard",
     "href": "https://webstore.iec.ch/publication/6173",
@@ -3195,6 +3287,8 @@
   {
     "docId": "IEC.61966-2-4.2006amd2.2021",
     "docLabel": "IEC 61966-2-4:2006+AMD1:2016+AMD2:2021",
+    "docNumber": "61966",
+    "docPart": "2-4",
     "docTitle": "Multimedia systems and equipment - Colour measurement and management - Part 2-4: Colour management - Extended-gamut YCC colour space for video applications - xvYCC",
     "docType": "Standard",
     "href": "https://webstore.iec.ch/publication/69929",
@@ -3207,6 +3301,7 @@
   {
     "docId": "IEEE.754.1985",
     "docLabel": "IEEE 754:1985",
+    "docNumber": "754",
     "docTitle": "Binary Floating-Point Arithmetic",
     "docType": "Standard",
     "href": "https://standards.ieee.org/standard/754-1985.html",
@@ -3223,6 +3318,7 @@
   {
     "docId": "IEEE.754.2008",
     "docLabel": "IEEE 754:2008",
+    "docNumber": "754",
     "docTitle": "Binary Floating-Point Arithmetic",
     "docType": "Standard",
     "href": "https://standards.ieee.org/standard/754-2008.html",
@@ -3239,6 +3335,7 @@
   {
     "docId": "IEEE.754.2019",
     "docLabel": "IEEE 754:2019",
+    "docNumber": "754",
     "docTitle": "Binary Floating-Point Arithmetic",
     "docType": "Standard",
     "href": "https://standards.ieee.org/standard/754-1985.html",
@@ -3251,6 +3348,7 @@
   {
     "docId": "IEEE.STD1003.1.2004",
     "docLabel": "IEEE Std 1003.1:2004",
+    "docNumber": "1003.1",
     "docTitle": "Portable Operating System Interface (POSIX(R)) - Base Definitions",
     "docType": "Standard",
     "doi": "10.1109/IEEESTD.2004.94570",
@@ -3269,6 +3367,7 @@
   {
     "docId": "IEEE.STD1003.1.2008",
     "docLabel": "IEEE Std 1003.1:2008",
+    "docNumber": "1003.1",
     "docTitle": "Portable Operating System Interface (POSIX(R)) - Base Definitions",
     "docType": "Standard",
     "doi": "10.1109/IEEESTD.2008.4694976",
@@ -3286,6 +3385,7 @@
   {
     "docId": "IEEE.STD1180.1990",
     "docLabel": "IEEE Std 1180-1990",
+    "docNumber": "1180",
     "docTitle": "Specifications for the Implementations of 8x8 Inverse Discrete Cosine Transform",
     "docType": "Standard",
     "href": "https://standards.ieee.org/ieee/1180/1789/",
@@ -3301,6 +3401,7 @@
   {
     "docId": "IEEE.STD1394.1995",
     "docLabel": "IEEE Std 1394:1995",
+    "docNumber": "1394",
     "docTitle": "IEEE Standard for a High Performance Serial Bus",
     "docType": "Standard",
     "doi": "10.1109/IEEESTD.1996.81049",
@@ -3318,6 +3419,7 @@
   {
     "docId": "IEEE.STD1394.2008",
     "docLabel": "IEEE Std 1394:2008",
+    "docNumber": "1394",
     "docTitle": "IEEE Standard for a High Performance Serial Bus",
     "docType": "Standard",
     "doi": "10.1109/IEEESTD.2008.4659233",
@@ -3331,6 +3433,7 @@
   {
     "docId": "IEEE.STD152.1992",
     "docLabel": "IEEE 152-1991",
+    "docNumber": "152",
     "docTitle": "Audio Program Level Measurement",
     "docType": "Standard",
     "doi": "10.1109/IEEESTD.1992.114393",
@@ -3344,6 +3447,7 @@
   {
     "docId": "IEEE.STD802.1990",
     "docLabel": "IEEE Std 802:1990",
+    "docNumber": "802",
     "docTitle": "Local and Metropolitan Area Networks: IEEE Standard: Overview and Architecture",
     "docType": "Standard",
     "doi": "10.1109/IEEESTD.1990.122158",
@@ -3361,6 +3465,7 @@
   {
     "docId": "IEEE.STD802.2014",
     "docLabel": "IEEE Std 802:2014",
+    "docNumber": "802",
     "docTitle": "Local and Metropolitan Area Networks: IEEE Standard: Overview and Architecture",
     "docType": "Standard",
     "doi": "10.1109/IEEESTD.2014.6847097",
@@ -3374,6 +3479,7 @@
   {
     "docId": "IEEE.STD9945.2009",
     "docLabel": "IEEE Std 9945:2009",
+    "docNumber": "9945",
     "docTitle": "Portable Operating System Interface (POSIX(R)) - Base Definitions",
     "docType": "Standard",
     "doi": "10.1109/IEEESTD.2009.5393893",
@@ -3387,6 +3493,7 @@
   {
     "docId": "IESNA.RP16.1996",
     "docLabel": "ANSI/IESNA RP-16-1996",
+    "docNumber": "16",
     "docTitle": "Nomenclature and Definitions for Illuminating Engineering",
     "docType": "Recommended Practice",
     "publisher": "IESNA",
@@ -3450,6 +3557,7 @@
   {
     "docId": "IMFUG.BP001.2020",
     "docLabel": "IMFUG 001",
+    "docNumber": "001",
     "docTitle": "Timecode in IMF",
     "docType": "Best Practice",
     "href": "https://www.imfug.com/TR/timecode-in-imf/",
@@ -3463,6 +3571,7 @@
   {
     "docId": "IMFUG.BP002.2020",
     "docLabel": "IMFUG 002",
+    "docNumber": "002",
     "docTitle": "Packaging and Delivery in IMF",
     "docType": "Best Practice",
     "href": "https://www.imfug.com/TR/pkg-and-delivery/",
@@ -3476,6 +3585,7 @@
   {
     "docId": "IMFUG.BP003.2020",
     "docLabel": "IMFUG 003",
+    "docNumber": "003",
     "docTitle": "Authoring of IMSC Documents",
     "docType": "Best Practice",
     "href": "https://www.imfug.com/TR/imsc-authoring/",
@@ -3489,6 +3599,7 @@
   {
     "docId": "IMFUG.BP004.2020",
     "docLabel": "IMFUG 004",
+    "docNumber": "004",
     "docTitle": "Authoring of Audio Track Files",
     "docType": "Best Practice",
     "href": "https://www.imfug.com/TR/audio-track-files/",
@@ -3707,6 +3818,7 @@
     "details": "The Digital Cinema industry is moving from Interop-DCP to SMPTE-DCP, hopefully starting in April 2012. Posted here is the comparison between these two delivery packages.",
     "docId": "ISDCF.D02.2011",
     "docLabel": "ISDCF Doc 02",
+    "docNumber": "02",
     "docTitle": "SMPTE-DCP compared to Interop-DCP Informational only",
     "docType": "Informational",
     "href": "https://isdcf.com/papers/ISDCF-Doc2-DCP-TransitionReview.pdf",
@@ -3724,6 +3836,7 @@
     "details": "Distribution Device File System Recommendations",
     "docId": "ISDCF.D03.2017",
     "docLabel": "ISDCF Doc 03",
+    "docNumber": "03",
     "docTitle": "Hard Disc Drive formats",
     "docType": "Technical Doc",
     "href": "https://isdcf.com/papers/ISDCF-Doc3-Delivery-Recs.pdf",
@@ -3743,6 +3856,7 @@
     "details": "16‐Channel Audio Packaging Guide for both Interop-DCP and SMPTE-DCP. Interop DCP does not have a standardized way of sending multichannel packages. The attached documents describe a common way of transporting multi-channel and the docLabeling to be consistent with SMPTE-DCP packages. Note: (As of 2020-08-18) The information contained within this document has been incorporated in whole into SMPTE RDD52. This document remains here for historical purposes and as the original base information contained with RDD52. If ISDCF decides that any changes must occur within this document, a new revision will be posted, and said changes will be submitted to SMPTE for an updated revision of RDD52, to keep the documents’ information in sync. If for some reason, there may be future revisions to either SMPTE RDD52 or subsequent documents where this document becomes obsolete, and at that time this document will be marked as “superseded”.",
     "docId": "ISDCF.D04.2017",
     "docLabel": "ISDCF Doc 04",
+    "docNumber": "04",
     "docTitle": "Audio Channel Assignments",
     "docType": "Technical Doc",
     "href": "https://isdcf.com/papers/ISDCF-Doc4-Audio-channel-recommendations.pdf",
@@ -3766,6 +3880,7 @@
     "details": "Actual DCI-compliant systems are now starting to appear in the field. Some KDM providers have been sending KDMs containing ContentAuthenticator to be used with Interop content. This will not work on a DCI-compliant system. This document describes formulations for successful KDMs.",
     "docId": "ISDCF.D05.2017",
     "docLabel": "ISDCF Doc 05",
+    "docNumber": "05",
     "docTitle": "Guideline formulations for SMPTE-KDMs",
     "docType": "Technical Doc",
     "href": "https://isdcf.com/papers/ISDCF-Doc5-kdm-certs.pdf",
@@ -3783,6 +3898,7 @@
     "details": "This document was pushed over to SMPTE, see SMPTE ST429-16",
     "docId": "ISDCF.D06.2012",
     "docLabel": "ISDCF Doc 06",
+    "docNumber": "06",
     "docTitle": "Composition Metadata Guidelines",
     "docType": "Informational",
     "publisher": "ISDCF",
@@ -3801,6 +3917,7 @@
   {
     "docId": "ISDCF.D07.2017",
     "docLabel": "ISDCF Doc 07",
+    "docNumber": "07",
     "docTitle": "Language Codes",
     "docType": "Technical Doc",
     "href": "https://isdcf.com/papers/ISDCF-Doc7-DigitalCinemaLanguageCodes.pdf",
@@ -3818,6 +3935,7 @@
     "details": "Tired of using Email to send KDMs to theaters? Here is a very rough proposal for a TKR that uses open standards to deliver Keys. This is a WORKING DRAFT.",
     "docId": "ISDCF.D08.2012",
     "docLabel": "ISDCF Doc 08",
+    "docNumber": "08",
     "docTitle": "Theater Key Retrieval",
     "docType": "Informational",
     "href": "http://isdcf.com/papers/ISDCF-Doc8-TheaterKeyRetrieval-TKR-v03.pdf",
@@ -3832,6 +3950,7 @@
     "details": "Closed caption devices have some strange and unusual behavior – from limited number of display characters to limited number of lines to unique fonts. Captured here are some suggestions to maximize the quality of closed captions.",
     "docId": "ISDCF.D09.2016",
     "docLabel": "ISDCF Doc 09",
+    "docNumber": "09",
     "docTitle": "Closed Caption Authoring Best Practices",
     "docType": "Informational",
     "href": "https://isdcf.com/papers/ISDCF-Doc9-Closed-Caption-Authoring-Best-Practices.pdf",
@@ -3850,6 +3969,7 @@
     "details": "Subtitles and Captions in Digital Cinema. Digital cinema provides for subtitles and captions, both on the main screen and off. This paper provides a brief description of these capabilities.",
     "docId": "ISDCF.D10.2016",
     "docLabel": "ISDCF Doc 10",
+    "docNumber": "10",
     "docTitle": "Subtitles and Captions in Digital Cinema",
     "docType": "Informational",
     "href": "https://isdcf.com/papers/ISDCF-Doc10-Subtitles-and-Captions-in%20Digital-Cinema-20160211.pdf",
@@ -3869,6 +3989,7 @@
     "details": "Leq(m10)2.0 A procedure is introduced to measure the subjective loudness of an entire movie and to develop a suitable metric. Leq(m) has been used for over 15 years to measure and then control the level of trailers and commercials, both in the US and overseas. The method to be described takes a ten-minute rolling average of Leq(m) throughout an entire movie, and then integrates the values above a given threshold. The procedure is not intended to constrain the levels of movies, simply to come up with a metric to describe the subjective loudness. A suggested descriptive is Leq(m10). Reposted Accepted for publication and copyright SMPTE – reproduced by permission. Ioan Allen Author.",
     "docId": "ISDCF.D11.2016",
     "docLabel": "ISDCF Doc 11",
+    "docNumber": "11",
     "docTitle": "How Loud is a Movie? – a New Measurement Procedure",
     "docType": "Informational",
     "href": "https://isdcf.com/papers/ISDCF-Doc11-MovieLoudnessMeasurement20160315.pdf",
@@ -3888,6 +4009,7 @@
     "details": "DRAFT - NOT YET APPROVED",
     "docId": "ISDCF.D12.2017",
     "docLabel": "ISDCF Doc 12",
+    "docNumber": "12",
     "docTitle": "Ingest Behavior (a document under development)",
     "docType": "Technical Doc",
     "href": "https://isdcf.com/papers/ISDCF-Doc12-Recommended-Practice-for-Ingest-Behavior-DRAFT-20170322.pdf",
@@ -3905,6 +4027,7 @@
     "details": "To submit comments and corrections, go to GH. Note: (As of 2020-08-18) The information contained within this document has been incorporated in whole into SMPTE RDD52. This document remains here for historical purposes and as the original base information contained with RDD52. If ISDCF decides that any changes must occur within this document, a new revision will be posted, and said changes will be submitted to SMPTE for an updated revision of RDD52, to keep the documents’ information in sync. If for some reason, there may be future revisions to either SMPTE RDD52 or subsequent documents where this document becomes obsolete, and at that time this document will be marked as “superseded”.",
     "docId": "ISDCF.D13.2018",
     "docLabel": "ISDCF Doc 13",
+    "docNumber": "13",
     "docTitle": "Sign Language Video Encoding for Digital Cinema",
     "docType": "Technical Doc",
     "href": "https://isdcf.com/papers/ISDCF-Doc13-Sign-Language-Video-Encoding-for-Digital-Cinema.pdf",
@@ -3927,6 +4050,7 @@
     "details": "This is an informational document on the safe transfer and delivery of DCPs between facilities. Due to the security built into the DCP structure the basic transfer can be based on cost and efficiency.",
     "docId": "ISDCF.D14.2019",
     "docLabel": "ISDCF Doc 14",
+    "docNumber": "14",
     "docTitle": "Digital Delivery of DCPs – Informational",
     "docType": "Technical Doc",
     "href": "https://isdcf.com/papers/ISDCF-Doc14-Digital-Delivery-of-DCPs.pdf",
@@ -3943,6 +4067,7 @@
   {
     "docId": "ISDCF.D15.2020",
     "docLabel": "ISDCF Doc 15",
+    "docNumber": "15",
     "docTitle": "SMPTE ST 2098-2 Immersive Audio Bitstream Constraints – IAB Application Profile 1",
     "docType": "Technical Doc",
     "href": "https://isdcf.com/papers/ISDCF-Doc15-IAB-Profile-1-202006012.pdf",
@@ -3967,6 +4092,7 @@
     "details": "ISDCF maintains the recommendation for naming DCP files.",
     "docId": "ISDCF.DCNC",
     "docLabel": "ISDCF Doc 01",
+    "docNumber": "01",
     "docTitle": "Digital Cinema Content Naming Convention",
     "docType": "Registry",
     "href": "http://isdcf.com/dcnc",
@@ -4017,6 +4143,7 @@
   {
     "docId": "ISO.10527.1991",
     "docLabel": "ISO/CIE 10527:1991",
+    "docNumber": "10527",
     "docTitle": "CIE standard colorimetric observers",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/18596.html",
@@ -4034,6 +4161,7 @@
   {
     "docId": "ISO.10527.2007",
     "docLabel": "ISO 10527:2007",
+    "docNumber": "10527",
     "docTitle": "CIE standard colorimetric observers",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/37408.html",
@@ -4055,6 +4183,7 @@
   {
     "docId": "ISO.10527.2007cor1.2008",
     "docLabel": "ISO 10527:2007/COR 1:2008",
+    "docNumber": "10527",
     "docTitle": "CIE standard colorimetric observers — Technical Corrigendum 1",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/52494.html",
@@ -4072,6 +4201,8 @@
   {
     "docId": "ISO.10646-1.2000",
     "docLabel": "ISO 10646-1:2000",
+    "docNumber": "10646",
+    "docPart": "1",
     "docTitle": "Information technology — Universal Multiple-Octet Coded Character Set (UCS) — Part 1: Architecture and Basic Multilingual Plane",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/29819.html",
@@ -4089,6 +4220,7 @@
   {
     "docId": "ISO.10646.2003",
     "docLabel": "ISO 10646:2003",
+    "docNumber": "10646",
     "docTitle": "Information technology — Universal Multiple-Octet Coded Character Set (UCS)",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/39921.html",
@@ -4106,6 +4238,7 @@
   {
     "docId": "ISO.10646.2011",
     "docLabel": "ISO 10646:2011",
+    "docNumber": "10646",
     "docTitle": "Information technology — Universal Coded Character Set (UCS)",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/51273.html",
@@ -4123,6 +4256,7 @@
   {
     "docId": "ISO.10646.2012",
     "docLabel": "ISO 10646:2012",
+    "docNumber": "10646",
     "docTitle": "Information technology — Universal Coded Character Set (UCS)",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/56921.html",
@@ -4140,6 +4274,7 @@
   {
     "docId": "ISO.10646.2014",
     "docLabel": "ISO 10646:2014",
+    "docNumber": "10646",
     "docTitle": "Information technology — Universal Coded Character Set (UCS)",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/63182.html",
@@ -4157,6 +4292,7 @@
   {
     "docId": "ISO.10646.2017",
     "docLabel": "ISO 10646:2017",
+    "docNumber": "10646",
     "docTitle": "Information technology — Universal Coded Character Set (UCS)",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/69119.html",
@@ -4174,6 +4310,7 @@
   {
     "docId": "ISO.10646.2017amd1.2019",
     "docLabel": "ISO 10646:2017/AMD 1:2019",
+    "docNumber": "10646",
     "docTitle": "Information technology — Universal Coded Character Set (UCS) — Amendment 1: Dogra, Gunjala Gondi, Makasar, Medefaidrin, Indic Siyaq Numbers and other characters",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/70766.html",
@@ -4186,6 +4323,7 @@
   {
     "docId": "ISO.10646.2017amd2.2019",
     "docLabel": "ISO 10646:2017/AMD 2:2019",
+    "docNumber": "10646",
     "docTitle": "Information technology — Universal Coded Character Set (UCS) — Amendment 2: Nandinagari, Georgian extension, and other characters",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/73773.html",
@@ -4198,6 +4336,8 @@
   {
     "docId": "ISO.11179-1.2004",
     "docLabel": "ISO 11179-1: 2004",
+    "docNumber": "11179",
+    "docPart": "1",
     "docTitle": "Information technology — Metadata registries (MDR) — Part 1: Framework",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/35343.html",
@@ -4215,6 +4355,8 @@
   {
     "docId": "ISO.11179-1.2015",
     "docLabel": "ISO 11179-1: 2015",
+    "docNumber": "11179",
+    "docPart": "1",
     "docTitle": "Information technology — Metadata registries (MDR) — Part 1: Framework",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/61932.html",
@@ -4239,6 +4381,8 @@
   {
     "docId": "ISO.11664-1.2007",
     "docLabel": "ISO 11664-1:2007",
+    "docNumber": "11664",
+    "docPart": "1",
     "docTitle": "Colorimetry — Part 1: CIE standard colorimetric observers",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/52495.html",
@@ -4256,6 +4400,8 @@
   {
     "docId": "ISO.11664-1.2019",
     "docLabel": "ISO/CIE 11664-1:2019",
+    "docNumber": "11664",
+    "docPart": "1",
     "docTitle": "Colorimetry — Part 1: CIE standard colorimetric observers",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/74164.html",
@@ -4268,6 +4414,8 @@
   {
     "docId": "ISO.11664-3.2012",
     "docLabel": "ISO 11664-3:2012",
+    "docNumber": "11664",
+    "docPart": "3",
     "docTitle": "Colorimetry — Part 3: CIE tristimulus values",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/60331.html",
@@ -4285,6 +4433,8 @@
   {
     "docId": "ISO.11664-3.2019",
     "docLabel": "ISO/CIE 11664-3:2019",
+    "docNumber": "11664",
+    "docPart": "3",
     "docTitle": "Colorimetry — Part 3: CIE tristimulus values",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/74165.html",
@@ -4297,6 +4447,7 @@
   {
     "docId": "ISO.1188.1984",
     "docLabel": "ISO 1188:1984",
+    "docNumber": "1188",
     "docTitle": "Cinematography — Recorded characteristic for magnetic sound on full-coat 16 mm motion-picture film — Specifications",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -4310,6 +4461,7 @@
   {
     "docId": "ISO.1189.1986",
     "docLabel": "ISO 1189:1986",
+    "docNumber": "1189",
     "docTitle": "Cinematography — Recorded characteristic for magnetic sound records on 35 mm motion-picture film excluding striped release prints — Specifications",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -4323,6 +4475,7 @@
   {
     "docId": "ISO.1223.2003",
     "docLabel": "ISO 1223:2003",
+    "docNumber": "1223",
     "docTitle": "Cinematography — Picture areas for motion-picture films for television — Position and dimensions",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -4338,6 +4491,7 @@
   {
     "docId": "ISO.12639.2004",
     "docLabel": "ISO 12639:2004(E)",
+    "docNumber": "12639",
     "docTitle": "Graphic technology — Prepress digital data exchange — Tag image file format for image technology (TIFF/IT)",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/34342.html",
@@ -4354,6 +4508,7 @@
   {
     "docId": "ISO.12639.2004am1.2007",
     "docLabel": "ISO 12639:2004/AMD 1:2007",
+    "docNumber": "12639",
     "docTitle": "Graphic technology — Prepress digital data exchange — Tag image file format for image technology (TIFF/IT) — Amendment 1: Use of JBIG2-Amd2 compression in TIFF/IT",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/43356.html",
@@ -4366,6 +4521,8 @@
   {
     "docId": "ISO.13818-1.2015",
     "docLabel": "ISO/IEC 13818-1:2015",
+    "docNumber": "13818",
+    "docPart": "1",
     "docTitle": "Information technology — Generic coding of moving pictures and associated audio information — Part 1: Systems",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/67331.html",
@@ -4383,6 +4540,8 @@
   {
     "docId": "ISO.13818-1.2019",
     "docLabel": "ISO/IEC 13818-1:2019",
+    "docNumber": "13818",
+    "docPart": "1",
     "docTitle": "Information technology — Generic coding of moving pictures and associated audio information — Part 1: Systems",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/75928.html",
@@ -4405,6 +4564,8 @@
   {
     "docId": "ISO.13818-1.2019amd1.2020",
     "docLabel": "ISO/IEC 13818-1:2019/AMD 1:2020",
+    "docNumber": "13818",
+    "docPart": "1",
     "docTitle": "Information technology — Generic coding of moving pictures and associated audio information — Part 1: Systems — Amendment 1: Carriage of JPEG XS in MPEG-2 TS",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/76595.html",
@@ -4422,6 +4583,8 @@
   {
     "docId": "ISO.13818-1.2019cor1.2020",
     "docLabel": "ISO/IEC 13818-1:2019/COR 1:2020",
+    "docNumber": "13818",
+    "docPart": "1",
     "docTitle": "Information technology — Generic coding of moving pictures and associated audio information — Part 1: Systems — Technical Corrigendum 1",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/80196.html",
@@ -4439,6 +4602,8 @@
   {
     "docId": "ISO.13818-1.2022",
     "docLabel": "ISO/IEC 13818-1:2022",
+    "docNumber": "13818",
+    "docPart": "1",
     "docTitle": "Information technology — Generic coding of moving pictures and associated audio information — Part 1: Systems",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/83239.html",
@@ -4451,6 +4616,8 @@
   {
     "docId": "ISO.13818-2.2000",
     "docLabel": "ISO 13818-2:2000",
+    "docNumber": "13818",
+    "docPart": "2",
     "docTitle": "Information technology — Generic coding of moving pictures and associated audio information: Video — Part 2 ",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/31539.html",
@@ -4468,6 +4635,8 @@
   {
     "docId": "ISO.13818-2.2013",
     "docLabel": "ISO 13818-2:2013",
+    "docNumber": "13818",
+    "docPart": "2",
     "docTitle": "Information technology — Generic coding of moving pictures and associated audio information — Part 2: Video",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/61152.html",
@@ -4480,6 +4649,8 @@
   {
     "docId": "ISO.13818-7.2006",
     "docLabel": "ISO 13818-7:2006",
+    "docNumber": "13818",
+    "docPart": "4",
     "docTitle": "Information technology — Generic coding of moving pictures and associated audio information — Part 7: Advanced Audio Coding (AAC)",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/43345.html",
@@ -4492,6 +4663,8 @@
   {
     "docId": "ISO.14496-10.2005",
     "docLabel": "ISO 14496-10:2005",
+    "docNumber": "14496",
+    "docPart": "10",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 10: Advanced Video Coding",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/43058.html",
@@ -4509,6 +4682,8 @@
   {
     "docId": "ISO.14496-10.2014",
     "docLabel": "ISO 14496-10:2014",
+    "docNumber": "14496",
+    "docPart": "10",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 10: Advanced Video Coding",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/66069.html",
@@ -4531,6 +4706,8 @@
   {
     "docId": "ISO.14496-10.2014amd1.2015",
     "docLabel": "ISO 14496-10:2014/AMD 1:2015",
+    "docNumber": "14496",
+    "docPart": "10",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 10: Advanced Video Coding — Amendment 1: Multi-Resolution frame compatible stereoscopic video with depth maps, additional supplemental enhancement information and video usability information",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/67318.html",
@@ -4548,6 +4725,8 @@
   {
     "docId": "ISO.14496-10.2014amd3.2016",
     "docLabel": "ISO 14496-10:2014/AMD 3:2016",
+    "docNumber": "14496",
+    "docPart": "10",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 10: Advanced Video Coding — Amendment 3: Additional supplemental enhancement information",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/69728.html",
@@ -4565,6 +4744,8 @@
   {
     "docId": "ISO.14496-10.2020",
     "docLabel": "ISO/IEC 14496-10:2020",
+    "docNumber": "14496",
+    "docPart": "10",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 10: Advanced Video Coding",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/75400.html",
@@ -4577,6 +4758,8 @@
   {
     "docId": "ISO.14496-2.2004",
     "docLabel": "ISO/IEC 14496-2:2004",
+    "docNumber": "14496",
+    "docPart": "2",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 2: Visual",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/39259.html",
@@ -4602,6 +4785,8 @@
   {
     "docId": "ISO.14496-2.2004amd1.2004",
     "docLabel": "ISO/IEC 14496-2:2004/AMD 1:2004",
+    "docNumber": "14496",
+    "docPart": "2",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 2: Visual — Amendment 1: Error resilient simple scalable profile",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/39365.html",
@@ -4614,6 +4799,8 @@
   {
     "docId": "ISO.14496-2.2004amd2.2005",
     "docLabel": "ISO/IEC 14496-2:2004/AMD 2:2005",
+    "docNumber": "14496",
+    "docPart": "2",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 2: Visual — Amendment 2: New Levels for Simple Profile",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/41483.html",
@@ -4626,6 +4813,8 @@
   {
     "docId": "ISO.14496-2.2004amd3.2007",
     "docLabel": "ISO/IEC 14496-2:2004/AMD 3:2007",
+    "docNumber": "14496",
+    "docPart": "2",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 2: Visual — Amendment 3: Support for colour spaces",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/43658.html",
@@ -4638,6 +4827,8 @@
   {
     "docId": "ISO.14496-2.2004amd4.2008",
     "docLabel": "ISO/IEC 14496-2:2004/AMD 4:2008",
+    "docNumber": "14496",
+    "docPart": "2",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 2: Visual — Amendment 4: Simple profile level 6",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/46285.html",
@@ -4650,6 +4841,8 @@
   {
     "docId": "ISO.14496-2.2004amd5.2009",
     "docLabel": "ISO/IEC 14496-2:2004/AMD 5:2009",
+    "docNumber": "14496",
+    "docPart": "2",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 2: Visual — Amendment 5: Simple studio profile levels 5 and 6",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/51748.html",
@@ -4662,6 +4855,8 @@
   {
     "docId": "ISO.14496-2.2004cor1.2004",
     "docLabel": "ISO/IEC 14496-2:2004/COR 1:2004",
+    "docNumber": "14496",
+    "docPart": "2",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 2: Visual — Technical Corrigendum 1",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/40742.html",
@@ -4674,6 +4869,8 @@
   {
     "docId": "ISO.14496-2.2004cor2.2007",
     "docLabel": "ISO/IEC 14496-2:2004/COR 2:2007",
+    "docNumber": "14496",
+    "docPart": "2",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 2: Visual — Technical Corrigendum 2",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/43970.html",
@@ -4686,6 +4883,8 @@
   {
     "docId": "ISO.14496-2.2004cor3.2008",
     "docLabel": "ISO/IEC 14496-2:2004/COR 3:2008",
+    "docNumber": "14496",
+    "docPart": "2",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 2: Visual — Technical Corrigendum 3: .",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/50995.html",
@@ -4698,6 +4897,8 @@
   {
     "docId": "ISO.14496-2.2004cor4.2010",
     "docLabel": "ISO/IEC 14496-2:2004/COR 4:2010",
+    "docNumber": "14496",
+    "docPart": "2",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 2: Visual — Technical Corrigendum 4",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/55899.html",
@@ -4710,6 +4911,8 @@
   {
     "docId": "ISO.14496-2.2004cor5.2013",
     "docLabel": "ISO/IEC 14496-2:2004/COR 5:2013",
+    "docNumber": "14496",
+    "docPart": "2",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 2: Visual — Technical Corrigendum 5",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/63524.html",
@@ -4722,6 +4925,8 @@
   {
     "docId": "ISO.14496-22.2007",
     "docLabel": "ISO 14496-22:2007",
+    "docNumber": "14496",
+    "docPart": "22",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 22: Open Font Format",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/43466.html",
@@ -4739,6 +4944,8 @@
   {
     "docId": "ISO.14496-22.2009",
     "docLabel": "ISO 14496-22:2009",
+    "docNumber": "14496",
+    "docPart": "22",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 22: Open Font Format",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/52136.html",
@@ -4756,6 +4963,8 @@
   {
     "docId": "ISO.14496-22.2019",
     "docLabel": "ISO 14496-22:2019",
+    "docNumber": "14496",
+    "docPart": "22",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 22: Open Font Format",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/74461.html",
@@ -4768,6 +4977,8 @@
   {
     "docId": "ISO.14496-3.2009",
     "docLabel": "ISO/IEC 14496-3:2009",
+    "docNumber": "14496",
+    "docPart": "3",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 3: Audio",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/53943.html",
@@ -4789,6 +5000,8 @@
   {
     "docId": "ISO.14496-3.2009amd4.2013",
     "docLabel": "ISO/IEC 14496-3:2009/Amd 4:2013",
+    "docNumber": "14496",
+    "docPart": "3",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 3: Audio — Amendment 4: New levels for AAC profiles",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/63022.html",
@@ -4806,6 +5019,8 @@
   {
     "docId": "ISO.14496-3.2019",
     "docLabel": "ISO/IEC 14496-3:2019",
+    "docNumber": "14496",
+    "docPart": "3",
     "docTitle": "Information technology — Coding of audio-visual objects — Part 3: Audio",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/76383.html",
@@ -4818,6 +5033,7 @@
   {
     "docId": "ISO.14546.2000",
     "docLabel": "ISO 14546:2000",
+    "docNumber": "14546",
     "docTitle": "Photography — Aerial films and spools — Dimensions",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/24723.html",
@@ -4830,6 +5046,8 @@
   {
     "docId": "ISO.15076-1.2005",
     "docLabel": "ISO 15076-1:2005",
+    "docNumber": "15076",
+    "docPart": "1",
     "docTitle": "Image technology colour management — Architecture, profile format and data structure — Part 1: Based on ICC.1:2004-10",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/40317.html",
@@ -4847,6 +5065,8 @@
   {
     "docId": "ISO.15076-1.2010",
     "docLabel": "ISO 15076-1:2010",
+    "docNumber": "15076",
+    "docPart": "1",
     "docTitle": "Image technology colour management — Architecture, profile format and data structure — Part 1: Based on ICC.1:2010",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/54754.html",
@@ -4859,6 +5079,7 @@
   {
     "docId": "ISO.15417.2007",
     "docLabel": "ISO/IEC 15417:2007",
+    "docNumber": "15417",
     "docTitle": "Information technology — Automatic identification and data capture techniques — Code 128 bar code symbology specification",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/43896.html",
@@ -4873,6 +5094,8 @@
     "details": "Amended, Superseded",
     "docId": "ISO.15444-1.2004",
     "docLabel": "ISO 15444-1:2004(en)",
+    "docNumber": "15444",
+    "docPart": "1",
     "docTitle": "Information technology — JPEG 2000 image coding system: Core coding system",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/37674.html",
@@ -4908,6 +5131,8 @@
   {
     "docId": "ISO.15444-1.2004amd1.2006",
     "docLabel": "ISO 15444-1:2004 Amd 1:2006(en)",
+    "docNumber": "15444",
+    "docPart": "1",
     "docTitle": "Information technology — JPEG 2000 image coding system: Core coding system AMENDMENT 1: Profiles for digital cinema applications",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/41719.html",
@@ -4928,6 +5153,8 @@
   {
     "docId": "ISO.15444-1.2004amd2.2009",
     "docLabel": "ISO 15444-1:2004 Amd 2:2009(en)",
+    "docNumber": "15444",
+    "docPart": "1",
     "docTitle": "Information technology — JPEG 2000 image coding system: Core coding system AMENDMENT 2: Extended profiles for cinema and video production and archival applications",
     "docType": "Standard",
     "href": "https://iso.org/standard/52174.html",
@@ -4948,6 +5175,8 @@
   {
     "docId": "ISO.15444-1.2004amd3.2010",
     "docLabel": "ISO/IEC 15444-1:2004/AMD 3:2010",
+    "docNumber": "15444",
+    "docPart": "1",
     "docTitle": "Information technology — JPEG 2000 image coding system: Core coding system — Part 1: — Amendment 3: Profiles for broadcast applications",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/53333.html",
@@ -4967,6 +5196,8 @@
   {
     "docId": "ISO.15444-1.2004amd4.2013",
     "docLabel": "ISO 15444-1:2004 Amd 4:2013(en)",
+    "docNumber": "15444",
+    "docPart": "1",
     "docTitle": "Information technology — JPEG 2000 image coding system: Core coding system AMENDMENT 4: Guidelines for digital cinema applications",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/52176.html",
@@ -4987,6 +5218,8 @@
   {
     "docId": "ISO.15444-1.2004amd5.2013",
     "docLabel": "ISO/IEC 15444-1:2004/AMD 5:2013",
+    "docNumber": "15444",
+    "docPart": "1",
     "docTitle": "Information technology — JPEG 2000 image coding system: Core coding system — Part 1: — Amendment 5: Enhancements for digital cinema and archive profiles (additional frame rates)",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/55503.html",
@@ -5006,6 +5239,8 @@
   {
     "docId": "ISO.15444-1.2004amd6.2013",
     "docLabel": "ISO/IEC 15444-1:2004/AMD 6:2013",
+    "docNumber": "15444",
+    "docPart": "1",
     "docTitle": "Information technology — JPEG 2000 image coding system: Core coding system — Part 1: — Amendment 6: Updated ICC profile support, bit depth and resolution clarifications",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/59863.html",
@@ -5025,6 +5260,8 @@
   {
     "docId": "ISO.15444-1.2004amd7.2015",
     "docLabel": "ISO/IEC 15444-1:2004/AMD 7:2015",
+    "docNumber": "15444",
+    "docPart": "1",
     "docTitle": "Information technology — JPEG 2000 image coding system: Core coding system — Part 1: — Amendment 7: Profiles for an interoperable master format (IMF)",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/69390.html",
@@ -5045,6 +5282,8 @@
   {
     "docId": "ISO.15444-1.2004amd8.2015",
     "docLabel": "ISO 15444-1:2004 Amd 8:2015(en)",
+    "docNumber": "15444",
+    "docPart": "1",
     "docTitle": "Information technology — JPEG 2000 image coding system — Part 1: Core coding system AMENDMENT 8: Profiles for an interoperable master format IMF",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/65352.html",
@@ -5065,6 +5304,8 @@
   {
     "docId": "ISO.15444-1.2004cor1.2007",
     "docLabel": "ISO 15444-1:2004 Cor 1:2007(en)",
+    "docNumber": "15444",
+    "docPart": "1",
     "docTitle": "Information technology — JPEG 2000 image coding system: Core coding system TECHNICAL CORRIGENDUM 1",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/44343.html",
@@ -5085,6 +5326,8 @@
   {
     "docId": "ISO.15444-1.2004cor2.2008",
     "docLabel": "ISO 15444-1:2004 Cor 2:2008(en)",
+    "docNumber": "15444",
+    "docPart": "1",
     "docTitle": "Information technology — JPEG 2000 image coding system: Core coding system TECHNICAL CORRIGENDUM 2: Clarification on determination of maximum file size",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/46472.html",
@@ -5105,6 +5348,8 @@
   {
     "docId": "ISO.15444-1.2004cor3.2015",
     "docLabel": "ISO/IEC 15444-1:2004/COR 3:2015",
+    "docNumber": "15444",
+    "docPart": "1",
     "docTitle": "Information technology — JPEG 2000 image coding system: Core coding system — Part 1: — Technical Corrigendum 3",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/66389.html",
@@ -5124,6 +5369,8 @@
   {
     "docId": "ISO.15444-1.2004cor4.2015",
     "docLabel": "ISO/IEC 15444-1:2004/COR 4:2015",
+    "docNumber": "15444",
+    "docPart": "1",
     "docTitle": "Information technology — JPEG 2000 image coding system: Core coding system — Part 1: — Technical Corrigendum 4",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/67166.html",
@@ -5143,6 +5390,8 @@
   {
     "docId": "ISO.15444-1.2016",
     "docLabel": "ISO 15444-1:2016(en)",
+    "docNumber": "15444",
+    "docPart": "1",
     "docTitle": "Information technology — JPEG 2000 image coding system: Core coding system",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/70018.html",
@@ -5163,6 +5412,8 @@
   {
     "docId": "ISO.15444-1.2019",
     "docLabel": "ISO 15444-1:2019(en)",
+    "docNumber": "15444",
+    "docPart": "1",
     "docTitle": "Information technology — JPEG 2000 image coding system —Part 1: Core coding system",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/78321.html",
@@ -5179,6 +5430,8 @@
   {
     "docId": "ISO.15444-15.2019",
     "docLabel": "ISO/IEC 15444-15:2019",
+    "docNumber": "15444",
+    "docPart": "15",
     "docTitle": "Information technology — JPEG 2000 image coding system — Part 15: High-Throughput JPEG 2000",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/76621.html",
@@ -5196,6 +5449,8 @@
   {
     "docId": "ISO.15706-1.2002",
     "docLabel": "ISO 15706-1:2002",
+    "docNumber": "15706",
+    "docPart": "1",
     "docTitle": "Information and documentation — International Standard Audiovisual Number (ISAN) — Part 1: Audiovisual work identifier",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/28779.html",
@@ -5208,6 +5463,7 @@
   {
     "docId": "ISO.15924.2004",
     "docLabel": "ISO 15924:2004",
+    "docNumber": "15924",
     "docTitle": "Information and documentation — Codes for the representation of names of scripts",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/29546.html",
@@ -5220,6 +5476,7 @@
   {
     "docId": "ISO.15948.2004",
     "docLabel": "ISO 15948:2004",
+    "docNumber": "15948",
     "docTitle": "Information technology — Computer graphics and image processing — Portable Network Graphics (PNG): Functional specification",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/29581.html",
@@ -5232,6 +5489,8 @@
   {
     "docId": "ISO.17321-2.2012",
     "docLabel": "ISO/TR 17321-2:2012",
+    "docNumber": "17321",
+    "docPart": "2",
     "docTitle": "Graphic technology and photography — Colour characterization of digital still cameras (DSCs) — Part 2: Considerations for determining scene analysis transforms",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/58003.html",
@@ -5244,6 +5503,7 @@
   {
     "docId": "ISO.18901.2010",
     "docLabel": "ISO 18901:2010",
+    "docNumber": "18901",
     "docTitle": "Imaging materials — Processed silver-gelatin-type black-and-white films — Specifications for stability",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/51029.html",
@@ -5256,6 +5516,7 @@
   {
     "docId": "ISO.18905.2002",
     "docLabel": "ISO 18905:2002",
+    "docNumber": "18905",
     "docTitle": "Imaging materials — Photographic films — Specifications for safety film",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/31929.html",
@@ -5268,6 +5529,7 @@
   {
     "docId": "ISO.18906.2000",
     "docLabel": "ISO 18906:2000",
+    "docNumber": "18906",
     "docTitle": "Imaging materials — Ammonia-processed diazo photographic film — Specifications for stability",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/31930.html",
@@ -5280,6 +5542,7 @@
   {
     "docId": "ISO.18911.2010",
     "docLabel": "ISO 18911:2010",
+    "docNumber": "18911",
     "docTitle": "Imaging materials — Processed safety photographic films — Storage practices",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/46602.html",
@@ -5292,6 +5555,7 @@
   {
     "docId": "ISO.18912.2002",
     "docLabel": "ISO 18912:2002",
+    "docNumber": "18912",
     "docTitle": "Imaging materials — Processed vesicular photographic film — Specifications for stability",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/31936.html",
@@ -5304,6 +5568,7 @@
   {
     "docId": "ISO.18915.2000",
     "docLabel": "ISO 18915:2000",
+    "docNumber": "18915",
     "docTitle": "Imaging materials — Methods for the evaluation of the effectiveness of chemical conversion of silver images against oxidation",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/31939.html",
@@ -5316,6 +5581,7 @@
   {
     "docId": "ISO.19501.2005",
     "docLabel": "ISO/IEC 19501:2005",
+    "docNumber": "19501",
     "docTitle": "Information technology — Open Distributed Processing — Unified Modeling Language (UML) Version 1.4.2",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/32620.html",
@@ -5328,6 +5594,7 @@
   {
     "docId": "ISO.19790.2012",
     "docLabel": "ISO 19790:2012",
+    "docNumber": "19790",
     "docTitle": "Information technology — Security techniques — Security requirements for cryptographic modules",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/52906.html",
@@ -5340,6 +5607,7 @@
   {
     "docId": "ISO.2022.1994",
     "docLabel": "ISO/IEC 2022:1994",
+    "docNumber": "2022",
     "docTitle": "Information technology — Character code structure and extension techniques",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/22747.html",
@@ -5356,6 +5624,7 @@
   {
     "docId": "ISO.2022.1994cor1.1999",
     "docLabel": "ISO/IEC 2022:1994/Cor 1:1999",
+    "docNumber": "2022",
     "docTitle": "Information technology — Character code structure and extension techniques — Technical Corrigendum 1",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/31104.html",
@@ -5368,6 +5637,8 @@
   {
     "docId": "ISO.21122-1.2019",
     "docLabel": "ISO/IEC 21122-1:2019",
+    "docNumber": "21122",
+    "docPart": "1",
     "docTitle": "Information technology — JPEG XS low-latency lightweight image coding system — Part 1: Core coding system",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/74535.html",
@@ -5380,6 +5651,8 @@
   {
     "docId": "ISO.21122-2.2019",
     "docLabel": "ISO/IEC 21122-2:2019",
+    "docNumber": "21122",
+    "docPart": "2",
     "docTitle": "Information technology — JPEG XS low-latency lightweight image coding system — Part 2: Profiles and buffer models",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/74536.html",
@@ -5392,6 +5665,8 @@
   {
     "docId": "ISO.21122-3.2019",
     "docLabel": "ISO/IEC 21122-3:2019",
+    "docNumber": "21122",
+    "docPart": "3",
     "docTitle": "Information technology — JPEG XS low-latency lightweight image coding system — Part 3: Transport and container formats",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/74537.html",
@@ -5404,6 +5679,7 @@
   {
     "docId": "ISO.21727.2004",
     "docLabel": "ISO 21727:2004",
+    "docNumber": "21727",
     "docTitle": "Cinematography — Method of measurement of perceived loudness of motion-picture audio material",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -5422,6 +5698,7 @@
   {
     "docId": "ISO.21727.2016",
     "docLabel": "ISO 21727:2016",
+    "docNumber": "21727",
     "docTitle": "Cinematography — Method of measurement of perceived loudness of motion-picture audio material",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -5435,6 +5712,7 @@
   {
     "docId": "ISO.2240.1994",
     "docLabel": "ISO 2240:1994",
+    "docNumber": "2240",
     "docTitle": "Photography — Colour reversal camera films — Determination of ISO speed",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/7050.html",
@@ -5452,6 +5730,7 @@
   {
     "docId": "ISO.2240.2003",
     "docLabel": "ISO 2240:2003",
+    "docNumber": "2240",
     "docTitle": "Photography — Colour reversal camera films — Determination of ISO speed",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/34533.html",
@@ -5465,6 +5744,8 @@
   {
     "docId": "ISO.23008-2.2017",
     "docLabel": "ISO/IEC 23008-2:2017",
+    "docNumber": "23008",
+    "docPart": "2",
     "docTitle": "Information technology — High efficiency coding and media delivery in heterogeneous environments — Part 2: High efficiency video coding",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/69668.html",
@@ -5482,6 +5763,8 @@
   {
     "docId": "ISO.23008-2.2020",
     "docLabel": "ISO/IEC 23008-2:2020",
+    "docNumber": "23008",
+    "docPart": "2",
     "docTitle": "Information technology — High efficiency coding and media delivery in heterogeneous environments — Part 2: High efficiency video coding",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/75484.html",
@@ -5494,6 +5777,7 @@
   {
     "docId": "ISO.26324.2012",
     "docLabel": "ISO 26324:2012",
+    "docNumber": "26324",
     "docTitle": "Information and documentation — Digital object identifier system",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/43506.html",
@@ -5506,6 +5790,8 @@
   {
     "docId": "ISO.26428-1.2008",
     "docLabel": "ISO 26428-1:2008",
+    "docNumber": "26428",
+    "docPart": "1",
     "docTitle": "Digital cinema (D-cinema) distribution master — Part 1: Image characteristics",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -5545,6 +5831,8 @@
   {
     "docId": "ISO.26428-1.20XX",
     "docLabel": "ISO CD 26428-1",
+    "docNumber": "26428",
+    "docPart": "1",
     "docTitle": "Digital cinema (D-cinema) distribution master — Part 1: Image characteristics",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -5567,6 +5855,8 @@
   {
     "docId": "ISO.26428-11.2011",
     "docLabel": "ISO 26428-11:2011",
+    "docNumber": "26428",
+    "docPart": "11",
     "docTitle": "Digital cinema (D-cinema) distribution master — Part 11: Additional frame rates",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -5600,6 +5890,8 @@
   {
     "docId": "ISO.26428-19.2011",
     "docLabel": "ISO 26428-19:2011",
+    "docNumber": "26428",
+    "docPart": "19",
     "docTitle": "Digital cinema (D-cinema) distribution master — Part 19: Serial digital interface signal formatting for additional frame rates level AFR2 and level AFR4",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -5640,6 +5932,8 @@
   {
     "docId": "ISO.26428-2.2008",
     "docLabel": "ISO 26428-2:2008",
+    "docNumber": "26428",
+    "docPart": "2",
     "docTitle": "Digital cinema (D-cinema) distribution master — Part 3: Audio channel mapping and channel docLabeling",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -5680,6 +5974,8 @@
   {
     "docId": "ISO.26428-3.2008",
     "docLabel": "ISO 26428-3:2008",
+    "docNumber": "26428",
+    "docPart": "3",
     "docTitle": "Digital cinema (D-cinema) distribution master — Part 3: Audio channel mapping and channel docLabeling",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -5720,6 +6016,8 @@
   {
     "docId": "ISO.26428-9.2009",
     "docLabel": "ISO 26428-9:2009",
+    "docNumber": "26428",
+    "docPart": "9",
     "docTitle": "Digital cinema (D-cinema) distribution master — Part 9: Image pixel structure level 3 — Serial digital interface signal formatting",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -5760,6 +6058,8 @@
   {
     "docId": "ISO.26429-18.2009",
     "docLabel": "ISO 26429-10:2009",
+    "docNumber": "26429",
+    "docPart": "18",
     "docTitle": "Digital cinema (D-cinema) packaging — Part 10: Stereoscopic picture track file",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -5808,6 +6108,8 @@
   {
     "docId": "ISO.26429-3.2008",
     "docLabel": "ISO 26429-3:2008",
+    "docNumber": "26429",
+    "docPart": "3",
     "docTitle": "Digital cinema (D-cinema) packaging — Part 3: Sound and picture track file",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -5854,6 +6156,8 @@
   {
     "docId": "ISO.26429-4.2008",
     "docLabel": "ISO 26429-4:2008",
+    "docNumber": "26429",
+    "docPart": "4",
     "docTitle": "Digital cinema (D-cinema) packaging — Part 4: MXF JPEG 2000 application",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -5901,6 +6205,8 @@
     "details": "Forward incorrectly references wrong SMPTE doc year '(as SMPTE 429-6-2007)'. This version doesn't exist - should be '2006'",
     "docId": "ISO.26429-6.2008",
     "docLabel": "ISO 26429-6:2008",
+    "docNumber": "26429",
+    "docPart": "6",
     "docTitle": "Digital cinema (D-cinema) packaging — Part 6: MXF track file essence encryption",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -5949,6 +6255,8 @@
   {
     "docId": "ISO.26429-7.2008",
     "docLabel": "ISO 26429-7:2008",
+    "docNumber": "26429",
+    "docPart": "7",
     "docTitle": "Digital cinema (D-cinema) packaging — Part 7: Composition playlist",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -5997,6 +6305,8 @@
   {
     "docId": "ISO.26429-8.2009",
     "docLabel": "ISO 26429-8:2009",
+    "docNumber": "26429",
+    "docPart": "8",
     "docTitle": "Digital cinema (D-cinema) packaging — Part 8: Packing list",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -6044,6 +6354,8 @@
   {
     "docId": "ISO.26429-9.2009",
     "docLabel": "ISO 26429-9:2009",
+    "docNumber": "26429",
+    "docPart": "9",
     "docTitle": "Digital cinema (D-cinema) packaging — Part 9: Asset mapping and file segmentation",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -6088,6 +6400,8 @@
   {
     "docId": "ISO.26430-1.2008",
     "docLabel": "ISO 26430-1:2008",
+    "docNumber": "26430",
+    "docPart": "1",
     "docTitle": "Digital cinema (D-cinema) operations — Part 1: Key delivery message",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -6122,6 +6436,8 @@
   {
     "docId": "ISO.26430-2.2008",
     "docLabel": "ISO 26430-2:2008",
+    "docNumber": "26430",
+    "docPart": "2",
     "docTitle": "Digital cinema (D-cinema) operations — Part 2: Digital certificate",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -6169,6 +6485,8 @@
   {
     "docId": "ISO.26430-3.2008",
     "docLabel": "ISO 26430-3:2008",
+    "docNumber": "26430",
+    "docPart": "3",
     "docTitle": "Digital cinema (D-cinema) operations — Part 3: Generic extra-theater message format",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -6218,6 +6536,8 @@
   {
     "docId": "ISO.26430-4.2009",
     "docLabel": "ISO 26430-4:2009",
+    "docNumber": "26430",
+    "docPart": "4",
     "docTitle": "Digital cinema (D-cinema) operations — Part 4: Log record format specification",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -6264,6 +6584,8 @@
   {
     "docId": "ISO.26430-5.2009",
     "docLabel": "ISO 26430-5:2009",
+    "docNumber": "26430",
+    "docPart": "5",
     "docTitle": "Digital cinema (D-cinema) operations — Part 5: Security log event class and constraints",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -6348,6 +6670,8 @@
   {
     "docId": "ISO.26430-9.2009",
     "docLabel": "ISO 26430-9:2009",
+    "docNumber": "26430",
+    "docPart": "9",
     "docTitle": "Digital cinema (D-cinema) operations — Part 9: Key delivery bundle",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -6397,6 +6721,8 @@
   {
     "docId": "ISO.26430-9.2009am1.20XX",
     "docLabel": "ISO 26430-9:2009/AWI AMD 1",
+    "docNumber": "26430",
+    "docPart": "9",
     "docTitle": "Digital cinema (D-cinema) operations — Part 9: Key delivery bundle — Amendment 1",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -6419,6 +6745,8 @@
     "details": "Normative reference is different than source SMPTE doc (year updated).",
     "docId": "ISO.26431-1.2008",
     "docLabel": "ISO 26431-1:2008",
+    "docNumber": "26431",
+    "docPart": "1",
     "docTitle": "Digital cinema (D-cinema) quality — Part 1: Screen luminance level, chromaticity and uniformity",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -6459,6 +6787,8 @@
   {
     "docId": "ISO.26432-2.2008",
     "docLabel": "ISO 26432-2:2008",
+    "docNumber": "26432",
+    "docPart": "2",
     "docTitle": "Digital source processing — Part 2: Digital cinema (D-cinema) low frequency effects (LFE) channel audio characteristics",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -6493,6 +6823,7 @@
   {
     "docId": "ISO.26433.2009",
     "docLabel": "ISO 26433:2009",
+    "docNumber": "26433",
     "docTitle": "Digital cinema (D-cinema) — XML data types",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -6538,6 +6869,7 @@
   {
     "docId": "ISO.26433.2009am1.20XX",
     "docLabel": "ISO 26433:2009/AWI AMD 1",
+    "docNumber": "26433",
     "docTitle": "Digital cinema (D-cinema) — XML data types — Amendment 1",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -6557,6 +6889,7 @@
   {
     "docId": "ISO.2721.2013",
     "docLabel": "ISO 2721:2013",
+    "docNumber": "2721",
     "docTitle": "Photography — Film-based cameras — Automatic controls of exposure",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/62742.html",
@@ -6570,6 +6903,7 @@
   {
     "docId": "ISO.2906.2002",
     "docLabel": "ISO 2906:2002",
+    "docNumber": "2906",
     "docTitle": "Cinematography — Image area produced by camera aperture on 35 mm motion-picture film — Position and dimensions",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -6584,6 +6918,7 @@
   {
     "docId": "ISO.2907.2002",
     "docLabel": "ISO 2907:2002",
+    "docNumber": "2907",
     "docTitle": "Cinematography — Maximum projectable image area on 35 mm motion-picture film — Position and dimensions",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -6598,6 +6933,8 @@
   {
     "docId": "ISO.3166-1.1997",
     "docLabel": "ISO 3166-1:1997",
+    "docNumber": "3166",
+    "docPart": "1",
     "docTitle": "Codes for the representation of names of countries and their subdivisions — Part 1: Country codes",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/24591.html",
@@ -6615,6 +6952,8 @@
   {
     "docId": "ISO.3166-1.2006",
     "docLabel": "ISO 3166-1:2006",
+    "docNumber": "3166",
+    "docPart": "1",
     "docTitle": "Codes for the representation of names of countries and their subdivisions — Part 1: Country codes",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/39719.html",
@@ -6636,6 +6975,8 @@
   {
     "docId": "ISO.3166-1.2006cor1.2007",
     "docLabel": "ISO 3166-1:2006/COR 1:2007",
+    "docNumber": "3166",
+    "docPart": "1",
     "docTitle": "Codes for the representation of names of countries and their subdivisions — Part 1: Country codes — Technical Corrigendum 1",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/46123.html",
@@ -6653,6 +6994,8 @@
   {
     "docId": "ISO.3166-1.2013",
     "docLabel": "ISO 3166-1:2013",
+    "docNumber": "3166",
+    "docPart": "1",
     "docTitle": "Codes for the representation of names of countries and their subdivisions — Part 1: Country codes",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/63545.html",
@@ -6665,6 +7008,7 @@
   {
     "docId": "ISO.3166.1993",
     "docLabel": "ISO 3166:1993(E)",
+    "docNumber": "3166",
     "docTitle": "Codes for the representation of names of countries",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/22748.html",
@@ -6682,6 +7026,8 @@
   {
     "docId": "ISO.3382-1.2009",
     "docLabel": "ISO 3382-1:2009",
+    "docNumber": "3382",
+    "docPart": "1",
     "docTitle": "Acoustics — Measurement of room acoustic parameters — Part 1: Performance spaces",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/40979.html",
@@ -6694,6 +7040,8 @@
   {
     "docId": "ISO.3382-3.2012",
     "docLabel": "ISO 3382-3:2012",
+    "docNumber": "3382",
+    "docPart": "3",
     "docTitle": "Acoustics — Measurement of room acoustic parameters — Part 3: Open plan offices",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/46520.html",
@@ -6711,6 +7059,8 @@
   {
     "docId": "ISO.3382-3.2022",
     "docLabel": "ISO 3382-3:2022",
+    "docNumber": "3382",
+    "docPart": "3",
     "docTitle": "Acoustics — Measurement of room acoustic parameters — Part 3: Open plan offices",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/77437.html",
@@ -6723,6 +7073,7 @@
   {
     "docId": "ISO.3741.2010",
     "docLabel": "ISO 3741:2010",
+    "docNumber": "3741",
     "docTitle": "Acoustics — Determination of sound power levels and sound energy levels of noise sources using sound pressure — Precision methods for reverberation test rooms",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/52053.html",
@@ -6735,6 +7086,8 @@
   {
     "docId": "ISO.3743-1.2010",
     "docLabel": "ISO 3743-1:2010",
+    "docNumber": "3743",
+    "docPart": "1",
     "docTitle": "Acoustics — Determination of sound power levels and sound energy levels of noise sources using sound pressure — Engineering methods for small movable sources in reverberant fields — Part 1: Comparison method for a hard-walled test room",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/52054.html",
@@ -6747,6 +7100,8 @@
   {
     "docId": "ISO.3743-2.1994",
     "docLabel": "ISO 3743-2:1994",
+    "docNumber": "3743",
+    "docPart": "2",
     "docTitle": "Acoustics — Determination of sound power levels of noise sources using sound pressure — Engineering methods for small, movable sources in reverberant fields — Part 2: Methods for special reverberation test rooms",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/21753.html",
@@ -6763,6 +7118,8 @@
   {
     "docId": "ISO.3743-2.2018",
     "docLabel": "ISO 3743-2:2018",
+    "docNumber": "3743",
+    "docPart": "2",
     "docTitle": "Acoustics — Determination of sound power levels of noise sources using sound pressure — Engineering methods for small, movable sources in reverberant fields — Part 2: Methods for special reverberation test rooms",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/69600.html",
@@ -6775,6 +7132,7 @@
   {
     "docId": "ISO.3744.2010",
     "docLabel": "ISO 3744:2010",
+    "docNumber": "3744",
     "docTitle": "Acoustics — Determination of sound power levels and sound energy levels of noise sources using sound pressure — Engineering methods for an essentially free field over a reflecting plane",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/52055.html",
@@ -6787,6 +7145,7 @@
   {
     "docId": "ISO.3745.2003",
     "docLabel": "ISO 3745:2003",
+    "docNumber": "3745",
     "docTitle": "Acoustics — Determination of sound power levels of noise sources using sound pressure — Precision methods for anechoic and hemi-anechoic rooms",
     "docType": "Standard",
     "href": "https://www.iso.org/cms/%20render/live/en/sites/isoorg/contents/data/standard/02/17/21750.html?browse=tc",
@@ -6803,6 +7162,7 @@
   {
     "docId": "ISO.3745.2012",
     "docLabel": "ISO 3745:2012",
+    "docNumber": "3745",
     "docTitle": "Acoustics — Determination of sound power levels of noise sources using sound pressure — Precision methods for anechoic and hemi-anechoic rooms",
     "docType": "Standard",
     "href": "https://www.iso.org/cms/%20render/live/en/sites/isoorg/contents/data/standard/04/53/45362.html",
@@ -6815,6 +7175,7 @@
   {
     "docId": "ISO.3746.2010",
     "docLabel": "ISO 3746:2010",
+    "docNumber": "3746",
     "docTitle": "Acoustics — Determination of sound power levels and sound energy levels of noise sources using sound pressure — Survey method using an enveloping measurement surface over a reflecting plane",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/52056.html",
@@ -6827,6 +7188,8 @@
   {
     "docId": "ISO.5-2.1991",
     "docLabel": "ISO 5-2:1991",
+    "docNumber": "5",
+    "docPart": "2",
     "docTitle": "Photography — Density measurements — Part 2: Geometric conditions for transmission density",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/20037.html",
@@ -6844,6 +7207,8 @@
   {
     "docId": "ISO.5-2.2001",
     "docLabel": "ISO 5-2:2001",
+    "docNumber": "5",
+    "docPart": "2",
     "docTitle": "Photography — Density measurements — Part 2: Geometric conditions for transmission density",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/28004.html",
@@ -6861,6 +7226,8 @@
   {
     "docId": "ISO.5-2.2009",
     "docLabel": "ISO 5-2:2009",
+    "docNumber": "5",
+    "docPart": "2",
     "docTitle": "Photography and graphic technology — Density measurements — Part 2: Geometric conditions for transmittance density",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/52914.html",
@@ -6874,6 +7241,8 @@
   {
     "docId": "ISO.5-3.2009",
     "docLabel": "ISO 5-3:2009",
+    "docNumber": "5",
+    "docPart": "3",
     "docTitle": "Photography and graphic technology — Density measurements — Part 3: Spectral conditions",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/52915.html",
@@ -6887,6 +7256,7 @@
   {
     "docId": "ISO.5768.1998",
     "docLabel": "ISO 5768:1998",
+    "docNumber": "5768",
     "docTitle": "Cinematography — Image produced by camera aperture Type W on 16 mm motion-picture film — Position and dimensions",
     "docType": "Standard",
     "group": "iso-tc36-tc",
@@ -6901,6 +7271,8 @@
   {
     "docId": "ISO.639-1.2002",
     "docLabel": "ISO 639-1:2002",
+    "docNumber": "639",
+    "docPart": "1",
     "docTitle": "Codes for the representation of names of languages — Part 1: Alpha-2 code",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/22109.html",
@@ -6913,6 +7285,8 @@
   {
     "docId": "ISO.639-2.1998",
     "docLabel": "ISO 639-2:1998",
+    "docNumber": "639",
+    "docPart": "2",
     "docTitle": "Codes for the representation of names of languages — Part 2: Alpha-3 code",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/4767.html",
@@ -6925,6 +7299,7 @@
   {
     "docId": "ISO.646.1991",
     "docLabel": "ISO 646:1991",
+    "docNumber": "646",
     "docTitle": "Information technology — ISO 7-bit coded character set for information interchange",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/4777.html",
@@ -6937,6 +7312,7 @@
   {
     "docId": "ISO.7064.2003",
     "docLabel": "ISO/IEC 7064:2003",
+    "docNumber": "7064",
     "docTitle": "Information technology — Security techniques — Check character systems",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/31531.html",
@@ -6949,6 +7325,7 @@
   {
     "docId": "ISO.7185.1990",
     "docLabel": "ISO 7185:1990",
+    "docNumber": "7185",
     "docTitle": "Information technology — Programming languages — Pascal",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/13802.html",
@@ -6961,6 +7338,7 @@
   {
     "docId": "ISO.7589.2002",
     "docLabel": "ISO 7589:2002",
+    "docNumber": "7589",
     "docTitle": "Photography — Illuminants for sensitometry — Specifications for daylight, incandescent tungsten and printer",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/33979.html",
@@ -6973,6 +7351,8 @@
   {
     "docId": "ISO.80000-1.2022",
     "docLabel": "ISO 80000-1:2022",
+    "docNumber": "80000",
+    "docPart": "1",
     "docTitle": "Quantities and units — Part 1: General",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/76921.html",
@@ -6985,6 +7365,8 @@
   {
     "docId": "ISO.80000-10.2019",
     "docLabel": "ISO 80000-10:2019",
+    "docNumber": "80000",
+    "docPart": "10",
     "docTitle": "Quantities and units — Part 10: Atomic and nuclear physics",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/64980.html",
@@ -6997,6 +7379,8 @@
   {
     "docId": "ISO.80000-11.2019",
     "docLabel": "ISO 80000-11:2019",
+    "docNumber": "80000",
+    "docPart": "11",
     "docTitle": "Quantities and units — Part 11: Characteristic numbers",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/64982.html",
@@ -7009,6 +7393,8 @@
   {
     "docId": "ISO.80000-12.2019",
     "docLabel": "ISO 80000-12:2019",
+    "docNumber": "80000",
+    "docPart": "12",
     "docTitle": "Quantities and units — Part 12: Condensed matter physics",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/63480.html",
@@ -7021,6 +7407,8 @@
   {
     "docId": "ISO.80000-13.2008",
     "docLabel": "ISO 80000-13:2008",
+    "docNumber": "80000",
+    "docPart": "13",
     "docTitle": "Quantities and units — Part 13: Information science and technology",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/31898.html",
@@ -7033,6 +7421,8 @@
   {
     "docId": "ISO.80000-2.2019",
     "docLabel": "ISO 80000-2:2019",
+    "docNumber": "80000",
+    "docPart": "2",
     "docTitle": "Quantities and units — Part 2: Mathematics",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/64973.html",
@@ -7045,6 +7435,8 @@
   {
     "docId": "ISO.80000-3.2019",
     "docLabel": "ISO 80000-3:2019",
+    "docNumber": "80000",
+    "docPart": "3",
     "docTitle": "Quantities and units — Part 3: Space and time",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/64974.html",
@@ -7057,6 +7449,8 @@
   {
     "docId": "ISO.80000-4.2019",
     "docLabel": "ISO 80000-4:2019",
+    "docNumber": "80000",
+    "docPart": "4",
     "docTitle": "Quantities and units — Part 4: Mechanics",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/64975.html",
@@ -7069,6 +7463,8 @@
   {
     "docId": "ISO.80000-5.2019",
     "docLabel": "ISO 80000-5:2019",
+    "docNumber": "80000",
+    "docPart": "5",
     "docTitle": "Quantities and units — Part 5: Thermodynamics",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/64976.html",
@@ -7081,6 +7477,8 @@
   {
     "docId": "ISO.80000-6.2022",
     "docLabel": "ISO 80000-6:2022",
+    "docNumber": "80000",
+    "docPart": "6",
     "docTitle": "Quantities and units — Part 6: Electromagnetism",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/77846.html",
@@ -7093,6 +7491,8 @@
   {
     "docId": "ISO.80000-7.2019",
     "docLabel": "ISO 80000-7:2019",
+    "docNumber": "80000",
+    "docPart": "7",
     "docTitle": "Quantities and units — Part 7: Light and radiation",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/64977.html",
@@ -7105,6 +7505,8 @@
   {
     "docId": "ISO.80000-8.2020",
     "docLabel": "ISO 80000-8:2020",
+    "docNumber": "80000",
+    "docPart": "8",
     "docTitle": "Quantities and units — Part 8: Acoustics",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/64978.html",
@@ -7117,6 +7519,8 @@
   {
     "docId": "ISO.80000-9.2019",
     "docLabel": "ISO 80000-9:2019",
+    "docNumber": "80000",
+    "docPart": "9",
     "docTitle": "Quantities and units — Part 9: Physical chemistry and molecular physics",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/64979.html",
@@ -7129,6 +7533,8 @@
   {
     "docId": "ISO.8601-1.2019",
     "docLabel": "ISO 8601-1:2019",
+    "docNumber": "8601",
+    "docPart": "1",
     "docTitle": "Date and time — Representations for information interchange — Part 1: Basic rules",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/70907.html",
@@ -7141,6 +7547,8 @@
   {
     "docId": "ISO.8601-2.2019",
     "docLabel": "ISO 8601-2:2019",
+    "docNumber": "8601",
+    "docPart": "2",
     "docTitle": "Date and time — Representations for information interchange — Part 2: Extensions",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/70908.html",
@@ -7153,6 +7561,7 @@
   {
     "docId": "ISO.8601.2004",
     "docLabel": "ISO 8601:2004",
+    "docNumber": "8601",
     "docTitle": "Data elements and interchange formats — Information interchange — Representation of dates and times",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/40874.html",
@@ -7171,6 +7580,8 @@
   {
     "docId": "ISO.8824-1.2002",
     "docLabel": "ISO 8824-1:2002 (ITU-T X.680)",
+    "docNumber": "8824",
+    "docPart": "1",
     "docTitle": "Information technology — Abstract Syntax Notation One (ASN.1): Specification of basic notation — Part 1",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/35684.html",
@@ -7188,6 +7599,8 @@
   {
     "docId": "ISO.8824-1.2008",
     "docLabel": "ISO 8824-1:2008",
+    "docNumber": "8824",
+    "docPart": "1",
     "docTitle": "Information technology — Abstract Syntax Notation One (ASN.1): Specification of basic notation — Part 1:",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/54012.html",
@@ -7205,6 +7618,8 @@
   {
     "docId": "ISO.8824-1.2015",
     "docLabel": "ISO 8824-1:2015",
+    "docNumber": "8824",
+    "docPart": "1",
     "docTitle": "Information technology — Abstract Syntax Notation One (ASN.1): Specification of basic notation — Part 1",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/68350.html",
@@ -7224,6 +7639,8 @@
   {
     "docId": "ISO.8824-1.2015amd1.2019",
     "docLabel": "ISO 8824-1:2015/AMD 1:2019",
+    "docNumber": "8824",
+    "docPart": "1",
     "docTitle": "Information technology — Abstract Syntax Notation One (ASN.1): Specification of basic notation — Part 1: — Amendment 1: Relaxing imports clause to allow importation of definitions from new versions of a given module",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/76502.html",
@@ -7236,6 +7653,8 @@
   {
     "docId": "ISO.8824-1.2015cor1.2017",
     "docLabel": "ISO 8824-1:2015/COR 1:2017",
+    "docNumber": "8824",
+    "docPart": "1",
     "docTitle": "Information technology — Abstract Syntax Notation One (ASN.1): Specification of basic notation — Part 1: — Technical Corrigendum 1",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/73293.html",
@@ -7248,6 +7667,8 @@
   {
     "docId": "ISO.8824-1.2015cor2.2018",
     "docLabel": "ISO 8824-1:2015/COR 2:2018",
+    "docNumber": "8824",
+    "docPart": "1",
     "docTitle": "Information technology — Abstract Syntax Notation One (ASN.1): Specification of basic notation — Part 1: — Technical Corrigendum 2",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/76503.html",
@@ -7260,6 +7681,8 @@
   {
     "docId": "ISO.8824-1.2015cor3.2018",
     "docLabel": "ISO 8824-1:2015/COR 3:2018",
+    "docNumber": "8824",
+    "docPart": "1",
     "docTitle": "Information technology — Abstract Syntax Notation One (ASN.1): Specification of basic notation — Part 1: — Technical Corrigendum 3",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/76759.html",
@@ -7272,6 +7695,8 @@
   {
     "docId": "ISO.8825-1.1998",
     "docLabel": "ISO 8825-1:1998",
+    "docNumber": "8825",
+    "docPart": "1",
     "docTitle": "Information technology — ASN.1 encoding rules: Specification of Basic Encoding Rules (BER), Canonical Encoding Rules (CER) and Distinguished Encoding Rules (DER) — Part 1",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/32306.html",
@@ -7289,6 +7714,8 @@
   {
     "docId": "ISO.8825-1.2002",
     "docLabel": "ISO 8825-1:2002",
+    "docNumber": "8825",
+    "docPart": "1",
     "docTitle": "Information technology — ASN.1 encoding rules: Specification of Basic Encoding Rules (BER), Canonical Encoding Rules (CER) and Distinguished Encoding Rules (DER) — Part 1",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/35688.html",
@@ -7306,6 +7733,8 @@
   {
     "docId": "ISO.8825-1.2008",
     "docLabel": "ISO 8825-1:2008",
+    "docNumber": "8825",
+    "docPart": "1",
     "docTitle": "Information technology — ASN.1 encoding rules: Specification of Basic Encoding Rules (BER), Canonical Encoding Rules (CER) and Distinguished Encoding Rules (DER) — Part 1",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/54011.html",
@@ -7323,6 +7752,8 @@
   {
     "docId": "ISO.8825-1.2015",
     "docLabel": "ISO 8825-1:2015",
+    "docNumber": "8825",
+    "docPart": "1",
     "docTitle": "Information technology — ASN.1 encoding rules: Specification of Basic Encoding Rules (BER), Canonical Encoding Rules (CER) and Distinguished Encoding Rules (DER) — Part 1",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/68345.html",
@@ -7335,6 +7766,8 @@
   {
     "docId": "ISO.8859-1.1998",
     "docLabel": "ISO/IEC 8859-1:1998",
+    "docNumber": "8859",
+    "docPart": "1",
     "docTitle": "Information technology — 8-bit single-byte coded graphic character sets — Part 1: Latin alphabet No. 1",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/28245.html",
@@ -7347,6 +7780,8 @@
   {
     "docId": "ISO.8860-1.1987",
     "docLabel": "ISO 8860-1:1987",
+    "docNumber": "8860",
+    "docPart": "1",
     "docTitle": "Information processing — Data interchange on 90 mm (3.5 in) flexible disk cartridges using modified frequency modulation recording at 7 958 ftprad on 80 tracks on each side — Part 1: Dimensional, physical and magnetic characteristics",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/16348.html",
@@ -7364,6 +7799,8 @@
   {
     "docId": "ISO.8860-1.1987cor1.1990",
     "docLabel": "ISO 8860-1:1987/Cor 1:1990",
+    "docNumber": "8860",
+    "docPart": "1",
     "docTitle": "Information processing — Data interchange on 90 mm (3.5 in) flexible disk cartridges using modified frequency modulation recording at 7 958 ftprad on 80 tracks on each side — Part 1: Dimensional, physical and magnetic characteristics — Technical Corrigendum 1",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/16349.html",
@@ -7376,6 +7813,8 @@
   {
     "docId": "ISO.8860-2.1987",
     "docLabel": "ISO 8860-2:1987",
+    "docNumber": "8860",
+    "docPart": "2",
     "docTitle": "Information processing — Data interchange on 90 mm (3.5 in) flexible disk cartridges using modified frequency modulation recording at 7 958 ftprad on 80 tracks on each side — Part 2: Track format",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/16350.html",
@@ -7393,6 +7832,8 @@
   {
     "docId": "ISO.8860-2.1987cor1.1990",
     "docLabel": "ISO 8860-2:1987/Cor 1:1990",
+    "docNumber": "8860",
+    "docPart": "2",
     "docTitle": "Information processing — Data interchange on 90 mm (3.5 in) flexible disk cartridges using modified frequency modulation recording at 7 958 ftprad on 80 tracks on each side — Part 1: Dimensional, physical and magnetic characteristics — Technical Corrigendum 1",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/16351.html",
@@ -7405,6 +7846,7 @@
   {
     "docId": "ISO.9293.1987",
     "docLabel": "ISO 9293:1987",
+    "docNumber": "9293",
     "docTitle": "Information processing — Volume and file structure of flexible disk cartridges for information interchange",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/16948.html",
@@ -7422,6 +7864,7 @@
   {
     "docId": "ISO.9293.1994",
     "docLabel": "ISO/IEC 9293:1994",
+    "docNumber": "9293",
     "docTitle": "Information processing — Volume and file structure of flexible disk cartridges for information interchange",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/21273.html",
@@ -7435,6 +7878,7 @@
   {
     "docId": "ISO.9899.1999",
     "docLabel": "ISO 9899: 1999",
+    "docNumber": "9899",
     "docTitle": "Programming languages — C",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/29237.html",
@@ -7452,6 +7896,7 @@
   {
     "docId": "ISO.9899.2011",
     "docLabel": "ISO 9899: 2011",
+    "docNumber": "9899",
     "docTitle": "Information technology — Programming languages — C",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/57853.html",
@@ -7469,6 +7914,7 @@
   {
     "docId": "ISO.9899.2018",
     "docLabel": "ISO 9899: 2018",
+    "docNumber": "9899",
     "docTitle": "Information technology — Programming languages — C",
     "docType": "Standard",
     "href": "https://www.iso.org/standard/74528.html",
@@ -7481,6 +7927,7 @@
   {
     "docId": "ISO.Dir-P2.2011",
     "docLabel": "ISO/IEC Directives, Part 2",
+    "docPart": "2",
     "docTitle": "Principles and rules for the structure and drafting of ISO and IEC documents (Edition 6.0, 2011-04)",
     "docType": "Directive",
     "publicationDate": "2011-04-01",
@@ -7496,6 +7943,7 @@
   {
     "docId": "ISO.Dir-P2.2018",
     "docLabel": "ISO/IEC Directives, Part 2",
+    "docPart": "2",
     "docTitle": "Principles and rules for the structure and drafting of ISO and IEC documents (Eighth edition, 2018)",
     "docType": "Directive",
     "href": "https://isotc.iso.org/livelink/livelink/fetch/2000/2122/4230450/4230456/4230520/ISO_IEC_Directives%2C_Part_2%2C_Principles_and_rules_for_the_structure_and_drafting_of_ISO_and_IEC_documents_-_2018_%288th_edition%29_-_PDF.pdf?nodeid=19685788&vernum=-2",
@@ -7512,6 +7960,7 @@
   {
     "docId": "ISO.Dir-P2.2021",
     "docLabel": "ISO/IEC Directives, Part 2",
+    "docPart": "2",
     "docTitle": "Principles and rules for the structure and drafting of ISO and IEC documents (Ninth edition, 2021)",
     "docType": "Directive",
     "href": "https://www.iso.org/sites/directives/current/part2/index.xhtml",
@@ -9428,6 +9877,7 @@
   {
     "docId": "NFPA232.1995",
     "docLabel": "NFPA 232-1995",
+    "docNumber": "232",
     "docTitle": "NFPA 232: Standard For The Protection Of Records, 1995 Edition",
     "docType": "Standard",
     "href": "https://webstore.ansi.org/standards/nfpa/nfpa2321995",
@@ -9443,6 +9893,7 @@
   {
     "docId": "NFPA232.2022",
     "docLabel": "NFPA 232-2022",
+    "docNumber": "232",
     "docTitle": "Standard For The Protection Of Records",
     "docType": "Standard",
     "href": "https://webstore.ansi.org/standards/nfpa/nfpa2322022",
@@ -9454,6 +9905,7 @@
   {
     "docId": "NFPA40.1997",
     "docLabel": "NFPA 40-1997",
+    "docNumber": "40",
     "docTitle": "Standard for the Storage and Handling of Cellulose Nitrate Film",
     "docType": "Standard",
     "publisher": "NFPA",
@@ -9468,6 +9920,7 @@
   {
     "docId": "NFPA40.2001",
     "docLabel": "NFPA 40:2001",
+    "docNumber": "40",
     "docTitle": "Standard for the Storage and Handling of Cellulose Nitrate Film",
     "docType": "Standard",
     "href": "https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=40&year=2001",
@@ -9483,6 +9936,7 @@
   {
     "docId": "NFPA40.2022",
     "docLabel": "NFPA 40:2022",
+    "docNumber": "40",
     "docTitle": "Standard for the Storage and Handling of Cellulose Nitrate Film",
     "docType": "Standard",
     "href": "https://www.nfpa.org/codes-and-standards/all-codes-and-standards/list-of-codes-and-standards/detail?code=40",
@@ -9494,6 +9948,7 @@
   {
     "docId": "NFPA90A.1993",
     "docLabel": "NFPA 90A-19993",
+    "docNumber": "90A",
     "docTitle": "Standard For The Installation Of Air Conditioning And Ventilating Systems, 1999 Edition",
     "docType": "Standard",
     "publisher": "NFPA",
@@ -9508,6 +9963,7 @@
   {
     "docId": "NFPA90A.1999",
     "docLabel": "NFPA 90A-1999",
+    "docNumber": "90A",
     "docTitle": "Standard For The Installation Of Air Conditioning And Ventilating Systems, 1999 Edition",
     "docType": "Standard",
     "href": "https://webstore.ansi.org/standards/nfpa/nfpa90a1999",
@@ -9523,6 +9979,7 @@
   {
     "docId": "NFPA90A.2021",
     "docLabel": "NFPA 90A-2021",
+    "docNumber": "90A",
     "docTitle": "Standard For The Installation Of Air-Conditioning And Ventilating Systems",
     "docType": "Standard",
     "href": "https://webstore.ansi.org/standards/nfpa/nfpa90a2021",
@@ -9534,6 +9991,7 @@
   {
     "docId": "NIST.FIPS.140-1.1994",
     "docLabel": "FIPS 140-1",
+    "docNumber": "140",
     "docTitle": "Security Requirements for Cryptographic Modules",
     "docType": "Standard",
     "doi": "10.6028/NIST.FIPS.140-1",
@@ -9551,6 +10009,7 @@
   {
     "docId": "NIST.FIPS.140-2.2001",
     "docLabel": "FIPS 140-2",
+    "docNumber": "140",
     "docTitle": "Security Requirements for Cryptographic Modules",
     "docType": "Standard",
     "doi": "10.6028/NIST.FIPS.140-2",
@@ -9568,6 +10027,7 @@
   {
     "docId": "NIST.FIPS.140-3.2019",
     "docLabel": "FIPS 140-3",
+    "docNumber": "140",
     "docTitle": "Security Requirements for Cryptographic Modules",
     "docType": "Standard",
     "doi": "10.6028/NIST.FIPS.140-3",
@@ -9581,6 +10041,7 @@
   {
     "docId": "NIST.FIPS.180-1.1995",
     "docLabel": "FIPS 180-1",
+    "docNumber": "180",
     "docTitle": "Secure Hash Standard (SHS) - SHA1",
     "docType": "Standard",
     "doi": "10.6028/NIST.FIPS.180-1",
@@ -9599,6 +10060,7 @@
   {
     "docId": "NIST.FIPS.180-2.2002",
     "docLabel": "FIPS 180-2",
+    "docNumber": "180",
     "docTitle": "Secure Hash Standard (SHS)",
     "docType": "Standard",
     "href": "https://csrc.nist.gov/CSRC/media/Publications/fips/180/2/archive/2002-08-01/documents/fips180-2.pdf",
@@ -9616,6 +10078,7 @@
   {
     "docId": "NIST.FIPS.180-3.2008",
     "docLabel": "FIPS 180-3",
+    "docNumber": "180",
     "docTitle": "Secure Hash Standard (SHS)",
     "docType": "Standard",
     "href": "https://csrc.nist.gov/CSRC/media/Publications/fips/180/3/archive/2008-10-31/documents/fips180-3_final.pdf",
@@ -9633,6 +10096,7 @@
   {
     "docId": "NIST.FIPS.180-4.2015",
     "docLabel": "FIPS 180-4",
+    "docNumber": "180",
     "docTitle": "Secure Hash Standard (SHS)",
     "docType": "Standard",
     "doi": "10.6028/NIST.FIPS.180-4",
@@ -9646,6 +10110,7 @@
   {
     "docId": "NIST.FIPS.186-2.2001",
     "docLabel": "FIPS PUB 186-2",
+    "docNumber": "186",
     "docTitle": "Digital Signature Standard (DSS)",
     "docType": "Standard",
     "href": "https://csrc.nist.gov/CSRC/media/Publications/fips/186/2/archive/2001-10-05/documents/fips186-2-change1.pdf",
@@ -9663,6 +10128,7 @@
   {
     "docId": "NIST.FIPS.186-3.2009",
     "docLabel": "FIPS 186-3",
+    "docNumber": "186",
     "docTitle": "Digital Signature Standard (DSS)",
     "docType": "Standard",
     "href": "https://csrc.nist.gov/CSRC/media/Publications/fips/186/3/archive/2009-06-25/documents/fips_186-3.pdf",
@@ -9680,6 +10146,7 @@
   {
     "docId": "NIST.FIPS.186-4.2013",
     "docLabel": "FIPS 186-4",
+    "docNumber": "186",
     "docTitle": "Digital Signature Standard (DSS)",
     "docType": "Standard",
     "doi": "10.6028/NIST.FIPS.186-4",
@@ -9693,6 +10160,7 @@
   {
     "docId": "NIST.FIPS.197.2001",
     "docLabel": "FIPS 197",
+    "docNumber": "197",
     "docTitle": "Advanced Encryption Standard (AES)",
     "docType": "Standard",
     "doi": "10.6028/NIST.FIPS.197",
@@ -9706,6 +10174,7 @@
   {
     "docId": "NIST.FIPS.198-1.2008",
     "docLabel": "FIPS 198-1",
+    "docNumber": "198",
     "docTitle": "The Keyed-Hash Message Authentication Code (HMAC)",
     "docType": "Standard",
     "doi": "10.6028/NIST.FIPS.198-1",
@@ -9719,6 +10188,7 @@
   {
     "docId": "NIST.FIPS.198.2002",
     "docLabel": "FIPS 198",
+    "docNumber": "198",
     "docTitle": "The Keyed-Hash Message Authentication Code (HMAC)",
     "docType": "Standard",
     "href": "https://csrc.nist.gov/CSRC/media/Publications/fips/198/archive/2002-03-06/documents/fips-198a.pdf",
@@ -9736,6 +10206,7 @@
   {
     "docId": "NIST.FIPS.46-3.1999",
     "docLabel": "FIPS 46-3",
+    "docNumber": "46",
     "docTitle": "Data Encryption Standard (DES)",
     "docType": "Standard",
     "href": "https://csrc.nist.gov/CSRC/media/Publications/fips/46/3/archive/1999-10-25/documents/fips46-3.pdf",
@@ -9761,6 +10232,7 @@
   {
     "docId": "NIST.SP.800-38A.2001",
     "docLabel": "NIST SP 800-38A",
+    "docNumber": "800-38A",
     "docTitle": "Recommendation for Block Cipher Modes of Operation: Methods and Techniques",
     "docType": "Recommendation",
     "doi": "10.6028/NIST.SP.800-38A",
@@ -9778,6 +10250,7 @@
   {
     "docId": "NIST.SP.800-38A.2001ad1.2010",
     "docLabel": "NIST SP 800-38A Addendum",
+    "docNumber": "800-38A",
     "docTitle": "Recommendation for Block Cipher Modes of Operation: Three Variants of Ciphertext Stealing for CBC Mode",
     "docType": "Recommendation",
     "doi": "NIST.SP.800-38A-Add",
@@ -9791,6 +10264,8 @@
   {
     "docId": "NIST.SP.800-57p1.2007",
     "docLabel": "NIST SP 800-57 Part 1 Revised",
+    "docNumber": "800-57",
+    "docPart": "1",
     "docTitle": "Recommendation for Key Management, Part 1: General (Revised)",
     "docType": "Recommendation",
     "doi": "10.6028/NIST.SP.800-57p1r2007",
@@ -9809,6 +10284,8 @@
   {
     "docId": "NIST.SP.800-57p1.2020",
     "docLabel": "NIST SP 800-57 Part 1 Rev. 5",
+    "docNumber": "800-57",
+    "docPart": "1",
     "docTitle": "Recommendation for Key Management: Part 1 – General",
     "docType": "Recommendation",
     "doi": "10.6028/NIST.SP.800-57pt1r5",
@@ -9822,6 +10299,8 @@
   {
     "docId": "NIST.SP.800-57p2.2005",
     "docLabel": "SP 800-57 Part 2",
+    "docNumber": "800-57",
+    "docPart": "2",
     "docTitle": "Recommendation for Key Management, Part 2: Best Practices for Key Management Organization",
     "docType": "Recommendation",
     "doi": "10.6028/NIST.SP.800-57p2",
@@ -9840,6 +10319,8 @@
   {
     "docId": "NIST.SP.800-57p2.2019",
     "docLabel": "SP 800-57 Part 2 Rev. 1",
+    "docNumber": "800-57",
+    "docPart": "2",
     "docTitle": "Recommendation for Key Management: Part 2 – Best Practices for Key Management Organizations",
     "docType": "Recommendation",
     "doi": "10.6028/NIST.SP.800-57pt2r1",
@@ -9853,6 +10334,8 @@
   {
     "docId": "NIST.SP.800-57p3.2000",
     "docLabel": "SP 800-57 Part 3",
+    "docNumber": "800-57",
+    "docPart": "3",
     "docTitle": "Recommendation for Key Management, Part 3: Application-Specific Key Management Guidance",
     "docType": "Recommendation",
     "doi": "10.6028/NIST.SP.800-57p3",
@@ -9863,14 +10346,16 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "NIST.SP.800-57pt3.2015"
+        "NIST.SP.800-57p3.2015"
       ],
       "withdrawn": true
     }
   },
   {
-    "docId": "NIST.SP.800-57pt3.2015",
+    "docId": "NIST.SP.800-57p3.2015",
     "docLabel": "SP 800-57 Part 3 Rev. 1",
+    "docNumber": "800-57",
+    "docPart": "3",
     "docTitle": "Recommendation for Key Management, Part 3: Application-Specific Key Management Guidance",
     "docType": "Recommendation",
     "doi": "10.6028/NIST.SP.800-57pt3r1",
@@ -10023,6 +10508,7 @@
   {
     "docId": "R-REC-BR.1352-1.2002",
     "docLabel": "BR.1352-1: (2002)",
+    "docNumber": "1352",
     "docTitle": "File format for the exchange of audio programme materials with metadata on information technology media",
     "docType": "Recommendation",
     "href": "https://www.itu.int/dms_pubrec/itu-r/rec/br/R-REC-BR.1352-1-200112-S!!PDF-E.pdf",
@@ -10036,6 +10522,7 @@
   {
     "docId": "R-REC-BR.1352-2.2002",
     "docLabel": "BR.1352-2:2002",
+    "docNumber": "1352",
     "docTitle": "File format for the exchange of audio programme materials with metadata on information technology media",
     "docType": "Recommendation",
     "href": "https://www.itu.int/dms_pubrec/itu-r/rec/br/R-REC-BR.1352-2-200206-S!!PDF-E.pdf",
@@ -10049,6 +10536,7 @@
   {
     "docId": "R-REC-BR.1384-2.201103",
     "docLabel": "BR.1384-2 (03/2011)",
+    "docNumber": "1384",
     "docTitle": "Parameters for international exchange of multi-channel sound recordings with or without accompanying picture",
     "docType": "Recommendation",
     "href": "https://www.itu.int/dms_pubrec/itu-r/rec/br/R-REC-BR.1384-2-201103-W!!PDF-E.pdf",
@@ -10062,6 +10550,7 @@
   {
     "docId": "R-REC-BS.1196-a2.1995",
     "docLabel": "BS.1196 (1995) Annex 2",
+    "docNumber": "1196",
     "docTitle": "Audio coding for digital terrestrial television broadcasting",
     "docType": "Recommendation",
     "href": "https://www.itu.int/dms_pubrec/itu-r/rec/bs/R-REC-BS.1196-0-199510-S!!PDF-E.pdf",
@@ -10075,6 +10564,7 @@
   {
     "docId": "R-REC-BS.1726-0.200504",
     "docLabel": "BS.1726-0 (04/2005)",
+    "docNumber": "1726",
     "docTitle": "Signal level of digital audio accompanying television in international programme exchange",
     "docType": "Recommendation",
     "href": "https://www.itu.int/dms_pubrec/itu-r/rec/bs/R-REC-BS.1726-0-200504-I!!MSW-E.doc",
@@ -10087,6 +10577,7 @@
   {
     "docId": "R-REC-BS.1770-3.201208",
     "docLabel": "BS.1770-3 (08/2012)",
+    "docNumber": "1770",
     "docTitle": "Algorithms to measure audio programme loudness and true-peak audio level",
     "docType": "Recommendation",
     "href": "https://www.itu.int/dms_pubrec/itu-r/rec/bs/R-REC-BS.1770-3-201208-S!!MSW-E.docx",
@@ -10103,6 +10594,7 @@
   {
     "docId": "R-REC-BS.1770-4.201510",
     "docLabel": "BS.1770-4 (10/2015)",
+    "docNumber": "1770",
     "docTitle": "Algorithms to measure audio programme loudness and true-peak audio level",
     "docType": "Recommendation",
     "href": "https://www.itu.int/dms_pubrec/itu-r/rec/bs/R-REC-BS.1770-4-201510-I!!MSW-E.docx",
@@ -10115,6 +10607,7 @@
   {
     "docId": "R-REC-BS.2051-2.201807",
     "docLabel": "BS.2051-2 (07/2018)",
+    "docNumber": "2051",
     "docTitle": "Advanced sound system for programme production",
     "docType": "Recommendation",
     "href": "https://www.itu.int/dms_pubrec/itu-r/rec/bs/R-REC-BS.2051-2-201807-S!!PDF-E.pdf",
@@ -10131,6 +10624,7 @@
   {
     "docId": "R-REC-BS.2051-3.202205",
     "docLabel": "BS.2051-3 (05/2022)",
+    "docNumber": "2051",
     "docTitle": "Advanced sound system for programme production",
     "docType": "Recommendation",
     "href": "https://www.itu.int/dms_pubrec/itu-r/rec/bs/R-REC-BS.2051-3-202205-I!!PDF-E.pdf",
@@ -10143,6 +10637,7 @@
   {
     "docId": "R-REC-BT.2020-2.201510",
     "docLabel": "BT.2020-2 (10/2015)",
+    "docNumber": "2020",
     "docTitle": "Parameter values for ultra-high definition television systems for production and international programme exchange",
     "docType": "Recommendation",
     "href": "https://www.itu.int/rec/R-REC-BT.2020-2-201510-I/en",
@@ -10155,6 +10650,7 @@
   {
     "docId": "R-REC-BT.2035.201307",
     "docLabel": "BT.2035 (07/2013)",
+    "docNumber": "2035",
     "docTitle": "A reference viewing environment for evaluation of HDTV program material or completed programmes",
     "docType": "Recommendation",
     "href": "https://www.itu.int/rec/R-REC-BT.2035-0-201307-I",
@@ -10167,6 +10663,7 @@
   {
     "docId": "R-REC-BT.2100-1.201706",
     "docLabel": "BT.2100-1 (06/2017)",
+    "docNumber": "2100",
     "docTitle": "Image parameter values for high dynamic range television for use in production and international programme exchange",
     "docType": "Recommendation",
     "href": "https://www.itu.int/rec/R-REC-BT.2100-1-201706-S/en",
@@ -10183,6 +10680,7 @@
   {
     "docId": "R-REC-BT.2100-2.201807",
     "docLabel": "BT.2100-2 (07/2018)",
+    "docNumber": "2100",
     "docTitle": "Image parameter values for high dynamic range television for use in production and international programme exchange",
     "docType": "Recommendation",
     "href": "https://www.itu.int/rec/R-REC-BT.2100-2-201807-I/en",
@@ -10195,6 +10693,7 @@
   {
     "docId": "R-REC-BT.2390-10.202111",
     "docLabel": "BT.2390-10 (11/2021)",
+    "docNumber": "2390",
     "docTitle": "High dynamic range television for production and international programme exchange",
     "docType": "Report",
     "href": "https://www.itu.int/pub/R-REP-BT.2390-10-2021",
@@ -10207,6 +10706,7 @@
   {
     "docId": "R-REC-BT.2390-4.201804",
     "docLabel": "BT.2390-4 (04/2018)",
+    "docNumber": "2390",
     "docTitle": "High dynamic range television for production and international programme exchange",
     "docType": "Report",
     "href": "https://www.itu.int/pub/R-REP-BT.2390-4-2018",
@@ -10223,6 +10723,7 @@
   {
     "docId": "R-REC-BT.2390-8.202002",
     "docLabel": "BT.2390-8 (02/2020)",
+    "docNumber": "2390",
     "docTitle": "High dynamic range television for production and international programme exchange",
     "docType": "Report",
     "href": "https://www.itu.int/pub/R-REP-BT.2390-8-2020",
@@ -10239,6 +10740,7 @@
   {
     "docId": "R-REC-BT.470-6.199811",
     "docLabel": "BT.470-6 (11/98)",
+    "docNumber": "470",
     "docTitle": "Conventional television systems",
     "docType": "Recommendation",
     "href": "https://www.itu.int/dms_pubrec/itu-r/rec/bt/R-REC-BT.470-6-199811-S!!PDF-E.pdf",
@@ -10253,6 +10755,7 @@
     "details": "Approved but stayed in pre-publised status before being rolled up into and superseded by BT. 601-7",
     "docId": "R-REC-BT.6-270.201103",
     "docLabel": "BT.6/270(Rev1) (03/11)",
+    "docNumber": "601",
     "docTitle": "Studio encoding parameters of digital television for standard 4:3 and wide screen 16:9 aspect ratios",
     "docType": "Recommendation",
     "href": "https://www.itu.int/rec/R-REC-BT.601-7-201103-P/en",
@@ -10269,6 +10772,7 @@
   {
     "docId": "R-REC-BT.601-4.199510",
     "docLabel": "BT.601.4 (10/95)",
+    "docNumber": "601",
     "docTitle": "Studio encoding parameters of digital television for standard 4:3 and wide screen 16:9 aspect ratios",
     "docType": "Recommendation",
     "href": "https://www.itu.int/dms_pubrec/itu-r/rec/bt/R-REC-BT.601-4-199407-S!!MSW-E.doc",
@@ -10285,6 +10789,7 @@
   {
     "docId": "R-REC-BT.601-5.199510",
     "docLabel": "BT.601.5 (10/95)",
+    "docNumber": "601",
     "docTitle": "Studio encoding parameters of digital television for standard 4:3 and wide screen 16:9 aspect ratios",
     "docType": "Recommendation",
     "href": "https://www.itu.int/dms_pubrec/itu-r/rec/bt/R-REC-BT.601-5-199510-S!!PDF-E.pdf",
@@ -10301,6 +10806,7 @@
   {
     "docId": "R-REC-BT.601-6.200701",
     "docLabel": "BT.601.6 (01/07)",
+    "docNumber": "601",
     "docTitle": "Studio encoding parameters of digital television for standard 4:3 and wide screen 16:9 aspect ratios",
     "docType": "Recommendation",
     "href": "https://www.itu.int/dms_pubrec/itu-r/rec/bt/R-REC-BT.601-6-200701-S!!PDF-E.pdf",
@@ -10317,6 +10823,7 @@
   {
     "docId": "R-REC-BT.601-7.201103",
     "docLabel": "BT.601.7 (03/2011)",
+    "docNumber": "601",
     "docTitle": "Studio encoding parameters of digital television for standard 4:3 and wide screen 16:9 aspect ratios",
     "docType": "Recommendation",
     "href": "https://www.itu.int/dms_pubrec/itu-r/rec/bt/R-REC-BT.601-7-201103-I!!PDF-E.pdf",
@@ -10329,6 +10836,7 @@
   {
     "docId": "R-REC-BT.656.199802",
     "docLabel": "BT.656 (02/98)",
+    "docNumber": "656",
     "docTitle": "Interface for digital component video signals in 525-line and 625-line television systems operating at the 4:2:2 level of Recommendation ITU-R BT.601",
     "docType": "Standard",
     "href": "https://www.itu.int/rec/R-REC-BT.656/en",
@@ -10341,6 +10849,7 @@
   {
     "docId": "R-REC-BT.709-1.199311",
     "docLabel": "BT.709.1 (11/93)",
+    "docNumber": "709",
     "docTitle": "Parameter values for the HDTV standards for production and international programme exchange",
     "docType": "Recommendation",
     "href": "https://www.itu.int/dms_pubrec/itu-r/rec/bt/R-REC-BT.709-1-199311-S!!MSW-E.doc",
@@ -10357,6 +10866,7 @@
   {
     "docId": "R-REC-BT.709-2.199510",
     "docLabel": "BT.709.2 (10/95)",
+    "docNumber": "709",
     "docTitle": "Parameter values for the HDTV standards for production and international programme exchange",
     "docType": "Recommendation",
     "href": "https://www.itu.int/dms_pubrec/itu-r/rec/bt/R-REC-BT.709-2-199510-S!!MSW-E.doc",
@@ -10373,6 +10883,7 @@
   {
     "docId": "R-REC-BT.709-3.199802",
     "docLabel": "BT.709.3 (02/98)",
+    "docNumber": "709",
     "docTitle": "Parameter values for the HDTV standards for production and international programme exchange",
     "docType": "Recommendation",
     "href": "https://www.itu.int/dms_pubrec/itu-r/rec/bt/R-REC-BT.709-3-199802-S!!PDF-E.pdf",
@@ -10389,6 +10900,7 @@
   {
     "docId": "R-REC-BT.709-4.200003",
     "docLabel": "BT.709.4 (03/00)",
+    "docNumber": "709",
     "docTitle": "Parameter values for the HDTV standards for production and international programme exchange",
     "docType": "Recommendation",
     "href": "https://www.itu.int/dms_pubrec/itu-r/rec/bt/R-REC-BT.709-4-200003-S!!PDF-E.pdf",
@@ -10405,6 +10917,7 @@
   {
     "docId": "R-REC-BT.709-5.200204",
     "docLabel": "BT.709.5 (04/02)",
+    "docNumber": "709",
     "docTitle": "Parameter values for the HDTV standards for production and international programme exchange",
     "docType": "Recommendation",
     "href": "https://www.itu.int/dms_pubrec/itu-r/rec/bt/R-REC-BT.709-5-200204-S!!PDF-E.pdf",
@@ -10421,6 +10934,7 @@
   {
     "docId": "R-REC-BT.709-6.201506",
     "docLabel": "BT.709.6 (06/2015)",
+    "docNumber": "709",
     "docTitle": "Parameter values for the HDTV standards for production and international programme exchange",
     "docType": "Recommendation",
     "href": "https://www.itu.int/dms_pubrec/itu-r/rec/bt/R-REC-BT.709-6-201506-I!!PDF-E.pdf",
@@ -10560,6 +11074,18 @@
         "rfc2045",
         "rfc2046"
       ]
+    }
+  },
+  {
+    "docId": "rfc1737",
+    "docLabel": "RFC 1737",
+    "docTitle": "Functional Requirements for Uniform Resource Names",
+    "docType": "Informational",
+    "href": "https://tools.ietf.org/html/rfc1737",
+    "publicationDate": "1994-12-01",
+    "publisher": "IETF",
+    "status": {
+      "active": true
     }
   },
   {
@@ -11031,6 +11557,22 @@
     }
   },
   {
+    "docId": "rfc3406",
+    "docLabel": "RFC 3406",
+    "docTitle": "Uniform Resource Names (URN) Namespace Definition Mechanisms",
+    "docType": "Best Practice",
+    "href": "https://tools.ietf.org/html/rfc3406",
+    "publicationDate": "2002-10-01",
+    "publisher": "IETF",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "rfc8141"
+      ]
+    }
+  },
+  {
     "docId": "rfc3447",
     "docLabel": "RFC 3447",
     "docTitle": "Public-Key Cryptography Standards (PKCS) #1: RSA Cryptography Specifications Version 2.1",
@@ -11331,6 +11873,18 @@
       "supersededBy": [
         "rfc5689"
       ]
+    }
+  },
+  {
+    "docId": "rfc5119",
+    "docLabel": "RFC 5119",
+    "docTitle": "A Uniform Resource Name (URN) Namespace for the Society of Motion Picture and Television Engineers (SMPTE}",
+    "docType": "Standard",
+    "href": "https://tools.ietf.org/html/rfc5119",
+    "publicationDate": "2008-02-01",
+    "publisher": "IETF",
+    "status": {
+      "active": true
     }
   },
   {
@@ -11764,6 +12318,23 @@
     }
   },
   {
+    "docId": "rfc7950",
+    "docLabel": "RFC 7950",
+    "docTitle": "The YANG 1.1 Data Modeling Language",
+    "docType": "Standard",
+    "href": "https://tools.ietf.org/html/rfc7950",
+    "publicationDate": "2016-08-01",
+    "publisher": "IETF",
+    "status": {
+      "active": true,
+      "amended": true,
+      "amendedBy": [
+        "rfc8342",
+        "rfc8526"
+      ]
+    }
+  },
+  {
     "docId": "rfc7972",
     "docLabel": "RFC 7972",
     "docTitle": "Entertainment Identifier Registry (EIDR) URN Namespace Definition",
@@ -11824,6 +12395,18 @@
     }
   },
   {
+    "docId": "rfc8342",
+    "docLabel": "RFC 8342",
+    "docTitle": "Network Management Datastore Architecture (NMDA)",
+    "docType": "Standard",
+    "href": "https://tools.ietf.org/html/rfc8342",
+    "publicationDate": "2018-03-01",
+    "publisher": "IETF",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "rfc8398",
     "docLabel": "RFC 8398",
     "docTitle": "Internationalized Email Addresses in X.509 Certificates",
@@ -11854,6 +12437,18 @@
     "docType": "Standard",
     "href": "https://tools.ietf.org/html/rfc8446",
     "publicationDate": "2018-08-01",
+    "publisher": "IETF",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "rfc8526",
+    "docLabel": "RFC 8526",
+    "docTitle": "NETCONF Extensions to Support the Network Management Datastore Architecture",
+    "docType": "Standard",
+    "href": "https://tools.ietf.org/html/rfc8526",
+    "publicationDate": "2019-03-01",
     "publisher": "IETF",
     "status": {
       "active": true
@@ -13016,7 +13611,9 @@
     "status": {
       "active": true,
       "reaffirmDate": "2016-12-01",
-      "reaffirmed": true
+      "reaffirmed": true,
+      "stabilized": true,
+      "stabilizedDate": "2023-02-28"
     }
   },
   {
@@ -13227,7 +13824,9 @@
       ]
     },
     "status": {
-      "active": true
+      "active": true,
+      "reaffirmDate": "2023-02-28",
+      "reaffirmed": true
     }
   },
   {
@@ -13614,7 +14213,7 @@
         "SMPTE.ST41.2004",
         "SMPTE.ST203.2003",
         "IEC.60268-10.1991",
-        "IEC.60268.17.1990"
+        "IEC.60268-17.1990"
       ],
       "normative": [
         "SMPTE.RP155.2004"
@@ -15393,7 +15992,9 @@
       ]
     },
     "status": {
-      "active": true
+      "active": true,
+      "reaffirmDate": "2023-02-28",
+      "reaffirmed": true
     }
   },
   {
@@ -16343,7 +16944,10 @@
       ]
     },
     "status": {
-      "active": true
+      "active": true,
+      "reaffirmed": true,
+      "stabilized": true,
+      "stabilizedDate": "2023-02-28"
     }
   },
   {
@@ -17706,7 +18310,9 @@
       ]
     },
     "status": {
-      "active": true
+      "active": true,
+      "reaffirmDate": "2023-02-28",
+      "reaffirmed": true
     }
   },
   {
@@ -17749,7 +18355,9 @@
       ]
     },
     "status": {
-      "active": true
+      "active": true,
+      "reaffirmDate": "2023-02-28",
+      "reaffirmed": true
     }
   },
   {
@@ -17781,7 +18389,9 @@
       ]
     },
     "status": {
-      "active": true
+      "active": true,
+      "reaffirmDate": "2023-02-28",
+      "reaffirmed": true
     }
   },
   {
@@ -19378,7 +19988,9 @@
       ]
     },
     "status": {
-      "active": true
+      "active": true,
+      "reaffirmDate": "2023-02-28",
+      "reaffirmed": true
     }
   },
   {
@@ -19733,7 +20345,9 @@
     "status": {
       "active": true,
       "reaffirmDate": "2017-10-25",
-      "reaffirmed": true
+      "reaffirmed": true,
+      "stabilized": true,
+      "stabilizedDate": "2023-02-28"
     }
   },
   {
@@ -19747,6 +20361,46 @@
     "href": "https://doi.org/10.5594/SMPTE.ST2029.2009",
     "publicationDate": "2011-03-10",
     "publisher": "SMPTE",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST2029.2023"
+      ]
+    }
+  },
+  {
+    "docId": "SMPTE.ST2029.2023",
+    "docLabel": "SMPTE ST 2029:2023",
+    "docNumber": "2029",
+    "docTitle": "Uniform Resource Names for SMPTE Resources",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST2029.2023",
+    "group": "smpte-30mr-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2029.2023",
+    "publicationDate": "2023-04-15",
+    "publisher": "SMPTE",
+    "keywords": [
+      "Identification",
+      "Metadata",
+      "URN"
+    ],
+    "references": {
+      "bibliographic": [
+        "rfc1737", 
+        "rfc5119",
+        "rfc3986",
+        "rfc7950"
+      ],
+      "normative": [
+        "SMPTE.ST298.1997",
+        "SMPTE.ST330.2022",
+        "rfc2141",
+        "rfc3406",
+        "rfc4122",
+        "rfc4234"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -20045,6 +20699,27 @@
     }
   },
   {
+    "dertails": "need to add references",
+    "docId": "SMPTE.ST2059-1.2021",
+    "docLabel": "SMPTE ST 2059-1:2021",
+    "docNumber": "2059",
+    "docPart": "1",
+    "docTitle": "Generation and Alignment of Interface Signals to the SMPTE Epoch",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST2059-1.2021",
+    "group": "smpte-32nf-tc",
+    "keywords": [
+      "Time & Sync",
+      "Network"
+    ],
+    "href": "https://doi.org/10.5594/SMPTE.ST2059-1.2021",
+    "publicationDate": "2021-06-04",
+    "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "SMPTE.ST2065-1.2012",
     "docLabel": "SMPTE ST 2065-1:2012",
     "docNumber": "2065",
@@ -20184,6 +20859,35 @@
       "ACES"
     ],
     "publicationDate": "2013-05-10",
+    "publisher": "SMPTE",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST2065-4.2023"
+      ]
+    }
+  },
+  {
+    "details": "need to add references",
+    "docId": "SMPTE.ST2065-4.2023",
+    "docLabel": "SMPTE ST 2065-4:2023",
+    "docNumber": "2065",
+    "docPart": "4",
+    "docTitle": "ACES Image Container File Layout",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST2065-4.2023",
+    "group": "smpte-31fs-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2065-4.2023",
+    "keywords": [
+      "ACES",
+      "DCinema",
+      "Image Formats",
+      "File Format",
+      "Color",
+      "Processing"
+    ],
+    "publicationDate": "2023-02-20",
     "publisher": "SMPTE",
     "status": {
       "active": true
@@ -20827,12 +21531,16 @@
     },
     "repo": "https://github.com/SMPTE/st2067-21",
     "status": {
-      "active": true,
+      "active": false,
       "amended": true,
       "amendedBy": [
         "SMPTE.ST2067-21.2020Am1.2020"
       ],
-      "amendedDate": "2020-11-03"
+      "amendedDate": "2020-11-03",
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST2067-21.2023"
+      ]
     }
   },
   {
@@ -20879,21 +21587,28 @@
     },
     "repo": "https://github.com/SMPTE/st2067-21",
     "status": {
-      "active": true
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST2067-21.2023"
+      ]
     }
   },
   {
-    "docId": "SMPTE.ST2067-21.20XX",
-    "docLabel": "SMPTE ST 2067-21:20XX",
+    "docId": "SMPTE.ST2067-21.2023",
+    "docLabel": "SMPTE ST 2067-21:2023",
     "docNumber": "2067",
     "docPart": "21",
     "docTitle": "Interoperable Master Format — Application #2E",
     "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST2067-21.2023",
     "group": "smpte-35pm-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2067-21.2023",
     "keywords": [
       "IMF",
       "IMF Application"
     ],
+    "publicationDate": "2023-02-20",
     "publisher": "SMPTE",
     "references": {
       "bibliographic": [
@@ -20921,8 +21636,7 @@
     },
     "repo": "https://github.com/SMPTE/st2067-21",
     "status": {
-      "draft": true,
-      "publicCd": true
+      "active": true
     }
   },
   {
@@ -21310,17 +22024,20 @@
     }
   },
   {
-    "docId": "SMPTE.ST2067-60.20XX",
-    "docLabel": "SMPTE ST 2067-60:20XX",
+    "docId": "SMPTE.ST2067-60.2023",
+    "docLabel": "SMPTE ST 2067-60:2023",
     "docNumber": "2067",
     "docPart": "60",
     "docTitle": "Interoperable Master Format — Application #6 UHDTV program workflow (AVC)",
     "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST2067-60.2023",
     "group": "smpte-35pm-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2067-60.2023",
     "keywords": [
       "IMF",
       "IMF Application"
     ],
+    "publicationDate": "2023-02-20",
     "publisher": "SMPTE",
     "references": {
       "normative": [
@@ -21344,8 +22061,7 @@
     },
     "repo": "https://github.com/SMPTE/st2067-60",
     "status": {
-      "draft": true,
-      "publicCd": true
+      "active": true
     }
   },
   {
@@ -21518,6 +22234,29 @@
     "href": "https://doi.org/10.5594/SMPTE.ST2086.2018",
     "publicationDate": "2018-04-28",
     "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "SMPTE.ST2088.2019",
+    "docLabel": "SMPTE ST 2088:2019",
+    "docNumber": "2088",
+    "docTitle": "Essence Element Key Register Structure",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST2088.2019",
+    "group": "smpte-30mr-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2088.2019",
+    "publicationDate": "2019-11-05",
+    "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "SMPTE.ST298.2009",
+        "SMPTE.ST336.2007",
+        "SMPTE.ST2029.2009",
+        "xmlnames.20060816"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -21879,7 +22618,9 @@
       ]
     },
     "status": {
-      "active": true
+      "active": true,
+      "reaffirmDate": "2023-02-28",
+      "reaffirmed": true
     }
   },
   {
@@ -21944,6 +22685,38 @@
         "SMPTE.ST395.2012",
         "SMPTE.ST400.2012",
         "SMPTE.ST2003.2012"
+      ]
+    },
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST2123.2023-04"
+      ]
+    }
+  },
+  {
+    "docId": "SMPTE.ST2123.2023-04",
+    "docLabel": "SMPTE ST 2123:2023-04",
+    "docNumber": "2123",
+    "docTitle": "SMPTE Metadata Registers",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST2123.2023-04",
+    "group": "smpte-30mr-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2123.2023-04",
+    "publicationDate": "2023-04-15",
+    "keywords": [
+      "Identification",
+      "Metadata"
+    ],
+    "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "SMPTE.ST335.LATEST",
+        "SMPTE.ST395.LATEST",
+        "SMPTE.ST400.LATEST",
+        "SMPTE.ST2003.LATEST",
+        "SMPTE.ST2088.LATEST"
       ]
     },
     "status": {
@@ -22910,7 +23683,9 @@
     "status": {
       "active": true,
       "reaffirmDate": "2015-07-07",
-      "reaffirmed": true
+      "reaffirmed": true,
+      "stabilized": true,
+      "stabilizedDate": "2023-02-28"
     }
   },
   {
@@ -23430,6 +24205,55 @@
       ]
     },
     "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST330.2022"
+      ]
+    }
+  },
+  {
+    "docId": "SMPTE.ST330.2022",
+    "docLabel": "SMPTE ST 330:2022",
+    "docNumber": "330",
+    "docTitle": "Unique Material Identifier (UMID)",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST330.2022",
+    "group": "smpte-30mr-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST330.2022",
+    "publicationDate": "2011-08-23",
+    "publisher": "SMPTE",
+    "keywords": [
+      "Identification",
+      "Metadata",
+      "URN"
+    ],
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST2059-1.LATEST",
+        "SMPTE.ST2114.LATEST",
+        "SMPTE.J107.9.603.815.1998",
+        "rfc2518"
+      ],
+      "normative": [
+        "SMPTE.ST298.2009",
+        "SMPTE.ST309.2012",
+        "SMPTE.ST335.2012",
+        "SMPTE.ST335.2012Am1.2019",
+        "SMPTE.ST336.2017",
+        "SMPTE.ST2029.2009",
+        "SMPTE.RP205.2014",
+        "aes3.2009",
+        "IEEE.STD802.2014",
+        "IEEE.STD1394.2008",
+        "ISO.3166-1.2013",
+        "ISO.8859-1.1998",
+        "rfc1321",
+        "rfc4122",
+        "ICAO.REF08-Doc9674.1984"
+      ]
+    },
+    "status": {
       "active": true
     }
   },
@@ -23699,6 +24523,263 @@
     ],
     "publicationDate": "2015-05-06",
     "publisher": "SMPTE",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "SMPTE.ST338.2008",
+    "docLabel": "SMPTE ST 338:2008",
+    "docNumber": "338",
+    "docTitle": "Format for Non-PCM Audio and Data in AES3 — Data Types",
+    "docType": "Standard",
+    "group": "smpte-32nf-tc",
+    "publisher": "SMPTE",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST338.2010"
+      ]
+    }
+  },
+  {
+    "docId": "SMPTE.ST338.2010",
+    "docLabel": "SMPTE ST 338:2010",
+    "docNumber": "338",
+    "docTitle": "Format for Non-PCM Audio and Data in AES3 — Data Types",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST338.2010",
+    "group": "smpte-32nf-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST338.2010",
+    "keywords": [
+      "Sound",
+      "Interface",
+      "AES",
+      "SDI"
+    ],
+    "publicationDate": "2010-08-02",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST337.2008",
+        "SMPTE.ST339.2008",
+        "SMPTE.ST341.2000",
+        "SMPTE.ST2041-1.2010",
+        "SMPTE.ST2041-2.2010",
+        "SMPTE.ST2041-3.2010",
+        "atsc-a52.b.2005",
+        "ISO.11172-3.1993",
+        "ISO.13818-3.1998",
+        "ISO.13818-7.2006",
+        "ISO.14496-3.2009"
+      ],
+      "normative": [
+        "SMPTE.ST340.2008"
+      ]
+    },
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST338.2015"
+      ]
+    }
+  },
+  {
+    "docId": "SMPTE.ST338.2015",
+    "docLabel": "SMPTE ST 338:2015",
+    "docNumber": "338",
+    "docTitle": "Format for Non-PCM Audio and Data in AES3 — Data Types",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST338.2015",
+    "group": "smpte-32nf-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST338.2015",
+    "keywords": [
+      "Sound",
+      "Interface",
+      "AES",
+      "SDI"
+    ],
+    "publicationDate": "2015-05-06",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST337.2015",
+        "SMPTE.ST339.2015",
+        "SMPTE.ST340.2015",
+        "SMPTE.ST341.2000",
+        "SMPTE.ST2041-1.2010",
+        "SMPTE.ST2041-2.2010",
+        "SMPTE.ST2041-3.2010",
+        "SMPTE.RDD33.2015",
+        "ISO.61937-2.2007"
+      ]
+    },
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST338.2016"
+      ]
+    }
+  },
+  {
+    "docId": "SMPTE.ST338.2016",
+    "docLabel": "SMPTE ST 338:2016",
+    "docNumber": "338",
+    "docTitle": "Format for Non-PCM Audio and Data in AES3 — Data Types",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST338.2016",
+    "group": "smpte-32nf-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST338.2016",
+    "keywords": [
+      "Sound",
+      "Interface",
+      "AES",
+      "SDI"
+    ],
+    "publicationDate": "2016-08-10",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "SMPTE.RDD33.2015",
+        "SMPTE.ST337.2015",
+        "SMPTE.ST339.2015",
+        "SMPTE.ST340.2015",
+        "SMPTE.ST341.2000",
+        "SMPTE.ST2041-1.2010",
+        "SMPTE.ST2041-2.2010",
+        "SMPTE.ST2041-3.2010",
+        "SMPTE.ST2101.2015",
+        "SMPTE.ST2106.2016",
+        "ISO.61937-2.2007"
+      ]
+    },
+    "status": {
+      "active": true,
+      "amended": true,
+      "amendedBy": [
+        "SMPTE.ST338.2016Am1.2019"
+      ]
+    }
+  },
+  {
+    "docId": "SMPTE.ST338.2016Am1.2019",
+    "docLabel": "SMPTE ST 338:2016 Am1:2019",
+    "docNumber": "338",
+    "docTitle": "Format for Non-PCM Audio and Data in AES3 — Data Types",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST338.2016Am1.2019",
+    "group": "smpte-32nf-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST338.2016Am1.2019",
+    "keywords": [
+      "Sound",
+      "Interface",
+      "AES",
+      "SDI"
+    ],
+    "publicationDate": "2020-01-28",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "SMPTE.RDD33.2015",
+        "SMPTE.ST337.2015",
+        "SMPTE.ST339.2015",
+        "SMPTE.ST340.2015",
+        "SMPTE.ST341.2000",
+        "SMPTE.ST2041-1.2010",
+        "SMPTE.ST2041-2.2010",
+        "SMPTE.ST2041-3.2010",
+        "SMPTE.ST2101.2015",
+        "SMPTE.ST2106.2016",
+        "ISO.61937-2.2007",
+        "SMPTE.ST2116.2019"
+      ]
+    },
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "SMPTE.ST339.2008",
+    "docLabel": "SMPTE ST 339:2008",
+    "docNumber": "339",
+    "docTitle": "Format for Non-PCM Audio and Data in AES3 — Generic Data Types",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST339.2008",
+    "group": "smpte-32nf-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST339.2008",
+    "keywords": [
+      "Sound",
+      "Interface",
+      "AES",
+      "SDI"
+    ],
+    "publicationDate": "2008-10-23",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "atsc-a52.b.2005",
+        "IEC.61937.2000",
+        "SMPTE.ST302.2007",
+        "SMPTE.ST309.1999",
+        "SMPTE.ST340.2008",
+        "SMPTE.RP168.2002"
+      ],
+      "normative": [
+        "aes3.2003",
+        "SMPTE.ST12-1.2008",
+        "SMPTE.ST337.2008",
+        "SMPTE.ST338.2008",
+        "SMPTE.RP168.2002"
+      ]
+    },
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST339.2015"
+      ]
+    }
+  },
+  {
+    "docId": "SMPTE.ST339.2015",
+    "docLabel": "SMPTE ST 339:2015",
+    "docNumber": "339",
+    "docTitle": "Format for Non-PCM Audio and Data in AES3 — Generic Data Types",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST339.2015",
+    "group": "smpte-32nf-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST339.2015",
+    "keywords": [
+      "Sound",
+      "Interface",
+      "AES",
+      "SDI"
+    ],
+    "publicationDate": "2015-05-06",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "aes3-1.2009",
+        "aes3-2.2009",
+        "aes3-3.2009",
+        "aes3-4.2009",
+        "IEC.61937-1.2011",
+        "IEC.61937-2.2011",
+        "IEC.61937.2011",
+        "SMPTE.ST302.2007",
+        "SMPTE.ST340.2014"
+      ],
+      "normative": [
+        "SMPTE.ST12-1.2014",
+        "SMPTE.ST309.2012",
+        "SMPTE.ST337.2015",
+        "SMPTE.ST338.2015",
+        "SMPTE.RP168.2009"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -24447,11 +25528,15 @@
     "publicationDate": "2007-07-11",
     "publisher": "SMPTE",
     "status": {
-      "active": true,
+      "active": false,
       "amended": true,
       "amendedBy": [
         "SMPTE.ST382.2007Am1.2012",
         "SMPTE.ST382.2007Am2.2013"
+      ],
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST382.2023"
       ]
     }
   },
@@ -24473,7 +25558,11 @@
     "publicationDate": "2012-06-28",
     "publisher": "SMPTE",
     "status": {
-      "active": true
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST382.2023"
+      ]
     }
   },
   {
@@ -24493,6 +25582,62 @@
     ],
     "publicationDate": "2013-06-20",
     "publisher": "SMPTE",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST382.2023"
+      ]
+    }
+  },
+  {
+    "docId": "SMPTE.ST382.2023",
+    "docLabel": "SMPTE ST 382:2023",
+    "docNumber": "382",
+    "docTitle": "Material Exchange Format — Mapping AES3 and Broadcast Wave Audio into the MXF Generic Container",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST382.2023",
+    "group": "smpte-31fs-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST382.2023",
+    "keywords": [
+      "DCinema",
+      "Packaging",
+      "Audio",
+      "MXF Application",
+      "MXF",
+      "File Format",
+      "AES",
+      "Sound"
+    ],
+    "publicationDate": "2023-04-15",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST12-1.LATEST",
+        "SMPTE.ST302.2007",
+        "SMPTE.ST309.LATEST",
+        "SMPTE.ST314.2005",
+        "SMPTE.ST2035.2020",
+        "SMPTE.ST323.2004",
+        "SMPTE.ST330.LATEST",
+        "SMPTE.ST331.LATEST",
+        "SMPTE.RP205.LATEST",
+        "EBU.r99.2011",
+        "ISO.646.LATEST",
+        "ISO.8601.LATEST",
+        "R-REC-BS.1352.2007"
+      ],
+      "normative": [
+        "SMPTE.ST337.LATEST",
+        "SMPTE.ST338.LATEST",
+        "SMPTE.ST339.LATEST",
+        "SMPTE.ST377-1.LATEST",
+        "SMPTE.ST379.ALLPARTS",
+        "SMPTE.ST2123.LATEST",
+        "aes3.2009",
+        "aes31-2.2019"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -25577,7 +26722,9 @@
     },
     "repo": "https://github.com/SMPTE/st428-7",
     "status": {
-      "active": true
+      "active": true,
+      "reaffirmDate": "2023-02-28",
+      "reaffirmed": true
     },
     "xmlNamespace": [
       "http://www.smpte-ra.org/schemas/428-7/2010/DCST",
@@ -29055,6 +30202,7 @@
   {
     "docId": "T-REC-E.123.2001",
     "docLabel": "RE.123 (02/2001)",
+    "docNumber": "123",
     "docTitle": "Notation for national and international telephone numbers, e-mail addresses and web addresses",
     "docType": "Recommendation",
     "href": "https://www.itu.int/rec/dologin_pub.asp?lang=e&id=T-REC-E.123-200102-I!!PDF-E&type=items",
@@ -29072,6 +30220,7 @@
   {
     "docId": "T-REC-E.123.2001am1.2008",
     "docLabel": "RE.123 (02/2001) Amd. 1 (05/2008)",
+    "docNumber": "123",
     "docTitle": "Notation for national and international telephone numbers, e-mail addresses and web addresses",
     "docType": "Recommendation",
     "href": "https://www.itu.int/rec/dologin_pub.asp?lang=e&id=T-REC-E.123-200805-I!Amd1!PDF-E&type=items",
@@ -29084,6 +30233,7 @@
   {
     "docId": "T-REC-E.123.2001e1.2008",
     "docLabel": "RE.123 (02/2001) Erratum 1 (05/2008)",
+    "docNumber": "123",
     "docTitle": "Notation for national and international telephone numbers, e-mail addresses and web addresses",
     "docType": "Recommendation",
     "href": "https://www.itu.int/rec/dologin.asp?lang=e&id=T-REC-E.123-200805-I!Err1!PDF-E&type=items",
@@ -29096,6 +30246,7 @@
   {
     "docId": "T-REC-H.264.202108",
     "docLabel": "REC H.264",
+    "docNumber": "264",
     "docTitle": "Advanced video coding for generic audiovisual services",
     "docType": "Recommendation",
     "href": "https://www.itu.int/rec/https://www.itu.int/rec/T-REC-H.264-202108-I/en/en",
@@ -29108,6 +30259,7 @@
   {
     "docId": "T-REC-H.265.201612",
     "docLabel": "REC H.265",
+    "docNumber": "265",
     "docTitle": "High efficiency video coding",
     "docType": "Recommendation",
     "href": "https://www.itu.int/rec/T-REC-H.265-201612-S/en",
@@ -29124,6 +30276,7 @@
   {
     "docId": "T-REC-H.265.201911",
     "docLabel": "REC H.265",
+    "docNumber": "265",
     "docTitle": "High efficiency video coding",
     "docType": "Recommendation",
     "href": "https://www.itu.int/rec/T-REC-H.265-201911-I/en",
@@ -29136,6 +30289,7 @@
   {
     "docId": "T-REC-H.273.201612",
     "docLabel": "REC H.273",
+    "docNumber": "273",
     "docTitle": "Coding-independent code points for video signal type identification",
     "docType": "Recommendation",
     "href": "https://www.itu.int/rec/T-REC-H.273-201612-I/en",
@@ -29152,6 +30306,7 @@
   {
     "docId": "T-REC-H.273.202107",
     "docLabel": "REC H.273",
+    "docNumber": "273",
     "docTitle": "Coding-independent code points for video signal type identification",
     "docType": "Recommendation",
     "href": "https://www.itu.int/rec/T-REC-H.273-202107-I/en",
@@ -29164,6 +30319,7 @@
   {
     "docId": "T-REC-T.802.2005",
     "docLabel": "RE.802-8:2005",
+    "docNumber": "802",
     "docTitle": "Information technology – JPEG 2000 image coding system: Motion JPEG 2000",
     "docType": "Recommendation",
     "href": "https://www.itu.int/rec/T-REC-T.802-200501-I/en",
@@ -29180,6 +30336,7 @@
   {
     "docId": "T-REC-T.802.2005am1.2010",
     "docLabel": "RE.802-8:2005 Amendment 1 (04/10)",
+    "docNumber": "802",
     "docTitle": "Information technology – JPEG 2000 image coding system: Motion JPEG 2000",
     "docType": "Recommendation",
     "href": "https://www.itu.int/rec/T-REC-T.802-201004-I!Amd1/en",
