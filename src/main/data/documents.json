@@ -7269,6 +7269,26 @@
     }
   },
   {
+    "docId": "ISO.5926.2023",
+    "docLabel": "ISO 5926:2023",
+    "docNumber": "5926",
+    "docTitle": "Technical requirements and test methods for digital cinema stereoscopic projection",
+    "docType": "Standard",
+    "group": "iso-tc36-tc",
+    "href": "https://www.iso.org/standard/81846.html",
+    "publicationDate": "2023-05-01",
+    "publisher": "ISO",
+    "references": {
+      "normative": [
+        "ISO.11664-1.LATEST",
+        "ISO.26431-1.2008"
+      ]
+    },
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "ISO.639-1.2002",
     "docLabel": "ISO 639-1:2002",
     "docNumber": "639",
@@ -10681,11 +10701,31 @@
     "docId": "R-REC-BT.2100-2.201807",
     "docLabel": "BT.2100-2 (07/2018)",
     "docNumber": "2100",
-    "docTitle": "Image parameter values for high dynamic range television for use in production and international programme exchange",
+    "docTitle": "The use of componentized workflows for the exchange of non-live television programmes",
     "docType": "Recommendation",
     "href": "https://www.itu.int/rec/R-REC-BT.2100-2-201807-I/en",
     "publicationDate": "2018-07-09",
     "publisher": "ITU-R",
+    "status": {
+      "active": true
+    }
+  },
+  {
+    "docId": "R-REC-BT.2153-0.202212",
+    "docLabel": "BT.2153-0 (12/2022)",
+    "docNumber": "2153-0",
+    "docTitle": "Image parameter values for high dynamic range television for use in production and international programme exchange",
+    "docType": "Recommendation",
+    "href": "https://www.itu.int/rec/R-REC-BT.2153-0-202212-I/en",
+    "publicationDate": "2022-12-19",
+    "publisher": "ITU-R",
+    "references": {
+      "normative": [
+        "SMPTE.ST2067.ALLPARTS",
+        "SMPTE.ST377-1.LATEST",
+        "xml.LATEST"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -20177,7 +20217,7 @@
         "SMPTE.ST298.2009",
         "SMPTE.ST330.2011",
         "SMPTE.ST335.2012",
-        "SMPTE.ST395.2012",
+        "SMPTE.ST395.2014",
         "SMPTE.ST400.2012",
         "SMPTE.ST2003.2012",
         "SMPTE.ST2029.2009",
@@ -20743,6 +20783,7 @@
     }
   },
   {
+    "details": "need to add references",
     "docId": "SMPTE.ST2065-1.2021",
     "docLabel": "SMPTE ST 2065-1:2021",
     "docNumber": "2065",
@@ -20909,6 +20950,44 @@
     ],
     "publicationDate": "2016-10-20",
     "publisher": "SMPTE",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST2065-5.2023"
+      ]
+    }
+  },
+  {
+    "docId": "SMPTE.ST2065-5.2023",
+    "docLabel": "SMPTE ST 2065-5:2023",
+    "docNumber": "2065",
+    "docPart": "5",
+    "docTitle": "Material Exchange Format — Mapping ACES Image Sequences into the MXF Generic Container",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST2065-5.2023",
+    "group": "smpte-31fs-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2065-5.2023",
+    "keywords": [
+      "ACES",
+      "MXF",
+      "DCinema",
+      "File Format",
+      "Metadata"
+    ],
+    "publicationDate": "2023-07-06",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST2065-1.2021"
+      ],
+      "normative": [
+        "SMPTE.ST298.2009",
+        "SMPTE.ST377-1.2019",
+        "SMPTE.ST379-2.2010",
+        "SMPTE.ST2065-4.2023"
+      ]
+    },
     "status": {
       "active": true
     }
@@ -21433,20 +21512,37 @@
     }
   },
   {
-    "docId": "SMPTE.ST2067-202.20XX",
-    "docLabel": "SMPTE ST 2067-202:20XX",
+    "docId": "SMPTE.ST2067-202.2023",
+    "docLabel": "SMPTE ST 2067-202:2023",
     "docNumber": "2067",
     "docPart": "202",
-    "docTitle": "Interoperable Master Format — ISXD Plugin",
+    "docTitle": "Interoperable Master Format — Isochronous Stream of XML Documents (ISXD) Plug-in",
     "docType": "Standard",
     "group": "smpte-35pm-tc",
     "keywords": [
       "IMF",
-      "IMF Plug-in"
+      "IMF Plug-in",
+      "Metadata",
+      "XML"
     ],
+    "publicationDate": "2023-07-06",
     "publisher": "SMPTE",
+    "references": {
+      "normative": [
+        "SMPTE.ST377-1.2019",
+        "SMPTE.ST379-2.2010",
+        "SMPTE.ST429-17.2017",
+        "SMPTE.RP2057.LATEST",
+        "SMPTE.ST2067-2.LATEST",
+        "SMPTE.ST2067-3.LATEST",
+        "SMPTE.ST2067-5.LATEST",
+        "xml.20040204",
+        "xmlschema-1.20041028",
+        "xmlschema-2.20041028"
+      ]
+    },
     "status": {
-      "draft": true
+      "active": true
     }
   },
   {
@@ -22338,6 +22434,47 @@
     "publicationDate": "2017-01-25",
     "publisher": "SMPTE",
     "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST2094-2.2023"
+      ]
+    }
+  },
+  {
+    "docId": "SMPTE.ST2094-2.2023",
+    "docLabel": "SMPTE ST 2094-2:2023",
+    "docNumber": "2094",
+    "docPart": "2",
+    "docTitle": "Dynamic Metadata for Color Volume Transform — KLV Encoding and MXF Mapping",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST2094-2.2023",
+    "group": "smpte-10e-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2094-2.2023",
+    "publicationDate": "2023-07-06",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST379-1.2009",
+        "SMPTE.ST422.2014",
+        "SMPTE.ST2067-3.2016"
+      ],
+      "normative": [
+        "SMPTE.ST298.2009",
+        "SMPTE.ST335.2012",
+        "SMPTE.ST336.2017",
+        "SMPTE.ST377-1.2019",
+        "SMPTE.ST379-2.2010",
+        "SMPTE.ST395.2014",
+        "SMPTE.ST400.2012",
+        "SMPTE.ST2094-1.2016",
+        "SMPTE.ST2094-10.2021",
+        "SMPTE.ST2094-20.2016",
+        "SMPTE.ST2094-30.2016",
+        "SMPTE.ST2094-40.2020"
+      ]
+    },
+    "status": {
       "active": true
     }
   },
@@ -22384,6 +22521,26 @@
     "group": "smpte-10e-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST2094-40.2016",
     "publicationDate": "2016-09-07",
+    "publisher": "SMPTE",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST2094-40.2020"
+      ]
+    }
+  },
+  {
+    "docId": "SMPTE.ST2094-40.2020",
+    "docLabel": "SMPTE ST 2094-40:2020",
+    "docNumber": "2094",
+    "docPart": "40",
+    "docTitle": "Dynamic Metadata for Color Volume Transform — Application #4",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST2094-40.2020",
+    "group": "smpte-10e-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2094-40.2020",
+    "publicationDate": "2020-05-16",
     "publisher": "SMPTE",
     "status": {
       "active": true
@@ -22682,7 +22839,7 @@
     "references": {
       "normative": [
         "SMPTE.ST335.2012",
-        "SMPTE.ST395.2012",
+        "SMPTE.ST395.2014",
         "SMPTE.ST400.2012",
         "SMPTE.ST2003.2012"
       ]
@@ -25710,19 +25867,19 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "SMPTE.ST395.2012"
+        "SMPTE.ST395.2014"
       ]
     }
   },
   {
-    "docId": "SMPTE.ST395.2012",
+    "docId": "SMPTE.ST395.2014",
     "docLabel": "SMPTE ST 395:2014",
     "docNumber": "395",
     "docTitle": "Metadata Groups Register",
     "docType": "Standard",
-    "doi": "10.5594/SMPTE.ST395.2012",
+    "doi": "10.5594/SMPTE.ST395.2014",
     "group": "smpte-30mr-tc",
-    "href": "https://doi.org/10.5594/SMPTE.ST395.2012",
+    "href": "https://doi.org/10.5594/SMPTE.ST395.2014",
     "publicationDate": "2012-08-01",
     "publisher": "SMPTE",
     "references": {
@@ -27599,8 +27756,8 @@
     }
   },
   {
-    "docId": "SMPTE.ST429-20.20XX",
-    "docLabel": "SMPTE ST 429-20:20XX",
+    "docId": "SMPTE.ST429-20.2023",
+    "docLabel": "SMPTE ST 429-20:2023",
     "docNumber": "429",
     "docPart": "20",
     "docTitle": "D-Cinema Packaging — MXF Constraints",
@@ -27609,13 +27766,16 @@
     "keywords": [
       "DCinema",
       "Packaging",
+      "MXF",
       "MXF Application"
     ],
+    "publicationDate": "2023-07-06",
     "publisher": "SMPTE",
     "references": {
       "bibliographic": [
         "SMPTE.ST429-6.2006",
-        "SMPTE.ST2123.2021-01"
+        "SMPTE.ST2123.LATEST",
+        "SMPTE.ST429-2.LATEST"
       ],
       "normative": [
         "SMPTE.ST377-1.2019"
@@ -27623,8 +27783,7 @@
     },
     "repo": "https://github.com/SMPTE/st429-20",
     "status": {
-      "draft": true,
-      "publicCd": true
+      "active": true
     },
     "workInfo": {
       "project": [
