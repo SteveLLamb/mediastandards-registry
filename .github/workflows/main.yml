@@ -20,14 +20,14 @@ jobs:
       run: npm run validate
 
     - name: verify that the registries are canonicalized
-      if: github.ref == 'refs/heads/master' || github.event_name == 'pull_request'
+      if: github.ref == 'refs/heads/main' || github.event_name == 'pull_request'
       run: |
           npm run canonicalize
           git add src/main/data
           git diff-index --quiet HEAD src/main/data
 
     - name: commit canonicalized registries
-      if: github.ref != 'refs/heads/master' && github.event_name != 'pull_request'
+      if: github.ref != 'refs/heads/main' && github.event_name != 'pull_request'
       run: |
           npm run canonicalize
           git add src/main/data
@@ -41,7 +41,7 @@ jobs:
          GH_PAGES_BUILD: true
 
     - uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/master'
+      if: github.ref == 'refs/heads/main'
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build
