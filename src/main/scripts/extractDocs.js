@@ -122,3 +122,5 @@ fs.writeFileSync(
     2
   ) + '\n'
 );
+
+})();
