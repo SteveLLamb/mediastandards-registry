@@ -22,8 +22,8 @@ const parseRefId = (text, href = '') => {
     const [, type, num, , part] = text.match(/SMPTE\s+(ST|RP|RDD)\s+(\d+)(-(\d+))?/);
     return `SMPTE.${type}${part ? `${num}-${part}` : num}.LATEST`;
   }
-  if (/IETF\s+RFC\s*(\d+)/i.test(text)) {
-  return `RFC${text.match(/RFC\s*(\d+)/)[1]}`;
+  if (/RFC\s*(\d+)/i.test(text)) {
+  return `rfc${text.match(/RFC\s*(\d+)/i)[1]}`;
   }
   if (/ISO\/IEC\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/.test(text)) {
   const [, base, suffix] = text.match(/ISO\/IEC\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/);
@@ -37,7 +37,12 @@ const parseRefId = (text, href = '') => {
   const year = years.length ? Math.max(...years) : null;
   return `ISO.${base}${year ? `.${year}` : '.LATEST'}`;
   }
-
+  if (/IEC\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/.test(text)) {
+  const [, base, suffix] = text.match(/IEC\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/);
+  const years = suffix ? [...suffix.matchAll(/(\d{4})/g)].map(m => parseInt(m[1])) : [];
+  const year = years.length ? Math.max(...years) : null;
+  return `IEC.${base}${year ? `.${year}` : '.LATEST'}`;
+  }
   if (/Language Subtag Registry/i.test(text)) {
     return 'IANA.LanguageSubtagRegistry.LATEST';
   }
