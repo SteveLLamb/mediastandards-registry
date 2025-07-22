@@ -110,8 +110,15 @@ const extractFromUrl = async (url) => {
     }
   }
 
-  const fs = require('fs');
-  fs.writeFileSync('src/main/output/documents.json', JSON.stringify({
-  _generated: new Date().toISOString(),
-  documents: results
-}, null, 2) + '\n');
+const fs = require('fs');
+fs.writeFileSync(
+  'src/main/output/documents.json',
+  JSON.stringify(
+    {
+      _generated: new Date().toISOString(),
+      documents: results
+    },
+    null,
+    2
+  ) + '\n'
+);
