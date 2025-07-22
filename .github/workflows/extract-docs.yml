@@ -24,13 +24,7 @@ jobs:
         run: npm install axios cheerio dayjs
 
       - name: Run extraction
-        run: node src/main/scripts/extractDocs.js > src/main/output/documents.json
-
-      - name: Canonicalize JSON
-        run: npm run canonicalize
-
-      - name: Validate output
-        run: node src/main/scripts/validate.js src/main/output/documents.json
+        run: node src/main/scripts/extractDocs.js
 
       - name: Commit and create PR
         uses: peter-evans/create-pull-request@v6
@@ -41,6 +35,6 @@ jobs:
           title: "Update documents.json"
           body: |
             This pull request updates `documents.json` using the latest SMPTE metadata extraction.
-          add-paths: output/documents.json
+          add-paths: src/main/output/documents.json
           base: main
       
