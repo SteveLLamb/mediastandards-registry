@@ -13,7 +13,7 @@ const parseRefId = (text) => {
     return `SMPTE.${type}${part ? `${num}-${part}` : num}.LATEST`;
   }
   if (/IETF\s+RFC\s*(\d+)/i.test(text)) {
-    return `IETF.RFC${text.match(/RFC\s*(\d+)/)[1]}.LATEST`;
+  return `RFC${text.match(/RFC\s*(\d+)/)[1]}`;
   }
   if (/ISO\/IEC\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/.test(text)) {
   const [, base, suffix] = text.match(/ISO\/IEC\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/);
