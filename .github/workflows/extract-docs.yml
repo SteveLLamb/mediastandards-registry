@@ -25,12 +25,18 @@ jobs:
 
       - name: Run extraction
         run: node src/main/scripts/extractDocs.js
+      
+      - name: Show diff for debugging
+        run: |
+          git status
+          git diff
 
       - name: Commit and create PR
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "chore: update documents.json from SMPTE sources"
+          commit-options: '--allow-empty'
           branch: update-documents-json
           title: "Update documents.json"
           body: |
