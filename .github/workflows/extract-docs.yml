@@ -20,7 +20,7 @@ jobs:
         run: npm install axios cheerio dayjs
 
       - name: Run extraction
-        run: node src/scripts/extract.js > output/documents.json
+        run: node src/main/scripts/extract.js > output/documents.json
 
       - name: Upload output
         uses: actions/upload-artifact@v4
