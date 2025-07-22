@@ -14,6 +14,7 @@ const parseRefId = (text, href = '') => {
     const [, shortname] = href.match(/w3\.org\/TR\/([^\/]+)\/?$/i);
     return `${shortname}.LATEST`;
   }
+
   const parts = text.split('|').map(p => p.trim());
   text = parts.find(p => /ISO\/IEC|ISO/.test(p)) || parts[0];
 
@@ -87,10 +88,7 @@ const extractFromUrl = async (url) => {
   const doi = `10.5594/SMPTE.${pubType}${pubNumber}-${pubPart}.${pubDateObj.format('YYYY')}`;
   const href = `https://doi.org/${doi}`;
 
-  const refSections = {
-    normative: [],
-    bibliographic: []
-  };
+  const refSections = { normative: [], bibliographic: [] };
 
   ['normative-references', 'bibliography'].forEach((sectionId) => {
     const type = sectionId.includes('normative') ? 'normative' : 'bibliographic';
@@ -120,11 +118,6 @@ const extractFromUrl = async (url) => {
   };
 };
 
-const deepEqualUnordered = (a, b) => {
-  if (!Array.isArray(a) || !Array.isArray(b)) return false;
-  return a.length === b.length && a.every(item => b.includes(item));
-};
-
 (async () => {
   const results = [];
   for (const url of urls) {
@@ -140,8 +133,9 @@ const deepEqualUnordered = (a, b) => {
 
   let existingDocs = [];
   if (fs.existsSync(outputPath)) {
+    const raw = fs.readFileSync(outputPath, 'utf-8');
     try {
-      const parsed = JSON.parse(fs.readFileSync(outputPath, 'utf-8'));
+      const parsed = JSON.parse(raw);
       existingDocs = Array.isArray(parsed) ? parsed : parsed.documents || [];
     } catch (err) {
       console.error('Failed to parse existing documents.json:', err.message);
@@ -151,6 +145,7 @@ const deepEqualUnordered = (a, b) => {
   const newDocs = [];
   const updatedDocs = [];
   const skippedDocs = [];
+  const refChanges = {};
 
   for (const doc of results) {
     const index = existingDocs.findIndex(d => d.docId === doc.docId);
@@ -160,33 +155,31 @@ const deepEqualUnordered = (a, b) => {
     } else {
       const existingDoc = existingDocs[index];
       let changed = false;
+      const fieldChanges = [];
 
       for (const key of Object.keys(doc)) {
-        const newVal = doc[key];
         const existingVal = existingDoc[key];
+        const newVal = doc[key];
+        const diff = JSON.stringify(existingVal) !== JSON.stringify(newVal);
 
-        if (key === 'references') {
-          const n1 = newVal?.normative || [];
-          const n2 = existingVal?.normative || [];
-          const b1 = newVal?.bibliographic || [];
-          const b2 = existingVal?.bibliographic || [];
-
-          if (!deepEqualUnordered(n1, n2) || !deepEqualUnordered(b1, b2)) {
-            existingDoc.references = { normative: [...n1], bibliographic: [...b1] };
-            changed = true;
-          }
-        } else if (
-          typeof newVal === 'object'
-            ? JSON.stringify(existingVal) !== JSON.stringify(newVal)
-            : existingVal !== newVal
-        ) {
+        if (diff) {
           existingDoc[key] = newVal;
+          fieldChanges.push(key);
           changed = true;
+
+          if ((key === 'references') && newVal) {
+            const oldRefs = existingVal || {};
+            const addedRefs = {
+              normative: newVal.normative.filter(x => !(oldRefs.normative || []).includes(x)),
+              bibliographic: newVal.bibliographic.filter(x => !(oldRefs.bibliographic || []).includes(x))
+            };
+            refChanges[doc.docId] = addedRefs;
+          }
         }
       }
 
       if (changed) {
-        updatedDocs.push(doc.docId);
+        updatedDocs.push({ docId: doc.docId, fields: fieldChanges });
       } else {
         skippedDocs.push(doc.docId);
       }
@@ -195,34 +188,36 @@ const deepEqualUnordered = (a, b) => {
 
   fs.writeFileSync(
     outputPath,
-    JSON.stringify(
-      {
-        _generated: new Date().toISOString(),
-        documents: existingDocs
-      },
-      null,
-      2
-    ) + '\n'
+    JSON.stringify({
+      _generated: new Date().toISOString(),
+      documents: existingDocs
+    }, null, 2) + '\n'
   );
 
-  console.log(`✅ Added ${newDocs.length} new document(s)`);
-  console.log(`🔄 Updated ${updatedDocs.length}`);
-  if (skippedDocs.length > 0) {
-    console.log(`⚠️ Skipped ${skippedDocs.length} (unchanged):`);
-    skippedDocs.forEach(id => console.log(`  - ${id}`));
-  }
+  console.log(`✅ Added ${newDocs.length} new documents`);
+  console.log(`🔄 Updated ${updatedDocs.length} documents`);
+  console.log(`⏭️ Skipped ${skippedDocs.length} unchanged documents`);
 
   const prLines = [
-    `### 🆕 Added ${newDocs.length} new document(s):`,
+    `### 🆕 Added ${newDocs.length} document(s):`,
     ...newDocs.map(doc => `- ${doc.docId}`),
     '',
-    `### 🔄 Updated ${updatedDocs.length} existing document(s):`,
-    ...updatedDocs.map(id => `- ${id}`),
+    `### 🔄 Updated ${updatedDocs.length} document(s):`,
+    ...updatedDocs.map(d => `- ${d.docId} (fields: ${d.fields.join(', ')})`),
     '',
-    `### ⚠️ Skipped ${skippedDocs.length} (unchanged):`,
+    `### ⚠️ Skipped ${skippedDocs.length} document(s):`,
     ...skippedDocs.map(id => `- ${id}`),
     ''
   ];
+
+  if (Object.keys(refChanges).length > 0) {
+    prLines.push('### 📎 Reference changes:');
+    for (const [docId, refs] of Object.entries(refChanges)) {
+      const norm = refs.normative.length ? `Normative: ${refs.normative.join(', ')}` : '';
+      const bibl = refs.bibliographic.length ? `Bibliographic: ${refs.bibliographic.join(', ')}` : '';
+      prLines.push(`- ${docId}${norm || bibl ? ` → ${[norm, bibl].filter(Boolean).join(' | ')}` : ''}`);
+    }
+  }
 
   fs.writeFileSync('pr-update-log.txt', prLines.join('\n'));
 })();
