@@ -14,8 +14,10 @@ const parseRefId = (text, href = '') => {
     const [, shortname] = href.match(/w3\.org\/TR\/([^\/]+)\/?$/i);
     return `${shortname}.LATEST`;
   }
+
   const parts = text.split('|').map(p => p.trim());
   text = parts.find(p => /ISO\/IEC|ISO/.test(p)) || parts[0];
+
   if (/SMPTE\s+(ST|RP|RDD)\s+(\d+)(-(\d+))?/.test(text)) {
     const [, type, num, , part] = text.match(/SMPTE\s+(ST|RP|RDD)\s+(\d+)(-(\d+))?/);
     return `SMPTE.${type}${part ? `${num}-${part}` : num}.LATEST`;
@@ -41,10 +43,18 @@ const parseRefId = (text, href = '') => {
     const year = years.length ? Math.max(...years) : null;
     return `IEC.${base}${year ? `.${year}` : '.LATEST'}`;
   }
-  if (/Language Subtag Registry/i.test(text)) return 'IANA.LanguageSubtagRegistry.LATEST';
-  if (/Digital Cinema Naming/i.test(text)) return 'ISDCF.DCNC.LATEST';
-  if (/Common Metadata Ratings/i.test(text)) return 'MovieLabs.Ratings.LATEST';
-  if (/UN/i.test(text)) return 'UN.M49.LATEST';
+  if (/Language Subtag Registry/i.test(text)) {
+    return 'IANA.LanguageSubtagRegistry.LATEST';
+  }
+  if (/Digital Cinema Naming/i.test(text)) {
+    return 'ISDCF.DCNC.LATEST';
+  }
+  if (/Common Metadata Ratings/i.test(text)) {
+    return 'MovieLabs.Ratings.LATEST';
+  }
+  if (/UN/i.test(text)) {
+    return 'UN.M49.LATEST';
+  }
   return null;
 };
 
@@ -79,6 +89,7 @@ const extractFromUrl = async (url) => {
   const href = `https://doi.org/${doi}`;
 
   const refSections = { normative: [], bibliographic: [] };
+
   ['normative-references', 'bibliography'].forEach((sectionId) => {
     const type = sectionId.includes('normative') ? 'normative' : 'bibliographic';
     $(`#sec-${sectionId} ul li`).each((_, el) => {
@@ -100,7 +111,7 @@ const extractFromUrl = async (url) => {
     doi: doi,
     group: `smpte-${tc.toLowerCase()}-tc`,
     publicationDate: dateFormatted,
-    publisher: 'SMPTE',
+    publisher: "SMPTE",
     href: href,
     status: { active: true },
     references: refSections
@@ -119,8 +130,8 @@ const extractFromUrl = async (url) => {
   }
 
   const outputPath = 'src/main/output/documents.json';
-  let existingDocs = [];
 
+  let existingDocs = [];
   if (fs.existsSync(outputPath)) {
     const raw = fs.readFileSync(outputPath, 'utf-8');
     try {
@@ -134,6 +145,7 @@ const extractFromUrl = async (url) => {
   const newDocs = [];
   const updatedDocs = [];
   const skippedDocs = [];
+  const refChanges = {};
 
   for (const doc of results) {
     const index = existingDocs.findIndex(d => d.docId === doc.docId);
@@ -142,23 +154,32 @@ const extractFromUrl = async (url) => {
       existingDocs.push(doc);
     } else {
       const existingDoc = existingDocs[index];
-      let changedFields = [];
+      let changed = false;
+      const fieldChanges = [];
 
       for (const key of Object.keys(doc)) {
-        const oldVal = existingDoc[key];
+        const existingVal = existingDoc[key];
         const newVal = doc[key];
-        const isEqual = typeof newVal === 'object'
-          ? JSON.stringify(oldVal) === JSON.stringify(newVal)
-          : oldVal === newVal;
+        const diff = JSON.stringify(existingVal) !== JSON.stringify(newVal);
 
-        if (!isEqual) {
+        if (diff) {
           existingDoc[key] = newVal;
-          changedFields.push(key);
+          fieldChanges.push(key);
+          changed = true;
+
+          if ((key === 'references') && newVal) {
+            const oldRefs = existingVal || {};
+            const addedRefs = {
+              normative: newVal.normative.filter(x => !(oldRefs.normative || []).includes(x)),
+              bibliographic: newVal.bibliographic.filter(x => !(oldRefs.bibliographic || []).includes(x))
+            };
+            refChanges[doc.docId] = addedRefs;
+          }
         }
       }
 
-      if (changedFields.length > 0) {
-        updatedDocs.push({ docId: doc.docId, fields: changedFields });
+      if (changed) {
+        updatedDocs.push({ docId: doc.docId, fields: fieldChanges });
       } else {
         skippedDocs.push(doc.docId);
       }
@@ -167,23 +188,36 @@ const extractFromUrl = async (url) => {
 
   fs.writeFileSync(
     outputPath,
-    JSON.stringify({ _generated: new Date().toISOString(), documents: existingDocs }, null, 2) + '\n'
+    JSON.stringify({
+      _generated: new Date().toISOString(),
+      documents: existingDocs
+    }, null, 2) + '\n'
   );
 
-  console.log(`✅ Added ${newDocs.length} new documents.`);
-  console.log(`🔁 Updated ${updatedDocs.length} documents.`);
-  console.log(`⚠️ Skipped ${skippedDocs.length} duplicates.`);
+  console.log(`✅ Added ${newDocs.length} new documents`);
+  console.log(`🔄 Updated ${updatedDocs.length} documents`);
+  console.log(`⏭️ Skipped ${skippedDocs.length} unchanged documents`);
 
   const prLines = [
-    `### 🆕 Added ${newDocs.length} new document(s):`,
+    `### 🆕 Added ${newDocs.length} document(s):`,
     ...newDocs.map(doc => `- ${doc.docId}`),
     '',
-    `### 🔁 Updated ${updatedDocs.length} existing document(s):`,
-    ...updatedDocs.map(doc => `- ${doc.docId} (updated fields: ${doc.fields.join(', ')})`),
+    `### 🔄 Updated ${updatedDocs.length} document(s):`,
+    ...updatedDocs.map(d => `- ${d.docId} (fields: ${d.fields.join(', ')})`),
     '',
-    `### ⚠️ Skipped ${skippedDocs.length} duplicate(s):`,
+    `### ⚠️ Skipped ${skippedDocs.length} document(s):`,
     ...skippedDocs.map(id => `- ${id}`),
     ''
   ];
+
+  if (Object.keys(refChanges).length > 0) {
+    prLines.push('### 📎 Reference changes:');
+    for (const [docId, refs] of Object.entries(refChanges)) {
+      const norm = refs.normative.length ? `Normative: ${refs.normative.join(', ')}` : '';
+      const bibl = refs.bibliographic.length ? `Bibliographic: ${refs.bibliographic.join(', ')}` : '';
+      prLines.push(`- ${docId}${norm || bibl ? ` → ${[norm, bibl].filter(Boolean).join(' | ')}` : ''}`);
+    }
+  }
+
   fs.writeFileSync('pr-update-log.txt', prLines.join('\n'));
 })();
