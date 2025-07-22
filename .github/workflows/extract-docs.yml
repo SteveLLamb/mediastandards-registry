@@ -25,22 +25,24 @@ jobs:
 
       - name: Run extraction
         run: node src/main/scripts/extractDocs.js
-      
+
       - name: Show diff for debugging
         run: |
           git status
           git diff
 
-      - name: Read PR log
+      - name: Read PR update summary
         id: prlog
         run: |
-          echo "body<<EOF" >> $GITHUB_OUTPUT
-          cat pr-update-log.txt >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
+          {
+            echo 'body<<EOF'
+            cat pr-update-log.txt
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
 
       - name: Set timestamp env var
         id: timestamp
-        run: echo "ts=$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_OUTPUT
+        run: echo "ts=$(date +'%Y%m%d-%H%M%S')" >> "$GITHUB_OUTPUT"
 
       - name: Commit and create PR
         uses: peter-evans/create-pull-request@v6
@@ -50,12 +52,8 @@ jobs:
           commit-options: '--allow-empty'
           branch: update-documents-json-${{ github.run_id }}
           title: "Update documents.json - ${{ steps.timestamp.outputs.ts }}"
-          body: |
-            This pull request updates `documents.json` using the latest SMPTE metadata extraction.
-
-            ${{ steps.prlog.outputs.body }}
+          body: ${{ steps.prlog.outputs.body }}
           add-paths: |
             src/main/output/documents.json
             pr-update-log.txt
           base: main
-      
