@@ -5,6 +5,9 @@ const dayjs = require('dayjs');
 const urls = require('../input/urls.json');
 
 const parseRefId = (text) => {
+  // Handle dual refs like "Rec. ITU-T T.814 | ISO/IEC 15444-15:2012+A1:2017"
+  const parts = text.split('|').map(p => p.trim());
+  text = parts.find(p => /ISO\/IEC|ISO/.test(p)) || parts[0];  // Prefer ISO part if present
   if (/SMPTE\s+(ST|RP|RDD)\s+(\d+)(-(\d+))?/.test(text)) {
     const [, type, num, , part] = text.match(/SMPTE\s+(ST|RP|RDD)\s+(\d+)(-(\d+))?/);
     return `SMPTE.${type}${part ? `${num}-${part}` : num}.LATEST`;
@@ -12,13 +15,17 @@ const parseRefId = (text) => {
   if (/IETF\s+RFC\s*(\d+)/i.test(text)) {
     return `IETF.RFC${text.match(/RFC\s*(\d+)/)[1]}.LATEST`;
   }
-  if (/ISO\/IEC\s+(\d+(-\d+)*)(:\d+)?/.test(text)) {
-    const [, base] = text.match(/ISO\/IEC\s+(\d+(-\d+)*)(:\d+)?/);
-    return `ISO.${base}.LATEST`;
+  if (/ISO\/IEC\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/.test(text)) {
+  const [, base, suffix] = text.match(/ISO\/IEC\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/);
+  const years = suffix ? [...suffix.matchAll(/(\d{4})/g)].map(m => parseInt(m[1])) : [];
+  const year = years.length ? Math.max(...years) : null;
+  return `ISO.${base}${year ? `.${year}` : '.LATEST'}`;
   }
-  if (/ISO\s+(\d+(-\d+)?)/.test(text)) {
-    const [, iso] = text.match(/ISO\s+(\d+(-\d+)?)/);
-    return `ISO.${iso}.LATEST`;
+  if (/ISO\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/.test(text)) {
+  const [, base, suffix] = text.match(/ISO\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/);
+  const years = suffix ? [...suffix.matchAll(/(\d{4})/g)].map(m => parseInt(m[1])) : [];
+  const year = years.length ? Math.max(...years) : null;
+  return `ISO.${base}${year ? `.${year}` : '.LATEST'}`;
   }
   if (/W3C\s+XML Schema/i.test(text)) {
     return 'W3C.XMLSchema-1.LATEST';
