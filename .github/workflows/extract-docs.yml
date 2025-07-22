@@ -30,6 +30,13 @@ jobs:
         run: |
           git status
           git diff
+          
+      - name: Read PR update summary
+        id: build-log
+        run: |
+          echo "summary<<EOF" >> $GITHUB_OUTPUT
+          cat pr-update-log.txt >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Commit and create PR
         uses: peter-evans/create-pull-request@v6
@@ -37,10 +44,14 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "chore: update documents.json from SMPTE sources"
           commit-options: '--allow-empty'
-          branch: update-documents-json
+          branch: update-documents-json-${{ github.run_id }}
           title: "Update documents.json"
           body: |
             This pull request updates `documents.json` using the latest SMPTE metadata extraction.
-          add-paths: src/main/output/documents.json
+
+            ${{ steps.build-log.outputs.summary }}
+          add-paths: |
+            src/main/output/documents.json
+            pr-update-log.txt
           base: main
       

@@ -126,10 +126,17 @@ if (fs.existsSync(outputPath)) {
   }
 }
 
-// Filter out any results that already exist (by docId)
-const newDocs = results.filter(
-  (doc) => !existingDocs.some((d) => d.docId === doc.docId)
-);
+const existingIds = new Set(existingDocs.map(d => d.docId));
+const newDocs = [];
+const skippedDocs = [];
+
+for (const doc of results) {
+  if (existingIds.has(doc.docId)) {
+    skippedDocs.push(doc.docId);
+  } else {
+    newDocs.push(doc);
+  }
+}
 
 const combined = [...existingDocs, ...newDocs];
 
@@ -146,6 +153,21 @@ fs.writeFileSync(
   ) + '\n'
 );
 
-console.log(`Added ${newDocs.length} new documents (total: ${combined.length})`);
+console.log(`✅ Added ${newDocs.length} new documents (total: ${combined.length})`);
+if (skippedDocs.length > 0) {
+  console.log(`⚠️ Skipped ${skippedDocs.length} duplicate docId(s):`);
+  skippedDocs.forEach(id => console.log(`  - ${id}`));
+}
+
+const prLogPath = 'pr-update-log.txt';
+const prLines = [
+  `### 🆕 Added ${newDocs.length} new document(s):`,
+  ...newDocs.map(doc => `- ${doc.docId}`),
+  '',
+  `### ⚠️ Skipped ${skippedDocs.length} duplicate(s):`,
+  ...skippedDocs.map(id => `- ${id}`),
+  ''
+];
+fs.writeFileSync(prLogPath, prLines.join('\n'));
 
 })();
