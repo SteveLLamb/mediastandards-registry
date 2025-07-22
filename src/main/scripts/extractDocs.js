@@ -16,7 +16,6 @@ const parseRefId = (text, href = '') => {
   }
   const parts = text.split('|').map(p => p.trim());
   text = parts.find(p => /ISO\/IEC|ISO/.test(p)) || parts[0];
-
   if (/SMPTE\s+(ST|RP|RDD)\s+(\d+)(-(\d+))?/.test(text)) {
     const [, type, num, , part] = text.match(/SMPTE\s+(ST|RP|RDD)\s+(\d+)(-(\d+))?/);
     return `SMPTE.${type}${part ? `${num}-${part}` : num}.LATEST`;
@@ -42,18 +41,10 @@ const parseRefId = (text, href = '') => {
     const year = years.length ? Math.max(...years) : null;
     return `IEC.${base}${year ? `.${year}` : '.LATEST'}`;
   }
-  if (/Language Subtag Registry/i.test(text)) {
-    return 'IANA.LanguageSubtagRegistry.LATEST';
-  }
-  if (/Digital Cinema Naming/i.test(text)) {
-    return 'ISDCF.DCNC.LATEST';
-  }
-  if (/Common Metadata Ratings/i.test(text)) {
-    return 'MovieLabs.Ratings.LATEST';
-  }
-  if (/UN/i.test(text)) {
-    return 'UN.M49.LATEST';
-  }
+  if (/Language Subtag Registry/i.test(text)) return 'IANA.LanguageSubtagRegistry.LATEST';
+  if (/Digital Cinema Naming/i.test(text)) return 'ISDCF.DCNC.LATEST';
+  if (/Common Metadata Ratings/i.test(text)) return 'MovieLabs.Ratings.LATEST';
+  if (/UN/i.test(text)) return 'UN.M49.LATEST';
   return null;
 };
 
@@ -87,11 +78,7 @@ const extractFromUrl = async (url) => {
   const doi = `10.5594/SMPTE.${pubType}${pubNumber}-${pubPart}.${pubDateObj.format('YYYY')}`;
   const href = `https://doi.org/${doi}`;
 
-  const refSections = {
-    normative: [],
-    bibliographic: []
-  };
-
+  const refSections = { normative: [], bibliographic: [] };
   ['normative-references', 'bibliography'].forEach((sectionId) => {
     const type = sectionId.includes('normative') ? 'normative' : 'bibliographic';
     $(`#sec-${sectionId} ul li`).each((_, el) => {
@@ -113,16 +100,11 @@ const extractFromUrl = async (url) => {
     doi: doi,
     group: `smpte-${tc.toLowerCase()}-tc`,
     publicationDate: dateFormatted,
-    publisher: "SMPTE",
+    publisher: 'SMPTE',
     href: href,
     status: { active: true },
     references: refSections
   };
-};
-
-const deepEqualUnordered = (a, b) => {
-  if (!Array.isArray(a) || !Array.isArray(b)) return false;
-  return a.length === b.length && a.every(item => b.includes(item));
 };
 
 (async () => {
@@ -137,11 +119,12 @@ const deepEqualUnordered = (a, b) => {
   }
 
   const outputPath = 'src/main/output/documents.json';
-
   let existingDocs = [];
+
   if (fs.existsSync(outputPath)) {
+    const raw = fs.readFileSync(outputPath, 'utf-8');
     try {
-      const parsed = JSON.parse(fs.readFileSync(outputPath, 'utf-8'));
+      const parsed = JSON.parse(raw);
       existingDocs = Array.isArray(parsed) ? parsed : parsed.documents || [];
     } catch (err) {
       console.error('Failed to parse existing documents.json:', err.message);
@@ -159,34 +142,23 @@ const deepEqualUnordered = (a, b) => {
       existingDocs.push(doc);
     } else {
       const existingDoc = existingDocs[index];
-      let changed = false;
+      let changedFields = [];
 
       for (const key of Object.keys(doc)) {
+        const oldVal = existingDoc[key];
         const newVal = doc[key];
-        const existingVal = existingDoc[key];
+        const isEqual = typeof newVal === 'object'
+          ? JSON.stringify(oldVal) === JSON.stringify(newVal)
+          : oldVal === newVal;
 
-        if (key === 'references') {
-          const n1 = newVal?.normative || [];
-          const n2 = existingVal?.normative || [];
-          const b1 = newVal?.bibliographic || [];
-          const b2 = existingVal?.bibliographic || [];
-
-          if (!deepEqualUnordered(n1, n2) || !deepEqualUnordered(b1, b2)) {
-            existingDoc.references = { normative: [...n1], bibliographic: [...b1] };
-            changed = true;
-          }
-        } else if (
-          typeof newVal === 'object'
-            ? JSON.stringify(existingVal) !== JSON.stringify(newVal)
-            : existingVal !== newVal
-        ) {
+        if (!isEqual) {
           existingDoc[key] = newVal;
-          changed = true;
+          changedFields.push(key);
         }
       }
 
-      if (changed) {
-        updatedDocs.push(doc.docId);
+      if (changedFields.length > 0) {
+        updatedDocs.push({ docId: doc.docId, fields: changedFields });
       } else {
         skippedDocs.push(doc.docId);
       }
@@ -195,34 +167,23 @@ const deepEqualUnordered = (a, b) => {
 
   fs.writeFileSync(
     outputPath,
-    JSON.stringify(
-      {
-        _generated: new Date().toISOString(),
-        documents: existingDocs
-      },
-      null,
-      2
-    ) + '\n'
+    JSON.stringify({ _generated: new Date().toISOString(), documents: existingDocs }, null, 2) + '\n'
   );
 
-  console.log(`✅ Added ${newDocs.length} new document(s)`);
-  console.log(`🔄 Updated ${updatedDocs.length}`);
-  if (skippedDocs.length > 0) {
-    console.log(`⚠️ Skipped ${skippedDocs.length} (unchanged):`);
-    skippedDocs.forEach(id => console.log(`  - ${id}`));
-  }
+  console.log(`✅ Added ${newDocs.length} new documents.`);
+  console.log(`🔁 Updated ${updatedDocs.length} documents.`);
+  console.log(`⚠️ Skipped ${skippedDocs.length} duplicates.`);
 
   const prLines = [
     `### 🆕 Added ${newDocs.length} new document(s):`,
     ...newDocs.map(doc => `- ${doc.docId}`),
     '',
-    `### 🔄 Updated ${updatedDocs.length} existing document(s):`,
-    ...updatedDocs.map(id => `- ${id}`),
+    `### 🔁 Updated ${updatedDocs.length} existing document(s):`,
+    ...updatedDocs.map(doc => `- ${doc.docId} (updated fields: ${doc.fields.join(', ')})`),
     '',
-    `### ⚠️ Skipped ${skippedDocs.length} (unchanged):`,
+    `### ⚠️ Skipped ${skippedDocs.length} duplicate(s):`,
     ...skippedDocs.map(id => `- ${id}`),
     ''
   ];
-
   fs.writeFileSync('pr-update-log.txt', prLines.join('\n'));
 })();
