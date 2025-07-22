@@ -4,7 +4,17 @@ const dayjs = require('dayjs');
 
 const urls = require('../input/urls.json');
 
-const parseRefId = (text) => {
+const parseRefId = (text, href = '') => {
+  // W3C dated snapshot
+  if (/w3\.org\/TR\/\d{4}\/REC-([^\/]+)-(\d{8})\//i.test(href)) {
+    const [, shortname, yyyymmdd] = href.match(/REC-([^\/]+)-(\d{8})/i);
+    return `${shortname}.${yyyymmdd}`;
+  }
+  // W3C latest edition
+  if (/w3\.org\/TR\/([^\/]+)\/?$/i.test(href)) {
+    const [, shortname] = href.match(/w3\.org\/TR\/([^\/]+)\/?$/i);
+    return `${shortname}.LATEST`;
+  }
   // Handle dual refs like "Rec. ITU-T T.814 | ISO/IEC 15444-15:2012+A1:2017"
   const parts = text.split('|').map(p => p.trim());
   text = parts.find(p => /ISO\/IEC|ISO/.test(p)) || parts[0];  // Prefer ISO part if present
@@ -27,9 +37,7 @@ const parseRefId = (text) => {
   const year = years.length ? Math.max(...years) : null;
   return `ISO.${base}${year ? `.${year}` : '.LATEST'}`;
   }
-  if (/W3C\s+XML Schema/i.test(text)) {
-    return 'W3C.XMLSchema-1.LATEST';
-  }
+
   if (/Language Subtag Registry/i.test(text)) {
     return 'IANA.LanguageSubtagRegistry.LATEST';
   }
@@ -82,9 +90,11 @@ const extractFromUrl = async (url) => {
 
   ['normative-references', 'bibliography'].forEach((sectionId) => {
     const type = sectionId.includes('normative') ? 'normative' : 'bibliographic';
-    $(`#sec-${sectionId} ul li cite`).each((_, el) => {
-      const refText = $(el).text();
-      const refId = parseRefId(refText);
+    $(`#sec-${sectionId} ul li`).each((_, el) => {
+      const cite = $(el).find('cite');
+      const refText = cite.text();
+      const href = $(el).find('a.ext-ref').attr('href') || '';
+      const refId = parseRefId(refText, href);
       if (refId) refSections[type].push(refId);
     });
   });
