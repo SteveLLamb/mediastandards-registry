@@ -111,16 +111,41 @@ const extractFromUrl = async (url) => {
   }
 
 const fs = require('fs');
+const outputPath = 'src/main/output/documents.json';
+
+let existingDocs = [];
+if (fs.existsSync(outputPath)) {
+  const raw = fs.readFileSync(outputPath, 'utf-8');
+  try {
+    const parsed = JSON.parse(raw);
+    existingDocs = Array.isArray(parsed)
+      ? parsed
+      : parsed.documents || [];
+  } catch (err) {
+    console.error('Failed to parse existing documents.json:', err.message);
+  }
+}
+
+// Filter out any results that already exist (by docId)
+const newDocs = results.filter(
+  (doc) => !existingDocs.some((d) => d.docId === doc.docId)
+);
+
+const combined = [...existingDocs, ...newDocs];
+
+// Write updated file
 fs.writeFileSync(
-  'src/main/output/documents.json',
+  outputPath,
   JSON.stringify(
     {
       _generated: new Date().toISOString(),
-      documents: results
+      documents: combined
     },
     null,
     2
   ) + '\n'
 );
+
+console.log(`Added ${newDocs.length} new documents (total: ${combined.length})`);
 
 })();
