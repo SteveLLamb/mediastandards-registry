@@ -3,6 +3,10 @@ name: Extract SMPTE Documents
 on:
   workflow_dispatch:  # Manual trigger from GitHub UI
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   extract:
     runs-on: ubuntu-latest
@@ -20,10 +24,23 @@ jobs:
         run: npm install axios cheerio dayjs
 
       - name: Run extraction
-        run: node src/main/scripts/extractDocs.js > src/main/output/documents.json
+        run: node src/main/scripts/extractDocs.js
 
-      - name: Upload output
-        uses: actions/upload-artifact@v4
+      - name: Canonicalize JSON
+        run: npm run canonicalize
+
+      - name: Validate output
+        run: node src/main/scripts/validate.js src/main/output/documents.json
+
+      - name: Commit and create PR
+        uses: peter-evans/create-pull-request@v6
         with:
-          name: documents-json
-          path: src/main/output/documents.json
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "chore: update documents.json from SMPTE sources"
+          branch: update-documents-json
+          title: "Update documents.json"
+          body: |
+            This pull request updates `documents.json` using the latest SMPTE metadata extraction.
+          add-paths: output/documents.json
+          base: main
+      
