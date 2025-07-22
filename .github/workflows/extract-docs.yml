@@ -24,7 +24,7 @@ jobs:
         run: npm install axios cheerio dayjs
 
       - name: Run extraction
-        run: node src/main/scripts/extractDocs.js
+        run: node src/main/scripts/extractDocs.js > src/main/output/documents.json
 
       - name: Canonicalize JSON
         run: npm run canonicalize
