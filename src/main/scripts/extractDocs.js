@@ -220,4 +220,5 @@ const extractFromUrl = async (url) => {
   }
 
   fs.writeFileSync('pr-update-log.txt', prLines.join('\n'));
+  
 })();
