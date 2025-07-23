@@ -53,7 +53,7 @@ const parseRefId = (text, href = '') => {
   return null;
 };
 
-constconst extractFromUrl = async (rootUrl) => {
+const extractFromUrl = async (rootUrl) => {
   const res = await axios.get(rootUrl);
   const $ = cheerio.load(res.data);
 
