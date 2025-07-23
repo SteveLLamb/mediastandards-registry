@@ -64,12 +64,15 @@ const extractFromUrl = async (url) => {
   const suiteTitle = $('[itemprop="pubSuiteTitle"]').attr('content');
   const title = $('title').text().trim();
   const tc = $('[itemprop="pubTC"]').attr('content');
-
+  const pubStage = $('[itemprop="pubStage"]').attr('content') || '';
+  const pubState = $('[itemprop="pubState"]').attr('content') || '';
+  const isActive = pubStage.toUpperCase() === 'PUB' && pubState.toLowerCase() === 'pub';
   const pubDateObj = dayjs(pubDate);
   const dateFormatted = pubDateObj.format('YYYY-MM-DD');
   const dateShort = pubDateObj.format('YYYY-MM');
 
   const typeMap = {
+    AG: 'Administrative Guideline',
     ST: 'Standard',
     RP: 'Recommended Practice',
     EG: 'Engineering Guideline',
@@ -116,7 +119,7 @@ const extractFromUrl = async (url) => {
     publicationDate: dateFormatted,
     publisher: 'SMPTE',
     href: href,
-    status: { active: true },
+    status: { active: isActive },
     references: refSections
   };
 };
