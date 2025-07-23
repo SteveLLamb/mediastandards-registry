@@ -28364,21 +28364,21 @@
     "docTitle": "D-Cinema Packaging MXF JPEG 2000 Application",
     "docType": "Recommended Practice",
     "group": "smpte-27c-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST429-4.2023",
     "publicationDate": "2023-05-04",
     "publisher": "SMPTE",
-    "href": "https://doi.org/10.5594/SMPTE.ST429-4.2023",
-    "status": {
-      "active": true
-    },
     "references": {
+      "bibliographic": [
+        "ISO.646.LATEST"
+      ],
       "normative": [
         "SMPTE.ST377-1.2011",
         "SMPTE.ST429-3.LATEST",
         "ISO.15444-1.LATEST"
-      ],
-      "bibliographic": [
-        "ISO.646.LATEST"
       ]
+    },
+    "status": {
+      "active": true
     }
   },
   {
@@ -28946,13 +28946,13 @@
     "repo": "https://github.com/SMPTE/st430-1",
     "status": {
       "active": false,
-      "superseded": true,
-      "supersededBy": [
-        "SMPTE.ST430-1.2023-09"
-      ],
       "amended": true,
       "amendedBy": [
         "SMPTE.ST430-1.2017Am1.2019"
+      ],
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST430-1.2023-09"
       ]
     },
     "workInfo": {
@@ -29034,13 +29034,14 @@
     "docType": "Standard",
     "doi": "10.5594/SMPTE.ST430-1.2023",
     "group": "smpte-27c-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST430-1.2023",
     "publicationDate": "2023-09-07",
     "publisher": "SMPTE",
-    "href": "https://doi.org/10.5594/SMPTE.ST430-1.2023",
-    "status": {
-      "active": true
-    },
     "references": {
+      "bibliographic": [
+        "SMPTE.ST429-7.LATEST",
+        "SMPTE.ST429-14.LATEST"
+      ],
       "normative": [
         "SMPTE.ST429-6.LATEST",
         "SMPTE.ST430-2.LATEST",
@@ -29053,11 +29054,10 @@
         "xml.LATEST",
         "xmlschema-1.LATEST",
         "xmldsig-core1.LATEST"
-      ],
-      "bibliographic": [
-        "SMPTE.ST429-7.LATEST",
-        "SMPTE.ST429-14.LATEST"
       ]
+    },
+    "status": {
+      "active": true
     }
   },
   {
