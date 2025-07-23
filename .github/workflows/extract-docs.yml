@@ -42,7 +42,7 @@ jobs:
 
       - name: Set timestamp env var
         id: timestamp
-        run: echo "ts=$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_ENV
+        run: echo "ts=$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_OUTPUT
 
       - name: Commit and create PR
         uses: peter-evans/create-pull-request@v6
@@ -51,7 +51,7 @@ jobs:
           commit-message: "chore: update documents.json from SMPTE sources"
           commit-options: '--allow-empty'
           branch: update-documents-json-${{ github.run_id }}
-          title: "Update documents.json - ${{ steps.timestamp.outputs.ts }}"
+          title: "Update documents.json - ${{ env.ts }}"
           body: ${{ steps.prlog.outputs.body }}
           add-paths: |
             src/main/output/documents.json
