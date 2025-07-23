@@ -78,7 +78,14 @@ const extractFromUrl = async (rootUrl) => {
   for (const releaseTag of folderLinks) {
     const indexUrl = `${rootUrl}${releaseTag}/index.html`;
     try {
-      const indexRes = await axios.get(indexUrl);
+      const indexRes = await axios.get(indexUrl, { responseType: 'text' });
+
+      const contentType = indexRes.headers['content-type'] || '';
+      if (contentType.includes('application/pdf')) {
+        console.warn(`📄 Skipping PDF release at ${releaseTag} (content-type: ${contentType})`);
+        continue;
+      }
+
       const $index = cheerio.load(indexRes.data);
 
       const pubType = $index('[itemprop="pubType"]').attr('content');
@@ -161,22 +168,12 @@ const extractFromUrl = async (rootUrl) => {
 (async () => {
   const results = [];
 
-  for (const link of releaseLinks) {
-    const releaseTag = link.replace(/\/$/, ''); // trim trailing slash
-    const indexUrl = `${releaseTag}/index.html`;
-
+  for (const url of urls) {
     try {
-      const res = await axios.get(indexUrl, { responseType: 'text' });
-
-      const contentType = res.headers['content-type'] || '';
-      if (contentType.includes('application/pdf')) {
-        console.warn(`📄 Skipping PDF-based release at ${releaseTag}`);
-        continue; // skip this release
-      }
-
-      urlsToParse.push(indexUrl);
-    } catch (err) {
-      console.warn(`⚠️ Failed to check ${indexUrl}: ${err.message}`);
+      const docs = await extractFromUrl(url);  // extractFromUrl now returns an array
+      results.push(...docs);                   // flatten and add all versions
+    } catch (e) {
+      console.error(`❌ Failed to process ${url}:`, e.message);
     }
   }
 
