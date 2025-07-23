@@ -31,10 +31,12 @@ jobs:
           git status
           git diff
 
-      - name: Read PR update summary
+      - name: Read PR log
         id: prlog
         run: |
-          echo "body=$(cat pr-update-log.txt | sed -z 's/\n/%0A/g')" >> $GITHUB_OUTPUT
+          echo "body<<EOF" >> $GITHUB_OUTPUT
+          cat pr-update-log.txt >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Set timestamp env var
         id: timestamp
