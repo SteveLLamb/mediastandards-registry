@@ -152,6 +152,12 @@ const extractFromUrl = async (url) => {
           : oldVal === newVal;
 
         if (!isEqual) {
+          if (key === 'references') {
+            const oldRefs = existingDoc.references || { normative: [], bibliographic: [] };
+            const newRefs = newVal || { normative: [], bibliographic: [] };
+            addedRefs.normative = newRefs.normative.filter(ref => !oldRefs.normative.includes(ref));
+            addedRefs.bibliographic = newRefs.bibliographic.filter(ref => !oldRefs.bibliographic.includes(ref));
+          }
           existingDoc[key] = newVal;
           changedFields.push(key);
         }
