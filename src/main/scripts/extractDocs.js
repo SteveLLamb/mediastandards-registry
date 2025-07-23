@@ -237,14 +237,14 @@ const extractFromUrl = async (url) => {
       const norm = doc.addedRefs.normative;
       const bibl = doc.addedRefs.bibliographic;
       if (norm.length || bibl.length) {
-        if (norm.length) lines.push(`  - ➕ Normative Ref added: ${norm.join(', ')}`);
-        if (bibl.length) lines.push(`  - ➕ Bibliographic Ref added: ${bibl.join(', ')}`);
+        if (norm.length) lines.push(`  - ➕ Normative Ref added: ${norm.join('\r')}`);
+        if (bibl.length) lines.push(`  - ➕ Bibliographic Ref added: ${bibl.join('\r')}`);
       }
 
       // Log removed references
       if (doc.removedRefs.normative.length || doc.removedRefs.bibliographic.length) {
-        if (doc.removedRefs.normative.length) lines.push(`  - ➖ Normative Ref removed: ${doc.removedRefs.normative.join(', ')}`);
-        if (doc.removedRefs.bibliographic.length) lines.push(`  - ➖ Bibliographic Ref removed: ${doc.removedRefs.bibliographic.join(', ')}`);
+        if (doc.removedRefs.normative.length) lines.push(`  - ➖ Normative Ref removed: ${doc.removedRefs.normative.join('\r')}`);
+        if (doc.removedRefs.bibliographic.length) lines.push(`  - ➖ Bibliographic Ref removed: ${doc.removedRefs.bibliographic.join('\r')}`);
       }
       return lines;
     }),
