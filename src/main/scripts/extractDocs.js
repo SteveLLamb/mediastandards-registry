@@ -178,10 +178,10 @@ const extractFromUrl = async (url) => {
 
   for (const url of urls) {
     try {
-      const docs = await extractFromUrl(url);  // extractFromUrl now returns an array
-      results.push(...docs);                   // flatten and add all versions
+      const doc = await extractFromUrl(url);
+      if (doc) results.push(doc); // Only push valid (non-null) docs
     } catch (e) {
-      console.error(`❌ Failed to process ${url}:`, e.message);
+      console.error(`Failed to process ${url}:`, e.message);
     }
   }
 
