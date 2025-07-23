@@ -157,16 +157,8 @@ const extractFromUrl = async (url) => {
         }
       }
 
-      let addedRefs = { normative: [], bibliographic: [] };
-      if (changedFields.includes('references')) {
-        const oldRefs = existingDoc.references || { normative: [], bibliographic: [] };
-        const newRefs = doc.references;
-        addedRefs.normative = newRefs.normative.filter(ref => !oldRefs.normative.includes(ref));
-        addedRefs.bibliographic = newRefs.bibliographic.filter(ref => !oldRefs.bibliographic.includes(ref));
-      }
-
       if (changedFields.length > 0) {
-        updatedDocs.push({ docId: doc.docId, fields: changedFields, addedRefs });
+        updatedDocs.push({ docId: doc.docId, fields: changedFields });
       } else {
         skippedDocs.push(doc.docId);
       }
@@ -193,18 +185,5 @@ const extractFromUrl = async (url) => {
     ...skippedDocs.map(id => `- ${id}`),
     ''
   ];
-
-  const refLines = updatedDocs
-    .filter(d => (d.addedRefs?.normative?.length || d.addedRefs?.bibliographic?.length))
-    .map(d => {
-      const norm = d.addedRefs.normative.length ? `Normative: ${d.addedRefs.normative.join(', ')}` : '';
-      const bibl = d.addedRefs.bibliographic.length ? `Bibliographic: ${d.addedRefs.bibliographic.join(', ')}` : '';
-      return `- ${d.docId} → ${[norm, bibl].filter(Boolean).join(' | ')}`;
-    });
-
-  if (refLines.length) {
-    prLines.push('### 📎 Reference additions:', ...refLines, '');
-  }
-
   fs.writeFileSync('pr-update-log.txt', prLines.join('\n'));
 })();
