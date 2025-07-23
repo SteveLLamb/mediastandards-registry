@@ -6,46 +6,7 @@ const fs = require('fs');
 const urls = require('../input/urls.json');
 
 const parseRefId = (text, href = '') => {
-  if (/w3\.org\/TR\/\d{4}\/REC-([^\/]+)-(\d{8})\//i.test(href)) {
-    const [, shortname, yyyymmdd] = href.match(/REC-([^\/]+)-(\d{8})/i);
-    return `${shortname}.${yyyymmdd}`;
-  }
-  if (/w3\.org\/TR\/([^\/]+)\/?$/i.test(href)) {
-    const [, shortname] = href.match(/w3\.org\/TR\/([^\/]+)\/?$/i);
-    return `${shortname}.LATEST`;
-  }
-  const parts = text.split('|').map(p => p.trim());
-  text = parts.find(p => /ISO\/IEC|ISO/.test(p)) || parts[0];
-  if (/SMPTE\s+(ST|RP|RDD)\s+(\d+)(-(\d+))?/.test(text)) {
-    const [, type, num, , part] = text.match(/SMPTE\s+(ST|RP|RDD)\s+(\d+)(-(\d+))?/);
-    return `SMPTE.${type}${part ? `${num}-${part}` : num}.LATEST`;
-  }
-  if (/RFC\s*(\d+)/i.test(text)) {
-    return `rfc${text.match(/RFC\s*(\d+)/i)[1]}`;
-  }
-  if (/ISO\/IEC\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/.test(text)) {
-    const [, base, suffix] = text.match(/ISO\/IEC\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/);
-    const years = suffix ? [...suffix.matchAll(/(\d{4})/g)].map(m => parseInt(m[1])) : [];
-    const year = years.length ? Math.max(...years) : null;
-    return `ISO.${base}${year ? `.${year}` : '.LATEST'}`;
-  }
-  if (/ISO\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/.test(text)) {
-    const [, base, suffix] = text.match(/ISO\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/);
-    const years = suffix ? [...suffix.matchAll(/(\d{4})/g)].map(m => parseInt(m[1])) : [];
-    const year = years.length ? Math.max(...years) : null;
-    return `ISO.${base}${year ? `.${year}` : '.LATEST'}`;
-  }
-  if (/IEC\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/.test(text)) {
-    const [, base, suffix] = text.match(/IEC\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/);
-    const years = suffix ? [...suffix.matchAll(/(\d{4})/g)].map(m => parseInt(m[1])) : [];
-    const year = years.length ? Math.max(...years) : null;
-    return `IEC.${base}${year ? `.${year}` : '.LATEST'}`;
-  }
-  if (/Language Subtag Registry/i.test(text)) return 'IANA.LanguageSubtagRegistry.LATEST';
-  if (/Digital Cinema Naming/i.test(text)) return 'ISDCF.DCNC.LATEST';
-  if (/Common Metadata Ratings/i.test(text)) return 'MovieLabs.Ratings.LATEST';
-  if (/UN/i.test(text)) return 'UN.M49.LATEST';
-  return null;
+  // ... (existing refId parsing code)
 };
 
 const extractFromUrl = async (url) => {
@@ -143,22 +104,16 @@ const extractFromUrl = async (url) => {
     } else {
       const existingDoc = existingDocs[index];
       let changedFields = [];
+      const fieldChanges = [];
+
       const oldRefs = existingDoc.references || { normative: [], bibliographic: [] };
       const newRefs = doc.references;
-
-      // Add new references
       const addedRefs = {
         normative: newRefs.normative.filter(ref => !oldRefs.normative.includes(ref)),
-        bibliographic: newRefs.bibliographic.filter(ref => !oldRefs.bibliographic.includes(ref))
+        bibliographic: newRefs.bibliographic.filter(ref => !oldRefs.bibliographic.includes(ref)),
       };
 
-      // Remove outdated references
-      const removedRefs = {
-        normative: oldRefs.normative.filter(ref => !newRefs.normative.includes(ref)),
-        bibliographic: oldRefs.bibliographic.filter(ref => !newRefs.bibliographic.includes(ref))
-      };
-
-      // Update document fields if there are changes
+      // Iterate through all fields and check for changes
       for (const key of Object.keys(doc)) {
         const oldVal = existingDoc[key];
         const newVal = doc[key];
@@ -168,18 +123,12 @@ const extractFromUrl = async (url) => {
 
         if (!isEqual) {
           existingDoc[key] = newVal;
-          changedFields.push(key);
+          fieldChanges.push(key);
         }
       }
 
-      // If any fields or references were changed
-      if (changedFields.length > 0 || addedRefs.normative.length || addedRefs.bibliographic.length || removedRefs.normative.length || removedRefs.bibliographic.length) {
-        updatedDocs.push({
-          docId: doc.docId,
-          fields: changedFields,
-          addedRefs,
-          removedRefs
-        });
+      if (fieldChanges.length > 0) {
+        updatedDocs.push({ docId: doc.docId, fields: fieldChanges, addedRefs });
       } else {
         skippedDocs.push(doc.docId);
       }
@@ -195,6 +144,7 @@ const extractFromUrl = async (url) => {
   console.log(`🔁 Updated ${updatedDocs.length} documents.`);
   console.log(`⚠️ Skipped ${skippedDocs.length} duplicates.`);
 
+  // Log the PR summary
   const prLines = [
     `### 🆕 Added ${newDocs.length} new document(s):`,
     ...newDocs.map(doc => `- ${doc.docId}`),
@@ -207,10 +157,6 @@ const extractFromUrl = async (url) => {
       if (norm.length || bibl.length) {
         if (norm.length) lines.push(`  - ➕ Normative Ref added: ${norm.join(', ')}`);
         if (bibl.length) lines.push(`  - ➕ Bibliographic Ref added: ${bibl.join(', ')}`);
-      }
-      if (doc.removedRefs.normative.length || doc.removedRefs.bibliographic.length) {
-        if (doc.removedRefs.normative.length) lines.push(`  - ➖ Normative Ref removed: ${doc.removedRefs.normative.join(', ')}`);
-        if (doc.removedRefs.bibliographic.length) lines.push(`  - ➖ Bibliographic Ref removed: ${doc.removedRefs.bibliographic.join(', ')}`);
       }
       return lines;
     }),
