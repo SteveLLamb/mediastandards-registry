@@ -163,6 +163,8 @@ const extractFromUrl = async (url) => {
         bibliographic: oldRefs.bibliographic.filter(ref => !newRefs.bibliographic.includes(ref))
       };
 
+      existingDoc.references = newRefs;
+
       // Update document fields if there are changes
       for (const key of Object.keys(doc)) {
         const oldVal = oldValues[key];  // Use old captured value
