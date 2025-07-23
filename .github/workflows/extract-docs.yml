@@ -26,12 +26,22 @@ jobs:
       - name: Run extraction
         run: node src/main/scripts/extractDocs.js
 
+      - name: Check if PR should be skipped
+        id: skipcheck
+        run: |
+          if [ -f skip-pr-flag.txt ]; then
+            echo "skip=true" >> $GITHUB_OUTPUT
+          else
+            echo "skip=false" >> $GITHUB_OUTPUT
+          fi
+
       - name: Show diff for debugging
         run: |
           git status
           git diff
 
       - name: Read PR log
+        if: steps.skipcheck.outputs.skip == 'false'
         id: prlog
         run: |
           {
@@ -41,10 +51,12 @@ jobs:
           } >> $GITHUB_OUTPUT
 
       - name: Set timestamp env var
+        if: steps.skipcheck.outputs.skip == 'false'
         id: timestamp
         run: echo "ts=$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_ENV
 
       - name: Commit and create PR
+        if: steps.skipcheck.outputs.skip == 'false'
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}

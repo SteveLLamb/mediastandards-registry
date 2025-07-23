@@ -183,8 +183,9 @@ const extractFromUrl = async (url) => {
 
   if (newDocs.length === 0 && updatedDocs.length === 0) {
   console.log('ℹ️ No new or updated documents — skipping PR creation.');
-  process.exit(0);
-}
+    fs.writeFileSync('skip-pr-flag.txt', 'true');
+    process.exit(0);
+  }
 
   const prLines = [
     `### 🆕 Added ${newDocs.length} new document(s):`,
@@ -208,4 +209,7 @@ const extractFromUrl = async (url) => {
   ];
 
   fs.writeFileSync('pr-update-log.txt', prLines.join('\n'));
+
+  
+
 })();
