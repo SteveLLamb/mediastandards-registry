@@ -170,8 +170,11 @@ const extractFromUrl = async (url) => {
           : oldVal === newVal;
 
         if (!isEqual) {
-          existingDoc[key] = newVal;  // Now update the value
-          changedFields.push(key);
+          // Skip references logging in field updates
+          if (key !== 'references') {
+            existingDoc[key] = newVal;  // Now update the value
+            changedFields.push(key);
+          }
         }
       }
 
