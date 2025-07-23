@@ -76,28 +76,9 @@ const extractFromUrl = async (rootUrl) => {
   const docs = [];
 
   for (const releaseTag of folderLinks) {
-  const releaseUrl = `${rootUrl}${releaseTag}/`;
-
-  try {
-    const releaseRes = await axios.get(releaseUrl);
-    const $release = cheerio.load(releaseRes.data);
-
-    // Look for any PDF links in the folder
-    const pdfLink = $release('a[href$=".pdf"]').attr('href');
-    if (pdfLink) {
-      console.warn(`📄 Found PDF in ${releaseTag}, skipping HTML parse`);
-      continue;
-    }
-
-    const indexUrl = `${releaseUrl}index.html`;
-    const indexRes = await axios.get(indexUrl, { responseType: 'text' });
-
-      const contentType = indexRes.headers['content-type'] || '';
-      if (contentType.includes('application/pdf')) {
-        console.warn(`📄 Skipping PDF release at ${releaseTag} (content-type: ${contentType})`);
-        continue;
-      }
-
+    const indexUrl = `${rootUrl}${releaseTag}/index.html`;
+    try {
+      const indexRes = await axios.get(indexUrl);
       const $index = cheerio.load(indexRes.data);
 
       const pubType = $index('[itemprop="pubType"]').attr('content');
