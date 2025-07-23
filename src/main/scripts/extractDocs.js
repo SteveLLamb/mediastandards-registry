@@ -208,7 +208,14 @@ const extractFromUrl = async (url) => {
     `### 🔁 Updated ${updatedDocs.length} existing document(s):`,
     ...updatedDocs.flatMap(doc => {
       const lines = [`- ${doc.docId} (updated fields: ${doc.fields.join(', ')})`];
-      
+
+      // Log field updates with old and new values
+      doc.fields.forEach(field => {
+        const oldVal = existingDocs.find(d => d.docId === doc.docId)[field];  // Get the old value
+        const newVal = doc[field];  // Get the new value
+        lines.push(`  - ${field} updated: "${oldVal}" > "${newVal}"`);
+      });
+
       // Log added references
       const norm = doc.addedRefs.normative;
       const bibl = doc.addedRefs.bibliographic;
