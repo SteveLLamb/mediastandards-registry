@@ -24,6 +24,10 @@ const parseRefId = (text, href = '') => {
   if (/RFC\s*(\d+)/i.test(text)) {
     return `rfc${text.match(/RFC\s*(\d+)/i)[1]}`;
   }
+  if (/10\.6028\/NIST\.(.+)/i.test(href)) {
+    const [, id] = href.match(/10\.6028\/NIST\.(.+)/i);
+    return `NIST.${id}`;
+  }
   if (/ISO\/IEC\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/.test(text)) {
     const [, base, suffix] = text.match(/ISO\/IEC\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/);
     const years = suffix ? [...suffix.matchAll(/(\d{4})/g)].map(m => parseInt(m[1])) : [];

@@ -2431,9 +2431,9 @@
     "references": {
       "bibliographic": [
         "iana-pn",
-        "NIST.FIPS.140-1.1994",
-        "NIST.FIPS.197.2001",
-        "NIST.FIPS.46-3.1999",
+        "NIST.FIPS.140-1",
+        "NIST.FIPS.197",
+        "NIST.FIPS.46-3",
         "rfc3280",
         "x509.199706"
       ],
@@ -2470,10 +2470,10 @@
         "SMPTE.ST433.LATEST",
         "SMPTE.ST429-5.LATEST",
         "SMPTE.ST430-3.LATEST",
-        "NIST.FIPS.140-2.2001",
-        "NIST.FIPS.140-3.2019",
-        "NIST.FIPS.198-1.2008",
-        "NIST.FIPS.186-4.2013",
+        "NIST.FIPS.140-2",
+        "NIST.FIPS.140-3",
+        "NIST.FIPS.198-1",
+        "NIST.FIPS.186-4",
         "rfc4122",
         "rfc8446",
         "rfc2246",
@@ -6227,9 +6227,9 @@
         "SMPTE.ST429-3.2006",
         "rfc2898",
         "rfc2104",
-        "NIST.SP.800-38A.2001",
-        "NIST.FIPS.197.2001",
-        "NIST.FIPS.186-2.2001"
+        "NIST.SP.800-38A",
+        "NIST.FIPS.197",
+        "NIST.FIPS.186-2"
       ]
     },
     "relatedDocs": [
@@ -6455,7 +6455,7 @@
       "normative": [
         "ISO.8824-1.2002",
         "rfc1521",
-        "NIST.FIPS.180-2.2002",
+        "NIST.FIPS.180-2",
         "rfc3447",
         "rfc4055",
         "rfc3280",
@@ -6501,9 +6501,9 @@
     "references": {
       "normative": [
         "SMPTE.ST430-2.2006",
-        "NIST.FIPS.180-2.2002",
-        "NIST.FIPS.197.2001",
-        "NIST.FIPS.198.2002",
+        "NIST.FIPS.180-2",
+        "NIST.FIPS.197",
+        "NIST.FIPS.198",
         "rfc3447",
         "rfc2253",
         "rfc4051",
@@ -6559,7 +6559,7 @@
         "rfc3275",
         "SMPTE.ST433.2008",
         "SMPTE.ST430-2.2006",
-        "NIST.FIPS.180-1.1995",
+        "NIST.FIPS.180-1",
         "rfc2253"
       ]
     },
@@ -10061,7 +10061,7 @@
     }
   },
   {
-    "docId": "NIST.FIPS.140-1.1994",
+    "docId": "NIST.FIPS.140-1",
     "docLabel": "FIPS 140-1",
     "docNumber": "140",
     "docTitle": "Security Requirements for Cryptographic Modules",
@@ -10074,12 +10074,12 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "NIST.FIPS.140-3.2019"
+        "NIST.FIPS.140-3"
       ]
     }
   },
   {
-    "docId": "NIST.FIPS.140-2.2001",
+    "docId": "NIST.FIPS.140-2",
     "docLabel": "FIPS 140-2",
     "docNumber": "140",
     "docTitle": "Security Requirements for Cryptographic Modules",
@@ -10092,12 +10092,12 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "NIST.FIPS.140-3.2019"
+        "NIST.FIPS.140-3"
       ]
     }
   },
   {
-    "docId": "NIST.FIPS.140-3.2019",
+    "docId": "NIST.FIPS.140-3",
     "docLabel": "FIPS 140-3",
     "docNumber": "140",
     "docTitle": "Security Requirements for Cryptographic Modules",
@@ -10111,7 +10111,7 @@
     }
   },
   {
-    "docId": "NIST.FIPS.180-1.1995",
+    "docId": "NIST.FIPS.180-1",
     "docLabel": "FIPS 180-1",
     "docNumber": "180",
     "docTitle": "Secure Hash Standard (SHS) - SHA1",
@@ -10124,13 +10124,13 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "NIST.FIPS.180-2.2002"
+        "NIST.FIPS.180-2"
       ],
       "withdrawn": true
     }
   },
   {
-    "docId": "NIST.FIPS.180-2.2002",
+    "docId": "NIST.FIPS.180-2",
     "docLabel": "FIPS 180-2",
     "docNumber": "180",
     "docTitle": "Secure Hash Standard (SHS)",
@@ -10142,13 +10142,13 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "NIST.FIPS.180-3.2008"
+        "NIST.FIPS.180-3"
       ],
       "withdrawn": true
     }
   },
   {
-    "docId": "NIST.FIPS.180-3.2008",
+    "docId": "NIST.FIPS.180-3",
     "docLabel": "FIPS 180-3",
     "docNumber": "180",
     "docTitle": "Secure Hash Standard (SHS)",
@@ -10160,13 +10160,13 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "NIST.FIPS.180-4.2015"
+        "NIST.FIPS.180-4"
       ],
       "withdrawn": true
     }
   },
   {
-    "docId": "NIST.FIPS.180-4.2015",
+    "docId": "NIST.FIPS.180-4",
     "docLabel": "FIPS 180-4",
     "docNumber": "180",
     "docTitle": "Secure Hash Standard (SHS)",
@@ -10180,7 +10180,7 @@
     }
   },
   {
-    "docId": "NIST.FIPS.186-2.2001",
+    "docId": "NIST.FIPS.186-2",
     "docLabel": "FIPS PUB 186-2",
     "docNumber": "186",
     "docTitle": "Digital Signature Standard (DSS)",
@@ -10192,13 +10192,13 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "NIST.FIPS.186-3.2009"
+        "NIST.FIPS.186-3"
       ],
       "withdrawn": true
     }
   },
   {
-    "docId": "NIST.FIPS.186-3.2009",
+    "docId": "NIST.FIPS.186-3",
     "docLabel": "FIPS 186-3",
     "docNumber": "186",
     "docTitle": "Digital Signature Standard (DSS)",
@@ -10210,13 +10210,13 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "NIST.FIPS.186-4.2013"
+        "NIST.FIPS.186-4"
       ],
       "withdrawn": true
     }
   },
   {
-    "docId": "NIST.FIPS.186-4.2013",
+    "docId": "NIST.FIPS.186-4",
     "docLabel": "FIPS 186-4",
     "docNumber": "186",
     "docTitle": "Digital Signature Standard (DSS)",
@@ -10230,7 +10230,7 @@
     }
   },
   {
-    "docId": "NIST.FIPS.197.2001",
+    "docId": "NIST.FIPS.197",
     "docLabel": "FIPS 197",
     "docNumber": "197",
     "docTitle": "Advanced Encryption Standard (AES)",
@@ -10244,7 +10244,25 @@
     }
   },
   {
-    "docId": "NIST.FIPS.198-1.2008",
+    "docId": "NIST.FIPS.198",
+    "docLabel": "FIPS 198",
+    "docNumber": "198",
+    "docTitle": "The Keyed-Hash Message Authentication Code (HMAC)",
+    "docType": "Standard",
+    "href": "https://csrc.nist.gov/CSRC/media/Publications/fips/198/archive/2002-03-06/documents/fips-198a.pdf",
+    "publicationDate": "2002-03-06",
+    "publisher": "NIST",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "NIST.FIPS.198-1"
+      ],
+      "withdrawn": true
+    }
+  },
+  {
+    "docId": "NIST.FIPS.198-1",
     "docLabel": "FIPS 198-1",
     "docNumber": "198",
     "docTitle": "The Keyed-Hash Message Authentication Code (HMAC)",
@@ -10258,25 +10276,7 @@
     }
   },
   {
-    "docId": "NIST.FIPS.198.2002",
-    "docLabel": "FIPS 198",
-    "docNumber": "198",
-    "docTitle": "The Keyed-Hash Message Authentication Code (HMAC)",
-    "docType": "Standard",
-    "href": "https://csrc.nist.gov/CSRC/media/Publications/fips/198/archive/2002-03-06/documents/fips-198a.pdf",
-    "publicationDate": "2002-03-06",
-    "publisher": "NIST",
-    "status": {
-      "active": false,
-      "superseded": true,
-      "supersededBy": [
-        "NIST.FIPS.198-1.2008"
-      ],
-      "withdrawn": true
-    }
-  },
-  {
-    "docId": "NIST.FIPS.46-3.1999",
+    "docId": "NIST.FIPS.46-3",
     "docLabel": "FIPS 46-3",
     "docNumber": "46",
     "docTitle": "Data Encryption Standard (DES)",
@@ -10291,7 +10291,7 @@
     }
   },
   {
-    "docId": "NIST.KMGD.2002",
+    "docId": "NIST.KMGD",
     "docLabel": "NIST KMGD",
     "docTitle": "Key Management Guideline Draft, June 3, 2002",
     "docType": "Guideline",
@@ -10302,7 +10302,7 @@
     }
   },
   {
-    "docId": "NIST.SP.800-38A.2001",
+    "docId": "NIST.SP.800-38A",
     "docLabel": "NIST SP 800-38A",
     "docNumber": "800-38A",
     "docTitle": "Recommendation for Block Cipher Modes of Operation: Methods and Techniques",
@@ -10315,12 +10315,12 @@
       "active": true,
       "amended": true,
       "amendedBy": [
-        "NIST.SP.800-38A.2001ad1.2010"
+        "NIST.SP.800-38Aad1"
       ]
     }
   },
   {
-    "docId": "NIST.SP.800-38A.2001ad1.2010",
+    "docId": "NIST.SP.800-38Aad1",
     "docLabel": "NIST SP 800-38A Addendum",
     "docNumber": "800-38A",
     "docTitle": "Recommendation for Block Cipher Modes of Operation: Three Variants of Ciphertext Stealing for CBC Mode",
@@ -10334,7 +10334,7 @@
     }
   },
   {
-    "docId": "NIST.SP.800-57p1.2007",
+    "docId": "NIST.SP.800-57p1r2007",
     "docLabel": "NIST SP 800-57 Part 1 Revised",
     "docNumber": "800-57",
     "docPart": "1",
@@ -10348,13 +10348,53 @@
       "active": false,
       "superseded": true,
       "supersededBy": [
-        "NIST.SP.800-57p1.2020"
+        "NIST.SP.800-57pt1r5"
       ],
       "withdrawn": true
     }
   },
   {
-    "docId": "NIST.SP.800-57p1.2020",
+    "docId": "NIST.SP.800-57p2",
+    "docLabel": "SP 800-57 Part 2",
+    "docNumber": "800-57",
+    "docPart": "2",
+    "docTitle": "Recommendation for Key Management, Part 2: Best Practices for Key Management Organization",
+    "docType": "Recommendation",
+    "doi": "10.6028/NIST.SP.800-57p2",
+    "href": "https://doi.org/10.6028/NIST.SP.800-57p2",
+    "publicationDate": "2005-08-01",
+    "publisher": "NIST",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "NIST.SP.800-57pt2r1"
+      ],
+      "withdrawn": true
+    }
+  },
+  {
+    "docId": "NIST.SP.800-57p3",
+    "docLabel": "SP 800-57 Part 3",
+    "docNumber": "800-57",
+    "docPart": "3",
+    "docTitle": "Recommendation for Key Management, Part 3: Application-Specific Key Management Guidance",
+    "docType": "Recommendation",
+    "doi": "10.6028/NIST.SP.800-57p3",
+    "href": "https://doi.org/10.6028/NIST.SP.800-57p3",
+    "publicationDate": "2000-12-01",
+    "publisher": "NIST",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "NIST.SP.800-57pt3r1"
+      ],
+      "withdrawn": true
+    }
+  },
+  {
+    "docId": "NIST.SP.800-57pt1r5",
     "docLabel": "NIST SP 800-57 Part 1 Rev. 5",
     "docNumber": "800-57",
     "docPart": "1",
@@ -10369,27 +10409,7 @@
     }
   },
   {
-    "docId": "NIST.SP.800-57p2.2005",
-    "docLabel": "SP 800-57 Part 2",
-    "docNumber": "800-57",
-    "docPart": "2",
-    "docTitle": "Recommendation for Key Management, Part 2: Best Practices for Key Management Organization",
-    "docType": "Recommendation",
-    "doi": "10.6028/NIST.SP.800-57p2",
-    "href": "https://doi.org/10.6028/NIST.SP.800-57p2",
-    "publicationDate": "2005-08-01",
-    "publisher": "NIST",
-    "status": {
-      "active": false,
-      "superseded": true,
-      "supersededBy": [
-        "NIST.SP.800-57p2.2019"
-      ],
-      "withdrawn": true
-    }
-  },
-  {
-    "docId": "NIST.SP.800-57p2.2019",
+    "docId": "NIST.SP.800-57pt2r1",
     "docLabel": "SP 800-57 Part 2 Rev. 1",
     "docNumber": "800-57",
     "docPart": "2",
@@ -10404,27 +10424,7 @@
     }
   },
   {
-    "docId": "NIST.SP.800-57p3.2000",
-    "docLabel": "SP 800-57 Part 3",
-    "docNumber": "800-57",
-    "docPart": "3",
-    "docTitle": "Recommendation for Key Management, Part 3: Application-Specific Key Management Guidance",
-    "docType": "Recommendation",
-    "doi": "10.6028/NIST.SP.800-57p3",
-    "href": "https://doi.org/10.6028/NIST.SP.800-57p3",
-    "publicationDate": "2000-12-01",
-    "publisher": "NIST",
-    "status": {
-      "active": false,
-      "superseded": true,
-      "supersededBy": [
-        "NIST.SP.800-57p3.2015"
-      ],
-      "withdrawn": true
-    }
-  },
-  {
-    "docId": "NIST.SP.800-57p3.2015",
+    "docId": "NIST.SP.800-57pt3r1",
     "docLabel": "SP 800-57 Part 3 Rev. 1",
     "docNumber": "800-57",
     "docPart": "3",
@@ -14618,7 +14618,7 @@
         "SMPTE.ST291.2006",
         "SMPTE.ST292.2008",
         "SMPTE.ST372.2009",
-        "NIST.FIPS.197.2001"
+        "NIST.FIPS.197"
       ]
     },
     "status": {
@@ -26726,8 +26726,8 @@
         "SMPTE.ST292.2008",
         "SMPTE.ST372.2009",
         "SMPTE.ST425.2008",
-        "NIST.FIPS.197.2001",
-        "NIST.FIPS.180-1.1995",
+        "NIST.FIPS.197",
+        "NIST.FIPS.180-1",
         "rfc2437",
         "rfc3339"
       ]
@@ -28510,9 +28510,9 @@
         "SMPTE.ST429-3.2006",
         "rfc2898",
         "rfc2104",
-        "NIST.SP.800-38A.2001",
-        "NIST.FIPS.197.2001",
-        "NIST.FIPS.186-2.2001"
+        "NIST.SP.800-38A",
+        "NIST.FIPS.197",
+        "NIST.FIPS.186-2"
       ]
     },
     "relatedDocs": [
@@ -28567,9 +28567,9 @@
         "SMPTE.ST377-1.2011Am1.2012",
         "rfc2898",
         "rfc2104",
-        "NIST.SP.800-38A.2001",
-        "NIST.FIPS.197.2001",
-        "NIST.FIPS.186-2.2001"
+        "NIST.SP.800-38A",
+        "NIST.FIPS.197",
+        "NIST.FIPS.186-2"
       ]
     },
     "status": {
@@ -28920,10 +28920,10 @@
         "SMPTE.ST429-7.2006",
         "rfc1521",
         "isbn-9780471223573",
-        "NIST.FIPS.140-2.2001",
+        "NIST.FIPS.140-2",
         "x509-sg.2000",
         "rfc2401",
-        "NIST.KMGD.2002",
+        "NIST.KMGD",
         "isbn-0201615983",
         "rfc2459",
         "rfc2693",
@@ -28992,10 +28992,10 @@
         "SMPTE.ST429-7.2006",
         "rfc1521",
         "isbn-9780471223573",
-        "NIST.FIPS.140-2.2001",
+        "NIST.FIPS.140-2",
         "x509-sg.2000",
         "rfc2401",
-        "NIST.KMGD.2002",
+        "NIST.KMGD",
         "isbn-0201615983",
         "rfc2459",
         "rfc2693",
@@ -29535,12 +29535,12 @@
         "SMPTE.ST429-7.2006",
         "SMPTE.ST430-3.2012",
         "isbn-9780471223573",
-        "NIST.FIPS.140-2.2001",
+        "NIST.FIPS.140-2",
         "x509-sg.2000",
         "asn.1-ber-der.199311",
         "SMPTE.ST430-1.2017",
         "US5848159.19981208",
-        "NIST.KMGD.2002",
+        "NIST.KMGD",
         "SMPTE.ST429-8.2007",
         "isbn-0201615983",
         "rfc2693",
@@ -29549,7 +29549,7 @@
       "normative": [
         "ISO.8824-1.2002",
         "rfc1521",
-        "NIST.FIPS.180-2.2002",
+        "NIST.FIPS.180-2",
         "rfc3447",
         "rfc4055",
         "rfc3280",
@@ -29677,9 +29677,9 @@
     "references": {
       "normative": [
         "SMPTE.ST430-2.2006",
-        "NIST.FIPS.180-2.2002",
-        "NIST.FIPS.197.2001",
-        "NIST.FIPS.198.2002",
+        "NIST.FIPS.180-2",
+        "NIST.FIPS.197",
+        "NIST.FIPS.198",
         "rfc3447",
         "rfc2253",
         "rfc4051",
@@ -29738,7 +29738,7 @@
         "rfc3275",
         "SMPTE.ST433.2008",
         "SMPTE.ST430-2.2006",
-        "NIST.FIPS.180-1.1995",
+        "NIST.FIPS.180-1",
         "rfc2253"
       ]
     },
@@ -29782,7 +29782,7 @@
         "rfc3275",
         "SMPTE.ST433.2008",
         "SMPTE.ST430-2.2006",
-        "NIST.FIPS.180-1.1995",
+        "NIST.FIPS.180-1",
         "rfc2253"
       ]
     },
@@ -29935,7 +29935,7 @@
     "publisher": "SMPTE",
     "references": {
       "bibliographic": [
-        "NIST.FIPS.140-2.2001",
+        "NIST.FIPS.140-2",
         "rfc3447",
         "isbn-0201615983",
         "SMPTE.ST429-7.2006",
