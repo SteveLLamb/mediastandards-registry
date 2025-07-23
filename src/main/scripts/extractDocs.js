@@ -203,7 +203,7 @@ const extractFromUrl = async (url) => {
 
   fs.writeFileSync(
     outputPath,
-    JSON.stringify({ _generated: new Date().toISOString(), documents: existingDocs }, null, 2) + '\n'
+    JSON.stringify(existingDocs, null, 2) + '\n'
   );
 
   console.log(`✅ Added ${newDocs.length} new documents.`);
