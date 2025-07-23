@@ -211,9 +211,12 @@ const extractFromUrl = async (url) => {
 
       // Log field updates with old and new values
       doc.fields.forEach(field => {
-        const oldVal = existingDocs.find(d => d.docId === doc.docId)[field];  // Get the old value
-        const newVal = doc[field];  // Get the new value
-        lines.push(`  - ${field} updated: "${oldVal}" > "${newVal}"`);
+        const existingDoc = existingDocs.find(d => d.docId === doc.docId);
+        const oldVal = existingDoc ? existingDoc[field] : 'undefined';  // Fallback to 'undefined' if the field is not found
+        const newVal = doc[field] !== undefined ? doc[field] : 'undefined'; // Ensure new value is not undefined
+        if (oldVal !== newVal) {
+          lines.push(`  - ${field} updated: "${oldVal}" > "${newVal}"`);
+        }
       });
 
       // Log added references
