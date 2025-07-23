@@ -195,6 +195,12 @@ const extractFromUrl = async (url) => {
   console.log(`🔁 Updated ${updatedDocs.length} documents.`);
   console.log(`⚠️ Skipped ${skippedDocs.length} duplicates.`);
 
+  if (newDocs.length === 0 && updatedDocs.length === 0) {
+  console.log('ℹ️ No new or updated documents — skipping PR creation.');
+    fs.writeFileSync('skip-pr-flag.txt', 'true');
+    process.exit(0);
+  }
+
   const prLines = [
     `### 🆕 Added ${newDocs.length} new document(s):`,
     ...newDocs.map(doc => `- ${doc.docId}`),
@@ -205,12 +211,12 @@ const extractFromUrl = async (url) => {
       const norm = doc.addedRefs.normative;
       const bibl = doc.addedRefs.bibliographic;
       if (norm.length || bibl.length) {
-        if (norm.length) lines.push(`  - ➕ Normative Ref added: ${norm.join(', ')}`);
-        if (bibl.length) lines.push(`  - ➕ Bibliographic Ref added: ${bibl.join(', ')}`);
+        if (norm.length) lines.push(`  - ➕ Normative: ${norm.join(', ')}`);
+        if (bibl.length) lines.push(`  - ➕ Bibliographic: ${bibl.join(', ')}`);
       }
       if (doc.removedRefs.normative.length || doc.removedRefs.bibliographic.length) {
-        if (doc.removedRefs.normative.length) lines.push(`  - ➖ Normative Ref removed: ${doc.removedRefs.normative.join(', ')}`);
-        if (doc.removedRefs.bibliographic.length) lines.push(`  - ➖ Bibliographic Ref removed: ${doc.removedRefs.bibliographic.join(', ')}`);
+        if (doc.removedRefs.normative.length) lines.push(`  - ➖ Normative removed: ${doc.removedRefs.normative.join(', ')}`);
+        if (doc.removedRefs.bibliographic.length) lines.push(`  - ➖ Bibliographic removed: ${doc.removedRefs.bibliographic.join(', ')}`);
       }
       return lines;
     }),
