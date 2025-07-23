@@ -158,17 +158,11 @@ const extractFromUrl = async (url) => {
       }
 
       let addedRefs = { normative: [], bibliographic: [] };
-
       if (changedFields.includes('references')) {
         const oldRefs = existingDoc.references || { normative: [], bibliographic: [] };
         const newRefs = doc.references;
-
         addedRefs.normative = newRefs.normative.filter(ref => !oldRefs.normative.includes(ref));
         addedRefs.bibliographic = newRefs.bibliographic.filter(ref => !oldRefs.bibliographic.includes(ref));
-
-        if (addedRefs.normative.length || addedRefs.bibliographic.length) {
-          doc._addedRefs = addedRefs; // stash for PR log
-        }
       }
 
       if (changedFields.length > 0) {
@@ -201,12 +195,12 @@ const extractFromUrl = async (url) => {
   ];
 
   const refLines = updatedDocs
-  .filter(d => (d.addedRefs?.normative?.length || d.addedRefs?.bibliographic?.length))
-  .map(d => {
-    const norm = d.addedRefs.normative.length ? `Normative: ${d.addedRefs.normative.join(', ')}` : '';
-    const bibl = d.addedRefs.bibliographic.length ? `Bibliographic: ${d.addedRefs.bibliographic.join(', ')}` : '';
-    return `- ${d.docId} → ${[norm, bibl].filter(Boolean).join(' | ')}`;
-  });
+    .filter(d => (d.addedRefs?.normative?.length || d.addedRefs?.bibliographic?.length))
+    .map(d => {
+      const norm = d.addedRefs.normative.length ? `Normative: ${d.addedRefs.normative.join(', ')}` : '';
+      const bibl = d.addedRefs.bibliographic.length ? `Bibliographic: ${d.addedRefs.bibliographic.join(', ')}` : '';
+      return `- ${d.docId} → ${[norm, bibl].filter(Boolean).join(' | ')}`;
+    });
 
   if (refLines.length) {
     prLines.push('### 📎 Reference additions:', ...refLines, '');
