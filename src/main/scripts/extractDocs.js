@@ -146,9 +146,6 @@ const extractFromUrl = async (url) => {
       const oldRefs = existingDoc.references || { normative: [], bibliographic: [] };
       const newRefs = doc.references;
 
-      // Capture the old values before updating
-      const oldValues = { ...existingDoc };
-
       // Add new references
       const addedRefs = {
         normative: newRefs.normative.filter(ref => !oldRefs.normative.includes(ref)),
@@ -163,14 +160,14 @@ const extractFromUrl = async (url) => {
 
       // Update document fields if there are changes
       for (const key of Object.keys(doc)) {
-        const oldVal = oldValues[key];  // Use old captured value
+        const oldVal = existingDoc[key];
         const newVal = doc[key];
         const isEqual = typeof newVal === 'object'
           ? JSON.stringify(oldVal) === JSON.stringify(newVal)
           : oldVal === newVal;
 
         if (!isEqual) {
-          existingDoc[key] = newVal;  // Now update the value
+          existingDoc[key] = newVal;
           changedFields.push(key);
         }
       }
@@ -181,8 +178,7 @@ const extractFromUrl = async (url) => {
           docId: doc.docId,
           fields: changedFields,
           addedRefs,
-          removedRefs,
-          oldValues, // Include old values in the update log
+          removedRefs
         });
       } else {
         skippedDocs.push(doc.docId);
@@ -215,8 +211,8 @@ const extractFromUrl = async (url) => {
 
       // Log field updates with old and new values
       doc.fields.forEach(field => {
-        const oldVal = doc.oldValues[field];  // Use the old captured value
-        const newVal = doc[field];  // Use the new value
+        const oldVal = existingDocs.find(d => d.docId === doc.docId)[field];  // Get the old value
+        const newVal = doc[field];  // Get the new value
         lines.push(`  - ${field} updated: "${oldVal}" > "${newVal}"`);
       });
 
@@ -233,6 +229,7 @@ const extractFromUrl = async (url) => {
         if (doc.removedRefs.normative.length) lines.push(`  - ➖ Normative Ref removed: ${doc.removedRefs.normative.join(', ')}`);
         if (doc.removedRefs.bibliographic.length) lines.push(`  - ➖ Bibliographic Ref removed: ${doc.removedRefs.bibliographic.join(', ')}`);
       }
+
       return lines;
     }),
     '',
