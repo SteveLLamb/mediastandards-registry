@@ -170,11 +170,8 @@ const extractFromUrl = async (url) => {
           : oldVal === newVal;
 
         if (!isEqual) {
-          // Skip references logging in field updates
-          if (key !== 'references') {
-            existingDoc[key] = newVal;  // Now update the value
-            changedFields.push(key);
-          }
+          existingDoc[key] = newVal;
+          changedFields.push(key);
         }
       }
 
@@ -219,8 +216,10 @@ const extractFromUrl = async (url) => {
       // Log field updates with old and new values
       doc.fields.forEach(field => {
         const oldVal = doc.oldValues[field];  // Use the old captured value
-        const newVal = doc[field];  // Use the new value
-        lines.push(`  - ${field}: "${oldVal}" > "${newVal}"`);
+        const newVal = doc[field] !== undefined ? doc[field] : 'undefined'; // Ensure new value is not undefined
+        if (oldVal !== newVal) {
+          lines.push(`  - ${field} updated: "${oldVal}" > "${newVal}"`);
+        }
       });
 
       // Log added references
@@ -236,6 +235,7 @@ const extractFromUrl = async (url) => {
         if (doc.removedRefs.normative.length) lines.push(`  - ➖ Normative Ref removed: ${doc.removedRefs.normative.join(', ')}`);
         if (doc.removedRefs.bibliographic.length) lines.push(`  - ➖ Bibliographic Ref removed: ${doc.removedRefs.bibliographic.join(', ')}`);
       }
+
       return lines;
     }),
     '',
