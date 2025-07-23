@@ -49,6 +49,10 @@ const parseRefId = (text, href = '') => {
 };
 
 const extractFromUrl = async (url) => {
+
+  const refSections = { normative: [], bibliographic: [] };
+  const badRefs = []; // ← New array to track unparseable refs
+
   const res = await axios.get(url);
   const $ = cheerio.load(res.data);
 
@@ -86,7 +90,15 @@ const extractFromUrl = async (url) => {
       const refText = cite.text();
       const href = $(el).find('a.ext-ref').attr('href') || '';
       const refId = parseRefId(refText, href);
-      if (refId) refSections[type].push(refId);
+      if (refId) {
+        refSections[type].push(refId);
+      } else {
+        badRefs.push({
+          type,
+          cite: refText,
+          href,
+        });
+      }
     });
   });
 
@@ -103,16 +115,26 @@ const extractFromUrl = async (url) => {
     publisher: 'SMPTE',
     href: href,
     status: { active: true },
-    references: refSections
+    references: refSections,
+    badRefs
   };
 };
 
 (async () => {
   const results = [];
+  const badRefsLog = [];
   for (const url of urls) {
     try {
       const doc = await extractFromUrl(url);
       results.push(doc);
+      if (doc.badRefs && doc.badRefs.length) {
+        doc.badRefs.forEach(ref => {
+          badRefsLog.push({
+            docId: doc.docId,
+            ...ref
+          });
+        });
+      }
     } catch (e) {
       console.error(`Failed to process ${url}:`, e.message);
     }
@@ -258,5 +280,14 @@ const extractFromUrl = async (url) => {
     ''
   ];
 
+  if (badRefsLog.length > 0) {
+  prLines.push('\n### ❓ Unparseable References:');
+  badRefsLog.forEach(ref => {
+    prLines.push(`- ${ref.docId} (${ref.type})`);
+    prLines.push(`  - cite: ${ref.cite}`);
+    if (ref.href) prLines.push(`  - href: ${ref.href}`);
+  });
+
+  fs.writeFileSync('bad-refs-log.json', JSON.stringify(badRefsLog, null, 2));
   fs.writeFileSync('pr-update-log.txt', prLines.join('\n'));
 })();
