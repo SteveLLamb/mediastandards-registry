@@ -53,8 +53,23 @@ const parseRefId = (text, href = '') => {
   return null;
 };
 
-const extractFromUrl = async (rootUrl) => {
-  const res = await axios.get(rootUrl);
+const extractFromUrl = async (url) => {
+  const indexUrl = url.endsWith('/') ? `${url}index.html` : url;
+
+  let res;
+  try {
+    res = await axios.get(indexUrl, { responseType: 'text' });
+  } catch (err) {
+    console.warn(`⚠️ Failed to fetch ${indexUrl}: ${err.message}`);
+    return null;
+  }
+
+  const contentType = res.headers['content-type'] || '';
+  if (contentType.includes('application/pdf')) {
+    console.warn(`📄 Skipping ${indexUrl}: PDF detected`);
+    return null;
+  }
+
   const $ = cheerio.load(res.data);
 
   const folderLinks = [];
