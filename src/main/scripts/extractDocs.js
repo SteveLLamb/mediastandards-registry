@@ -78,7 +78,6 @@ const extractFromUrl = async (url) => {
   const doi = `10.5594/SMPTE.${pubType}${pubNumber}-${pubPart}.${pubDateObj.format('YYYY')}`;
   const href = `https://doi.org/${doi}`;
 
-  const badRefs = [];
   const refSections = { normative: [], bibliographic: [] };
   ['normative-references', 'bibliography'].forEach((sectionId) => {
     const type = sectionId.includes('normative') ? 'normative' : 'bibliographic';
@@ -91,9 +90,10 @@ const extractFromUrl = async (url) => {
         refSections[type].push(refId);
       } else {
         badRefs.push({
+          docId: id,
           type,
-          cite: refText,
-          href,
+          refText,
+          href
         });
       }
     });
@@ -113,26 +113,17 @@ const extractFromUrl = async (url) => {
     href: href,
     status: { active: true },
     references: refSections
-    badRefs
   };
 };
 
 (async () => {
   const results = [];
-  const badRefsLog = [];
+  const badRefs = [];
 
   for (const url of urls) {
     try {
       const doc = await extractFromUrl(url);
       results.push(doc);
-      if (doc.badRefs && doc.badRefs.length) {
-        doc.badRefs.forEach(ref => {
-          badRefsLog.push({
-            docId: doc.docId,
-            ...ref
-          });
-        });
-      }
     } catch (e) {
       console.error(`Failed to process ${url}:`, e.message);
     }
@@ -278,15 +269,17 @@ const extractFromUrl = async (url) => {
     ''
   ];
 
-  if (badRefsLog.length > 0) {
-    prLines.push('\n### ❓ Unparseable References:');
-    badRefsLog.forEach(ref => {
-      prLines.push(`- ${ref.docId} (${ref.type})`);
-      prLines.push(`  - cite: ${ref.cite}`);
-      if (ref.href) prLines.push(`  - href: ${ref.href}`);
-    });
-  }
-
-  fs.writeFileSync('bad-refs-log.json', JSON.stringify(badRefsLog, null, 2));
   fs.writeFileSync('pr-update-log.txt', prLines.join('\n'));
+
+  if (badRefs.length > 0) {
+    const lines = ['### 🚫 Unparseable References Found:\n'];
+    badRefs.forEach(ref => {
+      lines.push(`- From ${ref.docId} (${ref.type}):`);
+      lines.push(`  - cite: ${ref.refText}`);
+      if (ref.href) lines.push(`  - href: ${ref.href}`);
+    });
+
+    fs.appendFileSync('pr-update-log.txt', '\n' + lines.join('\n') + '\n');
+  }
+  
 })();
