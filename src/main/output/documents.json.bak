@@ -28098,8 +28098,9 @@
     "docLabel": "SMPTE ST 429-2:2023-09",
     "docNumber": "429",
     "docPart": "2",
-    "docTitle": "D-Cinema Packaging — DCP Operational",
+    "docTitle": "D-Cinema Packaging — DCP Operational Constraints",
     "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST429-2.2023",
     "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST429-2.2023",
     "keywords": [
@@ -28113,7 +28114,7 @@
     "references": {
       "bibliographic": [
         "SMPTE.ST428-3.LATEST",
-        "SMPTE.ST428-111.LATEST",
+        "SMPTE.ST428-11.LATEST",
         "SMPTE.ST429-13.LATEST",
         "SMPTE.ST430-1.LATEST"
       ],
@@ -28126,6 +28127,8 @@
         "SMPTE.ST428-1.LATEST",
         "SMPTE.ST428-2.LATEST",
         "SMPTE.ST428-7.LATEST",
+        "SMPTE.ST428-10.LATEST",
+        "SMPTE.ST428-12.LATEST",
         "SMPTE.ST429-3.LATEST",
         "SMPTE.ST429-4.LATEST",
         "SMPTE.ST429-5.LATEST",
@@ -28348,36 +28351,6 @@
       ]
     },
     "repo": "https://github.com/SMPTE/st429-4",
-    "status": {
-      "active": false,
-      "superseded": true,
-      "supersededBy": [
-        "SMPTE.ST429-4.2023-05"
-      ]
-    }
-  },
-  {
-    "docId": "SMPTE.ST429-4.2023-05",
-    "docLabel": "SMPTE ST 429-4:2023-05",
-    "docNumber": "429",
-    "docPart": "4",
-    "docTitle": "D-Cinema Packaging MXF JPEG 2000 Application",
-    "docType": "Recommended Practice",
-    "group": "smpte-27c-tc",
-    "href": "https://doi.org/10.5594/SMPTE.ST429-4.2023",
-    "publicationDate": "2023-05-04",
-    "publisher": "SMPTE",
-    "references": {
-      "bibliographic": [
-        "ISO.646.LATEST"
-      ],
-      "normative": [
-        "SMPTE.ST377-1.LATEST",
-        "SMPTE.ST422.LATEST",
-        "SMPTE.ST429-3.LATEST",
-        "ISO.15444-1.LATEST"
-      ]
-    },
     "status": {
       "active": true
     }
@@ -28946,14 +28919,10 @@
     },
     "repo": "https://github.com/SMPTE/st430-1",
     "status": {
-      "active": false,
+      "active": true,
       "amended": true,
       "amendedBy": [
         "SMPTE.ST430-1.2017Am1.2019"
-      ],
-      "superseded": true,
-      "supersededBy": [
-        "SMPTE.ST430-1.2023-09"
       ]
     },
     "workInfo": {
@@ -29018,45 +28987,6 @@
       ]
     },
     "repo": "https://github.com/SMPTE/st430-1",
-    "status": {
-      "active": false,
-      "superseded": true,
-      "supersededBy": [
-        "SMPTE.ST430-1.2023-09"
-      ]
-    }
-  },
-  {
-    "docId": "SMPTE.ST430-1.2023-09",
-    "docLabel": "SMPTE ST 430-1:2023-09",
-    "docNumber": "430",
-    "docPart": "1",
-    "docTitle": "D-Cinema Operations Key Delivery Message",
-    "docType": "Standard",
-    "doi": "10.5594/SMPTE.ST430-1.2023",
-    "group": "smpte-27c-tc",
-    "href": "https://doi.org/10.5594/SMPTE.ST430-1.2023",
-    "publicationDate": "2023-09-07",
-    "publisher": "SMPTE",
-    "references": {
-      "bibliographic": [
-        "SMPTE.ST429-7.LATEST",
-        "SMPTE.ST429-14.LATEST"
-      ],
-      "normative": [
-        "SMPTE.ST429-6.LATEST",
-        "SMPTE.ST430-2.LATEST",
-        "SMPTE.ST430-3.LATEST",
-        "ISO.8601-1.LATEST",
-        "rfc3066",
-        "rfc3339",
-        "rfc4122",
-        "rfc8017",
-        "xml.LATEST",
-        "xmlschema-1.LATEST",
-        "xmldsig-core1.LATEST"
-      ]
-    },
     "status": {
       "active": true
     }
