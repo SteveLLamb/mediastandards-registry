@@ -118,7 +118,7 @@ const extractFromUrl = async (url) => {
     }
   }
 
-  const outputPath = 'src/main/output/documents.json';
+  const outputPath = 'src/main/data/documents.json';
   let existingDocs = [];
 
   if (fs.existsSync(outputPath)) {

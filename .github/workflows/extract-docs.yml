@@ -66,6 +66,6 @@ jobs:
           title: "Update documents.json - ${{ env.ts }}"
           body: ${{ steps.prlog.outputs.body }}
           add-paths: |
-            src/main/output/documents.json
+            src/main/main/documents.json
             pr-update-log.txt
           base: main
