@@ -181,7 +181,6 @@ const extractFromUrl = async (url) => {
             existingDoc[key] = newVal;  // Now update the value
             changedFields.push(key);
 
-            console.log(`Field '${key}' updated: "${oldVal}" > "${newVal}"`);
           }
         }
       }
@@ -229,7 +228,6 @@ const extractFromUrl = async (url) => {
       doc.fields.forEach(field => {
         const oldVal = doc.oldValues[field];  // Use the old captured value
         const newVal = doc.newValues[field];  // Use the new value
-        console.log(newVal)
         lines.push(`  - ${field}: "${oldVal}" > "${newVal}"`);
       });
 
@@ -237,14 +235,14 @@ const extractFromUrl = async (url) => {
       const norm = doc.addedRefs.normative;
       const bibl = doc.addedRefs.bibliographic;
       if (norm.length || bibl.length) {
-        if (norm.length) lines.push(`  - ➕ Normative Ref added: ${norm.join('\r')}`);
-        if (bibl.length) lines.push(`  - ➕ Bibliographic Ref added: ${bibl.join('\r')}`);
+        if (norm.length) lines.push(`  - ➕ Normative Ref(s) added:\r\n ${norm.join('\r')}`);
+        if (bibl.length) lines.push(`  - ➕ Bibliographic Ref(s) added:\r\n ${bibl.join('\r')}`);
       }
 
       // Log removed references
       if (doc.removedRefs.normative.length || doc.removedRefs.bibliographic.length) {
-        if (doc.removedRefs.normative.length) lines.push(`  - ➖ Normative Ref removed: ${doc.removedRefs.normative.join('\r')}`);
-        if (doc.removedRefs.bibliographic.length) lines.push(`  - ➖ Bibliographic Ref removed: ${doc.removedRefs.bibliographic.join('\r')}`);
+        if (doc.removedRefs.normative.length) lines.push(`  - ➖ Normative Ref(s) removed:\r\n ${doc.removedRefs.normative.join('\r')}`);
+        if (doc.removedRefs.bibliographic.length) lines.push(`  - ➖ Bibliographic Ref(s) removed:\r\n ${doc.removedRefs.bibliographic.join('\r')}`);
       }
       return lines;
     }),
