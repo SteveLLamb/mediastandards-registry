@@ -49,7 +49,6 @@ const parseRefId = (text, href = '') => {
 };
 
 const extractFromUrl = async (url) => {
-
   const res = await axios.get(url);
   const $ = cheerio.load(res.data);
 
@@ -79,8 +78,6 @@ const extractFromUrl = async (url) => {
   const doi = `10.5594/SMPTE.${pubType}${pubNumber}-${pubPart}.${pubDateObj.format('YYYY')}`;
   const href = `https://doi.org/${doi}`;
 
-  const badRefs = []; // ← New array to track unparseable refs
-
   const refSections = { normative: [], bibliographic: [] };
   ['normative-references', 'bibliography'].forEach((sectionId) => {
     const type = sectionId.includes('normative') ? 'normative' : 'bibliographic';
@@ -100,6 +97,7 @@ const extractFromUrl = async (url) => {
       }
     });
   });
+  const badRefs = [];
 
   return {
     docId: id,
@@ -114,7 +112,7 @@ const extractFromUrl = async (url) => {
     publisher: 'SMPTE',
     href: href,
     status: { active: true },
-    references: refSections,
+    references: refSections
     badRefs
   };
 };
@@ -122,6 +120,7 @@ const extractFromUrl = async (url) => {
 (async () => {
   const results = [];
   const badRefsLog = [];
+  
   for (const url of urls) {
     try {
       const doc = await extractFromUrl(url);
@@ -280,12 +279,13 @@ const extractFromUrl = async (url) => {
   ];
 
   if (badRefsLog.length > 0) {
-  prLines.push('\n### ❓ Unparseable References:');
-  badRefsLog.forEach(ref => {
-    prLines.push(`- ${ref.docId} (${ref.type})`);
-    prLines.push(`  - cite: ${ref.cite}`);
-    if (ref.href) prLines.push(`  - href: ${ref.href}`);
-  });
+    prLines.push('\n### ❓ Unparseable References:');
+    badRefsLog.forEach(ref => {
+      prLines.push(`- ${ref.docId} (${ref.type})`);
+      prLines.push(`  - cite: ${ref.cite}`);
+      if (ref.href) prLines.push(`  - href: ${ref.href}`);
+    });
+  }
 
   fs.writeFileSync('bad-refs-log.json', JSON.stringify(badRefsLog, null, 2));
   fs.writeFileSync('pr-update-log.txt', prLines.join('\n'));
