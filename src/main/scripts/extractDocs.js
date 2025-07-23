@@ -143,14 +143,22 @@ const extractFromUrl = async (url) => {
     } else {
       const existingDoc = existingDocs[index];
       let changedFields = [];
-
       const oldRefs = existingDoc.references || { normative: [], bibliographic: [] };
       const newRefs = doc.references;
+
+      // Add new references
       const addedRefs = {
         normative: newRefs.normative.filter(ref => !oldRefs.normative.includes(ref)),
         bibliographic: newRefs.bibliographic.filter(ref => !oldRefs.bibliographic.includes(ref))
       };
 
+      // Remove outdated references
+      const removedRefs = {
+        normative: oldRefs.normative.filter(ref => !newRefs.normative.includes(ref)),
+        bibliographic: oldRefs.bibliographic.filter(ref => !newRefs.bibliographic.includes(ref))
+      };
+
+      // Update document fields if there are changes
       for (const key of Object.keys(doc)) {
         const oldVal = existingDoc[key];
         const newVal = doc[key];
@@ -164,8 +172,14 @@ const extractFromUrl = async (url) => {
         }
       }
 
-      if (changedFields.length > 0) {
-        updatedDocs.push({ docId: doc.docId, fields: changedFields, addedRefs });
+      // If any fields or references were changed
+      if (changedFields.length > 0 || addedRefs.normative.length || addedRefs.bibliographic.length || removedRefs.normative.length || removedRefs.bibliographic.length) {
+        updatedDocs.push({
+          docId: doc.docId,
+          fields: changedFields,
+          addedRefs,
+          removedRefs
+        });
       } else {
         skippedDocs.push(doc.docId);
       }
@@ -181,12 +195,6 @@ const extractFromUrl = async (url) => {
   console.log(`🔁 Updated ${updatedDocs.length} documents.`);
   console.log(`⚠️ Skipped ${skippedDocs.length} duplicates.`);
 
-  if (newDocs.length === 0 && updatedDocs.length === 0) {
-  console.log('ℹ️ No new or updated documents — skipping PR creation.');
-    fs.writeFileSync('skip-pr-flag.txt', 'true');
-    process.exit(0);
-  }
-
   const prLines = [
     `### 🆕 Added ${newDocs.length} new document(s):`,
     ...newDocs.map(doc => `- ${doc.docId}`),
@@ -200,6 +208,10 @@ const extractFromUrl = async (url) => {
         if (norm.length) lines.push(`  - ➕ Normative: ${norm.join(', ')}`);
         if (bibl.length) lines.push(`  - ➕ Bibliographic: ${bibl.join(', ')}`);
       }
+      if (doc.removedRefs.normative.length || doc.removedRefs.bibliographic.length) {
+        if (doc.removedRefs.normative.length) lines.push(`  - ➖ Normative removed: ${doc.removedRefs.normative.join(', ')}`);
+        if (doc.removedRefs.bibliographic.length) lines.push(`  - ➖ Bibliographic removed: ${doc.removedRefs.bibliographic.join(', ')}`);
+      }
       return lines;
     }),
     '',
@@ -209,7 +221,4 @@ const extractFromUrl = async (url) => {
   ];
 
   fs.writeFileSync('pr-update-log.txt', prLines.join('\n'));
-
-  
-
 })();
