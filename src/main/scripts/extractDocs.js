@@ -201,6 +201,10 @@ const extractFromUrl = async (url) => {
     }
   }
 
+  // Sort documents by docId
+  existingDocs.sort((a, b) => a.docId.localeCompare(b.docId));
+
+  // Write sorted documents to file
   fs.writeFileSync(
     outputPath,
     JSON.stringify(existingDocs, null, 2) + '\n'
