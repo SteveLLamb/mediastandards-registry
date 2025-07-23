@@ -168,7 +168,10 @@ const extractFromUrl = async (url) => {
           changed = true;
 
           if ((key === 'references') && newVal) {
-            const oldRefs = existingVal || {};
+            const oldRefs = {
+              normative: Array.isArray(existingVal?.normative) ? existingVal.normative : [],
+              bibliographic: Array.isArray(existingVal?.bibliographic) ? existingVal.bibliographic : []
+            };
             const addedRefs = {
               normative: newVal.normative.filter(x => !(oldRefs.normative || []).includes(x)),
               bibliographic: newVal.bibliographic.filter(x => !(oldRefs.bibliographic || []).includes(x))
@@ -220,4 +223,5 @@ const extractFromUrl = async (url) => {
   }
 
   fs.writeFileSync('pr-update-log.txt', prLines.join('\n'));
+  
 })();
