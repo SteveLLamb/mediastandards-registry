@@ -34,7 +34,7 @@ jobs:
       - name: Read PR update summary
         id: prlog
         run: |
-          echo "body=$(echo '$(cat pr-update-log.txt)' | sed -z 's/\n/%0A/g')" >> $GITHUB_OUTPUT
+          echo "body=$(cat pr-update-log.txt | sed -z 's/\n/%0A/g')" >> $GITHUB_OUTPUT
 
       - name: Set timestamp env var
         id: timestamp
