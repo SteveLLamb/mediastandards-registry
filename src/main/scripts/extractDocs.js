@@ -53,23 +53,8 @@ const parseRefId = (text, href = '') => {
   return null;
 };
 
-const extractFromUrl = async (url) => {
-  const indexUrl = url.endsWith('/') ? `${url}index.html` : url;
-
-  let res;
-  try {
-    res = await axios.get(indexUrl, { responseType: 'text' });
-  } catch (err) {
-    console.warn(`⚠️ Failed to fetch ${indexUrl}: ${err.message}`);
-    return null;
-  }
-
-  const contentType = res.headers['content-type'] || '';
-  if (contentType.includes('application/pdf')) {
-    console.warn(`📄 Skipping ${indexUrl}: PDF detected`);
-    return null;
-  }
-
+const extractFromUrl = async (rootUrl) => {
+  const res = await axios.get(rootUrl);
   const $ = cheerio.load(res.data);
 
   const folderLinks = [];
@@ -176,12 +161,22 @@ const extractFromUrl = async (url) => {
 (async () => {
   const results = [];
 
-  for (const url of urls) {
+  for (const link of releaseLinks) {
+    const releaseTag = link.replace(/\/$/, ''); // trim trailing slash
+    const indexUrl = `${releaseTag}/index.html`;
+
     try {
-      const doc = await extractFromUrl(url);
-      if (doc) results.push(doc); // Only push valid (non-null) docs
-    } catch (e) {
-      console.error(`Failed to process ${url}:`, e.message);
+      const res = await axios.get(indexUrl, { responseType: 'text' });
+
+      const contentType = res.headers['content-type'] || '';
+      if (contentType.includes('application/pdf')) {
+        console.warn(`📄 Skipping PDF-based release at ${releaseTag}`);
+        continue; // skip this release
+      }
+
+      urlsToParse.push(indexUrl);
+    } catch (err) {
+      console.warn(`⚠️ Failed to check ${indexUrl}: ${err.message}`);
     }
   }
 
