@@ -208,16 +208,21 @@ const extractFromUrl = async (url) => {
     `### 🔁 Updated ${updatedDocs.length} existing document(s):`,
     ...updatedDocs.flatMap(doc => {
       const lines = [`- ${doc.docId} (updated fields: ${doc.fields.join(', ')})`];
+      
+      // Log added references
       const norm = doc.addedRefs.normative;
       const bibl = doc.addedRefs.bibliographic;
       if (norm.length || bibl.length) {
-        if (norm.length) lines.push(`  - ➕ Normative: ${norm.join(', ')}`);
-        if (bibl.length) lines.push(`  - ➕ Bibliographic: ${bibl.join(', ')}`);
+        if (norm.length) lines.push(`  - ➕ Normative Ref added: ${norm.join(', ')}`);
+        if (bibl.length) lines.push(`  - ➕ Bibliographic Ref added: ${bibl.join(', ')}`);
       }
+
+      // Log removed references
       if (doc.removedRefs.normative.length || doc.removedRefs.bibliographic.length) {
-        if (doc.removedRefs.normative.length) lines.push(`  - ➖ Normative removed: ${doc.removedRefs.normative.join(', ')}`);
-        if (doc.removedRefs.bibliographic.length) lines.push(`  - ➖ Bibliographic removed: ${doc.removedRefs.bibliographic.join(', ')}`);
+        if (doc.removedRefs.normative.length) lines.push(`  - ➖ Normative Ref removed: ${doc.removedRefs.normative.join(', ')}`);
+        if (doc.removedRefs.bibliographic.length) lines.push(`  - ➖ Bibliographic Ref removed: ${doc.removedRefs.bibliographic.join(', ')}`);
       }
+
       return lines;
     }),
     '',
