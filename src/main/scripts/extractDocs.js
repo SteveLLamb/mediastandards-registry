@@ -181,6 +181,11 @@ const extractFromUrl = async (url) => {
   console.log(`🔁 Updated ${updatedDocs.length} documents.`);
   console.log(`⚠️ Skipped ${skippedDocs.length} duplicates.`);
 
+  if (newDocs.length === 0 && updatedDocs.length === 0) {
+  console.log('ℹ️ No new or updated documents — skipping PR creation.');
+  process.exit(0);
+}
+
   const prLines = [
     `### 🆕 Added ${newDocs.length} new document(s):`,
     ...newDocs.map(doc => `- ${doc.docId}`),
