@@ -174,6 +174,8 @@ const extractFromUrl = async (url) => {
           if (key !== 'references') {
             existingDoc[key] = newVal;  // Now update the value
             changedFields.push(key);
+
+            console.log(`Field '${key}' updated: "${oldVal}" > "${newVal}"`);
           }
         }
       }
@@ -219,7 +221,7 @@ const extractFromUrl = async (url) => {
       // Log field updates with old and new values
       doc.fields.forEach(field => {
         const oldVal = doc.oldValues[field];  // Use the old captured value
-        const newVal = doc.changedFields[field];  // Use the new value
+        const newVal = doc[field];  // Use the new value
         lines.push(`  - ${field}: "${oldVal}" > "${newVal}"`);
       });
 
