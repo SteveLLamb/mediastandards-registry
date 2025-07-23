@@ -163,20 +163,20 @@ const extractFromUrl = async (url) => {
 
       // Update document fields if there are changes
       for (const key of Object.keys(doc)) {
-        const oldVal = existingDoc[key];  // Get the old value before update
-        const newVal = doc[key];  // Get the new value
-
-        // Only update if the value has changed
+        const oldVal = oldValues[key];  // Use old captured value
+        const newVal = doc[key];
         const isEqual = typeof newVal === 'object'
           ? JSON.stringify(oldVal) === JSON.stringify(newVal)
           : oldVal === newVal;
 
         if (!isEqual) {
-          existingDoc[key] = newVal;  // Now update the value
-          changedFields.push(key);
+          // Skip references logging in field updates
+          if (key !== 'references') {
+            existingDoc[key] = newVal;  // Now update the value
+            changedFields.push(key);
 
-          // Log the field change: old value > new value
-          console.log(`Field '${key}' updated: "${oldVal}" > "${newVal}"`);
+            console.log(`Field '${key}' updated: "${oldVal}" > "${newVal}"`);
+          }
         }
       }
 
@@ -221,7 +221,7 @@ const extractFromUrl = async (url) => {
       // Log field updates with old and new values
       doc.fields.forEach(field => {
         const oldVal = doc.oldValues[field];  // Use the old captured value
-        const newVal = doc[field];  // Use the new value
+        const newVal = ;  // Use the new value
         console.log(newVal)
         lines.push(`  - ${field}: "${oldVal}" > "${newVal}"`);
       });
