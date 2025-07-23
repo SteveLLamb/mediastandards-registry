@@ -186,24 +186,21 @@ const extractFromUrl = async (url) => {
     ...newDocs.map(doc => `- ${doc.docId}`),
     '',
     `### 🔁 Updated ${updatedDocs.length} existing document(s):`,
-    ...updatedDocs.map(doc => `- ${doc.docId} (updated fields: ${doc.fields.join(', ')})`),
+    ...updatedDocs.flatMap(doc => {
+      const lines = [`- ${doc.docId} (updated fields: ${doc.fields.join(', ')})`];
+      const norm = doc.addedRefs.normative;
+      const bibl = doc.addedRefs.bibliographic;
+      if (norm.length || bibl.length) {
+        if (norm.length) lines.push(`  - ➕ Normative: ${norm.join(', ')}`);
+        if (bibl.length) lines.push(`  - ➕ Bibliographic: ${bibl.join(', ')}`);
+      }
+      return lines;
+    }),
     '',
     `### ⚠️ Skipped ${skippedDocs.length} duplicate(s):`,
     ...skippedDocs.map(id => `- ${id}`),
     ''
   ];
-
-  const refLines = updatedDocs
-    .filter(d => (d.addedRefs?.normative?.length || d.addedRefs?.bibliographic?.length))
-    .map(d => {
-      const norm = d.addedRefs.normative.length ? `Normative: ${d.addedRefs.normative.join(', ')}` : '';
-      const bibl = d.addedRefs.bibliographic.length ? `Bibliographic: ${d.addedRefs.bibliographic.join(', ')}` : '';
-      return `- ${d.docId} → ${[norm, bibl].filter(Boolean).join(' | ')}`;
-    });
-
-  if (refLines.length) {
-    prLines.push('### 📎 Reference additions:', ...refLines, '');
-  }
 
   fs.writeFileSync('pr-update-log.txt', prLines.join('\n'));
 })();
