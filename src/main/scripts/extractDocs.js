@@ -222,6 +222,7 @@ const extractFromUrl = async (url) => {
       doc.fields.forEach(field => {
         const oldVal = doc.oldValues[field];  // Use the old captured value
         const newVal = doc[field];  // Use the new value
+        console.log(newVal)
         lines.push(`  - ${field}: "${oldVal}" > "${newVal}"`);
       });
 
