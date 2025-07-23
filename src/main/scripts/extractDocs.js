@@ -4,6 +4,7 @@ const dayjs = require('dayjs');
 const fs = require('fs');
 
 const urls = require('../input/urls.json');
+const badRefs = [];
 
 const parseRefId = (text, href = '') => {
   if (/w3\.org\/TR\/\d{4}\/REC-([^\/]+)-(\d{8})\//i.test(href)) {
@@ -118,7 +119,6 @@ const extractFromUrl = async (url) => {
 
 (async () => {
   const results = [];
-  const badRefs = [];
 
   for (const url of urls) {
     try {
@@ -281,5 +281,5 @@ const extractFromUrl = async (url) => {
 
     fs.appendFileSync('pr-update-log.txt', '\n' + lines.join('\n') + '\n');
   }
-  
+
 })();
