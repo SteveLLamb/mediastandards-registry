@@ -146,6 +146,9 @@ const extractFromUrl = async (url) => {
       const oldRefs = existingDoc.references || { normative: [], bibliographic: [] };
       const newRefs = doc.references;
 
+      // Capture the old values before updating
+      const oldValues = { ...existingDoc };
+
       // Add new references
       const addedRefs = {
         normative: newRefs.normative.filter(ref => !oldRefs.normative.includes(ref)),
@@ -211,12 +214,9 @@ const extractFromUrl = async (url) => {
 
       // Log field updates with old and new values
       doc.fields.forEach(field => {
-        const existingDoc = existingDocs.find(d => d.docId === doc.docId);
-        const oldVal = existingDoc ? existingDoc[field] : 'undefined';  // Fallback to 'undefined' if the field is not found
-        const newVal = doc[field] !== undefined ? doc[field] : 'undefined'; // Ensure new value is not undefined
-        if (oldVal !== newVal) {
-          lines.push(`  - ${field} updated: "${oldVal}" > "${newVal}"`);
-        }
+        const oldVal = doc.oldValues[field];  // Use the old captured value
+        const newVal = doc[field];  // Use the new value
+        lines.push(`  - ${field} updated: "${oldVal}" > "${newVal}"`);
       });
 
       // Log added references
