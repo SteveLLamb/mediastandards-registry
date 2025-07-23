@@ -148,6 +148,8 @@ const extractFromUrl = async (url) => {
 
       // Capture the old values before updating
       const oldValues = { ...existingDoc };
+      // Capture the new values for logging
+      const newValues = {};  
 
       // Add new references
       const addedRefs = {
@@ -165,6 +167,10 @@ const extractFromUrl = async (url) => {
       for (const key of Object.keys(doc)) {
         const oldVal = oldValues[key];  // Use old captured value
         const newVal = doc[key];
+
+        // Save the new value for later use in the log
+        newValues[key] = newVal;
+
         const isEqual = typeof newVal === 'object'
           ? JSON.stringify(oldVal) === JSON.stringify(newVal)
           : oldVal === newVal;
@@ -188,6 +194,7 @@ const extractFromUrl = async (url) => {
           addedRefs,
           removedRefs,
           oldValues, // Include old values in the update log
+          newValues, // Include new values in the update log
         });
       } else {
         skippedDocs.push(doc.docId);
@@ -221,8 +228,8 @@ const extractFromUrl = async (url) => {
       // Log field updates with old and new values
       doc.fields.forEach(field => {
         const oldVal = doc.oldValues[field];  // Use the old captured value
-        const newVal = doc[field];  // Use the new value
-        console.log(newVal.value)
+        const newVal = doc.newValues[field];  // Use the new value
+        console.log(newVal)
         lines.push(`  - ${field}: "${oldVal}" > "${newVal}"`);
       });
 
