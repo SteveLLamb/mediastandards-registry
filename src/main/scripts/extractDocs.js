@@ -50,9 +50,6 @@ const parseRefId = (text, href = '') => {
 
 const extractFromUrl = async (url) => {
 
-  const refSections = { normative: [], bibliographic: [] };
-  const badRefs = []; // ← New array to track unparseable refs
-
   const res = await axios.get(url);
   const $ = cheerio.load(res.data);
 
@@ -81,6 +78,8 @@ const extractFromUrl = async (url) => {
   const id = `SMPTE.${pubType}${pubNumber}-${pubPart}.${dateShort}`;
   const doi = `10.5594/SMPTE.${pubType}${pubNumber}-${pubPart}.${pubDateObj.format('YYYY')}`;
   const href = `https://doi.org/${doi}`;
+
+  const badRefs = []; // ← New array to track unparseable refs
 
   const refSections = { normative: [], bibliographic: [] };
   ['normative-references', 'bibliography'].forEach((sectionId) => {
