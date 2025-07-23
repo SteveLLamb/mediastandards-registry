@@ -163,14 +163,14 @@ const extractFromUrl = async (url) => {
 
       // Update document fields if there are changes
       for (const key of Object.keys(doc)) {
-        const oldVal = existingDoc[key];
+        const oldVal = oldValues[key];  // Use old captured value
         const newVal = doc[key];
         const isEqual = typeof newVal === 'object'
           ? JSON.stringify(oldVal) === JSON.stringify(newVal)
           : oldVal === newVal;
 
         if (!isEqual) {
-          existingDoc[key] = newVal;
+          existingDoc[key] = newVal;  // Now update the value
           changedFields.push(key);
         }
       }
@@ -181,7 +181,8 @@ const extractFromUrl = async (url) => {
           docId: doc.docId,
           fields: changedFields,
           addedRefs,
-          removedRefs
+          removedRefs,
+          oldValues, // Include old values in the update log
         });
       } else {
         skippedDocs.push(doc.docId);
@@ -199,7 +200,7 @@ const extractFromUrl = async (url) => {
   console.log(`⚠️ Skipped ${skippedDocs.length} duplicates.`);
 
   if (newDocs.length === 0 && updatedDocs.length === 0) {
-  console.log('ℹ️ No new or updated documents — skipping PR creation.');
+    console.log('ℹ️ No new or updated documents — skipping PR creation.');
     fs.writeFileSync('skip-pr-flag.txt', 'true');
     process.exit(0);
   }
@@ -232,7 +233,6 @@ const extractFromUrl = async (url) => {
         if (doc.removedRefs.normative.length) lines.push(`  - ➖ Normative Ref removed: ${doc.removedRefs.normative.join(', ')}`);
         if (doc.removedRefs.bibliographic.length) lines.push(`  - ➖ Bibliographic Ref removed: ${doc.removedRefs.bibliographic.join(', ')}`);
       }
-
       return lines;
     }),
     '',
