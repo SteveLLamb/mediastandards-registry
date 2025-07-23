@@ -78,6 +78,7 @@ const extractFromUrl = async (url) => {
   const doi = `10.5594/SMPTE.${pubType}${pubNumber}-${pubPart}.${pubDateObj.format('YYYY')}`;
   const href = `https://doi.org/${doi}`;
 
+  const badRefs = [];
   const refSections = { normative: [], bibliographic: [] };
   ['normative-references', 'bibliography'].forEach((sectionId) => {
     const type = sectionId.includes('normative') ? 'normative' : 'bibliographic';
@@ -97,7 +98,6 @@ const extractFromUrl = async (url) => {
       }
     });
   });
-  const badRefs = [];
 
   return {
     docId: id,
@@ -120,7 +120,7 @@ const extractFromUrl = async (url) => {
 (async () => {
   const results = [];
   const badRefsLog = [];
-  
+
   for (const url of urls) {
     try {
       const doc = await extractFromUrl(url);
