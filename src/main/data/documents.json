@@ -17625,6 +17625,33 @@
     }
   },
   {
+    "docId": "SMPTE.RP428-22.2025-06",
+    "docLabel": "SMPTE RP 428-22:2025-06",
+    "docNumber": "428",
+    "docPart": "22",
+    "docTitle": "D-Cinema Distribution Master Minimal Timed Text XML Requirements",
+    "docType": "Recommended Practice",
+    "doi": "10.5594/SMPTE.RP428-22.2025",
+    "group": "smpte-27c-tc",
+    "href": "https://doi.org/10.5594/SMPTE.RP428-22.2025",
+    "publicationDate": "2025-06-27",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST429-2.LATEST",
+        "SMPTE.RDD52.LATEST",
+        "ISO.14496-22.2015"
+      ],
+      "normative": [
+        "SMPTE.ST428-7.LATEST"
+      ]
+    },
+    "releaseTag": "20250627-pub",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "SMPTE.RP428-22.20XX",
     "docLabel": "SMPTE RP 428-22:20XX",
     "docNumber": "428",
@@ -27095,6 +27122,35 @@
     }
   },
   {
+    "docId": "SMPTE.ST428-24.2024-11",
+    "docLabel": "SMPTE ST 428-24:2024-11",
+    "docNumber": "428",
+    "docPart": "24",
+    "docTitle": "D-Cinema Distribution Master Packed Image",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST428-24.2024",
+    "group": "smpte-27c-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST428-24.2024",
+    "publicationDate": "2024-11-01",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "SMPTE.RP428-5.LATEST",
+        "SMPTE.RP428-6.LATEST",
+        "ISO.15444-15.LATEST"
+      ],
+      "normative": [
+        "SMPTE.ST428-1.LATEST",
+        "SMPTE.ST2067-40.LATEST",
+        "rfc5234"
+      ]
+    },
+    "releaseTag": "20241101-pub",
+    "status": {
+      "active": true
+    }
+  },
+  {
     "docId": "SMPTE.ST428-3.2006",
     "docLabel": "SMPTE ST 428-3:2006",
     "docNumber": "428",
@@ -28098,8 +28154,9 @@
     "docLabel": "SMPTE ST 429-2:2023-09",
     "docNumber": "429",
     "docPart": "2",
-    "docTitle": "D-Cinema Packaging — DCP Operational",
+    "docTitle": "D-Cinema Packaging DCP Operational Constraints",
     "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST429-2.2023",
     "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST429-2.2023",
     "keywords": [
@@ -28113,7 +28170,7 @@
     "references": {
       "bibliographic": [
         "SMPTE.ST428-3.LATEST",
-        "SMPTE.ST429-10.LATEST",
+        "SMPTE.ST428-11.LATEST",
         "SMPTE.ST429-13.LATEST",
         "SMPTE.ST430-1.LATEST"
       ],
@@ -28126,6 +28183,8 @@
         "SMPTE.ST428-1.LATEST",
         "SMPTE.ST428-2.LATEST",
         "SMPTE.ST428-7.LATEST",
+        "SMPTE.ST428-10.LATEST",
+        "SMPTE.ST428-12.LATEST",
         "SMPTE.ST429-3.LATEST",
         "SMPTE.ST429-4.LATEST",
         "SMPTE.ST429-5.LATEST",
@@ -28150,6 +28209,7 @@
         "xml.LATEST"
       ]
     },
+    "releaseTag": "20230912-pub",
     "repo": "https://github.com/SMPTE/st429-2",
     "status": {
       "active": true
