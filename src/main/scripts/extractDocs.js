@@ -15,6 +15,12 @@ const typeMap = {
         OV: 'Overview Document'
       };
 
+const pick = (obj, keys) =>
+  keys.reduce((acc, key) => {
+    if (obj[key] !== undefined) acc[key] = obj[key];
+    return acc;
+  }, {});
+
 function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
 
   const match = rootUrl.match(/doc\/([^/]+)\/$/);
@@ -215,18 +221,19 @@ const extractFromUrl = async (rootUrl) => {
         const existingIndex = docs.findIndex(d => d.docId === inferred.docId);
         if (existingIndex !== -1) {
           const existingDoc = docs[existingIndex];
-
           docs[existingIndex] = {
             ...existingDoc,
-            docId: existingDoc.docId || inferred.docId,
-            releaseTag: existingDoc.releaseTag || inferred.releaseTag,
-            publicationDate: existingDoc.publicationDate || inferred.publicationDate,
-            publisher: existingDoc.publisher || inferred.publisher,
-            href: existingDoc.href || inferred.href,
-            doi: existingDoc.doi || inferred.doi,
-            docType: existingDoc.docType || inferred.docType,
-            docNumber: existingDoc.docNumber || inferred.docNumber,
-            docPart: existingDoc.docPart || inferred.docPart,
+            ...pick(inferred, [
+              'docId',
+              'releaseTag',
+              'publicationDate',
+              'publisher',
+              'href',
+              'doi',
+              'docType',
+              'docNumber',
+              'docPart'
+            ]),
             status: {
               ...existingDoc.status,
               active: inferred.status.active,
@@ -234,7 +241,6 @@ const extractFromUrl = async (rootUrl) => {
               superseded: inferred.status.superseded
             }
           };
-
         } else {
           docs.push(inferred);
         }
