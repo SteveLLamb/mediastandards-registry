@@ -225,7 +225,7 @@ const extractFromUrl = async (rootUrl) => {
         } else {
           docs.push(inferred);
         }
-        console.warn(\`📄 Likely PDF-only release — inferred docId: ${inferred.docId}`);
+        console.warn(`📄 Likely PDF-only release — inferred docId: ${inferred.docId}`);
       } else {
         console.warn(`⚠️ Failed to fetch or parse ${indexUrl}: ${err.message}`);
       }
