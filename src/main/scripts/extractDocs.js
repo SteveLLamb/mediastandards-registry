@@ -78,7 +78,7 @@ const extractFromUrl = async (rootUrl) => {
   for (const releaseTag of folderLinks) {
     const isLatest = releaseTag === latestTag;
     const indexUrl = `${rootUrl}${releaseTag}/index.html`;
-    console.log(`🔍 Processing ${rootUrl}${releaseTag}/ - Latest: ${isLatest}`);
+    console.log(`🔍 Processing ${rootUrl}${releaseTag}/`);
 
     try {
       const indexRes = await axios.get(indexUrl);
@@ -156,6 +156,14 @@ const extractFromUrl = async (rootUrl) => {
     } catch (err) {
       if (err.response?.status === 403 || err.response?.status === 404) {
         console.warn(`⚠️ No index.html found at ${rootUrl}${releaseTag}/`);
+
+        const [ , pubTypeNum ] = rootUrl.match(/doc\/([^/]+)\/$/) || [];
+        const [ datePart ] = releaseTag.split('-');
+        const pubDate = dayjs(datePart, 'YYYYMMDD');
+        const dateShort = pubDate.isValid() ? pubDate.format('YYYY-MM') : 'UNKNOWN';
+        const docId = pubTypeNum ? `SMPTE.${pubTypeNum.toUpperCase()}.${dateShort}` : 'UNKNOWN';
+        console.warn(`📄 Likely PDF-only document skipped — inferred docId: ${docId}`);
+
       } else {
         console.warn(`⚠️ Failed to fetch or parse ${indexUrl}: ${err.message}`);
       }
