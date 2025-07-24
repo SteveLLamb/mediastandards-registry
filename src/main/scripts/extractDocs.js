@@ -88,9 +88,12 @@ function mergeInferredInto(existingDoc, inferredDoc) {
 
   // Only update known status fields
   if (!existingDoc.status) existingDoc.status = {};
-  existingDoc.status.active = inferredDoc.status.active;
-  existingDoc.status.latestVersion = inferredDoc.status.latestVersion;
-  existingDoc.status.superseded = inferredDoc.status.superseded;
+  const statusFields = ['active', 'latestVersion', 'superseded'];
+  for (const field of statusFields) {
+    if (inferredDoc.status[field] !== undefined) {
+      existingDoc.status[field] = inferredDoc.status[field];
+    }
+  }
 
 }
 
@@ -340,11 +343,24 @@ const extractFromUrl = async (rootUrl) => {
           : oldVal === newVal;
 
         if (!isEqual) {
-          // Skip references logging in field updates
-          if (key !== 'references') {
-            existingDoc[key] = newVal;  // Now update the value
+          if (key === 'references') {
+            continue; 
+          }
+          if (key === 'status') {
+            if (!existingDoc.status) existingDoc.status = {};
+            const statusFields = ['active', 'latestVersion', 'superseded', 'stage', 'state'];
+            for (const field of statusFields) {
+              if (
+                newVal[field] !== undefined &&
+                existingDoc.status[field] !== newVal[field]
+              ) {
+                existingDoc.status[field] = newVal[field];
+                if (!changedFields.includes('status')) changedFields.push('status');
+              }
+            }
+          } else {
+            existingDoc[key] = newVal;
             changedFields.push(key);
-
           }
         }
       }
