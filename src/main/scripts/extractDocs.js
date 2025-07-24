@@ -161,10 +161,9 @@ const extractFromUrl = async (rootUrl) => {
       if (err.response?.status === 403 || err.response?.status === 404) {
         console.warn(`⚠️ No index.html found at ${rootUrl}${releaseTag}/`);
 
-        const [, pubTypeNum] = rootUrl.match(/doc\/([^/]+)\/$/) || [];
-        const [datePart] = releaseTag.split('-');
+        const [ , pubTypeNum ] = rootUrl.match(/doc\/([^/]+)\/$/) || [];
+        const [ datePart ] = releaseTag.split('-');
         const pubDate = dayjs(datePart, 'YYYYMMDD');
-
         let dateString = 'UNKNOWN';
         if (pubDate.isValid()) {
           dateString = pubDate.year() < 2023 ? `${pubDate.year()}` : pubDate.format('YYYY-MM');
@@ -172,47 +171,26 @@ const extractFromUrl = async (rootUrl) => {
 
         let docId = pubTypeNum ? `SMPTE.${pubTypeNum.toUpperCase()}.${dateString}` : 'UNKNOWN';
 
+        // Try to infer amendment docId
         if (/^(\d{8})-am(\d+)-/.test(releaseTag)) {
           const [, amendDate, amendNum] = releaseTag.match(/^(\d{8})-am(\d+)-/);
           const amendYear = dayjs(amendDate, 'YYYYMMDD').year();
+
+          // Find the most recent base release before the amendment
           const base = baseReleases
             .map(tag => ({ tag, date: dayjs(tag.split('-')[0], 'YYYYMMDD') }))
             .filter(entry => entry.date.isValid() && entry.date.isBefore(dayjs(amendDate, 'YYYYMMDD')))
             .sort((a, b) => b.date - a.date)[0];
+
           if (base) {
             const baseYear = base.date.year();
             docId = `SMPTE.${pubTypeNum.toUpperCase()}.${baseYear}Am${amendNum}.${amendYear}`;
           }
+        
+        console.warn(`📄 Likely PDF-only amendment skipped — inferred docId: ${docId}`);
+        } else {
+          console.warn(`📄 Likely PDF-only document skipped — inferred docId: ${docId}`);
         }
-
-        const statusStage = releaseTag.split('-').pop().toUpperCase();
-        const isLatest = releaseTag === latestTag;
-        const pubYear = dateString.slice(0, 4);
-        const doi = docId.startsWith('SMPTE.') && pubYear
-          ? `10.5594/${docId.replace('.', '.', 1)}.${pubYear}`
-          : undefined;
-
-        // Check for existing doc by docId
-        const existingDoc = docs.find(d => d.docId === docId) || null;
-
-        const fallbackDoc = {
-          ...existingDoc, // preserve existing data
-          docId,
-          releaseTag,
-          publicationDate: pubDate.isValid() ? pubDate.format('YYYY-MM-DD') : undefined,
-          href: doi ? `https://doi.org/${doi}` : undefined,
-          publisher: 'SMPTE',
-          status: {
-            ...(existingDoc?.status || {}),
-            latestVersion: isLatest,
-            active: isLatest && statusStage === 'PUB',
-            superseded: !isLatest,
-            stage: statusStage
-          }
-        };
-
-        docs.push(fallbackDoc);
-        console.warn(`📄 Likely PDF-only document skipped — inferred docId: ${docId}`);
       } else {
         console.warn(`⚠️ Failed to fetch or parse ${indexUrl}: ${err.message}`);
       }
@@ -260,7 +238,7 @@ const extractFromUrl = async (rootUrl) => {
       const existingDoc = existingDocs[index];
       let changedFields = [];
       const oldRefs = existingDoc.references || { normative: [], bibliographic: [] };
-      const newRefs = doc.references || { normative: [], bibliographic: [] };
+      const newRefs = doc.references;
 
       // Capture the old values before updating
       const oldValues = { ...existingDoc };
