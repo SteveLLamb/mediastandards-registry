@@ -160,7 +160,10 @@ const extractFromUrl = async (rootUrl) => {
         const [ , pubTypeNum ] = rootUrl.match(/doc\/([^/]+)\/$/) || [];
         const [ datePart ] = releaseTag.split('-');
         const pubDate = dayjs(datePart, 'YYYYMMDD');
-        const dateShort = pubDate.isValid() ? pubDate.format('YYYY-MM') : 'UNKNOWN';
+        let dateString = 'UNKNOWN';
+        if (pubDate.isValid()) {
+          dateString = pubDate.year() < 2023 ? `${pubDate.year()}` : pubDate.format('YYYY-MM');
+        }
         const docId = pubTypeNum ? `SMPTE.${pubTypeNum.toUpperCase()}.${dateShort}` : 'UNKNOWN';
         console.warn(`📄 Likely PDF-only document skipped — inferred docId: ${docId}`);
 
