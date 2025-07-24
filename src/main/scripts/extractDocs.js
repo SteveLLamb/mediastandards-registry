@@ -15,12 +15,6 @@ const typeMap = {
         OV: 'Overview Document'
       };
 
-const pick = (obj, keys) =>
-  keys.reduce((acc, key) => {
-    if (obj[key] !== undefined) acc[key] = obj[key];
-    return acc;
-  }, {});
-
 function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
 
   const match = rootUrl.match(/doc\/([^/]+)\/$/);
@@ -71,6 +65,33 @@ function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
       superseded: releaseTag !== baseReleases[baseReleases.length - 1]
     }
   };
+}
+
+function mergeInferredInto(existingDoc, inferredDoc) {
+  const safeFields = [
+    'docId',
+    'releaseTag',
+    'publicationDate',
+    'publisher',
+    'href',
+    'doi',
+    'docType',
+    'docNumber',
+    'docPart'
+  ];
+
+  for (const key of safeFields) {
+    if (inferredDoc[key] !== undefined) {
+      existingDoc[key] = inferredDoc[key];
+    }
+  }
+
+  // Only update known status fields
+  if (!existingDoc.status) existingDoc.status = {};
+  existingDoc.status.active = inferredDoc.status.active;
+  existingDoc.status.latestVersion = inferredDoc.status.latestVersion;
+  existingDoc.status.superseded = inferredDoc.status.superseded;
+
 }
 
 const parseRefId = (text, href = '') => {
@@ -220,33 +241,7 @@ const extractFromUrl = async (rootUrl) => {
         const inferred = inferMetadataFromPath(rootUrl, releaseTag, baseReleases);
         const existingIndex = docs.findIndex(d => d.docId === inferred.docId);
         if (existingIndex !== -1) {
-          const existingDoc = docs[existingIndex];
-
-          // List of fields safe to overwrite from inference
-          const safeFields = [
-            'docId',
-            'releaseTag',
-            'publicationDate',
-            'publisher',
-            'href',
-            'doi',
-            'docType',
-            'docNumber',
-            'docPart'
-          ];
-
-          for (const key of safeFields) {
-            if (inferred[key] !== undefined) {
-              existingDoc[key] = inferred[key];
-            }
-          }
-
-          // Only update status subfields we're confident about
-          if (!existingDoc.status) existingDoc.status = {};
-          existingDoc.status.active = inferred.status.active;
-          existingDoc.status.latestVersion = inferred.status.latestVersion;
-          existingDoc.status.superseded = inferred.status.superseded;
-
+          mergeInferredInto(docs[existingIndex], inferred);
         } else {
           docs.push(inferred);
         }
