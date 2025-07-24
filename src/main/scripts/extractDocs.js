@@ -312,19 +312,19 @@ const extractFromUrl = async (rootUrl) => {
 
       if (doc.references) {
         
-        // Add new references
-        const addedRefs = {
+        if (doc.references) {
+        addedRefs = {
           normative: newRefs.normative.filter(ref => !oldRefs.normative.includes(ref)),
           bibliographic: newRefs.bibliographic.filter(ref => !oldRefs.bibliographic.includes(ref))
         };
 
-        // Remove outdated references
-        const removedRefs = {
+        removedRefs = {
           normative: oldRefs.normative.filter(ref => !newRefs.normative.includes(ref)),
           bibliographic: oldRefs.bibliographic.filter(ref => !newRefs.bibliographic.includes(ref))
         };
-        
+
         existingDoc.references = newRefs;
+      }
       }
 
       // Update document fields if there are changes
@@ -350,17 +350,18 @@ const extractFromUrl = async (rootUrl) => {
       }
 
       // If any fields or references were changed
-      if (changedFields.length > 0 || addedRefs.normative.length || addedRefs.bibliographic.length || removedRefs.normative.length || removedRefs.bibliographic.length) {
+      const hasRefChanges = addedRefs.normative.length || addedRefs.bibliographic.length ||
+                      removedRefs.normative.length || removedRefs.bibliographic.length;
+
+      if (changedFields.length > 0 || hasRefChanges) {
         updatedDocs.push({
           docId: doc.docId,
           fields: changedFields,
           addedRefs,
           removedRefs,
-          oldValues, // Include old values in the update log
-          newValues, // Include new values in the update log
+          oldValues,
+          newValues,
         });
-      } else {
-        skippedDocs.push(doc.docId);
       }
     }
   }
