@@ -72,6 +72,7 @@ const extractFromUrl = async (rootUrl) => {
 
   folderLinks.sort(); // oldest to newest
   const latestTag = folderLinks[folderLinks.length - 1];
+  console.log(latestTag)
 
   const docs = [];
 
