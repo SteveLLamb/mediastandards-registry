@@ -264,8 +264,15 @@ const extractFromUrl = async (rootUrl) => {
     } else {
       const existingDoc = existingDocs[index];
       let changedFields = [];
-      const oldRefs = existingDoc.references || { normative: [], bibliographic: [] };
-      const newRefs = doc.references || { normative: [], bibliographic: [] };
+      const oldRefs = {
+        normative: (existingDoc.references && existingDoc.references.normative) || [],
+        bibliographic: (existingDoc.references && existingDoc.references.bibliographic) || []
+      };
+
+      const newRefs = {
+        normative: (doc.references && doc.references.normative) || [],
+        bibliographic: (doc.references && doc.references.bibliographic) || []
+      };
 
       // Capture the old values before updating
       const oldValues = { ...existingDoc };
