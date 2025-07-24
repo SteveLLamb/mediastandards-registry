@@ -20,7 +20,15 @@ function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
   const match = rootUrl.match(/doc\/([^/]+)\/$/);
   const pubTypeNum = match ? match[1].toUpperCase() : null;
   const pubType = pubTypeNum?.match(/^[A-Z]+/)[0];
-  const pubNumber = pubTypeNum?.replace(pubType, '');
+  const numberPart = pubTypeNum?.replace(pubType, '');
+  let docNumber = numberPart;
+  let docPart;
+
+  if (numberPart.includes('-')) {
+    const [num, part] = numberPart.split('-');
+    docNumber = num;
+    docPart = part;
+  }
   const [datePart] = releaseTag.split('-');
   const pubDate = dayjs(datePart, 'YYYYMMDD');
   const dateString = pubDate.isValid() ? (pubDate.year() < 2023 ? `${pubDate.year()}` : pubDate.format('YYYY-MM')) : 'UNKNOWN';
@@ -49,8 +57,8 @@ function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
     href: `https://doi.org/10.5594/SMPTE.${pubTypeNum}.${pubDate.year()}`,
     doi: `10.5594/SMPTE.${pubTypeNum}.${pubDate.year()}`,
     docType: typeMap[pubType] || pubType,
-    docNumber: pubNumber,
-    docPart: undefined,
+    docNumber,
+    docPart,
     status: {
       active: false,
       latestVersion: releaseTag === baseReleases[baseReleases.length - 1],
