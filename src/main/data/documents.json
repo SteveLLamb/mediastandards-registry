@@ -29020,6 +29020,9 @@
     "status": {
       "active": false,
       "superseded": true,
+      "latestVersion": false,
+      "stage": "PUB",
+      "state": "pub",
       "supersededBy": [
         "SMPTE.ST430-1.2023-09"
       ]
@@ -29060,11 +29063,11 @@
     },
     "releaseTag": "20230907-pub",
     "status": {
-      "active": false,
-      "latestVersion": false,
+      "active": true,
+      "latestVersion": true,
       "stage": "PUB",
       "state": "pub",
-      "superseded": true
+      "superseded": false
     }
   },
   {
