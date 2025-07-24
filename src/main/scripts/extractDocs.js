@@ -2,6 +2,7 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const dayjs = require('dayjs');
 const fs = require('fs');
+const path = require('path');
 
 const urls = require('../input/urls.json');
 const badRefs = [];
@@ -53,6 +54,25 @@ const parseRefId = (text, href = '') => {
   return null;
 };
 
+const checkForPdf = async (baseUrl) => {
+  try {
+    const res = await axios.get(baseUrl, { responseType: 'text' });
+    const $ = cheerio.load(res.data);
+    let pdfFound = false;
+
+    $('a').each((_, el) => {
+      const href = $(el).attr('href');
+      if (href && href.toLowerCase().endsWith('.pdf')) {
+        pdfFound = true;
+      }
+    });
+
+    return pdfFound;
+  } catch {
+    return false;
+  }
+};
+
 const extractFromUrl = async (rootUrl) => {
   const res = await axios.get(rootUrl);
   const $ = cheerio.load(res.data);
@@ -70,118 +90,105 @@ const extractFromUrl = async (rootUrl) => {
     return [];
   }
 
-  // Sort releaseTags ascending (older first)
-  folderLinks.sort();
+  folderLinks.sort(); // ascending
 
   const docs = [];
 
   for (const releaseTag of folderLinks) {
-  const releaseUrl = `${rootUrl}${releaseTag}/`;
-  const indexUrl = `${releaseUrl}index.html`;
+    const baseUrl = `${rootUrl}${releaseTag}/`;
+    const indexUrl = `${baseUrl}index.html`;
 
-  try {
-    const indexRes = await axios.get(indexUrl, { responseType: 'text' });
-    const contentType = indexRes.headers['content-type'] || '';
+    try {
+      const indexRes = await axios.get(indexUrl, { responseType: 'text' });
 
-    if (contentType.includes('application/pdf')) {
-      console.warn(`📄 Skipping PDF release at ${releaseUrl} (content-type: ${contentType})`);
-      continue;
-    }
-
-    const $index = cheerio.load(indexRes.data);
-
-    const pubType = $index('[itemprop="pubType"]').attr('content');
-    const pubNumber = $index('[itemprop="pubNumber"]').attr('content');
-    const pubPart = $index('[itemprop="pubPart"]').attr('content');
-    const pubDate = $index('[itemprop="pubDateTime"]').attr('content');
-    const suiteTitle = $index('[itemprop="pubSuiteTitle"]').attr('content');
-    const title = $index('title').text().trim();
-    const tc = $index('[itemprop="pubTC"]').attr('content');
-
-    const pubDateObj = dayjs(pubDate);
-    const dateFormatted = pubDateObj.format('YYYY-MM-DD');
-    const dateShort = pubDateObj.format('YYYY-MM');
-
-    const typeMap = {
-      AG: 'Administrative Guideline',
-      ST: 'Standard',
-      RP: 'Recommended Practice',
-      EG: 'Engineering Guideline',
-      RDD: 'Registered Disclosure Document',
-      OV: 'Overview Document'
-    };
-
-    const docType = typeMap[pubType?.toUpperCase()] || pubType;
-    const label = `SMPTE ${pubType} ${pubNumber}-${pubPart}:${dateShort}`;
-    const id = `SMPTE.${pubType}${pubNumber}-${pubPart}.${dateShort}`;
-    const doi = `10.5594/SMPTE.${pubType}${pubNumber}-${pubPart}.${pubDateObj.format('YYYY')}`;
-    const href = `https://doi.org/${doi}`;
-
-    const pubStage = $index('[itemprop="pubStage"]').attr('content');
-    const pubState = $index('[itemprop="pubState"]').attr('content');
-    const active = pubStage === 'PUB' && pubState === 'pub';
-
-    const refSections = { normative: [], bibliographic: [] };
-    ['normative-references', 'bibliography'].forEach((sectionId) => {
-      const type = sectionId.includes('normative') ? 'normative' : 'bibliographic';
-      $index(`#sec-${sectionId} ul li`).each((_, el) => {
-        const cite = $index(el).find('cite');
-        const refText = cite.text();
-        const href = $index(el).find('a.ext-ref').attr('href') || '';
-        const refId = parseRefId(refText, href);
-        if (refId) {
-          refSections[type].push(refId);
-        } else {
-          badRefs.push({
-            docId: id,
-            type,
-            refText,
-            href
-          });
-        }
-      });
-    });
-
-    docs.push({
-      docId: id,
-      docLabel: label,
-      docNumber: pubNumber,
-      docPart: pubPart,
-      docTitle: `${suiteTitle} ${title}`,
-      docType,
-      doi,
-      group: `smpte-${tc.toLowerCase()}-tc`,
-      publicationDate: dateFormatted,
-      releaseTag,
-      publisher: 'SMPTE',
-      href,
-      status: { active },
-      references: refSections
-    });
-
-    } catch {
-      // fallback: try to detect PDFs directly
-      try {
-        const dirRes = await axios.get(releaseUrl);
-        const $dir = cheerio.load(dirRes.data);
-        let foundPdf = false;
-
-        $dir('a').each((_, el) => {
-          const href = $dir(el).attr('href');
-          if (href && href.toLowerCase().endsWith('.pdf')) {
-            foundPdf = true;
-            console.warn(`📄 Skipping PDF-only release at ${releaseUrl}: found ${href}`);
-          }
-        });
-
-        if (!foundPdf) {
-          console.warn(`🚫 No index.html or PDF found at ${releaseUrl}`);
-        }
-      } catch {
-        console.warn(`🚫 Unable to access release folder at ${releaseUrl}`);
+      const contentType = indexRes.headers['content-type'] || '';
+      if (contentType.includes('application/pdf')) {
+        console.warn(`📄 Skipping PDF release at ${releaseTag} (content-type: ${contentType})`);
+        continue;
       }
 
-      continue;
+      const $index = cheerio.load(indexRes.data);
+
+      const pubType = $index('[itemprop="pubType"]').attr('content');
+      const pubNumber = $index('[itemprop="pubNumber"]').attr('content');
+      const pubPart = $index('[itemprop="pubPart"]').attr('content');
+      const pubDate = $index('[itemprop="pubDateTime"]').attr('content');
+      const suiteTitle = $index('[itemprop="pubSuiteTitle"]').attr('content');
+      const title = $index('title').text().trim();
+      const tc = $index('[itemprop="pubTC"]').attr('content');
+
+      const pubDateObj = dayjs(pubDate);
+      const dateFormatted = pubDateObj.format('YYYY-MM-DD');
+      const dateShort = pubDateObj.format('YYYY-MM');
+
+      const typeMap = {
+        AG: 'Administrative Guideline',
+        ST: 'Standard',
+        RP: 'Recommended Practice',
+        EG: 'Engineering Guideline',
+        RDD: 'Registered Disclosure Document',
+        OV: 'Overview Document'
+      };
+
+      const docType = typeMap[pubType?.toUpperCase()] || pubType;
+      const label = `SMPTE ${pubType} ${pubNumber}-${pubPart}:${dateShort}`;
+      const id = `SMPTE.${pubType}${pubNumber}-${pubPart}.${dateShort}`;
+      const doi = `10.5594/SMPTE.${pubType}${pubNumber}-${pubPart}.${pubDateObj.format('YYYY')}`;
+      const href = `https://doi.org/${doi}`;
+
+      const pubStage = $index('[itemprop="pubStage"]').attr('content');
+      const pubState = $index('[itemprop="pubState"]').attr('content');
+      const active = pubStage === 'PUB' && pubState === 'pub';
+
+      const refSections = { normative: [], bibliographic: [] };
+      ['normative-references', 'bibliography'].forEach((sectionId) => {
+        const type = sectionId.includes('normative') ? 'normative' : 'bibliographic';
+        $index(`#sec-${sectionId} ul li`).each((_, el) => {
+          const cite = $index(el).find('cite');
+          const refText = cite.text();
+          const href = $index(el).find('a.ext-ref').attr('href') || '';
+          const refId = parseRefId(refText, href);
+          if (refId) {
+            refSections[type].push(refId);
+          } else {
+            badRefs.push({
+              docId: id,
+              type,
+              refText,
+              href
+            });
+          }
+        });
+      });
+
+      docs.push({
+        docId: id,
+        docLabel: label,
+        docNumber: pubNumber,
+        docPart: pubPart,
+        docTitle: `${suiteTitle} ${title}`,
+        docType,
+        doi,
+        group: `smpte-${tc.toLowerCase()}-tc`,
+        publicationDate: dateFormatted,
+        releaseTag,
+        publisher: 'SMPTE',
+        href,
+        status: { active },
+        references: refSections
+      });
+
+    } catch (err) {
+      if (err.response?.status === 403 || err.response?.status === 404) {
+        const pdfAvailable = await checkForPdf(baseUrl);
+        if (pdfAvailable) {
+          console.warn(`📄 Skipping PDF-only release at ${baseUrl} (index.html missing)`);
+        } else {
+          console.warn(`🚫 No index.html or PDF found at ${baseUrl}`);
+        }
+      } else {
+        console.warn(`⚠️ Failed to fetch ${indexUrl}: ${err.message}`);
+      }
     }
   }
 
