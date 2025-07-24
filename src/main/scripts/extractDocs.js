@@ -214,14 +214,27 @@ const extractFromUrl = async (rootUrl) => {
         const inferred = inferMetadataFromPath(rootUrl, releaseTag, baseReleases);
         const existingIndex = docs.findIndex(d => d.docId === inferred.docId);
         if (existingIndex !== -1) {
+          const existingDoc = docs[existingIndex];
+
           docs[existingIndex] = {
-            ...docs[existingIndex],
-            ...inferred,
+            ...existingDoc,
+            docId: existingDoc.docId || inferred.docId,
+            releaseTag: existingDoc.releaseTag || inferred.releaseTag,
+            publicationDate: existingDoc.publicationDate || inferred.publicationDate,
+            publisher: existingDoc.publisher || inferred.publisher,
+            href: existingDoc.href || inferred.href,
+            doi: existingDoc.doi || inferred.doi,
+            docType: existingDoc.docType || inferred.docType,
+            docNumber: existingDoc.docNumber || inferred.docNumber,
+            docPart: existingDoc.docPart || inferred.docPart,
             status: {
-              ...docs[existingIndex].status,
-              ...inferred.status
+              ...existingDoc.status,
+              active: inferred.status.active,
+              latestVersion: inferred.status.latestVersion,
+              superseded: inferred.status.superseded
             }
           };
+
         } else {
           docs.push(inferred);
         }
