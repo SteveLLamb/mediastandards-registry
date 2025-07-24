@@ -102,7 +102,8 @@
                         "type": "string"
                     },
                     "releaseTag": {
-                        "type": "string"
+                      "type": "string",
+                      "pattern": "^\\d{8}(-am\\d+)?-(wd|cd|fcd|pub)$"
                     },
                     "href": {
                         "type": "string",
