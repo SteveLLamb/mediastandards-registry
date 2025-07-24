@@ -316,18 +316,18 @@ const extractFromUrl = async (rootUrl) => {
       if (doc.references) {
         
         if (doc.references) {
-        addedRefs = {
-          normative: newRefs.normative.filter(ref => !oldRefs.normative.includes(ref)),
-          bibliographic: newRefs.bibliographic.filter(ref => !oldRefs.bibliographic.includes(ref))
-        };
+          addedRefs = {
+            normative: newRefs.normative.filter(ref => !oldRefs.normative.includes(ref)),
+            bibliographic: newRefs.bibliographic.filter(ref => !oldRefs.bibliographic.includes(ref))
+          };
 
-        removedRefs = {
-          normative: oldRefs.normative.filter(ref => !newRefs.normative.includes(ref)),
-          bibliographic: oldRefs.bibliographic.filter(ref => !newRefs.bibliographic.includes(ref))
-        };
+          removedRefs = {
+            normative: oldRefs.normative.filter(ref => !newRefs.normative.includes(ref)),
+            bibliographic: oldRefs.bibliographic.filter(ref => !newRefs.bibliographic.includes(ref))
+          };
 
-        existingDoc.references = newRefs;
-      }
+          existingDoc.references = newRefs;
+        }
       }
 
       // Update document fields if there are changes
@@ -426,16 +426,17 @@ const extractFromUrl = async (rootUrl) => {
         if (field === 'status') {
           const oldStatus = doc.oldValues.status || {};
           const newStatus = doc.newValues.status || {};
-          const statusKeys = new Set([...Object.keys(oldStatus), ...Object.keys(newStatus)]);
+          const changedStatusFields = Object.keys(newStatus).filter(
+            k => JSON.stringify(oldStatus[k]) !== JSON.stringify(newStatus[k])
+          );
 
-          const diffs = [...statusKeys]
-            .filter(k => JSON.stringify(oldStatus[k]) !== JSON.stringify(newStatus[k]))
-            .map(k => `${k}: ${JSON.stringify(oldStatus[k])} → ${JSON.stringify(newStatus[k])}`)
-            .join('\r\n');
-
-          if (diffs) {
-            lines.push(`  - status changed: \r\n${diffs}`);
+          if (changedStatusFields.length) {
+            const diffs = changedStatusFields
+              .map(k => `${k}: ${JSON.stringify(oldStatus[k])} → ${JSON.stringify(newStatus[k])}`)
+              .join(', ');
+            lines.push(`  - status changed: ${diffs}`);
           }
+          
         } else {
           lines.push(`  - ${field}:${formatVal(oldVal)} > ${formatVal(newVal)}`);
         }
