@@ -443,7 +443,7 @@ const extractFromUrl = async (rootUrl) => {
             });
 
           if (diffs.length > 0) {
-            lines.push(`  - status changed: ${diffs.join(', ')}`);
+            lines.push(`  - status changed: \r\n${diffs.join('\r\n')}`);
           }
         } else {
           lines.push(`  - ${field}:${formatVal(oldVal)} > ${formatVal(newVal)}`);
