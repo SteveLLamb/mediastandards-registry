@@ -6,6 +6,15 @@ const fs = require('fs');
 const urls = require('../input/urls.json');
 const badRefs = [];
 
+const typeMap = {
+        AG: 'Administrative Guideline',
+        ST: 'Standard',
+        RP: 'Recommended Practice',
+        EG: 'Engineering Guideline',
+        RDD: 'Registered Disclosure Document',
+        OV: 'Overview Document'
+      };
+
 const parseRefId = (text, href = '') => {
   if (/w3\.org\/TR\/\d{4}\/REC-([^\/]+)-(\d{8})\//i.test(href)) {
     const [, shortname, yyyymmdd] = href.match(/REC-([^\/]+)-(\d{8})/i);
@@ -100,15 +109,6 @@ const extractFromUrl = async (rootUrl) => {
       const dateFormatted = pubDateObj.format('YYYY-MM-DD');
       const dateShort = pubDateObj.format('YYYY-MM');
 
-      const typeMap = {
-        AG: 'Administrative Guideline',
-        ST: 'Standard',
-        RP: 'Recommended Practice',
-        EG: 'Engineering Guideline',
-        RDD: 'Registered Disclosure Document',
-        OV: 'Overview Document'
-      };
-
       const docType = typeMap[pubType?.toUpperCase()] || pubType;
       const label = `SMPTE ${pubType} ${pubNumber}-${pubPart}:${dateShort}`;
       const id = `SMPTE.${pubType}${pubNumber}-${pubPart}.${dateShort}`;
@@ -161,90 +161,35 @@ const extractFromUrl = async (rootUrl) => {
       if (err.response?.status === 403 || err.response?.status === 404) {
         console.warn(`⚠️ No index.html found at ${rootUrl}${releaseTag}/`);
 
-        const [, pubTypeNum] = rootUrl.match(/doc\/([^/]+)\/$/) || [];
-        const [datePart, stageSuffix] = releaseTag.split('-');
+        const [ , pubTypeNum ] = rootUrl.match(/doc\/([^/]+)\/$/) || [];
+        const [ datePart ] = releaseTag.split('-');
         const pubDate = dayjs(datePart, 'YYYYMMDD');
-        const stage = stageSuffix?.toUpperCase();
-        const isLatest = releaseTag === latestTag;
-        const active = stage === 'PUB' && isLatest;
+        let dateString = 'UNKNOWN';
+        if (pubDate.isValid()) {
+          dateString = pubDate.year() < 2023 ? `${pubDate.year()}` : pubDate.format('YYYY-MM');
+        }
 
-        const match = pubTypeNum.match(/^(ST|RP|RDD|EG|AG|OV)?(\d+)(?:-(\d+))?$/i);
-        let pubType = match?.[1]?.toUpperCase() || 'ST';
-        let pubNumber = match?.[2];
-        let pubPart = match?.[3] || '1';
+        let docId = pubTypeNum ? `SMPTE.${pubTypeNum.toUpperCase()}.${dateString}` : 'UNKNOWN';
 
-        const docTypeMap = {
-          AG: 'Administrative Guideline',
-          ST: 'Standard',
-          RP: 'Recommended Practice',
-          EG: 'Engineering Guideline',
-          RDD: 'Registered Disclosure Document',
-          OV: 'Overview Document'
-        };
-        const docType = docTypeMap[pubType] || 'Standard';
-
-        let docId = pubTypeNum ? `SMPTE.${pubTypeNum.toUpperCase()}.${pubDate.isValid() ? pubDate.year() : 'UNKNOWN'}` : 'UNKNOWN';
-
+        // Try to infer amendment docId
         if (/^(\d{8})-am(\d+)-/.test(releaseTag)) {
           const [, amendDate, amendNum] = releaseTag.match(/^(\d{8})-am(\d+)-/);
           const amendYear = dayjs(amendDate, 'YYYYMMDD').year();
+
+          // Find the most recent base release before the amendment
           const base = baseReleases
             .map(tag => ({ tag, date: dayjs(tag.split('-')[0], 'YYYYMMDD') }))
             .filter(entry => entry.date.isValid() && entry.date.isBefore(dayjs(amendDate, 'YYYYMMDD')))
             .sort((a, b) => b.date - a.date)[0];
+
           if (base) {
             const baseYear = base.date.year();
             docId = `SMPTE.${pubTypeNum.toUpperCase()}.${baseYear}Am${amendNum}.${amendYear}`;
           }
-        }
-
-        const existingDocIndex = existingDocs.findIndex(d => d.docId === docId);
-        if (existingDocIndex !== -1) {
-          const existingDoc = existingDocs[existingDocIndex];
-          const updatedFields = [];
-
-          const patchField = (field, value) => {
-            if (existingDoc[field] !== value && value !== undefined) {
-              existingDoc[field] = value;
-              updatedFields.push(field);
-            }
-          };
-
-          patchField('releaseTag', releaseTag);
-          patchField('publicationDate', pubDate.isValid() ? pubDate.format('YYYY-MM-DD') : undefined);
-          patchField('publisher', 'SMPTE');
-
-          const inferredDoi = `10.5594/SMPTE.${pubType}${pubNumber}-${pubPart}.${pubDate.format('YYYY')}`;
-          const inferredHref = `https://doi.org/${inferredDoi}`;
-          patchField('doi', inferredDoi);
-          patchField('href', inferredHref);
-          patchField('docType', docType);
-          patchField('docNumber', pubNumber);
-          patchField('docPart', pubPart);
-
-          patchField('status', {
-            active,
-            latestVersion: isLatest,
-            superseded: !isLatest,
-            stage,
-            state: 'pub'
-          });
-
-          if (updatedFields.length > 0) {
-            updatedDocs.push({
-              docId,
-              fields: updatedFields,
-              addedRefs: { normative: [], bibliographic: [] },
-              removedRefs: { normative: [], bibliographic: [] },
-              oldValues: {},  // Optional: capture old values if needed
-              newValues: {}   // Optional: capture new values if needed
-            });
-            console.log(`🩹 Patched existing record for ${docId}`);
-          } else {
-            skippedDocs.push(docId);
-          }
+        
+        console.warn(`📄 Likely PDF-only amendment skipped — inferred docId: ${docId}`);
         } else {
-          console.warn(`📄 No existing entry to patch — inferred docId: ${docId}`);
+          console.warn(`📄 Likely PDF-only document skipped — inferred docId: ${docId}`);
         }
       } else {
         console.warn(`⚠️ Failed to fetch or parse ${indexUrl}: ${err.message}`);
