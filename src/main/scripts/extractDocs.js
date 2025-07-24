@@ -73,6 +73,10 @@ const extractFromUrl = async (rootUrl) => {
   folderLinks.sort(); // oldest to newest
   const latestTag = folderLinks[folderLinks.length - 1];
 
+  // Group base versions and amendments for later use
+  const baseReleases = folderLinks.filter(tag => !/-am\d+-/.test(tag));
+  const amendments = folderLinks.filter(tag => /-am\d+-/.test(tag));
+
   const docs = [];
 
   for (const releaseTag of folderLinks) {
@@ -164,9 +168,26 @@ const extractFromUrl = async (rootUrl) => {
         if (pubDate.isValid()) {
           dateString = pubDate.year() < 2023 ? `${pubDate.year()}` : pubDate.format('YYYY-MM');
         }
-        const docId = pubTypeNum ? `SMPTE.${pubTypeNum.toUpperCase()}.${dateString}` : 'UNKNOWN';
-        console.warn(`📄 Likely PDF-only document skipped — inferred docId: ${docId}`);
 
+        let docId = pubTypeNum ? `SMPTE.${pubTypeNum.toUpperCase()}.${dateString}` : 'UNKNOWN';
+
+        // Try to infer amendment docId
+        if (/^(\d{8})-am(\d+)-/.test(releaseTag)) {
+          const [, amendDate, amendNum] = releaseTag.match(/^(\d{8})-am(\d+)-/);
+          const amendYear = dayjs(amendDate, 'YYYYMMDD').year();
+          
+          // Find the most recent base release before the amendment
+          const base = baseReleases
+            .map(tag => ({ tag, date: dayjs(tag.split('-')[0], 'YYYYMMDD') }))
+            .filter(entry => entry.date.isValid() && entry.date.isBefore(dayjs(amendDate, 'YYYYMMDD')))
+            .sort((a, b) => b.date - a.date)[0];
+
+          if (base) {
+            const baseYear = base.date.year();
+            docId = `SMPTE.${pubTypeNum.toUpperCase()}.${baseYear}Am${amendNum}.${amendYear}`;
+          }
+        
+        console.warn(`📄 Likely PDF-only document skipped — inferred docId: ${docId}`);
       } else {
         console.warn(`⚠️ Failed to fetch or parse ${indexUrl}: ${err.message}`);
       }
