@@ -241,13 +241,12 @@ const extractFromUrl = async (rootUrl) => {
             }
           }
 
-          // Merge status fields carefully
-          existingDoc.status = {
-            ...existingDoc.status,
-            active: inferred.status.active,
-            latestVersion: inferred.status.latestVersion,
-            superseded: inferred.status.superseded
-          };
+          // Only update status subfields we're confident about
+          if (!existingDoc.status) existingDoc.status = {};
+          existingDoc.status.active = inferred.status.active;
+          existingDoc.status.latestVersion = inferred.status.latestVersion;
+          existingDoc.status.superseded = inferred.status.superseded;
+
         } else {
           docs.push(inferred);
         }
