@@ -221,14 +221,27 @@ const extractFromUrl = async (rootUrl) => {
         const existingIndex = docs.findIndex(d => d.docId === inferred.docId);
         if (existingIndex !== -1) {
           const existingDoc = docs[existingIndex];
-          // Do NOT touch references in PDF-only mode
-          delete inferred.references;
-          // Only update explicitly inferred fields
-          for (const key of ['docId', 'releaseTag', 'publicationDate', 'publisher', 'href', 'doi', 'docType', 'docNumber', 'docPart']) {
+
+          // List of fields safe to overwrite from inference
+          const safeFields = [
+            'docId',
+            'releaseTag',
+            'publicationDate',
+            'publisher',
+            'href',
+            'doi',
+            'docType',
+            'docNumber',
+            'docPart'
+          ];
+
+          for (const key of safeFields) {
             if (inferred[key] !== undefined) {
               existingDoc[key] = inferred[key];
             }
           }
+
+          // Merge status fields carefully
           existingDoc.status = {
             ...existingDoc.status,
             active: inferred.status.active,
