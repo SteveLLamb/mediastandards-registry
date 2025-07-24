@@ -306,9 +306,15 @@ const extractFromUrl = async (rootUrl) => {
       };
 
       // Capture the old values before updating
-      const oldValues = { ...existingDoc };
+      const oldValues = {
+        ...existingDoc,
+        status: { ...(existingDoc.status || {}) }
+      };
       // Capture the new values for logging
-      const newValues = {};  
+      const newValues = {
+        ...doc,
+        status: { ...(doc.status || {}) }
+      };  
 
       let addedRefs = { normative: [], bibliographic: [] };
       let removedRefs = { normative: [], bibliographic: [] };
