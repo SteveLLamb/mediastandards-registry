@@ -71,10 +71,12 @@ const extractFromUrl = async (rootUrl) => {
   }
 
   folderLinks.sort(); // oldest to newest
+  const latestTag = folderLinks[folderLinks.length - 1];
 
   const docs = [];
 
   for (const releaseTag of folderLinks) {
+    const isLatest = releaseTag === latestTag;
     const indexUrl = `${rootUrl}${releaseTag}/index.html`;
 
     try {
@@ -110,6 +112,7 @@ const extractFromUrl = async (rootUrl) => {
 
       const pubStage = $index('[itemprop="pubStage"]').attr('content');
       const pubState = $index('[itemprop="pubState"]').attr('content');
+      const active = pubStage === 'PUB' && pubState === 'pub';
 
       const refSections = { normative: [], bibliographic: [] };
       ['normative-references', 'bibliography'].forEach((sectionId) => {
@@ -141,11 +144,11 @@ const extractFromUrl = async (rootUrl) => {
         publisher: 'SMPTE',
         href,
         status: {
-          active,
+          active: isLatest && pubStage === 'PUB' && pubState === 'pub',
+          latestVersion: isLatest,
+          superseded: !isLatest,
           stage: pubStage,
-          state: pubState,
-          latestVersion,
-          superseded
+          state: pubState
         },
         references: refSections
       });
@@ -256,24 +259,6 @@ const extractFromUrl = async (rootUrl) => {
         skippedDocs.push(doc.docId);
       }
     }
-  }
-
-  // Determine latestVersion, active, superseded
-  const groupedByBaseId = {};
-  for (const doc of existingDocs) {
-    const baseId = doc.docId.replace(/\.\d{4}-\d{2}$/, '');
-    if (!groupedByBaseId[baseId]) groupedByBaseId[baseId] = [];
-    groupedByBaseId[baseId].push(doc);
-  }
-
-  for (const baseId in groupedByBaseId) {
-    const versions = groupedByBaseId[baseId];
-    versions.sort((a, b) => a.publicationDate.localeCompare(b.publicationDate)); // ascending
-    versions.forEach((doc, i) => {
-      doc.status.latestVersion = i === versions.length - 1;
-      doc.status.active = doc.status.latestVersion;
-      doc.status.superseded = !doc.status.latestVersion;
-    });
   }
 
   // Sort documents by docId
