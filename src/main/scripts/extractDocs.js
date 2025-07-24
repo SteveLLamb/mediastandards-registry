@@ -430,14 +430,7 @@ const extractFromUrl = async (rootUrl) => {
             k => JSON.stringify(oldStatus[k]) !== JSON.stringify(newStatus[k])
           );
 
-          if (changedStatusFields.length) {
-            const diffs = changedStatusFields
-              .map(k => `${k}: ${JSON.stringify(oldStatus[k])} → ${JSON.stringify(newStatus[k])}`)
-              .join(', ');
-            lines.push(`  - status changed: ${diffs}`);
-          }
           
-        } else {
           lines.push(`  - ${field}:${formatVal(oldVal)} > ${formatVal(newVal)}`);
         }
       });
