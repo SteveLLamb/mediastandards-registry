@@ -260,7 +260,7 @@ const extractFromUrl = async (rootUrl) => {
       const existingDoc = existingDocs[index];
       let changedFields = [];
       const oldRefs = existingDoc.references || { normative: [], bibliographic: [] };
-      const newRefs = doc.references;
+      const newRefs = doc.references || { normative: [], bibliographic: [] };
 
       // Capture the old values before updating
       const oldValues = { ...existingDoc };
