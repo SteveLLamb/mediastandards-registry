@@ -15,6 +15,58 @@ const typeMap = {
         OV: 'Overview Document'
       };
 
+function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
+  const typeMap = {
+    AG: 'Administrative Guideline',
+    ST: 'Standard',
+    RP: 'Recommended Practice',
+    EG: 'Engineering Guideline',
+    RDD: 'Registered Disclosure Document',
+    OV: 'Overview Document'
+  };
+
+  const match = rootUrl.match(/doc\/([^/]+)\/$/);
+  const pubTypeNum = match ? match[1].toUpperCase() : null;
+  const pubType = pubTypeNum?.match(/^[A-Z]+/)[0];
+  const pubNumber = pubTypeNum?.replace(pubType, '');
+  const [datePart] = releaseTag.split('-');
+  const pubDate = dayjs(datePart, 'YYYYMMDD');
+  const dateString = pubDate.isValid() ? (pubDate.year() < 2023 ? `${pubDate.year()}` : pubDate.format('YYYY-MM')) : 'UNKNOWN';
+
+  let docId = pubTypeNum ? `SMPTE.${pubTypeNum}.${dateString}` : 'UNKNOWN';
+
+  // Amendments
+  if (/^(\d{8})-am(\d+)-/.test(releaseTag)) {
+    const [, amendDate, amendNum] = releaseTag.match(/^(\d{8})-am(\d+)-/);
+    const amendYear = dayjs(amendDate, 'YYYYMMDD').year();
+    const base = baseReleases
+      .map(tag => ({ tag, date: dayjs(tag.split('-')[0], 'YYYYMMDD') }))
+      .filter(entry => entry.date.isValid() && entry.date.isBefore(dayjs(amendDate, 'YYYYMMDD')))
+      .sort((a, b) => b.date - a.date)[0];
+    if (base) {
+      const baseYear = base.date.year();
+      docId = `SMPTE.${pubTypeNum}.${baseYear}Am${amendNum}.${amendYear}`;
+    }
+  }
+
+  return {
+    docId,
+    releaseTag,
+    publicationDate: pubDate.isValid() ? pubDate.format('YYYY-MM-DD') : undefined,
+    publisher: 'SMPTE',
+    href: `https://doi.org/10.5594/SMPTE.${pubTypeNum}.${pubDate.year()}`,
+    doi: `10.5594/SMPTE.${pubTypeNum}.${pubDate.year()}`,
+    docType: typeMap[pubType] || pubType,
+    docNumber: pubNumber,
+    docPart: undefined,
+    status: {
+      active: false,
+      latestVersion: releaseTag === baseReleases[baseReleases.length - 1],
+      superseded: releaseTag !== baseReleases[baseReleases.length - 1]
+    }
+  };
+}
+
 const parseRefId = (text, href = '') => {
   if (/w3\.org\/TR\/\d{4}\/REC-([^\/]+)-(\d{8})\//i.test(href)) {
     const [, shortname, yyyymmdd] = href.match(/REC-([^\/]+)-(\d{8})/i);
@@ -159,36 +211,21 @@ const extractFromUrl = async (rootUrl) => {
       if (err.response?.status === 403 || err.response?.status === 404) {
         console.warn(`⚠️ No index.html found at ${rootUrl}${releaseTag}/`);
 
-        const [ , pubTypeNum ] = rootUrl.match(/doc\/([^/]+)\/$/) || [];
-        const [ datePart ] = releaseTag.split('-');
-        const pubDate = dayjs(datePart, 'YYYYMMDD');
-        let dateString = 'UNKNOWN';
-        if (pubDate.isValid()) {
-          dateString = pubDate.year() < 2023 ? `${pubDate.year()}` : pubDate.format('YYYY-MM');
-        }
-
-        let docId = pubTypeNum ? `SMPTE.${pubTypeNum.toUpperCase()}.${dateString}` : 'UNKNOWN';
-
-        // Try to infer amendment docId
-        if (/^(\d{8})-am(\d+)-/.test(releaseTag)) {
-          const [, amendDate, amendNum] = releaseTag.match(/^(\d{8})-am(\d+)-/);
-          const amendYear = dayjs(amendDate, 'YYYYMMDD').year();
-
-          // Find the most recent base release before the amendment
-          const base = baseReleases
-            .map(tag => ({ tag, date: dayjs(tag.split('-')[0], 'YYYYMMDD') }))
-            .filter(entry => entry.date.isValid() && entry.date.isBefore(dayjs(amendDate, 'YYYYMMDD')))
-            .sort((a, b) => b.date - a.date)[0];
-
-          if (base) {
-            const baseYear = base.date.year();
-            docId = `SMPTE.${pubTypeNum.toUpperCase()}.${baseYear}Am${amendNum}.${amendYear}`;
-          }
-        
-        console.warn(`📄 Likely PDF-only amendment skipped — inferred docId: ${docId}`);
+        const inferred = inferMetadataFromPath(rootUrl, releaseTag, baseReleases);
+        const existingIndex = docs.findIndex(d => d.docId === inferred.docId);
+        if (existingIndex !== -1) {
+          docs[existingIndex] = {
+            ...docs[existingIndex],
+            ...inferred,
+            status: {
+              ...docs[existingIndex].status,
+              ...inferred.status
+            }
+          };
         } else {
-          console.warn(`📄 Likely PDF-only document skipped — inferred docId: ${docId}`);
+          docs.push(inferred);
         }
+        console.warn(\`📄 Likely PDF-only release — inferred docId: ${inferred.docId}`);
       } else {
         console.warn(`⚠️ Failed to fetch or parse ${indexUrl}: ${err.message}`);
       }
