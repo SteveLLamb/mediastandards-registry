@@ -307,19 +307,25 @@ const extractFromUrl = async (rootUrl) => {
       // Capture the new values for logging
       const newValues = {};  
 
-      // Add new references
-      const addedRefs = {
-        normative: newRefs.normative.filter(ref => !oldRefs.normative.includes(ref)),
-        bibliographic: newRefs.bibliographic.filter(ref => !oldRefs.bibliographic.includes(ref))
-      };
+      let addedRefs = { normative: [], bibliographic: [] };
+      let removedRefs = { normative: [], bibliographic: [] };
 
-      // Remove outdated references
-      const removedRefs = {
-        normative: oldRefs.normative.filter(ref => !newRefs.normative.includes(ref)),
-        bibliographic: oldRefs.bibliographic.filter(ref => !newRefs.bibliographic.includes(ref))
-      };
+      if (doc.references) {
+        
+        // Add new references
+        const addedRefs = {
+          normative: newRefs.normative.filter(ref => !oldRefs.normative.includes(ref)),
+          bibliographic: newRefs.bibliographic.filter(ref => !oldRefs.bibliographic.includes(ref))
+        };
 
-      existingDoc.references = newRefs;
+        // Remove outdated references
+        const removedRefs = {
+          normative: oldRefs.normative.filter(ref => !newRefs.normative.includes(ref)),
+          bibliographic: oldRefs.bibliographic.filter(ref => !newRefs.bibliographic.includes(ref))
+        };
+        
+        existingDoc.references = newRefs;
+      }
 
       // Update document fields if there are changes
       for (const key of Object.keys(doc)) {
