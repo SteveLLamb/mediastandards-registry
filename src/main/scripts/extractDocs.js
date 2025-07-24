@@ -428,9 +428,7 @@ const extractFromUrl = async (rootUrl) => {
             .filter(k => JSON.stringify(oldVal?.[k]) !== JSON.stringify(newVal[k]))
             .map(k => `${k}: ${JSON.stringify(oldVal?.[k])} → ${JSON.stringify(newVal[k])}`)
             .join(', ');
-          if (diffs) {
-            lines.push(`  - status changed: ${diffs}`);
-          }
+          lines.push(`  - status changed: ${diffs}`);
         } else {
           lines.push(`  - ${field}: ${formatVal(oldVal)} > ${formatVal(newVal)}`);
         }
