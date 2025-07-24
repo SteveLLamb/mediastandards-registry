@@ -164,7 +164,7 @@ const extractFromUrl = async (rootUrl) => {
         if (pubDate.isValid()) {
           dateString = pubDate.year() < 2023 ? `${pubDate.year()}` : pubDate.format('YYYY-MM');
         }
-        const docId = pubTypeNum ? `SMPTE.${pubTypeNum.toUpperCase()}.${dateShort}` : 'UNKNOWN';
+        const docId = pubTypeNum ? `SMPTE.${pubTypeNum.toUpperCase()}.${dateString}` : 'UNKNOWN';
         console.warn(`📄 Likely PDF-only document skipped — inferred docId: ${docId}`);
 
       } else {
