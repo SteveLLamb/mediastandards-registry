@@ -16,14 +16,6 @@ const typeMap = {
       };
 
 function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
-  const typeMap = {
-    AG: 'Administrative Guideline',
-    ST: 'Standard',
-    RP: 'Recommended Practice',
-    EG: 'Engineering Guideline',
-    RDD: 'Registered Disclosure Document',
-    OV: 'Overview Document'
-  };
 
   const match = rootUrl.match(/doc\/([^/]+)\/$/);
   const pubTypeNum = match ? match[1].toUpperCase() : null;
@@ -273,7 +265,7 @@ const extractFromUrl = async (rootUrl) => {
       const existingDoc = existingDocs[index];
       let changedFields = [];
       const oldRefs = existingDoc.references || { normative: [], bibliographic: [] };
-      const newRefs = doc.references;
+      const newRefs = doc.references || { normative: [], bibliographic: [] };
 
       // Capture the old values before updating
       const oldValues = { ...existingDoc };
