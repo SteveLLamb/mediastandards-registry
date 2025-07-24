@@ -264,7 +264,13 @@ const extractFromUrl = async (rootUrl) => {
 
   console.log(`✅ Added ${newDocs.length} new documents.`);
   console.log(`🔁 Updated ${updatedDocs.length} documents.`);
-  console.log(`⚠️ Skipped ${skippedDocs.length} duplicates.`);
+  if (skippedDocs.length > 0) {
+    console.log(`⚠️ Skipped ${skippedDocs.length} duplicate document(s):`);
+    skippedDocs.forEach(docId => {
+      console.log(`- ${docId}`);
+    });
+  }
+
 
   if (newDocs.length === 0 && updatedDocs.length === 0) {
     console.log('ℹ️ No new or updated documents — skipping PR creation.');
@@ -303,8 +309,7 @@ const extractFromUrl = async (rootUrl) => {
       return lines;
     }),
     '',
-    `### ⚠️ Skipped ${skippedDocs.length} duplicate(s):`,
-    ...skippedDocs.map(id => `- ${id}`),
+    `### ⚠️ Skipped ${skippedDocs.length} duplicate(s)`
     ''
   ];
 
