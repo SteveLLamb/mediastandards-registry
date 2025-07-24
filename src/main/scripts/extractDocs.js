@@ -293,7 +293,10 @@ const extractFromUrl = async (rootUrl) => {
       doc.fields.forEach(field => {
         const oldVal = doc.oldValues[field];  // Use the old captured value
         const newVal = doc.newValues[field];  // Use the new value
-        lines.push(`  - ${field}: "${oldVal}" > "${newVal}"`);
+        const formatVal = (val) =>
+          typeof val === 'object' ? JSON.stringify(val, null, 2) : `"${val}"`;
+
+        lines.push(`  - ${field}: ${formatVal(oldVal)} > ${formatVal(newVal)}`);
       });
 
       // Log added references
