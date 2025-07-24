@@ -424,13 +424,20 @@ const extractFromUrl = async (rootUrl) => {
           typeof val === 'object' ? JSON.stringify(val, null, 2) : `"${val}"`;
 
         if (field === 'status') {
-          const diffs = Object.keys(newVal)
-            .filter(k => JSON.stringify(oldVal?.[k]) !== JSON.stringify(newVal[k]))
-            .map(k => `${k}: ${JSON.stringify(oldVal?.[k])} → ${JSON.stringify(newVal[k])}`)
+          const oldStatus = doc.oldValues.status || {};
+          const newStatus = doc.newValues.status || {};
+          const statusKeys = new Set([...Object.keys(oldStatus), ...Object.keys(newStatus)]);
+
+          const diffs = [...statusKeys]
+            .filter(k => JSON.stringify(oldStatus[k]) !== JSON.stringify(newStatus[k]))
+            .map(k => `${k}: ${JSON.stringify(oldStatus[k])} → ${JSON.stringify(newStatus[k])}`)
             .join(', ');
-          lines.push(`  - status changed: ${diffs}`);
+
+          if (diffs) {
+            lines.push(`  - status changed: ${diffs}`);
+          }
         } else {
-          lines.push(`  - ${field}: ${formatVal(oldVal)} > ${formatVal(newVal)}`);
+          lines.push(`  - ${field}:\r\n${formatVal(oldVal)} > ${formatVal(newVal)}`);
         }
       });
 
