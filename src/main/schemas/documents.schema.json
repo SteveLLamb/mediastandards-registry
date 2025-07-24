@@ -263,6 +263,14 @@
                     "status": {
                         "type": "object",
                         "properties": { 
+                            "stage": {
+                              "type": "string",
+                              "enum": ["PUB", "FCD", "CD", "DP", "WD"]  
+                            },
+                            "state": {
+                              "type": "string",
+                              "enum": ["draft", "pub"]
+                            },
                             "active": {
                                 "type": "boolean"
                             },

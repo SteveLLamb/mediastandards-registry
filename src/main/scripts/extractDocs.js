@@ -60,7 +60,7 @@ const extractFromUrl = async (rootUrl) => {
   const folderLinks = [];
   $('a').each((_, el) => {
     const href = $(el).attr('href');
-    if (/^\d{8}(?:-am\d+)?-(wd|cd|fcd|pub)\/$/i.test(href)) {
+    if (/^\d{8}(?:-am\d+)?-(wd|cd|fcd|dp|pub)\/$/i.test(href)) {
       folderLinks.push(href.replace('/', ''));
     }
   });
@@ -141,7 +141,11 @@ const extractFromUrl = async (rootUrl) => {
         releaseTag,
         publisher: 'SMPTE',
         href,
-        status: { active },
+        status: {
+          active,
+          stage: pubStage,
+          state: pubState
+        },
         references: refSections
       });
     } catch (err) {
