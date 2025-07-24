@@ -308,7 +308,8 @@ const extractFromUrl = async (rootUrl) => {
       return lines;
     }),
     '',
-    `### ⚠️ Skipped ${skippedDocs.length} duplicate(s)`
+    `### ⚠️ Skipped ${skippedDocs.length} duplicate(s)`,
+    ''
   ];
 
   fs.writeFileSync('pr-update-log.txt', prLines.join('\n'));
