@@ -271,6 +271,9 @@
                               "type": "string",
                               "enum": ["draft", "pub"]
                             },
+                            "latestVersion": {
+                                "type": "boolean"
+                            },
                             "active": {
                                 "type": "boolean"
                             },
