@@ -2,7 +2,6 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const dayjs = require('dayjs');
 const fs = require('fs');
-const path = require('path');
 
 const urls = require('../input/urls.json');
 const badRefs = [];
@@ -54,25 +53,6 @@ const parseRefId = (text, href = '') => {
   return null;
 };
 
-const checkForPdf = async (baseUrl) => {
-  try {
-    const res = await axios.get(baseUrl, { responseType: 'text' });
-    const $ = cheerio.load(res.data);
-    let pdfFound = false;
-
-    $('a').each((_, el) => {
-      const href = $(el).attr('href');
-      if (href && href.toLowerCase().endsWith('.pdf')) {
-        pdfFound = true;
-      }
-    });
-
-    return pdfFound;
-  } catch {
-    return false;
-  }
-};
-
 const extractFromUrl = async (rootUrl) => {
   const res = await axios.get(rootUrl);
   const $ = cheerio.load(res.data);
@@ -90,23 +70,15 @@ const extractFromUrl = async (rootUrl) => {
     return [];
   }
 
-  folderLinks.sort(); // ascending
+  folderLinks.sort(); // oldest to newest
 
   const docs = [];
 
   for (const releaseTag of folderLinks) {
-    const baseUrl = `${rootUrl}${releaseTag}/`;
-    const indexUrl = `${baseUrl}index.html`;
+    const indexUrl = `${rootUrl}${releaseTag}/index.html`;
 
     try {
-      const indexRes = await axios.get(indexUrl, { responseType: 'text' });
-
-      const contentType = indexRes.headers['content-type'] || '';
-      if (contentType.includes('application/pdf')) {
-        console.warn(`📄 Skipping PDF release at ${releaseTag} (content-type: ${contentType})`);
-        continue;
-      }
-
+      const indexRes = await axios.get(indexUrl);
       const $index = cheerio.load(indexRes.data);
 
       const pubType = $index('[itemprop="pubType"]').attr('content');
@@ -151,12 +123,7 @@ const extractFromUrl = async (rootUrl) => {
           if (refId) {
             refSections[type].push(refId);
           } else {
-            badRefs.push({
-              docId: id,
-              type,
-              refText,
-              href
-            });
+            badRefs.push({ docId: id, type, refText, href });
           }
         });
       });
@@ -177,17 +144,11 @@ const extractFromUrl = async (rootUrl) => {
         status: { active },
         references: refSections
       });
-
     } catch (err) {
       if (err.response?.status === 403 || err.response?.status === 404) {
-        const pdfAvailable = await checkForPdf(baseUrl);
-        if (pdfAvailable) {
-          console.warn(`📄 Skipping PDF-only release at ${baseUrl} (index.html missing)`);
-        } else {
-          console.warn(`🚫 No index.html or PDF found at ${baseUrl}`);
-        }
+        console.warn(`⚠️ No index.html found at ${rootUrl}${releaseTag}/`);
       } else {
-        console.warn(`⚠️ Failed to fetch ${indexUrl}: ${err.message}`);
+        console.warn(`⚠️ Failed to fetch or parse ${indexUrl}: ${err.message}`);
       }
     }
   }
