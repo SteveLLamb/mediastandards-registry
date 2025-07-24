@@ -221,25 +221,16 @@ const extractFromUrl = async (rootUrl) => {
         const existingIndex = docs.findIndex(d => d.docId === inferred.docId);
         if (existingIndex !== -1) {
           const existingDoc = docs[existingIndex];
-          docs[existingIndex] = {
-            ...existingDoc,
-            ...pick(inferred, [
-              'docId',
-              'releaseTag',
-              'publicationDate',
-              'publisher',
-              'href',
-              'doi',
-              'docType',
-              'docNumber',
-              'docPart'
-            ]),
-            status: {
-              ...existingDoc.status,
-              active: inferred.status.active,
-              latestVersion: inferred.status.latestVersion,
-              superseded: inferred.status.superseded
+          for (const key of ['docId', 'releaseTag', 'publicationDate', 'publisher', 'href', 'doi', 'docType', 'docNumber', 'docPart']) {
+            if (inferred[key] !== undefined) {
+              existingDoc[key] = inferred[key];
             }
+          }
+          existingDoc.status = {
+            ...existingDoc.status,
+            active: inferred.status.active,
+            latestVersion: inferred.status.latestVersion,
+            superseded: inferred.status.superseded
           };
         } else {
           docs.push(inferred);
