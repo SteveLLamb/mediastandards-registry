@@ -84,31 +84,6 @@ const extractFromUrl = async (rootUrl) => {
     const indexUrl = `${rootUrl}${releaseTag}/index.html`;
     console.log(`🔍 Processing ${rootUrl}${releaseTag}/`);
 
-    const releaseMatch = releaseTag.match(/^(\d{8})(?:-am(\d+))?-(wd|cd|fcd|dp|pub)$/i);
-    const [, dateStr, amendNum, stageRaw] = releaseMatch || [];
-    const pubDate = dayjs(dateStr, 'YYYYMMDD');
-    const stage = stageRaw?.toUpperCase();
-    const pubTypeNumMatch = rootUrl.match(/doc\/([^/]+)\/$/);
-    const pubTypeNum = pubTypeNumMatch?.[1];
-    const yearStr = pubDate.isValid()
-      ? (pubDate.year() < 2023 ? `${pubDate.year()}` : pubDate.format('YYYY-MM'))
-      : 'UNKNOWN';
-
-    let docId = pubTypeNum ? `SMPTE.${pubTypeNum.toUpperCase()}.${yearStr}` : 'UNKNOWN';
-
-    if (amendNum) {
-      const amendYear = pubDate.year();
-      const base = baseReleases
-        .map(tag => ({ tag, date: dayjs(tag.split('-')[0], 'YYYYMMDD') }))
-        .filter(entry => entry.date.isValid() && entry.date.isBefore(pubDate))
-        .sort((a, b) => b.date - a.date)[0];
-
-      if (base) {
-        const baseYear = base.date.year();
-        docId = `SMPTE.${pubTypeNum.toUpperCase()}.${baseYear}Am${amendNum}.${amendYear}`;
-      }
-    }
-
     try {
       const indexRes = await axios.get(indexUrl);
       const $index = cheerio.load(indexRes.data);
@@ -185,20 +160,59 @@ const extractFromUrl = async (rootUrl) => {
     } catch (err) {
       if (err.response?.status === 403 || err.response?.status === 404) {
         console.warn(`⚠️ No index.html found at ${rootUrl}${releaseTag}/`);
-        console.warn(`📄 Likely PDF-only document skipped — inferred docId: ${docId}`);
 
-        docs.push({
+        const [, pubTypeNum] = rootUrl.match(/doc\/([^/]+)\/$/) || [];
+        const [datePart] = releaseTag.split('-');
+        const pubDate = dayjs(datePart, 'YYYYMMDD');
+
+        let dateString = 'UNKNOWN';
+        if (pubDate.isValid()) {
+          dateString = pubDate.year() < 2023 ? `${pubDate.year()}` : pubDate.format('YYYY-MM');
+        }
+
+        let docId = pubTypeNum ? `SMPTE.${pubTypeNum.toUpperCase()}.${dateString}` : 'UNKNOWN';
+
+        if (/^(\d{8})-am(\d+)-/.test(releaseTag)) {
+          const [, amendDate, amendNum] = releaseTag.match(/^(\d{8})-am(\d+)-/);
+          const amendYear = dayjs(amendDate, 'YYYYMMDD').year();
+          const base = baseReleases
+            .map(tag => ({ tag, date: dayjs(tag.split('-')[0], 'YYYYMMDD') }))
+            .filter(entry => entry.date.isValid() && entry.date.isBefore(dayjs(amendDate, 'YYYYMMDD')))
+            .sort((a, b) => b.date - a.date)[0];
+          if (base) {
+            const baseYear = base.date.year();
+            docId = `SMPTE.${pubTypeNum.toUpperCase()}.${baseYear}Am${amendNum}.${amendYear}`;
+          }
+        }
+
+        const statusStage = releaseTag.split('-').pop().toUpperCase();
+        const isLatest = releaseTag === latestTag;
+        const pubYear = dateString.slice(0, 4);
+        const doi = docId.startsWith('SMPTE.') && pubYear
+          ? `10.5594/${docId.replace('.', '.', 1)}.${pubYear}`
+          : undefined;
+
+        // Check for existing doc by docId
+        const existingDoc = docs.find(d => d.docId === docId) || null;
+
+        const fallbackDoc = {
+          ...existingDoc, // preserve existing data
           docId,
           releaseTag,
-          publisher: 'SMPTE',
           publicationDate: pubDate.isValid() ? pubDate.format('YYYY-MM-DD') : undefined,
+          href: doi ? `https://doi.org/${doi}` : undefined,
+          publisher: 'SMPTE',
           status: {
-            stage,
+            ...(existingDoc?.status || {}),
             latestVersion: isLatest,
-            active: isLatest && stage === 'PUB',
-            superseded: !isLatest
+            active: isLatest && statusStage === 'PUB',
+            superseded: !isLatest,
+            stage: statusStage
           }
-        });
+        };
+
+        docs.push(fallbackDoc);
+        console.warn(`📄 Likely PDF-only document skipped — inferred docId: ${docId}`);
       } else {
         console.warn(`⚠️ Failed to fetch or parse ${indexUrl}: ${err.message}`);
       }
