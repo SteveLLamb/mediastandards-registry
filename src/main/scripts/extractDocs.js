@@ -152,25 +152,30 @@ const extractFromUrl = async (rootUrl) => {
         references: refSections
       });
 
-    } catch (err) {
-      console.warn(`⚠️ index.html not found at ${indexUrl}: ${err.message}`);
+    } catch {
+      const releaseUrl = `${rootUrl}${releaseTag}/`;
 
-      // 🔍 Try checking for a PDF instead
       try {
-        const releaseRes = await axios.get(releaseUrl);
-        const $release = cheerio.load(releaseRes.data);
+        const dirRes = await axios.get(releaseUrl);
+        const $dir = cheerio.load(dirRes.data);
 
-        const pdfHref = $release('a[href$=".pdf"]').attr('href');
-        if (pdfHref) {
-          console.warn(`📄 Skipping PDF-only release at ${releaseTag}: found ${pdfHref}`);
-        } else {
+        let foundPdf = false;
+        $dir('a').each((_, el) => {
+          const href = $dir(el).attr('href');
+          if (href && href.toLowerCase().endsWith('.pdf')) {
+            foundPdf = true;
+            console.warn(`📄 Skipping PDF-only release at ${releaseUrl}: found ${href}`);
+          }
+        });
+
+        if (!foundPdf) {
           console.warn(`🚫 No index.html or PDF found at ${releaseUrl}`);
         }
-      } catch (pdfErr) {
-        console.warn(`❌ Could not load ${releaseUrl} to check for PDF: ${pdfErr.message}`);
+      } catch {
+        console.warn(`🚫 No index.html or accessible release folder at ${releaseUrl}`);
       }
 
-      continue; // Always skip this releaseTag on failure
+      continue;
     }
   }
 
