@@ -76,90 +76,96 @@ const extractFromUrl = async (rootUrl) => {
   const docs = [];
 
   for (const releaseTag of folderLinks) {
+  const releaseUrl = `${rootUrl}${releaseTag}/`;
+  const indexUrl = `${releaseUrl}index.html`;
 
-    const releaseUrl = `${rootUrl}${releaseTag}/`;
-    const indexUrl = `${rootUrl}${releaseTag}/index.html`;
-    try {
-      const indexRes = await axios.get(indexUrl);
-      const $index = cheerio.load(indexRes.data);
+  try {
+    const indexRes = await axios.get(indexUrl, { responseType: 'text' });
+    const contentType = indexRes.headers['content-type'] || '';
 
-      const pubType = $index('[itemprop="pubType"]').attr('content');
-      const pubNumber = $index('[itemprop="pubNumber"]').attr('content');
-      const pubPart = $index('[itemprop="pubPart"]').attr('content');
-      const pubDate = $index('[itemprop="pubDateTime"]').attr('content');
-      const suiteTitle = $index('[itemprop="pubSuiteTitle"]').attr('content');
-      const title = $index('title').text().trim();
-      const tc = $index('[itemprop="pubTC"]').attr('content');
+    if (contentType.includes('application/pdf')) {
+      console.warn(`📄 Skipping PDF release at ${releaseUrl} (content-type: ${contentType})`);
+      continue;
+    }
 
-      const pubDateObj = dayjs(pubDate);
-      const dateFormatted = pubDateObj.format('YYYY-MM-DD');
-      const dateShort = pubDateObj.format('YYYY-MM');
+    const $index = cheerio.load(indexRes.data);
 
-      const typeMap = {
-        AG: 'Administrative Guideline',
-        ST: 'Standard',
-        RP: 'Recommended Practice',
-        EG: 'Engineering Guideline',
-        RDD: 'Registered Disclosure Document',
-        OV: 'Overview Document'
-      };
+    const pubType = $index('[itemprop="pubType"]').attr('content');
+    const pubNumber = $index('[itemprop="pubNumber"]').attr('content');
+    const pubPart = $index('[itemprop="pubPart"]').attr('content');
+    const pubDate = $index('[itemprop="pubDateTime"]').attr('content');
+    const suiteTitle = $index('[itemprop="pubSuiteTitle"]').attr('content');
+    const title = $index('title').text().trim();
+    const tc = $index('[itemprop="pubTC"]').attr('content');
 
-      const docType = typeMap[pubType?.toUpperCase()] || pubType;
-      const label = `SMPTE ${pubType} ${pubNumber}-${pubPart}:${dateShort}`;
-      const id = `SMPTE.${pubType}${pubNumber}-${pubPart}.${dateShort}`;
-      const doi = `10.5594/SMPTE.${pubType}${pubNumber}-${pubPart}.${pubDateObj.format('YYYY')}`;
-      const href = `https://doi.org/${doi}`;
+    const pubDateObj = dayjs(pubDate);
+    const dateFormatted = pubDateObj.format('YYYY-MM-DD');
+    const dateShort = pubDateObj.format('YYYY-MM');
 
-      const pubStage = $index('[itemprop="pubStage"]').attr('content');
-      const pubState = $index('[itemprop="pubState"]').attr('content');
-      const active = pubStage === 'PUB' && pubState === 'pub';
+    const typeMap = {
+      AG: 'Administrative Guideline',
+      ST: 'Standard',
+      RP: 'Recommended Practice',
+      EG: 'Engineering Guideline',
+      RDD: 'Registered Disclosure Document',
+      OV: 'Overview Document'
+    };
 
-      const refSections = { normative: [], bibliographic: [] };
-      ['normative-references', 'bibliography'].forEach((sectionId) => {
-        const type = sectionId.includes('normative') ? 'normative' : 'bibliographic';
-        $index(`#sec-${sectionId} ul li`).each((_, el) => {
-          const cite = $index(el).find('cite');
-          const refText = cite.text();
-          const href = $index(el).find('a.ext-ref').attr('href') || '';
-          const refId = parseRefId(refText, href);
-          if (refId) {
-            refSections[type].push(refId);
-          } else {
-            badRefs.push({
-              docId: id,
-              type,
-              refText,
-              href
-            });
-          }
-        });
+    const docType = typeMap[pubType?.toUpperCase()] || pubType;
+    const label = `SMPTE ${pubType} ${pubNumber}-${pubPart}:${dateShort}`;
+    const id = `SMPTE.${pubType}${pubNumber}-${pubPart}.${dateShort}`;
+    const doi = `10.5594/SMPTE.${pubType}${pubNumber}-${pubPart}.${pubDateObj.format('YYYY')}`;
+    const href = `https://doi.org/${doi}`;
+
+    const pubStage = $index('[itemprop="pubStage"]').attr('content');
+    const pubState = $index('[itemprop="pubState"]').attr('content');
+    const active = pubStage === 'PUB' && pubState === 'pub';
+
+    const refSections = { normative: [], bibliographic: [] };
+    ['normative-references', 'bibliography'].forEach((sectionId) => {
+      const type = sectionId.includes('normative') ? 'normative' : 'bibliographic';
+      $index(`#sec-${sectionId} ul li`).each((_, el) => {
+        const cite = $index(el).find('cite');
+        const refText = cite.text();
+        const href = $index(el).find('a.ext-ref').attr('href') || '';
+        const refId = parseRefId(refText, href);
+        if (refId) {
+          refSections[type].push(refId);
+        } else {
+          badRefs.push({
+            docId: id,
+            type,
+            refText,
+            href
+          });
+        }
       });
+    });
 
-      docs.push({
-        docId: id,
-        docLabel: label,
-        docNumber: pubNumber,
-        docPart: pubPart,
-        docTitle: `${suiteTitle} ${title}`,
-        docType,
-        doi,
-        group: `smpte-${tc.toLowerCase()}-tc`,
-        publicationDate: dateFormatted,
-        releaseTag,
-        publisher: 'SMPTE',
-        href,
-        status: { active },
-        references: refSections
-      });
+    docs.push({
+      docId: id,
+      docLabel: label,
+      docNumber: pubNumber,
+      docPart: pubPart,
+      docTitle: `${suiteTitle} ${title}`,
+      docType,
+      doi,
+      group: `smpte-${tc.toLowerCase()}-tc`,
+      publicationDate: dateFormatted,
+      releaseTag,
+      publisher: 'SMPTE',
+      href,
+      status: { active },
+      references: refSections
+    });
 
     } catch {
-      const releaseUrl = `${rootUrl}${releaseTag}/`;
-
+      // fallback: try to detect PDFs directly
       try {
         const dirRes = await axios.get(releaseUrl);
         const $dir = cheerio.load(dirRes.data);
-
         let foundPdf = false;
+
         $dir('a').each((_, el) => {
           const href = $dir(el).attr('href');
           if (href && href.toLowerCase().endsWith('.pdf')) {
@@ -172,7 +178,7 @@ const extractFromUrl = async (rootUrl) => {
           console.warn(`🚫 No index.html or PDF found at ${releaseUrl}`);
         }
       } catch {
-        console.warn(`🚫 No index.html or accessible release folder at ${releaseUrl}`);
+        console.warn(`🚫 Unable to access release folder at ${releaseUrl}`);
       }
 
       continue;
