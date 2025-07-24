@@ -175,7 +175,7 @@ const extractFromUrl = async (rootUrl) => {
         if (/^(\d{8})-am(\d+)-/.test(releaseTag)) {
           const [, amendDate, amendNum] = releaseTag.match(/^(\d{8})-am(\d+)-/);
           const amendYear = dayjs(amendDate, 'YYYYMMDD').year();
-          
+
           // Find the most recent base release before the amendment
           const base = baseReleases
             .map(tag => ({ tag, date: dayjs(tag.split('-')[0], 'YYYYMMDD') }))
@@ -187,7 +187,10 @@ const extractFromUrl = async (rootUrl) => {
             docId = `SMPTE.${pubTypeNum.toUpperCase()}.${baseYear}Am${amendNum}.${amendYear}`;
           }
         
-        console.warn(`📄 Likely PDF-only document skipped — inferred docId: ${docId}`);
+        console.warn(`📄 Likely PDF-only amendment skipped — inferred docId: ${docId}`);
+        } else {
+          console.warn(`📄 Likely PDF-only document skipped — inferred docId: ${docId}`);
+        }
       } else {
         console.warn(`⚠️ Failed to fetch or parse ${indexUrl}: ${err.message}`);
       }
