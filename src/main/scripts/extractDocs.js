@@ -271,7 +271,6 @@ const extractFromUrl = async (rootUrl) => {
     });
   }
 
-
   if (newDocs.length === 0 && updatedDocs.length === 0) {
     console.log('ℹ️ No new or updated documents — skipping PR creation.');
     fs.writeFileSync('skip-pr-flag.txt', 'true');
@@ -310,7 +309,6 @@ const extractFromUrl = async (rootUrl) => {
     }),
     '',
     `### ⚠️ Skipped ${skippedDocs.length} duplicate(s)`
-    ''
   ];
 
   fs.writeFileSync('pr-update-log.txt', prLines.join('\n'));
