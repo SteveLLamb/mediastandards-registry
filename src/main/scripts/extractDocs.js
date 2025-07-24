@@ -431,13 +431,13 @@ const extractFromUrl = async (rootUrl) => {
           const diffs = [...statusKeys]
             .filter(k => JSON.stringify(oldStatus[k]) !== JSON.stringify(newStatus[k]))
             .map(k => `${k}: ${JSON.stringify(oldStatus[k])} → ${JSON.stringify(newStatus[k])}`)
-            .join(', ');
+            .join('\r\n');
 
           if (diffs) {
-            lines.push(`  - status changed: ${diffs}`);
+            lines.push(`  - status changed: \r\n${diffs}`);
           }
         } else {
-          lines.push(`  - ${field}:\r\n${formatVal(oldVal)} > ${formatVal(newVal)}`);
+          lines.push(`  - ${field}:${formatVal(oldVal)} > ${formatVal(newVal)}`);
         }
       });
 
