@@ -6,7 +6,14 @@ const fs = require('fs');
 const urls = require('../input/urls.json');
 const badRefs = [];
 
-
+const typeMap = {
+        AG: 'Administrative Guideline',
+        ST: 'Standard',
+        RP: 'Recommended Practice',
+        EG: 'Engineering Guideline',
+        RDD: 'Registered Disclosure Document',
+        OV: 'Overview Document'
+      };
 
 const parseRefId = (text, href = '') => {
   if (/w3\.org\/TR\/\d{4}\/REC-([^\/]+)-(\d{8})\//i.test(href)) {
@@ -100,15 +107,6 @@ const extractFromUrl = async (rootUrl) => {
       const pubDateObj = dayjs(pubDate);
       const dateFormatted = pubDateObj.format('YYYY-MM-DD');
       const dateShort = pubDateObj.format('YYYY-MM');
-
-      const typeMap = {
-        AG: 'Administrative Guideline',
-        ST: 'Standard',
-        RP: 'Recommended Practice',
-        EG: 'Engineering Guideline',
-        RDD: 'Registered Disclosure Document',
-        OV: 'Overview Document'
-      };
 
       const docType = typeMap[pubType?.toUpperCase()] || pubType;
       const label = `SMPTE ${pubType} ${pubNumber}-${pubPart}:${dateShort}`;
