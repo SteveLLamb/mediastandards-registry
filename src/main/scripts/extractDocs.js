@@ -77,7 +77,6 @@ const extractFromUrl = async (rootUrl) => {
 
   // Group base versions and amendments for later use
   const baseReleases = folderLinks.filter(tag => !/-am\d+-/.test(tag));
-  const amendments = folderLinks.filter(tag => /-am\d+-/.test(tag));
 
   const docs = [];
 
@@ -119,7 +118,6 @@ const extractFromUrl = async (rootUrl) => {
 
       const pubStage = $index('[itemprop="pubStage"]').attr('content');
       const pubState = $index('[itemprop="pubState"]').attr('content');
-      const active = pubStage === 'PUB' && pubState === 'pub';
 
       const refSections = { normative: [], bibliographic: [] };
       ['normative-references', 'bibliography'].forEach((sectionId) => {
@@ -154,8 +152,8 @@ const extractFromUrl = async (rootUrl) => {
           active: isLatest && pubStage === 'PUB' && pubState === 'pub',
           latestVersion: isLatest,
           stage: pubStage,
-          state: pubState
-          superseded: !isLatest,
+          state: pubState,
+          superseded: !isLatest
         },
         references: refSections
       });
