@@ -84,6 +84,31 @@ const extractFromUrl = async (rootUrl) => {
     const indexUrl = `${rootUrl}${releaseTag}/index.html`;
     console.log(`🔍 Processing ${rootUrl}${releaseTag}/`);
 
+    const releaseMatch = releaseTag.match(/^(\d{8})(?:-am(\d+))?-(wd|cd|fcd|dp|pub)$/i);
+    const [, dateStr, amendNum, stageRaw] = releaseMatch || [];
+    const pubDate = dayjs(dateStr, 'YYYYMMDD');
+    const stage = stageRaw?.toUpperCase();
+    const pubTypeNumMatch = rootUrl.match(/doc\/([^/]+)\/$/);
+    const pubTypeNum = pubTypeNumMatch?.[1];
+    const yearStr = pubDate.isValid()
+      ? (pubDate.year() < 2023 ? `${pubDate.year()}` : pubDate.format('YYYY-MM'))
+      : 'UNKNOWN';
+
+    let docId = pubTypeNum ? `SMPTE.${pubTypeNum.toUpperCase()}.${yearStr}` : 'UNKNOWN';
+
+    if (amendNum) {
+      const amendYear = pubDate.year();
+      const base = baseReleases
+        .map(tag => ({ tag, date: dayjs(tag.split('-')[0], 'YYYYMMDD') }))
+        .filter(entry => entry.date.isValid() && entry.date.isBefore(pubDate))
+        .sort((a, b) => b.date - a.date)[0];
+
+      if (base) {
+        const baseYear = base.date.year();
+        docId = `SMPTE.${pubTypeNum.toUpperCase()}.${baseYear}Am${amendNum}.${amendYear}`;
+      }
+    }
+
     try {
       const indexRes = await axios.get(indexUrl);
       const $index = cheerio.load(indexRes.data);
@@ -160,37 +185,20 @@ const extractFromUrl = async (rootUrl) => {
     } catch (err) {
       if (err.response?.status === 403 || err.response?.status === 404) {
         console.warn(`⚠️ No index.html found at ${rootUrl}${releaseTag}/`);
+        console.warn(`📄 Likely PDF-only document skipped — inferred docId: ${docId}`);
 
-        const [ , pubTypeNum ] = rootUrl.match(/doc\/([^/]+)\/$/) || [];
-        const [ datePart ] = releaseTag.split('-');
-        const pubDate = dayjs(datePart, 'YYYYMMDD');
-        let dateString = 'UNKNOWN';
-        if (pubDate.isValid()) {
-          dateString = pubDate.year() < 2023 ? `${pubDate.year()}` : pubDate.format('YYYY-MM');
-        }
-
-        let docId = pubTypeNum ? `SMPTE.${pubTypeNum.toUpperCase()}.${dateString}` : 'UNKNOWN';
-
-        // Try to infer amendment docId
-        if (/^(\d{8})-am(\d+)-/.test(releaseTag)) {
-          const [, amendDate, amendNum] = releaseTag.match(/^(\d{8})-am(\d+)-/);
-          const amendYear = dayjs(amendDate, 'YYYYMMDD').year();
-
-          // Find the most recent base release before the amendment
-          const base = baseReleases
-            .map(tag => ({ tag, date: dayjs(tag.split('-')[0], 'YYYYMMDD') }))
-            .filter(entry => entry.date.isValid() && entry.date.isBefore(dayjs(amendDate, 'YYYYMMDD')))
-            .sort((a, b) => b.date - a.date)[0];
-
-          if (base) {
-            const baseYear = base.date.year();
-            docId = `SMPTE.${pubTypeNum.toUpperCase()}.${baseYear}Am${amendNum}.${amendYear}`;
+        docs.push({
+          docId,
+          releaseTag,
+          publisher: 'SMPTE',
+          publicationDate: pubDate.isValid() ? pubDate.format('YYYY-MM-DD') : undefined,
+          status: {
+            stage,
+            latestVersion: isLatest,
+            active: isLatest && stage === 'PUB',
+            superseded: !isLatest
           }
-        
-        console.warn(`📄 Likely PDF-only amendment skipped — inferred docId: ${docId}`);
-        } else {
-          console.warn(`📄 Likely PDF-only document skipped — inferred docId: ${docId}`);
-        }
+        });
       } else {
         console.warn(`⚠️ Failed to fetch or parse ${indexUrl}: ${err.message}`);
       }
