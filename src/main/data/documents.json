@@ -17625,6 +17625,37 @@
     }
   },
   {
+    "docId": "SMPTE.RP428-22.2025-06",
+    "docLabel": "SMPTE RP 428-22:2025-06",
+    "docNumber": "428",
+    "docPart": "22",
+    "docTitle": "D-Cinema Distribution Master Minimal Timed Text XML Requirements",
+    "docType": "Recommended Practice",
+    "doi": "10.5594/SMPTE.RP428-22.2025",
+    "group": "smpte-27c-tc",
+    "href": "https://doi.org/10.5594/SMPTE.RP428-22.2025",
+    "publicationDate": "2025-06-27",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST429-2.LATEST",
+        "SMPTE.RDD52.LATEST",
+        "ISO.14496-22.2015"
+      ],
+      "normative": [
+        "SMPTE.ST428-7.LATEST"
+      ]
+    },
+    "releaseTag": "20250627-pub",
+    "status": {
+      "active": true,
+      "latestVersion": true,
+      "stage": "PUB",
+      "state": "pub",
+      "superseded": false
+    }
+  },
+  {
     "docId": "SMPTE.RP428-22.20XX",
     "docLabel": "SMPTE RP 428-22:20XX",
     "docNumber": "428",
@@ -27095,6 +27126,39 @@
     }
   },
   {
+    "docId": "SMPTE.ST428-24.2024-11",
+    "docLabel": "SMPTE ST 428-24:2024-11",
+    "docNumber": "428",
+    "docPart": "24",
+    "docTitle": "D-Cinema Distribution Master Packed Image",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST428-24.2024",
+    "group": "smpte-27c-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST428-24.2024",
+    "publicationDate": "2024-11-01",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "SMPTE.RP428-5.LATEST",
+        "SMPTE.RP428-6.LATEST",
+        "ISO.15444-15.LATEST"
+      ],
+      "normative": [
+        "SMPTE.ST428-1.LATEST",
+        "SMPTE.ST2067-40.LATEST",
+        "rfc5234"
+      ]
+    },
+    "releaseTag": "20241101-pub",
+    "status": {
+      "active": true,
+      "latestVersion": true,
+      "stage": "PUB",
+      "state": "pub",
+      "superseded": false
+    }
+  },
+  {
     "docId": "SMPTE.ST428-3.2006",
     "docLabel": "SMPTE ST 428-3:2006",
     "docNumber": "428",
@@ -27688,13 +27752,17 @@
     ],
     "publicationDate": "2009-03-11",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+      ],
+      "normative": [
+      ]
+    },
+    "releaseTag": "20090311-pub",
     "status": {
       "active": false,
-      "superseded": true,
-      "supersededBy": [
-        "SMPTE.ST429-2.2011"
-      ],
-      "supersededDate": "2011-09-23"
+      "latestVersion": false,
+      "superseded": true
     }
   },
   {
@@ -27716,17 +27784,17 @@
     ],
     "publicationDate": "2011-09-23",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+      ],
+      "normative": [
+      ]
+    },
+    "releaseTag": "20110923-pub",
     "status": {
       "active": false,
-      "amended": true,
-      "amendedBy": [
-        "SMPTE.ST429-2.2011Am1.2013"
-      ],
-      "superseded": true,
-      "supersededBy": [
-        "SMPTE.ST429-2.2013"
-      ],
-      "supersededDate": "2013-09-28"
+      "latestVersion": false,
+      "superseded": true
     }
   },
   {
@@ -27737,9 +27805,9 @@
     "docPart": "2",
     "docTitle": "D-Cinema Packaging — DCP Operational Constraints — Amendment 1",
     "docType": "Standard",
-    "doi": "10.5594/SMPTE.ST429-2.2011Am1.2013",
+    "doi": "10.5594/SMPTE.ST429-2.2013",
     "group": "smpte-21dc-tc",
-    "href": "https://doi.org/10.5594/SMPTE.ST429-2.2011Am1.2013",
+    "href": "https://doi.org/10.5594/SMPTE.ST429-2.2013",
     "keywords": [
       "DCinema",
       "Packaging",
@@ -27748,13 +27816,17 @@
     ],
     "publicationDate": "2013-01-16",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+      ],
+      "normative": [
+      ]
+    },
+    "releaseTag": "20130116-am1-pub",
     "status": {
       "active": false,
-      "superseded": true,
-      "supersededBy": [
-        "SMPTE.ST429-2.2013"
-      ],
-      "supersededDate": "2013-09-28"
+      "latestVersion": false,
+      "superseded": true
     }
   },
   {
@@ -27777,56 +27849,16 @@
     "publisher": "SMPTE",
     "references": {
       "bibliographic": [
-        "SMPTE.ST336.2007",
-        "SMPTE.RP224v12.2012",
-        "SMPTE.ST428-11.2013",
-        "SMPTE.ST429-13.2009",
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
-        "rfc2046"
       ],
       "normative": [
-        "SMPTE.ST377-1.2011",
-        "SMPTE.ST377-4.2012",
-        "SMPTE.ST382.2007",
-        "SMPTE.ST400.2012",
-        "SMPTE.ST422.2006",
-        "SMPTE.ST428-1.2006",
-        "SMPTE.ST428-2.2006",
-        "SMPTE.ST428-7.2010",
-        "SMPTE.ST428-10.2008",
-        "SMPTE.ST428-12.2013",
-        "SMPTE.ST429-3.2007",
-        "SMPTE.ST429-4.2006",
-        "SMPTE.ST429-5.2009",
-        "SMPTE.ST429-6.2006",
-        "SMPTE.ST429-7.2006",
-        "SMPTE.ST429-8.2007",
-        "SMPTE.ST429-10.2008",
-        "SMPTE.ST429-12.2008",
-        "SMPTE.ST430-2.2006",
-        "SMPTE.ST2029.2009",
-        "ISO.10646.2003",
-        "ISO.15444-1.2004",
-        "ISO.15444-1.2004amd1.2006",
-        "ISO.15948.2004",
-        "IEC.61966-2-1.1999",
-        "rfc4246",
-        "rfc4122"
       ]
     },
+    "releaseTag": "20130928-pub",
     "repo": "https://github.com/SMPTE/st429-2",
     "status": {
       "active": false,
-      "amended": true,
-      "amendedBy": [
-        "SMPTE.ST429-2.2013Am1.2018"
-      ],
-      "superseded": true,
-      "supersededBy": [
-        "SMPTE.ST429-2.2019"
-      ]
+      "latestVersion": false,
+      "superseded": true
     }
   },
   {
@@ -27836,61 +27868,28 @@
     "docPart": "2",
     "docTitle": "D-Cinema Packaging – DCP Operational Constraints",
     "docType": "Standard",
-    "doi": "10.5594/SMPTE.ST429-2.2013Am1.2018",
+    "doi": "10.5594/SMPTE.ST429-2.2018",
     "group": "smpte-21dc-tc",
-    "href": "https://doi.org/10.5594/SMPTE.ST429-2.2013Am1.2018",
+    "href": "https://doi.org/10.5594/SMPTE.ST429-2.2018",
     "keywords": [
       "DCinema",
       "Packaging",
       "DCP Core",
       "Distribution"
     ],
-    "publicationDate": "2019-01-25",
+    "publicationDate": "2018-12-31",
     "publisher": "SMPTE",
     "references": {
       "bibliographic": [
-        "SMPTE.ST336.2007",
-        "SMPTE.RP224v12.2012",
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
-        "rfc2046"
       ],
       "normative": [
-        "SMPTE.ST377-1.2011",
-        "SMPTE.ST377-4.2012",
-        "SMPTE.ST382.2007",
-        "SMPTE.ST400.2012",
-        "SMPTE.ST422.2006",
-        "SMPTE.ST428-1.2006",
-        "SMPTE.ST428-2.2006",
-        "SMPTE.ST428-7.2010",
-        "SMPTE.ST428-10.2008",
-        "SMPTE.ST428-12.2013",
-        "SMPTE.ST429-3.2007",
-        "SMPTE.ST429-4.2006",
-        "SMPTE.ST429-5.2009",
-        "SMPTE.ST429-6.2006",
-        "SMPTE.ST429-7.2006",
-        "SMPTE.ST429-8.2007",
-        "SMPTE.ST429-10.2008",
-        "SMPTE.ST429-12.2008",
-        "SMPTE.ST430-2.2006",
-        "SMPTE.ST2029.2009",
-        "ISO.10646.2003",
-        "ISO.15444-1.2016",
-        "ISO.15948.2004",
-        "IEC.61966-2-1.1999",
-        "rfc4246",
-        "rfc4122"
       ]
     },
+    "releaseTag": "20181231-am1-pub",
     "status": {
       "active": false,
-      "superseded": true,
-      "supersededBy": [
-        "SMPTE.ST429-2.2019"
-      ]
+      "latestVersion": false,
+      "superseded": true
     }
   },
   {
@@ -27910,59 +27909,19 @@
       "DCP Core",
       "Distribution"
     ],
-    "publicationDate": "2020-05-12",
+    "publicationDate": "2019-11-11",
     "publisher": "SMPTE",
     "references": {
       "bibliographic": [
-        "SMPTE.ST336.2007",
-        "SMPTE.RP224v12.2012",
-        "SMPTE.ST428-11.2013",
-        "SMPTE.ST429-13.2009",
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
-        "rfc2046"
       ],
       "normative": [
-        "SMPTE.ST377.2004",
-        "SMPTE.ST377-4.2012",
-        "SMPTE.ST382.2007",
-        "SMPTE.ST400.2012",
-        "SMPTE.ST422.2006",
-        "SMPTE.ST428-1.2006",
-        "SMPTE.ST428-2.2006",
-        "SMPTE.ST428-7.2014",
-        "SMPTE.ST428-10.2008",
-        "SMPTE.ST428-12.2013",
-        "SMPTE.ST429-3.2007",
-        "SMPTE.ST429-4.2006",
-        "SMPTE.ST429-5.2017",
-        "SMPTE.ST429-6.2006",
-        "SMPTE.ST429-7.2006",
-        "SMPTE.ST429-8.2007",
-        "SMPTE.ST429-10.2008",
-        "SMPTE.ST429-12.2008",
-        "SMPTE.ST429-16.2014",
-        "SMPTE.ST430-2.2006",
-        "SMPTE.ST2029.2009",
-        "SMPTE.ST429-17.2017",
-        "ISO.10646.2003",
-        "ISO.15444-1.2004",
-        "ISO.15444-1.2004amd1.2006",
-        "ISO.15948.2004",
-        "IEC.61966-2-1.1999",
-        "rfc7302",
-        "rfc4246",
-        "rfc4122"
       ]
     },
+    "releaseTag": "20191111-pub",
     "status": {
       "active": false,
-      "superseded": true,
-      "supersededBy": [
-        "SMPTE.ST429-2.2020"
-      ],
-      "supersededDate": "2020-12-22"
+      "latestVersion": false,
+      "superseded": true
     }
   },
   {
@@ -28043,54 +28002,20 @@
       "DCP Core",
       "Distribution"
     ],
-    "publicationDate": "2020-12-22",
+    "publicationDate": "2020-10-27",
     "publisher": "SMPTE",
     "references": {
       "bibliographic": [
-        "SMPTE.RP224v12.2012"
       ],
       "normative": [
-        "SMPTE.ST377.2004",
-        "SMPTE.ST377-4.2012",
-        "SMPTE.ST382.2007",
-        "SMPTE.ST400.2012",
-        "SMPTE.ST422.2006",
-        "SMPTE.ST428-1.2019",
-        "SMPTE.ST428-2.2006",
-        "SMPTE.ST428-7.2014",
-        "SMPTE.ST428-10.2008",
-        "SMPTE.ST428-12.2013",
-        "SMPTE.ST429-3.2007",
-        "SMPTE.ST429-4.2020",
-        "SMPTE.ST429-5.2017",
-        "SMPTE.ST429-6.2006",
-        "SMPTE.ST429-6.2006Am1.2018",
-        "SMPTE.ST429-7.2006",
-        "SMPTE.ST429-8.2007",
-        "SMPTE.ST429-10.2008",
-        "SMPTE.ST429-12.2008",
-        "SMPTE.ST429-16.2014",
-        "SMPTE.ST430-2.2017",
-        "SMPTE.ST2029.2009",
-        "SMPTE.ST429-17.2017",
-        "ISO.10646.2017",
-        "ISO.15444-1.2019",
-        "ISO.15948.2004",
-        "IEC.61966-2-1.1999",
-        "rfc7972",
-        "rfc4246",
-        "rfc4122"
       ]
     },
+    "releaseTag": "20201027-pub",
     "repo": "https://github.com/SMPTE/st429-2",
     "status": {
       "active": false,
-      "draft": false,
-      "superseded": true,
-      "supersededBy": [
-        "SMPTE.ST429-2.2023-09"
-      ],
-      "supersededDate": "2023-09-12"
+      "latestVersion": false,
+      "superseded": true
     }
   },
   {
@@ -28098,8 +28023,9 @@
     "docLabel": "SMPTE ST 429-2:2023-09",
     "docNumber": "429",
     "docPart": "2",
-    "docTitle": "D-Cinema Packaging — DCP Operational",
+    "docTitle": "D-Cinema Packaging DCP Operational Constraints",
     "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST429-2.2023",
     "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST429-2.2023",
     "keywords": [
@@ -28113,7 +28039,7 @@
     "references": {
       "bibliographic": [
         "SMPTE.ST428-3.LATEST",
-        "SMPTE.ST429-10.LATEST",
+        "SMPTE.ST428-11.LATEST",
         "SMPTE.ST429-13.LATEST",
         "SMPTE.ST430-1.LATEST"
       ],
@@ -28126,6 +28052,8 @@
         "SMPTE.ST428-1.LATEST",
         "SMPTE.ST428-2.LATEST",
         "SMPTE.ST428-7.LATEST",
+        "SMPTE.ST428-10.LATEST",
+        "SMPTE.ST428-12.LATEST",
         "SMPTE.ST429-3.LATEST",
         "SMPTE.ST429-4.LATEST",
         "SMPTE.ST429-5.LATEST",
@@ -28150,9 +28078,14 @@
         "xml.LATEST"
       ]
     },
+    "releaseTag": "20230912-pub",
     "repo": "https://github.com/SMPTE/st429-2",
     "status": {
-      "active": true
+      "active": true,
+      "latestVersion": true,
+      "stage": "PUB",
+      "state": "pub",
+      "superseded": false
     }
   },
   {
@@ -28288,26 +28221,19 @@
     "publicationDate": "2006-10-03",
     "publisher": "SMPTE",
     "references": {
+      "bibliographic": [
+      ],
       "normative": [
-        "SMPTE.ST377.2004",
-        "SMPTE.ST422.2006",
-        "SMPTE.ST428-1.2006",
-        "SMPTE.ST429-3.2006",
-        "ISO.15444-1.2004",
-        "ISO.15444-1.2004amd1.2006"
       ]
     },
     "relatedDocs": [
       "ISO.26429-4.2008"
     ],
+    "releaseTag": "20061003-pub",
     "status": {
       "active": false,
-      "reaffirmDate": "2018-03-15",
-      "reaffirmed": true,
-      "superseded": true,
-      "supersededBy": [
-        "SMPTE.ST429-4.2020"
-      ]
+      "latestVersion": false,
+      "superseded": true
     }
   },
   {
@@ -28328,32 +28254,20 @@
       "MXF Application",
       "JPEG2000"
     ],
-    "publicationDate": "2020-03-23",
+    "publicationDate": "2020-02-27",
     "publisher": "SMPTE",
     "references": {
       "bibliographic": [
-        "SMPTE.ST298.2009",
-        "SMPTE.ST422.2006",
-        "SMPTE.ST429-7.2006",
-        "SMPTE.ST429-8.2007",
-        "SMPTE.RP224v12.2012",
-        "ISO.646.1991"
       ],
       "normative": [
-        "SMPTE.ST377.2004",
-        "SMPTE.ST422.2006",
-        "SMPTE.ST428-1.2019",
-        "SMPTE.ST429-3.2007",
-        "ISO.15444-1.2016"
       ]
     },
+    "releaseTag": "20200227-pub",
     "repo": "https://github.com/SMPTE/st429-4",
     "status": {
       "active": false,
-      "superseded": true,
-      "supersededBy": [
-        "SMPTE.ST429-4.2023-05"
-      ]
+      "latestVersion": false,
+      "superseded": true
     }
   },
   {
@@ -28362,7 +28276,8 @@
     "docNumber": "429",
     "docPart": "4",
     "docTitle": "D-Cinema Packaging MXF JPEG 2000 Application",
-    "docType": "Recommended Practice",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST429-4.2023",
     "group": "smpte-27c-tc",
     "href": "https://doi.org/10.5594/SMPTE.ST429-4.2023",
     "publicationDate": "2023-05-04",
@@ -28372,13 +28287,20 @@
         "ISO.646.LATEST"
       ],
       "normative": [
-        "SMPTE.ST377-1.2011",
+        "SMPTE.ST377-1.LATEST",
+        "SMPTE.ST422.LATEST",
+        "SMPTE.ST428-1.LATEST",
         "SMPTE.ST429-3.LATEST",
         "ISO.15444-1.LATEST"
       ]
     },
+    "releaseTag": "20230504-pub",
     "status": {
-      "active": true
+      "active": true,
+      "latestVersion": true,
+      "stage": "PUB",
+      "state": "pub",
+      "superseded": false
     }
   },
   {
@@ -28850,22 +28772,20 @@
     ],
     "publicationDate": "2006-10-03",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+      ],
+      "normative": [
+      ]
+    },
     "relatedDocs": [
       "ISO.26430-1.2008"
     ],
     "releaseTag": "20061003-pub",
     "status": {
       "active": false,
-      "amended": true,
-      "amendedBy": [
-        "SMPTE.ST430-1.2006Am1.2009"
-      ],
       "latestVersion": false,
-      "superseded": true,
-      "supersededBy": [
-        "SMPTE.ST430-1.2017"
-      ],
-      "supersededDate": "2017-01-12"
+      "superseded": true
     },
     "xmlNamespace": [
       "http://www.smpte-ra.org/schemas/430-1/2006/KDM"
@@ -28878,9 +28798,9 @@
     "docPart": "1",
     "docTitle": "D-Cinema Operations —Key Delivery Message —Amendment 1",
     "docType": "Standard",
-    "doi": "10.5594/SMPTE.ST430-1.2006Am1.2009",
+    "doi": "10.5594/SMPTE.ST430-1.2009",
     "group": "smpte-21dc-tc",
-    "href": "https://doi.org/10.5594/SMPTE.ST430-1.2006Am1.2009",
+    "href": "https://doi.org/10.5594/SMPTE.ST430-1.2009",
     "keywords": [
       "DCinema",
       "Operations",
@@ -28889,13 +28809,17 @@
     ],
     "publicationDate": "2009-01-09",
     "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+      ],
+      "normative": [
+      ]
+    },
+    "releaseTag": "20090109-am1-pub",
     "status": {
       "active": false,
-      "superseded": true,
-      "supersededBy": [
-        "SMPTE.ST430-1.2017"
-      ],
-      "supersededDate": "2017-01-12"
+      "latestVersion": false,
+      "superseded": true
     }
   },
   {
@@ -28914,48 +28838,20 @@
       "Security",
       "KDM"
     ],
-    "publicationDate": "2017-02-02",
+    "publicationDate": "2017-01-12",
     "publisher": "SMPTE",
     "references": {
       "bibliographic": [
-        "asc-cdl-r1-2.2009",
-        "SMPTE.ST429-7.2006",
-        "rfc1521",
-        "isbn-9780471223573",
-        "NIST.FIPS.140-2",
-        "x509-sg.2000",
-        "rfc2401",
-        "NIST.KMGD",
-        "isbn-0201615983",
-        "rfc2459",
-        "rfc2693",
-        "isbn-9781119183471",
-        "rfc2246",
-        "x509.199706",
-        "xkms2.20030418",
-        "ISO.3166.1993",
-        "SMPTE.ST429-14.2014"
       ],
       "normative": [
-        "SMPTE.ST429-6.2006",
-        "SMPTE.ST430-2.2017",
-        "SMPTE.ST430-3.2012",
-        "rfc2253",
-        "rfc3339",
-        "rfc4122"
       ]
     },
+    "releaseTag": "20170112-pub",
     "repo": "https://github.com/SMPTE/st430-1",
     "status": {
       "active": false,
-      "amended": true,
-      "amendedBy": [
-        "SMPTE.ST430-1.2017Am1.2019"
-      ],
-      "superseded": true,
-      "supersededBy": [
-        "SMPTE.ST430-1.2023-09"
-      ]
+      "latestVersion": false,
+      "superseded": true
     },
     "workInfo": {
       "review": [
@@ -28977,57 +28873,29 @@
     "docPart": "1",
     "docTitle": "D-Cinema Operations – Key Delivery Message",
     "docType": "Standard",
-    "doi": "10.5594/SMPTE.ST430-1.2017Am1.2019",
+    "doi": "10.5594/SMPTE.ST430-1.2019",
     "group": "smpte-27c-tc",
-    "href": "https://doi.org/10.5594/SMPTE.ST430-1.2017Am1.2019",
+    "href": "https://doi.org/10.5594/SMPTE.ST430-1.2019",
     "keywords": [
       "DCinema",
       "Operations",
       "Security",
       "KDM"
     ],
-    "publicationDate": "2019-08-16",
+    "publicationDate": "2019-06-18",
     "publisher": "SMPTE",
     "references": {
       "bibliographic": [
-        "asc-cdl-r1-2.2009",
-        "SMPTE.ST429-7.2006",
-        "rfc1521",
-        "isbn-9780471223573",
-        "NIST.FIPS.140-2",
-        "x509-sg.2000",
-        "rfc2401",
-        "NIST.KMGD",
-        "isbn-0201615983",
-        "rfc2459",
-        "rfc2693",
-        "isbn-9781119183471",
-        "rfc2246",
-        "x509.199706",
-        "xkms2.20030418",
-        "ISO.3166.1993",
-        "SMPTE.ST429-14.2014",
-        "SMPTE.ST430-12.2014"
       ],
       "normative": [
-        "SMPTE.ST429-6.2006",
-        "SMPTE.ST430-2.2017",
-        "SMPTE.ST430-3.2012",
-        "rfc2253",
-        "rfc3339",
-        "rfc4122"
       ]
     },
+    "releaseTag": "20190618-am1-pub",
     "repo": "https://github.com/SMPTE/st430-1",
     "status": {
       "active": false,
       "latestVersion": false,
-      "stage": "PUB",
-      "state": "pub",
-      "superseded": true,
-      "supersededBy": [
-        "SMPTE.ST430-1.2023-09"
-      ]
+      "superseded": true
     }
   },
   {
@@ -29044,7 +28912,6 @@
     "publisher": "SMPTE",
     "references": {
       "bibliographic": [
-        "NIST.FIPS.197-upd1",
         "NIST.FIPS.197-upd1",
         "SMPTE.ST429-7.LATEST",
         "SMPTE.ST429-14.LATEST"
