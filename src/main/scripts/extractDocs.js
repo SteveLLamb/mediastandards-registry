@@ -423,9 +423,25 @@ const extractFromUrl = async (rootUrl) => {
         const formatVal = (val) =>
           typeof val === 'object' ? JSON.stringify(val, null, 2) : `"${val}"`;
 
-        
-        lines.push(`  - ${field}:${formatVal(oldVal)} > ${formatVal(newVal)}`);
-        
+        if (field === 'status') {
+          const oldStatus = doc.oldValues.status || {};
+          const newStatus = doc.newValues.status || {};
+          const statusFields = ['active', 'latestVersion', 'superseded', 'stage', 'state'];
+
+          const diffs = statusFields
+            .filter(k => oldStatus[k] !== newStatus[k])
+            .map(k => {
+              const oldVal = oldStatus[k] === undefined ? `"undefined"` : JSON.stringify(oldStatus[k]);
+              const newVal = newStatus[k] === undefined ? `"undefined"` : JSON.stringify(newStatus[k]);
+              return `${k}: ${oldVal} → ${newVal}`;
+            });
+
+          if (diffs.length > 0) {
+            lines.push(`  - status changed: ${diffs.join(', ')}`);
+          }
+        } else {
+          lines.push(`  - ${field}:${formatVal(oldVal)} > ${formatVal(newVal)}`);
+        }
       });
 
       // Log added references
