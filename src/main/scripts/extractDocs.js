@@ -362,6 +362,8 @@ const extractFromUrl = async (rootUrl) => {
           oldValues,
           newValues,
         });
+      } else {
+        skippedDocs.push(doc.docId);
       }
     }
   }
