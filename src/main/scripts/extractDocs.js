@@ -423,7 +423,14 @@ const extractFromUrl = async (rootUrl) => {
         const formatVal = (val) =>
           typeof val === 'object' ? JSON.stringify(val, null, 2) : `"${val}"`;
 
-        lines.push(`  - ${field}: ${formatVal(oldVal)} > ${formatVal(newVal)}`);
+        if (field === 'status') {
+          const diffs = Object.keys(newVal)
+            .map(k => `${k}: ${JSON.stringify(oldVal[k])} → ${JSON.stringify(newVal[k])}`)
+            .join(', ');
+          lines.push(`  - status changed: ${diffs}`);
+        } else {
+          lines.push(`  - ${field}: ${formatVal(oldVal)} > ${formatVal(newVal)}`);
+        }
       });
 
       // Log added references
