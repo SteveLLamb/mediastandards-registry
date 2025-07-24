@@ -72,14 +72,14 @@ const extractFromUrl = async (rootUrl) => {
 
   folderLinks.sort(); // oldest to newest
   const latestTag = folderLinks[folderLinks.length - 1];
-  console.log(latestTag)
 
   const docs = [];
 
   for (const releaseTag of folderLinks) {
     const isLatest = releaseTag === latestTag;
     const indexUrl = `${rootUrl}${releaseTag}/index.html`;
-
+    console.log(`🔍 Processing ${rootUrl}${releaseTag}/`);
+    
     try {
       const indexRes = await axios.get(indexUrl);
       const $index = cheerio.load(indexRes.data);
