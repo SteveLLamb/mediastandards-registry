@@ -44,6 +44,10 @@
                         "type": "string",
                         "format": "uri"
                     },
+                    "resolvedGroupLink": {
+                        "type": "string",
+                        "format": "uri"
+                    },
                     "groupName": {
                         "type": "string"
                     },
@@ -51,6 +55,10 @@
                         "type": "string"
                     },
                     "groupRepo": {
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "resolvedGroupRepo": {
                         "type": "string",
                         "format": "uri"
                     },
