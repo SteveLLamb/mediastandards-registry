@@ -459,7 +459,7 @@ const extractFromUrl = async (rootUrl) => {
           if (diffs.length > 0) {
             lines.push(`  - status changed: \r\n${diffs.join('\r\n')}`);
           }
-        } else if (field === 'revisionOf') {
+        } else if (key === 'revisionOf') {
           const oldList = Array.isArray(oldVal) ? oldVal.map(String) : [];
           const newList = Array.isArray(newVal) ? newVal.map(String) : [];
 
