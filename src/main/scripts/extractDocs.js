@@ -248,8 +248,8 @@ const extractFromUrl = async (rootUrl) => {
           state: pubState,
           superseded: !isLatest
         },
-        references: refSections
-        (revisionOf && { revisionOf })
+        references: refSections,
+        ...(revisionOf && { revisionOf })
       });
     } catch (err) {
       if (err.response?.status === 403 || err.response?.status === 404) {
