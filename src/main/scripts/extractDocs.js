@@ -34,6 +34,8 @@ function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
   const dateString = pubDate.isValid() ? (pubDate.year() < 2023 ? `${pubDate.year()}` : pubDate.format('YYYY-MM')) : 'UNKNOWN';
 
   let docId = pubTypeNum ? `SMPTE.${pubTypeNum}.${dateString}` : 'UNKNOWN';
+  let doi = `10.5594/${docId}`;
+  let href = `https://doi.org/${doi}`;
 
   // Amendments
   if (/^(\d{8})-am(\d+)-/.test(releaseTag)) {
@@ -46,6 +48,8 @@ function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
     if (base) {
       const baseYear = base.date.year();
       docId = `SMPTE.${pubTypeNum}.${baseYear}Am${amendNum}.${amendYear}`;
+      doi = `10.5594/${docId}`;
+      href = `https://doi.org/${doi}`;
     }
   }
 
@@ -54,8 +58,8 @@ function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
     releaseTag,
     publicationDate: pubDate.isValid() ? pubDate.format('YYYY-MM-DD') : undefined,
     publisher: 'SMPTE',
-    href: `https://doi.org/10.5594/SMPTE.${pubTypeNum}.${pubDate.year()}`,
-    doi: `10.5594/SMPTE.${pubTypeNum}.${pubDate.year()}`,
+    href,
+    doi,
     docType: typeMap[pubType] || pubType,
     docNumber,
     docPart,
@@ -384,7 +388,6 @@ const extractFromUrl = async (rootUrl) => {
 
             // Merge and dedupe
             const merged = Array.from(new Set([...oldList, ...newList]));
-
             // Only update if merged is different
             if (JSON.stringify(merged) !== JSON.stringify(oldList)) {
               existingDoc[key] = merged;
@@ -392,7 +395,7 @@ const extractFromUrl = async (rootUrl) => {
             }
 
             newValues[key] = existingDoc[key];
-            
+
           } else {
             existingDoc[key] = newVal;
             changedFields.push(key);
