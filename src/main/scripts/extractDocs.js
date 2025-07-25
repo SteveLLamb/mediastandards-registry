@@ -215,6 +215,19 @@ const extractFromUrl = async (rootUrl) => {
         });
       });
 
+      const revisionRaw = $index('[itemprop="pubRevisionOf"]').attr('content');
+      let revisionOf;
+
+      if (revisionRaw) {
+        const match = revisionRaw.match(/SMPTE\s+([A-Z]+)\s+(\d+)(?:-(\d+))?:?(\d{4})(?:-(\d{2}))?/);
+        if (match) {
+          const [, type, number, part, year, month] = match;
+          const suffix = (parseInt(year) >= 2023 && month) ? `${year}-${month}` : year;
+          const baseId = `SMPTE.${type.toUpperCase()}${part ? `${number}-${part}` : number}.${suffix}`;
+          revisionOf = [baseId];
+        }
+      }
+
       docs.push({
         docId: id,
         docLabel: label,
@@ -236,6 +249,7 @@ const extractFromUrl = async (rootUrl) => {
           superseded: !isLatest
         },
         references: refSections
+        ...(revisionOf && { revisionOf })
       });
     } catch (err) {
       if (err.response?.status === 403 || err.response?.status === 404) {
@@ -445,6 +459,11 @@ const extractFromUrl = async (rootUrl) => {
           if (diffs.length > 0) {
             lines.push(`  - status changed: \r\n${diffs.join('\r\n')}`);
           }
+        } else if (field === 'revisionOf') {
+          const oldStr = JSON.stringify(oldVal || []);
+          const newStr = JSON.stringify(newVal || []);
+          lines.push(`  - revisionOf changed: ${oldStr} → ${newStr}`);
+
         } else {
           lines.push(`  - ${field}:${formatVal(oldVal)} > ${formatVal(newVal)}`);
         }
