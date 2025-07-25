@@ -390,6 +390,9 @@ const extractFromUrl = async (rootUrl) => {
               existingDoc[key] = merged;
               changedFields.push(key);
             }
+
+            newValues[key] = existingDoc[key];
+            
           } else {
             existingDoc[key] = newVal;
             changedFields.push(key);
