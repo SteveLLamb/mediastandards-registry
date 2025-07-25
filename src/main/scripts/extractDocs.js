@@ -460,9 +460,17 @@ const extractFromUrl = async (rootUrl) => {
             lines.push(`  - status changed: \r\n${diffs.join('\r\n')}`);
           }
         } else if (field === 'revisionOf') {
-          const oldStr = JSON.stringify(oldVal || []);
-          const newStr = JSON.stringify(newVal || []);
-          lines.push(`  - revisionOf changed: ${oldStr} → ${newStr}`);
+          const oldList = Array.isArray(oldVal) ? oldVal.map(String) : [];
+          const newList = Array.isArray(newVal) ? newVal.map(String) : [];
+
+          // Merge and dedupe
+          const merged = Array.from(new Set([...oldList, ...newList]));
+
+          // Only update if merged is different
+          if (JSON.stringify(merged) !== JSON.stringify(oldList)) {
+            existingDoc[key] = merged;
+            changedFields.push(key);
+          }
 
         } else {
           lines.push(`  - ${field}:${formatVal(oldVal)} > ${formatVal(newVal)}`);
