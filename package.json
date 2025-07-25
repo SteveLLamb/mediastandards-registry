@@ -5,6 +5,7 @@
   "scripts": {
     "build": "node src/main/scripts/build.js",
     "validate": "node src/main/scripts/validate.js",
+    "validate-url": "node src/main/scripts/url.validate.js",
     "canonicalize": "node src/main/scripts/canonicalize.js"
   },
   "repository": {
