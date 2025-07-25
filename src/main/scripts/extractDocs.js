@@ -249,7 +249,7 @@ const extractFromUrl = async (rootUrl) => {
           superseded: !isLatest
         },
         references: refSections
-        ...(revisionOf && { revisionOf })
+        (revisionOf && { revisionOf })
       });
     } catch (err) {
       if (err.response?.status === 403 || err.response?.status === 404) {
