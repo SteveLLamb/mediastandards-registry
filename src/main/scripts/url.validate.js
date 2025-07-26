@@ -156,7 +156,7 @@ const validateEntry = async (entry, key, urlFields) => {
             message: 'resolved url mismatch'
           });
 
-          console.warn(`❗ ${key} → ${field}: resolved to ${result.resolvedUrl} — expected ${expectedResolved || 'undefined'}`);
+          console.warn(`❗ ${key} → ${field}: ${url} → resolved to ${result.resolvedUrl} — expected ${expectedResolved || 'undefined'}`);
         }
       }
 
