@@ -39,6 +39,9 @@ jobs:
     - run: npm run build
       env:
          GH_PAGES_BUILD: true
+    
+    - name: Add CNAME for custom domain
+      run: echo 'mediastandardsregistry.com' > ./build/CNAME
 
     - uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/main'
