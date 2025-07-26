@@ -41,7 +41,7 @@ jobs:
          GH_PAGES_BUILD: true
     
     - name: Add CNAME for custom domain
-      run: echo 'mediastandardsregistry.com' > ./build/CNAME
+      run: echo 'mediastandardsregistry.org' > ./build/CNAME
 
     - uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/main'
