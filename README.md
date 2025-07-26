@@ -8,4 +8,4 @@ The list data is:
 
 A build of the website from the `master` branch is automatically published at:
 
-<http://mediastandardsregistry.com/>
+<https://mediastandardsregistry.org/>
