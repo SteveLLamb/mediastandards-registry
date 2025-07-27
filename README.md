@@ -1,11 +1,2 @@
-Media Standards Registry
-========================
-
-The list data is:
-
-* stored as JSON at [`src/main/data`](src/main/data/)
-* schema for contribution to the list at [`src/main/schemas`](src/main/schemas/)
-
-A build of the website from the `master` branch is automatically published at:
-
-<https://mediastandardsregistry.org/>
+# Legacy Redirect
+This branch contains a static redirect to mediastandardsregistry.org
