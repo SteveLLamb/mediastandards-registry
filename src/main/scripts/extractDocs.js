@@ -440,8 +440,17 @@ const extractFromUrl = async (rootUrl) => {
             newValues[key] = existingDoc[key];
 
           } else {
-            existingDoc[key] = newVal;
-            changedFields.push(key);
+            if (oldVal !== newVal) {
+              existingDoc[key] = newVal;
+              existingDoc[`${key}$meta`] = {
+                source: 'parsed',
+                confidence: 'high',
+                originalValue: oldVal ?? null,
+                overridden: oldVal !== undefined,
+                updated: new Date().toISOString()
+              };
+              changedFields.push(key);
+            }
           }
         }
       }
