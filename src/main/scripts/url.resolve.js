@@ -39,4 +39,4 @@ async function resolveUrl(url) {
   }
 }
 
-module.exports = { resolveUrl };
+module.exports = { resolveUrlAndInject };
