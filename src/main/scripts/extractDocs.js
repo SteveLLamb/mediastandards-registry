@@ -25,11 +25,28 @@ const typeMap = {
       };
 
 function setFieldWithMeta(doc, field, value, meta) {
-  doc[field] = value;
-  doc[`${field}$meta`] = {
-    ...meta,
-    updated: new Date().toISOString()
-  };
+  const existingValue = doc[field];
+
+  // Only update if the value actually changes
+  const isChanged = existingValue !== value;
+
+  if (isChanged) {
+    doc[field] = value;
+    doc[`${field}$meta`] = {
+      ...meta,
+      originalValue: existingValue ?? null,
+      updated: new Date().toISOString(),
+      overridden: existingValue !== undefined
+    };
+  } else if (!doc.hasOwnProperty(`${field}$meta`)) {
+    // No prior value, but still need to set meta once if missing
+    doc[`${field}$meta`] = {
+      ...meta,
+      originalValue: value,
+      updated: new Date().toISOString(),
+      overridden: false
+    };
+  }
 }
 
 function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
