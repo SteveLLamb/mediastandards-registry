@@ -7,6 +7,7 @@ You should have received a copy of the license along with this work.  If not, se
 */
 
 const axios = require('axios');
+const { resolveUrlAndInject } = require('./url.resolve.js');
 const cheerio = require('cheerio');
 const dayjs = require('dayjs');
 const fs = require('fs');
@@ -316,30 +317,14 @@ const extractFromUrl = async (rootUrl) => {
   for (const doc of results) {
     const index = existingDocs.findIndex(d => d.docId === doc.docId);
     if (index === -1) {
+
       // Validate the inferred href
-      try {
-        const headRes = await axios.head(doc.href, {
-          timeout: 10000,
-          maxRedirects: 5,
-          validateStatus: () => true
-        });
-    
-        if (headRes.status >= 200 && headRes.status < 400) {
-          const resolvedUrl = headRes.request?.res?.responseUrl || doc.href;
-          if (resolvedUrl !== doc.href) {
-            console.warn(`⚠️ ${doc.docId} → href resolved to ${resolvedUrl} — differs from expected ${doc.href}`);
-            doc.resolvedHref = resolvedUrl;
-          }
-        } else {
-          console.warn(`❌ ${doc.docId} → href ${doc.href} returned HTTP ${headRes.status}`);
-        }
-      } catch (err) {
-        const errCode = err.response?.status || err.code || err.message;
-        console.warn(`❌ ${doc.docId} → href ${doc.href} unreachable (${errCode})`);
-      }
+      await resolveUrlAndInject(doc, 'href');
+
       newDocs.push(doc);
       existingDocs.push(doc);
     } else {
+      await resolveUrlAndInject(doc, 'href');
       const existingDoc = existingDocs[index];
       let changedFields = [];
       const oldRefs = {
