@@ -27,8 +27,12 @@ const typeMap = {
 function setFieldWithMeta(doc, field, value, meta) {
   const existingValue = doc[field];
 
-  // Only update if the value has changed
-  if (existingValue !== value) {
+  const isSame =
+    typeof existingValue === 'object'
+      ? JSON.stringify(existingValue) === JSON.stringify(value)
+      : existingValue === value;
+
+  if (!isSame) {
     doc[field] = value;
     doc[`${field}$meta`] = {
       ...meta,
@@ -37,7 +41,6 @@ function setFieldWithMeta(doc, field, value, meta) {
       overridden: existingValue !== undefined
     };
   }
-
 }
 
 function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
