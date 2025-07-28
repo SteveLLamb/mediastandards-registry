@@ -254,7 +254,7 @@ const extractFromUrl = async (rootUrl) => {
         }
       }
 
-      docs.push({
+      const doc = {};
 
         // Core identifiers
         setFieldWithMeta(doc, 'docId', id, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
@@ -297,6 +297,9 @@ const extractFromUrl = async (rootUrl) => {
           setFieldWithMeta(doc, 'revisionOf', revisionOf, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
         }
       });
+
+      docs.push(doc);
+
     } catch (err) {
       if (err.response?.status === 403 || err.response?.status === 404) {
         console.warn(`⚠️ No index.html found at ${rootUrl}${releaseTag}/`);
