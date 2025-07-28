@@ -27,10 +27,8 @@ const typeMap = {
 function setFieldWithMeta(doc, field, value, meta) {
   const existingValue = doc[field];
 
-  // Only update if the value actually changes
-  const isChanged = existingValue !== value;
-
-  if (isChanged) {
+  // Only update if the value has changed
+  if (existingValue !== value) {
     doc[field] = value;
     doc[`${field}$meta`] = {
       ...meta,
@@ -38,15 +36,8 @@ function setFieldWithMeta(doc, field, value, meta) {
       updated: new Date().toISOString(),
       overridden: existingValue !== undefined
     };
-  } else if (!doc.hasOwnProperty(`${field}$meta`)) {
-    // No prior value, but still need to set meta once if missing
-    doc[`${field}$meta`] = {
-      ...meta,
-      originalValue: value,
-      updated: new Date().toISOString(),
-      overridden: false
-    };
   }
+
 }
 
 function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
