@@ -7,7 +7,7 @@ You should have received a copy of the license along with this work.  If not, se
 */
 
 const axios = require('axios');
-const { resolveUrlAndInject } = require('./url.resolve.js');
+const { resolveUrlAndInject } = require('src/main/scripts/url.resolve.js');
 const cheerio = require('cheerio');
 const dayjs = require('dayjs');
 const fs = require('fs');
