@@ -24,19 +24,6 @@ const typeMap = {
         OV: 'Overview Document'
       };
 
-function setFieldWithMeta(target, key, value, meta = {}) {
-  target[key] = value;
-  target[`${key}$meta`] = {
-    source: meta.source || 'parsed',
-    confidence: meta.confidence || 'high',
-    updated: new Date().toISOString(),
-    ...(meta.note ? { note: meta.note } : {}),
-    ...(meta.originalValue !== undefined ? { originalValue: meta.originalValue } : {}),
-    ...(meta.sourceUrl ? { sourceUrl: meta.sourceUrl } : {}),
-    overridden: false
-  };
-}
-
 function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
 
   const match = rootUrl.match(/doc\/([^/]+)\/$/);
@@ -254,51 +241,29 @@ const extractFromUrl = async (rootUrl) => {
         }
       }
 
-      const doc = {};
-
-        // Core identifiers
-        setFieldWithMeta(doc, 'docId', id, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
-        setFieldWithMeta(doc, 'docLabel', label, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
-        setFieldWithMeta(doc, 'docNumber', pubNumber, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
-        setFieldWithMeta(doc, 'docPart', pubPart, { source: 'parsed', confidence: 'medium', sourceUrl: indexUrl }); // often optional
-
-        // Titles and type
-        setFieldWithMeta(doc, 'docTitle', `${suiteTitle} ${title}`, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
-        setFieldWithMeta(doc, 'docType', docType, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
-
-        // DOI and href
-        setFieldWithMeta(doc, 'doi', doi, { source: 'inferred', confidence: 'medium', note: 'Derived from docId', sourceUrl: indexUrl });
-        setFieldWithMeta(doc, 'href', href, { source: 'inferred', confidence: 'medium', note: 'Based on DOI pattern', sourceUrl: indexUrl });
-
-        // Group
-        setFieldWithMeta(doc, 'group', `smpte-${tc.toLowerCase()}-tc`, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
-
-        // Dates and release
-        setFieldWithMeta(doc, 'publicationDate', dateFormatted, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
-        setFieldWithMeta(doc, 'releaseTag', releaseTag, { source: 'parsed', confidence: 'high', note: 'Last segment of URL', sourceUrl: indexUrl });
-        setFieldWithMeta(doc, 'publisher', 'SMPTE', { source: 'static', confidence: 'high' });
-
-        // Status
-        doc.status = {};
-        setFieldWithMeta(doc.status, 'active', isLatest && pubStage === 'PUB' && pubState === 'pub', { source: 'parsed', confidence: 'high', note: 'Calculated', sourceUrl: indexUrl });
-        setFieldWithMeta(doc.status, 'latestVersion', isLatest, { source: 'parsed', confidence: 'high', note: 'Calculated', sourceUrl: indexUrl });
-        setFieldWithMeta(doc.status, 'superseded', !isLatest, { source: 'parsed', confidence: 'high', note: 'Calculated', sourceUrl: indexUrl });
-        setFieldWithMeta(doc.status, 'stage', pubStage, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
-        setFieldWithMeta(doc.status, 'state', pubState, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
-
-        // Meta for status itself
-        setFieldWithMeta(doc, 'status', doc.status, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
-
-        // References
-        doc.references = refSections;
-        
-        // Revision info
-        if (revisionOf) {
-          setFieldWithMeta(doc, 'revisionOf', revisionOf, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
-        }
-
-      docs.push(doc);
-
+      docs.push({
+        docId: id,
+        docLabel: label,
+        docNumber: pubNumber,
+        docPart: pubPart,
+        docTitle: `${suiteTitle} ${title}`,
+        docType,
+        doi,
+        group: `smpte-${tc.toLowerCase()}-tc`,
+        publicationDate: dateFormatted,
+        releaseTag,
+        publisher: 'SMPTE',
+        href,
+        status: {
+          active: isLatest && pubStage === 'PUB' && pubState === 'pub',
+          latestVersion: isLatest,
+          stage: pubStage,
+          state: pubState,
+          superseded: !isLatest
+        },
+        references: refSections,
+        ...(revisionOf && { revisionOf })
+      });
     } catch (err) {
       if (err.response?.status === 403 || err.response?.status === 404) {
         console.warn(`⚠️ No index.html found at ${rootUrl}${releaseTag}/`);
