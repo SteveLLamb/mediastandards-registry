@@ -39,4 +39,20 @@ async function resolveUrl(url) {
   }
 }
 
+// Inject resolvedHref into the document object if needed
+async function resolveUrlAndInject(obj, field = 'href') {
+  if (!obj || !obj[field]) return;
+
+  const url = obj[field];
+  try {
+    const result = await resolveUrl(url);
+    if (result.ok && result.resolvedUrl && result.resolvedUrl !== url) {
+      const resolvedField = `resolved${field.charAt(0).toUpperCase()}${field.slice(1)}`;
+      obj[resolvedField] = result.resolvedUrl;
+    }
+  } catch (err) {
+    console.warn(`⚠️ Failed to resolve URL: ${url}`);
+  }
+}
+
 module.exports = { resolveUrlAndInject };
