@@ -25,22 +25,22 @@ const typeMap = {
       };
 
 function setFieldWithMeta(doc, field, value, meta) {
-  const existingValue = doc[field];
+  const currentValue = doc[field];
 
   const isSame =
-    typeof existingValue === 'object'
-      ? JSON.stringify(existingValue) === JSON.stringify(value)
-      : existingValue === value;
+    typeof currentValue === 'object'
+      ? JSON.stringify(currentValue) === JSON.stringify(value)
+      : currentValue === value;
 
-  if (!isSame) {
-    doc[field] = value;
-    doc[`${field}$meta`] = {
-      ...meta,
-      originalValue: existingValue ?? null,
-      updated: new Date().toISOString(),
-      overridden: existingValue !== undefined
-    };
-  }
+  if (isSame) return; 
+
+  doc[field] = value;
+  doc[`${field}$meta`] = {
+    ...meta,
+    originalValue: currentValue ?? null,
+    overridden: currentValue !== undefined,
+    updated: new Date().toISOString()
+  };
 }
 
 function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
