@@ -296,7 +296,6 @@ const extractFromUrl = async (rootUrl) => {
         if (revisionOf) {
           setFieldWithMeta(doc, 'revisionOf', revisionOf, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
         }
-      });
 
       docs.push(doc);
 
