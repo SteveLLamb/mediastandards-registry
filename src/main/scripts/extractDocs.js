@@ -290,7 +290,7 @@ const extractFromUrl = async (rootUrl) => {
         setFieldWithMeta(doc, 'status', doc.status, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
 
         // References
-        references: refSections,
+        doc.references: refSections,
         
         // Revision info
         if (revisionOf) {
