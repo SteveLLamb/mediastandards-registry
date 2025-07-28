@@ -19132,6 +19132,70 @@
     }
   },
   {
+    "docId": "SMPTE.ST123.XXXX",
+    "docId$meta": {
+      "confidence": "high",
+      "originalValue": "SMPTE.ST123.2023",
+      "overridden": false,
+      "source": "parsed",
+      "sourceUrl": "https://example.com/doc/ST123/index.html",
+      "updated": "2025-07-28T18:00:00Z"
+    },
+    "docLabel": "SMPTE ST 123:2023",
+    "docTitle": "Image Compression for 4K Content",
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "low",
+      "note": "Matched from pubType prefix",
+      "originalValue": "ST",
+      "overridden": false,
+      "source": "inferred",
+      "updated": "2025-07-28T18:02:00Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST123.2023",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "DOI inferred from docId",
+      "originalValue": null,
+      "overridden": false,
+      "source": "inferred",
+      "updated": "2025-07-28T18:01:00Z"
+    },
+    "publicationDate": "2023-01-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "originalValue": "2023-01-01",
+      "overridden": false,
+      "source": "parsed",
+      "sourceUrl": "https://example.com/doc/ST123/index.html",
+      "updated": "2025-07-28T18:01:10Z"
+    },
+    "publisher": "SMPTE",
+    "status": {
+      "active": true,
+      "active$meta": {
+        "originalValue": false,
+        "confidence": "high",
+        "source": "parsed",
+        "updated": "2025-07-28T18:56:56.791Z"
+      },
+      "latestVersion": true,
+      "stage": "PUB",
+      "stage$meta": {
+        "confidence": "high",
+        "source": "parsed",
+        "updated": "2025-07-28T18:56:56.791Z"
+      },
+      "state": "pub",
+      "superseded": false
+    },
+    "status$meta": {
+      "confidence": "high",
+      "source": "parsed",
+      "updated": "2025-07-28T18:56:56.791Z"
+    }
+  },
+  {
     "docElement": "m",
     "docId": "SMPTE.ST125.1995",
     "docLabel": "SMPTE ST 125(m):1995",
@@ -21051,7 +21115,7 @@
     }
   },
   {
-    "dertails": "need to add references",
+    "details": "need to add references",
     "docId": "SMPTE.ST2059-1.2021",
     "docLabel": "SMPTE ST 2059-1:2021",
     "docNumber": "2059",
