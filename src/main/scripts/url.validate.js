@@ -8,7 +8,7 @@ You should have received a copy of the license along with this work.  If not, se
 
 const fs = require('fs');
 const path = require('path');
-const axios = require('axios');
+const { resolveUrl } = require('./url.resolve.js');
 
 const SKIP_VALIDATION_DOMAINS = [
   'https://teams.microsoft.com',
@@ -90,37 +90,6 @@ const registry = JSON.parse(fs.readFileSync(FULL_PATH, 'utf8'));
 const issues = [];
 const errorStats = {};
 
-const isUrlValid = async (url) => {
-  try {
-    const res = await axios.head(url, {
-      timeout: 10000,
-      maxRedirects: 5,
-      validateStatus: () => true,
-    });
-
-    if (res.status >= 200 && res.status < 400) {
-      const resolvedUrl = res.request?.res?.responseUrl || url;
-      return {
-        ok: true,
-        resolvedUrl
-      };
-    } else {
-      return {
-        ok: false,
-        message: `Unreachable (${res.status})`,
-        code: String(res.status)
-      };
-    }
-  } catch (e) {
-    const errCode = String(e.response?.status || e.code || e.message);
-    return {
-      ok: false,
-      message: `Unreachable (${errCode})`,
-      code: errCode
-    };
-  }
-};
-
 const shouldSkip = (url) => {
   return SKIP_VALIDATION_DOMAINS.some(domain => url.startsWith(domain));
 };
@@ -139,7 +108,7 @@ const validateEntry = async (entry, key, urlFields) => {
       continue;
     }
 
-    const result = await isUrlValid(url);
+    const result = await resolveUrl(url);
 
     if (result.ok) {
       if (result.resolvedUrl && result.resolvedUrl !== url) {

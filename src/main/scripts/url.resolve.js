@@ -55,4 +55,4 @@ async function resolveUrlAndInject(obj, field = 'href') {
   }
 }
 
-module.exports = { resolveUrlAndInject };
+module.exports = { resolveUrlAndInject, resolveUrl};
