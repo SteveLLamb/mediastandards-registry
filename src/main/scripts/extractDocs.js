@@ -273,7 +273,7 @@ const extractFromUrl = async (rootUrl) => {
       });
     } catch (err) {
       if (err.response?.status === 403 || err.response?.status === 404) {
-        console.warn(`⚠️ No index.html found at ${sourceUrl}/`);
+        console.warn(`⚠️ No index.html found at ${rootUrl}${releaseTag}/`);
 
         const inferred = inferMetadataFromPath(rootUrl, releaseTag, baseReleases);
         const existingIndex = docs.findIndex(d => d.docId === inferred.docId);
