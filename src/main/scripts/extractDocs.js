@@ -151,11 +151,7 @@ function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
   let docId = pubTypeNum ? `SMPTE.${pubTypeNum}.${dateString}` : 'UNKNOWN';
   let doi = `10.5594/${docId}`;
   let href = `https://doi.org/${doi}`;
-  const repoUrl = `https://github.com/SMPTE/${pubType}${pubNumber}${pubPart ? `-${pubPart}` : ''}`.toLowerCase();
-  let validRepo = null;
-  if (await urlExistsNoRedirect(repoUrl)) {
-    validRepo = repoUrl;
-  }
+  const repoUrl = `https://github.com/SMPTE/${pubTypeNum.toLowerCase()}/`;
 
   // Amendments
   if (/^(\d{8})-am(\d+)-/.test(releaseTag)) {
@@ -369,7 +365,7 @@ const extractFromUrl = async (rootUrl) => {
         releaseTag,
         publisher: 'SMPTE',
         href,
-        ...(validRepo && { repo: validRepo }),
+        repo: repoUrl
         status: {
           active: isLatest && pubStage === 'PUB' && pubState === 'pub',
           latestVersion: isLatest,
@@ -447,11 +443,17 @@ for (const doc of results) {
     if (index === -1) {
       await resolveUrlAndInject(doc, 'href');
       const sourceType = doc.__inferred ? 'inferred' : 'parsed';
+       if (doc.repo && !(await urlExistsNoRedirect(doc.repo))) {
+        delete doc.repo;
+      }
       injectMetaForDoc(doc, sourceType, 'new');
       newDocs.push(doc);
       existingDocs.push(doc);
     } else {
       await resolveUrlAndInject(doc, 'href');
+      if (doc.repo && !(await urlExistsNoRedirect(doc.repo))) {
+        delete doc.repo;
+      }
       const existingDoc = existingDocs[index];
       let changedFields = [];
       const oldValues = { ...existingDoc, status: { ...(existingDoc.status || {}) } };
