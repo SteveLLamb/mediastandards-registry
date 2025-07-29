@@ -458,8 +458,18 @@ for (const doc of results) {
         }
       }
 
-      if (changedFields.length > 0 /* || ref changes */) {
-        updatedDocs.push({ docId: doc.docId, fields: changedFields, oldValues, newValues });
+      const hasRefChanges = addedRefs.normative.length || addedRefs.bibliographic.length ||
+                      removedRefs.normative.length || removedRefs.bibliographic.length
+
+      if (changedFields.length > 0 || hasRefChanges ) {
+        updatedDocs.push({
+          docId: doc.docId,
+          fields: changedFields,
+          addedRefs,
+          removedRefs,
+          oldValues,
+          newValues,
+        });
       } else {
         skippedDocs.push(doc.docId);
       }
