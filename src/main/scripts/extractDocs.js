@@ -24,6 +24,70 @@ const typeMap = {
         OV: 'Overview Document'
       };
 
+const metaConfig = {
+  parsed: {
+    default: { confidence: 'high', note: 'Extracted directly from HTML index.html' },
+    status: { confidence: 'high', note: 'Publication status parsed from HTML metadata' },
+    href: { confidence: 'high', note: 'DOI link parsed from HTML' },
+    doi: { confidence: 'high', note: 'DOI parsed or generated from HTML metadata' },
+    publicationDate: { confidence: 'high', note: 'Date parsed from HTML pubDateTime meta tag' }
+  },
+  inferred: {
+    default: { confidence: 'medium', note: 'Inferred from folder structure' },
+    status: { confidence: 'medium', note: 'Status inferred from version ordering' },
+    href: { confidence: 'medium', note: 'DOI link inferred from folder path' },
+    doi: { confidence: 'medium', note: 'DOI inferred from folder naming pattern' },
+    publicationDate: { confidence: 'medium', note: 'Date inferred from folder name' }
+  },
+  resolved: {
+    default: { confidence: 'high', note: 'Calculated or verified value' },
+    href: { confidence: 'high', note: 'Final DOI link resolved after URL redirect verification' },
+    repo: { confidence: 'high', note: 'Repository link resolved after URL redirect verification' }
+  },
+  manual: {
+    default: { confidence: 'high', note: 'Manually entered value' }
+  },
+  unknown: {
+    default: { confidence: 'unknown', note: 'Source unknown' }
+  }
+};
+
+function getMetaDefaults(source, field) {
+  const srcMap = metaConfig[source] || metaConfig.unknown;
+  return srcMap[field] || srcMap.default || metaConfig.unknown.default;
+}
+
+function injectMeta(doc, field, source, mode, oldValue) {
+  const defaults = getMetaDefaults(source, field);
+  const meta = {
+    source,
+    confidence: defaults.confidence,
+    note: defaults.note,
+    updated: new Date().toISOString(),
+    originalValue: oldValue === undefined ? null : oldValue,
+    sourceUrl: doc.__sourceUrl
+  };
+  if (mode === 'update' && oldValue !== undefined && oldValue !== doc[field]) {
+    meta.overridden = true;
+  }
+  doc[`${field}$meta`] = meta;
+}
+
+function injectMetaForDoc(doc, source, mode, changedFieldsMap = {}) {
+  for (const field of Object.keys(doc)) {
+    if (typeof doc[field] !== 'object' || Array.isArray(doc[field])) {
+      injectMeta(doc, field, source, mode, changedFieldsMap[field]);
+    }
+  }
+  if (doc.status && typeof doc.status === 'object') {
+    for (const sField of Object.keys(doc.status)) {
+      if (typeof doc.status[sField] !== 'object') {
+        injectMeta(doc.status, sField, source, mode, changedFieldsMap[`status.${sField}`]);
+      }
+    }
+  }
+}
+
 function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
 
   const match = rootUrl.match(/doc\/([^/]+)\/$/);
@@ -82,15 +146,8 @@ function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
 
 function mergeInferredInto(existingDoc, inferredDoc) {
   const safeFields = [
-    'docId',
-    'releaseTag',
-    'publicationDate',
-    'publisher',
-    'href',
-    'doi',
-    'docType',
-    'docNumber',
-    'docPart'
+    'docId', 'releaseTag', 'publicationDate', 'publisher', 'href',
+    'doi', 'docType', 'docNumber', 'docPart'
   ];
 
   for (const key of safeFields) {
@@ -330,35 +387,34 @@ const extractFromUrl = async (rootUrl) => {
   const updatedDocs = [];
   const skippedDocs = [];
 
-  for (const doc of results) {
+for (const doc of results) {
     const index = existingDocs.findIndex(d => d.docId === doc.docId);
     if (index === -1) {
-
-      // Validate the inferred href
       await resolveUrlAndInject(doc, 'href');
-
+      const sourceType = doc.__inferred ? 'inferred' : 'parsed';
+      injectMetaForDoc(doc, sourceType, 'new');
       newDocs.push(doc);
       existingDocs.push(doc);
     } else {
       await resolveUrlAndInject(doc, 'href');
       const existingDoc = existingDocs[index];
       let changedFields = [];
+      const oldValues = { ...existingDoc, status: { ...(existingDoc.status || {}) } };
+      const newValues = { ...doc, status: { ...(doc.status || {}) } };
+
       const oldRefs = {
         normative: (existingDoc.references && existingDoc.references.normative) || [],
         bibliographic: (existingDoc.references && existingDoc.references.bibliographic) || []
       };
-
       const newRefs = {
         normative: (doc.references && doc.references.normative) || [],
         bibliographic: (doc.references && doc.references.bibliographic) || []
       };
 
-      // Capture the old values before updating
       const oldValues = {
         ...existingDoc,
         status: { ...(existingDoc.status || {}) }
       };
-      // Capture the new values for logging
       const newValues = {
         ...doc,
         status: { ...(doc.status || {}) }
@@ -386,83 +442,33 @@ const extractFromUrl = async (rootUrl) => {
 
       // Update document fields if there are changes
       for (const key of Object.keys(doc)) {
-        const oldVal = oldValues[key];  // Use old captured value
+        const oldVal = oldValues[key];
         const newVal = doc[key];
-
-        // Save the new value for later use in the log
-        newValues[key] = newVal;
-
         const isEqual = typeof newVal === 'object'
           ? JSON.stringify(oldVal) === JSON.stringify(newVal)
           : oldVal === newVal;
 
         if (!isEqual) {
-          if (key === 'references') {
-            continue; 
-          }
           if (key === 'status') {
-            if (!existingDoc.status) existingDoc.status = {};
             const statusFields = ['active', 'latestVersion', 'superseded', 'stage', 'state'];
             for (const field of statusFields) {
-              if (
-                newVal[field] !== undefined &&
-                existingDoc.status[field] !== newVal[field]
-              ) {
+              if (newVal[field] !== undefined && existingDoc.status[field] !== newVal[field]) {
+                const oldStatusVal = existingDoc.status[field];
                 existingDoc.status[field] = newVal[field];
+                injectMeta(existingDoc.status, field, 'parsed', 'update', oldStatusVal);
                 if (!changedFields.includes('status')) changedFields.push('status');
               }
             }
-          } else if (key === 'revisionOf') {
-            const oldList = Array.isArray(oldVal) ? oldVal.map(String) : [];
-            const newList = Array.isArray(newVal) ? newVal.map(String) : [];
-
-            // Merge and dedupe
-            const merged = Array.from(new Set([...oldList, ...newList]));
-            // Only update if merged is different
-            if (JSON.stringify(merged) !== JSON.stringify(oldList)) {
-              existingDoc[key] = merged;
-              changedFields.push(key);
-            }
-
-            newValues[key] = existingDoc[key];
-
           } else {
-            if (oldVal !== newVal) {
-              existingDoc[key] = newVal;
-              // Inject $meta for provenance
-
-              const meta = {
-              source: 'parsed',
-              confidence: 'high',
-              updated: new Date().toISOString(),
-              sourceUrl: doc.__sourceUrl,
-              originalValue: oldVal === undefined ? null : oldVal
-            };
-
-            if (oldVal !== undefined && oldVal !== newVal) {
-              meta.overridden = true;
-            }
-
-            existingDoc[`${key}$meta`] = meta;
-              changedFields.push(key);
-            }
+            existingDoc[key] = newVal;
+            injectMeta(existingDoc, key, 'parsed', 'update', oldVal);
+            changedFields.push(key);
           }
         }
       }
 
-      // If any fields or references were changed
-      const hasRefChanges = addedRefs.normative.length || addedRefs.bibliographic.length ||
-                      removedRefs.normative.length || removedRefs.bibliographic.length;
-
-      if (changedFields.length > 0 || hasRefChanges) {
-        updatedDocs.push({
-          docId: doc.docId,
-          fields: changedFields,
-          addedRefs,
-          removedRefs,
-          oldValues,
-          newValues,
-        });
+      if (changedFields.length > 0 /* || ref changes */) {
+        updatedDocs.push({ docId: doc.docId, fields: changedFields, oldValues, newValues });
       } else {
         skippedDocs.push(doc.docId);
       }
