@@ -81,7 +81,7 @@ const metaConfig = {
 
 function getMetaDefaults(source, field) {
   const srcMap = metaConfig[source] || metaConfig.unknown;
-  return srcMap[field] || srcMap.default || metaConfig.unknown.default;
+  return srcMap[field] || srcMap[`status.${field}`] || srcMap.default || metaConfig.unknown.default;
 }
 
 function injectMeta(doc, field, source, mode, oldValue) {
@@ -101,7 +101,7 @@ function injectMeta(doc, field, source, mode, oldValue) {
 }
 
 function injectMetaForDoc(doc, source, mode, changedFieldsMap = {}) {
-  const resolvedFields = ['docId', 'docLabel', 'doi', 'href', "resolvedHref"];
+  const resolvedFields = ['docId', 'docLabel', 'doi', 'href', 'resolvedHref'];
   const resolvedStatusFields = ['active', 'latestVersion', 'superseded'];
 
   for (const field of Object.keys(doc)) {
@@ -115,7 +115,7 @@ function injectMetaForDoc(doc, source, mode, changedFieldsMap = {}) {
     for (const sField of Object.keys(doc.status)) {
       if (typeof doc.status[sField] !== 'object') {
         const fieldSource = resolvedStatusFields.includes(sField) ? 'resolved' : source;
-        injectMeta(doc.status, sField, fieldSource, mode, changedFieldsMap[`status.${sField}`]);
+        injectMeta(doc.status, `status.${sField}`, fieldSource, mode, changedFieldsMap[`status.${sField}`]);
       }
     }
   }
