@@ -526,11 +526,11 @@ for (const doc of results) {
 
             // Merge and dedupe
             const merged = Array.from(new Set([...oldList, ...newList]));
-            // Only update if merged is different
+
             if (JSON.stringify(merged) !== JSON.stringify(oldList)) {
               existingDoc[key] = merged;
 
-              const fieldSource = sourceType;
+              const fieldSource = doc.__inferred ? 'inferred' : 'parsed';
               injectMeta(existingDoc, key, fieldSource, 'update', oldList);
 
               changedFields.push(key);
