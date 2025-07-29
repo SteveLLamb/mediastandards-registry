@@ -241,7 +241,7 @@ const extractFromUrl = async (rootUrl) => {
         }
       }
 
-      const doc = {
+      docs.push({
         docId: id,
         docLabel: label,
         docNumber: pubNumber,
@@ -263,10 +263,7 @@ const extractFromUrl = async (rootUrl) => {
         },
         references: refSections,
         ...(revisionOf && { revisionOf })
-      };
-
-      docs.push(doc);
-
+      });
     } catch (err) {
       if (err.response?.status === 403 || err.response?.status === 404) {
         console.warn(`⚠️ No index.html found at ${rootUrl}${releaseTag}/`);
@@ -418,20 +415,18 @@ const extractFromUrl = async (rootUrl) => {
               existingDoc[key] = newVal;
               // Inject $meta for provenance
 
-              const indexUrl = doc.__sourceUrl || existingDoc.__sourceUrl || null;
               const meta = {
-                source: 'parsed',
-                confidence: 'high',
-                updated: new Date().toISOString(),
-                originalValue: oldVal === undefined ? null : oldVal,
-                sourceUrl: indexUrl
-              };
+              source: 'parsed',
+              confidence: 'high',
+              updated: new Date().toISOString(),
+              originalValue: oldVal === undefined ? null : oldVal
+            };
 
-              if (oldVal !== undefined && oldVal !== newVal) {
-                meta.overridden = true;
-              }
+            if (oldVal !== undefined && oldVal !== newVal) {
+              meta.overridden = true;
+            }
 
-              existingDoc[`${key}$meta`] = meta;
+            existingDoc[`${key}$meta`] = meta;
               changedFields.push(key);
             }
           }
