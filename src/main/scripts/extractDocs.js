@@ -365,7 +365,7 @@ const extractFromUrl = async (rootUrl) => {
         releaseTag,
         publisher: 'SMPTE',
         href,
-        repo: repoUrl
+        repo: repoUrl,
         status: {
           active: isLatest && pubStage === 'PUB' && pubState === 'pub',
           latestVersion: isLatest,
