@@ -272,7 +272,7 @@ const extractFromUrl = async (rootUrl) => {
       Object.defineProperty(doc, '__sourceUrl', {
         value: `${sourceUrl}/`,
         enumerable: false
-      };
+      });
 
       docs.push(doc);
 
