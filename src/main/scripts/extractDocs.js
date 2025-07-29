@@ -414,12 +414,19 @@ const extractFromUrl = async (rootUrl) => {
             if (oldVal !== newVal) {
               existingDoc[key] = newVal;
               // Inject $meta for provenance
-              existingDoc[`${key}$meta`] = {
+
+              const meta = {
                 source: 'parsed',
                 confidence: 'high',
                 updated: new Date().toISOString(),
-                originalValue: oldVal === undefined ? null : oldVal,
-                overridden: false
+                originalValue: oldVal === undefined ? null : oldVal
+              };
+              if (oldVal !== undefined && oldVal !== newVal) {
+                meta.overridden = true;
+              }
+
+              existingDoc[`${key}$meta`] = meta;
+
               };
               changedFields.push(key);
             }
