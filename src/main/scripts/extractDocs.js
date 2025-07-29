@@ -268,6 +268,14 @@ const extractFromUrl = async (rootUrl) => {
         references: refSections,
         ...(revisionOf && { revisionOf })
       });
+
+      Object.defineProperty(doc, '__sourceUrl', {
+        value: `${sourceUrl}/`,
+        enumerable: false
+      });
+      docs.push(doc);
+
+
     } catch (err) {
       if (err.response?.status === 403 || err.response?.status === 404) {
         console.warn(`⚠️ No index.html found at ${sourceUrl}/`);
