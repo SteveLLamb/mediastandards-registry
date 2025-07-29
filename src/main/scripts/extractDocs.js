@@ -411,8 +411,19 @@ const extractFromUrl = async (rootUrl) => {
             newValues[key] = existingDoc[key];
 
           } else {
-            existingDoc[key] = newVal;
-            changedFields.push(key);
+            if (oldVal !== newVal) {
+              existingDoc[key] = newVal;
+              // Inject $meta for provenance
+              existingDoc[`${key}$meta`] = {
+                source: 'parsed',
+                confidence: 'high',
+                sourceUrl: indexUrl,
+                updated: new Date().toISOString(),
+                originalValue: oldVal === undefined ? null : oldVal,
+                overridden: false
+              };
+              changedFields.push(key);
+            }
           }
         }
       }
