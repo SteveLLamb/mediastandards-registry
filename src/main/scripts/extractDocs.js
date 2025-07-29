@@ -24,27 +24,6 @@ const typeMap = {
         OV: 'Overview Document'
       };
 
-function updateFieldWithMeta(existingDoc, field, newValue, meta) {
-  const oldValue = existingDoc[field];
-
-  const changed = typeof newValue === 'object'
-    ? JSON.stringify(oldValue) !== JSON.stringify(newValue)
-    : oldValue !== newValue;
-
-  if (changed) {
-    existingDoc[field] = newValue;
-    existingDoc[`${field}$meta`] = {
-      ...meta,
-      originalValue: oldValue ?? null,
-      updated: new Date().toISOString(),
-      overridden: oldValue !== undefined && oldValue !== newValue
-    };
-    return true;
-  }
-
-  return false;
-}
-
 function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
 
   const match = rootUrl.match(/doc\/([^/]+)\/$/);
@@ -262,37 +241,29 @@ const extractFromUrl = async (rootUrl) => {
         }
       }
 
-      const doc = {};
-        updateFieldWithMeta(doc, 'docId', id, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
-        updateFieldWithMeta(doc, 'docLabel', label, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
-        updateFieldWithMeta(doc, 'docNumber', pubNumber, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
-        updateFieldWithMeta(doc, 'docPart', pubPart, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
-        updateFieldWithMeta(doc, 'docTitle', `${suiteTitle} ${title}`, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
-        updateFieldWithMeta(doc, 'docType', docType, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
-        updateFieldWithMeta(doc, 'doi', doi, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
-        updateFieldWithMeta(doc, 'group', `smpte-${tc.toLowerCase()}-tc`, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
-        updateFieldWithMeta(doc, 'publicationDate', dateFormatted, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
-        updateFieldWithMeta(doc, 'releaseTag', releaseTag, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
-        updateFieldWithMeta(doc, 'publisher', 'SMPTE', { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
-        updateFieldWithMeta(doc, 'href', href, { source: 'parsed', confidence: 'high', sourceUrl: indexUrl });
-
-        doc.status = {
+      docs.push({
+        docId: id,
+        docLabel: label,
+        docNumber: pubNumber,
+        docPart: pubPart,
+        docTitle: `${suiteTitle} ${title}`,
+        docType,
+        doi,
+        group: `smpte-${tc.toLowerCase()}-tc`,
+        publicationDate: dateFormatted,
+        releaseTag,
+        publisher: 'SMPTE',
+        href,
+        status: {
           active: isLatest && pubStage === 'PUB' && pubState === 'pub',
           latestVersion: isLatest,
           stage: pubStage,
           state: pubState,
           superseded: !isLatest
-        };
-        doc.status$meta = {
-          source: 'parsed',
-          confidence: 'high',
-          updated: new Date().toISOString()
-        };
-
-        doc.references = refSections;
-        if (revisionOf) doc.revisionOf = revisionOf;
-
-        docs.push(doc);
+        },
+        references: refSections,
+        ...(revisionOf && { revisionOf })
+      });
     } catch (err) {
       if (err.response?.status === 403 || err.response?.status === 404) {
         console.warn(`⚠️ No index.html found at ${rootUrl}${releaseTag}/`);
