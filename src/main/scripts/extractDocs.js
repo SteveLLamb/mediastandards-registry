@@ -26,27 +26,53 @@ const typeMap = {
 
 const metaConfig = {
   parsed: {
-    default: { confidence: 'high', note: 'Extracted directly from HTML index.html' },
-    status: { confidence: 'high', note: 'Publication status parsed from HTML metadata' },
-    href: { confidence: 'high', note: 'DOI link parsed from HTML' },
-    doi: { confidence: 'high', note: 'DOI parsed or generated from HTML metadata' },
-    publicationDate: { confidence: 'high', note: 'Date parsed from HTML pubDateTime meta tag' }
+    docNumber: { confidence: 'high', note: 'Parsed from HTML pubNumber meta tag' },
+    docPart: { confidence: 'high', note: 'Parsed from HTML pubPart meta tag' },
+    docTitle: { confidence: 'high', note: 'Concatenated suite title and publication title' },
+    docType: { confidence: 'high', note: 'Publication type parsed from HTML' },
+    group: { confidence: 'high', note: 'Working group parsed from HTML pubTC meta tag' },
+    publicationDate: { confidence: 'high', note: 'Parsed from HTML pubDateTime meta tag' },
+    releaseTag: { confidence: 'high', note: 'Release tag parsed from URL folder structure' },
+    publisher: { confidence: 'high', note: 'Static: SMPTE' },
+    'status.stage': { confidence: 'high', note: 'Stage parsed from HTML pubStage meta tag' },
+    'status.state': { confidence: 'high', note: 'State parsed from HTML pubState meta tag' },
+    references: { confidence: 'high', note: 'Parsed from HTML references sections' },
+    revisionOf: { confidence: 'high', note: 'Parsed from HTML pubRevisionOf meta tag' },
+    default: { confidence: 'high', note: 'Extracted directly from HTML' }
   },
+
   inferred: {
-    default: { confidence: 'medium', note: 'Inferred from folder structure' },
-    status: { confidence: 'medium', note: 'Status inferred from version ordering' },
-    href: { confidence: 'medium', note: 'DOI link inferred from folder path' },
-    doi: { confidence: 'medium', note: 'DOI inferred from folder naming pattern' },
-    publicationDate: { confidence: 'medium', note: 'Date inferred from folder name' }
+    docNumber: { confidence: 'medium', note: 'Inferred from root folder name' },
+    docPart: { confidence: 'medium', note: 'Inferred from root folder name' },
+    docTitle: { confidence: 'low', note: 'Unknown in inferred release' },
+    docType: { confidence: 'medium', note: 'Inferred from release folder name' },
+    group: { confidence: 'low', note: 'Unknown in inferred release' },
+    publicationDate: { confidence: 'medium', note: 'Inferred from release folder name' },
+    releaseTag: { confidence: 'high', note: 'Release tag inferred from URL folder structure' },
+    publisher: { confidence: 'high', note: 'Static: SMPTE' },
+    'status.stage': { confidence: 'medium', note: 'Inferred from release folder name' },
+    'status.state': { confidence: 'low', note: 'Unknown in inferred release' },
+    references: { confidence: 'low', note: 'Unknown in inferred release' },
+    revisionOf: { confidence: 'low', note: 'Unknown in inferred releases' },
+    default: { confidence: 'medium', note: '' }
   },
+
   resolved: {
-    default: { confidence: 'high', note: 'Calculated or verified value' },
-    href: { confidence: 'high', note: 'Final DOI link resolved after URL redirect verification' },
-    repo: { confidence: 'high', note: 'Repository link resolved after URL redirect verification' }
+    docId: { confidence: 'high', note: 'Calculated from parsed or inferred metadata' },
+    docLabel: { confidence: 'high', note: 'Constructed from parsed/inferred type/number/date' },
+    doi: { confidence: 'medium', note: 'Generated from docId' },
+    href: { confidence: 'high', note: 'DOI link generated and verified via redirect resolution' },
+    repo: { confidence: 'high', note: 'Repository link resolved after URL redirect verification' },
+    'status.active': { confidence: 'high', note: 'Calculated from the releaseTag(s) and other status values' },
+    'status.latestVersion': { confidence: 'high', note: 'Calculated from the releaseTag(s)' },
+    'status.superseded': { confidence: 'high', note: 'Calculated from the releaseTag(s)' },
+    default: { confidence: 'high', note: 'Calculated or verified value' }
   },
+
   manual: {
-    default: { confidence: 'high', note: 'Manually entered value' }
+    default: { confidence: 'medium', note: 'Manually entered value' }
   },
+
   unknown: {
     default: { confidence: 'unknown', note: 'Source unknown' }
   }
@@ -74,15 +100,21 @@ function injectMeta(doc, field, source, mode, oldValue) {
 }
 
 function injectMetaForDoc(doc, source, mode, changedFieldsMap = {}) {
+  const resolvedFields = ['docId', 'docLabel', 'doi', 'href'];
+  const resolvedStatusFields = ['active', 'latestVersion', 'superseded'];
+
   for (const field of Object.keys(doc)) {
     if (typeof doc[field] !== 'object' || Array.isArray(doc[field])) {
-      injectMeta(doc, field, source, mode, changedFieldsMap[field]);
+      const fieldSource = resolvedFields.includes(field) ? 'resolved' : source;
+      injectMeta(doc, field, fieldSource, mode, changedFieldsMap[field]);
     }
   }
+
   if (doc.status && typeof doc.status === 'object') {
     for (const sField of Object.keys(doc.status)) {
       if (typeof doc.status[sField] !== 'object') {
-        injectMeta(doc.status, sField, source, mode, changedFieldsMap[`status.${sField}`]);
+        const fieldSource = resolvedStatusFields.includes(sField) ? 'resolved' : source;
+        injectMeta(doc.status, sField, fieldSource, mode, changedFieldsMap[`status.${sField}`]);
       }
     }
   }
@@ -146,8 +178,15 @@ function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
 
 function mergeInferredInto(existingDoc, inferredDoc) {
   const safeFields = [
-    'docId', 'releaseTag', 'publicationDate', 'publisher', 'href',
-    'doi', 'docType', 'docNumber', 'docPart'
+    'docId', 
+    'releaseTag', 
+    'publicationDate', 
+    'publisher', 
+    'href',
+    'doi', 
+    'docType', 
+    'docNumber', 
+    'docPart'
   ];
 
   for (const key of safeFields) {
