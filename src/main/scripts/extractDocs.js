@@ -423,12 +423,13 @@ const extractFromUrl = async (rootUrl) => {
               existingDoc[key] = newVal;
               // Inject $meta for provenance
 
+              const indexUrl = doc.__sourceUrl;
               const meta = {
                 source: 'parsed',
                 confidence: 'high',
                 updated: new Date().toISOString(),
                 originalValue: oldVal === undefined ? null : oldVal,
-                sourceUrl: doc.__sourceUrl
+                sourceUrl: indexUrl
               };
 
               if (oldVal !== undefined && oldVal !== newVal) {
