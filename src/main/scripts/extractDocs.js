@@ -184,10 +184,8 @@ const extractFromUrl = async (rootUrl) => {
 
   for (const releaseTag of folderLinks) {
     const isLatest = releaseTag === latestTag;
-    
-    const sourceUrl = `${rootUrl}${releaseTag}/`;
-    const indexUrl = `${sourceUrl}/index.html`;
-    console.log(`🔍 Processing ${sourceUrl}`);
+    const indexUrl = `${rootUrl}${releaseTag}/index.html`;
+    console.log(`🔍 Processing ${rootUrl}${releaseTag}/`);
 
     try {
       const indexRes = await axios.get(indexUrl);
@@ -267,11 +265,6 @@ const extractFromUrl = async (rootUrl) => {
         ...(revisionOf && { revisionOf })
       };
 
-      Object.defineProperty(doc, '__sourceUrl', {
-        value: sourceUrl,
-        enumerable: false
-      });
-
       docs.push(doc);
 
     } catch (err) {
@@ -279,12 +272,6 @@ const extractFromUrl = async (rootUrl) => {
         console.warn(`⚠️ No index.html found at ${rootUrl}${releaseTag}/`);
 
         const inferred = inferMetadataFromPath(rootUrl, releaseTag, baseReleases);
-
-        Object.defineProperty(inferred, '__sourceUrl', {
-          value: sourceUrl,
-          enumerable: false
-        });
-
         const existingIndex = docs.findIndex(d => d.docId === inferred.docId);
         if (existingIndex !== -1) {
           mergeInferredInto(docs[existingIndex], inferred);
@@ -431,12 +418,13 @@ const extractFromUrl = async (rootUrl) => {
               existingDoc[key] = newVal;
               // Inject $meta for provenance
 
+              const indexUrl = doc.__sourceUrl || existingDoc.__sourceUrl || null;
               const meta = {
                 source: 'parsed',
                 confidence: 'high',
                 updated: new Date().toISOString(),
                 originalValue: oldVal === undefined ? null : oldVal,
-                sourceUrl: doc.__sourceUrl
+                sourceUrl: indexUrl
               };
 
               if (oldVal !== undefined && oldVal !== newVal) {
