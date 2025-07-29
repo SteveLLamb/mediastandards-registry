@@ -440,6 +440,9 @@ for (const doc of results) {
           : oldVal === newVal;
 
         if (!isEqual) {
+          if (key === 'references') {
+            continue; 
+          }
           if (key === 'status') {
             const statusFields = ['active', 'latestVersion', 'superseded', 'stage', 'state'];
             for (const field of statusFields) {
@@ -450,6 +453,20 @@ for (const doc of results) {
                 if (!changedFields.includes('status')) changedFields.push('status');
               }
             }
+          } else if (key === 'revisionOf') {
+            const oldList = Array.isArray(oldVal) ? oldVal.map(String) : [];
+            const newList = Array.isArray(newVal) ? newVal.map(String) : [];
+
+            // Merge and dedupe
+            const merged = Array.from(new Set([...oldList, ...newList]));
+            // Only update if merged is different
+            if (JSON.stringify(merged) !== JSON.stringify(oldList)) {
+              existingDoc[key] = merged;
+              changedFields.push(key);
+            }
+
+            newValues[key] = existingDoc[key];
+
           } else {
             existingDoc[key] = newVal;
             injectMeta(existingDoc, key, 'parsed', 'update', oldVal);
