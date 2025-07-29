@@ -319,6 +319,8 @@ const extractFromUrl = async (rootUrl) => {
       const id = `SMPTE.${pubType}${pubNumber}-${pubPart}.${dateShort}`;
       const doi = `10.5594/SMPTE.${pubType}${pubNumber}-${pubPart}.${pubDateObj.format('YYYY')}`;
       const href = `https://doi.org/${doi}`;
+      const pubTypeNum = `${pubType}${pubNumber}${pubPart ? `-${pubPart}` : ''}`;
+      const repoUrl = `https://github.com/SMPTE/${pubTypeNum.toLowerCase()}/`;
 
       const pubStage = $index('[itemprop="pubStage"]').attr('content');
       const pubState = $index('[itemprop="pubState"]').attr('content');
