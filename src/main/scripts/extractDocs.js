@@ -58,10 +58,11 @@ const metaConfig = {
   },
 
   resolved: {
-    docId: { confidence: 'high', note: 'Calculated from parsed or inferred metadata' },
+    docId: { confidence: 'high', note: 'Calculated from parsed/inferred metadata' },
     docLabel: { confidence: 'high', note: 'Constructed from parsed/inferred type/number/date' },
     doi: { confidence: 'medium', note: 'Generated from docId' },
     href: { confidence: 'high', note: 'DOI link generated and verified via redirect resolution' },
+    resolvedHref: { confidence: 'high', note: 'Final DOI link resolved via URL redirect verification' },
     repo: { confidence: 'high', note: 'Repository link resolved after URL redirect verification' },
     'status.active': { confidence: 'high', note: 'Calculated from the releaseTag(s) and other status values' },
     'status.latestVersion': { confidence: 'high', note: 'Calculated from the releaseTag(s)' },
@@ -100,7 +101,7 @@ function injectMeta(doc, field, source, mode, oldValue) {
 }
 
 function injectMetaForDoc(doc, source, mode, changedFieldsMap = {}) {
-  const resolvedFields = ['docId', 'docLabel', 'doi', 'href'];
+  const resolvedFields = ['docId', 'docLabel', 'doi', 'href', "resolvedHref"];
   const resolvedStatusFields = ['active', 'latestVersion', 'superseded'];
 
   for (const field of Object.keys(doc)) {
