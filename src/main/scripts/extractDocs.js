@@ -184,8 +184,16 @@ const extractFromUrl = async (rootUrl) => {
 
   for (const releaseTag of folderLinks) {
     const isLatest = releaseTag === latestTag;
-    const indexUrl = `${rootUrl}${releaseTag}/index.html`;
-    console.log(`🔍 Processing ${rootUrl}${releaseTag}/`);
+
+    const sourceUrl = `${rootUrl}${releaseTag}/`
+
+    Object.defineProperty(doc, '__sourceUrl', {
+      value: sourceUrl,
+      enumerable: false
+    });
+
+    const indexUrl = `${sourceUrl}/index.html`;
+    console.log(`🔍 Processing ${sourceUrl}/`);
 
     try {
       const indexRes = await axios.get(indexUrl);
