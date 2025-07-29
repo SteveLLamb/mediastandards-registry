@@ -63,7 +63,7 @@ const metaConfig = {
     doi: { confidence: 'medium', note: 'Generated from docId' },
     href: { confidence: 'high', note: 'DOI link generated and verified via redirect resolution' },
     resolvedHref: { confidence: 'high', note: 'Final DOI link resolved via URL redirect verification' },
-    repo: { confidence: 'high', note: 'Repository link resolved after URL redirect verification' },
+    repo: { confidence: 'high', note: 'Calculated from parsed or inferred publication type/number/part and verified to exist' },
     'status.active': { confidence: 'high', note: 'Calculated from the releaseTag(s) and other status values' },
     'status.latestVersion': { confidence: 'high', note: 'Calculated from the releaseTag(s)' },
     'status.superseded': { confidence: 'high', note: 'Calculated from the releaseTag(s)' },
@@ -121,6 +121,16 @@ function injectMetaForDoc(doc, source, mode, changedFieldsMap = {}) {
   }
 }
 
+async function urlExistsNoRedirect(url) {
+  try {
+    const res = await axios.head(url, { maxRedirects: 0, validateStatus: null });
+    // Accept only exact 200 OK, no redirect
+    return res.status === 200;
+  } catch {
+    return false;
+  }
+}
+
 function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
 
   const match = rootUrl.match(/doc\/([^/]+)\/$/);
@@ -142,6 +152,11 @@ function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
   let docId = pubTypeNum ? `SMPTE.${pubTypeNum}.${dateString}` : 'UNKNOWN';
   let doi = `10.5594/${docId}`;
   let href = `https://doi.org/${doi}`;
+  const repo = `https://github.com/SMPTE/${pubType}${pubNumber}${pubPart ? `-${pubPart}` : ''}`.toLowerCase();
+  let validRepo = null;
+  if (await urlExistsNoRedirect(repo)) {
+    validRepo = repo;
+  }
 
   // Amendments
   if (/^(\d{8})-am(\d+)-/.test(releaseTag)) {
@@ -355,6 +370,7 @@ const extractFromUrl = async (rootUrl) => {
         releaseTag,
         publisher: 'SMPTE',
         href,
+        ...(validRepo && { repo: validRepo }),
         status: {
           active: isLatest && pubStage === 'PUB' && pubState === 'pub',
           latestVersion: isLatest,
