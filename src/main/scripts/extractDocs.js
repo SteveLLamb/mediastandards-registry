@@ -483,15 +483,18 @@ for (const doc of results) {
           if (key === 'references') {
             continue; 
           }
+
+          const resolvedFields = ['docId', 'docLabel', 'doi', 'href', 'resolvedHref', 'repo'];
+          const resolvedStatusFields = ['active', 'latestVersion', 'superseded'];
+
           if (key === 'status') {
             const statusFields = ['active', 'latestVersion', 'superseded', 'stage', 'state'];
-            const resolvedStatusFields = ['active', 'latestVersion', 'superseded'];
-
             for (const field of statusFields) {
               if (newVal[field] !== undefined && existingDoc.status[field] !== newVal[field]) {
                 const oldStatusVal = existingDoc.status[field];
                 existingDoc.status[field] = newVal[field];
                 const fieldSource = resolvedStatusFields.includes(field) ? 'resolved' : 'parsed';
+                // Pass fully qualified name for correct metaConfig lookup
                 injectMeta(existingDoc.status, `status.${field}`, fieldSource, 'update', oldStatusVal);
                 if (!changedFields.includes('status')) changedFields.push('status');
               }
@@ -512,7 +515,8 @@ for (const doc of results) {
 
           } else {
             existingDoc[key] = newVal;
-            injectMeta(existingDoc, key, 'parsed', 'update', oldVal);
+            const fieldSource = resolvedFields.includes(key) ? 'resolved' : 'parsed';
+            injectMeta(existingDoc, key, fieldSource, 'update', oldVal);
             changedFields.push(key);
           }
         }
