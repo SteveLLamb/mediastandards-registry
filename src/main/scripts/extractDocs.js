@@ -529,6 +529,10 @@ for (const doc of results) {
             // Only update if merged is different
             if (JSON.stringify(merged) !== JSON.stringify(oldList)) {
               existingDoc[key] = merged;
+
+              const fieldSource = sourceType;
+              injectMeta(existingDoc, key, fieldSource, 'update', oldList);
+
               changedFields.push(key);
             }
 
