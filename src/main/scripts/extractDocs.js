@@ -435,6 +435,7 @@ const extractFromUrl = async (rootUrl) => {
               source: 'parsed',
               confidence: 'high',
               updated: new Date().toISOString(),
+              sourceUrl: doc.__sourceUrl || '',
               originalValue: oldVal === undefined ? null : oldVal
             };
 
