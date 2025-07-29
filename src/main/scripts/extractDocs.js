@@ -485,11 +485,14 @@ for (const doc of results) {
           }
           if (key === 'status') {
             const statusFields = ['active', 'latestVersion', 'superseded', 'stage', 'state'];
+            const resolvedStatusFields = ['active', 'latestVersion', 'superseded'];
+
             for (const field of statusFields) {
               if (newVal[field] !== undefined && existingDoc.status[field] !== newVal[field]) {
                 const oldStatusVal = existingDoc.status[field];
                 existingDoc.status[field] = newVal[field];
-                injectMeta(existingDoc.status, field, 'parsed', 'update', oldStatusVal);
+                const fieldSource = resolvedStatusFields.includes(field) ? 'resolved' : 'parsed';
+                injectMeta(existingDoc.status, `status.${field}`, fieldSource, 'update', oldStatusVal);
                 if (!changedFields.includes('status')) changedFields.push('status');
               }
             }
