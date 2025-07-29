@@ -411,15 +411,6 @@ for (const doc of results) {
         bibliographic: (doc.references && doc.references.bibliographic) || []
       };
 
-      const oldValues = {
-        ...existingDoc,
-        status: { ...(existingDoc.status || {}) }
-      };
-      const newValues = {
-        ...doc,
-        status: { ...(doc.status || {}) }
-      };  
-
       let addedRefs = { normative: [], bibliographic: [] };
       let removedRefs = { normative: [], bibliographic: [] };
 
