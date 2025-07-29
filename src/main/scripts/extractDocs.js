@@ -421,13 +421,12 @@ const extractFromUrl = async (rootUrl) => {
                 updated: new Date().toISOString(),
                 originalValue: oldVal === undefined ? null : oldVal
               };
+
               if (oldVal !== undefined && oldVal !== newVal) {
                 meta.overridden = true;
               }
 
               existingDoc[`${key}$meta`] = meta;
-
-              };
               changedFields.push(key);
             }
           }
