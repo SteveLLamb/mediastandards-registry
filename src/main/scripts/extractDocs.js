@@ -492,7 +492,8 @@ for (const doc of results) {
         newValues.references = newRefs;
 
         const fieldSource = doc.__inferred ? 'inferred' : 'parsed';
-        injectMeta(existingDoc, 'references', fieldSource, 'update', oldRefs);
+        injectMeta(existingDoc.references, 'normative', fieldSource, 'update', oldRefs.normative);
+        injectMeta(existingDoc.references, 'bibliographic', fieldSource, 'update', oldRefs.bibliographic);
 
         changedFields.push('references');
         }
@@ -632,6 +633,8 @@ for (const doc of results) {
           const newStr = JSON.stringify(newVal || []);
           lines.push(`  - revisionOf changed: ${oldStr} → ${newStr}`);
 
+        } else if (field === 'references') {
+          // Skip detailed dump for references — summary will be shown in added/removed refs
         } else {
           lines.push(`  - ${field}:${formatVal(oldVal)} > ${formatVal(newVal)}`);
         }
