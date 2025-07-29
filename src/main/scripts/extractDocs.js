@@ -417,7 +417,6 @@ const extractFromUrl = async (rootUrl) => {
               existingDoc[`${key}$meta`] = {
                 source: 'parsed',
                 confidence: 'high',
-                sourceUrl: indexUrl,
                 updated: new Date().toISOString(),
                 originalValue: oldVal === undefined ? null : oldVal,
                 overridden: false
