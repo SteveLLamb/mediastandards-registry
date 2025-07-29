@@ -245,7 +245,7 @@ const extractFromUrl = async (rootUrl) => {
         }
       }
 
-      docs.push({
+      const doc = {
         docId: id,
         docLabel: label,
         docNumber: pubNumber,
@@ -273,8 +273,8 @@ const extractFromUrl = async (rootUrl) => {
         value: `${sourceUrl}/`,
         enumerable: false
       });
-      docs.push(doc);
 
+      docs.push(doc);
 
     } catch (err) {
       if (err.response?.status === 403 || err.response?.status === 404) {
