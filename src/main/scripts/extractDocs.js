@@ -281,6 +281,10 @@ const extractFromUrl = async (rootUrl) => {
         console.warn(`⚠️ No index.html found at ${sourceUrl}/`);
 
         const inferred = inferMetadataFromPath(rootUrl, releaseTag, baseReleases);
+        Object.defineProperty(inferred, '__sourceUrl', {
+          value: `${sourceUrl}/`,
+          enumerable: false
+        });
         const existingIndex = docs.findIndex(d => d.docId === inferred.docId);
         if (existingIndex !== -1) {
           mergeInferredInto(docs[existingIndex], inferred);
