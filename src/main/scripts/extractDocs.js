@@ -427,12 +427,15 @@ const extractFromUrl = async (rootUrl) => {
               source: 'parsed',
               confidence: 'high',
               updated: new Date().toISOString(),
+              sourceUrl: doc.__sourceUrl || ''
               originalValue: oldVal === undefined ? null : oldVal
             };
 
             if (oldVal !== undefined && oldVal !== newVal) {
               meta.overridden = true;
             }
+
+            
 
             existingDoc[`${key}$meta`] = meta;
               changedFields.push(key);
