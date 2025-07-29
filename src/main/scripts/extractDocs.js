@@ -79,6 +79,15 @@ const metaConfig = {
   }
 };
 
+async function urlExistsNoRedirect(url) {
+  try {
+    const res = await axios.head(url, { maxRedirects: 0, validateStatus: null });
+    return res.status === 200;
+  } catch {
+    return false;
+  }
+}
+
 function getMetaDefaults(source, field) {
   const srcMap = metaConfig[source] || metaConfig.unknown;
   return srcMap[field] || srcMap[`status.${field}`] || srcMap.default || metaConfig.unknown.default;
@@ -101,7 +110,7 @@ function injectMeta(doc, field, source, mode, oldValue) {
 }
 
 function injectMetaForDoc(doc, source, mode, changedFieldsMap = {}) {
-  const resolvedFields = ['docId', 'docLabel', 'doi', 'href', 'resolvedHref'];
+  const resolvedFields = ['docId', 'docLabel', 'doi', 'href', 'resolvedHref', 'repo'];
   const resolvedStatusFields = ['active', 'latestVersion', 'superseded'];
 
   for (const field of Object.keys(doc)) {
@@ -118,16 +127,6 @@ function injectMetaForDoc(doc, source, mode, changedFieldsMap = {}) {
         injectMeta(doc.status, `status.${sField}`, fieldSource, mode, changedFieldsMap[`status.${sField}`]);
       }
     }
-  }
-}
-
-async function urlExistsNoRedirect(url) {
-  try {
-    const res = await axios.head(url, { maxRedirects: 0, validateStatus: null });
-    // Accept only exact 200 OK, no redirect
-    return res.status === 200;
-  } catch {
-    return false;
   }
 }
 
@@ -152,10 +151,10 @@ function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
   let docId = pubTypeNum ? `SMPTE.${pubTypeNum}.${dateString}` : 'UNKNOWN';
   let doi = `10.5594/${docId}`;
   let href = `https://doi.org/${doi}`;
-  const repo = `https://github.com/SMPTE/${pubType}${pubNumber}${pubPart ? `-${pubPart}` : ''}`.toLowerCase();
+  const repoUrl = `https://github.com/SMPTE/${pubType}${pubNumber}${pubPart ? `-${pubPart}` : ''}`.toLowerCase();
   let validRepo = null;
-  if (await urlExistsNoRedirect(repo)) {
-    validRepo = repo;
+  if (await urlExistsNoRedirect(repoUrl)) {
+    validRepo = repoUrl;
   }
 
   // Amendments
