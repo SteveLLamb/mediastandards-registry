@@ -185,7 +185,7 @@ const extractFromUrl = async (rootUrl) => {
   for (const releaseTag of folderLinks) {
     const isLatest = releaseTag === latestTag;
 
-    const sourceUrl = `${rootUrl}${releaseTag}/`
+    const sourceUrl = `${rootUrl}${releaseTag}`
 
 
     const indexUrl = `${sourceUrl}/index.html`;
