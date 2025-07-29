@@ -488,7 +488,13 @@ for (const doc of results) {
             bibliographic: oldRefs.bibliographic.filter(ref => !newRefs.bibliographic.includes(ref))
           };
 
-          existingDoc.references = newRefs;
+        existingDoc.references = newRefs;
+        newValues.references = newRefs;
+
+        const fieldSource = doc.__inferred ? 'inferred' : 'parsed';
+        injectMeta(existingDoc, 'references', fieldSource, 'update', oldRefs);
+
+        changedFields.push('references');
         }
       }
 
@@ -529,6 +535,7 @@ for (const doc of results) {
 
             if (JSON.stringify(merged) !== JSON.stringify(oldList)) {
               existingDoc[key] = merged;
+              newValues[key] = merged;
 
               const fieldSource = doc.__inferred ? 'inferred' : 'parsed';
               injectMeta(existingDoc, key, fieldSource, 'update', oldList);
