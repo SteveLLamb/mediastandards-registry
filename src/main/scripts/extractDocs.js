@@ -492,9 +492,9 @@ for (const doc of results) {
           bibliographic: oldRefs.bibliographic.filter(ref => !newRefs.bibliographic.includes(ref))
         };
 
-        const refsChanged =
-          JSON.stringify(newRefs.normative) !== JSON.stringify(oldRefs.normative) ||
-          JSON.stringify(newRefs.bibliographic) !== JSON.stringify(oldRefs.bibliographic);
+         const refsChanged =
+          refsAreDifferent(newRefs.normative, oldRefs.normative) ||
+          refsAreDifferent(newRefs.bibliographic, oldRefs.bibliographic);
 
         if (refsChanged) {
           existingDoc.references = newRefs;
