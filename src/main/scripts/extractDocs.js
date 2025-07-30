@@ -510,6 +510,12 @@ for (const doc of results) {
           duplicateBibRemoved = true;
         }
 
+        if (duplicateNormRemoved || duplicateBibRemoved) {
+          if (!changedFields.includes('references')) {
+            changedFields.push('references');
+          }
+        }
+
         hasRefChanges =
           addedRefs.normative.length > 0 || addedRefs.bibliographic.length > 0 ||
           removedRefs.normative.length > 0 || removedRefs.bibliographic.length > 0;
