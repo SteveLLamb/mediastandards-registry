@@ -506,8 +506,10 @@ for (const doc of results) {
           newValues.references = newRefs;
 
           const fieldSource = doc.__inferred ? 'inferred' : 'parsed';
+          console.log('Before meta injection:', addedRefs, removedRefs);
           injectMeta(existingDoc.references, 'normative', fieldSource, 'update', oldRefs.normative);
           injectMeta(existingDoc.references, 'bibliographic', fieldSource, 'update', oldRefs.bibliographic);
+          console.log('After meta injection:', addedRefs, removedRefs);
 
           changedFields.push('references');
         }
