@@ -451,6 +451,10 @@ for (const doc of results) {
         delete doc.repo;
       }
       injectMetaForDoc(doc, sourceType, 'new');
+      if (doc.references) {
+        injectMeta(doc.references, 'normative', sourceType, 'new', []);
+        injectMeta(doc.references, 'bibliographic', sourceType, 'new', []);
+      }
       newDocs.push(doc);
       existingDocs.push(doc);
     } else {
@@ -474,28 +478,31 @@ for (const doc of results) {
 
       let addedRefs = { normative: [], bibliographic: [] };
       let removedRefs = { normative: [], bibliographic: [] };
-
+      
       if (doc.references) {
-        
-        if (doc.references) {
-          addedRefs = {
-            normative: newRefs.normative.filter(ref => !oldRefs.normative.includes(ref)),
-            bibliographic: newRefs.bibliographic.filter(ref => !oldRefs.bibliographic.includes(ref))
-          };
+        addedRefs = {
+          normative: newRefs.normative.filter(ref => !oldRefs.normative.includes(ref)),
+          bibliographic: newRefs.bibliographic.filter(ref => !oldRefs.bibliographic.includes(ref))
+        };
 
-          removedRefs = {
-            normative: oldRefs.normative.filter(ref => !newRefs.normative.includes(ref)),
-            bibliographic: oldRefs.bibliographic.filter(ref => !newRefs.bibliographic.includes(ref))
-          };
+        removedRefs = {
+          normative: oldRefs.normative.filter(ref => !newRefs.normative.includes(ref)),
+          bibliographic: oldRefs.bibliographic.filter(ref => !newRefs.bibliographic.includes(ref))
+        };
 
-        existingDoc.references = newRefs;
-        newValues.references = newRefs;
+        const hasRefChanges =
+          addedRefs.normative.length || addedRefs.bibliographic.length ||
+          removedRefs.normative.length || removedRefs.bibliographic.length;
 
-        const fieldSource = doc.__inferred ? 'inferred' : 'parsed';
-        injectMeta(existingDoc.references, 'normative', fieldSource, 'update', oldRefs.normative);
-        injectMeta(existingDoc.references, 'bibliographic', fieldSource, 'update', oldRefs.bibliographic);
+        if (hasRefChanges) {
+          existingDoc.references = newRefs;
+          newValues.references = newRefs;
 
-        changedFields.push('references');
+          const fieldSource = doc.__inferred ? 'inferred' : 'parsed';
+          injectMeta(existingDoc.references, 'normative', fieldSource, 'update', oldRefs.normative);
+          injectMeta(existingDoc.references, 'bibliographic', fieldSource, 'update', oldRefs.bibliographic);
+
+          changedFields.push('references'); 
         }
       }
 
