@@ -95475,14 +95475,54 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
+    "releaseTag": "20080215-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-07-30T15:29:55.860Z"
+    },
     "repo": "https://github.com/SMPTE/st429-10/",
     "repo$meta": {
       "confidence": "medium",
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
+    "resolvedHref": "https://my.smpte.org/s/product-details?id=a1BVR0000007NgB",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final DOI link resolved via URL redirect verification",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2025-07-30T15:29:55.860Z"
+    },
     "status": {
-      "active": true
+      "active": false,
+      "latestVersion": false,
+      "status.active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": true,
+        "overridden": true,
+        "source": "resolved",
+        "updated": "2025-07-30T15:29:55.860Z"
+      },
+      "status.latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-07-30T15:29:55.860Z"
+      },
+      "status.superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-07-30T15:29:55.860Z"
+      },
+      "superseded": true
     },
     "status$meta": {
       "confidence": "medium",
@@ -95514,6 +95554,217 @@
       "confidence": "medium",
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
+    }
+  },
+  {
+    "docId": "SMPTE.ST429-10.2023-09",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-10/20230912-pub/",
+      "updated": "2025-07-30T15:29:56.070Z"
+    },
+    "docLabel": "SMPTE ST 429-10:2023-09",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred type/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-10/20230912-pub/",
+      "updated": "2025-07-30T15:29:56.070Z"
+    },
+    "docNumber": "429",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-10/20230912-pub/",
+      "updated": "2025-07-30T15:29:56.070Z"
+    },
+    "docPart": "10",
+    "docPart$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubPart meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-10/20230912-pub/",
+      "updated": "2025-07-30T15:29:56.070Z"
+    },
+    "docTitle": "D-Cinema Packaging Stereoscopic Picture Track File",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-10/20230912-pub/",
+      "updated": "2025-07-30T15:29:56.070Z"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-10/20230912-pub/",
+      "updated": "2025-07-30T15:29:56.070Z"
+    },
+    "doi": "10.5594/SMPTE.ST429-10.2023",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Generated from docId",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-10/20230912-pub/",
+      "updated": "2025-07-30T15:29:56.070Z"
+    },
+    "group": "smpte-27c-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-10/20230912-pub/",
+      "updated": "2025-07-30T15:29:56.070Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST429-10.2023",
+    "href$meta": {
+      "confidence": "high",
+      "note": "DOI link generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-10/20230912-pub/",
+      "updated": "2025-07-30T15:29:56.070Z"
+    },
+    "publicationDate": "2023-09-12",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-10/20230912-pub/",
+      "updated": "2025-07-30T15:29:56.070Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Static: SMPTE",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-10/20230912-pub/",
+      "updated": "2025-07-30T15:29:56.070Z"
+    },
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST422.LATEST"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+        ],
+        "source": "parsed",
+        "updated": "2025-07-30T15:29:56.070Z"
+      },
+      "normative": [
+        "SMPTE.ST377-1.LATEST",
+        "SMPTE.ST429-3.LATEST",
+        "SMPTE.ST429-7.LATEST",
+        "xml.LATEST",
+        "xmlschema-1.LATEST",
+        "xmlschema-2.LATEST",
+        "rfc3986"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+        ],
+        "source": "parsed",
+        "updated": "2025-07-30T15:29:56.070Z"
+      }
+    },
+    "releaseTag": "20230912-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-10/20230912-pub/",
+      "updated": "2025-07-30T15:29:56.070Z"
+    },
+    "repo": "https://github.com/SMPTE/st429-10/",
+    "repo$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed or inferred publication type/number/part and verified to exist",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-10/20230912-pub/",
+      "updated": "2025-07-30T15:29:56.070Z"
+    },
+    "resolvedHref": "https://my.smpte.org/s/product-details?id=a1BVR0000007NgB",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final DOI link resolved via URL redirect verification",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-10/20230912-pub/",
+      "updated": "2025-07-30T15:29:56.070Z"
+    },
+    "revisionOf": [
+      "SMPTE.ST429-10.2008"
+    ],
+    "revisionOf$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubRevisionOf meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-10/20230912-pub/",
+      "updated": "2025-07-30T15:29:56.070Z"
+    },
+    "status": {
+      "active": true,
+      "latestVersion": true,
+      "stage": "PUB",
+      "state": "pub",
+      "status.active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-07-30T15:29:56.070Z"
+      },
+      "status.latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-07-30T15:29:56.070Z"
+      },
+      "status.stage$meta": {
+        "confidence": "high",
+        "note": "Stage parsed from HTML pubStage meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-07-30T15:29:56.070Z"
+      },
+      "status.state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-07-30T15:29:56.070Z"
+      },
+      "status.superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-07-30T15:29:56.070Z"
+      },
+      "superseded": false
     }
   },
   {
