@@ -492,13 +492,19 @@ for (const doc of results) {
           bibliographic: oldRefs.bibliographic.filter(ref => !newRefs.bibliographic.includes(ref))
         };
 
-         const refsChanged =
+        // DEBUG: See what we're detecting before any update logic runs
+        if (removedRefs.normative.length || removedRefs.bibliographic.length) {
+          console.log('[DEBUG] Removal detected for', doc.docId);
+          console.log('  removedRefs before update logic:', JSON.stringify(removedRefs));
+        }
+
+        const refsChanged =
           refsAreDifferent(newRefs.normative, oldRefs.normative) ||
           refsAreDifferent(newRefs.bibliographic, oldRefs.bibliographic);
 
         if (refsChanged) {
           existingDoc.references = newRefs;
-          newValues.references = newRefs; // Keep PR log in sync
+          newValues.references = newRefs;
 
           const fieldSource = doc.__inferred ? 'inferred' : 'parsed';
           injectMeta(existingDoc.references, 'normative', fieldSource, 'update', oldRefs.normative);
@@ -571,8 +577,14 @@ for (const doc of results) {
         updatedDocs.push({
           docId: doc.docId,
           fields: changedFields,
-          addedRefs,
-          removedRefs,
+          addedRefs: {
+            normative: [...addedRefs.normative],
+            bibliographic: [...addedRefs.bibliographic]
+          },
+          removedRefs: {
+            normative: [...removedRefs.normative],
+            bibliographic: [...removedRefs.bibliographic]
+          },
           oldValues,
           newValues,
         });
