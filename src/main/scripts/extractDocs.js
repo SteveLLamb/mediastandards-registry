@@ -490,19 +490,19 @@ for (const doc of results) {
           bibliographic: oldRefs.bibliographic.filter(ref => !newRefs.bibliographic.includes(ref))
         };
 
-        const hasRefChanges =
-          addedRefs.normative.length || addedRefs.bibliographic.length ||
-          removedRefs.normative.length || removedRefs.bibliographic.length;
+        const refsChanged =
+          JSON.stringify(newRefs.normative) !== JSON.stringify(oldRefs.normative) ||
+          JSON.stringify(newRefs.bibliographic) !== JSON.stringify(oldRefs.bibliographic);
 
-        if (hasRefChanges) {
+        if (refsChanged) {
           existingDoc.references = newRefs;
-          newValues.references = newRefs;
+          newValues.references = newRefs; // Keep PR log in sync
 
           const fieldSource = doc.__inferred ? 'inferred' : 'parsed';
           injectMeta(existingDoc.references, 'normative', fieldSource, 'update', oldRefs.normative);
           injectMeta(existingDoc.references, 'bibliographic', fieldSource, 'update', oldRefs.bibliographic);
 
-          changedFields.push('references'); 
+          changedFields.push('references'); // Always push if refsChanged is true
         }
       }
 
