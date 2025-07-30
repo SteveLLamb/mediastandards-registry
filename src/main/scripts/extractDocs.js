@@ -454,6 +454,8 @@ for (const doc of results) {
     let hasRefChanges = false;
     let addedRefs = { normative: [], bibliographic: [] };
     let removedRefs = { normative: [], bibliographic: [] };
+    let duplicateNormRemoved = false;
+    let duplicateBibRemoved = false;
 
     const index = existingDocs.findIndex(d => d.docId === doc.docId);
     
@@ -499,10 +501,6 @@ for (const doc of results) {
           normative: oldRefs.normative.filter(ref => !newRefs.normative.includes(ref)),
           bibliographic: oldRefs.bibliographic.filter(ref => !newRefs.bibliographic.includes(ref))
         };
-
-        // Detect duplicate cleanups separately from true removals
-        let duplicateNormRemoved = false;
-        let duplicateBibRemoved = false;
 
         if (oldRefs.normative.length > new Set(oldRefs.normative).size) {
           duplicateNormRemoved = true;
