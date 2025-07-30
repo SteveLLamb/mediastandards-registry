@@ -13,7 +13,15 @@ const dayjs = require('dayjs');
 const fs = require('fs');
 
 const urls = require('../input/urls.json');
-const badRefs = [];
+
+async function urlExistsNoRedirect(url) {
+  try {
+    const res = await axios.head(url, { maxRedirects: 0, validateStatus: null });
+    return res.status === 200;
+  } catch {
+    return false;
+  }
+}
 
 const typeMap = {
         AG: 'Administrative Guideline',
@@ -79,13 +87,13 @@ const metaConfig = {
   }
 };
 
-async function urlExistsNoRedirect(url) {
-  try {
-    const res = await axios.head(url, { maxRedirects: 0, validateStatus: null });
-    return res.status === 200;
-  } catch {
-    return false;
-  }
+const badRefs = [];
+
+function refsAreDifferent(a, b) {
+  const aSorted = [...a].sort();
+  const bSorted = [...b].sort();
+  if (aSorted.length !== bSorted.length) return true;
+  return aSorted.some((val, idx) => val !== bSorted[idx]);
 }
 
 function getMetaDefaults(source, field) {
