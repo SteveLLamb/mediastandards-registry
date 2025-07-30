@@ -506,10 +506,8 @@ for (const doc of results) {
           newValues.references = newRefs;
 
           const fieldSource = doc.__inferred ? 'inferred' : 'parsed';
-          console.log('Before meta injection:', addedRefs, removedRefs);
           injectMeta(existingDoc.references, 'normative', fieldSource, 'update', oldRefs.normative);
           injectMeta(existingDoc.references, 'bibliographic', fieldSource, 'update', oldRefs.bibliographic);
-          console.log('After meta injection:', addedRefs, removedRefs);
 
           changedFields.push('references');
         }
@@ -571,6 +569,7 @@ for (const doc of results) {
         }
       }
 
+      console.log('Pushing removedRefs for', doc.docId, JSON.stringify(removedRefs));
       if (changedFields.length > 0) {
         updatedDocs.push({
           docId: doc.docId,
@@ -661,6 +660,7 @@ for (const doc of results) {
         if (bibl.length) lines.push(`  - ➕ Bibliographic Ref(s) added:\r\n ${bibl.join('\r')}`);
       }
 
+      console.log('PR log sees removedRefs for', doc.docId, JSON.stringify(doc.removedRefs));
       // Log removed references
       if (doc.removedRefs.normative.length || doc.removedRefs.bibliographic.length) {
         if (doc.removedRefs.normative.length) lines.push(`  - ➖ Normative Ref(s) removed:\r\n ${doc.removedRefs.normative.join('\r')}`);
