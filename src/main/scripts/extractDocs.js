@@ -451,9 +451,12 @@ const extractFromUrl = async (rootUrl) => {
   const skippedDocs = [];
 
 for (const doc of results) {
+    let hasRefChanges = false;
     let addedRefs = { normative: [], bibliographic: [] };
     let removedRefs = { normative: [], bibliographic: [] };
+
     const index = existingDocs.findIndex(d => d.docId === doc.docId);
+    
     if (index === -1) {
       await resolveUrlAndInject(doc, 'href');
       const sourceType = doc.__inferred ? 'inferred' : 'parsed';
@@ -486,9 +489,6 @@ for (const doc of results) {
         bibliographic: (doc.references && doc.references.bibliographic) || []
       };
 
-      let addedRefs = { normative: [], bibliographic: [] };
-      let removedRefs = { normative: [], bibliographic: [] };
-      
       if (doc.references) {
         addedRefs = {
           normative: newRefs.normative.filter(ref => !oldRefs.normative.includes(ref)),
