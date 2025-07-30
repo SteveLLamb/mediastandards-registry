@@ -657,6 +657,8 @@ for (const doc of results) {
 
       // Log removed references
       if (doc.removedRefs.normative.length || doc.removedRefs.bibliographic.length) {
+        console.log('[DEBUG] Removal detected for', doc.docId);
+        console.log('  removedRefs before push:', JSON.stringify(removedRefs));
         if (doc.removedRefs.normative.length) lines.push(`  - ➖ Normative Ref(s) removed:\r\n ${doc.removedRefs.normative.join('\r')}`);
         if (doc.removedRefs.bibliographic.length) lines.push(`  - ➖ Bibliographic Ref(s) removed:\r\n ${doc.removedRefs.bibliographic.join('\r')}`);
       }
