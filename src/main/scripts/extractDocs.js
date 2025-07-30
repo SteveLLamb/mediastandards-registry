@@ -573,8 +573,8 @@ for (const doc of results) {
         updatedDocs.push({
           docId: doc.docId,
           fields: changedFields,
-          addedRefs,
-          removedRefs,
+          addedRefs: { ...addedRefs },      
+          removedRefs: { ...removedRefs },
           oldValues,
           newValues
         });
