@@ -219,13 +219,6 @@ function mergeInferredInto(existingDoc, inferredDoc) {
 
 }
 
-function refsAreDifferent(a, b) {
-  const aSorted = [...a].sort();
-  const bSorted = [...b].sort();
-  if (aSorted.length !== bSorted.length) return true;
-  return aSorted.some((val, idx) => val !== bSorted[idx]);
-}
-
 const parseRefId = (text, href = '') => {
   if (/w3\.org\/TR\/\d{4}\/REC-([^\/]+)-(\d{8})\//i.test(href)) {
     const [, shortname, yyyymmdd] = href.match(/REC-([^\/]+)-(\d{8})/i);
@@ -497,11 +490,11 @@ for (const doc of results) {
           bibliographic: oldRefs.bibliographic.filter(ref => !newRefs.bibliographic.includes(ref))
         };
 
-        const refsChanged =
-          refsAreDifferent(newRefs.normative, oldRefs.normative) ||
-          refsAreDifferent(newRefs.bibliographic, oldRefs.bibliographic);
+        const hasRefChanges =
+          addedRefs.normative.length || addedRefs.bibliographic.length ||
+          removedRefs.normative.length || removedRefs.bibliographic.length;
 
-        if (refsChanged) {
+        if (hasRefChanges) {
           existingDoc.references = newRefs;
           newValues.references = newRefs;
 
@@ -509,7 +502,7 @@ for (const doc of results) {
           injectMeta(existingDoc.references, 'normative', fieldSource, 'update', oldRefs.normative);
           injectMeta(existingDoc.references, 'bibliographic', fieldSource, 'update', oldRefs.bibliographic);
 
-          changedFields.push('references');
+          changedFields.push('references'); 
         }
       }
 
@@ -569,15 +562,17 @@ for (const doc of results) {
         }
       }
 
-      console.log('Pushing removedRefs for', doc.docId, JSON.stringify(removedRefs));
-      if (changedFields.length > 0) {
+      const hasRefChanges = addedRefs.normative.length || addedRefs.bibliographic.length ||
+                      removedRefs.normative.length || removedRefs.bibliographic.length
+
+      if (changedFields.length > 0 || hasRefChanges ) {
         updatedDocs.push({
           docId: doc.docId,
           fields: changedFields,
-          addedRefs: { ...addedRefs },      
-          removedRefs: { ...removedRefs },
+          addedRefs,
+          removedRefs,
           oldValues,
-          newValues
+          newValues,
         });
       } else {
         skippedDocs.push(doc.docId);
@@ -645,7 +640,7 @@ for (const doc of results) {
           const newStr = JSON.stringify(newVal || []);
           lines.push(`  - revisionOf changed: ${oldStr} → ${newStr}`);
 
-       // } else if (field === 'references') {
+        } else if (field === 'references') {
           // Skip detailed dump for references — summary will be shown in added/removed refs
         } else {
           lines.push(`  - ${field}:${formatVal(oldVal)} > ${formatVal(newVal)}`);
@@ -660,7 +655,6 @@ for (const doc of results) {
         if (bibl.length) lines.push(`  - ➕ Bibliographic Ref(s) added:\r\n ${bibl.join('\r')}`);
       }
 
-      console.log('PR log sees removedRefs for', doc.docId, JSON.stringify(doc.removedRefs));
       // Log removed references
       if (doc.removedRefs.normative.length || doc.removedRefs.bibliographic.length) {
         if (doc.removedRefs.normative.length) lines.push(`  - ➖ Normative Ref(s) removed:\r\n ${doc.removedRefs.normative.join('\r')}`);
