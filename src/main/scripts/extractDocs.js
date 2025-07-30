@@ -578,7 +578,7 @@ for (const doc of results) {
         }
       }
 
-      if (changedFields.length > 0) {
+      if (changedFields.length > 0 || hasRefChanges) {
         updatedDocs.push({
           docId: doc.docId,
           fields: changedFields,
