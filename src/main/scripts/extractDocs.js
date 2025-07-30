@@ -501,8 +501,8 @@ for (const doc of results) {
         };
 
         hasRefChanges =
-          addedRefs.normative.length || addedRefs.bibliographic.length ||
-          removedRefs.normative.length || removedRefs.bibliographic.length;
+          addedRefs.normative.length > 0 || addedRefs.bibliographic.length > 0 ||
+          removedRefs.normative.length > 0 || removedRefs.bibliographic.length > 0;
 
         if (hasRefChanges && !changedFields.includes('references')) {
           changedFields.push('references');
@@ -578,7 +578,7 @@ for (const doc of results) {
         }
       }
 
-      if (changedFields.length > 0 || hasRefChanges) {
+      if (changedFields.length > 0) {
         updatedDocs.push({
           docId: doc.docId,
           fields: changedFields,
