@@ -646,7 +646,7 @@ for (const doc of results) {
           const newStr = JSON.stringify(newVal || []);
           lines.push(`  - revisionOf changed: ${oldStr} → ${newStr}`);
 
-        } else if (field === 'references') {
+       // } else if (field === 'references') {
           // Skip detailed dump for references — summary will be shown in added/removed refs
         } else {
           lines.push(`  - ${field}:${formatVal(oldVal)} > ${formatVal(newVal)}`);
