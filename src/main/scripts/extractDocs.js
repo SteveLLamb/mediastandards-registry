@@ -500,10 +500,12 @@ for (const doc of results) {
           bibliographic: oldRefs.bibliographic.filter(ref => !newRefs.bibliographic.includes(ref))
         };
 
-        // DEBUG: See what we're detecting before any update logic runs
-        if (removedRefs.normative.length || removedRefs.bibliographic.length) {
-          console.log('[DEBUG] Removal detected for', doc.docId);
-          console.log('  removedRefs before update logic:', JSON.stringify(removedRefs));
+        const hasRefChanges =
+          addedRefs.normative.length || addedRefs.bibliographic.length ||
+          removedRefs.normative.length || removedRefs.bibliographic.length;
+
+        if (hasRefChanges && !changedFields.includes('references')) {
+          changedFields.push('references');
         }
 
         const refsChanged =
@@ -517,8 +519,6 @@ for (const doc of results) {
           const fieldSource = doc.__inferred ? 'inferred' : 'parsed';
           injectMeta(existingDoc.references, 'normative', fieldSource, 'update', oldRefs.normative);
           injectMeta(existingDoc.references, 'bibliographic', fieldSource, 'update', oldRefs.bibliographic);
-
-          changedFields.push('references'); // Always push if refsChanged is true
         }
       }
 
@@ -578,10 +578,7 @@ for (const doc of results) {
         }
       }
 
-      const hasRefChanges = addedRefs.normative.length || addedRefs.bibliographic.length ||
-                      removedRefs.normative.length || removedRefs.bibliographic.length
-
-      if (changedFields.length > 0 || hasRefChanges ) {
+      if (changedFields.length > 0) {
         updatedDocs.push({
           docId: doc.docId,
           fields: changedFields,
@@ -594,7 +591,7 @@ for (const doc of results) {
             bibliographic: [...removedRefs.bibliographic]
           },
           oldValues,
-          newValues,
+          newValues
         });
       } else {
         skippedDocs.push(doc.docId);
