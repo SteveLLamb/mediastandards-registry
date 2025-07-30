@@ -500,6 +500,18 @@ for (const doc of results) {
           bibliographic: oldRefs.bibliographic.filter(ref => !newRefs.bibliographic.includes(ref))
         };
 
+        // Detect duplicate cleanups separately from true removals
+        let duplicateNormRemoved = false;
+        let duplicateBibRemoved = false;
+
+        if (oldRefs.normative.length > new Set(oldRefs.normative).size) {
+          duplicateNormRemoved = true;
+        }
+
+        if (oldRefs.bibliographic.length > new Set(oldRefs.bibliographic).size) {
+          duplicateBibRemoved = true;
+        }
+
         hasRefChanges =
           addedRefs.normative.length > 0 || addedRefs.bibliographic.length > 0 ||
           removedRefs.normative.length > 0 || removedRefs.bibliographic.length > 0;
@@ -590,6 +602,8 @@ for (const doc of results) {
             normative: [...removedRefs.normative],
             bibliographic: [...removedRefs.bibliographic]
           },
+          duplicateNormRemoved,
+          duplicateBibRemoved,
           oldValues,
           newValues
         });
@@ -681,6 +695,14 @@ for (const doc of results) {
         if (doc.removedRefs.normative.length) lines.push(`  - ➖ Normative Ref(s) removed:\r\n ${doc.removedRefs.normative.join('\r')}`);
         if (doc.removedRefs.bibliographic.length) lines.push(`  - ➖ Bibliographic Ref(s) removed:\r\n ${doc.removedRefs.bibliographic.join('\r')}`);
       }
+
+      if (doc.duplicateNormRemoved || doc.duplicateBibRemoved) {
+        const types = [];
+        if (doc.duplicateNormRemoved) types.push('normative');
+        if (doc.duplicateBibRemoved) types.push('bibliographic');
+        lines.push(`  - 🔄 Duplicate ${types.join('/')} reference(s) removed`);
+      }
+
       return lines;
     }),
     '',
