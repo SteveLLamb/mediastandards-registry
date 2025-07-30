@@ -219,6 +219,13 @@ function mergeInferredInto(existingDoc, inferredDoc) {
 
 }
 
+function refsAreDifferent(a, b) {
+  const aSorted = [...a].sort();
+  const bSorted = [...b].sort();
+  if (aSorted.length !== bSorted.length) return true;
+  return aSorted.some((val, idx) => val !== bSorted[idx]);
+}
+
 const parseRefId = (text, href = '') => {
   if (/w3\.org\/TR\/\d{4}\/REC-([^\/]+)-(\d{8})\//i.test(href)) {
     const [, shortname, yyyymmdd] = href.match(/REC-([^\/]+)-(\d{8})/i);
@@ -491,11 +498,10 @@ for (const doc of results) {
         };
 
         const refsChanged =
-          JSON.stringify(newRefs.normative) !== JSON.stringify(oldRefs.normative) ||
-          JSON.stringify(newRefs.bibliographic) !== JSON.stringify(oldRefs.bibliographic);
+          refsAreDifferent(newRefs.normative, oldRefs.normative) ||
+          refsAreDifferent(newRefs.bibliographic, oldRefs.bibliographic);
 
-        if (refsChanged || addedRefs.normative.length || addedRefs.bibliographic.length ||
-            removedRefs.normative.length || removedRefs.bibliographic.length) {
+        if (refsChanged) {
           existingDoc.references = newRefs;
           newValues.references = newRefs;
 
@@ -503,7 +509,7 @@ for (const doc of results) {
           injectMeta(existingDoc.references, 'normative', fieldSource, 'update', oldRefs.normative);
           injectMeta(existingDoc.references, 'bibliographic', fieldSource, 'update', oldRefs.bibliographic);
 
-          changedFields.push('references'); // Force push for add/remove
+          changedFields.push('references');
         }
       }
 
@@ -563,14 +569,7 @@ for (const doc of results) {
         }
       }
 
-      const hasRefChanges = addedRefs.normative.length || addedRefs.bibliographic.length ||
-                      removedRefs.normative.length || removedRefs.bibliographic.length
-
-      if (
-        changedFields.length > 0 ||
-        (addedRefs.normative.length || addedRefs.bibliographic.length ||
-        removedRefs.normative.length || removedRefs.bibliographic.length)
-      ) {
+      if (changedFields.length > 0) {
         updatedDocs.push({
           docId: doc.docId,
           fields: changedFields,
