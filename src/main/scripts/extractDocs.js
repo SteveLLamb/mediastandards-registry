@@ -565,14 +565,18 @@ for (const doc of results) {
       const hasRefChanges = addedRefs.normative.length || addedRefs.bibliographic.length ||
                       removedRefs.normative.length || removedRefs.bibliographic.length
 
-      if (changedFields.length > 0 || hasRefChanges ) {
+      if (
+        changedFields.length > 0 ||
+        (addedRefs.normative.length || addedRefs.bibliographic.length ||
+        removedRefs.normative.length || removedRefs.bibliographic.length)
+      ) {
         updatedDocs.push({
           docId: doc.docId,
           fields: changedFields,
           addedRefs,
           removedRefs,
           oldValues,
-          newValues,
+          newValues
         });
       } else {
         skippedDocs.push(doc.docId);
