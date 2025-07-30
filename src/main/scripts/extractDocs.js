@@ -500,7 +500,7 @@ for (const doc of results) {
           bibliographic: oldRefs.bibliographic.filter(ref => !newRefs.bibliographic.includes(ref))
         };
 
-        const hasRefChanges =
+        hasRefChanges =
           addedRefs.normative.length || addedRefs.bibliographic.length ||
           removedRefs.normative.length || removedRefs.bibliographic.length;
 
