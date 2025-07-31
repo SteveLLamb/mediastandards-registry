@@ -132,7 +132,7 @@ function injectMetaForDoc(doc, source, mode, changedFieldsMap = {}) {
     for (const sField of Object.keys(doc.status)) {
       if (typeof doc.status[sField] !== 'object') {
         const fieldSource = resolvedStatusFields.includes(sField) ? 'resolved' : source;
-        injectMeta(doc.status, `status.${sField}`, fieldSource, mode, changedFieldsMap[`status.${sField}`]);
+        injectMeta(doc.status, sField, fieldSource, mode, changedFieldsMap[`status.${sField}`]);
       }
     }
   }
