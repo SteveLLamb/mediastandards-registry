@@ -318,10 +318,6 @@
             "type": "string",
             "format": "uri"
           },
-          "resolvedRepo": {
-            "type": "string",
-            "format": "uri"
-          },
           "status": {
             "type": "object",
             "properties": {
@@ -522,7 +518,7 @@
           },
           "workInfo": {
             "type": "object",
-            "additionalProperties": false,
+            "additionalProperties": true,
             "properties": {
               "review": {
                 "type": "array",
