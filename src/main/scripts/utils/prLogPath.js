@@ -2,9 +2,17 @@ const fs = require('fs');
 const path = require('path');
 
 function getPrLogPath() {
-  // CI/PR run → always go to ephemeral location
+  // CI/PR run → use provided path or fall back to RUNNER_TEMP
   if (process.env.GITHUB_EVENT_NAME === "pull_request" || process.env.IS_PR_RUN === "true") {
-    return path.join(process.env.PR_LOG_PATH || process.env.RUNNER_TEMP || '.', 'pr-update-log.txt');
+    if (process.env.PR_LOG_PATH) {
+      // If PR_LOG_PATH ends with '.txt', assume it's already a file path
+      if (process.env.PR_LOG_PATH.endsWith('.txt')) {
+        return process.env.PR_LOG_PATH;
+      }
+      // Otherwise treat it as a directory
+      return path.join(process.env.PR_LOG_PATH, 'pr-update-log.txt');
+    }
+    return path.join(process.env.RUNNER_TEMP || '.', 'pr-update-log.txt');
   }
 
   // Local run → reports folder with timestamp
