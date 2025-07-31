@@ -562,7 +562,7 @@ for (const doc of results) {
                 existingDoc.status[field] = newVal[field];
                 const fieldSource = resolvedStatusFields.includes(field) ? 'resolved' : 'parsed';
                 // Pass fully qualified name for correct metaConfig lookup
-                injectMeta(existingDoc.status, `status.${field}`, fieldSource, 'update', oldStatusVal);
+                injectMeta(existingDoc.status, field, fieldSource, 'update', oldStatusVal);
                 if (!changedFields.includes('status')) changedFields.push('status');
               }
             }
