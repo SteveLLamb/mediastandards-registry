@@ -11,6 +11,9 @@ const { basename, join } = require('path')
 const { readFile, access, readdir } = require('fs').promises;
 const ajv = require('ajv');
 const jsonSourceMap = require('json-source-map');
+const ajvFactory = new ajv({
+  allErrors: true // no jsonPointers in new AJV
+});
 
 const DATA_PATH = "src/main/data/";
 const DATA_SCHEMA_PATH = "src/main/schemas/%s.schema.json";
@@ -24,51 +27,54 @@ var validator_factory = new ajv({
 });
 
 async function registries() {
-  /* create a mapping of schema/data name to validator */
   return await (await readdir(DATA_PATH)).reduce(async (aProm, dataFile) => {
-    const a = await aProm
-    const name = basename(dataFile, ".json")
-    const schemaFile = DATA_SCHEMA_PATH.replace("%s", name)
-    const validateFile = DATA_VALIDATE_PATH.replace("%s", name)
-    const schema = JSON.parse(await readFile(schemaFile))
-    const schemaVersion = basename(schema.$id)
-    const schemaValidate = validator_factory.compile(schema)
-    const dataFilePath = join(DATA_PATH, dataFile)
-    const data = JSON.parse(await readFile(dataFilePath))
-    const valid = validator_factory.validate(schema, data);
+    const a = await aProm;
+    const name = basename(dataFile, ".json");
+    const schemaFile = DATA_SCHEMA_PATH.replace("%s", name);
+    const validateFile = DATA_VALIDATE_PATH.replace("%s", name);
 
+    const schema = JSON.parse(await readFile(schemaFile));
+    const schemaVersion = basename(schema.$id);
 
-    let additionalChecks = () => {}
+    // Compile schema ONCE for this registry
+    const validateFn = ajvFactory.compile(schema);
 
-    /* perform additional checks if applicable */
+    const dataFilePath = join(DATA_PATH, dataFile);
+    const data = JSON.parse(await readFile(dataFilePath));
+
+    const valid = validateFn(data);
+
+    let additionalChecks = () => {};
     try {
-      await access(validateFile, fs.constants.F_OK)
-      additionalChecks = require("./" + basename(validateFile))
-    }
-    catch (e) {
-      if (e.code !== "ENOENT")
-        throw e
+      await access(validateFile, fs.constants.F_OK);
+      additionalChecks = require("./" + basename(validateFile));
+    } catch (e) {
+      if (e.code !== "ENOENT") throw e;
     }
 
     if (!valid) {
       let errorMessage = '';
       const sourceMap = jsonSourceMap.stringify(data, null, 2);
       const jsonLines = sourceMap.json.split('\n');
-      validator_factory.errors.forEach(error => {
-        errorMessage += '\n\n' + validator_factory.errorsText([ error ]);
-        let errorPointer = sourceMap.pointers[error.dataPath];
-        errorMessage += '\n> ' + jsonLines.slice(errorPointer.value.line, errorPointer.valueEnd.line).join('\n> ');
+
+      validateFn.errors.forEach(error => {
+        errorMessage += '\n\n' + ajvFactory.errorsText([error]);
+        const errorPointer = sourceMap.pointers[error.instancePath || error.dataPath];
+        if (errorPointer) {
+          errorMessage += '\n> ' + jsonLines
+            .slice(errorPointer.value.line, errorPointer.valueEnd.line)
+            .join('\n> ');
+        }
       });
       throw new Error(errorMessage);
     }
 
-    /* then invoke any additional checks not covered by JSON schema: */
-    console.log(`Running validation for ${name}...`);
-    additionalChecks(data, name)
+    console.log(`✅ Schema validation passed for ${name}`);
+    console.log(`Running additional validation for ${name}...`);
+    additionalChecks(data, name);
 
-    return { ...a, [name]: { schemaVersion, valid, data, name, dataFilePath }}
-  }, {})
-
+    return { ...a, [name]: { schemaVersion, valid, data, name, dataFilePath }};
+  }, {});
 }
 
 async function validateAll() {
