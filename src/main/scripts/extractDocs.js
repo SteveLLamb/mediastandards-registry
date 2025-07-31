@@ -8,6 +8,7 @@ You should have received a copy of the license along with this work.  If not, se
 
 const axios = require('axios');
 const { resolveUrlAndInject } = require('./url.resolve.js');
+const { getPrLogPath } = require('./utils/prLogPath');
 const cheerio = require('cheerio');
 const dayjs = require('dayjs');
 const fs = require('fs');
@@ -717,7 +718,9 @@ for (const doc of results) {
     ''
   ];
 
-  fs.writeFileSync('pr-update-log.txt', prLines.join('\n'));
+  const prLogPath = getPrLogPath();
+  fs.writeFileSync(prLogPath, prLines.join('\n'));
+  console.log(`📄 PR log updated: ${prLogPath}`);
 
   if (badRefs.length > 0) {
     const lines = ['### 🚫 Unparseable References Found:\n'];
@@ -727,7 +730,9 @@ for (const doc of results) {
       if (ref.href) lines.push(`  - href: ${ref.href}`);
     });
 
-    fs.appendFileSync('pr-update-log.txt', '\n' + lines.join('\n') + '\n');
+    const prLogPath = getPrLogPath();
+    fs.writeFileSync(prLogPath, prLines.join('\n'));
+    console.log(`📄 PR log updated: ${prLogPath}`);
   }
 
 })();

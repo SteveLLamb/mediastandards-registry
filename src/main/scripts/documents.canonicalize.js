@@ -4,6 +4,7 @@
 
 const fs = require('fs');
 const stringify = require('json-stable-stringify');
+const { getPrLogPath } = require('./utils/prLogPath');
 
 // Default $meta for manual entries (timestamp is once per run in UTC)
 const defaultMeta = {
@@ -57,44 +58,44 @@ module.exports = function canonicalizeDocuments(registry, filePath) {
   if (changedDocCount > 0) {
     console.log(`🛠 Injected missing $meta for ${changedDocCount} document(s) in documents registry...`);
 
-    // Only append to PR log in PR runs
-    if (process.env.GITHUB_EVENT_NAME === "pull_request" || process.env.IS_PR_RUN === "true") {
-      const sectionHeader = "### 🛠 Canonicalization fixed missing $meta fields";
+    const prLogPath = getPrLogPath();
+    const sectionHeader = "### 🛠 Canonicalization fixed missing $meta fields";
 
-      // Read existing PR log (if any)
-      let existingLog = "";
-      if (fs.existsSync('pr-update-log.txt')) {
-        existingLog = fs.readFileSync('pr-update-log.txt', 'utf8');
+    // Read existing PR log if it exists
+    let existingLog = "";
+    if (fs.existsSync(prLogPath)) {
+      existingLog = fs.readFileSync(prLogPath, 'utf8');
 
-        // Remove any previous canonicalization section
-        const lines = existingLog.split("\n");
-        const filtered = [];
-        let skipping = false;
-        for (const line of lines) {
-          if (line.startsWith(sectionHeader)) {
-            skipping = true;
-          } else if (skipping && line.startsWith("### ")) {
-            skipping = false;
-            filtered.push(line);
-          } else if (!skipping) {
-            filtered.push(line);
-          }
+      // Remove any previous canonicalization section
+      const lines = existingLog.split("\n");
+      const filtered = [];
+      let skipping = false;
+      for (const line of lines) {
+        if (line.startsWith(sectionHeader)) {
+          skipping = true;
+        } else if (skipping && line.startsWith("### ")) {
+          skipping = false;
+          filtered.push(line);
+        } else if (!skipping) {
+          filtered.push(line);
         }
-        existingLog = filtered.join("\n").trim();
       }
-
-      // Build new canonicalization section
-      const prLogLines = [
-        `\n${sectionHeader} in ${changedDocCount} document(s):`
-      ];
-      for (const [docId, fields] of Object.entries(changedDocs)) {
-        prLogLines.push(`- ${docId} (injected: ${fields.join(', ')})`);
-      }
-
-      // Append to the end
-      const finalLog = (existingLog ? existingLog + "\n" : "") + prLogLines.join("\n") + "\n";
-      fs.writeFileSync('pr-update-log.txt', finalLog);
+      existingLog = filtered.join("\n").trim();
     }
+
+    // Build new canonicalization section
+    const prLogLines = [
+      `\n${sectionHeader} in ${changedDocCount} document(s):`
+    ];
+    for (const [docId, fields] of Object.entries(changedDocs)) {
+      prLogLines.push(`- ${docId} (injected: ${fields.join(', ')})`);
+    }
+
+    // Append to the end and write back
+    const finalLog = (existingLog ? existingLog + "\n" : "") + prLogLines.join("\n") + "\n";
+    fs.writeFileSync(prLogPath, finalLog);
+
+    console.log(`📄 PR log updated: ${prLogPath}`);
   }
 
   fs.writeFileSync(
