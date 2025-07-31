@@ -50,6 +50,18 @@ module.exports = function canonicalizeDocuments(registry, filePath) {
 
   if (injectionCounter.count > 0) {
     console.log(`🛠 Injected missing $meta for ${injectionCounter.count} fields in documents registry...`);
+
+    // Only append to PR log in PR runs
+    if (process.env.GITHUB_EVENT_NAME === "pull_request" || process.env.IS_PR_RUN === "true") {
+      const prLogLines = [
+        `\n### 🛠 Canonicalization fixed missing $meta fields in ${changedDocCount} document(s):`
+      ];
+      for (const [docId, fields] of Object.entries(changedDocs)) {
+        prLogLines.push(`- ${docId} (injected: ${fields.join(', ')})`);
+      }
+      fs.appendFileSync('pr-update-log.txt', prLogLines.join('\n') + '\n');
+    }
+
   }
 
   fs.writeFileSync(

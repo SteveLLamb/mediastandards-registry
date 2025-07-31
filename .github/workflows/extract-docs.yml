@@ -30,6 +30,8 @@ jobs:
         run: npm run validate
 
       - name: Canonicalize documents.json
+        env:
+          IS_PR_RUN: true
         run: npm run canonicalize
 
       - name: Commit canonicalized changes (if any)
