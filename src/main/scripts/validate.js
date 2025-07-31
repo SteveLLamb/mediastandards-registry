@@ -63,6 +63,7 @@ async function registries() {
     }
 
     /* then invoke any additional checks not covered by JSON schema: */
+    console.log(`Running validation for ${name}...`);
     additionalChecks(data, name)
 
     return { ...a, [name]: { schemaVersion, valid, data, name, dataFilePath }}
@@ -71,10 +72,10 @@ async function registries() {
 }
 
 async function validateAll() {
-  Object.values(await registries()).map(({ name, validate }) => {
-    console.log(`Checking ${name}`)
-    registries()
-  })
+  const regs = await registries();  
+  Object.values(regs).forEach(({ name }) => {
+    
+  });
 }
 
 module.exports = {
