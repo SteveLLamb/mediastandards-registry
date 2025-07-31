@@ -1,56 +1,28 @@
-/*
-Copyright (c), Steve LLamb
-
-This work is licensed under the Creative Commons Attribution 4.0 International License.
-
-You should have received a copy of the license along with this work.  If not, see <https://creativecommons.org/licenses/by/4.0/>.
-*/
-
-const fs = require('fs');
-const { basename, join } = require('path')
-const { readFile, access, readdir } = require('fs').promises;
-const ajv = require('ajv');
-const jsonSourceMap = require('json-source-map');
-const ajvFactory = new ajv({
-  allErrors: true // no jsonPointers in new AJV
-});
-
-const DATA_PATH = "src/main/data/";
-const DATA_SCHEMA_PATH = "src/main/schemas/%s.schema.json";
-const DATA_VALIDATE_PATH = "src/main/scripts/%s.validate.js"; // additional checks
-
-/* load and validate the registry */
-
-var validator_factory = new ajv({
-  allErrors: true,  // do not bail, optional
-  jsonPointers: true,  // totally needed for this
-});
+const fs = require("fs");
+const path = require("path");
+const Ajv = require("ajv");
+const jsonSourceMap = require("json-source-map");
+const { listRegistries } = require("./utils/registryList");
 
 async function registries() {
-  return await (await readdir(DATA_PATH)).reduce(async (aProm, dataFile) => {
-    const a = await aProm;
-    const name = basename(dataFile, ".json");
-    const schemaFile = DATA_SCHEMA_PATH.replace("%s", name);
-    const validateFile = DATA_VALIDATE_PATH.replace("%s", name);
+  const ajvFactory = new Ajv({ allErrors: true });
+  const regs = {};
 
-    const schema = JSON.parse(await readFile(schemaFile));
-    const schemaVersion = basename(schema.$id);
-
-    // Compile schema ONCE for this registry
-    const validateFn = ajvFactory.compile(schema);
-
-    const dataFilePath = join(DATA_PATH, dataFile);
-    const data = JSON.parse(await readFile(dataFilePath));
-
-    const valid = validateFn(data);
-
-    let additionalChecks = () => {};
-    try {
-      await access(validateFile, fs.constants.F_OK);
-      additionalChecks = require("./" + basename(validateFile));
-    } catch (e) {
-      if (e.code !== "ENOENT") throw e;
+  for (const reg of listRegistries()) {
+    if (!fs.existsSync(reg.dataPath)) {
+      console.warn(`[WARN] No data file found for ${reg.name}, skipping...`);
+      continue;
     }
+
+    console.log(`\nChecking ${reg.name} registry...`);
+
+    // Load schema + data
+    const schema = JSON.parse(fs.readFileSync(reg.schemaPath, "utf8"));
+    const data = JSON.parse(fs.readFileSync(reg.dataPath, "utf8"));
+
+    // Compile and validate schema
+    const validateFn = ajvFactory.compile(schema);
+    const valid = validateFn(data);
 
     if (!valid) {
       let errorMessage = '';
@@ -66,29 +38,44 @@ async function registries() {
             .join('\n> ');
         }
       });
-      throw new Error(errorMessage);
+
+      console.error(`❌ Schema validation failed for ${reg.name} registry:\n${errorMessage}`);
+      throw new Error(`Schema validation failed for ${reg.name}`);
     }
 
-    console.log(`✅ Schema validation passed for ${name}`);
-    console.log(`Running additional validation for ${name}...`);
-    additionalChecks(data, name);
+    console.log(`✅ Schema validation passed for ${reg.name}`);
 
-    return { ...a, [name]: { schemaVersion, valid, data, name, dataFilePath }};
-  }, {});
+    // ---- Clear separation for registry-specific validation ----
+    console.log(`🔍 Running additional validation for ${reg.name}...`);
+
+    try {
+      if (fs.existsSync(reg.validatePath)) {
+        const additionalChecks = require(path.resolve(reg.validatePath)); 
+        if (typeof additionalChecks === "function") {
+          additionalChecks(data, reg.name);
+        }
+      }
+    } catch (err) {
+      if (err.code !== "MODULE_NOT_FOUND") throw err;
+    }
+
+    regs[reg.name] = { name: reg.name, data, dataFilePath: reg.dataPath };
+  }
+
+  return regs;
 }
 
 async function validateAll() {
-  const regs = await registries();  
-  Object.values(regs).forEach(({ name }) => {
-    
+  console.log("Starting full schema + additional validation...");
+  const regs = await registries();
+  console.log(`\nAll ${Object.keys(regs).length} registries validated successfully.`);
+}
+
+if (require.main === module) {
+  validateAll().catch(err => {
+    console.error(err);
+    process.exit(1);
   });
 }
 
-module.exports = {
-  registries,
-  validateAll,
-}
-
-// invoke validateAll() if we're run as a script:
-if (require.main === module)
-  validateAll().catch(console.error)
+module.exports = { registries };

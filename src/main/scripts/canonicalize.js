@@ -9,24 +9,42 @@ You should have received a copy of the license along with this work.  If not, se
 /* Canonicalize the registries */
 
 const fs = require('fs');
+const path = require('path')
 const stringify = require('json-stable-stringify');
+const { listRegistries } = require('./utils/registryList');
 const documentsCanonicalize = require('./documents.canonicalize');
 
-require('./validate').registries().then(regs => {
-  for (const reg_name in regs) {
+async function run() {
+  const regs = {};
 
-    console.log(`🔄 Canonicalizing ${regs[reg_name].name}...`);
+  for (const reg of listRegistries()) {
+    if (!fs.existsSync(reg.dataPath)) {
+      console.warn(`[WARN] No data file found for ${reg.name}, skipping...`);
+      continue;
+    }
+    regs[reg.name] = {
+      name: reg.name,
+      data: JSON.parse(fs.readFileSync(path.resolve(reg.dataPath), 'utf8')),
+      dataFilePath: path.resolve(reg.dataPath)
+    };
+  }
+
+  // Canonicalize each registry
+  for (const reg_name in regs) {
+    console.log(`🔄 Canonicalizing ${regs[reg_name].name} registry`);
 
     if (reg_name === "documents") {
       documentsCanonicalize(regs[reg_name].data, regs[reg_name].dataFilePath);
     } else {
       fs.writeFileSync(
         regs[reg_name].dataFilePath,
-        stringify(JSON.parse(fs.readFileSync(regs[reg_name].dataFilePath)), { space: '  ' }) + "\n"
+        stringify(regs[reg_name].data, { space: '  ' }) + "\n"
       );
     }
   }
-}).catch(err => {
-  console.error("Cannot load registries");
+}
+
+run().catch(err => {
+  console.error("Cannot load registries", err);
   process.exit(1);
 });
