@@ -1,5 +1,4 @@
 const fs = require("fs");
-const path = require("path");
 const Ajv = require("ajv");
 const jsonSourceMap = require("json-source-map");
 const { listRegistries } = require("./utils/registryList");
@@ -50,7 +49,7 @@ async function registries() {
 
     try {
       if (fs.existsSync(reg.validatePath)) {
-        const additionalChecks = require(path.resolve(reg.validatePath)); 
+        const additionalChecks = require(reg.validatePath);
         if (typeof additionalChecks === "function") {
           additionalChecks(data, reg.name);
         }

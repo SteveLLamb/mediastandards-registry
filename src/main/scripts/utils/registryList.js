@@ -1,9 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
-const DATA_PATH = "src/main/data/";
-const SCHEMA_PATH = "src/main/schemas/";
-const VALIDATE_PATH = "src/main/scripts/";
+const DATA_PATH = path.resolve("src/main/data/");
+const SCHEMA_PATH = path.resolve("src/main/schemas/");
+const VALIDATE_PATH = path.resolve("src/main/scripts/");
 
 function listRegistries() {
   return fs.readdirSync(SCHEMA_PATH)

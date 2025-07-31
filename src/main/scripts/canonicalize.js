@@ -9,7 +9,6 @@ You should have received a copy of the license along with this work.  If not, se
 /* Canonicalize the registries */
 
 const fs = require('fs');
-const path = require('path')
 const stringify = require('json-stable-stringify');
 const { listRegistries } = require('./utils/registryList');
 const documentsCanonicalize = require('./documents.canonicalize');
@@ -24,8 +23,8 @@ async function run() {
     }
     regs[reg.name] = {
       name: reg.name,
-      data: JSON.parse(fs.readFileSync(path.resolve(reg.dataPath), 'utf8')),
-      dataFilePath: path.resolve(reg.dataPath)
+      data: JSON.parse(fs.readFileSync(reg.dataPath, 'utf8')),
+      dataFilePath: reg.dataPath
     };
   }
 
