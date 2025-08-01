@@ -9,11 +9,7 @@ You should have received a copy of the license along with this work.  If not, se
 const axios = require('axios');
 const { resolveUrlAndInject } = require('./url.resolve.js');
 const { getPrLogPath } = require('./utils/prLogPath');
-
-console.log("📄 [DEBUG:extractDocs] Calling getPrLogPath() from extractDocs.js...");
 const prLogPath = getPrLogPath();
-console.log("📄 [DEBUG:extractDocs] getPrLogPath() returned:", prLogPath);
-
 const cheerio = require('cheerio');
 const dayjs = require('dayjs');
 const fs = require('fs');
