@@ -723,7 +723,6 @@ for (const doc of results) {
     ''
   ];
 
-  const prLogPath = getPrLogPath();
   fs.writeFileSync(prLogPath, prLines.join('\n'));
   console.log(`📄 PR log updated: ${prLogPath}`);
 
@@ -735,7 +734,6 @@ for (const doc of results) {
       if (ref.href) lines.push(`  - href: ${ref.href}`);
     });
 
-    const prLogPath = getPrLogPath();
     fs.writeFileSync(prLogPath, prLines.join('\n'));
     console.log(`📄 PR log updated: ${prLogPath}`);
   }
