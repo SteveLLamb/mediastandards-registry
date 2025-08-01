@@ -85,7 +85,9 @@ module.exports = function canonicalizeDocuments(registry, filePath) {
 
     // Build new canonicalization section
     const prLogLines = [
-      `\n${sectionHeader} in ${changedDocCount} document(s):`
+      `---`,
+      ``,
+      `${sectionHeader} in ${changedDocCount} document(s):`
     ];
     for (const [docId, fields] of Object.entries(changedDocs)) {
       prLogLines.push(`- ${docId} (injected: ${fields.join(', ')})`);
