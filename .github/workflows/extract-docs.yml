@@ -24,12 +24,12 @@ jobs:
         run: npm install axios cheerio dayjs
 
       - name: Run extraction
-        run: node src/main/scripts/extractDocs.js > $RUNNER_TEMP/pr-update-log.txt
+        run: node src/main/scripts/extractDocs.js > ${{ runner.temp }}/pr-update-log.txt
 
       - name: Check if PR should be skipped
         id: skipcheck
         run: |
-          if grep -q "No new or updated documents" "$RUNNER_TEMP/pr-update-log.txt"; then
+          if grep -q "No new or updated documents" "${{ runner.temp }}/pr-update-log.txt"; then
             echo "skip=true" >> $GITHUB_OUTPUT
           else
             echo "skip=false" >> $GITHUB_OUTPUT
@@ -43,7 +43,7 @@ jobs:
         if: steps.skipcheck.outputs.skip == 'false'
         env:
           IS_PR_RUN: true
-          PR_LOG_PATH: $RUNNER_TEMP/pr-update-log.txt
+          PR_LOG_PATH: ${{ runner.temp }}/pr-update-log.txt
         run: npm run canonicalize
 
       - name: Commit canonicalized changes (if any)
@@ -60,7 +60,7 @@ jobs:
         run: |
           {
             echo 'body<<EOF'
-            cat $RUNNER_TEMP/pr-update-log.txt
+            cat ${{ runner.temp }}/pr-update-log.txt
             echo 'EOF'
           } >> $GITHUB_OUTPUT
 
