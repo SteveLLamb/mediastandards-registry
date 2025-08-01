@@ -24,7 +24,10 @@ jobs:
         run: npm install axios cheerio dayjs
 
       - name: Run extraction
-        run: node src/main/scripts/extractDocs.js > ${{ runner.temp }}/pr-update-log.txt
+        env:
+          IS_PR_RUN: true
+          PR_LOG_PATH: "${{ runner.temp }}/pr-update-log.txt"
+        run: npm run extract-docs
 
       - name: Check if PR should be skipped
         id: skipcheck
