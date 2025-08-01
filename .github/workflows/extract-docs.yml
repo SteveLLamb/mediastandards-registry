@@ -27,7 +27,7 @@ jobs:
         env:
           IS_PR_RUN: true
           PR_LOG_PATH: "${{ runner.temp }}/pr-update-log.txt"
-        run: npm run extract-docs
+        run: node src/main/scripts/extractDocs.js
 
       - name: Check if PR should be skipped
         id: skipcheck
