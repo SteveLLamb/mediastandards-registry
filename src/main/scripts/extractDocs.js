@@ -183,7 +183,7 @@ function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
 
   return {
     docId,
-    docLabel
+    docLabel,
     releaseTag,
     publicationDate: pubDate.isValid() ? pubDate.format('YYYY-MM-DD') : undefined,
     publisher: 'SMPTE',
