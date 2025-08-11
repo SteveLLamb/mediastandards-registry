@@ -769,11 +769,13 @@ for (const doc of results) {
       doc.fields.forEach(field => {
         const oldVal = doc.oldValues[field];  // Use the old captured value
         const newVal = doc.newValues[field];  // Use the new value
-        const formatVal = (val) => {
+       const formatVal = (val) => {
+          if (val === undefined) return '`undefined`';
+          if (val === null) return '`null`';
           if (typeof val === 'object') {
-            return mdEscape(JSON.stringify(val)); // keep inline; escaped so GH won’t mangle
+            return '`' + mdEscape(JSON.stringify(val)) + '`';
           }
-          return `"${mdEscape(val)}"`;
+          return '`' + mdEscape(String(val)) + '`';
         };
 
         if (field === 'status') {
@@ -792,24 +794,18 @@ for (const doc of results) {
 
           const diffs = statusFields
             .filter(k => oldStatus[k] !== newStatus[k])
-            .map(k => {
-              const oldVal = oldStatus[k] === undefined ? "undefined" : JSON.stringify(oldStatus[k]);
-              const newVal = newStatus[k] === undefined ? "undefined" : JSON.stringify(newStatus[k]);
-              return `${k}: ${mdEscape(oldVal)} → ${mdEscape(newVal)}`;
-            });
+            .map(k => `${k}: ${formatVal(oldStatus[k])} → ${formatVal(newStatus[k])}`);
 
           if (diffs.length > 0) {
             lines.push(`  - status changed: \r\n${diffs.join('\r\n')}`);
           }
         } else if (field === 'revisionOf') {
-          const oldStr = JSON.stringify(oldVal || []);
-          const newStr = JSON.stringify(newVal || []);
-          lines.push(`  - revisionOf changed: ${oldStr} → ${newStr}`);
+          lines.push(`  - revisionOf changed: ${formatVal(oldVal || [])} → ${formatVal(newVal || [])}`);
 
         } else if (field === 'references') {
           // Skip detailed dump for references — summary will be shown in added/removed refs
         } else {
-          lines.push(`  - ${field}:${formatVal(oldVal)} > ${formatVal(newVal)}`);
+          lines.push(`  - ${field}: ${formatVal(oldVal)} → ${formatVal(newVal)}`);
         }
       });
 
