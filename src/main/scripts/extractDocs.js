@@ -159,6 +159,7 @@ function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
   const dateString = pubDate.isValid() ? (pubDate.year() < 2023 ? `${pubDate.year()}` : pubDate.format('YYYY-MM')) : 'UNKNOWN';
 
   let docId = pubTypeNum ? `SMPTE.${pubTypeNum}.${dateString}` : 'UNKNOWN';
+  let docLabel = `SMPTE ${pubType || ''} ${docNumber || ''}${docPart ? `-${docPart}` : ''}:${dateString}`;
   let doi = `10.5594/${docId}`;
   let href = `https://doi.org/${doi}`;
   const repoUrl = `https://github.com/SMPTE/${pubTypeNum.toLowerCase()}/`;
@@ -174,6 +175,7 @@ function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
     if (base) {
       const baseYear = base.date.year();
       docId = `SMPTE.${pubTypeNum}.${baseYear}Am${amendNum}.${amendYear}`;
+      docLabel = `SMPTE ${pubType || ''} ${docNumber || ''}${docPart ? `-${docPart}` : ''}:${baseYear}Am${amendNum}.${amendYear}`;
       doi = `10.5594/${docId}`;
       href = `https://doi.org/${doi}`;
     }
@@ -181,6 +183,7 @@ function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
 
   return {
     docId,
+    docLabel
     releaseTag,
     publicationDate: pubDate.isValid() ? pubDate.format('YYYY-MM-DD') : undefined,
     publisher: 'SMPTE',
