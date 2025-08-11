@@ -119,6 +119,24 @@ function injectMeta(doc, field, source, mode, oldValue) {
   doc[`${field}$meta`] = meta;
 }
 
+function mdEscape(val) {
+  if (val === null || val === undefined) return String(val);
+  const s = String(val);
+  // Minimal, safe escapes so GitHub won’t parse as Markdown/links
+  return s
+    .replace(/\\/g, '\\\\')
+    .replace(/`/g, '\\`')
+    .replace(/\*/g, '\\*')
+    .replace(/_/g, '\\_')
+    .replace(/\[/g, '\\[')
+    .replace(/\]/g, '\\]')
+    .replace(/\(/g, '\\(')
+    .replace(/\)/g, '\\)')
+    .replace(/#/g, '\\#')
+    .replace(/\|/g, '\\|')
+    .replace(/!/g, '\\!');
+}
+
 function injectMetaForDoc(doc, source, mode, changedFieldsMap = {}) {
   const resolvedFields = ['docId', 'docLabel', 'doi', 'href', 'resolvedHref', 'repo'];
   const resolvedStatusFields = ['active', 'latestVersion', 'superseded'];
@@ -375,7 +393,8 @@ const extractFromUrl = async (rootUrl) => {
           }
         };
         if (withdrawnNoticeHref) {
-          doc.status = { ...(doc.status || {}), withdrawnNotice: withdrawnNoticeHref };
+          const absNotice = new URL(withdrawnNoticeHref, `${sourceUrl}/`).toString();
+          doc.status = { ...(doc.status || {}), withdrawnNotice: absNotice };
         }
 
         Object.defineProperty(doc, '__sourceUrl', { value: `${sourceUrl}/`, enumerable: false });
@@ -750,8 +769,12 @@ for (const doc of results) {
       doc.fields.forEach(field => {
         const oldVal = doc.oldValues[field];  // Use the old captured value
         const newVal = doc.newValues[field];  // Use the new value
-        const formatVal = (val) =>
-          typeof val === 'object' ? JSON.stringify(val, null, 2) : `"${val}"`;
+        const formatVal = (val) => {
+          if (typeof val === 'object') {
+            return mdEscape(JSON.stringify(val)); // keep inline; escaped so GH won’t mangle
+          }
+          return `"${mdEscape(val)}"`;
+        };
 
         if (field === 'status') {
           const oldStatus = doc.oldValues.status || {};
@@ -770,9 +793,9 @@ for (const doc of results) {
           const diffs = statusFields
             .filter(k => oldStatus[k] !== newStatus[k])
             .map(k => {
-              const oldVal = oldStatus[k] === undefined ? `"undefined"` : JSON.stringify(oldStatus[k]);
-              const newVal = newStatus[k] === undefined ? `"undefined"` : JSON.stringify(newStatus[k]);
-              return `${k}: ${oldVal} → ${newVal}`;
+              const oldVal = oldStatus[k] === undefined ? "undefined" : JSON.stringify(oldStatus[k]);
+              const newVal = newStatus[k] === undefined ? "undefined" : JSON.stringify(newStatus[k]);
+              return `${k}: ${mdEscape(oldVal)} → ${mdEscape(newVal)}`;
             });
 
           if (diffs.length > 0) {

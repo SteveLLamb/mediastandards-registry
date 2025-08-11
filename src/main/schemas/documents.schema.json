@@ -412,7 +412,8 @@
                 "type": "boolean"
               },
                "withdrawnNotice": {
-                "type": "string"
+                "type": "string",
+                "format": "uri"
               },
               "withdrawnDate": {
                 "type": "string",
