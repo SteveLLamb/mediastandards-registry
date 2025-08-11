@@ -7,7 +7,7 @@ You should have received a copy of the license along with this work.  If not, se
 */
 
 const axios = require('axios');
-const { resolveUrlAndInject } = require('./url.resolve.js');
+const { resolveUrlAndInject, urlReachable } = require('./url.resolve.js');
 const { getPrLogPath } = require('./utils/prLogPath');
 const prLogPath = getPrLogPath();
 const cheerio = require('cheerio');
@@ -394,7 +394,17 @@ const extractFromUrl = async (rootUrl) => {
         };
         if (withdrawnNoticeHref) {
           const absNotice = new URL(withdrawnNoticeHref, `${sourceUrl}/`).toString();
-          doc.status = { ...(doc.status || {}), withdrawnNotice: absNotice };
+          const reachable = await urlReachable(absNotice);
+
+          if (!reachable) {
+            console.warn(`⚠️ withdrawnNotice not reachable: ${absNotice}`);
+          }
+
+          if (!doc.$meta) doc.$meta = {};
+          if (!doc.$meta.status) doc.$meta.status = {};
+          if (!doc.$meta.status.withdrawnNotice) doc.$meta.status.withdrawnNotice = {};
+
+          doc.$meta.status.withdrawnNotice.note = `Extracted directly from HTML (${reachable ? 'verified reachable' : 'link unreachable at extraction'})`;
         }
 
         Object.defineProperty(doc, '__sourceUrl', { value: `${sourceUrl}/`, enumerable: false });
