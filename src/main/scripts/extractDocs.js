@@ -309,9 +309,77 @@ const extractFromUrl = async (rootUrl) => {
 
     const sourceUrl = `${rootUrl}${releaseTag}`
 
-
-    const indexUrl = `${sourceUrl}/index.html`;
+    //const indexUrl = `${sourceUrl}/index.html`;
     console.log(`🔍 Processing ${sourceUrl}/`);
+
+    // --- NEW: fetch wrapper at the folder root to inspect iframe and status/title ---
+    let iframeSrc = null;
+    let wrapperStates = new Set();
+    let wrapperDesignator = null;
+    let withdrawnNoticeHref = null;
+    try {
+      const wrapperRes = await axios.get(`${sourceUrl}/`);
+      const $wrap = cheerio.load(wrapperRes.data);
+      iframeSrc = ($wrap('#document').attr('src') || '').trim() || null;
+      // Collect all #state entries; multiple may exist
+      $wrap('span#state').each((_, el) => {
+        const cls = ($wrap(el).attr('class') || '').split(/\s+/);
+        cls.forEach(c => {
+          if (c.startsWith('state-')) wrapperStates.add(c.replace('state-', '').toLowerCase());
+        });
+      });
+      wrapperDesignator = ($wrap('#designator').text() || '').trim();
+      withdrawnNoticeHref = ($wrap('#withdrawal-statement').attr('href') || '').trim() || null;
+    } catch (e) {
+      // Wrapper fetch failed — fall back to existing behavior
+    }
+
+    // --- If the iframe points to a PDF, treat as PDF-only but fill gaps from wrapper ---
+    if (iframeSrc && /\.pdf$/i.test(iframeSrc)) {
+      try {
+        // Baseline from path inference (keeps your releaseTag/date/publisher etc.)
+        const inferred = inferMetadataFromPath(rootUrl, releaseTag, baseReleases);
+        // Title: prefer #designator (strip leading designator chunk), fallback to wrapper <title>
+        let docTitle = null;
+        if (wrapperDesignator) {
+          const parts = wrapperDesignator.split(',');
+          docTitle = parts.length > 1 ? parts.slice(1).join(',').trim() : wrapperDesignator.trim();
+        }
+        if (!docTitle) {
+          try {
+            const wrapperRes = await axios.get(`${sourceUrl}/`);
+            const $wrap = cheerio.load(wrapperRes.data);
+            const t = ($wrap('title').text() || '').trim();
+            const p = t.split(',');
+            docTitle = p.length > 1 ? p.slice(1).join(',').trim() : t;
+          } catch {}
+        }
+
+        const doc = {
+          ...inferred,
+          ...(docTitle ? { docTitle } : {}),
+          status: {
+            ...(inferred.status || {}),
+            ...(wrapperStates.has('active') ? { active: true } : {}),
+            ...(wrapperStates.has('stabilized') ? { stabilized: true } : {}),
+            ...(wrapperStates.has('withdrawn') ? { withdrawn: true, active: false } : {}),
+          }
+        };
+        if (withdrawnNoticeHref) {
+          doc.status = { ...(doc.status || {}), withdrawnNotice: withdrawnNoticeHref };
+        }
+
+        Object.defineProperty(doc, '__sourceUrl', { value: `${sourceUrl}/`, enumerable: false });
+        docs.push(doc);
+        continue; // PDF-only handled; go to next releaseTag
+      } catch (e) {
+        console.warn(`⚠️ PDF-wrapper handling failed at ${sourceUrl}/: ${e.message}`);
+      }
+    }
+
+    const indexUrl = `${sourceUrl}/${iframeSrc && !/\.pdf$/i.test(iframeSrc) ? iframeSrc : 'index.html'}`;
+
+    //begin patch
 
     try {
       const indexRes = await axios.get(indexUrl);
