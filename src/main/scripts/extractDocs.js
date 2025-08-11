@@ -395,6 +395,17 @@ const extractFromUrl = async (rootUrl) => {
         if (withdrawnNoticeHref) {
           const absNotice = new URL(withdrawnNoticeHref, `${sourceUrl}/`).toString();
           doc.status = { ...(doc.status || {}), withdrawnNotice: absNotice };
+
+          let suffix = 'link unreachable at extraction';
+          try {
+            const ok = await urlReachable(absNotice);
+            suffix = ok ? 'verified reachable' : suffix;
+          } catch (_) {}
+          Object.defineProperty(doc, '__withdrawnNoticeNote', {
+            value: `Extracted directly from HTML (${suffix})`,
+            enumerable: false
+          });
+
         }
 
         Object.defineProperty(doc, '__sourceUrl', { value: `${sourceUrl}/`, enumerable: false });
@@ -568,6 +579,9 @@ for (const doc of results) {
         delete doc.repo;
       }
       injectMetaForDoc(doc, sourceType, 'new');
+      if (doc.__withdrawnNoticeNote && doc.status && doc.status['withdrawnNotice$meta']) {
+        doc.status['withdrawnNotice$meta'].note = doc.__withdrawnNoticeNote;
+      }
       if (doc.references) {
         injectMeta(doc.references, 'normative', sourceType, 'new', []);
         injectMeta(doc.references, 'bibliographic', sourceType, 'new', []);
@@ -657,6 +671,10 @@ for (const doc of results) {
           const resolvedStatusFields = ['active', 'latestVersion', 'superseded'];
 
           if (key === 'status') {
+
+            if (doc.__withdrawnNoticeNote && existingDoc.status && existingDoc.status['withdrawnNotice$meta']) {
+              existingDoc.status['withdrawnNotice$meta'].note = doc.__withdrawnNoticeNote;
+            }
             const statusFields = [
               'active',
               'latestVersion',
@@ -675,6 +693,7 @@ for (const doc of results) {
                 // Pass fully qualified name for correct metaConfig lookup
                 injectMeta(existingDoc.status, field, fieldSource, 'update', oldStatusVal);
                 if (!changedFields.includes('status')) changedFields.push('status');
+
               }
             }
           } else if (key === 'revisionOf') {
