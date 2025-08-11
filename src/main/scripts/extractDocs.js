@@ -330,6 +330,9 @@ const extractFromUrl = async (rootUrl) => {
       });
       wrapperDesignator = ($wrap('#designator').text() || '').trim();
       withdrawnNoticeHref = ($wrap('#withdrawal-statement').attr('href') || '').trim() || null;
+
+      const folderSlug = rootUrl.split('/').filter(Boolean).pop();
+      console.log(`📂 ${folderSlug} | ${releaseTag} | iframe: ${iframeSrc ? (iframeSrc.endsWith('.pdf') ? 'PDF' : 'HTML') + '=' + iframeSrc : 'none'} | states: ${Array.from(wrapperStates).join(', ') || 'none'}`);
     } catch (e) {
       // Wrapper fetch failed — fall back to existing behavior
     }
