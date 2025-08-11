@@ -303,6 +303,7 @@ const extractFromUrl = async (rootUrl) => {
   const baseReleases = folderLinks.filter(tag => !/-am\d+-/.test(tag));
 
   const docs = [];
+  let countHTML = 0, countPDF = 0, countNoIframe = 0;
 
   for (const releaseTag of folderLinks) {
     const isLatest = releaseTag === latestTag;
@@ -332,7 +333,12 @@ const extractFromUrl = async (rootUrl) => {
       withdrawnNoticeHref = ($wrap('#withdrawal-statement').attr('href') || '').trim() || null;
 
       const folderSlug = rootUrl.split('/').filter(Boolean).pop();
-      console.log(`📂 ${folderSlug} | ${releaseTag} | iframe: ${iframeSrc ? (iframeSrc.endsWith('.pdf') ? 'PDF' : 'HTML') + '=' + iframeSrc : 'none'} | states: ${Array.from(wrapperStates).join(', ') || 'none'}`);
+      const kind = iframeSrc ? (iframeSrc.endsWith('.pdf') ? 'PDF' : 'HTML') : 'none';
+      console.log(`📂 ${folderSlug} | ${releaseTag} | iframe: ${kind}${iframeSrc ? '=' + iframeSrc : ''} | states: ${Array.from(wrapperStates).join(', ') || 'none'}`);
+
+      if (!iframeSrc) countNoIframe++;
+      else if (/\.pdf$/i.test(iframeSrc)) countPDF++;
+      else countHTML++;
     } catch (e) {
       // Wrapper fetch failed — fall back to existing behavior
     }
@@ -494,6 +500,7 @@ const extractFromUrl = async (rootUrl) => {
     }
   }
 
+  console.log(`📊 Release summary — HTML: ${countHTML}, PDF: ${countPDF}, none: ${countNoIframe}`);
   return docs;
 };
 
