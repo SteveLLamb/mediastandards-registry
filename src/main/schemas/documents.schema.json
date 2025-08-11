@@ -673,15 +673,58 @@
           },
           "xmlNamespace": {
             "type": "array",
-            "additionalItems": true,
             "items": {
-              "anyOf": [
-                {
+              "type": "object",
+              "required": [
+                "uri",
+                "uriPublished",
+                "targetNamespace",
+                "imported",
+                "schemaIncluded"
+              ],
+              "properties": {
+                "uri": {
                   "type": "string",
-                  "minLength": 1,
+                  "format": "uri",
+                  "minLength": 1
+                },
+                "uriPublished": {
+                  "type": "boolean"
+                },
+                "uriResolved": {
+                  "type": "string",
                   "format": "uri"
+                },
+                "targetNamespace": {
+                  "type": "boolean"
+                },
+                "imported": {
+                  "type": "boolean"
+                },
+                "supplemental": {
+                  "type": "boolean"
+                },
+                "optional": {
+                  "type": "boolean"
+                },
+                "deprecated": {
+                  "type": "boolean"
+                },
+                "schemaInline": {
+                  "type": "boolean"
+                },
+                "schemaIncluded": {
+                  "type": "boolean"
+                },
+                "schemaLocation": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "note": {
+                  "type": "string"
                 }
-              ]
+              },
+              "additionalProperties": false
             }
           }
         },

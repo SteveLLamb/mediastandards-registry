@@ -119413,14 +119413,48 @@
       }
     },
     "xmlNamespace": [
-      "http://www.smpte-ra.org/schemas/428-7/2010/DCST",
-      "http://www.smpte-ra.org/schemas/428-7/2014/DCST"
+      {
+        "uri": "http://www.w3.org/2001/XMLSchema",
+        "uriPublished": true,
+        "uriResolved": "https://www.w3.org/2001/XMLSchema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.smpte-ra.org/schemas/428-7/2007/DCST",
+        "uriPublished": true,
+        "uriResolved": "https://smpte-ra.org/file/45/download?token=tHt1yfRm",
+        "targetNamespace": false,
+        "imported": false,
+        "supplemental": true,
+        "schemaIncluded": false,
+        "deprecated": true,
+        "note": "This namespace is no longer supported."
+      },
+      {
+        "uri": "http://www.smpte-ra.org/schemas/428-7/2010/DCST",
+        "uriPublished": true,
+        "uriResolved": "https://smpte-ra.org/file/46/download?token=A8NFV8Yk",
+        "targetNamespace": false,
+        "imported": false,
+        "supplemental": true,
+        "schemaIncluded": false,
+        "note": "This namespace is supported alongside the 2014 version, for legacy equipment."
+      },
+      {
+        "uri": "http://www.smpte-ra.org/schemas/428-7/2014/DCST",
+        "uriPublished": true,
+        "uriResolved": "https://smpte-ra.org/file/47/download?token=i-7dP9qq",
+        "targetNamespace": true,
+        "imported": false,
+        "schemaIncluded": false
+      }
     ],
     "xmlNamespace$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
+      "confidence": "high",
       "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "updated": "2025-08-08T10:45:00Z"
     }
   },
   {
@@ -119781,13 +119815,35 @@
       }
     },
     "xmlNamespace": [
-      "http://www.smpte-ra.org/schemas/429-10/2008/Main-Stereo-Picture-CPL"
+      {
+        "uri": "http://www.w3.org/2001/XMLSchema",
+        "uriPublished": true,
+        "uriResolved": "https://www.w3.org/2001/XMLSchema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.smpte-ra.org/schemas/429-7/2006/CPL",
+        "uriPublished": true,
+        "uriResolved": "https://smpte-ra.org/file/49/download?token=lDJCd8aG/",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.smpte-ra.org/schemas/429-10/2008/Main-Stereo-Picture-CPL",
+        "uriPublished": false,
+        "targetNamespace": true,
+        "imported": false,
+        "schemaIncluded": false,
+        "schemaInline": true
+      }
     ],
     "xmlNamespace$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
+      "confidence": "high",
       "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "updated": "2025-08-08T10:45:00Z"
     }
   },
   {
@@ -119999,6 +120055,37 @@
         "source": "resolved",
         "updated": "2025-07-28T18:00:00Z"
       }
+    },
+    "xmlNamespace": [
+      {
+        "uri": "http://www.w3.org/2001/XMLSchema",
+        "uriPublished": true,
+        "uriResolved": "https://www.w3.org/2001/XMLSchema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.smpte-ra.org/schemas/429-7/2006/CPL",
+        "uriPublished": true,
+        "uriResolved": "https://smpte-ra.org/file/49/download?token=lDJCd8aG/",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.smpte-ra.org/schemas/429-10/2008/Main-Stereo-Picture-CPL",
+        "uriPublished": false,
+        "targetNamespace": true,
+        "imported": false,
+        "schemaIncluded": true,
+        "schemaLocation": "https://pub.smpte.org/doc/st429-10/20230912-pub/elements/MainStereoscopicPicture.xsd"
+      }
+    ],
+    "xmlNamespace$meta": {
+      "confidence": "high",
+      "source": "manual",
+      "updated": "2025-08-08T10:45:00Z"
     }
   },
   {
@@ -120147,13 +120234,36 @@
       }
     },
     "xmlNamespace": [
-      "http://www.smpte-ra.org/schemas/429-12/2008/TT"
+      {
+        "uri": "http://www.w3.org/2001/XMLSchema",
+        "uriPublished": true,
+        "uriResolved": "https://www.w3.org/2001/XMLSchema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.smpte-ra.org/schemas/429-7/2006/CPL",
+        "uriPublished": true,
+        "uriResolved": "https://smpte-ra.org/file/49/download?token=lDJCd8aG/",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.smpte-ra.org/schemas/429-12/2008/TT",
+        "uriPublished": true,
+        "uriResolved": "https://www.smpte-ra.org/file/72/download?token=mEkJYzG1",
+        "targetNamespace": true,
+        "imported": false,
+        "schemaIncluded": false,
+        "schemaInline": true
+      }
     ],
     "xmlNamespace$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
+      "confidence": "high",
       "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "updated": "2025-08-08T10:45:00Z"
     }
   },
   {
@@ -120451,13 +120561,36 @@
       }
     },
     "xmlNamespace": [
-      "http://www.smpte-ra.org/schemas/429-14/2014/Aux-Data"
+      {
+        "uri": "http://www.w3.org/2001/XMLSchema",
+        "uriPublished": true,
+        "uriResolved": "https://www.w3.org/2001/XMLSchema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.smpte-ra.org/schemas/429-7/2006/CPL",
+        "uriPublished": true,
+        "uriResolved": "https://smpte-ra.org/file/49/download?token=lDJCd8aG/",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.smpte-ra.org/schemas/429-14/2014/Aux-Data",
+        "uriPublished": true,
+        "uriResolved": "https://www.smpte-ra.org/file/73/download?token=GISlkj8Y",
+        "targetNamespace": true,
+        "imported": false,
+        "schemaIncluded": false,
+        "schemaInline": true
+      }
     ],
     "xmlNamespace$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
+      "confidence": "high",
       "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "updated": "2025-08-08T10:45:00Z"
     }
   },
   {
@@ -120620,13 +120753,36 @@
       }
     },
     "xmlNamespace": [
-      "http://www.smpte-ra.org/schemas/429-16/2014/CPL-Metadata"
+      {
+        "uri": "http://www.w3.org/2001/XMLSchema",
+        "uriPublished": true,
+        "uriResolved": "https://www.w3.org/2001/XMLSchema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.smpte-ra.org/schemas/429-7/2006/CPL",
+        "uriPublished": true,
+        "uriResolved": "https://smpte-ra.org/file/49/download?token=lDJCd8aG/",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.smpte-ra.org/schemas/429-16/2014/CPL-Metadata",
+        "uriPublished": true,
+        "uriResolved": "https://www.smpte-ra.org/file/69/download?token=_wmzk9Nj/",
+        "targetNamespace": true,
+        "imported": false,
+        "schemaIncluded": false,
+        "note": "Partial schema blocks inline."
+      }
     ],
     "xmlNamespace$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
+      "confidence": "high",
       "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "updated": "2025-08-08T10:45:00Z"
     }
   },
   {
@@ -121079,7 +121235,7 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "docLabel": "SMPTE ST 429-2:2009",
+    "docLabel": "SMPTE ST 429-2:20",
     "docLabel$meta": {
       "confidence": "medium",
       "note": "Legacy data, has not been verified",
@@ -124162,13 +124318,37 @@
       }
     },
     "xmlNamespace": [
-      "https://www.smpte-ra.org/schemas/429-7/2006/CPL"
+      {
+        "uri": "http://www.w3.org/2001/XMLSchema",
+        "uriPublished": true,
+        "uriResolved": "https://www.w3.org/2001/XMLSchema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.w3.org/2000/09/xmldsig#",
+        "uriPublished": true,
+        "uriResolved": "http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "optional": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "https://www.smpte-ra.org/schemas/429-7/2006/CPL",
+        "uriPublished": true,
+        "uriResolved": "https://smpte-ra.org/file/49/download?token=lDJCd8aG",
+        "targetNamespace": true,
+        "imported": false,
+        "schemaInline": true,
+        "schemaIncluded": false
+      }
     ],
     "xmlNamespace$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
+      "confidence": "high",
       "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "updated": "2025-08-08T10:45:00Z"
     }
   },
   {
@@ -124340,13 +124520,37 @@
       }
     },
     "xmlNamespace": [
-      "http://www.smpte-ra.org/schemas/429-8/2007/PKL"
+      {
+        "uri": "http://www.w3.org/2001/XMLSchema",
+        "uriPublished": true,
+        "uriResolved": "https://www.w3.org/2001/XMLSchema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.w3.org/2000/09/xmldsig#",
+        "uriPublished": true,
+        "uriResolved": "http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "optional": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.smpte-ra.org/schemas/429-8/2007/PKL",
+        "uriPublished": true,
+        "uriResolved": "https://www.smpte-ra.org/file/71/download?token=cxCrfZQV",
+        "targetNamespace": true,
+        "imported": false,
+        "schemaInline": true,
+        "schemaIncluded": false
+      }
     ],
     "xmlNamespace$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
+      "confidence": "high",
       "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "updated": "2025-08-08T10:45:00Z"
     }
   },
   {
@@ -124770,13 +124974,28 @@
       }
     },
     "xmlNamespace": [
-      "https://www.smpte-ra.org/schemas/429-9/2007/AM"
+      {
+        "uri": "http://www.w3.org/2001/XMLSchema",
+        "uriPublished": true,
+        "uriResolved": "https://www.w3.org/2001/XMLSchema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "https://www.smpte-ra.org/schemas/429-9/2007/AM",
+        "uriPublished": true,
+        "uriResolved": "https://smpte-ra.org/file/63/download?token=hINJYkzb",
+        "targetNamespace": true,
+        "imported": false,
+        "schemaInline": true,
+        "schemaIncluded": false
+      }
     ],
     "xmlNamespace$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
+      "confidence": "high",
       "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "updated": "2025-08-08T10:45:00Z"
     }
   },
   {
@@ -124948,13 +125167,45 @@
       }
     },
     "xmlNamespace": [
-      "http://www.smpte-ra.org/schemas/430-1/2006/KDM"
+      {
+        "uri": "http://www.w3.org/2001/XMLSchema",
+        "uriPublished": true,
+        "uriResolved": "https://www.w3.org/2001/XMLSchema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.w3.org/2000/09/xmldsig#",
+        "uriPublished": true,
+        "uriResolved": "http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "optional": false,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.smpte-ra.org/schemas/430-3/2006/ETM",
+        "uriPublished": true,
+        "uriResolved": "https://www.smpte-ra.org/file/74/download?token=fEeJLkeO",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.smpte-ra.org/schemas/430-1/2006/KDM",
+        "uriPublished": true,
+        "uriResolved": "https://www.smpte-ra.org/file/70/download?token=tFipKPRq",
+        "targetNamespace": true,
+        "imported": false,
+        "schemaInline": true,
+        "schemaIncluded": false
+      }
     ],
     "xmlNamespace$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
+      "confidence": "high",
       "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "updated": "2025-08-08T10:45:00Z"
     }
   },
   {
@@ -125912,13 +126163,35 @@
       }
     },
     "xmlNamespace": [
-      "http://www.smpte-ra.org/schemas/430-11/2010/RPL"
+      {
+        "uri": "http://www.w3.org/2001/XMLSchema",
+        "uriPublished": true,
+        "uriResolved": "https://www.w3.org/2001/XMLSchema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "https://www.smpte-ra.org/schemas/433/2008/dcmlTypes/",
+        "uriPublished": true,
+        "uriResolved": "https://smpte-ra.org/file/41/download?token=00lIAU79",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.smpte-ra.org/schemas/430-11/2010/RPL",
+        "uriPublished": false,
+        "targetNamespace": true,
+        "imported": false,
+        "schemaInline": true,
+        "schemaIncluded": false
+      }
     ],
     "xmlNamespace$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
+      "confidence": "high",
       "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "updated": "2025-08-08T10:45:00Z"
     }
   },
   {
@@ -126667,13 +126940,35 @@
       }
     },
     "xmlNamespace": [
-      "http://www.smpte-ra.org/ns/430-15/2017/SiteList"
+      {
+        "uri": "http://www.w3.org/1999/xlink",
+        "uriPublished": true,
+        "uriResolved": "https://www.w3.org/TR/xlink/",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.w3.org/XML/1998/namespace",
+        "uriPublished": true,
+        "uriResolved": "https://www.w3.org/XML/1998/namespace",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.smpte-ra.org/ns/430-15/2017/SiteList",
+        "uriPublished": false,
+        "targetNamespace": true,
+        "imported": false,
+        "schemaInline": false,
+        "schemaIncluded": false
+      }
     ],
     "xmlNamespace$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
+      "confidence": "high",
       "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "updated": "2025-08-08T10:45:00Z"
     }
   },
   {
@@ -126827,13 +127122,45 @@
       }
     },
     "xmlNamespace": [
-      "http://www.smpte-ra.org/ns/430-16/2017/FLM"
+      {
+        "uri": "http://www.w3.org/2001/XMLSchema",
+        "uriPublished": true,
+        "uriResolved": "https://www.w3.org/2001/XMLSchema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.w3.org/2000/09/xmldsig#",
+        "uriPublished": true,
+        "uriResolved": "http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "optional": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "https://www.smpte-ra.org/schemas/433/2008/dcmlTypes/",
+        "uriPublished": true,
+        "uriResolved": "https://smpte-ra.org/file/41/download?token=00lIAU79",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.smpte-ra.org/ns/430-16/2017/FLM",
+        "uriPublished": false,
+        "targetNamespace": true,
+        "imported":false,
+        "schemaInline": true,
+        "schemaIncluded": false,
+        "note": "Schema provided inline as snippets."
+      }
     ],
     "xmlNamespace$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
+      "confidence": "high",
       "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "updated": "2025-08-08T10:45:00Z"
     }
   },
   {
@@ -127791,13 +128118,46 @@
       }
     },
     "xmlNamespace": [
-      "http://www.smpte-ra.org/schemas/430-3/2006/ETM"
+      {
+        "uri": "http://www.w3.org/2001/XMLSchema",
+        "uriPublished": true,
+        "uriResolved": "https://www.w3.org/2001/XMLSchema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.w3.org/2000/09/xmldsig#",
+        "uriPublished": true,
+        "uriResolved": "http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "optional": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.w3.org/2001/04/xmlenc#",
+        "uriPublished": true,
+        "uriResolved": "http://www.w3.org/TR/2002/REC-xmlenc-core-20021210/xenc-schema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "optional": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.smpte-ra.org/schemas/430-3/2006/ETM",
+        "uriPublished": true,
+        "uriResolved": "https://www.smpte-ra.org/file/74/download?token=fEeJLkeO",
+        "targetNamespace": true,
+        "imported": false,
+        "schemaInline": true,
+        "schemaIncluded": false
+      }
     ],
     "xmlNamespace$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
+      "confidence": "high",
       "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "updated": "2025-08-08T10:45:00Z"
     }
   },
   {
@@ -127950,6 +128310,47 @@
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
       }
+    },
+    "xmlNamespace": [
+      {
+        "uri": "http://www.w3.org/2001/XMLSchema",
+        "uriPublished": true,
+        "uriResolved": "https://www.w3.org/2001/XMLSchema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.w3.org/2000/09/xmldsig#",
+        "uriPublished": true,
+        "uriResolved": "http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "optional": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "https://www.smpte-ra.org/schemas/433/2008/dcmlTypes/",
+        "uriPublished": true,
+        "uriResolved": "https://smpte-ra.org/file/41/download?token=00lIAU79",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.smpte-ra.org/schemas/430-4/2008/LogRecord",
+        "uriPublished": false,
+        "targetNamespace": true,
+        "imported": false,
+        "schemaInline": true,
+        "schemaIncluded": false,
+        "note": "Schema provided inline as snippets."
+      }
+    ],
+    "xmlNamespace$meta": {
+      "confidence": "high",
+      "source": "manual",
+      "updated": "2025-08-08T10:45:00Z"
     }
   },
   {
@@ -128096,13 +128497,46 @@
       }
     },
     "xmlNamespace": [
-      "http://www.smpte-ra.org/schemas/430-4/2008/LogRecord"
+      {
+        "uri": "http://www.w3.org/2001/XMLSchema",
+        "uriPublished": true,
+        "uriResolved": "https://www.w3.org/2001/XMLSchema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.w3.org/2000/09/xmldsig#",
+        "uriPublished": true,
+        "uriResolved": "http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "optional": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "https://www.smpte-ra.org/schemas/433/2008/dcmlTypes/",
+        "uriPublished": true,
+        "uriResolved": "https://smpte-ra.org/file/41/download?token=00lIAU79",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.smpte-ra.org/schemas/430-4/2008/LogRecord",
+        "uriPublished": true,
+        "uriResolved": "https://smpte-ra.org/file/42/download?token=q6oKLc6G",
+        "targetNamespace": true,
+        "imported": false,
+        "schemaInline": true,
+        "schemaIncluded": false,
+        "note": "Schema provided inline as snippets."
+      }
     ],
     "xmlNamespace$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
+      "confidence": "high",
       "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "updated": "2025-08-08T10:45:00Z"
     }
   },
   {
@@ -128384,13 +128818,50 @@
       }
     },
     "xmlNamespace": [
-      "http://www.smpte-ra.org/430-5/2008/SecurityLog"
+      {
+        "uri": "http://www.w3.org/2001/XMLSchema",
+        "uriPublished": true,
+        "uriResolved": "https://www.w3.org/2001/XMLSchema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.w3.org/2000/09/xmldsig#",
+        "uriPublished": true,
+        "uriResolved": "http://www.w3.org/TR/2002/REC-xmldsig-core-20020212/xmldsig-core-schema.xsd",
+        "targetNamespace": false,
+        "imported": true,
+        "optional": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "https://www.smpte-ra.org/schemas/433/2008/dcmlTypes/",
+        "uriPublished": true,
+        "uriResolved": "https://smpte-ra.org/file/41/download?token=00lIAU79",
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.smpte-ra.org/schemas/430-4/2008/LogRecord",
+        "uriPublished": false,
+        "targetNamespace": false,
+        "imported": true,
+        "schemaIncluded": false
+      },
+      {
+        "uri": "http://www.smpte-ra.org/430-5/2008/SecurityLog",
+        "uriPublished": false,
+        "targetNamespace": true,
+        "imported": false,
+        "schemaIncluded": false
+      }
     ],
     "xmlNamespace$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
+      "confidence": "high",
       "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "updated": "2025-08-08T10:45:00Z"
     }
   },
   {
@@ -129066,15 +129537,6 @@
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
       }
-    },
-    "xmlNamespace": [
-      "https://smpte-ra.org/schemas/430-9/2008"
-    ],
-    "xmlNamespace$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
     }
   },
   {
@@ -129694,13 +130156,18 @@
       }
     },
     "xmlNamespace": [
-      "http://www.smpte-ra.org/schemas/433/2008/dcmlTypes"
+      {
+        "uri": "http://www.smpte-ra.org/schemas/433/2008/dcmlTypes",
+        "uriPublished": true,
+        "targetNamespace": true,
+        "imported": false,
+        "schemaIncluded": false
+      }
     ],
     "xmlNamespace$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
+      "confidence": "high",
       "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "updated": "2025-08-08T10:45:00Z"
     }
   },
   {
