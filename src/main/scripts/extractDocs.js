@@ -638,7 +638,16 @@ for (const doc of results) {
           const resolvedStatusFields = ['active', 'latestVersion', 'superseded'];
 
           if (key === 'status') {
-            const statusFields = ['active', 'latestVersion', 'superseded', 'stage', 'state'];
+            const statusFields = [
+              'active',
+              'latestVersion',
+              'superseded',
+              'stage',
+              'state',
+              'stabilized',
+              'withdrawn',
+              'withdrawnNotice'   // string URL per schema
+            ];
             for (const field of statusFields) {
               if (newVal[field] !== undefined && existingDoc.status[field] !== newVal[field]) {
                 const oldStatusVal = existingDoc.status[field];
@@ -747,7 +756,16 @@ for (const doc of results) {
         if (field === 'status') {
           const oldStatus = doc.oldValues.status || {};
           const newStatus = doc.newValues.status || {};
-          const statusFields = ['active', 'latestVersion', 'superseded', 'stage', 'state'];
+          const statusFields = [
+            'active',
+            'latestVersion',
+            'superseded',
+            'stage',
+            'state',
+            'stabilized',
+            'withdrawn',
+            'withdrawnNotice'
+          ];
 
           const diffs = statusFields
             .filter(k => oldStatus[k] !== newStatus[k])
