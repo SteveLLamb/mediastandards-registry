@@ -90748,12 +90748,14 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "docTitle": "For Motion-Picture Film (8-mm Type S) — 50-Ft Model 1 Sound Camera Cartridge — Pressure Pad Flatness and Camera Aperture Profile",
+    "docTitle": "Motion-Picture Film (8-mm Type S) - 50-Ft Model 1 Sound Camera Cartridge - Pressure Pad Flatness and Camera Aperture Profile",
     "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": "For Motion-Picture Film (8-mm Type S) — 50-Ft Model 1 Sound Camera Cartridge — Pressure Pad Flatness and Camera Aperture Profile",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-08-12T23:17:19.642Z"
     },
     "docType": "Standard",
     "docType$meta": {
@@ -90832,13 +90834,39 @@
         "updated": "2025-07-01T00:00:00Z"
       }
     },
+    "releaseTag": "20031112-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-08-12T23:17:19.642Z"
+    },
+    "resolvedHref": "https://my.smpte.org/s/product-details?id=a1BVR0000008kaB",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final DOI link resolved via URL redirect verification",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2025-08-12T23:17:19.642Z"
+    },
     "status": {
-      "active": false,
+      "active": true,
       "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": false,
+        "overridden": true,
+        "source": "resolved",
+        "updated": "2025-08-12T23:17:19.642Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-08-12T23:17:19.642Z"
       },
       "reaffirmDate": "2008-12-01",
       "reaffirmDate$meta": {
@@ -90853,6 +90881,22 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "stabilized": true,
+      "stabilized$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-08-12T23:17:19.642Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-08-12T23:17:19.642Z"
       }
     }
   },
@@ -96886,6 +96930,11 @@
       "updated": "2025-07-01T00:00:00Z"
     },
     "docNumber": "2067",
+    "docNumber$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-08-12T23:17:20.507Z"
+    },
     "docPart": "21",
     "docPart$meta": {
       "confidence": "medium",
@@ -111150,6 +111199,149 @@
     }
   },
   {
+    "docId": "SMPTE.ST342.2004",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st342/20040203-pub/",
+      "updated": "2025-08-12T23:17:19.936Z"
+    },
+    "docLabel": "SMPTE ST 342:2004",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred type/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st342/20040203-pub/",
+      "updated": "2025-08-12T23:17:19.936Z"
+    },
+    "docNumber": "342",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st342/20040203-pub/",
+      "updated": "2025-08-12T23:17:19.936Z"
+    },
+    "docPart$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubPart meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st342/20040203-pub/",
+      "updated": "2025-08-12T23:17:19.936Z"
+    },
+    "docTitle": "Television - HD-D5 Compressed Video 1080i and 720p Systems - Encoding Process and Data Format",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st342/20040203-pub/",
+      "updated": "2025-08-12T23:17:19.936Z"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st342/20040203-pub/",
+      "updated": "2025-08-12T23:17:19.936Z"
+    },
+    "doi": "10.5594/SMPTE.ST342.2004",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Generated from docId",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st342/20040203-pub/",
+      "updated": "2025-08-12T23:17:19.936Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST342.2004",
+    "href$meta": {
+      "confidence": "high",
+      "note": "DOI link generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st342/20040203-pub/",
+      "updated": "2025-08-12T23:17:19.936Z"
+    },
+    "publicationDate": "2004-02-03",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st342/20040203-pub/",
+      "updated": "2025-08-12T23:17:19.936Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Static: SMPTE",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st342/20040203-pub/",
+      "updated": "2025-08-12T23:17:19.936Z"
+    },
+    "releaseTag": "20040203-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st342/20040203-pub/",
+      "updated": "2025-08-12T23:17:19.936Z"
+    },
+    "resolvedHref": "https://my.smpte.org/s/product-details?id=a1BVR0000008kc5",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final DOI link resolved via URL redirect verification",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st342/20040203-pub/",
+      "updated": "2025-08-12T23:17:19.936Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-08-12T23:17:19.936Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-08-12T23:17:19.936Z"
+      },
+      "stabilized": true,
+      "stabilized$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-08-12T23:17:19.936Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-08-12T23:17:19.936Z"
+      }
+    }
+  },
+  {
     "docElement": "m",
     "docElement$meta": {
       "confidence": "medium",
@@ -121259,6 +121451,11 @@
       "updated": "2025-07-01T00:00:00Z"
     },
     "href": "https://doi.org/10.5594/SMPTE.ST429-2.2009",
+    "href$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-08-12T23:17:20.507Z"
+    },
     "keywords": [
       "DCinema",
       "Packaging",
@@ -121287,6 +121484,11 @@
     },
     "status": {
       "active": false,
+      "active$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-08-12T23:17:20.507Z"
+      },
       "superseded": true,
       "superseded$meta": {
         "confidence": "medium",
@@ -121297,6 +121499,11 @@
       "supersededBy": [
         "SMPTE.ST429-2.2011"
       ],
+      "supersededBy$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-08-12T23:17:20.507Z"
+      },
       "supersededDate": "2011-09-23",
       "supersededDate$meta": {
         "confidence": "medium",
@@ -121322,6 +121529,11 @@
       "updated": "2025-07-01T00:00:00Z"
     },
     "docLabel": "",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-08-12T23:17:20.507Z"
+    },
     "docNumber": "429",
     "docNumber$meta": {
       "confidence": "medium",
