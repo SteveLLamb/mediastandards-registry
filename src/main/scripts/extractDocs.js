@@ -212,7 +212,7 @@ function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
     docNumber,
     docPart,
     status: {
-      active: false,
+      active: releaseTag === baseReleases[baseReleases.length - 1],
       latestVersion: releaseTag === baseReleases[baseReleases.length - 1],
       superseded: releaseTag !== baseReleases[baseReleases.length - 1]
     }
@@ -415,8 +415,6 @@ const extractFromUrl = async (rootUrl) => {
     }
 
     const indexUrl = `${sourceUrl}/${iframeSrc && !/\.pdf$/i.test(iframeSrc) ? iframeSrc : 'index.html'}`;
-
-    //begin patch
 
     try {
       const indexRes = await axios.get(indexUrl);
