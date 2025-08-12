@@ -16,6 +16,76 @@ const fs = require('fs');
 
 const urls = require('../input/urls.json');
 
+// === CONFIG ===
+const FILTER_ENABLED = true; // false = process all
+const FILTER_MODE = "allow"; // "allow" | "ignore"
+const filterList = require('../input/filterList.smpte.json'); // array of absolute doc URLs
+
+// === FILTERING FUNCTION ===
+function filterDiscoveredDocs(allDocs) {
+  const kept = [];
+  const ignored = [];
+
+  for (const docUrl of allDocs) {
+    if (!FILTER_ENABLED) {
+      kept.push(docUrl);
+      continue;
+    }
+
+    if (FILTER_MODE === "allow" && !filterList.includes(docUrl)) {
+      ignored.push(docUrl);
+    } else if (FILTER_MODE === "ignore" && filterList.includes(docUrl)) {
+      ignored.push(docUrl);
+    } else {
+      kept.push(docUrl);
+    }
+  }
+
+  console.log(`\n📊 SMPTE Discovery Filter Stats:`);
+  console.log(`  Total found:   ${allDocs.length}`);
+  console.log(`  Kept:          ${kept.length}`);
+  console.log(`  Ignored:       ${ignored.length}\n`);
+
+  if (ignored.length) {
+    console.log(`  Ignored URLs:`);
+    ignored.forEach(url => console.log(`    - ${url}`));
+  }
+
+  return kept;
+}
+
+// === MAIN DISCOVERY ===
+async function discoverFromRootDocPage() {
+  const rootUrl = 'https://pub.smpte.org/doc/';
+  console.log(`\n🔍 Fetching SMPTE root doc list: ${rootUrl}`);
+
+  const res = await fetch(rootUrl);
+  if (!res.ok) throw new Error(`Failed to fetch ${rootUrl}: ${res.status}`);
+  const html = await res.text();
+  const $ = cheerio.load(html);
+
+  const allDocs = [];
+
+  // Find all <li.doc> anchors and normalize to absolute URLs
+  $('li.doc > div > a').each((i, el) => {
+    const href = $(el).attr('href');
+    if (href) {
+      const absUrl = new URL(href, rootUrl).href;
+      allDocs.push(absUrl);
+    }
+  });
+
+  console.log(`🔎 Found ${allDocs.length} total docs/suites before filtering.`);
+
+  // Apply filter
+  const docsToProcess = filterDiscoveredDocs(allDocs);
+
+  // Process each kept doc or suite
+  for (const docUrl of docsToProcess) {
+    await processDocOrSuite(docUrl); // ← your existing per-doc wrapper parse + release loop
+  }
+}
+
 async function urlExistsNoRedirect(url) {
   try {
     const res = await axios.head(url, { maxRedirects: 0, validateStatus: null });
