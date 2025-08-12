@@ -49,7 +49,7 @@ function filterDiscoveredDocs(allDocs) {
     ignored.forEach(url => console.log(`    - ${url}`));
   }
 
-  
+
   return kept;
 }
 
@@ -58,33 +58,23 @@ async function discoverFromRootDocPage() {
   const rootUrl = 'https://pub.smpte.org/doc/';
   console.log(`\n🔍 Fetching SMPTE root doc list: ${rootUrl}`);
 
-  const res = await fetch(rootUrl);
-  if (!res.ok) throw new Error(`Failed to fetch ${rootUrl}: ${res.status}`);
-  const html = await res.text();
-  const $ = cheerio.load(html);
+  const res = await axios.get(rootUrl);
+  const $ = cheerio.load(res.data);
 
   const allDocs = [];
 
-  // Find all <li.doc> anchors and normalize to absolute URLs
   $('li.doc > div > a').each((i, el) => {
     const href = $(el).attr('href');
-    if (href) {
-      const absUrl = new URL(href, rootUrl).href;
-      allDocs.push(absUrl);
+    if (href && href.startsWith('/doc/')) {
+      allDocs.push(new URL(href, rootUrl).href);
     }
   });
 
-  console.log(`🔎 Found ${allDocs.length} total docs/suites before filtering.`);
+  console.log(`🔍 Discovered ${allDocs.length} doc URLs from root page`);
 
-  // Apply filter
+  // Apply your subset filter here and return the result
   const docsToProcess = filterDiscoveredDocs(allDocs);
-
-  // Process each kept doc or suite
-  for (const docUrl of docsToProcess) {
-    await processDocOrSuite(docUrl); // ← your existing per-doc wrapper parse + release loop
-  }
-
-  return filterDiscoveredDocs(allDocs);
+  return docsToProcess;
 }
 
 async function urlExistsNoRedirect(url) {
