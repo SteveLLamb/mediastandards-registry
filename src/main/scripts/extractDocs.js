@@ -61,18 +61,42 @@ async function discoverFromRootDocPage() {
   const res = await axios.get(rootUrl);
   const $ = cheerio.load(res.data);
 
-  const allDocs = [];
+  let allDocs = [];
 
+  // Top-level docs and suites
+  const topLevel = [];
   $('li.doc > div > a').each((i, el) => {
     const href = $(el).attr('href');
     if (href && href.startsWith('/doc/')) {
-      allDocs.push(new URL(href, rootUrl).href);
+      topLevel.push(new URL(href, rootUrl).href);
     }
   });
 
-  console.log(`🔍 Discovered ${allDocs.length} doc URLs from root page`);
+  // Check each top-level link to see if it’s a suite or a doc
+  for (const url of topLevel) {
+    try {
+      const page = await axios.get(url);
+      const $page = cheerio.load(page.data);
 
-  // Apply your subset filter here and return the result
+      if ($page('ul.versions').length) {
+        // Direct doc page
+        allDocs.push(url);
+      } else if ($page('ul.docs').length) {
+        // Suite page – add all child docs
+        $page('ul.docs li.doc a').each((i, el) => {
+          const href = $page(el).attr('href');
+          if (href && href.startsWith('/doc/')) {
+            allDocs.push(new URL(href, rootUrl).href);
+          }
+        });
+      }
+    } catch (err) {
+      console.warn(`⚠️ Failed to inspect ${url}: ${err.message}`);
+    }
+  }
+
+  console.log(`🔍 Discovered ${allDocs.length} doc URLs from root (after suite expansion)`);
+
   const docsToProcess = filterDiscoveredDocs(allDocs);
   return docsToProcess;
 }
