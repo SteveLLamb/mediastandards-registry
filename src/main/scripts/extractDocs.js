@@ -49,6 +49,7 @@ function filterDiscoveredDocs(allDocs) {
     ignored.forEach(url => console.log(`    - ${url}`));
   }
 
+  
   return kept;
 }
 
@@ -82,6 +83,8 @@ async function discoverFromRootDocPage() {
   for (const docUrl of docsToProcess) {
     await processDocOrSuite(docUrl); // ← your existing per-doc wrapper parse + release loop
   }
+
+  return filterDiscoveredDocs(allDocs);
 }
 
 async function urlExistsNoRedirect(url) {
