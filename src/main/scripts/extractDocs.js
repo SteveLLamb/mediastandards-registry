@@ -80,15 +80,21 @@ async function discoverFromRootDocPage() {
 
       if ($page('ul.versions').length) {
         // Direct doc page
+        console.log(`📄 DOC: ${url}`); // DEBUG
         allDocs.push(url);
       } else if ($page('ul.docs').length) {
         // Suite page – add all child docs
+        console.log(`📚 SUITE: ${url}`); // DEBUG
         $page('ul.docs li.doc a').each((i, el) => {
           const href = $page(el).attr('href');
           if (href && href.startsWith('/doc/')) {
+            const childUrl = new URL(href, rootUrl).href;
+            console.log(`   ↳ Found doc in suite: ${childUrl}`); // DEBUG
             allDocs.push(new URL(href, rootUrl).href);
           }
         });
+      } else {
+        console.log(`❓ UNKNOWN TYPE: ${url}`); // DEBUG
       }
     } catch (err) {
       console.warn(`⚠️ Failed to inspect ${url}: ${err.message}`);
