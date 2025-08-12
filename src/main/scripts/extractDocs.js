@@ -599,7 +599,11 @@ const extractFromUrl = async (rootUrl) => {
 };
 
 (async () => {
-  const urls = require('../input/urls.json');
+  //const urls = require('../input/urls.json');
+  let urls;
+  urls = await discoverFromRootDocPage();
+  console.log(`📂 Processing ${urls.length} SMPTE URLs...`);
+  
   const results = [];
 
   for (const url of urls) {
