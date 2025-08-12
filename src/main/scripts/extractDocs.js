@@ -405,7 +405,6 @@ const extractFromUrl = async (rootUrl) => {
             value: `Extracted directly from HTML (${suffix})`,
             enumerable: false
           });
-
         }
 
         Object.defineProperty(doc, '__sourceUrl', { value: `${sourceUrl}/`, enumerable: false });
@@ -579,7 +578,11 @@ for (const doc of results) {
         delete doc.repo;
       }
       injectMetaForDoc(doc, sourceType, 'new');
-      if (doc.__withdrawnNoticeNote && doc.status && doc.status['withdrawnNotice$meta']) {
+      if (doc.__withdrawnNoticeNote && doc.status && doc.status.withdrawnNotice) {
+        // Ensure meta exists (some edge cases may skip it)
+        if (!doc.status['withdrawnNotice$meta']) {
+          injectMeta(doc.status, 'withdrawnNotice', 'parsed', 'new', undefined);
+        }
         doc.status['withdrawnNotice$meta'].note = doc.__withdrawnNoticeNote;
       }
       if (doc.references) {
@@ -672,9 +675,6 @@ for (const doc of results) {
 
           if (key === 'status') {
 
-            if (doc.__withdrawnNoticeNote && existingDoc.status && existingDoc.status['withdrawnNotice$meta']) {
-              existingDoc.status['withdrawnNotice$meta'].note = doc.__withdrawnNoticeNote;
-            }
             const statusFields = [
               'active',
               'latestVersion',
@@ -695,6 +695,18 @@ for (const doc of results) {
                 if (!changedFields.includes('status')) changedFields.push('status');
 
               }
+            }
+            const newWN = newVal.withdrawnNotice;
+            const oldWN = oldValues?.status?.withdrawnNotice;
+            if (newWN !== undefined) {
+              if (!existingDoc.status['withdrawnNotice$meta']) {
+                // Create meta even if value didn't change — note still needs refresh
+                injectMeta(existingDoc.status, 'withdrawnNotice', 'parsed', 'update', oldWN);
+              }
+              if (doc.__withdrawnNoticeNote) {
+                existingDoc.status['withdrawnNotice$meta'].note = doc.__withdrawnNoticeNote;
+              }
+              if (!changedFields.includes('status')) changedFields.push('status'); // reflect meta/note refresh under status
             }
           } else if (key === 'revisionOf') {
             const oldList = Array.isArray(oldVal) ? oldVal.map(String) : [];
