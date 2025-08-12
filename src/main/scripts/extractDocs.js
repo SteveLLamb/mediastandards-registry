@@ -14,12 +14,10 @@ const cheerio = require('cheerio');
 const dayjs = require('dayjs');
 const fs = require('fs');
 
-const urls = require('../input/urls.json');
-
 // === CONFIG ===
 const FILTER_ENABLED = true; // false = process all
 const FILTER_MODE = "allow"; // "allow" | "ignore"
-const filterList = require('../input/filterList.smpte.json'); // array of absolute doc URLs
+const filterList = require('../input/filterList.smpte.json');
 
 // === FILTERING FUNCTION ===
 function filterDiscoveredDocs(allDocs) {
@@ -601,6 +599,7 @@ const extractFromUrl = async (rootUrl) => {
 };
 
 (async () => {
+  const urls = require('../input/urls.json');
   const results = [];
 
   for (const url of urls) {
