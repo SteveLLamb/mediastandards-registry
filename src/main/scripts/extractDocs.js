@@ -247,9 +247,6 @@ function mergeInferredInto(existingDoc, inferredDoc) {
       existingDoc.status[field] = inferredDoc.status[field];
     }
   }
-  if (existingDoc.status?.latestVersion && !existingDoc.status.withdrawn && !existingDoc.status.superseded) {
-    existingDoc.status.active = true;
-  }
 
 }
 
