@@ -387,7 +387,7 @@ const extractFromUrl = async (rootUrl) => {
           ...(docTitle ? { docTitle } : {}),
           status: {
             ...(inferred.status || {}),
-            ...(wrapperStates.has('active') ? { active: true } : {}),
+          //  ...(wrapperStates.has('active') ? { active: true } : {}),
             ...(wrapperStates.has('stabilized') ? { stabilized: true } : {}),
             ...(wrapperStates.has('withdrawn') ? { withdrawn: true, active: false } : {}),
           }
