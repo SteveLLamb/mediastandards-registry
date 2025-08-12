@@ -392,9 +392,6 @@ const extractFromUrl = async (rootUrl) => {
             ...(wrapperStates.has('withdrawn') ? { withdrawn: true, active: false } : {}),
           }
         };
-        if (doc.status?.latestVersion && !doc.status.withdrawn && !doc.status.superseded) {
-          doc.status.active = true;
-        }
         if (withdrawnNoticeHref) {
           const absNotice = new URL(withdrawnNoticeHref, `${sourceUrl}/`).toString();
           doc.status = { ...(doc.status || {}), withdrawnNotice: absNotice };
