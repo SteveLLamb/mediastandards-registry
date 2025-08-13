@@ -32,9 +32,8 @@ function filterDiscoveredDocs(allDocs) {
 
     const inList = filterList.some(f => {
       if (f === docUrl) return true; // exact match
-      // suite case: filter entry has no trailing slash, or explicitly a suite base
-      if (!f.endsWith('/') && docUrl.startsWith(f)) return true;
-      if (f.endsWith('/') && docUrl.startsWith(f)) return true;
+      // suite match: f ends with a numeric root, docUrl starts with it
+      if (docUrl.startsWith(f)) return true;
       return false;
     });
 
@@ -47,13 +46,12 @@ function filterDiscoveredDocs(allDocs) {
     }
   }
 
-  console.log(`\n📊 SMPTE Discovery Filter Stats:`);
+  console.log(`\n\n📊 Discovery Filtering Stats (URLs):`);
   console.log(`  Total found:   ${allDocs.length}`);
   console.log(`  Kept:          ${kept.length}`);
-  console.log(`  Ignored:       ${ignored.length}\n`);
 
   if (ignored.length) {
-    console.groupCollapsed(`  Ignored URLs (${ignored.length})`);
+    console.groupCollapsed(`  Ignored:       ${ignored.length}`);
     ignored.forEach(url => console.log(`    - ${url}`));
     console.groupEnd();
   }
@@ -65,7 +63,7 @@ function filterDiscoveredDocs(allDocs) {
 // === MAIN DISCOVERY ===
 async function discoverFromRootDocPage() {
   const rootUrl = 'https://pub.smpte.org/doc/';
-  console.log(`\n🔍 Fetching SMPTE root doc list: ${rootUrl}`);
+  console.groupCollapsed(`\n🔍 Fetching SMPTE root doc list: ${rootUrl}`);
 
   const res = await axios.get(rootUrl);
   const $ = cheerio.load(res.data);
@@ -108,6 +106,7 @@ async function discoverFromRootDocPage() {
     } catch (err) {
       console.warn(`⚠️ Failed to inspect ${url}: ${err.message}`);
     }
+    console.groupEnd();
   }
 
   console.log(`🔍 Discovered ${allDocs.length} doc URLs from root (after suite expansion)`);
