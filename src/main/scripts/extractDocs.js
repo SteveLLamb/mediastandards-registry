@@ -16,7 +16,7 @@ const fs = require('fs');
 
 // === CONFIG ===
 const FILTER_ENABLED = true; // false = process all
-const FILTER_MODE = "allow"; // "allow" | "ignore"
+const FILTER_MODE = "ignore"; // "allow" | "ignore"
 const filterList = require('../input/filterList.smpte.json');
 
 // === FILTERING FUNCTION ===
