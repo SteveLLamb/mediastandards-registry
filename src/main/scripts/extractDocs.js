@@ -73,7 +73,16 @@ function filterDiscoveredDocs(allDocs) {
   console.log(`  Total found:   ${allDocs.length}`);
   if (kept.length) {
     console.groupCollapsed(`  Kept:       ${kept.length}`);
-    kept.forEach(url => console.log(`    - ${url}`));
+    kept.forEach(url => {
+      let reason = '';
+      for (const [suiteUrl, children] of suiteMap.entries()) {
+        if (children.includes(url) && kept.includes(suiteUrl)) {
+          reason = ` (child of kept suite: ${suiteUrl})`;
+          break;
+        }
+      }
+      console.log(`    - ${url}${reason}`);
+    });
     console.groupEnd();
   }
   if (ignored.length) {
@@ -135,6 +144,7 @@ async function discoverFromRootDocPage() {
           }
         });
         suiteMap.set(url, children);
+        allDocs.push({ url, suite: null });
       } else {
         console.log(`❓ UNKNOWN TYPE: ${url}`);
       }
