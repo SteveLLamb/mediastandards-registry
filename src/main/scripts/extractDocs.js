@@ -75,7 +75,7 @@ function filterDiscoveredDocs(allDocs) {
   //console.log(`  Kept:          ${kept.length}`);
   if (kept.length) {
     console.groupCollapsed(`  Kept:       ${kept.length}`);
-    ignored.forEach(url => console.log(`    - ${url}`));
+    kept.forEach(url => console.log(`    - ${url}`));
     console.groupEnd();
   }
 
