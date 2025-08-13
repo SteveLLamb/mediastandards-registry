@@ -22,11 +22,14 @@ const filterList = require('../input/allow-filterList.smpte.json');
 // === FILTERING FUNCTION ===
 
 function isInSuite(docUrl, suiteUrl) {
-  const suiteNum = suiteUrl.match(/\/doc\/(\d+)\//)?.[1];
-  if (!suiteNum) return false;
-  // match /doc/431/, /doc/st431-.../, /doc/rp431-.../, /doc/eg431-.../
-  const suitePattern = new RegExp(`/doc/(st|rp|eg)?${suiteNum}(-\\d+)?/`);
-  return suitePattern.test(docUrl);
+  const m = suiteUrl.match(/\/doc\/(\d+)\//i);
+  if (!m) return false;
+  const suiteNum = m[1];
+  const re = new RegExp(
+    String.raw`/doc/(?:${TYPE_PREFIXES.join('|')})${suiteNum}(?:-\d+)?/`,
+    'i'
+  );
+  return re.test(docUrl);
 }
 
 function filterDiscoveredDocs(allDocs) {
@@ -142,6 +145,8 @@ const typeMap = {
         RDD: 'Registered Disclosure Document',
         OV: 'Overview Document'
       };
+
+const TYPE_PREFIXES = Object.keys(typeMap).map(k => k.toLowerCase());
 
 const metaConfig = {
   parsed: {
