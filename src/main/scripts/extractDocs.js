@@ -14,6 +14,16 @@ const cheerio = require('cheerio');
 const dayjs = require('dayjs');
 const fs = require('fs');
 
+const typeMap = {
+        AG: 'Administrative Guideline',
+        ST: 'Standard',
+        RP: 'Recommended Practice',
+        EG: 'Engineering Guideline',
+        RDD: 'Registered Disclosure Document',
+        OV: 'Overview Document'
+      };
+const TYPE_PREFIXES = Object.keys(typeMap).map(k => k.toLowerCase());
+
 // === CONFIG ===
 const FILTER_ENABLED = true; // false = process all
 const FILTER_MODE = "allow"; // "allow" | "ignore"
@@ -136,17 +146,6 @@ async function urlExistsNoRedirect(url) {
     return false;
   }
 }
-
-const typeMap = {
-        AG: 'Administrative Guideline',
-        ST: 'Standard',
-        RP: 'Recommended Practice',
-        EG: 'Engineering Guideline',
-        RDD: 'Registered Disclosure Document',
-        OV: 'Overview Document'
-      };
-
-const TYPE_PREFIXES = Object.keys(typeMap).map(k => k.toLowerCase());
 
 const metaConfig = {
   parsed: {
