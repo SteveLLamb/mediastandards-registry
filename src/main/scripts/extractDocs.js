@@ -24,7 +24,7 @@ const typeMap = {
       };
 
 // === FILTERING FUNCTION ===
-const FILTER_ENABLED = false; // false = process all
+const FILTER_ENABLED = true; // false = process all
 const filterList = require('../input/filterList.smpte.json');
 const suiteMap = new Map();
 
