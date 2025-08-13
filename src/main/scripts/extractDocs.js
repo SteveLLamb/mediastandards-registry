@@ -25,8 +25,8 @@ const typeMap = {
 
 // === FILTERING FUNCTION ===
 const FILTER_ENABLED = true; // false = process all
-const FILTER_MODE = "allow"; // "allow" | "ignore"
-const filterList = require('../input/allow-filterList.smpte.json');
+const FILTER_MODE = "ignore"; // "allow" | "ignore"
+const filterList = require('../input/filterList.smpte.json');
 const suiteMap = new Map();
 
 function filterDiscoveredDocs(allDocs) {
@@ -78,7 +78,16 @@ function filterDiscoveredDocs(allDocs) {
   }
   if (ignored.length) {
     console.groupCollapsed(`  Ignored:    ${ignored.length}`);
-    ignored.forEach(url => console.log(`    - ${url}`));
+    ignored.forEach(url => {
+      let reason = '';
+      for (const [suiteUrl, children] of suiteMap.entries()) {
+        if (children.includes(url) && ignored.includes(suiteUrl)) {
+          reason = ` (child of ignored suite: ${suiteUrl})`;
+          break;
+        }
+      }
+      console.log(`    - ${url}${reason}`);
+    });
     console.groupEnd();
   }
 
