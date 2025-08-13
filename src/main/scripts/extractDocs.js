@@ -22,31 +22,18 @@ const typeMap = {
         RDD: 'Registered Disclosure Document',
         OV: 'Overview Document'
       };
-const TYPE_PREFIXES = Object.keys(typeMap).map(k => k.toLowerCase());
-
-// === CONFIG ===
-const FILTER_ENABLED = true; // false = process all
-const FILTER_MODE = "allow"; // "allow" | "ignore"
-const filterList = require('../input/allow-filterList.smpte.json');
 
 // === FILTERING FUNCTION ===
-
-function isInSuite(docUrl, suiteUrl) {
-  const m = suiteUrl.match(/\/doc\/(\d+)\//i);
-  if (!m) return false;
-  const suiteNum = m[1];
-  const re = new RegExp(
-    String.raw`/doc/(?:${TYPE_PREFIXES.join('|')})${suiteNum}(?:-\d+)?/`,
-    'i'
-  );
-  return re.test(docUrl);
-}
+const FILTER_ENABLED = true; // false = process all
+const FILTER_MODE = "ignore"; // "allow" | "ignore"
+const filterList = require('../input/filterList.smpte.json');
+const suiteMap = new Map();
 
 function filterDiscoveredDocs(allDocs) {
   const kept = [];
   const ignored = [];
 
-  for (const docUrl of allDocs) {
+  for (const { url: docUrl, suite } of allDocs) {
     if (!FILTER_ENABLED) {
       kept.push(docUrl);
       continue;
@@ -54,10 +41,8 @@ function filterDiscoveredDocs(allDocs) {
 
     const inList = filterList.some(f => {
       if (f === docUrl) return true; // exact match
-      // Allow if docUrl starts with suite URL in filter list
-      if (docUrl.startsWith(f)) return true;
-      // Special case: suite number match (e.g., /doc/431/) should match docs in same suite
-      if (isInSuite(docUrl, f)) return true;
+      if (suite && f === suite) return true; // suite match
+      if (docUrl.startsWith(f)) return true; // prefix match
       return false;
     });
 
@@ -70,21 +55,32 @@ function filterDiscoveredDocs(allDocs) {
     }
   }
 
+  if (FILTER_ENABLED && FILTER_MODE === "ignore") {
+    const ignoredSuites = filterList.filter(f => suiteMap.has(f));
+    for (const suiteUrl of ignoredSuites) {
+      const children = suiteMap.get(suiteUrl) || [];
+      for (const childUrl of children) {
+        if (!ignored.includes(childUrl) && kept.includes(childUrl)) {
+          ignored.push(childUrl);
+          const idx = kept.indexOf(childUrl);
+          if (idx !== -1) kept.splice(idx, 1);
+        }
+      }
+    }
+  }
+
   console.log(`\n\n📊 Discovery Filtering Stats (URLs):`);
   console.log(`  Total found:   ${allDocs.length}`);
-  //console.log(`  Kept:          ${kept.length}`);
   if (kept.length) {
     console.groupCollapsed(`  Kept:       ${kept.length}`);
     kept.forEach(url => console.log(`    - ${url}`));
     console.groupEnd();
   }
-
   if (ignored.length) {
-    console.groupCollapsed(`  Ignored:       ${ignored.length}`);
+    console.groupCollapsed(`  Ignored:    ${ignored.length}`);
     ignored.forEach(url => console.log(`    - ${url}`));
     console.groupEnd();
   }
-
 
   return kept;
 }
@@ -99,7 +95,6 @@ async function discoverFromRootDocPage() {
 
   let allDocs = [];
 
-  // Top-level docs and suites
   const topLevel = [];
   $('li.doc > div > a').each((i, el) => {
     const href = $(el).attr('href');
@@ -108,7 +103,6 @@ async function discoverFromRootDocPage() {
     }
   });
 
-  // Check each top-level link to see if it’s a suite or a doc
   for (const url of topLevel) {
     try {
       const page = await axios.get(url);
@@ -116,21 +110,24 @@ async function discoverFromRootDocPage() {
 
       if ($page('ul.versions').length) {
         // Direct doc page
-        console.log(`📄 DOC: ${url}`); // DEBUG
-        allDocs.push(url);
+        console.log(`📄 DOC: ${url}`);
+        allDocs.push({ url, suite: null });
       } else if ($page('ul.docs').length) {
-        // Suite page – add all child docs
-        console.log(`📚 SUITE: ${url}`); // DEBUG
+        // Suite page – map suite to children
+        console.log(`📚 SUITE: ${url}`);
+        const children = [];
         $page('ul.docs li.doc a').each((i, el) => {
           const href = $page(el).attr('href');
           if (href && href.startsWith('/doc/')) {
             const childUrl = new URL(href, rootUrl).href;
-            console.log(`   ↳ Found doc in suite: ${childUrl}`); // DEBUG
-            allDocs.push(new URL(href, rootUrl).href);
+            console.log(`   ↳ Found doc in suite: ${childUrl}`);
+            children.push(childUrl);
+            allDocs.push({ url: childUrl, suite: url });
           }
         });
+        suiteMap.set(url, children);
       } else {
-        console.log(`❓ UNKNOWN TYPE: ${url}`); // DEBUG
+        console.log(`❓ UNKNOWN TYPE: ${url}`);
       }
     } catch (err) {
       console.warn(`⚠️ Failed to inspect ${url}: ${err.message}`);
@@ -139,6 +136,7 @@ async function discoverFromRootDocPage() {
 
   console.log(`🔍 Discovered ${allDocs.length} doc URLs from root (after suite expansion)`);
 
+  // Apply filtering and return only the URL strings
   const docsToProcess = filterDiscoveredDocs(allDocs);
   return docsToProcess;
 }
