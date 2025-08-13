@@ -715,6 +715,8 @@ const extractFromUrl = async (rootUrl) => {
   const updatedDocs = [];
   const skippedDocs = [];
 
+console.log(`\n🛠 Beginning document merge/update phase... (${results.length} documents to check)`);
+
 for (const doc of results) {
     let hasRefChanges = false;
     let addedRefs = { normative: [], bibliographic: [] };
@@ -741,6 +743,12 @@ for (const doc of results) {
       if (doc.references) {
         injectMeta(doc.references, 'normative', sourceType, 'new', []);
         injectMeta(doc.references, 'bibliographic', sourceType, 'new', []);
+      }
+      if (index === -1) {
+        console.log(`   ➕ Adding ${doc.docId} (new document)`);
+        newDocs.push(doc);
+        documents.push(doc);
+        continue;
       }
       newDocs.push(doc);
       existingDocs.push(doc);
@@ -888,13 +896,14 @@ for (const doc of results) {
           }
         }
       }
-
+      
       if (
         changedFields.length > 0 ||
         hasRefChanges ||
         duplicateNormRemoved ||
         duplicateBibRemoved
       ) {
+        console.log(`   ↻ Updating ${doc.docId} (fields: ${changedFields.length ? changedFields.join(', ') : 'references only'})`);
         updatedDocs.push({
           docId: doc.docId,
           fields: changedFields,
@@ -915,6 +924,7 @@ for (const doc of results) {
         skippedDocs.push(doc.docId);
       }
     }
+    console.log(`✅ Merge/update complete. Preparing to write ${newDocs.length} new + ${updatedDocs.length} updated docs to file...`);
   }
 
   // Sort documents by docId
