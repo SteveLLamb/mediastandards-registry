@@ -74,6 +74,7 @@ function filterDiscoveredDocs(allDocs) {
   if (kept.length) {
     console.groupCollapsed(`  Kept:       ${kept.length}`);
     kept.forEach(url => {
+      const isSuite = suiteMap.has(url);
       let reason = '';
       for (const [suiteUrl, children] of suiteMap.entries()) {
         if (children.includes(url) && kept.includes(suiteUrl)) {
@@ -81,13 +82,14 @@ function filterDiscoveredDocs(allDocs) {
           break;
         }
       }
-      console.log(`    - ${url}${reason}`);
+      console.log(`    - ${url}${isSuite ? ' [SUITE]' : ''}${reason}`);
     });
     console.groupEnd();
   }
   if (ignored.length) {
     console.groupCollapsed(`  Ignored:    ${ignored.length}`);
     ignored.forEach(url => {
+      const isSuite = suiteMap.has(url);
       let reason = '';
       for (const [suiteUrl, children] of suiteMap.entries()) {
         if (children.includes(url) && ignored.includes(suiteUrl)) {
@@ -95,7 +97,7 @@ function filterDiscoveredDocs(allDocs) {
           break;
         }
       }
-      console.log(`    - ${url}${reason}`);
+      console.log(`    - ${url}${isSuite ? ' [SUITE]' : ''}${reason}`);
     });
     console.groupEnd();
   }
