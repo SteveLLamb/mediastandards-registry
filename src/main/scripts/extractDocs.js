@@ -72,7 +72,12 @@ function filterDiscoveredDocs(allDocs) {
 
   console.log(`\n\n📊 Discovery Filtering Stats (URLs):`);
   console.log(`  Total found:   ${allDocs.length}`);
-  console.log(`  Kept:          ${kept.length}`);
+  //console.log(`  Kept:          ${kept.length}`);
+  if (kept.length) {
+    console.groupCollapsed(`  Kept:       ${kept.length}`);
+    ignored.forEach(url => console.log(`    - ${url}`));
+    console.groupEnd();
+  }
 
   if (ignored.length) {
     console.groupCollapsed(`  Ignored:       ${ignored.length}`);
