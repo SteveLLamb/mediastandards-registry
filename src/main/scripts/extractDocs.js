@@ -25,7 +25,6 @@ const typeMap = {
 
 // === FILTERING FUNCTION ===
 const FILTER_ENABLED = true; // false = process all
-const FILTER_MODE = "ignore"; // "allow" | "ignore"
 const filterList = require('../input/filterList.smpte.json');
 const suiteMap = new Map();
 
@@ -46,16 +45,14 @@ function filterDiscoveredDocs(allDocs) {
       return false;
     });
 
-    if (FILTER_MODE === "allow" && !inList) {
-      ignored.push(docUrl);
-    } else if (FILTER_MODE === "ignore" && inList) {
+    if (inList) {
       ignored.push(docUrl);
     } else {
       kept.push(docUrl);
     }
   }
 
-  if (FILTER_ENABLED && FILTER_MODE === "ignore") {
+  if (FILTER_ENABLED) {
     const ignoredSuites = filterList.filter(f => suiteMap.has(f));
     for (const suiteUrl of ignoredSuites) {
       const children = suiteMap.get(suiteUrl) || [];
