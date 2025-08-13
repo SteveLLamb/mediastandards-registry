@@ -39,8 +39,8 @@ function printUrlsSuiteWithChildren(label, urls) {
     const isSuite = suiteMap.has(url);
     let reason = '';
     for (const [suiteUrl, children] of suiteMap.entries()) {
-      if (children.includes(url) && list.includes(suiteUrl)) {
-        reason = ` (DOC contained in ${label.toLowerCase().includes('kept') ? 'kept' : 'ignored'} suite: ${suiteUrl})`;
+      if (children.includes(url)) {
+        reason = ` (Doc contained in ${label.toLowerCase().includes('kept') ? 'kept' : 'ignored'} suite: ${suiteUrl})`;
         break;
       }
     }
@@ -50,15 +50,26 @@ function printUrlsSuiteWithChildren(label, urls) {
 
   for (const url of urls) {
     if (printed.has(url)) continue;
-    emit(url, urls);
+
     if (suiteMap.has(url)) {
-      // print its children immediately after, in discovery order
+      // Suite: print it and then its children (skip if already printed)
+      emit(url, urls);
       const children = suiteMap.get(url) || [];
       for (const child of children) {
         if (urls.includes(child) && !printed.has(child)) {
           emit(child, urls);
         }
       }
+    } else {
+      // If this is a child of a suite in the same list, skip here — it will print after the suite
+      let skip = false;
+      for (const [suiteUrl, children] of suiteMap.entries()) {
+        if (children.includes(url) && urls.includes(suiteUrl)) {
+          skip = true;
+          break;
+        }
+      }
+      if (!skip) emit(url, urls);
     }
   }
 
