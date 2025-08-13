@@ -28,28 +28,40 @@ const FILTER_ENABLED = true; // false = process all
 const filterList = require('../input/filterList.smpte.json');
 const suiteMap = new Map();
 
-function printUrlsSuitesFirst(label, urls, alsoCheck) {
+function printUrlsSuiteWithChildren(label, urls) {
   if (!urls.length) return;
-  const suites = urls.filter(u => suiteMap.has(u));
-  const docs   = urls.filter(u => !suiteMap.has(u));
 
-  console.groupCollapsed(`${label}: ${urls.length}  (Suites: ${suites.length}, Docs: ${docs.length})`);
-  const emit = (url, keptOrIgnoredList) => {
+  console.groupCollapsed(`${label}: ${urls.length}  (Suites: ${urls.filter(u => suiteMap.has(u)).length}, Docs: ${urls.filter(u => !suiteMap.has(u)).length})`);
+
+  const printed = new Set();
+
+  const emit = (url, list) => {
     const isSuite = suiteMap.has(url);
     let reason = '';
-    // reason if child and its parent suite is also in the same kept/ignored list
     for (const [suiteUrl, children] of suiteMap.entries()) {
-      if (children.includes(url) && keptOrIgnoredList.includes(suiteUrl)) {
-        reason = ` (DOC included in ${label.toLowerCase().includes('kept') ? 'kept' : 'ignored'} suite: ${suiteUrl})`;
+      if (children.includes(url) && list.includes(suiteUrl)) {
+        reason = ` (DOC contained in ${label.toLowerCase().includes('kept') ? 'kept' : 'ignored'} suite: ${suiteUrl})`;
         break;
       }
     }
     console.log(`    - ${url}${isSuite ? ' [SUITE]' : ''}${reason}`);
+    printed.add(url);
   };
 
-  // suites first, original order within each set
-  suites.forEach(u => emit(u, urls));
-  docs.forEach(u => emit(u, urls));
+  for (const url of urls) {
+    if (printed.has(url)) continue;
+    emit(url, urls);
+    if (suiteMap.has(url)) {
+      // print its children immediately after, in discovery order
+      const children = suiteMap.get(url) || [];
+      for (const child of children) {
+        if (urls.includes(child) && !printed.has(child)) {
+          emit(child, urls);
+        }
+      }
+    }
+  }
+
   console.groupEnd();
 }
 
@@ -64,9 +76,9 @@ function filterDiscoveredDocs(allDocs) {
     }
 
     const inList = filterList.some(f => {
-      if (f === docUrl) return true;        // exact match
-      if (suite && f === suite) return true; // suite match
-      if (docUrl.startsWith(f)) return true; // prefix match
+      if (f === docUrl) return true;
+      if (suite && f === suite) return true;
+      if (docUrl.startsWith(f)) return true;
       return false;
     });
 
@@ -90,13 +102,10 @@ function filterDiscoveredDocs(allDocs) {
 
   const suiteCount = allDocs.filter(d => suiteMap.has(d.url)).length;
   const docCount = allDocs.length - suiteCount;
-
   console.log(`\n\n📊 Discovery Filtering Stats (URLs):`);
   console.log(`  Total found: ${allDocs.length}  (Suites: ${suiteCount}, Docs: ${docCount})`);
-
-  // suites-first printing (preserve discovery order within suites/docs)
-  printUrlsSuitesFirst('  Kept', kept);
-  printUrlsSuitesFirst('  Ignored', ignored);
+  printUrlsSuiteWithChildren('  Kept', kept);
+  printUrlsSuiteWithChildren('  Ignored', ignored);
 
   return kept;
 }
