@@ -30,9 +30,17 @@ function filterDiscoveredDocs(allDocs) {
       continue;
     }
 
-    if (FILTER_MODE === "allow" && !filterList.includes(docUrl)) {
+    const inList = filterList.some(f => {
+      if (f === docUrl) return true; // exact match
+      // suite case: filter entry has no trailing slash, or explicitly a suite base
+      if (!f.endsWith('/') && docUrl.startsWith(f)) return true;
+      if (f.endsWith('/') && docUrl.startsWith(f)) return true;
+      return false;
+    });
+
+    if (FILTER_MODE === "allow" && !inList) {
       ignored.push(docUrl);
-    } else if (FILTER_MODE === "ignore" && filterList.includes(docUrl)) {
+    } else if (FILTER_MODE === "ignore" && inList) {
       ignored.push(docUrl);
     } else {
       kept.push(docUrl);
@@ -45,8 +53,9 @@ function filterDiscoveredDocs(allDocs) {
   console.log(`  Ignored:       ${ignored.length}\n`);
 
   if (ignored.length) {
-    console.log(`  Ignored URLs:`);
+    console.groupCollapsed(`  Ignored URLs (${ignored.length})`);
     ignored.forEach(url => console.log(`    - ${url}`));
+    console.groupEnd();
   }
 
 
