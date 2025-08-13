@@ -40,7 +40,7 @@ function printUrlsSuiteWithChildren(label, urls) {
     let reason = '';
     for (const [suiteUrl, children] of suiteMap.entries()) {
       if (children.includes(url)) {
-        reason = ` (Doc contained in ${label.toLowerCase().includes('kept') ? 'kept' : 'ignored'} suite: ${suiteUrl})`;
+        reason = ` (Doc contained in ${label.toLowerCase().includes('queued') ? 'queued' : 'filtered'} suite: ${suiteUrl})`;
         break;
       }
     }
@@ -77,12 +77,12 @@ function printUrlsSuiteWithChildren(label, urls) {
 }
 
 function filterDiscoveredDocs(allDocs) {
-  const kept = [];
-  const ignored = [];
+  const queued = [];
+  const filtered = [];
 
   for (const { url: docUrl, suite } of allDocs) {
     if (!FILTER_ENABLED) {
-      kept.push(docUrl);
+      queued.push(docUrl);
       continue;
     }
 
@@ -93,19 +93,19 @@ function filterDiscoveredDocs(allDocs) {
       return false;
     });
 
-    if (inList) ignored.push(docUrl);
-    else kept.push(docUrl);
+    if (inList) filtered.push(docUrl);
+    else queued.push(docUrl);
   }
 
   if (FILTER_ENABLED) {
-    const ignoredSuites = filterList.filter(f => suiteMap.has(f));
-    for (const suiteUrl of ignoredSuites) {
+    const filteredSuites = filterList.filter(f => suiteMap.has(f));
+    for (const suiteUrl of filteredSuites) {
       const children = suiteMap.get(suiteUrl) || [];
       for (const childUrl of children) {
-        if (!ignored.includes(childUrl) && kept.includes(childUrl)) {
-          ignored.push(childUrl);
-          const idx = kept.indexOf(childUrl);
-          if (idx !== -1) kept.splice(idx, 1);
+        if (!filtered.includes(childUrl) && queued.includes(childUrl)) {
+          filtered.push(childUrl);
+          const idx = queued.indexOf(childUrl);
+          if (idx !== -1) queued.splice(idx, 1);
         }
       }
     }
@@ -115,10 +115,10 @@ function filterDiscoveredDocs(allDocs) {
   const docCount = allDocs.length - suiteCount;
   console.log(`\n\n📊 Discovery Filtering Stats (URLs):`);
   console.log(`  Total found: ${allDocs.length}  (Suites: ${suiteCount}, Docs: ${docCount})`);
-  printUrlsSuiteWithChildren('  Kept', kept);
-  printUrlsSuiteWithChildren('  Ignored', ignored);
+  printUrlsSuiteWithChildren('  Queued', queued);
+  printUrlsSuiteWithChildren('  Filtered', filtered);
 
-  return kept;
+  return queued;
 }
 
 // === MAIN DISCOVERY ===
