@@ -28,6 +28,31 @@ const FILTER_ENABLED = true; // false = process all
 const filterList = require('../input/filterList.smpte.json');
 const suiteMap = new Map();
 
+function printUrlsSuitesFirst(label, urls, alsoCheck) {
+  if (!urls.length) return;
+  const suites = urls.filter(u => suiteMap.has(u));
+  const docs   = urls.filter(u => !suiteMap.has(u));
+
+  console.groupCollapsed(`${label}: ${urls.length}  (Suites: ${suites.length}, Docs: ${docs.length})`);
+  const emit = (url, keptOrIgnoredList) => {
+    const isSuite = suiteMap.has(url);
+    let reason = '';
+    // reason if child and its parent suite is also in the same kept/ignored list
+    for (const [suiteUrl, children] of suiteMap.entries()) {
+      if (children.includes(url) && keptOrIgnoredList.includes(suiteUrl)) {
+        reason = ` (DOC included in ${label.toLowerCase().includes('kept') ? 'kept' : 'ignored'} suite: ${suiteUrl})`;
+        break;
+      }
+    }
+    console.log(`    - ${url}${isSuite ? ' [SUITE]' : ''}${reason}`);
+  };
+
+  // suites first, original order within each set
+  suites.forEach(u => emit(u, urls));
+  docs.forEach(u => emit(u, urls));
+  console.groupEnd();
+}
+
 function filterDiscoveredDocs(allDocs) {
   const kept = [];
   const ignored = [];
@@ -39,17 +64,14 @@ function filterDiscoveredDocs(allDocs) {
     }
 
     const inList = filterList.some(f => {
-      if (f === docUrl) return true; // exact match
+      if (f === docUrl) return true;        // exact match
       if (suite && f === suite) return true; // suite match
       if (docUrl.startsWith(f)) return true; // prefix match
       return false;
     });
 
-    if (inList) {
-      ignored.push(docUrl);
-    } else {
-      kept.push(docUrl);
-    }
+    if (inList) ignored.push(docUrl);
+    else kept.push(docUrl);
   }
 
   if (FILTER_ENABLED) {
@@ -68,44 +90,13 @@ function filterDiscoveredDocs(allDocs) {
 
   const suiteCount = allDocs.filter(d => suiteMap.has(d.url)).length;
   const docCount = allDocs.length - suiteCount;
+
   console.log(`\n\n📊 Discovery Filtering Stats (URLs):`);
   console.log(`  Total found: ${allDocs.length}  (Suites: ${suiteCount}, Docs: ${docCount})`);
 
-  const keptSuites = kept.filter(url => suiteMap.has(url)).length;
-  const keptDocs = kept.length - keptSuites;
-  if (kept.length) {
-    console.groupCollapsed(`  Kept: ${kept.length}  (Suites: ${keptSuites}, Docs: ${keptDocs})`);
-    kept.forEach(url => {
-      const isSuite = suiteMap.has(url);
-      let reason = '';
-      for (const [suiteUrl, children] of suiteMap.entries()) {
-        if (children.includes(url) && kept.includes(suiteUrl)) {
-          reason = ` (child of kept suite: ${suiteUrl})`;
-          break;
-        }
-      }
-      console.log(`    - ${url}${isSuite ? ' [SUITE]' : ''}${reason}`);
-    });
-    console.groupEnd();
-  }
-
-  const ignoredSuites = ignored.filter(url => suiteMap.has(url)).length;
-  const ignoredDocs = ignored.length - ignoredSuites;
-  if (ignored.length) {
-    console.groupCollapsed(`  Ignored: ${ignored.length}  (Suites: ${ignoredSuites}, Docs: ${ignoredDocs})`);
-    ignored.forEach(url => {
-      const isSuite = suiteMap.has(url);
-      let reason = '';
-      for (const [suiteUrl, children] of suiteMap.entries()) {
-        if (children.includes(url) && ignored.includes(suiteUrl)) {
-          reason = ` (child of ignored suite: ${suiteUrl})`;
-          break;
-        }
-      }
-      console.log(`    - ${url}${isSuite ? ' [SUITE]' : ''}${reason}`);
-    });
-    console.groupEnd();
-  }
+  // suites-first printing (preserve discovery order within suites/docs)
+  printUrlsSuitesFirst('  Kept', kept);
+  printUrlsSuitesFirst('  Ignored', ignored);
 
   return kept;
 }
@@ -467,11 +458,9 @@ const extractFromUrl = async (rootUrl) => {
 
   for (const releaseTag of folderLinks) {
     const isLatest = releaseTag === latestTag;
-
     const sourceUrl = `${rootUrl}${releaseTag}`
 
-    //const indexUrl = `${sourceUrl}/index.html`;
-    console.log(`🔍 Processing ${sourceUrl}/`);
+    console.log(`\n🔍 Processing ${sourceUrl}/`);
 
     // --- NEW: fetch wrapper at the folder root to inspect iframe and status/title ---
     let iframeSrc = null;
