@@ -20,6 +20,15 @@ const FILTER_MODE = "allow"; // "allow" | "ignore"
 const filterList = require('../input/filterList.smpte.json');
 
 // === FILTERING FUNCTION ===
+
+function isInSuite(docUrl, suiteUrl) {
+  const suiteNum = suiteUrl.match(/\/doc\/(\d+)\//)?.[1];
+  if (!suiteNum) return false;
+  // match /doc/431/, /doc/st431-.../, /doc/rp431-.../, /doc/eg431-.../
+  const suitePattern = new RegExp(`/doc/(st|rp|eg)?${suiteNum}(-\\d+)?/`);
+  return suitePattern.test(docUrl);
+}
+
 function filterDiscoveredDocs(allDocs) {
   const kept = [];
   const ignored = [];
@@ -32,8 +41,10 @@ function filterDiscoveredDocs(allDocs) {
 
     const inList = filterList.some(f => {
       if (f === docUrl) return true; // exact match
-      // suite match: f ends with a numeric root, docUrl starts with it
+      // Allow if docUrl starts with suite URL in filter list
       if (docUrl.startsWith(f)) return true;
+      // Special case: suite number match (e.g., /doc/431/) should match docs in same suite
+      if (isInSuite(docUrl, f)) return true;
       return false;
     });
 
@@ -63,7 +74,7 @@ function filterDiscoveredDocs(allDocs) {
 // === MAIN DISCOVERY ===
 async function discoverFromRootDocPage() {
   const rootUrl = 'https://pub.smpte.org/doc/';
-  console.groupCollapsed(`\n🔍 Fetching SMPTE root doc list: ${rootUrl}`);
+  console.log(`\n🔍 Fetching SMPTE root doc list: ${rootUrl}`);
 
   const res = await axios.get(rootUrl);
   const $ = cheerio.load(res.data);
@@ -106,7 +117,6 @@ async function discoverFromRootDocPage() {
     } catch (err) {
       console.warn(`⚠️ Failed to inspect ${url}: ${err.message}`);
     }
-    console.groupEnd();
   }
 
   console.log(`🔍 Discovered ${allDocs.length} doc URLs from root (after suite expansion)`);
