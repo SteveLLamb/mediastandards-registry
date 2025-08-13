@@ -24,7 +24,7 @@ const typeMap = {
       };
 
 // === FILTERING FUNCTION ===
-const FILTER_ENABLED = false; // false = process all
+const FILTER_ENABLED = true; // false = process all
 const filterList = require('../input/filterList.smpte.json');
 const suiteMap = new Map();
 
@@ -66,10 +66,15 @@ function filterDiscoveredDocs(allDocs) {
     }
   }
 
+  const suiteCount = allDocs.filter(d => suiteMap.has(d.url)).length;
+  const docCount = allDocs.length - suiteCount;
   console.log(`\n\n📊 Discovery Filtering Stats (URLs):`);
-  console.log(`  Total found:   ${allDocs.length}`);
+  console.log(`  Total found: ${allDocs.length}  (Suites: ${suiteCount}, Docs: ${docCount})`);
+
+  const keptSuites = kept.filter(url => suiteMap.has(url)).length;
+  const keptDocs = kept.length - keptSuites;
   if (kept.length) {
-    console.groupCollapsed(`  Kept:       ${kept.length}`);
+    console.groupCollapsed(`  Kept: ${kept.length}  (Suites: ${keptSuites}, Docs: ${keptDocs})`);
     kept.forEach(url => {
       const isSuite = suiteMap.has(url);
       let reason = '';
@@ -83,8 +88,11 @@ function filterDiscoveredDocs(allDocs) {
     });
     console.groupEnd();
   }
+
+  const ignoredSuites = ignored.filter(url => suiteMap.has(url)).length;
+  const ignoredDocs = ignored.length - ignoredSuites;
   if (ignored.length) {
-    console.groupCollapsed(`  Ignored:    ${ignored.length}`);
+    console.groupCollapsed(`  Ignored: ${ignored.length}  (Suites: ${ignoredSuites}, Docs: ${ignoredDocs})`);
     ignored.forEach(url => {
       const isSuite = suiteMap.has(url);
       let reason = '';
