@@ -744,12 +744,7 @@ for (const doc of results) {
         injectMeta(doc.references, 'normative', sourceType, 'new', []);
         injectMeta(doc.references, 'bibliographic', sourceType, 'new', []);
       }
-      if (index === -1) {
-        console.log(`   ➕ Adding ${doc.docId} (new document)`);
-        newDocs.push(doc);
-        documents.push(doc);
-        continue;
-      }
+      console.log(`   ➕ Adding ${doc.docId} (new document)`);
       newDocs.push(doc);
       existingDocs.push(doc);
     } else {
@@ -924,7 +919,6 @@ for (const doc of results) {
         skippedDocs.push(doc.docId);
       }
     }
-    console.log(`✅ Merge/update complete. Preparing to write ${newDocs.length} new + ${updatedDocs.length} updated docs to file...`);
   }
 
   // Sort documents by docId
