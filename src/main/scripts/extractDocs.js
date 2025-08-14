@@ -717,6 +717,7 @@ const extractFromUrl = async (rootUrl) => {
   const skippedDocs = [];
 
 logSmart(`\n🛠 Beginning document merge/update phase... (${results.length} documents to check)`);
+let processed = 0;
 
 for (const doc of results) {
     let hasRefChanges = false;
@@ -746,9 +747,10 @@ for (const doc of results) {
         injectMeta(doc.references, 'bibliographic', sourceType, 'new', []);
       }
       logSmart(`   ➕ Adding ${doc.docId} (new document)`);
-      heartbeat(processed, results.length);
       newDocs.push(doc);
       existingDocs.push(doc);
+      processed++;
+      heartbeat(processed, results.length);
     } else {
       await resolveUrlAndInject(doc, 'href');
       if (doc.repo && !(await urlExistsNoRedirect(doc.repo))) {
@@ -901,7 +903,6 @@ for (const doc of results) {
         duplicateBibRemoved
       ) {
         logSmart(`   ↻ Updating ${doc.docId} (fields: ${changedFields.length ? changedFields.join(', ') : 'references only'})`);
-        heartbeat(processed, results.length);
         updatedDocs.push({
           docId: doc.docId,
           fields: changedFields,
@@ -918,12 +919,17 @@ for (const doc of results) {
           oldValues,
           newValues
         });
+        processed++;
+        heartbeat(processed, results.length);
       } else {
         skippedDocs.push(doc.docId);
+        processed++;
+        heartbeat(processed, results.length);
       }
     }
   }
-  logSmart(`✅ Merge/update phase complete — processed ${processed}/${results.lengt}`);
+  
+  logSmart(`✅ Merge/update phase complete — processed ${processed}/${results.length}`);
 
   // Sort documents by docId
   existingDocs.sort((a, b) => a.docId.localeCompare(b.docId));
