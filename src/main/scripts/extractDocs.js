@@ -1097,3 +1097,5 @@ for (const doc of results) {
   fs.writeFileSync(prLogPath, prLines.join('\n'));
   console.log(`📄 PR log updated: ${prLogPath}`);
   console.log(`📄 Full PR log details saved: ${fullDetailsPath}`);
+
+})();
