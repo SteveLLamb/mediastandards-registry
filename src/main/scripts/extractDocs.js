@@ -9,6 +9,7 @@ You should have received a copy of the license along with this work.  If not, se
 const axios = require('axios');
 const { resolveUrlAndInject, urlReachable } = require('./url.resolve.js');
 const { getPrLogPath } = require('./utils/prLogPath');
+const { logSmart, heartbeat } = require('./utils/logSmart');
 const prLogPath = getPrLogPath();
 const cheerio = require('cheerio');
 const dayjs = require('dayjs');
@@ -715,7 +716,7 @@ const extractFromUrl = async (rootUrl) => {
   const updatedDocs = [];
   const skippedDocs = [];
 
-console.log(`\n🛠 Beginning document merge/update phase... (${results.length} documents to check)`);
+logSmart(`\n🛠 Beginning document merge/update phase... (${results.length} documents to check)`);
 
 for (const doc of results) {
     let hasRefChanges = false;
@@ -744,7 +745,8 @@ for (const doc of results) {
         injectMeta(doc.references, 'normative', sourceType, 'new', []);
         injectMeta(doc.references, 'bibliographic', sourceType, 'new', []);
       }
-      console.log(`   ➕ Adding ${doc.docId} (new document)`);
+      logSmart(`   ➕ Adding ${doc.docId} (new document)`);
+      heartbeat(processed, results.length);
       newDocs.push(doc);
       existingDocs.push(doc);
     } else {
@@ -898,7 +900,8 @@ for (const doc of results) {
         duplicateNormRemoved ||
         duplicateBibRemoved
       ) {
-        console.log(`   ↻ Updating ${doc.docId} (fields: ${changedFields.length ? changedFields.join(', ') : 'references only'})`);
+        logSmart(`   ↻ Updating ${doc.docId} (fields: ${changedFields.length ? changedFields.join(', ') : 'references only'})`);
+        heartbeat(processed, results.length);
         updatedDocs.push({
           docId: doc.docId,
           fields: changedFields,
@@ -920,6 +923,7 @@ for (const doc of results) {
       }
     }
   }
+  logSmart(`✅ Merge/update phase complete — processed ${processed}/${results.lengt}`);
 
   // Sort documents by docId
   existingDocs.sort((a, b) => a.docId.localeCompare(b.docId));

@@ -27,7 +27,17 @@ jobs:
         env:
           IS_PR_RUN: true
           PR_LOG_PATH: "${{ runner.temp }}/pr-update-log.txt"
+          MSR_CONSOLE_BUDGET: "3670016"       # ~3.5 MiB (override if you want)
+          MSR_HEARTBEAT_EVERY: "100"          # print heartbeat every 100 docs
+          MSR_HEARTBEAT_PREFIX: "... still processing, standby..."
         run: node src/main/scripts/extractDocs.js
+
+      - name: Upload full extract log (post-extraction)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: extract-full-log
+          path: ${{ runner.temp }}/extract-full.log
 
       - name: Check if PR should be skipped
         id: skipcheck
@@ -64,7 +74,6 @@ jobs:
           git add src/main/reports/extract-runs/pr-update-details-*.txt
           git diff --cached --quiet || git commit -m "Add PR update details file"
 
-      # NEW: resolve the details file path and its blob SHA from HEAD
       - name: Resolve details file & blob SHA
         id: details
         run: |
