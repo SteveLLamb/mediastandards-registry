@@ -1058,7 +1058,7 @@ for (const doc of results) {
   fs.writeFileSync(fullDetailsPath, fullDetailsLines.join('\n'));
 
   // Cap summary for PR log
-  const MAX_SUMMARY = 50;
+  const MAX_SUMMARY = 20;
   const addedSlice = sliceWithRemainder(newDocs, MAX_SUMMARY);
   const updatedSlice = sliceWithRemainder(updatedDocs, MAX_SUMMARY);
 
