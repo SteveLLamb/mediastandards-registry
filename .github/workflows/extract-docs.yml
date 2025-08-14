@@ -29,6 +29,12 @@ jobs:
           PR_LOG_PATH: "${{ runner.temp }}/pr-update-log.txt"
         run: node src/main/scripts/extractDocs.js
 
+      - name: Upload PR update details as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pr-update-details
+          path: src/main/reports/pr-update-details-*.txt
+
       - name: Check if PR should be skipped
         id: skipcheck
         run: |
