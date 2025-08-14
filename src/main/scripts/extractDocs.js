@@ -956,7 +956,10 @@ for (const doc of results) {
   const timestamp = dayjs().format('YYYYMMDD-HHmmss');
   const fullDetailsPath = `src/main/reports/extract-runs/pr-update-details-${timestamp}.txt`;
   const detailsFilePath = fullDetailsPath;
-  const detailsFileRawUrl = `https://raw.githubusercontent.com/SteveLLamb/mediastandards-registry/main/src/main/reports/extract-runs/pr-update-details-${timestamp}.txt`;
+  // Raw URL (kept for logging/diagnostics)
+  const detailsFileRawUrl = `https://raw.githubusercontent.com/SteveLLamb/mediastandards-registry/main/${fullDetailsPath}`;
+  // NEW: placeholder token that the workflow will replace with the PR /files#diff-<blob> link
+  const DETAILS_DIFF_TOKEN = '__PR_DETAILS_DIFF_LINK__';
 
   // Format full details for Added
   function formatAddedDocFull(doc) {
@@ -968,14 +971,12 @@ for (const doc of results) {
 
     // Log field updates with old and new values
     doc.fields.forEach(field => {
-      const oldVal = doc.oldValues[field];  // Use the old captured value
-      const newVal = doc.newValues[field];  // Use the new value
+      const oldVal = doc.oldValues[field];
+      const newVal = doc.newValues[field];
       const formatVal = (val) => {
         if (val === undefined) return '`undefined`';
         if (val === null) return '`null`';
-        if (typeof val === 'object') {
-          return '`' + mdEscape(JSON.stringify(val)) + '`';
-        }
+        if (typeof val === 'object') return '`' + mdEscape(JSON.stringify(val)) + '`';
         return '`' + mdEscape(String(val)) + '`';
       };
 
@@ -992,37 +993,30 @@ for (const doc of results) {
           'withdrawn',
           'withdrawnNotice'
         ];
-
         const diffs = statusFields
           .filter(k => oldStatus[k] !== newStatus[k])
           .map(k => `${k}: ${formatVal(oldStatus[k])} → ${formatVal(newStatus[k])}`);
-
-        if (diffs.length > 0) {
-          lines.push(`  - status changed: \r\n${diffs.join('\r\n')}`);
-        }
+        if (diffs.length > 0) lines.push(`  - status changed: \r\n${diffs.join('\r\n')}`);
       } else if (field === 'revisionOf') {
         lines.push(`  - revisionOf changed: ${formatVal(oldVal || [])} → ${formatVal(newVal || [])}`);
-
       } else if (field === 'references') {
-        // Skip detailed dump for references — summary will be shown in added/removed refs
+        // skip — refs summarized below
       } else {
         lines.push(`  - ${field}: ${formatVal(oldVal)} → ${formatVal(newVal)}`);
       }
     });
 
-    // Log added references
+    // Added references
     const norm = doc.addedRefs.normative;
     const bibl = doc.addedRefs.bibliographic;
     if (norm.length || bibl.length) {
-      if (norm.length) lines.push(`  - ➕ Normative Ref(s) added:\r\n ${norm.join('\r')}`);
-      if (bibl.length) lines.push(`  - ➕ Bibliographic Ref(s) added:\r\n ${bibl.join('\r')}`);
+    if (norm.length) lines.push(`  - ➕ Normative Ref(s) added:\r\n ${norm.join('\r')}`);
+    if (bibl.length) lines.push(`  - ➕ Bibliographic Ref(s) added:\r\n ${bibl.join('\r')}`);
     }
 
-    // Log removed references
-    if (doc.removedRefs.normative.length || doc.removedRefs.bibliographic.length) {
-      if (doc.removedRefs.normative.length) lines.push(`  - ➖ Normative Ref(s) removed:\r\n ${doc.removedRefs.normative.join('\r')}`);
-      if (doc.removedRefs.bibliographic.length) lines.push(`  - ➖ Bibliographic Ref(s) removed:\r\n ${doc.removedRefs.bibliographic.join('\r')}`);
-    }
+    // Removed references
+    if (doc.removedRefs.normative.length) lines.push(`  - ➖ Normative Ref(s) removed:\r\n ${doc.removedRefs.normative.join('\r')}`);
+    if (doc.removedRefs.bibliographic.length) lines.push(`  - ➖ Bibliographic Ref(s) removed:\r\n ${doc.removedRefs.bibliographic.join('\r')}`);
 
     if (doc.duplicateNormRemoved || doc.duplicateBibRemoved) {
       const types = [];
@@ -1068,11 +1062,12 @@ for (const doc of results) {
   const addedSlice = sliceWithRemainder(newDocs, MAX_SUMMARY);
   const updatedSlice = sliceWithRemainder(updatedDocs, MAX_SUMMARY);
 
+  // Build PR body lines — use TOKEN for the link target
   const prLines = [];
   prLines.push(`### 🆕 Added ${newDocs.length} new document(s):`);
   prLines.push(...addedSlice.shown.map(formatAddedDocFull));
   if (addedSlice.hidden > 0) {
-    prLines.push(`…and ${addedSlice.hidden} more — [full list here](${detailsFileRawUrl})`);
+    prLines.push(`…and ${addedSlice.hidden} more — [full list here](${DETAILS_DIFF_TOKEN})`);
   }
   prLines.push('');
   prLines.push(`### 🔁 Updated ${updatedDocs.length} existing document(s):`);
@@ -1080,7 +1075,7 @@ for (const doc of results) {
     prLines.push(formatUpdatedDocFull(doc));
   });
   if (updatedSlice.hidden > 0) {
-    prLines.push(`…and ${updatedSlice.hidden} more — [full list here](${detailsFileRawUrl})`);
+    prLines.push(`…and ${updatedSlice.hidden} more — [full list here](${DETAILS_DIFF_TOKEN})`);
   }
   prLines.push('');
   prLines.push(`### ⚠️ Skipped ${skippedDocs.length} duplicate(s)`);
@@ -1099,5 +1094,6 @@ for (const doc of results) {
   fs.writeFileSync(prLogPath, prLines.join('\n'));
   console.log(`📄 PR log updated: ${prLogPath}`);
   console.log(`📄 Full PR log details saved: ${fullDetailsPath}`);
+  console.log(`🔗 Full details (raw): ${detailsFileRawUrl}`);
 
 })();

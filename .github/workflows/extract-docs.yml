@@ -64,6 +64,20 @@ jobs:
           git add src/main/reports/extract-runs/pr-update-details-*.txt
           git diff --cached --quiet || git commit -m "Add PR update details file"
 
+      # NEW: resolve the details file path and its blob SHA from HEAD
+      - name: Resolve details file & blob SHA
+        id: details
+        run: |
+          FILE="$(git ls-files 'src/main/reports/extract-runs/pr-update-details-*.txt' | tail -n1)"
+          if [ -z "$FILE" ]; then
+            echo "file=" >> $GITHUB_OUTPUT
+            echo "blob=" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          echo "file=$FILE" >> $GITHUB_OUTPUT
+          BLOB_SHA="$(git rev-parse "HEAD:$FILE")"
+          echo "blob=$BLOB_SHA" >> $GITHUB_OUTPUT
+
       - name: Read PR log
         if: steps.skipcheck.outputs.skip == 'false'
         id: prlog
@@ -81,10 +95,11 @@ jobs:
 
       - name: Commit and create PR
         if: steps.skipcheck.outputs.skip == 'false'
+        id: cpr
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "chore: update documents.json from SMPTE sources"
+          commit-message: "Update documents.json from SMPTE sources"
           commit-options: '--allow-empty'
           branch: update-documents-json-${{ github.run_id }}
           title: "Update documents.json - ${{ env.ts }}"
@@ -92,3 +107,25 @@ jobs:
           add-paths: |
             src/main/data/documents.json
           base: main
+
+      # NEW: rewrite the PR body to use the PR Files diff anchor (not the raw URL)
+      - name: Update PR body with diff link
+        if: steps.skipcheck.outputs.skip == 'false' && steps.details.outputs.file != ''
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const prNumber = Number('${{ steps.cpr.outputs.pull-request-number }}');
+            if (!prNumber) { core.info('No PR number; skipping.'); return; }
+            const token = '__PR_DETAILS_DIFF_LINK__';
+            const blob = '${{ steps.details.outputs.blob }}';
+            const diffUrl = `https://github.com/${process.env.GITHUB_REPOSITORY}/pull/${prNumber}/files#diff-${blob}`;
+            const { data: pr } = await github.rest.pulls.get({ owner, repo, pull_number: prNumber });
+            const oldBody = pr.body || '';
+            const newBody = oldBody.split(token).join(diffUrl);
+            if (newBody !== oldBody) {
+              await github.rest.pulls.update({ owner, repo, pull_number: prNumber, body: newBody });
+              core.info('PR body updated to use diff anchor link (token replace).');
+            } else {
+              core.info('Token not found; nothing to replace.');
+            }
