@@ -40,7 +40,7 @@ function printUrlsSuiteWithChildren(label, urls) {
     let reason = '';
     for (const [suiteUrl, children] of suiteMap.entries()) {
       if (children.includes(url)) {
-        reason = ` (Doc contained in ${label.toLowerCase().includes('queued') ? 'queued' : 'filtered'} suite: ${suiteUrl})`;
+        reason = ` (Doc within ${label.toLowerCase().includes('queued') ? 'queued' : 'filtered'} suite: ${suiteUrl})`;
         break;
       }
     }
@@ -77,7 +77,7 @@ function printUrlsSuiteWithChildren(label, urls) {
 }
 
 function filterDiscoveredDocs(allDocs) {
-  const queued = [];
+  const queued = []; 
   const filtered = [];
 
   for (const { url: docUrl, suite } of allDocs) {
@@ -945,99 +945,155 @@ for (const doc of results) {
     process.exit(0);
   }
 
-  const prLines = [
-    `### 🆕 Added ${newDocs.length} new document(s):`,
-    ...newDocs.map(doc => `- ${doc.docId}`),
-    '',
-    `### 🔁 Updated ${updatedDocs.length} existing document(s):`,
-    ...updatedDocs.flatMap(doc => {
-      const lines = [`- ${doc.docId} (updated fields: ${doc.fields.join(', ')})`];
+  // --- PR log summary capping and full details file creation ---
 
-      // Log field updates with old and new values
-      doc.fields.forEach(field => {
-        const oldVal = doc.oldValues[field];  // Use the old captured value
-        const newVal = doc.newValues[field];  // Use the new value
-       const formatVal = (val) => {
-          if (val === undefined) return '`undefined`';
-          if (val === null) return '`null`';
-          if (typeof val === 'object') {
-            return '`' + mdEscape(JSON.stringify(val)) + '`';
-          }
-          return '`' + mdEscape(String(val)) + '`';
-        };
+  // Helper to slice with remainder count
+  function sliceWithRemainder(arr, max) {
+    return { shown: arr.slice(0, max), hidden: Math.max(0, arr.length - max) };
+  }
 
-        if (field === 'status') {
-          const oldStatus = doc.oldValues.status || {};
-          const newStatus = doc.newValues.status || {};
-          const statusFields = [
-            'active',
-            'latestVersion',
-            'superseded',
-            'stage',
-            'state',
-            'stabilized',
-            'withdrawn',
-            'withdrawnNotice'
-          ];
+  // Generate timestamp string in format YYYYMMDD-HHmmss
+  const timestamp = dayjs().format('YYYYMMDD-HHmmss');
+  const fullDetailsPath = `src/main/reports/pr-update-details-${timestamp}.txt`;
 
-          const diffs = statusFields
-            .filter(k => oldStatus[k] !== newStatus[k])
-            .map(k => `${k}: ${formatVal(oldStatus[k])} → ${formatVal(newStatus[k])}`);
+  // Format full details for Added
+  function formatAddedDocFull(doc) {
+    return `- ${doc.docId}`;
+  }
+  // Format full details for Updated
+  function formatUpdatedDocFull(doc) {
+    const lines = [`- ${doc.docId} (updated fields: ${doc.fields.join(', ')})`];
 
-          if (diffs.length > 0) {
-            lines.push(`  - status changed: \r\n${diffs.join('\r\n')}`);
-          }
-        } else if (field === 'revisionOf') {
-          lines.push(`  - revisionOf changed: ${formatVal(oldVal || [])} → ${formatVal(newVal || [])}`);
-
-        } else if (field === 'references') {
-          // Skip detailed dump for references — summary will be shown in added/removed refs
-        } else {
-          lines.push(`  - ${field}: ${formatVal(oldVal)} → ${formatVal(newVal)}`);
+    // Log field updates with old and new values
+    doc.fields.forEach(field => {
+      const oldVal = doc.oldValues[field];  // Use the old captured value
+      const newVal = doc.newValues[field];  // Use the new value
+      const formatVal = (val) => {
+        if (val === undefined) return '`undefined`';
+        if (val === null) return '`null`';
+        if (typeof val === 'object') {
+          return '`' + mdEscape(JSON.stringify(val)) + '`';
         }
-      });
+        return '`' + mdEscape(String(val)) + '`';
+      };
 
-      // Log added references
-      const norm = doc.addedRefs.normative;
-      const bibl = doc.addedRefs.bibliographic;
-      if (norm.length || bibl.length) {
-        if (norm.length) lines.push(`  - ➕ Normative Ref(s) added:\r\n ${norm.join('\r')}`);
-        if (bibl.length) lines.push(`  - ➕ Bibliographic Ref(s) added:\r\n ${bibl.join('\r')}`);
+      if (field === 'status') {
+        const oldStatus = doc.oldValues.status || {};
+        const newStatus = doc.newValues.status || {};
+        const statusFields = [
+          'active',
+          'latestVersion',
+          'superseded',
+          'stage',
+          'state',
+          'stabilized',
+          'withdrawn',
+          'withdrawnNotice'
+        ];
+
+        const diffs = statusFields
+          .filter(k => oldStatus[k] !== newStatus[k])
+          .map(k => `${k}: ${formatVal(oldStatus[k])} → ${formatVal(newStatus[k])}`);
+
+        if (diffs.length > 0) {
+          lines.push(`  - status changed: \r\n${diffs.join('\r\n')}`);
+        }
+      } else if (field === 'revisionOf') {
+        lines.push(`  - revisionOf changed: ${formatVal(oldVal || [])} → ${formatVal(newVal || [])}`);
+
+      } else if (field === 'references') {
+        // Skip detailed dump for references — summary will be shown in added/removed refs
+      } else {
+        lines.push(`  - ${field}: ${formatVal(oldVal)} → ${formatVal(newVal)}`);
       }
+    });
 
-      // Log removed references
-      if (doc.removedRefs.normative.length || doc.removedRefs.bibliographic.length) {
-        if (doc.removedRefs.normative.length) lines.push(`  - ➖ Normative Ref(s) removed:\r\n ${doc.removedRefs.normative.join('\r')}`);
-        if (doc.removedRefs.bibliographic.length) lines.push(`  - ➖ Bibliographic Ref(s) removed:\r\n ${doc.removedRefs.bibliographic.join('\r')}`);
-      }
+    // Log added references
+    const norm = doc.addedRefs.normative;
+    const bibl = doc.addedRefs.bibliographic;
+    if (norm.length || bibl.length) {
+      if (norm.length) lines.push(`  - ➕ Normative Ref(s) added:\r\n ${norm.join('\r')}`);
+      if (bibl.length) lines.push(`  - ➕ Bibliographic Ref(s) added:\r\n ${bibl.join('\r')}`);
+    }
 
-      if (doc.duplicateNormRemoved || doc.duplicateBibRemoved) {
-        const types = [];
-        if (doc.duplicateNormRemoved) types.push('normative');
-        if (doc.duplicateBibRemoved) types.push('bibliographic');
-        lines.push(`  - 🔄 Duplicate ${types.join('/')} reference(s) removed`);
-      }
+    // Log removed references
+    if (doc.removedRefs.normative.length || doc.removedRefs.bibliographic.length) {
+      if (doc.removedRefs.normative.length) lines.push(`  - ➖ Normative Ref(s) removed:\r\n ${doc.removedRefs.normative.join('\r')}`);
+      if (doc.removedRefs.bibliographic.length) lines.push(`  - ➖ Bibliographic Ref(s) removed:\r\n ${doc.removedRefs.bibliographic.join('\r')}`);
+    }
 
-      return lines;
-    }),
-    '',
-    `### ⚠️ Skipped ${skippedDocs.length} duplicate(s)`,
-    ''
-  ];
+    if (doc.duplicateNormRemoved || doc.duplicateBibRemoved) {
+      const types = [];
+      if (doc.duplicateNormRemoved) types.push('normative');
+      if (doc.duplicateBibRemoved) types.push('bibliographic');
+      lines.push(`  - 🔄 Duplicate ${types.join('/')} reference(s) removed`);
+    }
+    return lines.join('\n');
+  }
+
+  // Prepare full details lines
+  const fullDetailsLines = [];
+  fullDetailsLines.push(`### 🆕 Added ${newDocs.length} new document(s):`);
+  fullDetailsLines.push(...newDocs.map(formatAddedDocFull));
+  fullDetailsLines.push('');
+  fullDetailsLines.push(`### 🔁 Updated ${updatedDocs.length} existing document(s):`);
+  updatedDocs.forEach(doc => {
+    fullDetailsLines.push(formatUpdatedDocFull(doc));
+  });
+  fullDetailsLines.push('');
+  fullDetailsLines.push(`### ⚠️ Skipped ${skippedDocs.length} duplicate(s)`);
+  skippedDocs.forEach(docId => {
+    fullDetailsLines.push(`- ${docId}`);
+  });
+  fullDetailsLines.push('');
+  // Add unparseable refs if any
+  if (badRefs.length > 0) {
+    fullDetailsLines.push('### 🚫 Unparseable References Found:\n');
+    badRefs.forEach(ref => {
+      fullDetailsLines.push(`- From ${ref.docId} (${ref.type}):`);
+      fullDetailsLines.push(`  - cite: ${ref.refText}`);
+      if (ref.href) fullDetailsLines.push(`  - href: ${ref.href}`);
+    });
+    fullDetailsLines.push('');
+  }
+
+  // Write full details file
+  fs.mkdirSync('src/main/reports', { recursive: true });
+  fs.writeFileSync(fullDetailsPath, fullDetailsLines.join('\n'));
+
+  // Cap summary for PR log
+  const MAX_SUMMARY = 50;
+  const addedSlice = sliceWithRemainder(newDocs, MAX_SUMMARY);
+  const updatedSlice = sliceWithRemainder(updatedDocs, MAX_SUMMARY);
+
+  const prLines = [];
+  prLines.push(`### 🆕 Added ${newDocs.length} new document(s):`);
+  prLines.push(...addedSlice.shown.map(formatAddedDocFull));
+  if (addedSlice.hidden > 0) {
+    prLines.push(`…and ${addedSlice.hidden} more — full list in reports/pr-update-details-${timestamp}.txt`);
+  }
+  prLines.push('');
+  prLines.push(`### 🔁 Updated ${updatedDocs.length} existing document(s):`);
+  updatedSlice.shown.forEach(doc => {
+    prLines.push(formatUpdatedDocFull(doc));
+  });
+  if (updatedSlice.hidden > 0) {
+    prLines.push(`…and ${updatedSlice.hidden} more — full list in reports/pr-update-details-${timestamp}.txt`);
+  }
+  prLines.push('');
+  prLines.push(`### ⚠️ Skipped ${skippedDocs.length} duplicate(s)`);
+  prLines.push('');
+  // Add unparseable refs summary to PR log if present
+  if (badRefs.length > 0) {
+    prLines.push('### 🚫 Unparseable References Found:\n');
+    badRefs.forEach(ref => {
+      prLines.push(`- From ${ref.docId} (${ref.type}):`);
+      prLines.push(`  - cite: ${ref.refText}`);
+      if (ref.href) prLines.push(`  - href: ${ref.href}`);
+    });
+    prLines.push('');
+  }
 
   fs.writeFileSync(prLogPath, prLines.join('\n'));
   console.log(`📄 PR log updated: ${prLogPath}`);
-
-  if (badRefs.length > 0) {
-    const lines = ['### 🚫 Unparseable References Found:\n'];
-    badRefs.forEach(ref => {
-      lines.push(`- From ${ref.docId} (${ref.type}):`);
-      lines.push(`  - cite: ${ref.refText}`);
-      if (ref.href) lines.push(`  - href: ${ref.href}`);
-    });
-
-    fs.writeFileSync(prLogPath, prLines.join('\n'));
-    console.log(`📄 PR log updated: ${prLogPath}`);
-  }
-
-})();
+  console.log(`📄 Full PR log details saved: ${fullDetailsPath}`);
