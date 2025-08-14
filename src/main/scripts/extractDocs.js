@@ -954,7 +954,9 @@ for (const doc of results) {
 
   // Generate timestamp string in format YYYYMMDD-HHmmss
   const timestamp = dayjs().format('YYYYMMDD-HHmmss');
-  const fullDetailsPath = `src/main/reports/pr-update-details-${timestamp}.txt`;
+  const fullDetailsPath = `src/main/reports/extract-runs/pr-update-details-${timestamp}.txt`;
+  const detailsFilePath = fullDetailsPath;
+  const detailsFileRawUrl = `https://raw.githubusercontent.com/SteveLLamb/mediastandards-registry/main/src/main/reports/extract-runs/pr-update-details-${timestamp}.txt`;
 
   // Format full details for Added
   function formatAddedDocFull(doc) {
@@ -1058,7 +1060,7 @@ for (const doc of results) {
   }
 
   // Write full details file
-  fs.mkdirSync('src/main/reports', { recursive: true });
+  fs.mkdirSync('src/main/reports/extract-runs', { recursive: true });
   fs.writeFileSync(fullDetailsPath, fullDetailsLines.join('\n'));
 
   // Cap summary for PR log
@@ -1070,7 +1072,7 @@ for (const doc of results) {
   prLines.push(`### 🆕 Added ${newDocs.length} new document(s):`);
   prLines.push(...addedSlice.shown.map(formatAddedDocFull));
   if (addedSlice.hidden > 0) {
-    prLines.push(`…and ${addedSlice.hidden} more — full list in reports/pr-update-details-${timestamp}.txt`);
+    prLines.push(`…and ${addedSlice.hidden} more — [full list here](${detailsFileRawUrl})`);
   }
   prLines.push('');
   prLines.push(`### 🔁 Updated ${updatedDocs.length} existing document(s):`);
@@ -1078,7 +1080,7 @@ for (const doc of results) {
     prLines.push(formatUpdatedDocFull(doc));
   });
   if (updatedSlice.hidden > 0) {
-    prLines.push(`…and ${updatedSlice.hidden} more — full list in reports/pr-update-details-${timestamp}.txt`);
+    prLines.push(`…and ${updatedSlice.hidden} more — [full list here](${detailsFileRawUrl})`);
   }
   prLines.push('');
   prLines.push(`### ⚠️ Skipped ${skippedDocs.length} duplicate(s)`);
