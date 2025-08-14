@@ -10,8 +10,8 @@ const FULL_LOG = path.join(RUNNER_TEMP, 'extract-full.log');
 const BYTE_BUDGET = Number(process.env.MSR_CONSOLE_BUDGET || 3.5 * 1024 * 1024);
 
 // Heartbeat: print a progress line every N docs (default 100)
-const HEARTBEAT_EVERY = Number(process.env.MSR_HEARTBEAT_EVERY || 100);
-const HEARTBEAT_PREFIX = process.env.MSR_HEARTBEAT_PREFIX || '💓 Still alive';
+const HEARTBEAT_EVERY = Number(process.env.MSR_HEARTBEAT_EVERY || 50);
+const HEARTBEAT_PREFIX = process.env.MSR_HEARTBEAT_PREFIX || '... still processing, standby...';
 
 // Internal state
 const _origConsoleLog = console.log.bind(console);

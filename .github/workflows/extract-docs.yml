@@ -28,7 +28,7 @@ jobs:
           IS_PR_RUN: true
           PR_LOG_PATH: "${{ runner.temp }}/pr-update-log.txt"
           MSR_CONSOLE_BUDGET: "3670016"       # ~3.5 MiB (override if you want)
-          MSR_HEARTBEAT_EVERY: "100"          # print heartbeat every 100 docs
+          MSR_HEARTBEAT_EVERY: "50"          # print heartbeat every XX docs
           MSR_HEARTBEAT_PREFIX: "... still processing, standby..."
         run: node src/main/scripts/extractDocs.js
 
