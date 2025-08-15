@@ -200,6 +200,9 @@ const metaConfig = {
     publisher: { confidence: 'high', note: 'Static: SMPTE' },
     'status.stage': { confidence: 'high', note: 'Stage parsed from HTML pubStage meta tag' },
     'status.state': { confidence: 'high', note: 'State parsed from HTML pubState meta tag' },
+    'status.stabilized': { confidence: 'high', note: 'Parsed from wrapper #state' },
+    'status.withdrawn': { confidence: 'high', note: 'Parsed from wrapper #state' },
+    'status.withdrawnNotice': { confidence: 'high', note: 'Withdrawal notice link parsed from wrapper' },
     references: { confidence: 'high', note: 'Parsed from HTML references sections' },
     revisionOf: { confidence: 'high', note: 'Parsed from HTML pubRevisionOf meta tag' },
     default: { confidence: 'high', note: 'Extracted directly from HTML' }
@@ -736,11 +739,10 @@ for (const doc of results) {
       }
       injectMetaForDoc(doc, sourceType, 'new');
       if (doc.__withdrawnNoticeNote && doc.status && doc.status.withdrawnNotice) {
-        // Ensure meta exists (some edge cases may skip it)
-        if (!doc.status['withdrawnNotice$meta']) {
-          injectMeta(doc.status, 'withdrawnNotice', 'parsed', 'new', undefined);
+        // Meta for withdrawnNotice is created by injectMetaForDoc; just update the note
+        if (doc.status['withdrawnNotice$meta']) {
+          doc.status['withdrawnNotice$meta'].note = doc.__withdrawnNoticeNote;
         }
-        doc.status['withdrawnNotice$meta'].note = doc.__withdrawnNoticeNote;
       }
       if (doc.references) {
         injectMeta(doc.references, 'normative', sourceType, 'new', []);
