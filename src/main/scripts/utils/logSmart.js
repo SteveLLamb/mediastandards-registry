@@ -11,7 +11,8 @@ const BYTE_BUDGET = Number(process.env.MSR_CONSOLE_BUDGET || 3.5 * 1024 * 1024);
 
 // Heartbeat: print a progress line every N docs (default 100)
 const HEARTBEAT_EVERY = Number(process.env.MSR_HEARTBEAT_EVERY || 50);
-const HEARTBEAT_PREFIX = process.env.MSR_HEARTBEAT_PREFIX || '... still processing, standby...';
+const HEARTBEAT_PREFIX = process.env.MSR_HEARTBEAT_PREFIX || ' 💓 ... still processing';
+console.log(`[💓 Heartbeat settings]\n  MSR_HEARTBEAT_EVERY: ${HEARTBEAT_EVERY} \n  MSR_HEARTBEAT_PREFIX: ${HEARTBEAT_PREFIX}`);
 
 // Internal state
 const _origConsoleLog = console.log.bind(console);
@@ -30,13 +31,12 @@ function logSmart(line) {
   if (_consoleBytes + b > BYTE_BUDGET) {
     _hushed = true;
     _origConsoleLog(`🔇 Console quieted after ~${(_consoleBytes/1048576).toFixed(2)} MiB. Continuing in ${FULL_LOG}`);
-    return; // this line goes to file only
+    return;
     // (Subsequent lines will be file-only until process end)
   }
   _consoleBytes += b;
   _origConsoleLog(s);
 }
-
 // Optional: use as a drop-in replacement where you had console.log on noisy paths
 // console.log(...)  ->  logSmart(...)
 
@@ -45,7 +45,7 @@ function heartbeat(done, total) {
   if (done - _lastBeatCount < HEARTBEAT_EVERY) return;
   _lastBeatCount = done;
   const pct = total ? ` (${Math.floor((done / total) * 100)}%)` : '';
-  logSmart(`${HEARTBEAT_PREFIX} — ${done}${total ? '/' + total : ''}${pct}`);
+  logSmart(`[HB pid:${process.pid}] ${HEARTBEAT_PREFIX} — ${done}${total ? '/' + total : ''}${pct}`);
 }
 
 process.on('exit', () => {
