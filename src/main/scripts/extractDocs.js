@@ -202,7 +202,7 @@ const metaConfig = {
     'status.state': { confidence: 'high', note: 'State parsed from HTML pubState meta tag' },
     'status.stabilized': { confidence: 'high', note: 'Parsed from wrapper #state' },
     'status.withdrawn': { confidence: 'high', note: 'Parsed from wrapper #state' },
-    'status.withdrawnNotice': { confidence: 'high', note: 'Withdrawal notice link parsed from wrapper' },
+    'status.withdrawnNotice': { confidence: 'high', note: 'Parsed from wrapper #withdrawal-statement' },
     references: { confidence: 'high', note: 'Parsed from HTML references sections' },
     revisionOf: { confidence: 'high', note: 'Parsed from HTML pubRevisionOf meta tag' },
     default: { confidence: 'high', note: 'Extracted directly from HTML' }
@@ -555,8 +555,8 @@ const extractFromUrl = async (rootUrl) => {
             const ok = await urlReachable(absNotice);
             suffix = ok ? 'verified reachable' : suffix;
           } catch (_) {}
-          Object.defineProperty(doc, '__withdrawnNoticeNote', {
-            value: `Extracted directly from HTML (${suffix})`,
+          Object.defineProperty(doc, '__withdrawnNoticeSuffix', {
+            value: suffix,
             enumerable: false
           });
         }
@@ -738,15 +738,13 @@ for (const doc of results) {
         delete doc.repo;
       }
       injectMetaForDoc(doc, sourceType, 'new');
-      if (doc.__withdrawnNoticeNote && doc.status && doc.status.withdrawnNotice) {
-        // Meta for withdrawnNotice is created by injectMetaForDoc; just update the note
-        if (doc.status['withdrawnNotice$meta']) {
-          doc.status['withdrawnNotice$meta'].note = doc.__withdrawnNoticeNote;
-        }
-      }
       if (doc.references) {
         injectMeta(doc.references, 'normative', sourceType, 'new', []);
         injectMeta(doc.references, 'bibliographic', sourceType, 'new', []);
+      }
+      if (doc.status && doc.status.withdrawnNotice && doc.status['withdrawnNotice$meta'] && doc.__withdrawnNoticeSuffix) {
+        const baseNote = doc.status['withdrawnNotice$meta'].note || getMetaDefaults('parsed', 'status.withdrawnNotice').note;
+        doc.status['withdrawnNotice$meta'].note = baseNote + ' — ' + doc.__withdrawnNoticeSuffix;
       }
       logSmart(`   ➕ Adding ${doc.docId} (new document)`);
       newDocs.push(doc);
@@ -862,13 +860,14 @@ for (const doc of results) {
             const oldWN = oldValues?.status?.withdrawnNotice;
             if (newWN !== undefined) {
               if (!existingDoc.status['withdrawnNotice$meta']) {
-                // Create meta even if value didn't change — note still needs refresh
                 injectMeta(existingDoc.status, 'withdrawnNotice', 'parsed', 'update', oldWN);
               }
-              if (doc.__withdrawnNoticeNote) {
-                existingDoc.status['withdrawnNotice$meta'].note = doc.__withdrawnNoticeNote;
+              // Append reachability suffix to note (preserve base metaConfig note)
+              if (doc.__withdrawnNoticeSuffix) {
+                const baseNote = existingDoc.status['withdrawnNotice$meta'].note || getMetaDefaults('parsed', 'status.withdrawnNotice').note;
+                existingDoc.status['withdrawnNotice$meta'].note = baseNote + ' — ' + doc.__withdrawnNoticeSuffix;
               }
-              if (!changedFields.includes('status')) changedFields.push('status'); // reflect meta/note refresh under status
+              if (!changedFields.includes('status')) changedFields.push('status');
             }
           } else if (key === 'revisionOf') {
             const oldList = Array.isArray(oldVal) ? oldVal.map(String) : [];
