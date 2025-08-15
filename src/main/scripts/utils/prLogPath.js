@@ -20,7 +20,7 @@ function getPrLogPath() {
   }
 
   // Local run → reports folder with timestamp
-  const reportsDir = path.resolve(__dirname, '../../reports');
+  const reportsDir = path.resolve(__dirname, '../../logs/extract-runs/');
   if (!fs.existsSync(reportsDir)) {
     fs.mkdirSync(reportsDir, { recursive: true });
   }

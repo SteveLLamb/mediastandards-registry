@@ -1,0 +1,524 @@
+2025-08-01T00:35:32.7033559Z Current runner version: '2.327.1'
+2025-08-01T00:35:32.7057811Z ##[group]Runner Image Provisioner
+2025-08-01T00:35:32.7058591Z Hosted Compute Agent
+2025-08-01T00:35:32.7059135Z Version: 20250711.363
+2025-08-01T00:35:32.7059748Z Commit: 6785254374ce925a23743850c1cb91912ce5c14c
+2025-08-01T00:35:32.7060450Z Build Date: 2025-07-11T20:04:25Z
+2025-08-01T00:35:32.7061189Z ##[endgroup]
+2025-08-01T00:35:32.7061757Z ##[group]Operating System
+2025-08-01T00:35:32.7062331Z Ubuntu
+2025-08-01T00:35:32.7062776Z 24.04.2
+2025-08-01T00:35:32.7063283Z LTS
+2025-08-01T00:35:32.7063804Z ##[endgroup]
+2025-08-01T00:35:32.7064293Z ##[group]Runner Image
+2025-08-01T00:35:32.7064813Z Image: ubuntu-24.04
+2025-08-01T00:35:32.7065382Z Version: 20250728.1.0
+2025-08-01T00:35:32.7066378Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20250728.1/images/ubuntu/Ubuntu2404-Readme.md
+2025-08-01T00:35:32.7067941Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20250728.1
+2025-08-01T00:35:32.7068904Z ##[endgroup]
+2025-08-01T00:35:32.7070060Z ##[group]GITHUB_TOKEN Permissions
+2025-08-01T00:35:32.7072008Z Contents: write
+2025-08-01T00:35:32.7072546Z Metadata: read
+2025-08-01T00:35:32.7073127Z PullRequests: write
+2025-08-01T00:35:32.7073642Z ##[endgroup]
+2025-08-01T00:35:32.7076002Z Secret source: Actions
+2025-08-01T00:35:32.7077010Z Prepare workflow directory
+2025-08-01T00:35:32.7402937Z Prepare all required actions
+2025-08-01T00:35:32.7442743Z Getting action download info
+2025-08-01T00:35:33.1639634Z ##[group]Download immutable action package 'actions/checkout@v4'
+2025-08-01T00:35:33.1640641Z Version: 4.2.2
+2025-08-01T00:35:33.1641958Z Digest: sha256:ccb2698953eaebd21c7bf6268a94f9c26518a7e38e27e0b83c1fe1ad049819b1
+2025-08-01T00:35:33.1643105Z Source commit SHA: 11bd71901bbe5b1630ceea73d27597364c9af683
+2025-08-01T00:35:33.1643773Z ##[endgroup]
+2025-08-01T00:35:33.2879124Z ##[group]Download immutable action package 'actions/setup-node@v4'
+2025-08-01T00:35:33.2879914Z Version: 4.4.0
+2025-08-01T00:35:33.2881011Z Digest: sha256:9427cefe82346e992fb5b949e3569b39d537ae41aa3086483b14eceebfc16bc1
+2025-08-01T00:35:33.2881949Z Source commit SHA: 49933ea5288caeca8642d1e84afbd3f7d6820020
+2025-08-01T00:35:33.2882627Z ##[endgroup]
+2025-08-01T00:35:33.3824172Z Download action repository 'peter-evans/create-pull-request@v6' (SHA:c5a7806660adbe173f04e3e038b0ccdcd758773c)
+2025-08-01T00:35:34.3363755Z Complete job name: extract
+2025-08-01T00:35:34.4194323Z ##[group]Run actions/checkout@v4
+2025-08-01T00:35:34.4195621Z with:
+2025-08-01T00:35:34.4196468Z   repository: SteveLLamb/mediastandards-registry
+2025-08-01T00:35:34.4197874Z   token: ***
+2025-08-01T00:35:34.4198599Z   ssh-strict: true
+2025-08-01T00:35:34.4199341Z   ssh-user: git
+2025-08-01T00:35:34.4200116Z   persist-credentials: true
+2025-08-01T00:35:34.4201206Z   clean: true
+2025-08-01T00:35:34.4201988Z   sparse-checkout-cone-mode: true
+2025-08-01T00:35:34.4202948Z   fetch-depth: 1
+2025-08-01T00:35:34.4203688Z   fetch-tags: false
+2025-08-01T00:35:34.4204459Z   show-progress: true
+2025-08-01T00:35:34.4205274Z   lfs: false
+2025-08-01T00:35:34.4205998Z   submodules: false
+2025-08-01T00:35:34.4206790Z   set-safe-directory: true
+2025-08-01T00:35:34.4207905Z ##[endgroup]
+2025-08-01T00:35:34.5279276Z Syncing repository: SteveLLamb/mediastandards-registry
+2025-08-01T00:35:34.5282681Z ##[group]Getting Git version info
+2025-08-01T00:35:34.5284483Z Working directory is '/home/runner/work/mediastandards-registry/mediastandards-registry'
+2025-08-01T00:35:34.5286698Z [command]/usr/bin/git version
+2025-08-01T00:35:34.5349370Z git version 2.50.1
+2025-08-01T00:35:34.5376419Z ##[endgroup]
+2025-08-01T00:35:34.5392296Z Temporarily overriding HOME='/home/runner/work/_temp/40383f77-ce4a-46cd-a00c-2f296dcadeaa' before making global git config changes
+2025-08-01T00:35:34.5395243Z Adding repository directory to the temporary git global config as a safe directory
+2025-08-01T00:35:34.5405518Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/mediastandards-registry/mediastandards-registry
+2025-08-01T00:35:34.5449605Z Deleting the contents of '/home/runner/work/mediastandards-registry/mediastandards-registry'
+2025-08-01T00:35:34.5452899Z ##[group]Initializing the repository
+2025-08-01T00:35:34.5457237Z [command]/usr/bin/git init /home/runner/work/mediastandards-registry/mediastandards-registry
+2025-08-01T00:35:34.5570797Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-08-01T00:35:34.5572903Z hint: is subject to change. To configure the initial branch name to use in all
+2025-08-01T00:35:34.5575947Z hint: of your new repositories, which will suppress this warning, call:
+2025-08-01T00:35:34.5578132Z hint:
+2025-08-01T00:35:34.5579146Z hint: 	git config --global init.defaultBranch <name>
+2025-08-01T00:35:34.5580267Z hint:
+2025-08-01T00:35:34.5581806Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-08-01T00:35:34.5584057Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-08-01T00:35:34.5585467Z hint:
+2025-08-01T00:35:34.5586153Z hint: 	git branch -m <name>
+2025-08-01T00:35:34.5587258Z hint:
+2025-08-01T00:35:34.5588393Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-08-01T00:35:34.5592211Z Initialized empty Git repository in /home/runner/work/mediastandards-registry/mediastandards-registry/.git/
+2025-08-01T00:35:34.5595957Z [command]/usr/bin/git remote add origin https://github.com/SteveLLamb/mediastandards-registry
+2025-08-01T00:35:34.5629496Z ##[endgroup]
+2025-08-01T00:35:34.5631347Z ##[group]Disabling automatic garbage collection
+2025-08-01T00:35:34.5633361Z [command]/usr/bin/git config --local gc.auto 0
+2025-08-01T00:35:34.5661437Z ##[endgroup]
+2025-08-01T00:35:34.5662716Z ##[group]Setting up auth
+2025-08-01T00:35:34.5667999Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-08-01T00:35:34.5697702Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-08-01T00:35:34.6025484Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-08-01T00:35:34.6056272Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-08-01T00:35:34.6275788Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-08-01T00:35:34.6308802Z ##[endgroup]
+2025-08-01T00:35:34.6310137Z ##[group]Fetching the repository
+2025-08-01T00:35:34.6327860Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +d2bc14632154cd46db307e05c388398e0158f5b1:refs/remotes/origin/main
+2025-08-01T00:35:35.2202519Z From https://github.com/SteveLLamb/mediastandards-registry
+2025-08-01T00:35:35.2204060Z  * [new ref]         d2bc14632154cd46db307e05c388398e0158f5b1 -> origin/main
+2025-08-01T00:35:35.2232250Z ##[endgroup]
+2025-08-01T00:35:35.2235867Z ##[group]Determining the checkout info
+2025-08-01T00:35:35.2237965Z ##[endgroup]
+2025-08-01T00:35:35.2241199Z [command]/usr/bin/git sparse-checkout disable
+2025-08-01T00:35:35.2285097Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-08-01T00:35:35.2314287Z ##[group]Checking out the ref
+2025-08-01T00:35:35.2318605Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2025-08-01T00:35:35.2468279Z Switched to a new branch 'main'
+2025-08-01T00:35:35.2469751Z branch 'main' set up to track 'origin/main'.
+2025-08-01T00:35:35.2476022Z ##[endgroup]
+2025-08-01T00:35:35.2516953Z [command]/usr/bin/git log -1 --format=%H
+2025-08-01T00:35:35.2537853Z d2bc14632154cd46db307e05c388398e0158f5b1
+2025-08-01T00:35:35.2806658Z ##[group]Run actions/setup-node@v4
+2025-08-01T00:35:35.2807508Z with:
+2025-08-01T00:35:35.2808089Z   node-version: 20
+2025-08-01T00:35:35.2808933Z   always-auth: false
+2025-08-01T00:35:35.2809610Z   check-latest: false
+2025-08-01T00:35:35.2810511Z   token: ***
+2025-08-01T00:35:35.2811320Z ##[endgroup]
+2025-08-01T00:35:35.4578161Z Found in cache @ /opt/hostedtoolcache/node/20.19.4/x64
+2025-08-01T00:35:35.4582096Z ##[group]Environment details
+2025-08-01T00:35:35.7973284Z node: v20.19.4
+2025-08-01T00:35:35.7974670Z npm: 10.8.2
+2025-08-01T00:35:35.7975131Z yarn: 1.22.22
+2025-08-01T00:35:35.7976350Z ##[endgroup]
+2025-08-01T00:35:35.8079367Z ##[group]Run npm install axios cheerio dayjs
+2025-08-01T00:35:35.8079888Z [36;1mnpm install axios cheerio dayjs[0m
+2025-08-01T00:35:35.8118488Z shell: /usr/bin/bash -e {0}
+2025-08-01T00:35:35.8118835Z ##[endgroup]
+2025-08-01T00:35:41.1107500Z 
+2025-08-01T00:35:41.1121866Z added 113 packages, and audited 114 packages in 5s
+2025-08-01T00:35:41.1122596Z 
+2025-08-01T00:35:41.1123144Z 33 packages are looking for funding
+2025-08-01T00:35:41.1123837Z   run `npm fund` for details
+2025-08-01T00:35:41.1139168Z 
+2025-08-01T00:35:41.1139778Z 2 high severity vulnerabilities
+2025-08-01T00:35:41.1140227Z 
+2025-08-01T00:35:41.1140830Z To address all issues (including breaking changes), run:
+2025-08-01T00:35:41.1141438Z   npm audit fix --force
+2025-08-01T00:35:41.1141671Z 
+2025-08-01T00:35:41.1141905Z Run `npm audit` for details.
+2025-08-01T00:35:41.1346206Z ##[group]Run node src/main/scripts/extractDocs.js
+2025-08-01T00:35:41.1346605Z [36;1mnode src/main/scripts/extractDocs.js[0m
+2025-08-01T00:35:41.1374552Z shell: /usr/bin/bash -e {0}
+2025-08-01T00:35:41.1437174Z env:
+2025-08-01T00:35:41.1437457Z   IS_PR_RUN: true
+2025-08-01T00:35:41.1437823Z   PR_LOG_PATH: /home/runner/work/_temp/pr-update-log.txt
+2025-08-01T00:35:41.1438318Z ##[endgroup]
+2025-08-01T00:35:41.5647677Z 🔍 Processing https://pub.smpte.org/doc/rp428-22/20250627-pub/
+2025-08-01T00:35:41.6166793Z 🔍 Processing https://pub.smpte.org/doc/st428-24/20241101-pub/
+2025-08-01T00:35:41.6469134Z 🔍 Processing https://pub.smpte.org/doc/st429-2/20090311-pub/
+2025-08-01T00:35:44.9933255Z ⚠️ No index.html found at https://pub.smpte.org/doc/st429-2/20090311-pub/
+2025-08-01T00:35:44.9938476Z 🔍 Processing https://pub.smpte.org/doc/st429-2/20110923-pub/
+2025-08-01T00:35:44.9939588Z 📄 Likely PDF-only release — inferred docId: SMPTE.ST429-2.2009
+2025-08-01T00:35:45.3274463Z ⚠️ No index.html found at https://pub.smpte.org/doc/st429-2/20110923-pub/
+2025-08-01T00:35:45.3277053Z 📄 Likely PDF-only release — inferred docId: SMPTE.ST429-2.2011
+2025-08-01T00:35:45.3278033Z 🔍 Processing https://pub.smpte.org/doc/st429-2/20130116-am1-pub/
+2025-08-01T00:35:45.6681569Z ⚠️ No index.html found at https://pub.smpte.org/doc/st429-2/20130116-am1-pub/
+2025-08-01T00:35:45.6690083Z 📄 Likely PDF-only release — inferred docId: SMPTE.ST429-2.2011Am1.2013
+2025-08-01T00:35:45.6691448Z 🔍 Processing https://pub.smpte.org/doc/st429-2/20130928-pub/
+2025-08-01T00:35:45.9849970Z ⚠️ No index.html found at https://pub.smpte.org/doc/st429-2/20130928-pub/
+2025-08-01T00:35:45.9851475Z 📄 Likely PDF-only release — inferred docId: SMPTE.ST429-2.2013
+2025-08-01T00:35:45.9852616Z 🔍 Processing https://pub.smpte.org/doc/st429-2/20181231-am1-pub/
+2025-08-01T00:35:46.3425208Z ⚠️ No index.html found at https://pub.smpte.org/doc/st429-2/20181231-am1-pub/
+2025-08-01T00:35:46.3428563Z 📄 Likely PDF-only release — inferred docId: SMPTE.ST429-2.2013Am1.2018
+2025-08-01T00:35:46.3429981Z 🔍 Processing https://pub.smpte.org/doc/st429-2/20191111-pub/
+2025-08-01T00:35:46.7080913Z ⚠️ No index.html found at https://pub.smpte.org/doc/st429-2/20191111-pub/
+2025-08-01T00:35:46.7082193Z 📄 Likely PDF-only release — inferred docId: SMPTE.ST429-2.2019
+2025-08-01T00:35:46.7083236Z 🔍 Processing https://pub.smpte.org/doc/st429-2/20201027-pub/
+2025-08-01T00:35:47.0232138Z ⚠️ No index.html found at https://pub.smpte.org/doc/st429-2/20201027-pub/
+2025-08-01T00:35:47.0233361Z 📄 Likely PDF-only release — inferred docId: SMPTE.ST429-2.2020
+2025-08-01T00:35:47.0234364Z 🔍 Processing https://pub.smpte.org/doc/st429-2/20230912-pub/
+2025-08-01T00:35:47.0753859Z 🔍 Processing https://pub.smpte.org/doc/st429-4/20061003-pub/
+2025-08-01T00:35:47.4118963Z ⚠️ No index.html found at https://pub.smpte.org/doc/st429-4/20061003-pub/
+2025-08-01T00:35:47.4119672Z 📄 Likely PDF-only release — inferred docId: SMPTE.ST429-4.2006
+2025-08-01T00:35:47.4121011Z 🔍 Processing https://pub.smpte.org/doc/st429-4/20200227-pub/
+2025-08-01T00:35:47.7270882Z ⚠️ No index.html found at https://pub.smpte.org/doc/st429-4/20200227-pub/
+2025-08-01T00:35:47.7272320Z 📄 Likely PDF-only release — inferred docId: SMPTE.ST429-4.2020
+2025-08-01T00:35:47.7273386Z 🔍 Processing https://pub.smpte.org/doc/st429-4/20230504-pub/
+2025-08-01T00:35:47.7519566Z 🔍 Processing https://pub.smpte.org/doc/st429-10/20080215-pub/
+2025-08-01T00:35:48.0618764Z ⚠️ No index.html found at https://pub.smpte.org/doc/st429-10/20080215-pub/
+2025-08-01T00:35:48.0619961Z 📄 Likely PDF-only release — inferred docId: SMPTE.ST429-10.2008
+2025-08-01T00:35:48.0621326Z 🔍 Processing https://pub.smpte.org/doc/st429-10/20230912-pub/
+2025-08-01T00:35:48.0834949Z 🔍 Processing https://pub.smpte.org/doc/st430-1/20061003-pub/
+2025-08-01T00:35:48.3992757Z ⚠️ No index.html found at https://pub.smpte.org/doc/st430-1/20061003-pub/
+2025-08-01T00:35:48.3993491Z 📄 Likely PDF-only release — inferred docId: SMPTE.ST430-1.2006
+2025-08-01T00:35:48.3994596Z 🔍 Processing https://pub.smpte.org/doc/st430-1/20090109-am1-pub/
+2025-08-01T00:35:48.7448262Z ⚠️ No index.html found at https://pub.smpte.org/doc/st430-1/20090109-am1-pub/
+2025-08-01T00:35:48.7449570Z 📄 Likely PDF-only release — inferred docId: SMPTE.ST430-1.2006Am1.2009
+2025-08-01T00:35:48.7450215Z 🔍 Processing https://pub.smpte.org/doc/st430-1/20170112-pub/
+2025-08-01T00:35:49.0595200Z ⚠️ No index.html found at https://pub.smpte.org/doc/st430-1/20170112-pub/
+2025-08-01T00:35:49.0596894Z 📄 Likely PDF-only release — inferred docId: SMPTE.ST430-1.2017
+2025-08-01T00:35:49.0598016Z 🔍 Processing https://pub.smpte.org/doc/st430-1/20190618-am1-pub/
+2025-08-01T00:35:49.3971245Z ⚠️ No index.html found at https://pub.smpte.org/doc/st430-1/20190618-am1-pub/
+2025-08-01T00:35:49.3972536Z 📄 Likely PDF-only release — inferred docId: SMPTE.ST430-1.2017Am1.2019
+2025-08-01T00:35:49.3973550Z 🔍 Processing https://pub.smpte.org/doc/st430-1/20230907-pub/
+2025-08-01T00:36:02.4716228Z ✅ Added 2 new documents.
+2025-08-01T00:36:02.4716937Z 🔁 Updated 16 documents.
+2025-08-01T00:36:02.4717739Z ⚠️ Skipped 2 duplicate document(s):
+2025-08-01T00:36:02.4718296Z - SMPTE.ST429-10.2008
+2025-08-01T00:36:02.4718776Z - SMPTE.ST429-10.2023-09
+2025-08-01T00:36:02.4726222Z 📄 PR log updated: /home/runner/work/_temp/pr-update-log.txt
+2025-08-01T00:36:02.4921242Z ##[group]Run if grep -q "No new or updated documents" "/home/runner/work/_temp/pr-update-log.txt"; then
+2025-08-01T00:36:02.4921916Z [36;1mif grep -q "No new or updated documents" "/home/runner/work/_temp/pr-update-log.txt"; then[0m
+2025-08-01T00:36:02.4922332Z [36;1m  echo "skip=true" >> $GITHUB_OUTPUT[0m
+2025-08-01T00:36:02.4922573Z [36;1melse[0m
+2025-08-01T00:36:02.4922789Z [36;1m  echo "skip=false" >> $GITHUB_OUTPUT[0m
+2025-08-01T00:36:02.4923020Z [36;1mfi[0m
+2025-08-01T00:36:02.4950640Z shell: /usr/bin/bash -e {0}
+2025-08-01T00:36:02.4951058Z ##[endgroup]
+2025-08-01T00:36:02.5056630Z ##[group]Run npm run validate
+2025-08-01T00:36:02.5056910Z [36;1mnpm run validate[0m
+2025-08-01T00:36:02.5083976Z shell: /usr/bin/bash -e {0}
+2025-08-01T00:36:02.5084195Z ##[endgroup]
+2025-08-01T00:36:02.6158801Z 
+2025-08-01T00:36:02.6159324Z > doc-registry@1.0.0-beta.1 validate
+2025-08-01T00:36:02.6159805Z > node src/main/scripts/validate.js
+2025-08-01T00:36:02.6160044Z 
+2025-08-01T00:36:02.6591986Z Starting full schema + additional validation...
+2025-08-01T00:36:02.6790451Z 
+2025-08-01T00:36:02.6791376Z Checking documents registry...
+2025-08-01T00:36:02.7569535Z ✅ Schema validation passed for documents
+2025-08-01T00:36:02.7570479Z 🔍 Running additional validation for documents...
+2025-08-01T00:36:02.7707844Z [WARN] Missing $meta for 'href' in docId 'SMPTE.ST429-2.2009'
+2025-08-01T00:36:02.7709512Z [WARN] Missing $meta for 'status.active' in docId 'SMPTE.ST429-2.2009'
+2025-08-01T00:36:02.7710908Z [WARN] Missing $meta for 'status.supersededBy' in docId 'SMPTE.ST429-2.2009'
+2025-08-01T00:36:02.7712108Z [WARN] Missing $meta for 'docLabel' in docId 'SMPTE.ST429-2.2011'
+2025-08-01T00:36:02.7722034Z 
+2025-08-01T00:36:02.7722580Z Checking groups registry...
+2025-08-01T00:36:02.7751361Z ✅ Schema validation passed for groups
+2025-08-01T00:36:02.7752526Z 🔍 Running additional validation for groups...
+2025-08-01T00:36:02.7757108Z 
+2025-08-01T00:36:02.7757375Z Checking projects registry...
+2025-08-01T00:36:02.7786335Z ✅ Schema validation passed for projects
+2025-08-01T00:36:02.7787100Z 🔍 Running additional validation for projects...
+2025-08-01T00:36:02.7793656Z 
+2025-08-01T00:36:02.7794199Z All 3 registries validated successfully.
+2025-08-01T00:36:02.8463384Z ##[group]Run npm run canonicalize
+2025-08-01T00:36:02.8463681Z [36;1mnpm run canonicalize[0m
+2025-08-01T00:36:02.8490976Z shell: /usr/bin/bash -e {0}
+2025-08-01T00:36:02.8491228Z env:
+2025-08-01T00:36:02.8491382Z   IS_PR_RUN: true
+2025-08-01T00:36:02.8491631Z   PR_LOG_PATH: /home/runner/work/_temp/pr-update-log.txt
+2025-08-01T00:36:02.8491911Z ##[endgroup]
+2025-08-01T00:36:02.9556267Z 
+2025-08-01T00:36:02.9556901Z > doc-registry@1.0.0-beta.1 canonicalize
+2025-08-01T00:36:02.9557591Z > node src/main/scripts/canonicalize.js
+2025-08-01T00:36:02.9557928Z 
+2025-08-01T00:36:03.0357887Z 🔄 Canonicalizing documents registry
+2025-08-01T00:36:03.0445172Z [WARN] Added missing $meta for 'href' in docId 'SMPTE.ST429-2.2009'
+2025-08-01T00:36:03.0446192Z [WARN] Added missing $meta for 'status.active' in docId 'SMPTE.ST429-2.2009'
+2025-08-01T00:36:03.0447208Z [WARN] Added missing $meta for 'status.supersededBy' in docId 'SMPTE.ST429-2.2009'
+2025-08-01T00:36:03.0448223Z [WARN] Added missing $meta for 'docLabel' in docId 'SMPTE.ST429-2.2011'
+2025-08-01T00:36:03.0478572Z 🛠 Injected missing $meta for 2 document(s) in documents registry...
+2025-08-01T00:36:03.0483598Z 📄 PR log updated: /home/runner/work/_temp/pr-update-log.txt
+2025-08-01T00:36:03.1215323Z 🔄 Canonicalizing groups registry
+2025-08-01T00:36:03.1222531Z 🔄 Canonicalizing projects registry
+2025-08-01T00:36:03.1426478Z ##[group]Run git config user.name "github-actions[bot]"
+2025-08-01T00:36:03.1426889Z [36;1mgit config user.name "github-actions[bot]"[0m
+2025-08-01T00:36:03.1427274Z [36;1mgit config user.email "github-actions[bot]@users.noreply.github.com"[0m
+2025-08-01T00:36:03.1427639Z [36;1mgit add src/main/data/documents.json[0m
+2025-08-01T00:36:03.1428015Z [36;1mgit diff --cached --quiet || git commit -m "chore: canonicalize documents.json"[0m
+2025-08-01T00:36:03.1455494Z shell: /usr/bin/bash -e {0}
+2025-08-01T00:36:03.1455838Z ##[endgroup]
+2025-08-01T00:36:03.2747784Z [main 7010352] chore: canonicalize documents.json
+2025-08-01T00:36:03.2748478Z  1 file changed, 1069 insertions(+), 92 deletions(-)
+2025-08-01T00:36:03.2780581Z ##[group]Run {
+2025-08-01T00:36:03.2781038Z [36;1m{[0m
+2025-08-01T00:36:03.2781233Z [36;1m  echo 'body<<EOF'[0m
+2025-08-01T00:36:03.2781496Z [36;1m  cat /home/runner/work/_temp/pr-update-log.txt[0m
+2025-08-01T00:36:03.2781793Z [36;1m  echo 'EOF'[0m
+2025-08-01T00:36:03.2781979Z [36;1m} >> $GITHUB_OUTPUT[0m
+2025-08-01T00:36:03.2809096Z shell: /usr/bin/bash -e {0}
+2025-08-01T00:36:03.2809326Z ##[endgroup]
+2025-08-01T00:36:03.2891608Z ##[group]Run echo "ts=$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_ENV
+2025-08-01T00:36:03.2892012Z [36;1mecho "ts=$(date +'%Y%m%d-%H%M%S')" >> $GITHUB_ENV[0m
+2025-08-01T00:36:03.2919336Z shell: /usr/bin/bash -e {0}
+2025-08-01T00:36:03.2919678Z ##[endgroup]
+2025-08-01T00:36:03.3069588Z ##[warning]Unexpected input(s) 'commit-options', valid inputs are ['token', 'git-token', 'path', 'add-paths', 'commit-message', 'committer', 'author', 'signoff', 'branch', 'delete-branch', 'branch-suffix', 'base', 'push-to-fork', 'title', 'body', 'body-path', 'labels', 'assignees', 'reviewers', 'team-reviewers', 'milestone', 'draft']
+2025-08-01T00:36:03.3080950Z ##[group]Run peter-evans/create-pull-request@v6
+2025-08-01T00:36:03.3081221Z with:
+2025-08-01T00:36:03.3081611Z   token: ***
+2025-08-01T00:36:03.3081874Z   commit-message: chore: update documents.json from SMPTE sources
+2025-08-01T00:36:03.3082210Z   commit-options: --allow-empty
+2025-08-01T00:36:03.3082460Z   branch: update-documents-json-16663133630
+2025-08-01T00:36:03.3082734Z   title: Update documents.json - 20250801-003603
+2025-08-01T00:36:03.3101297Z   body: ### 🆕 Added 2 new document(s):
+- SMPTE.RP428-22.2025-06
+- SMPTE.ST428-24.2024-11
+
+### 🔁 Updated 16 existing document(s):
+- SMPTE.ST429-2.2009 (updated fields: releaseTag, repo, status, resolvedHref)
+  - releaseTag:"undefined" > "20090311-pub"
+  - repo:"undefined" > "https://github.com/SMPTE/st429-2/"
+  - status changed: 
+latestVersion: "undefined" → false
+  - resolvedHref:"undefined" > "https://my.smpte.org/s/product-details?id=a1BVR0000007NgI"
+- SMPTE.ST429-2.2011 (updated fields: releaseTag, repo, status, resolvedHref)
+  - releaseTag:"undefined" > "20110923-pub"
+  - repo:"undefined" > "https://github.com/SMPTE/st429-2/"
+  - status changed: 
+latestVersion: "undefined" → false
+  - resolvedHref:"undefined" > "https://my.smpte.org/s/product-details?id=a1BVR0000007NgI"
+- SMPTE.ST429-2.2011Am1.2013 (updated fields: releaseTag, repo, status, resolvedHref)
+  - releaseTag:"undefined" > "20130116-am1-pub"
+  - repo:"undefined" > "https://github.com/SMPTE/st429-2/"
+  - status changed: 
+latestVersion: "undefined" → false
+  - resolvedHref:"undefined" > "https://my.smpte.org/s/product-details?id=a1BVR0000007NgI"
+- SMPTE.ST429-2.2013 (updated fields: releaseTag, status, resolvedHref)
+  - releaseTag:"undefined" > "20130928-pub"
+  - status changed: 
+latestVersion: "undefined" → false
+  - resolvedHref:"undefined" > "https://my.smpte.org/s/product-details?id=a1BVR0000007NgI"
+- SMPTE.ST429-2.2013Am1.2018 (updated fields: releaseTag, publicationDate, repo, status, resolvedHref)
+  - releaseTag:"undefined" > "20181231-am1-pub"
+  - publicationDate:"2019-01-25" > "2018-12-31"
+  - repo:"undefined" > "https://github.com/SMPTE/st429-2/"
+  - status changed: 
+latestVersion: "undefined" → false
+  - resolvedHref:"undefined" > "https://my.smpte.org/s/product-details?id=a1BVR0000007NgI"
+- SMPTE.ST429-2.2019 (updated fields: releaseTag, publicationDate, repo, status, resolvedHref)
+  - releaseTag:"undefined" > "20191111-pub"
+  - publicationDate:"2020-05-12" > "2019-11-11"
+  - repo:"undefined" > "https://github.com/SMPTE/st429-2/"
+  - status changed: 
+latestVersion: "undefined" → false
+  - resolvedHref:"undefined" > "https://my.smpte.org/s/product-details?id=a1BVR0000007NgI2AU"
+- SMPTE.ST429-2.2020 (updated fields: releaseTag, publicationDate, status, resolvedHref)
+  - releaseTag:"undefined" > "20201027-pub"
+  - publicationDate:"2020-12-22" > "2020-10-27"
+  - status changed: 
+latestVersion: "undefined" → false
+  - resolvedHref:"undefined" > "https://my.smpte.org/s/product-details?id=a1BVR0000007NgI"
+- SMPTE.ST429-2.2023-09 (updated fields: references, docTitle, doi, releaseTag, publisher, revisionOf, resolvedHref)
+  - docTitle:"D-Cinema Packaging — DCP Operational" > "D-Cinema Packaging DCP Operational Constraints"
+  - doi:"undefined" > "10.5594/SMPTE.ST429-2.2023"
+  - releaseTag:"undefined" > "20230912-pub"
+  - publisher:"SMP" > "SMPTE"
+  - revisionOf changed: ["SMPTE.ST429-2.2019Am1.2019"] → ["SMPTE.ST429-2.2019Am1.2019","SMPTE.ST429-2.2020"]
+  - resolvedHref:"undefined" > "https://my.smpte.org/s/product-details?id=a1BVR0000007NgI"
+  - ➕ Normative Ref(s) added:
+ SMPTE.ST428-10.LATEST
+SMPTE.ST428-12.LATEST
+  - ➕ Bibliographic Ref(s) added:
+ SMPTE.ST428-11.LATEST
+  - ➖ Bibliographic Ref(s) removed:
+ SMPTE.ST429-10.LATEST
+  - 🔄 Duplicate normative/bibliographic reference(s) removed
+- SMPTE.ST429-4.2006 (updated fields: releaseTag, repo, status, resolvedHref)
+  - releaseTag:"undefined" > "20061003-pub"
+  - repo:"undefined" > "https://github.com/SMPTE/st429-4/"
+  - status changed: 
+latestVersion: "undefined" → false
+  - resolvedHref:"undefined" > "https://my.smpte.org/s/product-details?id=a1BVR0000007NgL"
+- SMPTE.ST429-4.2020 (updated fields: releaseTag, publicationDate, href, doi, status, resolvedHref)
+  - releaseTag:"undefined" > "20200227-pub"
+  - publicationDate:"2020-03-23" > "2020-02-27"
+  - href:"undefined" > "https://doi.org/10.5594/SMPTE.ST429-4.2020"
+  - doi:"10.5594/SMPTE.ST429-4.2019" > "10.5594/SMPTE.ST429-4.2020"
+  - status changed: 
+latestVersion: "undefined" → false
+  - resolvedHref:"undefined" > "https://my.smpte.org/s/product-details?id=a1BVR0000007NgL"
+- SMPTE.ST429-4.2023-05 (updated fields: references, docType, doi, releaseTag, href, repo, status, revisionOf, resolvedHref)
+  - docType:"Recommended Practice" > "Standard"
+  - doi:"undefined" > "10.5594/SMPTE.ST429-4.2023"
+  - releaseTag:"undefined" > "20230504-pub"
+  - href:"https://doi.org/10.5594/SMPTE.ST429-4.2022" > "https://doi.org/10.5594/SMPTE.ST429-4.2023"
+  - repo:"undefined" > "https://github.com/SMPTE/st429-4/"
+  - status changed: 
+latestVersion: "undefined" → true
+superseded: "undefined" → false
+stage: "undefined" → "PUB"
+state: "undefined" → "pub"
+  - revisionOf changed: [] → ["SMPTE.ST429-4.2020"]
+  - resolvedHref:"undefined" > "https://my.smpte.org/s/product-details?id=a1BVR0000007NgL"
+  - ➕ Normative Ref(s) added:
+ SMPTE.ST377-1.LATEST
+SMPTE.ST422.LATEST
+SMPTE.ST428-1.LATEST
+- SMPTE.ST430-1.2006 (updated fields: repo, resolvedHref)
+  - repo:"undefined" > "https://github.com/SMPTE/st430-1/"
+  - resolvedHref:"undefined" > "https://my.smpte.org/s/product-details?id=a1BVR0000007NgR"
+- SMPTE.ST430-1.2006Am1.2009 (updated fields: releaseTag, repo, status, resolvedHref)
+  - releaseTag:"undefined" > "20090109-am1-pub"
+  - repo:"undefined" > "https://github.com/SMPTE/st430-1/"
+  - status changed: 
+latestVersion: "undefined" → false
+  - resolvedHref:"undefined" > "https://my.smpte.org/s/product-details?id=a1BVR0000007NgR"
+- SMPTE.ST430-1.2017 (updated fields: releaseTag, publicationDate, status, resolvedHref)
+  - releaseTag:"undefined" > "20170112-pub"
+  - publicationDate:"2017-02-02" > "2017-01-12"
+  - status changed: 
+latestVersion: "undefined" → false
+  - resolvedHref:"undefined" > "https://my.smpte.org/s/product-details?id=a1BVR0000007NgR2AU"
+- SMPTE.ST430-1.2017Am1.2019 (updated fields: releaseTag, publicationDate, repo, resolvedHref)
+  - releaseTag:"undefined" > "20190618-am1-pub"
+  - publicationDate:"2019-08-16" > "2019-06-18"
+  - repo:"https://github.com/SMPTE/st430-/" > "https://github.com/SMPTE/st430-1/"
+  - resolvedHref:"undefined" > "https://my.smpte.org/s/product-details?id=a1BVR0000007NgR2AU"
+- SMPTE.ST430-1.2023-09 (updated fields: references)
+  - 🔄 Duplicate bibliographic reference(s) removed
+
+### ⚠️ Skipped 2 duplicate(s)
+---
+
+### 🛠 Canonicalization fixed missing $meta fields in 2 document(s):
+- SMPTE.ST429-2.2009 (injected: href, status.active, status.supersededBy)
+- SMPTE.ST429-2.2011 (injected: docLabel)
+2025-08-01T00:36:03.3119772Z   add-paths: src/main/data/documents.json
+
+2025-08-01T00:36:03.3120011Z   base: main
+2025-08-01T00:36:03.3120331Z   committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+2025-08-01T00:36:03.3120994Z   author: SteveLLamb <38917682+SteveLLamb@users.noreply.github.com>
+2025-08-01T00:36:03.3121299Z   signoff: false
+2025-08-01T00:36:03.3121476Z   delete-branch: false
+2025-08-01T00:36:03.3121655Z   draft: false
+2025-08-01T00:36:03.3121815Z env:
+2025-08-01T00:36:03.3121961Z   ts: 20250801-003603
+2025-08-01T00:36:03.3122139Z ##[endgroup]
+2025-08-01T00:36:03.4088741Z ##[group]Prepare git configuration
+2025-08-01T00:36:03.4139165Z [command]/usr/bin/git config --global --name-only --get-regexp safe.directory /home/runner/work/mediastandards-registry/mediastandards-registry
+2025-08-01T00:36:03.4204585Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/mediastandards-registry/mediastandards-registry
+2025-08-01T00:36:03.4233617Z [command]/usr/bin/git config --local --get remote.origin.url
+2025-08-01T00:36:03.4254441Z https://github.com/SteveLLamb/mediastandards-registry
+2025-08-01T00:36:03.4269217Z [command]/usr/bin/git config --local --name-only --get-regexp http.https://github.com/.extraheader ^AUTHORIZATION:
+2025-08-01T00:36:03.4289975Z http.https://github.com/.extraheader
+2025-08-01T00:36:03.4299469Z [command]/usr/bin/git config --local --get-regexp http.https://github.com/.extraheader ^AUTHORIZATION:
+2025-08-01T00:36:03.4320334Z http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-08-01T00:36:03.4329881Z [command]/usr/bin/git config --local --unset http.https://github.com/.extraheader ^AUTHORIZATION:
+2025-08-01T00:36:03.4355780Z Unset config key 'http.https://github.com/.extraheader'
+2025-08-01T00:36:03.4356607Z ##[endgroup]
+2025-08-01T00:36:03.4357008Z ##[group]Determining the base and head repositories
+2025-08-01T00:36:03.4428054Z ##[endgroup]
+2025-08-01T00:36:03.4430453Z Pull request branch target repository set to SteveLLamb/mediastandards-registry
+2025-08-01T00:36:03.4431756Z ##[group]Configuring credential for HTTPS authentication
+2025-08-01T00:36:03.4437517Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-08-01T00:36:03.4471571Z [command]/usr/bin/git rev-parse --git-dir
+2025-08-01T00:36:03.4493391Z .git
+2025-08-01T00:36:03.4511322Z ##[endgroup]
+2025-08-01T00:36:03.4511705Z ##[group]Checking the base repository state
+2025-08-01T00:36:03.4516968Z [command]/usr/bin/git symbolic-ref HEAD --short
+2025-08-01T00:36:03.4537978Z main
+2025-08-01T00:36:03.4566764Z Working base is branch 'main'
+2025-08-01T00:36:03.4567720Z [command]/usr/bin/git remote prune origin
+2025-08-01T00:36:03.8954729Z ##[endgroup]
+2025-08-01T00:36:03.8955611Z Pull request branch to create or update set to 'update-documents-json-16663133630'
+2025-08-01T00:36:03.8956611Z ##[group]Configuring the committer and author
+2025-08-01T00:36:03.8957719Z Configured git committer as 'github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>'
+2025-08-01T00:36:03.8958994Z Configured git author as 'SteveLLamb <38917682+SteveLLamb@users.noreply.github.com>'
+2025-08-01T00:36:03.8959903Z ##[endgroup]
+2025-08-01T00:36:03.8960528Z ##[group]Create or update the pull request branch
+2025-08-01T00:36:03.8966210Z [command]/usr/bin/git symbolic-ref HEAD --short
+2025-08-01T00:36:03.8992820Z main
+2025-08-01T00:36:03.8997826Z Working base is branch 'main'
+2025-08-01T00:36:03.9006604Z [command]/usr/bin/git checkout --progress -B 2c30b58c-a969-4685-a9a5-831b825c0ab9 HEAD --
+2025-08-01T00:36:03.9151047Z Switched to a new branch '2c30b58c-a969-4685-a9a5-831b825c0ab9'
+2025-08-01T00:36:03.9162919Z [command]/usr/bin/git status --porcelain -unormal -- src/main/data/documents.json
+2025-08-01T00:36:03.9315680Z [command]/usr/bin/git diff --quiet -- src/main/data/documents.json
+2025-08-01T00:36:03.9457481Z [command]/usr/bin/git diff --quiet --staged -- src/main/data/documents.json
+2025-08-01T00:36:03.9495263Z [command]/usr/bin/git stash push --include-untracked
+2025-08-01T00:36:03.9637598Z No local changes to save
+2025-08-01T00:36:03.9643050Z Resetting working base branch 'main'
+2025-08-01T00:36:03.9648063Z [command]/usr/bin/git checkout --progress main --
+2025-08-01T00:36:03.9788712Z Switched to branch 'main'
+2025-08-01T00:36:03.9791890Z Your branch is ahead of 'origin/main' by 1 commit.
+2025-08-01T00:36:03.9793015Z   (use "git push" to publish your local commits)
+2025-08-01T00:36:03.9802881Z [command]/usr/bin/git reset --hard origin/main
+2025-08-01T00:36:03.9923137Z HEAD is now at d2bc146 add divider
+2025-08-01T00:36:03.9933533Z [command]/usr/bin/git rev-list --right-only --count main...2c30b58c-a969-4685-a9a5-831b825c0ab9
+2025-08-01T00:36:03.9972449Z 1
+2025-08-01T00:36:03.9983587Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --progress --no-recurse-submodules --force --depth=11 origin update-documents-json-16663133630:refs/remotes/origin/update-documents-json-16663133630
+2025-08-01T00:36:04.3436631Z fatal: couldn't find remote ref update-documents-json-16663133630
+2025-08-01T00:36:04.3471857Z Pull request branch 'update-documents-json-16663133630' does not exist yet.
+2025-08-01T00:36:04.3477055Z [command]/usr/bin/git checkout --progress -B update-documents-json-16663133630 2c30b58c-a969-4685-a9a5-831b825c0ab9 --
+2025-08-01T00:36:04.3696938Z Switched to a new branch 'update-documents-json-16663133630'
+2025-08-01T00:36:04.3709208Z [command]/usr/bin/git rev-list --right-only --count main...update-documents-json-16663133630
+2025-08-01T00:36:04.3734827Z 1
+2025-08-01T00:36:04.3738961Z Created branch 'update-documents-json-16663133630'
+2025-08-01T00:36:04.3744133Z [command]/usr/bin/git rev-parse HEAD
+2025-08-01T00:36:04.3765023Z 70103520ad556e6475049aed2426c4bdde6b596b
+2025-08-01T00:36:04.3772251Z [command]/usr/bin/git branch --delete --force 2c30b58c-a969-4685-a9a5-831b825c0ab9
+2025-08-01T00:36:04.3797257Z Deleted branch 2c30b58c-a969-4685-a9a5-831b825c0ab9 (was 7010352).
+2025-08-01T00:36:04.3804595Z [command]/usr/bin/git checkout --progress main --
+2025-08-01T00:36:04.4016586Z Switched to branch 'main'
+2025-08-01T00:36:04.4019004Z Your branch is up to date with 'origin/main'.
+2025-08-01T00:36:04.4024345Z ##[endgroup]
+2025-08-01T00:36:04.4025018Z ##[group]Pushing pull request branch to 'origin/update-documents-json-16663133630'
+2025-08-01T00:36:04.4029693Z [command]/usr/bin/git push --force-with-lease origin update-documents-json-16663133630:refs/heads/update-documents-json-16663133630
+2025-08-01T00:36:05.2947180Z remote: 
+2025-08-01T00:36:05.2948587Z remote: Create a pull request for 'update-documents-json-16663133630' on GitHub by visiting:        
+2025-08-01T00:36:05.2951043Z remote:      https://github.com/SteveLLamb/mediastandards-registry/pull/new/update-documents-json-16663133630        
+2025-08-01T00:36:05.2952036Z remote: 
+2025-08-01T00:36:05.2961623Z To https://github.com/SteveLLamb/mediastandards-registry
+2025-08-01T00:36:05.2962233Z  * [new branch]      update-documents-json-16663133630 -> update-documents-json-16663133630
+2025-08-01T00:36:05.3007093Z ##[endgroup]
+2025-08-01T00:36:05.3007705Z ##[group]Create or update the pull request
+2025-08-01T00:36:05.3011804Z Attempting creation of pull request
+2025-08-01T00:36:06.5373566Z Created pull request #246 (SteveLLamb:update-documents-json-16663133630 => main)
+2025-08-01T00:36:06.5374784Z ##[endgroup]
+2025-08-01T00:36:06.5375519Z ##[group]Setting outputs
+2025-08-01T00:36:06.5387304Z ##[endgroup]
+2025-08-01T00:36:06.5388232Z ##[group]Restore git configuration
+2025-08-01T00:36:06.5405234Z [command]/usr/bin/git config --local --name-only --get-regexp http.https://github.com/.extraheader ^AUTHORIZATION:
+2025-08-01T00:36:06.5455904Z http.https://github.com/.extraheader
+2025-08-01T00:36:06.5463602Z [command]/usr/bin/git config --local --get-regexp http.https://github.com/.extraheader ^AUTHORIZATION:
+2025-08-01T00:36:06.5497501Z http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-08-01T00:36:06.5505286Z [command]/usr/bin/git config --local --unset http.https://github.com/.extraheader ^AUTHORIZATION:
+2025-08-01T00:36:06.5541419Z Unset config key 'http.https://github.com/.extraheader'
+2025-08-01T00:36:06.5546643Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-08-01T00:36:06.5587657Z Persisted git credentials restored
+2025-08-01T00:36:06.5594008Z [command]/usr/bin/git config --global --unset safe.directory /home/runner/work/mediastandards-registry/mediastandards-registry
+2025-08-01T00:36:06.5632478Z ##[endgroup]
+2025-08-01T00:36:06.5779759Z Post job cleanup.
+2025-08-01T00:36:06.7398725Z Post job cleanup.
+2025-08-01T00:36:06.8331265Z [command]/usr/bin/git version
+2025-08-01T00:36:06.8366427Z git version 2.50.1
+2025-08-01T00:36:06.8404291Z Copying '/home/runner/.gitconfig' to '/home/runner/work/_temp/9a8b1189-a0ab-4a4e-8590-6ae1add985f5/.gitconfig'
+2025-08-01T00:36:06.8414294Z Temporarily overriding HOME='/home/runner/work/_temp/9a8b1189-a0ab-4a4e-8590-6ae1add985f5' before making global git config changes
+2025-08-01T00:36:06.8415765Z Adding repository directory to the temporary git global config as a safe directory
+2025-08-01T00:36:06.8420258Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/mediastandards-registry/mediastandards-registry
+2025-08-01T00:36:06.8455200Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-08-01T00:36:06.8487313Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-08-01T00:36:06.8705587Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-08-01T00:36:06.8725728Z http.https://github.com/.extraheader
+2025-08-01T00:36:06.8743351Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2025-08-01T00:36:06.8778123Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-08-01T00:36:06.9123835Z Cleaning up orphan processes

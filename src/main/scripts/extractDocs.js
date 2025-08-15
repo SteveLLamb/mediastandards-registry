@@ -965,7 +965,7 @@ for (const doc of results) {
 
   // Generate timestamp string in format YYYYMMDD-HHmmss
   const timestamp = dayjs().format('YYYYMMDD-HHmmss');
-  const fullDetailsPath = `src/main/reports/extract-runs/pr-update-details-${timestamp}.txt`;
+  const fullDetailsPath = `src/main/logs/extract-runs/pr-update-details-${timestamp}.txt`;
   const detailsFilePath = fullDetailsPath;
   // Raw URL (kept for logging/diagnostics)
   const detailsFileRawUrl = `https://raw.githubusercontent.com/SteveLLamb/mediastandards-registry/main/${fullDetailsPath}`;
@@ -1065,7 +1065,7 @@ for (const doc of results) {
   }
 
   // Write full details file
-  fs.mkdirSync('src/main/reports/extract-runs', { recursive: true });
+  fs.mkdirSync('src/main/logs/extract-runs', { recursive: true });
   fs.writeFileSync(fullDetailsPath, fullDetailsLines.join('\n'));
 
   // Cap summary for PR log

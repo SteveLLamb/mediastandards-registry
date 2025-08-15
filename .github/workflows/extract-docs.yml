@@ -72,13 +72,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/main/reports/extract-runs/pr-update-details-*.txt
+          git add src/main/logs/extract-runs/pr-update-details-*.txt
           git diff --cached --quiet || git commit -m "Add PR update details file"
 
       - name: Resolve details file & blob SHA
         id: details
         run: |
-          FILE="$(git ls-files 'src/main/reports/extract-runs/pr-update-details-*.txt' | tail -n1)"
+          FILE="$(git ls-files 'src/main/logs/extract-runs/pr-update-details-*.txt' | tail -n1)"
           if [ -z "$FILE" ]; then
             echo "file=" >> $GITHUB_OUTPUT
             echo "blob=" >> $GITHUB_OUTPUT
