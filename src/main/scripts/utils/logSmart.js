@@ -13,7 +13,7 @@ const BYTE_BUDGET = Number(process.env.MSR_CONSOLE_BUDGET || 3.5 * 1024 * 1024);
 const HEARTBEAT_EVERY = Number(process.env.MSR_HEARTBEAT_EVERY || 50);
 const HEARTBEAT_PREFIX = process.env.MSR_HEARTBEAT_PREFIX || ' 💓 ... still processing';
 
-console.log(`[ Heartbeat and log settings ]\nMSR_CONSOLE_BUDGE: ${BYTE_BUDGET} (bytes) \nMSR_HEARTBEAT_EVERY: ${HEARTBEAT_EVERY} \n  MSR_HEARTBEAT_PREFIX: "${HEARTBEAT_PREFIX}"`);
+console.log(`[ Log and heartbeat settings ]\n  MSR_CONSOLE_BUDGET: ${BYTE_BUDGET} (bytes) \n  MSR_HEARTBEAT_EVERY: ${HEARTBEAT_EVERY} \n  MSR_HEARTBEAT_PREFIX: "${HEARTBEAT_PREFIX}"`);
 
 // Internal state
 const _origConsoleLog = console.log.bind(console);
