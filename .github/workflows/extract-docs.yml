@@ -26,7 +26,7 @@ jobs:
       - name: Run extraction
         env:
           IS_PR_RUN: true
-          PR_LOG_PATH: "${{ runner.temp }}/pr-update-log.txt"
+          PR_LOG_PATH: "${{ runner.temp }}/pr-log.log"
           #Override script defaults if needed
           #MSR_CONSOLE_BUDGET: "3670016"       # ~3.5 MiB
           #MSR_HEARTBEAT_EVERY: "50"          # print heartbeat every XX docs
@@ -43,7 +43,7 @@ jobs:
       - name: Check if PR should be skipped
         id: skipcheck
         run: |
-          if grep -q "No new or updated documents" "${{ runner.temp }}/pr-update-log.txt"; then
+          if grep -q "No new or updated documents" "${{ runner.temp }}/pr-log.log"; then
             echo "skip=true" >> $GITHUB_OUTPUT
           else
             echo "skip=false" >> $GITHUB_OUTPUT
@@ -57,7 +57,7 @@ jobs:
         if: steps.skipcheck.outputs.skip == 'false'
         env:
           IS_PR_RUN: true
-          PR_LOG_PATH: ${{ runner.temp }}/pr-update-log.txt
+          PR_LOG_PATH: ${{ runner.temp }}/pr-log.log
         run: npm run canonicalize
 
       - name: Commit canonicalized changes (if any)
@@ -72,13 +72,13 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/main/logs/extract-runs/pr-update-details-*.txt
+          git add src/main/logs/extract-runs/pr-log-full-*.log
           git diff --cached --quiet || git commit -m "Add PR update details file"
 
       - name: Resolve details file & blob SHA
         id: details
         run: |
-          FILE="$(git ls-files 'src/main/logs/extract-runs/pr-update-details-*.txt' | tail -n1)"
+          FILE="$(git ls-files 'src/main/logs/extract-runs/pr-log-full-*.log' | tail -n1)"
           if [ -z "$FILE" ]; then
             echo "file=" >> $GITHUB_OUTPUT
             echo "blob=" >> $GITHUB_OUTPUT
@@ -94,7 +94,7 @@ jobs:
         run: |
           {
             echo 'body<<EOF'
-            cat ${{ runner.temp }}/pr-update-log.txt
+            cat ${{ runner.temp }}/pr-log.log
             echo 'EOF'
           } >> $GITHUB_OUTPUT
 

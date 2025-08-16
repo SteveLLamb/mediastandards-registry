@@ -467,7 +467,7 @@ const extractFromUrl = async (rootUrl) => {
   });
 
   if (!folderLinks.length) {
-    console.warn(`⚠️ No release folders found at ${rootUrl}`);
+    console.warn(`\n⚠️ No release folders found at ${rootUrl}`);
     return [];
   }
 
@@ -689,7 +689,7 @@ const extractFromUrl = async (rootUrl) => {
   //const urls = require('../input/urls.json');
   let urls;
   urls = await discoverFromRootDocPage();
-  console.log(`📂 Processing ${urls.length} SMPTE URLs...`);
+  console.log(`\n📂 Processing ${urls.length} SMPTE URLs...`);
   
   const results = [];
 
@@ -730,6 +730,7 @@ for (const doc of results) {
     let duplicateBibRemoved = false;
 
     const index = existingDocs.findIndex(d => d.docId === doc.docId);
+    logSmart(`  Checking ${doc.docId}...`);
     
     if (index === -1) {
       await resolveUrlAndInject(doc, 'href');
@@ -743,8 +744,12 @@ for (const doc of results) {
         injectMeta(doc.references, 'bibliographic', sourceType, 'new', []);
       }
       if (doc.status && doc.status.withdrawnNotice && doc.status['withdrawnNotice$meta'] && doc.__withdrawnNoticeSuffix) {
-        const baseNote = doc.status['withdrawnNotice$meta'].note || getMetaDefaults('parsed', 'status.withdrawnNotice').note;
-        doc.status['withdrawnNotice$meta'].note = baseNote + ' — ' + doc.__withdrawnNoticeSuffix;
+        // Normalize: strip any existing reachability suffix(es) before adding the current one
+        const NOTE_SUFFIX_RE = /\s+—\s+(?:verified reachable|link unreachable at extraction)(?:\s+—\s+(?:verified reachable|link unreachable at extraction))*\s*$/;
+        const currentNote = doc.status['withdrawnNotice$meta'].note || getMetaDefaults('parsed', 'status.withdrawnNotice').note;
+        const baseNote = (currentNote || '').replace(NOTE_SUFFIX_RE, '') || getMetaDefaults('parsed', 'status.withdrawnNotice').note;
+        const normalized = `${baseNote} — ${doc.__withdrawnNoticeSuffix}`;
+        doc.status['withdrawnNotice$meta'].note = normalized;
       }
       logSmart(`   ➕ Adding ${doc.docId} (new document)`);
       newDocs.push(doc);
@@ -859,15 +864,23 @@ for (const doc of results) {
             const newWN = newVal.withdrawnNotice;
             const oldWN = oldValues?.status?.withdrawnNotice;
             if (newWN !== undefined) {
-              if (!existingDoc.status['withdrawnNotice$meta']) {
-                injectMeta(existingDoc.status, 'withdrawnNotice', 'parsed', 'update', oldWN);
+              // Only modify meta when the base field actually changes (to avoid PR noise)
+              if (newWN !== oldWN) {
+                if (!existingDoc.status['withdrawnNotice$meta']) {
+                  injectMeta(existingDoc.status, 'withdrawnNotice', 'parsed', 'update', oldWN);
+                }
+                if (doc.__withdrawnNoticeSuffix) {
+                  // Normalize: remove any trailing reachability suffix(es) and then add the current one exactly once
+                  const NOTE_SUFFIX_RE = /\s+—\s+(?:verified reachable|link unreachable at extraction)(?:\s+—\s+(?:verified reachable|link unreachable at extraction))*\s*$/;
+                  const currentNote = existingDoc.status['withdrawnNotice$meta'].note || getMetaDefaults('parsed', 'status.withdrawnNotice').note;
+                  const baseNote = (currentNote || '').replace(NOTE_SUFFIX_RE, '') || getMetaDefaults('parsed', 'status.withdrawnNotice').note;
+                  const normalized = `${baseNote} — ${doc.__withdrawnNoticeSuffix}`;
+                  if (existingDoc.status['withdrawnNotice$meta'].note !== normalized) {
+                    existingDoc.status['withdrawnNotice$meta'].note = normalized;
+                  }
+                }
+                if (!changedFields.includes('status')) changedFields.push('status');
               }
-              // Append reachability suffix to note (preserve base metaConfig note)
-              if (doc.__withdrawnNoticeSuffix) {
-                const baseNote = existingDoc.status['withdrawnNotice$meta'].note || getMetaDefaults('parsed', 'status.withdrawnNotice').note;
-                existingDoc.status['withdrawnNotice$meta'].note = baseNote + ' — ' + doc.__withdrawnNoticeSuffix;
-              }
-              if (!changedFields.includes('status')) changedFields.push('status');
             }
           } else if (key === 'revisionOf') {
             const oldList = Array.isArray(oldVal) ? oldVal.map(String) : [];
@@ -923,6 +936,7 @@ for (const doc of results) {
         processed++;
         heartbeat(processed, results.length);
       } else {
+        logSmart(`   Skipped duplicate document`);
         skippedDocs.push(doc.docId);
         processed++;
         heartbeat(processed, results.length);
@@ -930,7 +944,7 @@ for (const doc of results) {
     }
   }
   
-  logSmart(`✅ Merge/update phase complete — processed ${processed}/${results.length}`);
+  logSmart(`\n✅ Merge/update phase complete — processed ${processed}/${results.length}`);
 
   // Sort documents by docId
   existingDocs.sort((a, b) => a.docId.localeCompare(b.docId));
@@ -951,8 +965,7 @@ for (const doc of results) {
   }
 
   if (newDocs.length === 0 && updatedDocs.length === 0) {
-    console.log('ℹ️ No new or updated documents — skipping PR creation.');
-    fs.writeFileSync('skip-pr-flag.txt', 'true');
+    console.log('\nℹ️ No new or updated documents — skipping PR creation.');
     process.exit(0);
   }
 
@@ -965,8 +978,7 @@ for (const doc of results) {
 
   // Generate timestamp string in format YYYYMMDD-HHmmss
   const timestamp = dayjs().format('YYYYMMDD-HHmmss');
-  const fullDetailsPath = `src/main/logs/extract-runs/pr-update-details-${timestamp}.txt`;
-  const detailsFilePath = fullDetailsPath;
+  const fullDetailsPath = `src/main/logs/extract-runs/pr-log-full-${timestamp}.log`;
   // Raw URL (kept for logging/diagnostics)
   const detailsFileRawUrl = `https://raw.githubusercontent.com/SteveLLamb/mediastandards-registry/main/${fullDetailsPath}`;
   // NEW: placeholder token that the workflow will replace with the PR /files#diff-<blob> link
@@ -1103,7 +1115,7 @@ for (const doc of results) {
   }
 
   fs.writeFileSync(prLogPath, prLines.join('\n'));
-  console.log(`📄 PR log updated: ${prLogPath}`);
+  console.log(`\n📄 PR log updated: ${prLogPath}`);
   console.log(`📄 Full PR log details saved: ${fullDetailsPath}`);
   console.log(`🔗 Full details (raw): ${detailsFileRawUrl}`);
 
