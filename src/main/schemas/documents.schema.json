@@ -103,7 +103,7 @@
           },
           "releaseTag": {
             "type": "string",
-            "pattern": "^\\d{8}(-am\\d+)?-(wd|cd|fcd|pub)$"
+            "pattern": "^\\d{8}(-am\\d+)?-(wd|cd|fcd|dp|pub)$"
           },
           "revisionOf": {
             "type": "array",

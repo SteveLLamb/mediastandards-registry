@@ -588,9 +588,9 @@ const extractFromUrl = async (rootUrl) => {
       const dateShort = pubDateObj.format('YYYY-MM');
 
       const docType = typeMap[pubType?.toUpperCase()] || pubType;
-      const label = `SMPTE ${pubType} ${pubNumber}-${pubPart}:${dateShort}`;
-      const id = `SMPTE.${pubType}${pubNumber}-${pubPart}.${dateShort}`;
-      const doi = `10.5594/SMPTE.${pubType}${pubNumber}-${pubPart}.${pubDateObj.format('YYYY')}`;
+      const label = `SMPTE ${pubType} ${pubNumber}${pubPart ? `-${pubPart}` : ''}:${dateShort}`;
+      const id = `SMPTE.${pubType}${pubNumber}${pubPart ? `-${pubPart}` : ''}.${dateShort}`;
+      const doi = `10.5594/SMPTE.${pubType}${pubNumber}${pubPart ? `-${pubPart}` : ''}.${pubDateObj.format('YYYY')}`;
       const href = `https://doi.org/${doi}`;
       const pubTypeNum = `${pubType}${pubNumber}${pubPart ? `-${pubPart}` : ''}`;
       const repoUrl = `https://github.com/SMPTE/${pubTypeNum.toLowerCase()}/`;
@@ -742,6 +742,9 @@ for (const doc of results) {
       if (doc.references) {
         injectMeta(doc.references, 'normative', sourceType, 'new', []);
         injectMeta(doc.references, 'bibliographic', sourceType, 'new', []);
+      }
+      if (doc.revisionOf) {
+        injectMeta(doc, 'revisionOf', sourceType, 'new', []);
       }
       if (doc.status && doc.status.withdrawnNotice && doc.status['withdrawnNotice$meta'] && doc.__withdrawnNoticeSuffix) {
         // Normalize: strip any existing reachability suffix(es) before adding the current one
@@ -936,7 +939,7 @@ for (const doc of results) {
         processed++;
         heartbeat(processed, results.length);
       } else {
-        logSmart(`   Skipped duplicate document`);
+        logSmart(`   ⤼ Skipped duplicate document`);
         skippedDocs.push(doc.docId);
         processed++;
         heartbeat(processed, results.length);
