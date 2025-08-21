@@ -200,6 +200,8 @@ const metaConfig = {
     publisher: { confidence: 'high', note: 'Static: SMPTE' },
     'status.stage': { confidence: 'high', note: 'Stage parsed from HTML pubStage meta tag' },
     'status.state': { confidence: 'high', note: 'State parsed from HTML pubState meta tag' },
+    'status.amended': { confidence: 'high', note: 'Parsed from wrapper #amendments' },
+    'status.amendedBy': { confidence: 'high', note: 'Parsed from wrapper #amendment' },
     'status.stabilized': { confidence: 'high', note: 'Parsed from wrapper #state' },
     'status.withdrawn': { confidence: 'high', note: 'Parsed from wrapper #state' },
     'status.withdrawnNotice': { confidence: 'high', note: 'Parsed from wrapper #withdrawal-statement' },
@@ -458,13 +460,39 @@ const extractFromUrl = async (rootUrl) => {
   const res = await axios.get(rootUrl);
   const $ = cheerio.load(res.data);
 
-  const folderLinks = [];
-  $('a').each((_, el) => {
-    const href = $(el).attr('href');
-    if (/^\d{8}(?:-am\d+)?-(wd|cd|fcd|dp|pub)\/$/i.test(href)) {
-      folderLinks.push(href.replace('/', ''));
+  // Collect release folders from the structured versions list, including nested amendments
+  const folderLinksSet = new Set();
+  const amendmentMap = new Map(); // key: base releaseTag, value: array of amendment releaseTags
+
+  $('ul.versions li.version').each((_, ver) => {
+    const $ver = $(ver);
+
+    // 1) Base version link inside this <li.version>
+    const baseHrefRaw = $ver.find('> div > a').attr('href') || '';
+    const baseHref = baseHrefRaw.trim();
+    if (/^\d{8}(?:-am\d+)?-(wd|cd|fcd|dp|pub)\/$/i.test(baseHref)) {
+      const baseTag = baseHref.replace(/\/$/, '');
+      folderLinksSet.add(baseTag);
+      if (!amendmentMap.has(baseTag)) amendmentMap.set(baseTag, []);
     }
+
+    // 2) Any amendments nested under .amendments-block
+    $ver.find('.amendments a').each((__, a) => {
+      const ahrefRaw = $(a).attr('href') || '';
+      const ahref = ahrefRaw.trim();
+      if (/^\d{8}(?:-am\d+)?-(wd|cd|fcd|dp|pub)\/$/i.test(ahref)) {
+        const amendTag = ahref.replace(/\/$/, '');
+        folderLinksSet.add(amendTag);
+        if (baseHref) {
+          const baseTag = baseHref.replace(/\/$/, '');
+          if (!amendmentMap.has(baseTag)) amendmentMap.set(baseTag, []);
+          amendmentMap.get(baseTag).push(amendTag);
+        }
+      }
+    });
   });
+
+  const folderLinks = Array.from(folderLinksSet);
 
   if (!folderLinks.length) {
     console.warn(`\n⚠️ No release folders found at ${rootUrl}`);
@@ -681,6 +709,34 @@ const extractFromUrl = async (rootUrl) => {
     }
   }
 
+  // --- Post-process: wire amendments onto base documents ---
+  try {
+    if (amendmentMap && amendmentMap.size) {
+      // Map releaseTag -> doc for quick lookup
+      const byReleaseTag = new Map();
+      for (const d of docs) {
+        if (d && d.releaseTag) byReleaseTag.set(d.releaseTag, d);
+      }
+
+      for (const [baseTag, amendTags] of amendmentMap.entries()) {
+        const baseDoc = byReleaseTag.get(baseTag);
+        if (!baseDoc) continue;
+        const amendIds = amendTags
+          .map(t => byReleaseTag.get(t))
+          .filter(Boolean)
+          .map(d => d.docId)
+          .filter(Boolean);
+        if (amendIds.length) {
+          baseDoc.status = baseDoc.status || {};
+          baseDoc.status.amended = true;
+          baseDoc.status.amendedBy = amendIds;
+        }
+      }
+    }
+  } catch (e) {
+    console.warn(`⚠️ Amendment wiring failed for ${rootUrl}: ${e.message}`);
+  }
+
   console.log(`📊 Release summary — HTML: ${countHTML}, PDF: ${countPDF}, none: ${countNoIframe}`);
   return docs;
 };
@@ -851,7 +907,8 @@ for (const doc of results) {
               'state',
               'stabilized',
               'withdrawn',
-              'withdrawnNotice'   // string URL per schema
+              'withdrawnNotice',  // string URL per schema
+              'amended'           // boolean derived from versions page
             ];
             for (const field of statusFields) {
               if (newVal[field] !== undefined && existingDoc.status[field] !== newVal[field]) {
@@ -862,6 +919,16 @@ for (const doc of results) {
                 injectMeta(existingDoc.status, field, fieldSource, 'update', oldStatusVal);
                 if (!changedFields.includes('status')) changedFields.push('status');
 
+              }
+            }
+            // Handle amendedBy (array) separately
+            if (Array.isArray(newVal.amendedBy)) {
+              const oldAB = Array.isArray(oldValues?.status?.amendedBy) ? oldValues.status.amendedBy : [];
+              const newAB = newVal.amendedBy;
+              const same = JSON.stringify(oldAB) === JSON.stringify(newAB);
+              if (!same) {
+                existingDoc.status.amendedBy = newAB;
+                if (!changedFields.includes('status')) changedFields.push('status');
               }
             }
             const newWN = newVal.withdrawnNotice;
