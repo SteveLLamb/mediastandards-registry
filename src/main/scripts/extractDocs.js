@@ -802,6 +802,10 @@ for (const doc of results) {
       if (doc.revisionOf) {
         injectMeta(doc, 'revisionOf', sourceType, 'new', []);
       }
+      // Inject $meta for status.amendedBy on new docs when present
+      if (doc.status && Array.isArray(doc.status.amendedBy)) {
+        injectMeta(doc.status, 'amendedBy', sourceType, 'new', []);
+      }
       if (doc.status && doc.status.withdrawnNotice && doc.status['withdrawnNotice$meta'] && doc.__withdrawnNoticeSuffix) {
         // Normalize: strip any existing reachability suffix(es) before adding the current one
         const NOTE_SUFFIX_RE = /\s+—\s+(?:verified reachable|link unreachable at extraction)(?:\s+—\s+(?:verified reachable|link unreachable at extraction))*\s*$/;
@@ -907,8 +911,8 @@ for (const doc of results) {
               'state',
               'stabilized',
               'withdrawn',
-              'withdrawnNotice',  // string URL per schema
-              'amended'           // boolean derived from versions page
+              'withdrawnNotice',  
+              'amended'          
             ];
             for (const field of statusFields) {
               if (newVal[field] !== undefined && existingDoc.status[field] !== newVal[field]) {
@@ -928,6 +932,8 @@ for (const doc of results) {
               const same = JSON.stringify(oldAB) === JSON.stringify(newAB);
               if (!same) {
                 existingDoc.status.amendedBy = newAB;
+                const fieldSourceAB = 'parsed';
+                injectMeta(existingDoc.status, 'amendedBy', fieldSourceAB, 'update', oldAB);
                 if (!changedFields.includes('status')) changedFields.push('status');
               }
             }
@@ -1084,11 +1090,19 @@ for (const doc of results) {
           'state',
           'stabilized',
           'withdrawn',
-          'withdrawnNotice'
+          'withdrawnNotice',
+          'amended'
         ];
         const diffs = statusFields
           .filter(k => oldStatus[k] !== newStatus[k])
           .map(k => `${k}: ${formatVal(oldStatus[k])} → ${formatVal(newStatus[k])}`);
+        // Also report amendedBy (array) changes
+        const oldAB = Array.isArray(oldStatus.amendedBy) ? oldStatus.amendedBy : [];
+        const newAB = Array.isArray(newStatus.amendedBy) ? newStatus.amendedBy : [];
+        const amendedByChanged = JSON.stringify(oldAB) !== JSON.stringify(newAB);
+        if (amendedByChanged) {
+          diffs.push(`amendedBy: ${formatVal(oldAB)} → ${formatVal(newAB)}`);
+        }
         if (diffs.length > 0) lines.push(`  - status changed: \r\n${diffs.join('\r\n')}`);
       } else if (field === 'revisionOf') {
         lines.push(`  - revisionOf changed: ${formatVal(oldVal || [])} → ${formatVal(newVal || [])}`);
