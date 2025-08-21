@@ -236,6 +236,7 @@ const metaConfig = {
     'status.active': { confidence: 'high', note: 'Calculated from the releaseTag(s) and other status values' },
     'status.latestVersion': { confidence: 'high', note: 'Calculated from the releaseTag(s)' },
     'status.superseded': { confidence: 'high', note: 'Calculated from the releaseTag(s)' },
+    'status.supersededBy': { confidence: 'high', note: 'Calculated from the releaseTag(s)' },
     default: { confidence: 'high', note: 'Calculated or verified value' }
   },
 
@@ -352,7 +353,7 @@ function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
     if (base) {
       const baseYear = base.date.year();
       docId = `SMPTE.${pubTypeNum}.${baseYear}Am${amendNum}.${amendYear}`;
-      docLabel = `SMPTE ${pubType || ''} ${docNumber || ''}${docPart ? `-${docPart}` : ''}:${baseYear}Am${amendNum}.${amendYear}`;
+      docLabel = `SMPTE ${pubType || ''} ${docNumber || ''}${docPart ? `-${docPart}` : ''}:${baseYear} Am${amendNum}:${amendYear}`;
       doi = `10.5594/${docId}`;
       href = `https://doi.org/${doi}`;
     }
@@ -709,7 +710,6 @@ const extractFromUrl = async (rootUrl) => {
     }
   }
 
-  // --- Post-process: wire amendments onto base documents ---
   try {
     if (amendmentMap && amendmentMap.size) {
       // Map releaseTag -> doc for quick lookup
@@ -726,15 +726,88 @@ const extractFromUrl = async (rootUrl) => {
           .filter(Boolean)
           .map(d => d.docId)
           .filter(Boolean);
+        baseDoc.status = baseDoc.status || {};
         if (amendIds.length) {
-          baseDoc.status = baseDoc.status || {};
           baseDoc.status.amended = true;
           baseDoc.status.amendedBy = amendIds;
         }
       }
+
+      for (const [baseTag, baseDoc] of byReleaseTag.entries()) {
+        if (/-am\d+-/i.test(baseTag)) continue;
+        baseDoc.status = baseDoc.status || {};
+        if (baseDoc.status.amended === undefined) baseDoc.status.amended = false;
+        if (!Array.isArray(baseDoc.status.amendedBy)) baseDoc.status.amendedBy = [];
+      }
     }
   } catch (e) {
     console.warn(`⚠️ Amendment wiring failed for ${rootUrl}: ${e.message}`);
+  }
+
+  // --- Post-process: wire supersededBy to the next base release ---
+  try {
+    // Build map of releaseTag -> doc (reuse if already in scope would be fine, rebuild safely here)
+    const byReleaseTag = new Map();
+    for (const d of docs) {
+      if (d && d.releaseTag) byReleaseTag.set(d.releaseTag, d);
+    }
+
+    // Identify base releases only (exclude amendment tags)
+    const baseTags = Array.from(byReleaseTag.keys()).filter(t => !/-am\d+-/i.test(t)).sort();
+
+    // For each base (except the last), compute next base and wire supersededBy
+    for (let i = 0; i < baseTags.length - 1; i++) {
+      const baseTag = baseTags[i];
+      const nextBaseTag = baseTags[i + 1];
+
+      const baseDoc = byReleaseTag.get(baseTag);
+      const nextBaseDoc = byReleaseTag.get(nextBaseTag);
+      if (!baseDoc || !nextBaseDoc || !nextBaseDoc.docId) continue;
+
+      // Set on the base itself
+      baseDoc.status = baseDoc.status || {};
+      const nextList = [nextBaseDoc.docId];
+      const prevListBase = Array.isArray(baseDoc.status.supersededBy) ? baseDoc.status.supersededBy : [];
+      if (JSON.stringify(prevListBase) !== JSON.stringify(nextList)) {
+        baseDoc.status.supersededBy = nextList;
+      }
+
+      // Also set on each amendment of this base: they are superseded by the next base too
+      if (amendmentMap && amendmentMap.has(baseTag)) {
+        const amendTags = amendmentMap.get(baseTag) || [];
+        for (const amendTag of amendTags) {
+          const amendDoc = byReleaseTag.get(amendTag);
+          if (!amendDoc) continue;
+          amendDoc.status = amendDoc.status || {};
+          const prevListAmend = Array.isArray(amendDoc.status.supersededBy) ? amendDoc.status.supersededBy : [];
+          if (JSON.stringify(prevListAmend) !== JSON.stringify(nextList)) {
+            amendDoc.status.supersededBy = nextList;
+          }
+        }
+      }
+    }
+    // Latest base (last in sequence) intentionally gets no supersededBy
+  } catch (e) {
+    console.warn(`⚠️ supersededBy wiring failed for ${rootUrl}: ${e.message}`);
+  }
+
+  try {
+    for (const d of docs) {
+      d.status = d.status || {};
+      if (typeof d.status.superseded === 'undefined') {
+        // Prefer the explicit latestVersion flag when available
+        if (d.status.latestVersion === true) {
+          d.status.superseded = false;
+        } else if (d.status.latestVersion === false) {
+          d.status.superseded = true;
+        } else {
+          // Fallback: when latestVersion is unknown, assume not superseded
+          d.status.superseded = false;
+        }
+      }
+    }
+  } catch (e) {
+    console.warn(`⚠️ Superseded normalization failed for ${rootUrl}: ${e.message}`);
   }
 
   console.log(`📊 Release summary — HTML: ${countHTML}, PDF: ${countPDF}, none: ${countNoIframe}`);
@@ -805,6 +878,9 @@ for (const doc of results) {
       // Inject $meta for status.amendedBy on new docs when present
       if (doc.status && Array.isArray(doc.status.amendedBy)) {
         injectMeta(doc.status, 'amendedBy', sourceType, 'new', []);
+      }
+      if (doc.status && Array.isArray(doc.status.supersededBy)) {
+        injectMeta(doc.status, 'supersededBy', 'resolved', 'new', []);
       }
       if (doc.status && doc.status.withdrawnNotice && doc.status['withdrawnNotice$meta'] && doc.__withdrawnNoticeSuffix) {
         // Normalize: strip any existing reachability suffix(es) before adding the current one
@@ -937,6 +1013,18 @@ for (const doc of results) {
                 if (!changedFields.includes('status')) changedFields.push('status');
               }
             }
+            // Handle supersededBy (array) similarly
+            if (Array.isArray(newVal.supersededBy)) {
+              const oldSB = Array.isArray(oldValues?.status?.supersededBy) ? oldValues.status.supersededBy : [];
+              const newSB = newVal.supersededBy;
+              const sameSB = JSON.stringify(oldSB) === JSON.stringify(newSB);
+              if (!sameSB) {
+                existingDoc.status.supersededBy = newSB;
+                const fieldSourceSB = 'resolved'; // derived from cross-version wiring logic
+                injectMeta(existingDoc.status, 'supersededBy', fieldSourceSB, 'update', oldSB);
+                if (!changedFields.includes('status')) changedFields.push('status');
+              }
+            }
             const newWN = newVal.withdrawnNotice;
             const oldWN = oldValues?.status?.withdrawnNotice;
             if (newWN !== undefined) {
@@ -1066,7 +1154,7 @@ for (const doc of results) {
   }
   // Format full details for Updated
   function formatUpdatedDocFull(doc) {
-    const lines = [`- ${doc.docId} (updated fields: ${doc.fields.join(', ')})`];
+    const lines = [`#### ${doc.docId} (updated fields: ${doc.fields.join(', ')})`];
 
     // Log field updates with old and new values
     doc.fields.forEach(field => {
@@ -1102,6 +1190,13 @@ for (const doc of results) {
         const amendedByChanged = JSON.stringify(oldAB) !== JSON.stringify(newAB);
         if (amendedByChanged) {
           diffs.push(`amendedBy: ${formatVal(oldAB)} → ${formatVal(newAB)}`);
+        }
+        // Also report supersededBy (array) changes
+        const oldSB = Array.isArray(oldStatus.supersededBy) ? oldStatus.supersededBy : [];
+        const newSB = Array.isArray(newStatus.supersededBy) ? newStatus.supersededBy : [];
+        const supersededByChanged = JSON.stringify(oldSB) !== JSON.stringify(newSB);
+        if (supersededByChanged) {
+          diffs.push(`supersededBy: ${formatVal(oldSB)} → ${formatVal(newSB)}`);
         }
         if (diffs.length > 0) lines.push(`  - status changed: \r\n${diffs.join('\r\n')}`);
       } else if (field === 'revisionOf') {
