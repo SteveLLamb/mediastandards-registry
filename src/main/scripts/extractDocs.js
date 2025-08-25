@@ -414,18 +414,25 @@ function mergeInferredInto(existingDoc, inferredDoc) {
 const parseRefId = (text, href = '') => {
   if (/w3\.org\/TR\/\d{4}\/REC-([^\/]+)-(\d{8})\//i.test(href)) {
     const [, shortname, yyyymmdd] = href.match(/REC-([^\/]+)-(\d{8})/i);
-    return `${shortname}.${yyyymmdd}`;
+    return `W3C.${shortname}.${yyyymmdd}`;
   }
   if (/w3\.org\/TR\/([^\/]+)\/?$/i.test(href)) {
     const [, shortname] = href.match(/w3\.org\/TR\/([^\/]+)\/?$/i);
-    return `${shortname}.LATEST`;
+    return `W3C.${shortname}.LATEST`;
   }
   const parts = text.split('|').map(p => p.trim());
   text = parts.find(p => /ISO\/IEC|ISO/.test(p)) || parts[0];
   // SMPTE refs: support all known doc types (ST, RP, RDD, EG, AG, OV)
-  if (/SMPTE\s+(ST|RP|RDD|EG|AG|OV)\s+(\d+)(?:-(\d+))?/i.test(text)) {
-    const [, type, num, part] = text.match(/SMPTE\s+(ST|RP|RDD|EG|AG|OV)\s+(\d+)(?:-(\d+))?/i);
-    return `SMPTE.${type.toUpperCase()}${part ? `${num}-${part}` : num}.LATEST`;
+  // If a year (and optional month) is present after a colon, pin to that version; otherwise use .LATEST
+  if (/SMPTE\s+(ST|RP|RDD|EG|AG|OV)\s+(\d+)(?:-(\d+))?(?::\s*(\d{4})(?:-(\d{2}))?)?/i.test(text)) {
+    const [, type, num, part, year, month] = text.match(/SMPTE\s+(ST|RP|RDD|EG|AG|OV)\s+(\d+)(?:-(\d+))?(?::\s*(\d{4})(?:-(\d{2}))?)?/i);
+    const lineage = `SMPTE.${type.toUpperCase()}${part ? `${num}-${part}` : num}`;
+    if (year) {
+      // Match SMPTE docId year formatting used elsewhere: YYYY for <2023, YYYY-MM for 2023+ when month provided
+      const suffix = (parseInt(year, 10) >= 2023 && month) ? `${year}-${month}` : year;
+      return `${lineage}.${suffix}`;
+    }
+    return `${lineage}.LATEST`;
   }
   if (/RFC\s*(\d+)/i.test(text)) {
     return `rfc${text.match(/RFC\s*(\d+)/i)[1]}`;

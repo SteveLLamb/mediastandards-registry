@@ -5,7 +5,8 @@
     <table id="sorttableDocs" class="table table-small table-hover">
       <thead class="thead-light">
         <tr>
-          <th scope="col" class="d-none"></th>
+          <!-- th scope="col" class="d-none"></th -->
+          <th scope="col">docId</th>
           <th scope="col">Label</th>
           <th scope="col">Publisher</th>
           <th scope="col">Group</th>
@@ -22,7 +23,8 @@
       <tbody id="searchTable">
         {{#dataDocuments}}
         <tr id="{{../idType}}-{{docId}}">
-          <td class="docid d-none">
+          <!-- td class="docid d-none" -->
+          <td class="docid">
             {{docId}}
           </td>
           <td class="doclabel">

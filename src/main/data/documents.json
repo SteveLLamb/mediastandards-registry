@@ -27918,9 +27918,9 @@
         "SMPTE.ST429-3.2006",
         "SMPTE.ST429-7.2006",
         "SMPTE.RP210.10.2007",
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
         "rfc2396",
         "rfc4122"
       ],
@@ -28510,10 +28510,10 @@
     },
     "references": {
       "normative": [
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
-        "xmldsig-core.20020212",
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
+        "W3C.xmldsig-core.20020212",
         "rfc2045",
         "rfc2046",
         "rfc2396",
@@ -28662,10 +28662,10 @@
     },
     "references": {
       "normative": [
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
-        "xmldsig-core.20020212",
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
+        "W3C.xmldsig-core.20020212",
         "rfc3174",
         "rfc2045",
         "rfc2046",
@@ -28818,9 +28818,9 @@
         "rfc1738",
         "rfc2396",
         "rfc4122",
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028"
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -29241,9 +29241,9 @@
         "rfc4051",
         "rfc3339",
         "rfc4122",
-        "xmlschema-1.20010502",
-        "xmlenc.core.20021210",
-        "xmldsig-core.20020212"
+        "W3C.xmlschema-1.20010502",
+        "W3C.xmlenc.core.20021210",
+        "W3C.xmldsig-core.20020212"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -29384,12 +29384,12 @@
     },
     "references": {
       "normative": [
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
         "rfc2141",
         "rfc3280",
-        "xmlc14n.20010315",
-        "xmldsig-core.20020212",
+        "W3C.xmlc14n.20010315",
+        "W3C.xmldsig-core.20020212",
         "rfc3275",
         "SMPTE.ST433.2008",
         "SMPTE.ST430-2.2006",
@@ -29796,9 +29796,9 @@
     },
     "references": {
       "normative": [
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
         "rfc1738",
         "rfc2396",
         "rfc4122",
@@ -30318,8 +30318,8 @@
     },
     "references": {
       "normative": [
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
         "ISO.639-2.1998",
         "ISO.3166-1.1997",
         "rfc4122",
@@ -47472,166 +47472,6 @@
     }
   },
   {
-    "authors": [
-      "Karl Dubost",
-      "Lynne Rosenthal",
-      "Dominique Hazaël-Massieux",
-      "Lofton Henderson"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "qaframe.spec.20041122",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "QAFrame",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "QA Framework: Specification Guidelines",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2004/WD-qaframe-spec-20041122/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2004-11-22",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": false,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "superseded": true,
-      "superseded$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "supersededBy": [
-        "qaframe.spec.20050817"
-      ],
-      "supersededBy$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Karl Dubost",
-      "Lynne Rosenthal",
-      "Dominique Hazaël-Massieux",
-      "Lofton Henderson"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "qaframe.spec.20050817",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "QAFrame",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "QA Framework: Specification Guidelines",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2005/REC-qaframe-spec-20050817/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2005-08-17",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": true,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
     "docId": "R-REC-BR.1352-1.2002",
     "docId$meta": {
       "confidence": "high",
@@ -48639,7 +48479,7 @@
       "normative": [
         "SMPTE.ST2067.ALLPARTS",
         "SMPTE.ST377-1.LATEST",
-        "xml.LATEST"
+        "W3C.xml.LATEST"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -49913,238 +49753,6 @@
     "status": {
       "active": true,
       "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Jonathan Borden",
-      "Tim Bray"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "rddl.2002",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "RDDL",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "Resource Directory Description Language (RDDL)",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "http://www.rddl.org/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2002-02-08",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": false,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "superseded": true,
-      "superseded$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "supersededBy": [
-        "rddl.2010"
-      ],
-      "supersededBy$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Jonathan Borden",
-      "Tim Bray"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "rddl.2010",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "RDDL 2",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "Resource Directory Description Language (RDDL) 2.0",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "http://www.rddl.org/2",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2010-01-01",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": true,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "docId": "REC-html52.20171214",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "REC-html52-20171214",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "HTML 5.2",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2017/REC-html52-20171214/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2017-12-14",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": false,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "superseded": true,
-      "superseded$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "supersededBy": [
-        "HTML"
-      ],
-      "supersededBy$meta": {
         "confidence": "medium",
         "note": "Legacy data, has not been verified",
         "source": "manual",
@@ -58740,7 +58348,7 @@
     },
     "references": {
       "bibliographic": [
-        "qaframe.spec.20050817",
+        "W3C.qaframe.spec.20050817",
         "IETF.FLS.2001",
         "SMPTE.AG04.ST.LATEST",
         "SMPTE.AG04.EG.LATEST"
@@ -58752,10 +58360,10 @@
         "updated": "2025-07-01T00:00:00Z"
       },
       "normative": [
-        "xmlschema-1.20041028",
-        "xml.20081126",
-        "xmlnames.20091208",
-        "REC-html52.20171214",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xml.20081126",
+        "W3C.xmlnames.20091208",
+        "W3C.REC-html52.20171214",
         "rfc3986",
         "rfc7405"
       ],
@@ -66427,10 +66035,10 @@
     },
     "references": {
       "normative": [
-        "xmlnames.20091208",
-        "xmlschema1.1-1.20120405",
-        "xmlschema1.1-2.20120405",
-        "xml.20081126",
+        "W3C.xmlnames.20091208",
+        "W3C.xmlschema1.1-1.20120405",
+        "W3C.xmlschema1.1-2.20120405",
+        "W3C.xml.20081126",
         "R-REC-BR.1352-2.2002"
       ],
       "normative$meta": {
@@ -67849,9 +67457,9 @@
         "SMPTE.ST2067-3.2016",
         "SMPTE.ST2067-5.2013",
         "SMPTE.ST2067-5.2013Am1.2016",
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
         "ISO.10646.2017"
       ],
       "normative$meta": {
@@ -68159,7 +67767,7 @@
         "SMPTE.ST2067-2.2020",
         "SMPTE.ST2067-5.2020",
         "SMPTE.ST2067-21.2020",
-        "xml.20040204",
+        "W3C.xml.20040204",
         "ISO.10646.2017",
         "ISO.15444-1.2016"
       ],
@@ -91198,12 +90806,12 @@
         "SMPTE.ST400.2012",
         "SMPTE.ST2003.2012",
         "SMPTE.ST2029.2009",
-        "xml.20040204",
-        "xmlnames.20091208",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
-        "xlink1.1.20100506",
-        "xpath.19991116",
+        "W3C.xml.20040204",
+        "W3C.xmlnames.20091208",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
+        "W3C.xlink1.1.20100506",
+        "W3C.xpath.19991116",
         "rfc1738",
         "rfc2141",
         "rfc2396",
@@ -91308,7 +90916,7 @@
         "ISO.9899.1999",
         "ISO.11179-1.2004",
         "unicode-5-1-0",
-        "xml.20081126",
+        "W3C.xml.20081126",
         "isbn-9780877798071"
       ],
       "bibliographic$meta": {
@@ -91322,7 +90930,7 @@
         "SMPTE.ST336.2007",
         "SMPTE.ST2029.2009",
         "ISO.646.1991",
-        "xmlnames.20060816"
+        "W3C.xmlnames.20060816"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -94613,10 +94221,10 @@
         "SMPTE.ST2067-3.2013",
         "rfc3986",
         "rfc4288",
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
-        "xmldsig-core.20020212"
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
+        "W3C.xmldsig-core.20020212"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -94836,8 +94444,8 @@
         "SMPTE.ST2067-100.2014",
         "IEEE.754.2008",
         "rfc3986",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028"
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -95129,8 +94737,8 @@
         "SMPTE.ST2067-20.2016",
         "SMPTE.ST2067-21.2016",
         "SMPTE.ST2067-101.2014",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028"
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -95267,8 +94875,8 @@
         "SMPTE.ST2067-21.2020",
         "SMPTE.ST2067-21.2020Am1.2020",
         "SMPTE.ST2067-101.2018",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028"
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -95490,8 +95098,8 @@
       "normative": [
         "SMPTE.ST377-4.2012",
         "SMPTE.ST2067-100.2014",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028"
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -96081,10 +95689,10 @@
         "rfc4122",
         "rfc4539",
         "rfc5646",
-        "xml.20081126",
-        "ttml.imsc1.1.20181108",
-        "xmlschema-1.20041028",
-        "xmldsig-core1.20130411"
+        "W3C.xml.20081126",
+        "W3C.ttml.imsc1.1.20181108",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmldsig-core1.20130411"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -96396,10 +96004,10 @@
         "SMPTE.ST2067-2.2016",
         "SMPTE.ST2067-3.2016",
         "SMPTE.ST2094-2.2017",
-        "xml.20040204",
-        "xmlnames.20091208",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028"
+        "W3C.xml.20040204",
+        "W3C.xmlnames.20091208",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -96745,9 +96353,9 @@
         "SMPTE.ST2067-2.LATEST",
         "SMPTE.ST2067-3.LATEST",
         "SMPTE.ST2067-5.LATEST",
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028"
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -97083,7 +96691,7 @@
         "IEC.61966-2-4.2006",
         "ISO.15444-1.2016",
         "ISO.11664-3.2012",
-        "xmlschema-1.20041028"
+        "W3C.xmlschema-1.20041028"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -97264,7 +96872,7 @@
         "IEC.61966-2-4.2006",
         "ISO.15444-1.2016",
         "ISO.11664-3.2012",
-        "xmlschema-1.20041028",
+        "W3C.xmlschema-1.20041028",
         "R-REC-BT.2100-2.201807"
       ],
       "normative$meta": {
@@ -97422,7 +97030,7 @@
         "IEC.61966-2-4.2006",
         "ISO.15444-1.2019",
         "ISO.11664-3.2012",
-        "xmlschema-1.20041028"
+        "W3C.xmlschema-1.20041028"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -97763,10 +97371,10 @@
         "rfc2045",
         "rfc2046",
         "rfc5646",
-        "xml.20081126",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
-        "xmldsig-core1.20130411"
+        "W3C.xml.20081126",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
+        "W3C.xmldsig-core1.20130411"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -98356,8 +97964,8 @@
         "ISO.11664-3.2012",
         "ISO.15444-1.2019",
         "ISO.15444-15.2019",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028"
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -98852,8 +98460,8 @@
         "SMPTE.ST2067-101.2014",
         "SMPTE.ST2067-102.2014",
         "SMPTE.ST2080-3.2017",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028"
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -98977,7 +98585,7 @@
         "ISO.14496-10.2014",
         "R-REC-BT.2020-2.201510",
         "R-REC-BT.2100-2.201807",
-        "xmlschema-1.20041028"
+        "W3C.xmlschema-1.20041028"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -99292,7 +98900,7 @@
         "SMPTE.ST433.2008",
         "SMPTE.ST433.2008Am1.2011",
         "SMPTE.ST2067-3.2016",
-        "xmlnames.20091208"
+        "W3C.xmlnames.20091208"
       ],
       "bibliographic$meta": {
         "confidence": "medium",
@@ -99302,9 +98910,9 @@
       },
       "normative": [
         "SMPTE.ST2067-2.2016",
-        "xml.20081126",
-        "xmlschema-1.20041028",
-        "xmldsig-core.20080610",
+        "W3C.xml.20081126",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmldsig-core.20080610",
         "rfc3023"
       ],
       "normative$meta": {
@@ -99865,7 +99473,7 @@
         "SMPTE.ST298.2009",
         "SMPTE.ST336.2007",
         "SMPTE.ST2029.2009",
-        "xmlnames.20060816"
+        "W3C.xmlnames.20060816"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -108908,7 +108516,7 @@
         "SMPTE.J107.9.603.815.1998",
         "rfc2518",
         "SMPTE.PubReg.2018",
-        "xmlschema-2.20041028"
+        "W3C.xmlschema-2.20041028"
       ],
       "bibliographic$meta": {
         "confidence": "medium",
@@ -109643,7 +109251,7 @@
         "ISO.646.1991",
         "ISO.11179-1.2004",
         "unicode-5-1-0",
-        "xml.20081126",
+        "W3C.xml.20081126",
         "isbn-9780877798071"
       ],
       "bibliographic$meta": {
@@ -109658,7 +109266,7 @@
         "SMPTE.ST2003.2012",
         "SMPTE.ST2029.2009",
         "ISO.8825-1.2008",
-        "xmlnames.20060816"
+        "W3C.xmlnames.20060816"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -109771,7 +109379,7 @@
         "SMPTE.ST400.2004",
         "ISO.646.1991",
         "ISO.11179-1.2004",
-        "xml.20081126",
+        "W3C.xml.20081126",
         "isbn-9780877798071"
       ],
       "bibliographic$meta": {
@@ -109786,7 +109394,7 @@
         "SMPTE.ST2003.2012",
         "SMPTE.ST2029.2009",
         "ISO.8825-1.2008",
-        "xmlnames.20060816"
+        "W3C.xmlnames.20060816"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -115270,7 +114878,7 @@
         "SMPTE.ST377-1.2011Am1.2012",
         "SMPTE.ST377-1.2011Am2.2012",
         "SMPTE.ST2003.2012",
-        "xml.20081126",
+        "W3C.xml.20081126",
         "ISO.11179-1.2004",
         "isbn-9780877798071"
       ],
@@ -115284,11 +114892,11 @@
         "SMPTE.ST298.2009",
         "SMPTE.ST336.2007",
         "SMPTE.ST2029.2009",
-        "xmlnames.19990114",
+        "W3C.xmlnames.19990114",
         "rfc2141",
         "rfc3061",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028"
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -115720,7 +115328,7 @@
         "SMPTE.ST335.2012",
         "SMPTE.ST395.2003",
         "SMPTE.ST2003.2012",
-        "xml.20081126",
+        "W3C.xml.20081126",
         "ISO.11179-1.2004",
         "isbn-9780877798071"
       ],
@@ -115734,7 +115342,7 @@
         "SMPTE.ST298.2009",
         "SMPTE.ST336.2007",
         "SMPTE.ST2029.2009",
-        "xmlnames.20060816"
+        "W3C.xmlnames.20060816"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -117958,9 +117566,9 @@
     "references": {
       "normative": [
         "SMPTE.ST429-8.2007",
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
         "rfc2396"
       ],
       "normative$meta": {
@@ -119338,9 +118946,9 @@
     },
     "references": {
       "normative": [
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
         "rfc2396",
         "rfc4122",
         "ISO.15948.2004",
@@ -119696,9 +119304,9 @@
         "SMPTE.ST429-3.2006",
         "SMPTE.ST429-7.2006",
         "SMPTE.RP210.10.2007",
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
         "rfc2396",
         "rfc4122"
       ],
@@ -119935,9 +119543,9 @@
         "SMPTE.ST377-1.LATEST",
         "SMPTE.ST429-3.LATEST",
         "SMPTE.ST429-7.LATEST",
-        "xml.LATEST",
-        "xmlschema-1.LATEST",
-        "xmlschema-2.LATEST",
+        "W3C.xml.LATEST",
+        "W3C.xmlschema-1.LATEST",
+        "W3C.xmlschema-2.LATEST",
         "rfc3986"
       ],
       "normative$meta": {
@@ -120167,9 +119775,9 @@
         "SMPTE.ST429-8.2007",
         "SMPTE.ST428-10.2008",
         "SMPTE.ST429-7.2006",
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
         "rfc2396"
       ],
       "normative$meta": {
@@ -120495,9 +120103,9 @@
         "SMPTE.ST429-3.2007",
         "SMPTE.ST429-7.2006",
         "SMPTE.ST2029.2009",
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
         "rfc2396"
       ],
       "normative$meta": {
@@ -120687,9 +120295,9 @@
         "SMPTE.ST429-12.2008",
         "rfc5234",
         "rfc5646",
-        "xpath.19991116",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028"
+        "W3C.xpath.19991116",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -120859,9 +120467,9 @@
     },
     "references": {
       "normative": [
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
         "ISO.10646-1.2000"
       ],
       "normative$meta": {
@@ -121006,9 +120614,9 @@
         "SMPTE.ST429-7.2006",
         "SMPTE.ST2029.2009",
         "SMPTE.ST2098-2.2019",
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
         "rfc2396"
       ],
       "normative$meta": {
@@ -121648,9 +121256,9 @@
         "SMPTE.RP224v12.2012",
         "SMPTE.ST428-11.2013",
         "SMPTE.ST429-13.2009",
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
         "rfc2046"
       ],
       "bibliographic$meta": {
@@ -121838,9 +121446,9 @@
       "bibliographic": [
         "SMPTE.ST336.2007",
         "SMPTE.RP224v12.2012",
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
         "rfc2046"
       ],
       "bibliographic$meta": {
@@ -122013,9 +121621,9 @@
         "SMPTE.RP224v12.2012",
         "SMPTE.ST428-11.2013",
         "SMPTE.ST429-13.2009",
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
         "rfc2046"
       ],
       "bibliographic$meta": {
@@ -122569,7 +122177,7 @@
         "rfc4246",
         "rfc5646",
         "rfc7972",
-        "xml.LATEST"
+        "W3C.xml.LATEST"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -124179,10 +123787,10 @@
     "references": {
       "bibliographic": [
         "rfc1738",
-        "rddl.2002",
-        "xmlnames.20060816",
-        "qaframe.spec.20041122",
-        "xmlschema-0.20041028"
+        "W3C.rddl.2002",
+        "W3C.xmlnames.20060816",
+        "W3C.qaframe.spec.20041122",
+        "W3C.xmlschema-0.20041028"
       ],
       "bibliographic$meta": {
         "confidence": "medium",
@@ -124191,10 +123799,10 @@
         "updated": "2025-07-01T00:00:00Z"
       },
       "normative": [
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
-        "xmldsig-core.20020212",
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
+        "W3C.xmldsig-core.20020212",
         "rfc2045",
         "rfc2046",
         "rfc2396",
@@ -124393,10 +124001,10 @@
     },
     "references": {
       "bibliographic": [
-        "rddl.2002",
-        "xmlnames.20060816",
-        "qaframe.spec.20041122",
-        "xmlschema-0.20041028",
+        "W3C.rddl.2002",
+        "W3C.xmlnames.20060816",
+        "W3C.qaframe.spec.20041122",
+        "W3C.xmlschema-0.20041028",
         "iana-mt",
         "SMPTE.ST429-3.2006",
         "SMPTE.ST429-7.2006"
@@ -124408,10 +124016,10 @@
         "updated": "2025-07-01T00:00:00Z"
       },
       "normative": [
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
-        "xmldsig-core.20020212",
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
+        "W3C.xmldsig-core.20020212",
         "rfc3174",
         "rfc2045",
         "rfc2046",
@@ -124876,10 +124484,10 @@
         "SMPTE.ST429-8.2007",
         "rfc3986",
         "rfc4122",
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
-        "xmlnames.20091208"
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
+        "W3C.xmlnames.20091208"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -125387,7 +124995,7 @@
         "isbn-9781119183471",
         "rfc2246",
         "x509.199706",
-        "xkms2.20030418",
+        "W3C.xkms2.20030418",
         "ISO.3166.1993",
         "SMPTE.ST429-14.2014"
       ],
@@ -125576,7 +125184,7 @@
         "isbn-9781119183471",
         "rfc2246",
         "x509.199706",
-        "xkms2.20030418",
+        "W3C.xkms2.20030418",
         "ISO.3166.1993",
         "SMPTE.ST429-14.2014",
         "SMPTE.ST430-12.2014"
@@ -125747,9 +125355,9 @@
         "rfc3339",
         "rfc4122",
         "rfc8017",
-        "xml.LATEST",
-        "xmlschema-1.LATEST",
-        "xmldsig-core1.LATEST"
+        "W3C.xml.LATEST",
+        "W3C.xmlschema-1.LATEST",
+        "W3C.xmldsig-core1.LATEST"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -126063,9 +125671,9 @@
         "updated": "2025-07-01T00:00:00Z"
       },
       "normative": [
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
         "rfc1738",
         "rfc2396",
         "rfc4122",
@@ -126846,7 +126454,7 @@
         "rfc7232",
         "rfc7234",
         "SMPTE.ST430-16.2017",
-        "xlink1.1.20100506"
+        "W3C.xlink1.1.20100506"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -127026,10 +126634,10 @@
         "SMPTE.ST430-2.2006",
         "SMPTE.ST428-12.2013",
         "T-REC-E.123.2001",
-        "xmlschema-1.20041028",
-        "xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xml.20040204",
         "rfc5322",
-        "xmldsig-core.20020212"
+        "W3C.xmldsig-core.20020212"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -128022,9 +127630,9 @@
         "rfc4051",
         "rfc3339",
         "rfc4122",
-        "xmlschema-1.20010502",
-        "xmlenc.core.20021210",
-        "xmldsig-core.20020212"
+        "W3C.xmlschema-1.20010502",
+        "W3C.xmlenc.core.20021210",
+        "W3C.xmldsig-core.20020212"
       ],
       "normative$meta": {
         "confidence": "medium",
@@ -128201,12 +127809,12 @@
     },
     "references": {
       "normative": [
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
         "rfc2141",
         "rfc3280",
-        "xmlc14n.20010315",
-        "xmldsig-core.20020212",
+        "W3C.xmlc14n.20010315",
+        "W3C.xmldsig-core.20020212",
         "rfc3275",
         "SMPTE.ST433.2008",
         "SMPTE.ST430-2.2006",
@@ -128394,12 +128002,12 @@
     },
     "references": {
       "normative": [
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
         "rfc2141",
         "rfc3280",
-        "xmlc14n.20010315",
-        "xmldsig-core.20020212",
+        "W3C.xmlc14n.20010315",
+        "W3C.xmldsig-core.20020212",
         "rfc3275",
         "SMPTE.ST433.2008",
         "SMPTE.ST430-2.2006",
@@ -129400,10 +129008,10 @@
     "references": {
       "bibliographic": [
         "rfc1738",
-        "rddl.2002",
-        "xmlnames.20060816",
-        "qaframe.spec.20041122",
-        "xmlschema-0.20041028"
+        "W3C.rddl.2002",
+        "W3C.xmlnames.20060816",
+        "W3C.qaframe.spec.20041122",
+        "W3C.xmlschema-0.20041028"
       ],
       "bibliographic$meta": {
         "confidence": "medium",
@@ -129412,9 +129020,9 @@
         "updated": "2025-07-01T00:00:00Z"
       },
       "normative": [
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
         "rfc1738",
         "rfc2396",
         "rfc4122",
@@ -129582,10 +129190,10 @@
     "references": {
       "bibliographic": [
         "rfc1738",
-        "rddl.2002",
-        "xmlnames.20060816",
-        "qaframe.spec.20041122",
-        "xmlschema-0.20041028"
+        "W3C.rddl.2002",
+        "W3C.xmlnames.20060816",
+        "W3C.qaframe.spec.20041122",
+        "W3C.xmlschema-0.20041028"
       ],
       "bibliographic$meta": {
         "confidence": "medium",
@@ -129594,9 +129202,9 @@
         "updated": "2025-07-01T00:00:00Z"
       },
       "normative": [
-        "xml.20040204",
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
+        "W3C.xml.20040204",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
         "rfc1738",
         "rfc2396",
         "rfc4122",
@@ -129884,8 +129492,8 @@
         "updated": "2025-07-01T00:00:00Z"
       },
       "normative": [
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
         "ISO.639-2.1998",
         "ISO.3166-1.1997",
         "rfc4122",
@@ -130050,8 +129658,8 @@
         "updated": "2025-07-01T00:00:00Z"
       },
       "normative": [
-        "xmlschema-1.20041028",
-        "xmlschema-2.20041028",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
         "ISO.639-2.1998",
         "ISO.3166-1.1997",
         "rfc4122",
@@ -133756,474 +133364,6 @@
     }
   },
   {
-    "authors": [
-      "Glenn Adams",
-      "Pierre-Anthony Lemieux"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "ttaf1.dfxp.20181108",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "DFXP",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "Timed Text (TT) Authoring Format 1.0 – Distribution Format Exchange Profile",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "http://www.w3.org/TR/ttaf1-dfxp/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2018-11-08",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "repo": "https://github.com/w3c/ttml1/",
-    "repo$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": false,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "superseded": true,
-      "superseded$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "supersededBy": [
-        "ttml1.20181108"
-      ],
-      "supersededBy$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Pierre-Anthony Lemieux"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "ttml.imsc1.0.1.20180424",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "TTML IMSC 1.0.1",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "TTML Profiles for Internet Media Subtitles and Captions 1.0.1 (IMSC1)",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2018/REC-ttml-imsc1.0.1-20180424/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2020-04-27",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": true,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Pierre-Anthony Lemieux"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "ttml.imsc1.1.20181108",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "TTML IMSC 1.1",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "TTML Profiles for Internet Media Subtitles and Captions 1.1",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2018/REC-ttml-imsc1.1-20181108/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2020-04-27",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "repo": "https://github.com/w3c/imsc/",
-    "repo$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": true,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Pierre-Anthony Lemieux"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "ttml.imsc1.2.20200804",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "TTML IMSC 1.2",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "TTML Profiles for Internet Media Subtitles and Captions 1.2",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2020/REC-ttml-imsc1.2-20200804/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2020-08-04",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "repo": "https://github.com/w3c/imsc/",
-    "repo$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": true,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Glenn Adams",
-      "Pierre-Anthony Lemieux"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "ttml1.20181108",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "TTML1",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "Timed Text Markup Language 1 (TTML1) (Third Edition)",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2018/REC-ttml1-20181108/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2018-11-08",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "repo": "https://github.com/w3c/ttml1/",
-    "repo$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": true,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Glenn Adams",
-      "Cyril Concolato"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "ttml2.20181108",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "TTML2",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "Timed Text Markup Language 2 (TTML2)",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2018/REC-ttml2-20181108/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2018-11-08",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "repo": "https://github.com/w3c/ttml2/",
-    "repo$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": true,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
     "docId": "uax9-0610",
     "docId$meta": {
       "confidence": "high",
@@ -134758,6 +133898,2753 @@
   },
   {
     "authors": [
+      "Karl Dubost",
+      "Lynne Rosenthal",
+      "Dominique Hazaël-Massieux",
+      "Lofton Henderson"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.qaframe.spec.20041122",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "QAFrame",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "QA Framework: Specification Guidelines",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2004/WD-qaframe-spec-20041122/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2004-11-22",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededBy": [
+        "W3C.qaframe.spec.20050817"
+      ],
+      "supersededBy$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Karl Dubost",
+      "Lynne Rosenthal",
+      "Dominique Hazaël-Massieux",
+      "Lofton Henderson"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.qaframe.spec.20050817",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "QAFrame",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "QA Framework: Specification Guidelines",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2005/REC-qaframe-spec-20050817/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2005-08-17",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Jonathan Borden",
+      "Tim Bray"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.rddl.2002",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "RDDL",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "Resource Directory Description Language (RDDL)",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "http://www.rddl.org/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2002-02-08",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededBy": [
+        "W3C.rddl.2010"
+      ],
+      "supersededBy$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Jonathan Borden",
+      "Tim Bray"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.rddl.2010",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "RDDL 2",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "Resource Directory Description Language (RDDL) 2.0",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "http://www.rddl.org/2",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2010-01-01",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "docId": "W3C.REC-html52.20171214",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "REC-html52-20171214",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "HTML 5.2",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2017/REC-html52-20171214/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2017-12-14",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededBy": [
+        "HTML"
+      ],
+      "supersededBy$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Glenn Adams",
+      "Pierre-Anthony Lemieux"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.ttaf1.dfxp.20181108",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "DFXP",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "Timed Text (TT) Authoring Format 1.0 – Distribution Format Exchange Profile",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "http://www.w3.org/TR/ttaf1-dfxp/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2018-11-08",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "repo": "https://github.com/w3c/ttml1/",
+    "repo$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededBy": [
+        "W3C.ttml1.20181108"
+      ],
+      "supersededBy$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Pierre-Anthony Lemieux"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.ttml.imsc1.0.1.20180424",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "TTML IMSC 1.0.1",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "TTML Profiles for Internet Media Subtitles and Captions 1.0.1 (IMSC1)",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2018/REC-ttml-imsc1.0.1-20180424/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2020-04-27",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Pierre-Anthony Lemieux"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.ttml.imsc1.1.20181108",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "TTML IMSC 1.1",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "TTML Profiles for Internet Media Subtitles and Captions 1.1",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2018/REC-ttml-imsc1.1-20181108/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2020-04-27",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "repo": "https://github.com/w3c/imsc/",
+    "repo$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Pierre-Anthony Lemieux"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.ttml.imsc1.2.20200804",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "TTML IMSC 1.2",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "TTML Profiles for Internet Media Subtitles and Captions 1.2",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2020/REC-ttml-imsc1.2-20200804/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2020-08-04",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "repo": "https://github.com/w3c/imsc/",
+    "repo$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Glenn Adams",
+      "Pierre-Anthony Lemieux"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.ttml1.20181108",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "TTML1",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "Timed Text Markup Language 1 (TTML1) (Third Edition)",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2018/REC-ttml1-20181108/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2018-11-08",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "repo": "https://github.com/w3c/ttml1/",
+    "repo$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Glenn Adams",
+      "Cyril Concolato"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.ttml2.20181108",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "TTML2",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "Timed Text Markup Language 2 (TTML2)",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2018/REC-ttml2-20181108/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2018-11-08",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "repo": "https://github.com/w3c/ttml2/",
+    "repo$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Phillip Hallam-Baker"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xkms2.20030418",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "XKMS",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "XML Key Management Specification (XKMS)",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2003/WD-xkms2-20030418/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2003-04-18",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededBy": [
+        "W3C.xkms2.20050628"
+      ],
+      "supersededBy$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Phillip Hallam-Baker",
+      "Shivaram Mysore"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xkms2.20050628",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "XKMS",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "XML Key Management Specification (XKMS 2.0)",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2005/REC-xkms2-20050628/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2005-06-28",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Steven DeRose",
+      "Eve Maler",
+      "David Orchard",
+      "Norman Walsh"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xlink1.1.20100506",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "XLink",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "XML Linking Language (XLink) Version 1.1",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2010/REC-xlink11-20100506/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2010-05-06",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Tim Bray",
+      "Jean Paoli",
+      "Michael Sperberg-McQueen",
+      "Eve Maler",
+      "François Yergeau"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xml.20040204",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "XML",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "Extensible Markup Language (XML) 1.0 (3rd Edition)",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2004/REC-xml-20040204/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2004-02-04",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededBy": [
+        "W3C.xml.20081126"
+      ],
+      "supersededBy$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Tim Bray",
+      "Jean Paoli",
+      "Michael Sperberg-McQueen",
+      "Eve Maler",
+      "François Yergeau"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xml.20081126",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "XML",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "Extensible Markup Language (XML) 1.0 (Fifth Edition)",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2008/REC-xml-20081126/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2008-11-26",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "John Boyer"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xmlc14n.20010315",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "CXML 1.0",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "Canonical XML Version 1.0",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2001/REC-xml-c14n-20010315",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2001-03-15",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededBy": [
+        "W3C.xmlc14n1.1.20080502"
+      ],
+      "supersededBy$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "John Boyer",
+      "Glenn Marcy"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xmlc14n1.1.20080502",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "CXML 1.1",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "Canonical XML Version 1.1",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "http://www.w3.org/TR/2008/REC-xml-c14n11-20080502/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2008-05-02",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Donald Eastlake",
+      "Joseph Reagle",
+      "David Solo"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xmldsig-core.20020212",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "XML DSIG Core",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "XML Signature Syntax and Processing",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2002/REC-xmldsig-core-20020212/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2013-02-12",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededBy": [
+        "W3C.xmldsig-core.20080610"
+      ],
+      "supersededBy$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Donald Eastlake",
+      "Joseph Reagle",
+      "David Solo",
+      "Frederick Hirsch",
+      "Thomas Roessler",
+      "Mark Bartel",
+      "John Boyer",
+      "Barb Fox",
+      "Brian LaMacchia",
+      "Ed Simon"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xmldsig-core.20080610",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "XML DSIG Core",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "XML Signature Syntax and Processing (Second Edition)",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2008/REC-xmldsig-core-20080610/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2008-06-10",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededBy": [
+        "W3C.xmldsig-core1.20130411"
+      ],
+      "supersededBy$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Donald Eastlake",
+      "Joseph Reagle",
+      "David Solo",
+      "Frederick Hirsch",
+      "Magnus Nyström",
+      "Thomas Roessler",
+      "Kelvin Yiu"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xmldsig-core1.20130411",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "XML DSIG CORE 1",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "XML Signature Syntax and Processing Version 1.1",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2013/REC-xmldsig-core1-20130411/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2013-04-11",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Donald Eastlake",
+      "Joseph Reagle",
+      "David Solo",
+      "Frederick Hirsch",
+      "Thomas Roessler",
+      "Kelvin Yiu",
+      "Pratik Datta",
+      "Scott Cantor"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xmldsig-core2.20150723",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "XML DSIG CORE 2",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "XML Signature Syntax and Processing Version 2.0",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Note",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2015/NOTE-xmldsig-core2-20150723/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2015-07-23",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Donald Eastlake",
+      "Joseph Reagle"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xmlenc.core.20021210",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "XML ESP",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "XML Encryption Syntax and Processing",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2002/REC-xmlenc-core-20021210/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2002-12-10",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededBy": [
+        "W3C.xmlenc.core1.20130411"
+      ],
+      "supersededBy$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Donald Eastlake",
+      "Joseph Reagle",
+      "Frederick Hirsch",
+      "Thomas Roessler"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xmlenc.core1.20130411",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "XML ESP 11",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "XML Encryption Syntax and Processing Version 1.1",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2013/REC-xmlenc-core1-20130411/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2013-04-11",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Tim Bray",
+      "Dave Hollander",
+      "Andrew Layman"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xmlnames.19990114",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "NS XML",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "Namespaces in XML 1.0 (Second Edition)",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/1999/REC-xml-names-19990114/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "1999-01-14",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededBy": [
+        "W3C.xmlnames.20060816"
+      ],
+      "supersededBy$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Tim Bray",
+      "Dave Hollander",
+      "Andrew Layman",
+      "Richard Tobin"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xmlnames.20060816",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "NS XML",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "Namespaces in XML 1.0 (Second Edition)",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2006/REC-xml-names-20060816/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2006-08-16",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededBy": [
+        "W3C.xmlnames.20091208"
+      ],
+      "supersededBy$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Tim Bray",
+      "Dave Hollander",
+      "Andrew Layman",
+      "Richard Tobin",
+      "Henry Thompson"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xmlnames.20091208",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "NS XML",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "Namespaces in XML 1.0 (3rd Edition)",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2009/REC-xml-names-20091208/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2009-12-08",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "David Fallside",
+      "Priscilla Walmsley"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xmlschema-0.20041028",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "XML SP",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "XML Schema Part 0: Primer Second Edition",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2004/REC-xmlschema-0-20041028/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2004-10-28",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Henry Thompson",
+      "David Beech",
+      "Murray Maloney",
+      "Noah Mendelsohn"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xmlschema-1.20010502",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "XML SCHEMA 1",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "XML Schema Part 1: Structures Second Edition",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2001/REC-xmlschema-1-20010502/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2001-05-02",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededBy": [
+        "W3C.xmlschema-1.20041028"
+      ],
+      "supersededBy$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Henry Thompson",
+      "David Beech",
+      "Murray Maloney",
+      "Noah Mendelsohn"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xmlschema-1.20041028",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "XML SCHEMA 1",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "XML Schema Part 1: Structures Second Edition",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2004/REC-xmlschema-1-20041028/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2004-10-28",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Paul V. Biron",
+      "Ashok Malhotra"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xmlschema-2.20041028",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "XML SCHEMA 2",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "XML Schema Part 2: Datatypes Second Edition",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2004/REC-xmlschema-2-20041028/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2004-10-28",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Sandy Gao",
+      "Michael Sperberg-McQueen",
+      "Henry Thompson",
+      "Noah Mendelsohn",
+      "David Beech",
+      "Murray Maloney"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xmlschema1.1-1.20120405",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "XML XSD 11 P1",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "XML Schema Definition Language (XSD) 1.1 Part 1: Structures",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2012/REC-xmlschema11-1-20120405/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2012-04-05",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "David Peterson",
+      "Sandy Gao",
+      "Ashok Malhotra",
+      "Michael Sperberg-McQueen",
+      "Henry Thompson",
+      "Paul V. Biron"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xmlschema1.1-2.20120405",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "XML XSD 11 P2",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2012/REC-xmlschema11-2-20120405/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2012-04-05",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "James Clark",
+      "Steven DeRose"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xpath.19991116",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "XML XPL",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "XML Path Language (XPath) V1.0",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/1999/REC-xpath-19991116/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "1999-11-16",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededBy": [
+        "W3C.xpath3.1.20170321"
+      ],
+      "supersededBy$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
+      "Jonathan Robie",
+      "Michael Dyck",
+      "Josh Spiegel"
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "W3C.xpath3.1.20170321",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "XML XPL",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "XML Path Language (XPath) 3.1",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommendation",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.w3.org/TR/2017/REC-xpath-31-20170321/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2017-03-21",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "W3C",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "authors": [
       "Peter Gutmann"
     ],
     "authors$meta": {
@@ -134945,1893 +136832,6 @@
       "updated": "2025-07-01T00:00:00Z"
     },
     "publisher": "ITU-T",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": true,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Phillip Hallam-Baker"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xkms2.20030418",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "XKMS",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "XML Key Management Specification (XKMS)",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2003/WD-xkms2-20030418/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2003-04-18",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": false,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "superseded": true,
-      "superseded$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "supersededBy": [
-        "xkms2.20050628"
-      ],
-      "supersededBy$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Phillip Hallam-Baker",
-      "Shivaram Mysore"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xkms2.20050628",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "XKMS",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "XML Key Management Specification (XKMS 2.0)",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2005/REC-xkms2-20050628/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2005-06-28",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": true,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Steven DeRose",
-      "Eve Maler",
-      "David Orchard",
-      "Norman Walsh"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xlink1.1.20100506",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "XLink",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "XML Linking Language (XLink) Version 1.1",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2010/REC-xlink11-20100506/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2010-05-06",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": true,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Tim Bray",
-      "Jean Paoli",
-      "Michael Sperberg-McQueen",
-      "Eve Maler",
-      "François Yergeau"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xml.20040204",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "XML",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "Extensible Markup Language (XML) 1.0 (3rd Edition)",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2004/REC-xml-20040204/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2004-02-04",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": false,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "superseded": true,
-      "superseded$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "supersededBy": [
-        "xml.20081126"
-      ],
-      "supersededBy$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Tim Bray",
-      "Jean Paoli",
-      "Michael Sperberg-McQueen",
-      "Eve Maler",
-      "François Yergeau"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xml.20081126",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "XML",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "Extensible Markup Language (XML) 1.0 (Fifth Edition)",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2008/REC-xml-20081126/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2008-11-26",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": true,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "John Boyer"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xmlc14n.20010315",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "CXML 1.0",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "Canonical XML Version 1.0",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2001/REC-xml-c14n-20010315",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2001-03-15",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": false,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "superseded": true,
-      "superseded$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "supersededBy": [
-        "xmlc14n1.1.20080502"
-      ],
-      "supersededBy$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "John Boyer",
-      "Glenn Marcy"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xmlc14n1.1.20080502",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "CXML 1.1",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "Canonical XML Version 1.1",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "http://www.w3.org/TR/2008/REC-xml-c14n11-20080502/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2008-05-02",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": true,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Donald Eastlake",
-      "Joseph Reagle",
-      "David Solo"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xmldsig-core.20020212",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "XML DSIG Core",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "XML Signature Syntax and Processing",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2002/REC-xmldsig-core-20020212/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2013-02-12",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": false,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "superseded": true,
-      "superseded$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "supersededBy": [
-        "xmldsig-core.20080610"
-      ],
-      "supersededBy$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Donald Eastlake",
-      "Joseph Reagle",
-      "David Solo",
-      "Frederick Hirsch",
-      "Thomas Roessler",
-      "Mark Bartel",
-      "John Boyer",
-      "Barb Fox",
-      "Brian LaMacchia",
-      "Ed Simon"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xmldsig-core.20080610",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "XML DSIG Core",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "XML Signature Syntax and Processing (Second Edition)",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2008/REC-xmldsig-core-20080610/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2008-06-10",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": false,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "superseded": true,
-      "superseded$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "supersededBy": [
-        "xmldsig-core1.20130411"
-      ],
-      "supersededBy$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Donald Eastlake",
-      "Joseph Reagle",
-      "David Solo",
-      "Frederick Hirsch",
-      "Magnus Nyström",
-      "Thomas Roessler",
-      "Kelvin Yiu"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xmldsig-core1.20130411",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "XML DSIG CORE 1",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "XML Signature Syntax and Processing Version 1.1",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2013/REC-xmldsig-core1-20130411/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2013-04-11",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": true,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Donald Eastlake",
-      "Joseph Reagle",
-      "David Solo",
-      "Frederick Hirsch",
-      "Thomas Roessler",
-      "Kelvin Yiu",
-      "Pratik Datta",
-      "Scott Cantor"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xmldsig-core2.20150723",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "XML DSIG CORE 2",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "XML Signature Syntax and Processing Version 2.0",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Note",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2015/NOTE-xmldsig-core2-20150723/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2015-07-23",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": true,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Donald Eastlake",
-      "Joseph Reagle"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xmlenc.core.20021210",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "XML ESP",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "XML Encryption Syntax and Processing",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2002/REC-xmlenc-core-20021210/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2002-12-10",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": false,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "superseded": true,
-      "superseded$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "supersededBy": [
-        "xmlenc.core1.20130411"
-      ],
-      "supersededBy$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Donald Eastlake",
-      "Joseph Reagle",
-      "Frederick Hirsch",
-      "Thomas Roessler"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xmlenc.core1.20130411",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "XML ESP 11",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "XML Encryption Syntax and Processing Version 1.1",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2013/REC-xmlenc-core1-20130411/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2013-04-11",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": true,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Tim Bray",
-      "Dave Hollander",
-      "Andrew Layman"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xmlnames.19990114",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "NS XML",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "Namespaces in XML 1.0 (Second Edition)",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/1999/REC-xml-names-19990114/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "1999-01-14",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": false,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "superseded": true,
-      "superseded$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "supersededBy": [
-        "xmlnames.20060816"
-      ],
-      "supersededBy$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Tim Bray",
-      "Dave Hollander",
-      "Andrew Layman",
-      "Richard Tobin"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xmlnames.20060816",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "NS XML",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "Namespaces in XML 1.0 (Second Edition)",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2006/REC-xml-names-20060816/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2006-08-16",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": false,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "superseded": true,
-      "superseded$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "supersededBy": [
-        "xmlnames.20091208"
-      ],
-      "supersededBy$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Tim Bray",
-      "Dave Hollander",
-      "Andrew Layman",
-      "Richard Tobin",
-      "Henry Thompson"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xmlnames.20091208",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "NS XML",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "Namespaces in XML 1.0 (3rd Edition)",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2009/REC-xml-names-20091208/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2009-12-08",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": true,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "David Fallside",
-      "Priscilla Walmsley"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xmlschema-0.20041028",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "XML SP",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "XML Schema Part 0: Primer Second Edition",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2004/REC-xmlschema-0-20041028/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2004-10-28",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": true,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Henry Thompson",
-      "David Beech",
-      "Murray Maloney",
-      "Noah Mendelsohn"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xmlschema-1.20010502",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "XML SCHEMA 1",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "XML Schema Part 1: Structures Second Edition",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2001/REC-xmlschema-1-20010502/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2001-05-02",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": false,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "superseded": true,
-      "superseded$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "supersededBy": [
-        "xmlschema-1.20041028"
-      ],
-      "supersededBy$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Henry Thompson",
-      "David Beech",
-      "Murray Maloney",
-      "Noah Mendelsohn"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xmlschema-1.20041028",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "XML SCHEMA 1",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "XML Schema Part 1: Structures Second Edition",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2004/REC-xmlschema-1-20041028/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2004-10-28",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": true,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Paul V. Biron",
-      "Ashok Malhotra"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xmlschema-2.20041028",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "XML SCHEMA 2",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "XML Schema Part 2: Datatypes Second Edition",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2004/REC-xmlschema-2-20041028/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2004-10-28",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": true,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Sandy Gao",
-      "Michael Sperberg-McQueen",
-      "Henry Thompson",
-      "Noah Mendelsohn",
-      "David Beech",
-      "Murray Maloney"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xmlschema1.1-1.20120405",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "XML XSD 11 P1",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "XML Schema Definition Language (XSD) 1.1 Part 1: Structures",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2012/REC-xmlschema11-1-20120405/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2012-04-05",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": true,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "David Peterson",
-      "Sandy Gao",
-      "Ashok Malhotra",
-      "Michael Sperberg-McQueen",
-      "Henry Thompson",
-      "Paul V. Biron"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xmlschema1.1-2.20120405",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "XML XSD 11 P2",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "XML Schema Definition Language (XSD) 1.1 Part 2: Datatypes",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2012/REC-xmlschema11-2-20120405/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2012-04-05",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": true,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "James Clark",
-      "Steven DeRose"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xpath.19991116",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "XML XPL",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "XML Path Language (XPath) V1.0",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/1999/REC-xpath-19991116/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "1999-11-16",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
-    "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "status": {
-      "active": false,
-      "active$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "superseded": true,
-      "superseded$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "supersededBy": [
-        "xpath3.1.20170321"
-      ],
-      "supersededBy$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      }
-    }
-  },
-  {
-    "authors": [
-      "Jonathan Robie",
-      "Michael Dyck",
-      "Josh Spiegel"
-    ],
-    "authors$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docId": "xpath3.1.20170321",
-    "docId$meta": {
-      "confidence": "high",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docLabel": "XML XPL",
-    "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docTitle": "XML Path Language (XPath) 3.1",
-    "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "docType": "Recommendation",
-    "docType$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "href": "https://www.w3.org/TR/2017/REC-xpath-31-20170321/",
-    "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publicationDate": "2017-03-21",
-    "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
-    },
-    "publisher": "W3C",
     "publisher$meta": {
       "confidence": "medium",
       "note": "Legacy data, has not been verified",
