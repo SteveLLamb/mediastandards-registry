@@ -422,9 +422,10 @@ const parseRefId = (text, href = '') => {
   }
   const parts = text.split('|').map(p => p.trim());
   text = parts.find(p => /ISO\/IEC|ISO/.test(p)) || parts[0];
-  if (/SMPTE\s+(ST|RP|RDD)\s+(\d+)(-(\d+))?/.test(text)) {
-    const [, type, num, , part] = text.match(/SMPTE\s+(ST|RP|RDD)\s+(\d+)(-(\d+))?/);
-    return `SMPTE.${type}${part ? `${num}-${part}` : num}.LATEST`;
+  // SMPTE refs: support all known doc types (ST, RP, RDD, EG, AG, OV)
+  if (/SMPTE\s+(ST|RP|RDD|EG|AG|OV)\s+(\d+)(?:-(\d+))?/i.test(text)) {
+    const [, type, num, part] = text.match(/SMPTE\s+(ST|RP|RDD|EG|AG|OV)\s+(\d+)(?:-(\d+))?/i);
+    return `SMPTE.${type.toUpperCase()}${part ? `${num}-${part}` : num}.LATEST`;
   }
   if (/RFC\s*(\d+)/i.test(text)) {
     return `rfc${text.match(/RFC\s*(\d+)/i)[1]}`;
@@ -432,6 +433,18 @@ const parseRefId = (text, href = '') => {
   if (/10\.6028\/NIST\.(.+)/i.test(href)) {
     const [, id] = href.match(/10\.6028\/NIST\.(.+)/i);
     return `NIST.${id}`;
+  }
+  // NIST FIPS references (strip optional "PUB" token)
+  if (/NIST\s+FIPS\s+(?:PUB\s+)?(\d+)(-\d+)?/i.test(text)) {
+    const [, num, rev] = text.match(/NIST\s+FIPS\s+(?:PUB\s+)?(\d+)(-\d+)?/i);
+    return `NIST.FIPS.${num}${rev || ''}`;
+  }
+  // Also recognize FIPS structure in hrefs like .../fips/186/2/...
+  if (/csrc\.nist\.gov\/.+\/fips\/(\d+)(?:\/(\d+))?/i.test(href)) {
+    const m = href.match(/fips\/(\d+)(?:\/(\d+))?/i);
+    const num = m[1];
+    const rev = m[2] ? `-${m[2]}` : '';
+    return `NIST.FIPS.${num}${rev}`;
   }
   if (/ISO\/IEC\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/.test(text)) {
     const [, base, suffix] = text.match(/ISO\/IEC\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/);
@@ -1143,6 +1156,15 @@ for (const doc of results) {
     console.log(`⚠️ Skipped ${skippedDocs.length} duplicate document(s):`);
     skippedDocs.forEach(docId => {
       console.log(`- ${docId}`);
+    });
+  }
+
+  if (badRefs.length > 0) {
+    console.log('🚫 Unparseable References Found:');
+    badRefs.forEach(ref => {
+      console.log(`- From ${ref.docId} (${ref.type}):`);
+      console.log(`  - cite: ${ref.refText}`);
+      if (ref.href) console.log(`  - href: ${ref.href}`);
     });
   }
 
