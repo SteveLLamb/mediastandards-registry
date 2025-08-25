@@ -339,7 +339,7 @@ function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
 
   let docId = pubTypeNum ? `SMPTE.${pubTypeNum}.${dateString}` : 'UNKNOWN';
   let docLabel = `SMPTE ${pubType || ''} ${docNumber || ''}${docPart ? `-${docPart}` : ''}:${dateString}`;
-  const doi = `10.5594/SMPTE.${pubType}${pubNumber}${pubPart ? `-${pubPart}` : ''}.${pubDateObj.format('YYYY')}`;
+  let doi = `10.5594/${docId}`;
   let href = `https://doi.org/${doi}`;
   const repoUrl = `https://github.com/SMPTE/${pubTypeNum.toLowerCase()}/`;
 
@@ -355,7 +355,7 @@ function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
       const baseYear = base.date.year();
       docId = `SMPTE.${pubTypeNum}.${baseYear}Am${amendNum}.${amendYear}`;
       docLabel = `SMPTE ${pubType || ''} ${docNumber || ''}${docPart ? `-${docPart}` : ''}:${baseYear} Am${amendNum}:${amendYear}`;
-      doi = `10.5594/SMPTE.${pubTypeNum}.${baseYear}Am${amendNum}.${amendYear}`;
+      doi = `10.5594/${docId}`;
       href = `https://doi.org/${doi}`;
     }
   }
