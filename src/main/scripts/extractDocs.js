@@ -197,7 +197,7 @@ const metaConfig = {
     group: { confidence: 'high', note: 'Working group parsed from HTML pubTC meta tag' },
     publicationDate: { confidence: 'high', note: 'Parsed from HTML pubDateTime meta tag' },
     releaseTag: { confidence: 'high', note: 'Release tag parsed from URL folder structure' },
-    publisher: { confidence: 'high', note: 'Static: SMPTE' },
+    publisher: { confidence: 'high', note: 'Parsed from HTML publisher meta tag' },
     'status.stage': { confidence: 'high', note: 'Stage parsed from HTML pubStage meta tag' },
     'status.state': { confidence: 'high', note: 'State parsed from HTML pubState meta tag' },
     'status.amended': { confidence: 'high', note: 'Parsed from wrapper #amendments' },
@@ -228,8 +228,8 @@ const metaConfig = {
 
   resolved: {
     docId: { confidence: 'high', note: 'Calculated from parsed/inferred metadata' },
-    docLabel: { confidence: 'high', note: 'Constructed from parsed/inferred type/number/date' },
-    doi: { confidence: 'medium', note: 'Generated from docId' },
+    docLabel: { confidence: 'high', note: 'Constructed from parsed/inferred typenumber/number/date' },
+    doi: { confidence: 'medium', note: 'Constructed from parsed/inferred type/date' },
     href: { confidence: 'high', note: 'DOI link generated and verified via redirect resolution' },
     resolvedHref: { confidence: 'high', note: 'Final DOI link resolved via URL redirect verification' },
     repo: { confidence: 'high', note: 'Calculated from parsed or inferred publication type/number/part and verified to exist' },
@@ -237,6 +237,7 @@ const metaConfig = {
     'status.latestVersion': { confidence: 'high', note: 'Calculated from the releaseTag(s)' },
     'status.superseded': { confidence: 'high', note: 'Calculated from the releaseTag(s)' },
     'status.supersededBy': { confidence: 'high', note: 'Calculated from the releaseTag(s)' },
+    'status.supersededDate': { confidence: 'high', note: 'Calculated as the publication date of the next base release (from releaseTag)' },
     default: { confidence: 'high', note: 'Calculated or verified value' }
   },
 
@@ -338,7 +339,7 @@ function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
 
   let docId = pubTypeNum ? `SMPTE.${pubTypeNum}.${dateString}` : 'UNKNOWN';
   let docLabel = `SMPTE ${pubType || ''} ${docNumber || ''}${docPart ? `-${docPart}` : ''}:${dateString}`;
-  let doi = `10.5594/${docId}`;
+  const doi = `10.5594/SMPTE.${pubType}${pubNumber}${pubPart ? `-${pubPart}` : ''}.${pubDateObj.format('YYYY')}`;
   let href = `https://doi.org/${doi}`;
   const repoUrl = `https://github.com/SMPTE/${pubTypeNum.toLowerCase()}/`;
 
@@ -354,7 +355,7 @@ function inferMetadataFromPath(rootUrl, releaseTag, baseReleases = []) {
       const baseYear = base.date.year();
       docId = `SMPTE.${pubTypeNum}.${baseYear}Am${amendNum}.${amendYear}`;
       docLabel = `SMPTE ${pubType || ''} ${docNumber || ''}${docPart ? `-${docPart}` : ''}:${baseYear} Am${amendNum}:${amendYear}`;
-      doi = `10.5594/${docId}`;
+      doi = `10.5594/SMPTE.${pubTypeNum}.${baseYear}Am${amendNum}.${amendYear}`;
       href = `https://doi.org/${doi}`;
     }
   }
@@ -627,6 +628,10 @@ const extractFromUrl = async (rootUrl) => {
       const pubStage = $index('[itemprop="pubStage"]').attr('content');
       const pubState = $index('[itemprop="pubState"]').attr('content');
 
+      // --- Extract publisher from HTML ---
+      const pubPublisher =
+        ($index('[itemprop="publisher"]').text() || $index('[itemprop="publisher"]').attr('content') || '').trim() || 'SMPTE';
+
       const refSections = { normative: [], bibliographic: [] };
       ['normative-references', 'bibliography'].forEach((sectionId) => {
         const type = sectionId.includes('normative') ? 'normative' : 'bibliographic';
@@ -667,7 +672,7 @@ const extractFromUrl = async (rootUrl) => {
         group: `smpte-${tc.toLowerCase()}-tc`,
         publicationDate: dateFormatted,
         releaseTag,
-        publisher: 'SMPTE',
+        publisher: pubPublisher,
         href,
         repo: repoUrl,
         status: {
@@ -759,6 +764,9 @@ const extractFromUrl = async (rootUrl) => {
     for (let i = 0; i < baseTags.length - 1; i++) {
       const baseTag = baseTags[i];
       const nextBaseTag = baseTags[i + 1];
+      const nextBaseDateStr = (nextBaseTag.match(/^(\d{4})(\d{2})(\d{2})/)) 
+        ? `${nextBaseTag.slice(0,4)}-${nextBaseTag.slice(4,6)}-${nextBaseTag.slice(6,8)}`
+        : undefined;
 
       const baseDoc = byReleaseTag.get(baseTag);
       const nextBaseDoc = byReleaseTag.get(nextBaseTag);
@@ -771,6 +779,9 @@ const extractFromUrl = async (rootUrl) => {
       if (JSON.stringify(prevListBase) !== JSON.stringify(nextList)) {
         baseDoc.status.supersededBy = nextList;
       }
+      if (nextBaseDateStr) {
+        baseDoc.status.supersededDate = nextBaseDateStr;
+      }
 
       // Also set on each amendment of this base: they are superseded by the next base too
       if (amendmentMap && amendmentMap.has(baseTag)) {
@@ -782,6 +793,9 @@ const extractFromUrl = async (rootUrl) => {
           const prevListAmend = Array.isArray(amendDoc.status.supersededBy) ? amendDoc.status.supersededBy : [];
           if (JSON.stringify(prevListAmend) !== JSON.stringify(nextList)) {
             amendDoc.status.supersededBy = nextList;
+          }
+          if (nextBaseDateStr) {
+            amendDoc.status.supersededDate = nextBaseDateStr;
           }
         }
       }
@@ -881,6 +895,9 @@ for (const doc of results) {
       }
       if (doc.status && Array.isArray(doc.status.supersededBy)) {
         injectMeta(doc.status, 'supersededBy', 'resolved', 'new', []);
+      }
+      if (doc.status && typeof doc.status.supersededDate === 'string') {
+        injectMeta(doc.status, 'supersededDate', 'resolved', 'new', null);
       }
       if (doc.status && doc.status.withdrawnNotice && doc.status['withdrawnNotice$meta'] && doc.__withdrawnNoticeSuffix) {
         // Normalize: strip any existing reachability suffix(es) before adding the current one
@@ -988,7 +1005,8 @@ for (const doc of results) {
               'stabilized',
               'withdrawn',
               'withdrawnNotice',  
-              'amended'          
+              'amended',
+              'supersededDate'
             ];
             for (const field of statusFields) {
               if (newVal[field] !== undefined && existingDoc.status[field] !== newVal[field]) {
@@ -1179,7 +1197,8 @@ for (const doc of results) {
           'stabilized',
           'withdrawn',
           'withdrawnNotice',
-          'amended'
+          'amended',
+          'supersededDate'
         ];
         const diffs = statusFields
           .filter(k => oldStatus[k] !== newStatus[k])
