@@ -1,31 +1,3 @@
-// scripts/buildMasterSuiteIndex.js
-// Usage:
-//   node scripts/buildMasterSuiteIndex.js \
-//     --in src/main/data/documents.json \
-//     --out reports/masterSuiteIndex.json \
-//     [--include-ag] [--include-om]
-//
-// Produces a lean materialized index for fast lookups:
-// {
-//   "generatedAt": "...",
-//   "sourcePath": "...",
-//   "sourceHash": "sha256:...",
-//   "lineages": [
-//     {
-//       "key": "SMPTE|ST|429|6",
-//       "publisher": "SMPTE",
-//       "suite": "ST",
-//       "number": "429",
-//       "part": "6",
-//       "docs": [{ "docId": "...", "publicationDate": "YYYY-MM-DD" }, ...],
-//       "latestBaseId": "...",
-//       "latestAnyId":  "...",
-//       "latestDateKey": "YYYYMMDD",
-//       "counts": { "bases": N, "amendments": M }
-//     }
-//   ]
-// }
-
 const fs = require('fs');
 const path = require('path');
 const crypto = require('crypto');
@@ -55,6 +27,51 @@ const W3C_ALIAS_MAP = {
   'ttaf1-dfxp': 'ttml1'
 };
 
+// NIST historical/one-off id aliases
+const NIST_ALIAS_MAP = {
+  // KMGD = "Key Management Guideline Draft" (2002-06-03).
+  // Treat as early draft aligned with SP 800-57 Part 1 lineage.
+  // If later evidence contradicts this, update/remove this alias.
+  'KMGD': { suite: 'SP', number: '800-57', part: '1' }
+};
+
+// Global one-off / exact-id aliases (use sparingly)
+// Map a historically-seen or mistaken docId to the canonical docId we store in the index.
+const GLOBAL_ALIAS_MAP = {
+  // Examples (uncomment / extend as needed):
+  // 'SMPTE.AG10b.2020': 'SMPTE.AG10B.2020',
+  // 'W3C.ttaf1-dfxp.20061114': 'W3C.ttml1.20061114'
+};
+
+// Apply alias rewrites and light canonicalizations to a document in-place.
+// If an alias is applied, sets `doc._aliasedFrom = <originalId>` and updates `doc.docId`.
+function applyGlobalAliases(doc) {
+  if (!doc || typeof doc.docId !== 'string') return;
+  let id = doc.docId;
+  let from = null;
+
+  // 1) Exact-id alias map
+  if (GLOBAL_ALIAS_MAP[id]) {
+    from = id;
+    id = GLOBAL_ALIAS_MAP[id];
+  }
+
+  // 2) Lightweight canonicalizations that we want to handle centrally
+  //    SMPTE.AG<digits><letter> → uppercase the letter (AG10b → AG10B) to keep a single lineage
+  //    Only canonicalize when followed by a dot (so we don't touch things like AG100 inadvertently)
+  const mAg = id.match(/^SMPTE\.AG(\d+)([a-z])\./);
+  if (mAg) {
+    const up = `SMPTE.AG${mAg[1]}${mAg[2].toUpperCase()}.`;
+    from = from || id;
+    id = id.replace(/^SMPTE\.AG\d+[a-z]\./, up);
+  }
+
+  if (from && id !== doc.docId) {
+    doc._aliasedFrom = from;
+    doc.docId = id;
+  }
+}
+
 function w3cExtractFromHref(href) {
   if (typeof href !== 'string') return null;
   // Matches https://www.w3.org/TR/<short>-YYYYMMDD/  (also http)
@@ -65,8 +82,8 @@ function w3cExtractFromHref(href) {
 
 function w3cExtractFromDocId(docId) {
   if (typeof docId !== 'string') return null;
-  // Matches W3C.<short>.<YYYYMMDD|LATEST>
-  const m = docId.match(/^W3C\.([A-Za-z0-9._-]+)\.(\d{8}|LATEST)$/i);
+  // Matches W3C.<short>.<YYYYMMDD|YYYY|YYYY-MM|LATEST>
+  const m = docId.match(/^W3C\.([A-Za-z0-9._-]+)\.(\d{8}|\d{4}(?:-\d{2})?|LATEST)$/i);
   if (!m) return null;
   return { shortname: m[1], trDate: /\d{8}/.test(m[2]) ? m[2] : null };
 }
@@ -108,19 +125,36 @@ function w3cSplitFamilyVersion(shortname) {
 
 function inferVersionFromTitleOrLabel(doc) {
   let inferred = null;
-  if (typeof doc.docTitle === 'string') {
-    const vt = doc.docTitle.match(/\bVersion\s*(\d+(?:\.\d+)*)\b/i);
-    if (vt) inferred = vt[1];
-    // Handle patterns like "1.0 (Third Edition)" where Version keyword may be missing
-    if (!inferred) {
-      const vt2 = doc.docTitle.match(/\b(\d+(?:\.\d+)*)\b[^)]*\bEdition\b/i);
-      if (vt2) inferred = vt2[1];
-    }
+  const title = typeof doc.docTitle === 'string' ? doc.docTitle : '';
+  const label = typeof doc.docLabel === 'string' ? doc.docLabel : '';
+
+  // Prefer explicit Version/Level patterns
+  let m = title.match(/\b(?:Version|Level)\s*(\d+(?:\.\d+)*)\b/i) ||
+          label.match(/\b(?:Version|Level)\s*(\d+(?:\.\d+)*)\b/i);
+  if (m) inferred = m[1];
+
+  // Fallback: a bare dotted number like 1.0, 1.0.1 appearing in title/label
+  if (!inferred) {
+    m = title.match(/\b(\d+\.\d+(?:\.\d+)*)\b/) ||
+        label.match(/\b(\d+\.\d+(?:\.\d+)*)\b/);
+    if (m) inferred = m[1];
   }
-  if (!inferred && typeof doc.docLabel === 'string') {
-    const vl = doc.docLabel.match(/\b(\d+(?:\.\d+)*)\b/);
-    if (vl) inferred = vl[1];
+
+  // Final fallback: a small integer (e.g., "2") only if clearly versioned context appears
+  if (!inferred) {
+    const intM = title.match(/\b(\d{1,2})\b/) || label.match(/\b(\d{1,2})\b/);
+    const hasVersionCue = /\b(?:Version|Level|Spec(?:ification)?|Rec(?:ommendation)?)\b/i.test(title) ||
+                          /\b(?:Version|Level|Spec(?:ification)?|Rec(?:ommendation)?)\b/i.test(label);
+    if (intM && hasVersionCue) inferred = intM[1];
   }
+
+  // Filters: ignore 4-digit years and edition ordinals
+  if (inferred && /^\d{4}$/.test(inferred)) inferred = null; // looks like a year
+  if (inferred && /\bEdition\b/i.test(title)) {
+    // avoid conflating "Second Edition" → 2 with a semantic version
+    if (/^\d+$/.test(inferred)) inferred = null;
+  }
+
   return inferred;
 }
 
@@ -147,10 +181,18 @@ function normalizeW3C(doc) {
 
   let { family, version } = w3cSplitFamilyVersion(shortname);
 
-  // If version is still unknown, try to infer from title/label
+  // If version is still unknown, be conservative about inferring from title/label.
+  // Only infer when shortname carries digits near letters (e.g., xmldsig-core1, xmlschema-1)
+  // or when the title/label explicitly mentions Version/Level.
   if (!version) {
-    const inferred = inferVersionFromTitleOrLabel(doc);
-    if (inferred) version = inferred;
+    const sn = shortname || '';
+    const shortSuggestsVersion = /[a-z]\d|\d[a-z]|[._-]\d/i.test(sn);
+    const textHasStrongCue = /\b(?:Version|Level)\b/i.test(doc.docTitle || '') ||
+                             /\b(?:Version|Level)\b/i.test(doc.docLabel || '');
+    if (shortSuggestsVersion || textHasStrongCue) {
+      const inferred = inferVersionFromTitleOrLabel(doc);
+      if (inferred) version = inferred;
+    }
   }
 
   const edition = inferEditionFromTitle(doc);
@@ -174,9 +216,14 @@ function ensureDir(p) {
   fs.mkdirSync(path.dirname(p), { recursive: true });
 }
 
-// Helper: extract publisher from docId, fallback to doc.publisher if present (stricter normalization)
 function publisherFromDoc(d) {
-  // Prefer the same keying logic used by the index so "Found" matches "Added"
+  // 1) If the document has an explicit publisher field, prefer it unconditionally.
+  //    (Normalize to UPPERCASE, trim; do not validate shape — we want to carry first.)
+  if (d && typeof d.publisher === 'string' && d.publisher.trim().length) {
+    return d.publisher.trim().toUpperCase();
+  }
+
+  // 2) Try the same keying logic used by the index so "Found" matches "Added" when possible.
   if (d && typeof d.docId === 'string') {
     const k = keyFromDocId(d.docId, d);
     if (k && k.publisher) return String(k.publisher).toUpperCase();
@@ -184,14 +231,12 @@ function publisherFromDoc(d) {
     // Special-case RFC#### that didn't key (should rarely happen here)
     if (/^RFC\d+$/i.test(d.docId)) return 'IETF';
 
-    // Otherwise, take the token before the first dot if it looks like a real publisher (alpha, len>=2)
+    // Otherwise, take the token before the first dot if it looks like a publisher-ish token
     const m = d.docId.match(/^([A-Za-z]{2,})\./);
     if (m) return m[1].toUpperCase();
   }
-  // Fall back to explicit `publisher` field if it looks sane
-  if (d && typeof d.publisher === 'string' && /^[A-Za-z]{2,}$/.test(d.publisher)) {
-    return d.publisher.toUpperCase();
-  }
+
+  // 3) Fall back to UNKNOWN when nothing else was available.
   return 'UNKNOWN';
 }
 
@@ -200,6 +245,8 @@ function collectSkipped(allDocs) {
   const skipped = [];
   for (const d of allDocs) {
     if (!d || !d.docId) continue;
+    // Apply global aliases for skipped/added parity
+    applyGlobalAliases(d);
     // Normalize W3C like buildIndex does to keep parity
     normalizeW3C(d);
     const k = keyFromDocId(d.docId, d);
@@ -228,6 +275,32 @@ function computePublisherCounts(allDocs) {
     .sort((a, b) => b[1] - a[1])
     .reduce((acc, [k, v]) => { acc[k] = v; return acc; }, {});
   return { total, counts: sorted };
+}
+
+function computeFlagSummary(lineages, maxExamplesPerType = 100) {
+  const acc = {
+    totalFlags: 0,
+    byType: {}
+  };
+  if (!Array.isArray(lineages)) return acc;
+
+  for (const li of lineages) {
+    const lineageKey = li && li.key ? String(li.key) : '(unknown-key)';
+    const flags = Array.isArray(li.flagInconsistencies) ? li.flagInconsistencies : [];
+    for (const raw of flags) {
+      const type = String(raw).split(':')[0]; // namespaced types keep prefix before first ':'
+      if (!acc.byType[type]) acc.byType[type] = { count: 0, examples: [] };
+      acc.byType[type].count++;
+      acc.totalFlags++;
+      // Keep a compact example (lineage key plus the raw flag for context)
+      if (acc.byType[type].examples.length < maxExamplesPerType) {
+        acc.byType[type].examples.push({ lineage: lineageKey, flag: raw });
+      }
+    }
+  }
+
+  // Stable sort by descending count when rendering to console (we don't mutate structure here)
+  return acc;
 }
 
 function isAmendmentDocId(docId) {
@@ -329,9 +402,9 @@ function keyFromDocId(docId, doc = {}) {
     return { publisher: m[1].toUpperCase(), suite: null, number: m[2], part: m[3] || null };
   }
 
-  // W3C shortnames: W3C.shortname.YYYYMMDD or W3C.shortname.LATEST
-  // e.g., W3C.xmlschema-1.20041028, W3C.xmldsig-core1.LATEST
-  m = docId.match(/^W3C\.([A-Za-z0-9._-]+)\.(\d{8}|LATEST)$/i);
+  // W3C shortnames: W3C.shortname.YYYYMMDD, W3C.shortname.YYYY, W3C.shortname.YYYY-MM, or W3C.shortname.LATEST
+  // e.g., W3C.xmlschema-1.20041028, W3C.xmldsig-core1.LATEST, W3C.rddl.2002, W3C.rddl.2010, W3C.rddl.2010-03
+  m = docId.match(/^W3C\.([A-Za-z0-9._-]+)\.(\d{8}|\d{4}(?:-\d{2})?|LATEST)$/i);
   if (m) {
     // If we already normalized W3C fields on the full doc, prefer those for stable keying
     if (doc._w3c && doc._w3c.family) {
@@ -365,6 +438,16 @@ function keyFromDocId(docId, doc = {}) {
     const token = m[1];            // e.g., "140-1" or "186" or "186-4"
     const fam = token.replace(/^(\d+).*/, '$1'); // take leading digits only → family number
     return { publisher: 'NIST', suite: 'FIPS', number: fam, part: null };
+  }
+
+  // NIST one-off aliases (carry into proper SP family)
+  m = docId.match(/^NIST\.([A-Za-z0-9-]+)(?:\.(?:\d{8}|\d{4}(?:-\d{2}){1,2}|\d{4}-\d{4}))?$/i);
+  if (m) {
+    const token = m[1].toUpperCase();
+    if (NIST_ALIAS_MAP[token]) {
+      const a = NIST_ALIAS_MAP[token];
+      return { publisher: 'NIST', suite: a.suite, number: a.number, part: a.part || null };
+    }
   }
 
   // --- NIST Special Publications ---
@@ -471,6 +554,8 @@ function buildIndex(allDocs) {
 
   for (const d of allDocs) {
     if (!d || !d.docId) continue;
+    // Normalize obvious aliases before any parsing/keying
+    applyGlobalAliases(d);
     // Enrich W3C documents with normalized family/version info for stable keying
     normalizeW3C(d);
     const k = keyFromDocId(d.docId, d);
@@ -511,9 +596,14 @@ function buildIndex(allDocs) {
       _statusLatest,
       _srcDocType,
       _srcPart,
+      // Graph lineage hints (private)
+      _supersededBy: Array.isArray(status.supersededBy) ? status.supersededBy.slice() : [],
+      _supersededDate: (status && status.supersededDate) ? String(status.supersededDate) : null,
       // W3C debug fields for alias/collision checks
       _w3cShortname: (d._w3c && d._w3c.shortname) || null,
       _w3cFamily: (d._w3c && d._w3c.family) || null,
+      // Global alias provenance
+      _aliasedFrom: d._aliasedFrom || null,
     });
   }
 
@@ -522,12 +612,28 @@ function buildIndex(allDocs) {
     // Sort ascending by date key
     entry.docs.sort((a, b) => a._dk.localeCompare(b._dk));
 
+    // Build quick lookup for in-lineage docId → doc (for graph analysis)
+    const idIndex = new Map(entry.docs.map(d => [d.docId, d]));
+
     const bases = entry.docs.filter(x => x._isBase);
     const flaggedBases = bases.filter(x => x._statusLatest);
     const flaggedAny = entry.docs.filter(x => x._statusLatest);
 
-    const latestBase = flaggedBases.length ? flaggedBases[flaggedBases.length - 1] : (bases.length ? bases[bases.length - 1] : null);
-    const latestAny  = flaggedAny.length ? flaggedAny[flaggedAny.length - 1] : (entry.docs.length ? entry.docs[entry.docs.length - 1] : null);
+    // Helper: choose the newest by date key from a list
+    const pickNewest = (arr) => arr.length ? arr.reduce((a, b) => (a._dk >= b._dk ? a : b)) : null;
+
+    // Graph candidates: nodes with no supersededBy edge that stays within this lineage
+    const baseGraphHeads = bases.filter(b => !b._supersededBy.some(id => idIndex.has(id) && idIndex.get(id)._isBase));
+    const anyGraphHeads  = entry.docs.filter(d => !d._supersededBy.some(id => idIndex.has(id)));
+
+    // Resolution order: explicit latest flag → graph heads → newest by date
+    const latestBase = flaggedBases.length ? pickNewest(flaggedBases)
+                        : (baseGraphHeads.length ? pickNewest(baseGraphHeads)
+                        : pickNewest(bases));
+
+    const latestAny  = flaggedAny.length ? pickNewest(flaggedAny)
+                        : (anyGraphHeads.length ? pickNewest(anyGraphHeads)
+                        : pickNewest(entry.docs));
 
     // Lineage-level helpers
     const hasActiveBase = bases.some(x => x.statusActive === true);
@@ -595,8 +701,37 @@ function buildIndex(allDocs) {
       }
     }
 
+    // Superseded graph diagnostics
+    // 1) Edges pointing outside this lineage
+    for (const d of entry.docs) {
+      for (const tgt of d._supersededBy || []) {
+        if (!idIndex.has(tgt)) {
+          flags.push(`SUPERSEDED_BY_OUT_OF_LINEAGE:${d.docId}->${tgt}`);
+        }
+      }
+    }
+    // 2) If there are explicit latest flags but graph suggests a different head
+    if (flaggedAny.length) {
+      const graphHead = pickNewest(anyGraphHeads);
+      const flagHead  = pickNewest(flaggedAny);
+      if (graphHead && flagHead && graphHead.docId !== flagHead.docId) {
+        flags.push(`LATEST_FLAG_CONFLICT_WITH_GRAPH:any:${flagHead.docId}<>${graphHead.docId}`);
+      }
+    }
+    if (flaggedBases.length) {
+      const graphBaseHead = pickNewest(baseGraphHeads);
+      const flagBaseHead  = pickNewest(flaggedBases);
+      if (graphBaseHead && flagBaseHead && graphBaseHead.docId !== flagBaseHead.docId) {
+        flags.push(`LATEST_FLAG_CONFLICT_WITH_GRAPH:base:${flagBaseHead.docId}<>${graphBaseHead.docId}`);
+      }
+    }
+
     // Per-doc sanity checks -> emit concise, namespaced flags (no auto-fix)
     for (const x of entry.docs) {
+      // Alias lineage flag: always surface if an alias rewrite occurred
+      if (x._aliasedFrom) {
+        flags.push(`ALIASED_ID:${x._aliasedFrom}->${x.docId}`);
+      }
       // 1) Contradictory status combos
       if (x.statusWithdrawn && x.statusActive) {
         flags.push(`CONTRADICTORY_STATUS_FLAGS:${x.docId}:ACTIVE_AND_WITHDRAWN`);
@@ -662,10 +797,8 @@ function buildIndex(allDocs) {
       counts: { bases: bases.length, amendments: entry.docs.length - bases.length }
     };
 
-    // TEMP: Parse RFCs into lineages but do not emit them in the final report yet
-    if (!(entry.key.publisher === 'IETF' && entry.key.suite === 'RFC')) {
       lineages.push(lineageObj);
-    }
+
   }
 
   // Stable sort for deterministic output: by publisher, suite, number (numeric/lex), part (numeric/lex)
@@ -742,6 +875,7 @@ function buildIndex(allDocs) {
   }
 
   const lineages = buildIndex(docs);
+  const flagSummary = computeFlagSummary(lineages);
   const outObj = {
     generatedAt: new Date().toISOString(),
     sourcePath: IN,
@@ -751,6 +885,7 @@ function buildIndex(allDocs) {
       totalSkipped: skippedDocs.length,
       byPublisher: skippedByPublisher
     },
+    flagSummary,
     lineages
   };
 
@@ -805,20 +940,24 @@ function buildIndex(allDocs) {
     console.log(`${String(p).padEnd(10)} ${String(f).padStart(5)}  ${String(a).padStart(5)}  ${String(s).padStart(7)}`);
   }
 
+  // Flag summary (top types by count)
+  if (flagSummary && flagSummary.totalFlags) {
+    // Build a sorted array of [type, {count, examples}]
+    const sortedFlags = Object.entries(flagSummary.byType)
+      .sort((a, b) => (b[1].count || 0) - (a[1].count || 0));
+
+    console.log('\n🚩 Flag summary:');
+    console.log(`Total flags: ${flagSummary.totalFlags}`);
+    for (const [type, info] of sortedFlags) {
+      console.log(`- ${type.padEnd(32)} → ${String(info.count).padStart(4)}`);
+    }
+  } else {
+    console.log('\n🚩 No inconsistency flags present.');
+  }
+
 
   // Console list of skipped docIds per publisher (brief)
   if (!skippedDocs.length) {
-  //  console.log('\n🧾 Skipped docIds by publisher:');
-  //  const pubsSkipped = Object.keys(skippedByPublisher).sort((a, b) => (skippedByPublisher[b].count || 0) - (skippedByPublisher[a].count || 0));
-  //  for (const p of pubsSkipped) {
-  //    const group = skippedByPublisher[p];
-  //    console.log(`- ${p} (${group.count})`);
-  //    for (const id of group.docIds) {
-  //      console.log(`   • ${id}`);
-  //    }
-  //  }
-  //  //console.log(`\n📝 Full JSON written: ${SKIPS_OUT}`);
-  //} else {
     console.log('\n🧾 No skipped documents detected.');
   }
 
