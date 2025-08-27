@@ -4,6 +4,7 @@
   "description": "Doc Registry",
   "scripts": {
     "build": "node src/main/scripts/build.js",
+    "build-masterSuite": "node src/main/scripts/buildMasterSuiteIndex.js --in src/main/data/documents.json --out src/main/reports/masterSuiteIndex.json",
     "extract": "node src/main/scripts/extractDocs.js",
     "validate": "node src/main/scripts/validate.js",
     "validate-url": "node src/main/scripts/url.validate.js",
@@ -27,7 +28,7 @@
     "json-2-csv": "^3.17.1",
     "json-source-map": "^0.6.1",
     "json-stable-stringify": "^1.0.1",
-    "node": "^22.16.0",
+    "node": "^22.18.0",
     "stringify": "^5.2.0",
     "yargs": "^16.2.0"
   }

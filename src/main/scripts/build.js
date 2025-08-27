@@ -249,7 +249,7 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
     let publicationDate = registryDocument[i].publicationDate
     let publisher = registryDocument[i].publisher
 
-    if (publisher === "SMPTE" || publisher === "W3C" || publisher === "AES" || publisher === "IEC" || publisher === "IEEE" || publisher === "NIST" || publisher.includes("ANSI") || publisher.includes("ITU") || publisher.includes("ISO")) {
+    //if (publisher === "SMPTE" || publisher === "W3C" || publisher === "AES" || publisher === "IEC" || publisher === "IEEE" || publisher === "NIST" || publisher.includes("ANSI") || publisher.includes("ITU") || publisher.includes("ISO")) {
 
       var docStripAm = docId.replace(/\.\d\d\d\dam\d/i, '').replace(/\.\d\d\d\damd\d/i, '').replace(/\.\d\d\d\dad\d/i, '').replace(/\.\d\d\d\dcor\d/i, '').replace(/\.\d\d\d\de\d/i, '')
       var docBase = docStripAm.replace(/(\.[^.]*)$/, '')
@@ -283,7 +283,7 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
       registryDocument[i].docBase = docBase;
       registryDocument[i].docDate = docDate;
 
-    }
+    //}
 
   }
 
