@@ -240,6 +240,20 @@ function publisherFromDoc(d) {
   return 'UNKNOWN';
 }
 
+// Doc types that do not participate in lineage graphs. We still carry them in
+// the skipped report as FILTERED-by-docType for auditability.
+const NON_LINEAGE_DOCTYPES = new Set([
+  'Journal Article',
+  'Magazine Article',
+  'Technical Journal',
+  'Book',
+  'Patent',
+  'White Paper',
+  'Registry',
+  'Technical Bulletin',
+  'Procedure'
+]);
+
 // Collect skipped (unkeyed or filtered) docs for reporting
 function collectSkipped(allDocs) {
   const skipped = [];
@@ -249,13 +263,50 @@ function collectSkipped(allDocs) {
     applyGlobalAliases(d);
     // Normalize W3C like buildIndex does to keep parity
     normalizeW3C(d);
-    const k = keyFromDocId(d.docId, d);
-    if (!k) {
-      skipped.push({ docId: d.docId, publisher: publisherFromDoc(d), reason: 'UNKEYED' });
+
+    const pub = publisherFromDoc(d);
+
+    // 1) DocType-first policy: if this is a non-lineage document type, mark as FILTERED
+    const dt = (d.docType || '').trim();
+    if (dt && NON_LINEAGE_DOCTYPES.has(dt)) {
+      skipped.push({
+        docId: d.docId,
+        publisher: pub,
+        reason: 'FILTERED',
+        rule: 'FILTERED',
+        ruleDetail: `docType=${dt}`,
+        category: 'docType'
+      });
       continue;
     }
+
+    // 2) Otherwise, try to key it; if unkeyed, it's a parser coverage gap
+    const k = keyFromDocId(d.docId, d);
+    if (!k) {
+      skipped.push({
+        docId: d.docId,
+        publisher: pub,
+        reason: 'UNKEYED',
+        rule: 'UNKEYED',
+        ruleDetail: 'noRegexMatch',
+        category: 'standard'
+      });
+      continue;
+    }
+
+    // 3) Keyed but policy-filtered (e.g., IEEE journals by suite)
     if (shouldSkipKey(k)) {
-      skipped.push({ docId: d.docId, publisher: publisherFromDoc(d), reason: 'FILTERED', key: [k.publisher, k.suite || '', k.number, k.part || ''].join('|') });
+      const suite = (k.suite || '').toUpperCase();
+      const cat = (k.publisher === 'IEEE' && /^(JRPROC|TMAG)$/.test(suite)) ? 'journal' : 'policy';
+      skipped.push({
+        docId: d.docId,
+        publisher: pub,
+        reason: 'FILTERED',
+        rule: 'FILTERED',
+        ruleDetail: `policy:${k.publisher}.${suite || ''}`,
+        category: cat,
+        key: [k.publisher, k.suite || '', k.number, k.part || ''].join('|')
+      });
     }
   }
   return skipped;
@@ -319,7 +370,11 @@ function isAmendmentDocId(docId) {
   const nistSpInline = /^NIST\.SP\.\d+-[A-Za-z0-9]+(?:ad|add|amd)\d+(?:\.(?:\d{4}(?:-\d{2})?|\d{8}))?$/i;
   const nistSpHyphen  = /^NIST\.SP\.\d+-[A-Za-z0-9]+-(?:ad|add|amd)(?:\d+)?(?:\.(?:\d{4}(?:-\d{2})?|\d{8}))?$/i;
 
-  return smpteAm.test(docId) || isoIecAmCor.test(docId) || nistSpInline.test(docId) || nistSpHyphen.test(docId);
+  // AES addendum pattern: base date followed by ad# and a second date
+  //   e.g., aes11.2009ad1.2010
+  const aesAd = /\.(?:19|20)\d{2}(?:-\d{2})?ad\d+\.(?:19|20)\d{2}(?:-\d{2})?$/i;
+
+  return smpteAm.test(docId) || isoIecAmCor.test(docId) || nistSpInline.test(docId) || nistSpHyphen.test(docId) || aesAd.test(docId);
 }
 
 
@@ -520,30 +575,67 @@ function keyFromDocId(docId, doc = {}) {
     return { publisher: 'DCI', suite: m[1].toUpperCase(), number: m[2].toUpperCase(), part: null };
   }
 
-  // IANA registries (as used in refs): e.g., IANA.LanguageSubtagRegistry.LATEST
-  //m = docId.match(/^IANA\.([A-Za-z][A-Za-z0-9._-]*)\.(?:LATEST|\d{8}|\d{4}(?:-\d{2})?)$/i);
-  //if (m) {
-  //  return { publisher: 'IANA', suite: m[1], number: null, part: null };
-  //}
+  // --- AMWA (Advanced Media Workflow Association) ---------------------------
+  // Accept both canonical and legacy forms with optional date tails.
+  // Canonical examples:
+  //   • AMWA.AAF[.date]
+  //   • AMWA.AS-11[.date]
+  // Canonical AAF
+  m = docId.match(/^AMWA\.AAF(?:\.(?:\d{8}|\d{4}(?:-\d{2}){1,2}|\d{4}-\d{4}))?$/i);
+  if (m) {
+    return { publisher: 'AMWA', suite: 'AAF', number: null, part: null };
+  }
+  // Canonical AS-<num>
+  m = docId.match(/^AMWA\.AS-(\d+)(?:\.(?:\d{8}|\d{4}(?:-\d{2}){1,2}|\d{4}-\d{4}))?$/i);
+  if (m) {
+    return { publisher: 'AMWA', suite: 'AS', number: m[1], part: null };
+  }
 
-  // MovieLabs Ratings: MovieLabs.Ratings.LATEST
-  //m = docId.match(/^MovieLabs\.Ratings\.(?:LATEST|\d{4}(?:-\d{2})?)$/i);
-  //if (m) {
-  //  return { publisher: 'MovieLabs', suite: 'Ratings', number: null, part: null };AG
-  //}
+  // --- IEEE ---------------------------------------------------------------
+  // IEEE standards may appear as IEEE.754.2019 or IEEE.STD754.2019 or IEEE.STD1003.1.2008
+  // Normalize all to suite "STD" with numeric (possibly dotted) standard number.
+  m = docId.match(/^IEEE\.(?:STD)?([0-9]+(?:\.[0-9]+)?)\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    return { publisher: 'IEEE', suite: 'STD', number: m[1], part: null };
+  }
 
-  // UN M49: UN.M49.LATEST
-  //m = docId.match(/^UN\.M49\.(?:LATEST|\d{4}(?:-\d{2})?)$/i);
-  //if (m) {
-  //  return { publisher: 'UN', suite: 'M49', number: null, part: null };
-  //}
+  // --- AES (Audio Engineering Society) ------------------------------------
+  // Accept canonical and legacy lowercase forms. Group by standard number and optional part.
+  // Examples:
+  //   AES.11.2003                → {publisher:"AES", suite:null, number:"11", part:null}
+  //   AES.31-2.2019              → {publisher:"AES", suite:null, number:"31", part:"2"}
+  //   aes11.2009ad1.2010         → {publisher:"AES", suite:null, number:"11", part:null} (amendment flagged elsewhere)
+  //   aes31-2.2019               → {publisher:"AES", suite:null, number:"31", part:"2"}
+  //   aes-r2.2004                → {publisher:"AES", suite:"R",  number:"2",  part:null}
 
-  // Unknown / not indexed here
+  // Canonical AES with optional hyphen part and optional amendment tail
+  m = docId.match(/^AES\.(\d+)(?:-([0-9]+))?\.(?:\d{8}|\d{4}(?:-\d{2})?)(?:ad\d+\.(?:\d{8}|\d{4}(?:-\d{2})?))?$/i);
+  if (m) {
+    return { publisher: 'AES', suite: null, number: m[1], part: m[2] || null };
+  }
+  // Legacy lowercase prefix without dot after AES
+  m = docId.match(/^aes(\d+)(?:-([0-9]+))?\.(?:\d{8}|\d{4}(?:-\d{2})?)(?:ad\d+\.(?:\d{8}|\d{4}(?:-\d{2})?))?$/i);
+  if (m) {
+    return { publisher: 'AES', suite: null, number: m[1], part: m[2] || null };
+  }
+  // AES Recommended practices like aes-r2.2004 → suite R, number 2
+  m = docId.match(/^AES[-\.]R(\d+)\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    return { publisher: 'AES', suite: 'R', number: m[1], part: null };
+  }
+
+  // --- AMPAS S series: ampas-s-2008-001, ampas-s-2013-001, etc.
+  // Normalize to publisher "AMPAS", suite "S", number as year, part as trailing digits
+  m = docId.match(/^ampas-s-(\d{4})-(\d{3})$/i);
+  if (m) {
+    return { publisher: 'AMPAS', suite: 'S', number: m[1], part: m[2] };
+  }
   return null;
 }
 
 function shouldSkipKey(k) {
-  // No publisher/suite is skipped unconditionally.
+  // Filter from the main report for now.
+
   return false;
 }
 
@@ -846,10 +938,21 @@ function buildIndex(allDocs) {
   const skippedByPublisher = {};
   for (const s of skippedDocs) {
     const pub = (s.publisher || 'UNKNOWN').toUpperCase();
-    if (!skippedByPublisher[pub]) skippedByPublisher[pub] = { count: 0, docIds: [] };
+    if (!skippedByPublisher[pub]) skippedByPublisher[pub] = { count: 0, docIds: [], items: [] };
     skippedByPublisher[pub].count++;
+    // Keep the legacy flat list for quick scanning
     skippedByPublisher[pub].docIds.push(s.docId);
+    // Also store a rich item with the reason inline so you don't have to jump to `details`
+    const { docId, publisher, reason, rule, ruleDetail, category, key } = s;
+    skippedByPublisher[pub].items.push({ docId, reason, rule, ruleDetail, category, key });
   }
+
+  // Build a simple reason summary and keep a detailed list for audits
+  const skippedSummary = skippedDocs.reduce((acc, s) => {
+    const r = s.reason || 'UNKNOWN';
+    acc[r] = (acc[r] || 0) + 1;
+    return acc;
+  }, {});
 
   // Pre-calc publisher counts for unified report
   const pubCountsSummary = computePublisherCounts(docs);
@@ -883,7 +986,8 @@ function buildIndex(allDocs) {
     publisherCounts: pubCountsSummary,
     skippedDocs: {
       totalSkipped: skippedDocs.length,
-      byPublisher: skippedByPublisher
+      byPublisher: skippedByPublisher,
+      summaryByReason: skippedSummary,
     },
     flagSummary,
     lineages
