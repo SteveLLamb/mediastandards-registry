@@ -220,7 +220,9 @@ function publisherFromDoc(d) {
   // 1) If the document has an explicit publisher field, prefer it unconditionally.
   //    (Normalize to UPPERCASE, trim; do not validate shape — we want to carry first.)
   if (d && typeof d.publisher === 'string' && d.publisher.trim().length) {
-    return d.publisher.trim().toUpperCase();
+    const raw = d.publisher.trim().toUpperCase();
+    // Normalize co-branded strings like "ANSI/ASA" → "ASA"
+    return raw.startsWith('ANSI/') ? raw.slice(5) : raw;
   }
 
   // 2) Try the same keying logic used by the index so "Found" matches "Added" when possible.
@@ -589,6 +591,88 @@ function keyFromDocId(docId, doc = {}) {
   m = docId.match(/^AMWA\.AS-(\d+)(?:\.(?:\d{8}|\d{4}(?:-\d{2}){1,2}|\d{4}-\d{4}))?$/i);
   if (m) {
     return { publisher: 'AMWA', suite: 'AS', number: m[1], part: null };
+  }
+
+  // --- ANSI partner families (normalize lineage publisher to provided ANSI/… when present) ---
+  // ASA S-series (optionally dotted sub-number) with optional part token like .p1
+  // Examples:
+  //   ASA.S1.11.1986           → {publisher:"ASA", suite:"S", number:"1.11", part:null}
+  //   ASA.S1.11.p1.2014        → {publisher:"ASA", suite:"S", number:"1.11", part:"1"}
+  m = docId.match(/^ASA\.S(\d+(?:\.\d+)?)(?:\.(p?\d+))?\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    const pub = 'ASA';
+    const rawPart = m[2] || null; // e.g., "p1" or "1"
+    const part = rawPart ? String(rawPart).replace(/^p/i, '') : null;
+    return { publisher: pub, suite: 'S', number: m[1], part };
+  }
+
+  // PIMA IT-series (e.g., PIMA.IT9.2.1998 → IT series 9, part 2)
+  m = docId.match(/^PIMA\.IT(\d+)(?:\.(\d+))?\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    const pub = 'PIMA';
+    return { publisher: pub, suite: 'IT', number: m[1], part: m[2] || null };
+  }
+
+  // UL standards (treat token after UL. as the standard number)
+  //   UL.94.2015 → {publisher:"UL", suite:null, number:"94"}
+  m = docId.match(/^UL\.([A-Za-z0-9.-]+)\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    const pub = 'UL';
+    return { publisher: pub, suite: null, number: m[1], part: null };
+  }
+
+  // INCITS X-series and successors
+  //   INCITS.X3.4.1986 → {publisher:"INCITS", suite:"X3", number:"4"}
+  m = docId.match(/^INCITS\.([A-Za-z0-9]+)\.([A-Za-z0-9.-]+)\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    const pub = 'INCITS';
+    return { publisher: pub, suite: m[1], number: m[2], part: null };
+  }
+
+  // NFPA (e.g., NFPA.90A.2018)
+  m = docId.match(/^NFPA\.([0-9A-Za-z.-]+)\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    const pub = 'NFPA';
+    return { publisher: pub, suite: null, number: m[1], part: null };
+  }
+
+  // AIIM MS-series (e.g., AIIM.MS34.1990)
+  m = docId.match(/^AIIM\.([A-Za-z]+)(\d+)\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    const pub = 'AIIM';
+    return { publisher: pub, suite: m[1].toUpperCase(), number: m[2], part: null };
+  }
+
+  // ASHRAE (e.g., ASHRAE.52.1.2019)
+  m = docId.match(/^ASHRAE\.([0-9A-Za-z.-]+)\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    const pub = 'ASHRAE';
+    return { publisher: pub, suite: null, number: m[1], part: null };
+  }
+
+  // AIM (Association for Automatic Identification and Mobility)
+  // Barcode/auto-ID specs such as AIM.BC4.1999
+  // Normalize to publisher AIM, suite = series token (e.g., BC), number = digits
+  // Accept optional hyphen between series token and number, and typical date tails
+  m = docId.match(/^AIM\.([A-Za-z]+)-?(\d+)\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    const pub = 'AIM';
+    return { publisher: pub, suite: m[1].toUpperCase(), number: m[2], part: null };
+  }
+
+  // NAPM (National Association of Photographic Manufacturers)
+  // Handle IT series (e.g., NAPM.IT9.1.1996) and generic NAPM.<series>.<part>.<date>
+  m = docId.match(/^NAPM\.IT(\d+)(?:\.(\d+))?\.(?:\d{8}|\d{4}(?:-\d{2})?)(?:T\d+\.\d+\.\d{4})?$/i);
+  if (m) {
+    const pub = 'NAPM';
+    return { publisher: pub, suite: 'IT', number: m[1], part: m[2] || null };
+  }
+
+  // Generic NAPM series: NAPM.<series>.<part>.<date> → suite:null, number=<series>, part=<part>
+  m = docId.match(/^NAPM\.(\d+)\.(\d+)\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    const pub = 'NAPM';
+    return { publisher: pub, suite: null, number: m[1], part: m[2] };
   }
 
   // --- IEEE ---------------------------------------------------------------

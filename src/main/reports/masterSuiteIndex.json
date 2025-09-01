@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2025-08-27T23:18:51.258Z",
+  "generatedAt": "2025-09-01T17:16:57.805Z",
   "sourcePath": "src/main/data/documents.json",
-  "sourceHash": "sha256:3919ff52b7cd3e2253123be49b207130feec988745fdab73b4b330eb9e8015ab",
+  "sourceHash": "sha256:3cda7c440d5d02ee8f6a3ac3b4ca62a4750a0328e08930cb7a929de0930bd475",
   "publisherCounts": {
     "total": 1470,
     "counts": {
@@ -20,14 +20,14 @@
       "EBU": 16,
       "IEC": 15,
       "ITU-T": 14,
-      "ANSI/NAPM": 12,
-      "ANSI/ASA": 10,
-      "NFPA": 7,
+      "NAPM": 12,
+      "ASA": 10,
+      "NFPA": 8,
       "CEA": 5,
       "EIDR": 5,
       "IMFUG": 5,
       "ADDISON-WESLEY": 5,
-      "ANSI/PIMA": 5,
+      "PIMA": 5,
       "UNICODE CONSORTIUM": 5,
       "IANA": 4,
       "OMG": 4,
@@ -47,16 +47,16 @@
       "NOKIA BELL LABS": 2,
       "JAES": 2,
       "FRANKLIN INSTITUTE": 2,
-      "ANSI/UL": 2,
+      "UL": 2,
       "POLYMER DEGRADATION AND STABILITY": 1,
       "SCIENTIFIC INSTRUMENTS": 1,
       "PHYSICS TODAY": 1,
       "SOCIETY OF AMERICAN ARCHIVISTS": 1,
-      "ANSI/ASSOCIATION FOR INFORMATION AND IMAGE MANAGEMENT": 1,
+      "AIIM": 1,
       "ASSOCIATION FOR AUTOMATIC IDENTIFICATION & MOBILITY": 1,
       "ARIB": 1,
       "ASC": 1,
-      "ANSI/ASHRAE": 1,
+      "ASHRAE": 1,
       "RSA": 1,
       "BBC": 1,
       "BRITISH KINEMATOGRAPHY": 1,
@@ -68,7 +68,7 @@
       "WHATWG": 1,
       "INTERNATIONAL CIVIL AVIATION ORGANIZATION": 1,
       "IESNA": 1,
-      "ANSI/INCITS": 1,
+      "INCITS": 1,
       "OXFORD UNIVERSITY PRESS": 1,
       "MCGRAW-HILL BOOK COMPANY": 1,
       "PEARSON": 1,
@@ -88,7 +88,6 @@
       "MACMILLAN CO.": 1,
       "NAB": 1,
       "US DEPT OF COMMERCE": 1,
-      "ANSI/NFPA": 1,
       "NOISE CONTROL ENGINEERING": 1,
       "UCI": 1,
       "SMP": 1,
@@ -102,7 +101,7 @@
     }
   },
   "skippedDocs": {
-    "totalSkipped": 361,
+    "totalSkipped": 320,
     "byPublisher": {
       "POLYMER DEGRADATION AND STABILITY": {
         "count": 1,
@@ -313,36 +312,6 @@
           }
         ]
       },
-      "ANSI/ASSOCIATION FOR INFORMATION AND IMAGE MANAGEMENT": {
-        "count": 1,
-        "docIds": [
-          "AIIM.MS34.1990"
-        ],
-        "items": [
-          {
-            "docId": "AIIM.MS34.1990",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          }
-        ]
-      },
-      "ASSOCIATION FOR AUTOMATIC IDENTIFICATION & MOBILITY": {
-        "count": 1,
-        "docIds": [
-          "AIM.BC4.1999"
-        ],
-        "items": [
-          {
-            "docId": "AIM.BC4.1999",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          }
-        ]
-      },
       "AMPAS": {
         "count": 13,
         "docIds": [
@@ -492,93 +461,6 @@
           }
         ]
       },
-      "ANSI/ASA": {
-        "count": 10,
-        "docIds": [
-          "ASA.S1.11.1986",
-          "ASA.S1.11.2004",
-          "ASA.S1.11.p1.2014",
-          "ASA.S1.13.1995",
-          "ASA.S1.13.2005",
-          "ASA.S1.4.1983",
-          "ASA.S1.4.2014",
-          "ASA.S1.40.2006",
-          "ASA.S12.2.2008",
-          "ASA.S12.2.2019"
-        ],
-        "items": [
-          {
-            "docId": "ASA.S1.11.1986",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "ASA.S1.11.2004",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "ASA.S1.11.p1.2014",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "ASA.S1.13.1995",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "ASA.S1.13.2005",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "ASA.S1.4.1983",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "ASA.S1.4.2014",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "ASA.S1.40.2006",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "ASA.S12.2.2008",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "ASA.S12.2.2019",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          }
-        ]
-      },
       "ASC": {
         "count": 1,
         "docIds": [
@@ -591,21 +473,6 @@
             "rule": "FILTERED",
             "ruleDetail": "docType=White Paper",
             "category": "docType"
-          }
-        ]
-      },
-      "ANSI/ASHRAE": {
-        "count": 1,
-        "docIds": [
-          "ASHRAE.52.1.2019"
-        ],
-        "items": [
-          {
-            "docId": "ASHRAE.52.1.2019",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
           }
         ]
       },
@@ -1448,21 +1315,6 @@
           },
           {
             "docId": "IMFUG.BP004.2020",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          }
-        ]
-      },
-      "ANSI/INCITS": {
-        "count": 1,
-        "docIds": [
-          "INCITS.X3.4.1986"
-        ],
-        "items": [
-          {
-            "docId": "INCITS.X3.4.1986",
             "reason": "UNKEYED",
             "rule": "UNKEYED",
             "ruleDetail": "noRegexMatch",
@@ -2813,109 +2665,6 @@
           }
         ]
       },
-      "ANSI/NAPM": {
-        "count": 12,
-        "docIds": [
-          "NAPM.1.10.1995",
-          "NAPM.IT2.18.1996T2.18.1996",
-          "NAPM.IT2.18.1996T2.19.1994",
-          "NAPM.IT9.1.1996",
-          "NAPM.IT9.11.1993",
-          "NAPM.IT9.12.1995",
-          "NAPM.IT9.13.1996",
-          "NAPM.IT9.15.1997",
-          "NAPM.IT9.4.1994",
-          "NAPM.IT9.5.1994",
-          "NAPM.IT9.5.1996",
-          "NAPM.IT9.6.1991"
-        ],
-        "items": [
-          {
-            "docId": "NAPM.1.10.1995",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "NAPM.IT2.18.1996T2.18.1996",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "NAPM.IT2.18.1996T2.19.1994",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "NAPM.IT9.1.1996",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "NAPM.IT9.11.1993",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "NAPM.IT9.12.1995",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "NAPM.IT9.13.1996",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "NAPM.IT9.15.1997",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "NAPM.IT9.4.1994",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "NAPM.IT9.5.1994",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "NAPM.IT9.5.1996",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "NAPM.IT9.6.1991",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          }
-        ]
-      },
       "US DEPT OF COMMERCE": {
         "count": 1,
         "docIds": [
@@ -2924,84 +2673,6 @@
         "items": [
           {
             "docId": "NBS.MP.142.1933",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          }
-        ]
-      },
-      "NFPA": {
-        "count": 7,
-        "docIds": [
-          "NFPA232.1995",
-          "NFPA232.2022",
-          "NFPA40.2001",
-          "NFPA40.2022",
-          "NFPA90A.1993",
-          "NFPA90A.1999",
-          "NFPA90A.2021"
-        ],
-        "items": [
-          {
-            "docId": "NFPA232.1995",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "NFPA232.2022",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "NFPA40.2001",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "NFPA40.2022",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "NFPA90A.1993",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "NFPA90A.1999",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "NFPA90A.2021",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          }
-        ]
-      },
-      "ANSI/NFPA": {
-        "count": 1,
-        "docIds": [
-          "NFPA40.1997"
-        ],
-        "items": [
-          {
-            "docId": "NFPA40.1997",
             "reason": "UNKEYED",
             "rule": "UNKEYED",
             "ruleDetail": "noRegexMatch",
@@ -3041,53 +2712,6 @@
           },
           {
             "docId": "OMG.UML.2-5-1",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          }
-        ]
-      },
-      "ANSI/PIMA": {
-        "count": 5,
-        "docIds": [
-          "PIMA.IT3.301.1990",
-          "PIMA.IT7.231.1998",
-          "PIMA.IT9.11.1998",
-          "PIMA.IT9.2.1991",
-          "PIMA.IT9.2.1998"
-        ],
-        "items": [
-          {
-            "docId": "PIMA.IT3.301.1990",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "PIMA.IT7.231.1998",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "PIMA.IT9.11.1998",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "PIMA.IT9.2.1991",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "PIMA.IT9.2.1998",
             "reason": "UNKEYED",
             "rule": "UNKEYED",
             "ruleDetail": "noRegexMatch",
@@ -3518,29 +3142,6 @@
           }
         ]
       },
-      "ANSI/UL": {
-        "count": 2,
-        "docIds": [
-          "UL.900.1995",
-          "UL.900.2015"
-        ],
-        "items": [
-          {
-            "docId": "UL.900.1995",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "UL.900.2015",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          }
-        ]
-      },
       "UNSD": {
         "count": 1,
         "docIds": [
@@ -3604,14 +3205,14 @@
     },
     "summaryByReason": {
       "FILTERED": 168,
-      "UNKEYED": 193
+      "UNKEYED": 152
     }
   },
   "flagSummary": {
-    "totalFlags": 141,
+    "totalFlags": 154,
     "byType": {
       "DOCID_PUBDATE_MISMATCH": {
-        "count": 56,
+        "count": 57,
         "examples": [
           {
             "lineage": "AES||3|",
@@ -3628,6 +3229,10 @@
           {
             "lineage": "AES||11|",
             "flag": "DOCID_PUBDATE_MISMATCH:AES11.2009ad1.2010:docIdYear=2010,pubYear=2019"
+          },
+          {
+            "lineage": "ASHRAE||52.1|",
+            "flag": "DOCID_PUBDATE_MISMATCH:ASHRAE.52.1.2019:docIdYear=2019,pubYear=1992"
           },
           {
             "lineage": "IEC||60268|3",
@@ -3840,11 +3445,19 @@
         ]
       },
       "SUPERSEDED_BY_OUT_OF_LINEAGE": {
-        "count": 75,
+        "count": 87,
         "examples": [
+          {
+            "lineage": "AIM|BC|4|",
+            "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:AIM.BC4.1999->ISO.15417.2007"
+          },
           {
             "lineage": "AMPAS|S|2008|001",
             "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:ampas-s-2008-001->SMPTE.ST2065-1.2012"
+          },
+          {
+            "lineage": "ASA|S|1.11|",
+            "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:ASA.S1.11.2004->ASA.S1.11.p1.2014"
           },
           {
             "lineage": "DCI|DCA|OBA|",
@@ -4069,6 +3682,46 @@
           {
             "lineage": "ISO||10646|1",
             "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:ISO.10646-1.2000->ISO.10646.2003"
+          },
+          {
+            "lineage": "NAPM|IT|2|18",
+            "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:NAPM.IT2.18.1996->ISO.5-3.2009"
+          },
+          {
+            "lineage": "NAPM|IT|2|19",
+            "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:NAPM.IT2.19.1994->ISO.5-2.2009"
+          },
+          {
+            "lineage": "NAPM|IT|9|1",
+            "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:NAPM.IT9.1.1996->ISO.18901.2010"
+          },
+          {
+            "lineage": "NAPM|IT|9|5",
+            "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:NAPM.IT9.5.1996->ISO.18905.2002"
+          },
+          {
+            "lineage": "NAPM|IT|9|6",
+            "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:NAPM.IT9.6.1991->ISO.18906.2000"
+          },
+          {
+            "lineage": "NAPM|IT|9|11",
+            "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:NAPM.IT9.11.1993->PIMA.IT9.11.1998"
+          },
+          {
+            "lineage": "NAPM|IT|9|12",
+            "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:NAPM.IT9.12.1995->ISO.18912.2002"
+          },
+          {
+            "lineage": "NAPM|IT|9|15",
+            "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:NAPM.IT9.15.1997->ISO.18915.2000"
+          },
+          {
+            "lineage": "PIMA|IT|3|301",
+            "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:PIMA.IT3.301.1990->ISO.2721.2013"
+          },
+          {
+            "lineage": "PIMA|IT|9|11",
+            "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:PIMA.IT9.11.1998->ISO.18911.2010"
           },
           {
             "lineage": "SMPTE|AG|06|",
@@ -4565,6 +4218,74 @@
       }
     },
     {
+      "key": "AIIM|MS|34|",
+      "publisher": "AIIM",
+      "suite": "MS",
+      "number": "34",
+      "part": null,
+      "docs": [
+        {
+          "docId": "AIIM.MS34.1990",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "AIIM.MS34.1990",
+      "latestAnyId": "AIIM.MS34.1990",
+      "latestDateKey": "199000",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "AIIM.MS34.1990",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "AIM|BC|4|",
+      "publisher": "AIM",
+      "suite": "BC",
+      "number": "4",
+      "part": null,
+      "docs": [
+        {
+          "docId": "AIM.BC4.1999",
+          "publicationDate": "1999-12-04",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "AIM.BC4.1999",
+      "latestAnyId": "AIM.BC4.1999",
+      "latestDateKey": "19991204",
+      "hasActiveBase": false,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": "AIM.BC4.1999",
+      "prevBaseId": null,
+      "flagInconsistencies": [
+        "SUPERSEDED_BY_OUT_OF_LINEAGE:AIM.BC4.1999->ISO.15417.2007"
+      ],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
       "key": "AMPAS|S|2008|001",
       "publisher": "AMPAS",
       "suite": "S",
@@ -4891,6 +4612,281 @@
       "latestSupersededBaseId": null,
       "prevBaseId": null,
       "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ASA|S|1.11|",
+      "publisher": "ASA",
+      "suite": "S",
+      "number": "1.11",
+      "part": null,
+      "docs": [
+        {
+          "docId": "ASA.S1.11.1986",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "ASA.S1.11.2004",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "ASA.S1.11.2004",
+      "latestAnyId": "ASA.S1.11.2004",
+      "latestDateKey": "200400",
+      "hasActiveBase": false,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": "ASA.S1.11.2004",
+      "prevBaseId": null,
+      "flagInconsistencies": [
+        "SUPERSEDED_BY_OUT_OF_LINEAGE:ASA.S1.11.2004->ASA.S1.11.p1.2014"
+      ],
+      "counts": {
+        "bases": 2,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ASA|S|1.11|1",
+      "publisher": "ASA",
+      "suite": "S",
+      "number": "1.11",
+      "part": "1",
+      "docs": [
+        {
+          "docId": "ASA.S1.11.p1.2014",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "ASA.S1.11.p1.2014",
+      "latestAnyId": "ASA.S1.11.p1.2014",
+      "latestDateKey": "201400",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "ASA.S1.11.p1.2014",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ASA|S|1.13|",
+      "publisher": "ASA",
+      "suite": "S",
+      "number": "1.13",
+      "part": null,
+      "docs": [
+        {
+          "docId": "ASA.S1.13.1995",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "ASA.S1.13.2005",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "ASA.S1.13.2005",
+      "latestAnyId": "ASA.S1.13.2005",
+      "latestDateKey": "200500",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "ASA.S1.13.2005",
+      "latestSupersededBaseId": "ASA.S1.13.1995",
+      "prevBaseId": "ASA.S1.13.1995",
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 2,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ASA|S|1.4|",
+      "publisher": "ASA",
+      "suite": "S",
+      "number": "1.4",
+      "part": null,
+      "docs": [
+        {
+          "docId": "ASA.S1.4.1983",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "ASA.S1.4.2014",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "ASA.S1.4.2014",
+      "latestAnyId": "ASA.S1.4.2014",
+      "latestDateKey": "201400",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "ASA.S1.4.2014",
+      "latestSupersededBaseId": "ASA.S1.4.1983",
+      "prevBaseId": "ASA.S1.4.1983",
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 2,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ASA|S|1.40|",
+      "publisher": "ASA",
+      "suite": "S",
+      "number": "1.40",
+      "part": null,
+      "docs": [
+        {
+          "docId": "ASA.S1.40.2006",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "ASA.S1.40.2006",
+      "latestAnyId": "ASA.S1.40.2006",
+      "latestDateKey": "200600",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "ASA.S1.40.2006",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ASA|S|12.2|",
+      "publisher": "ASA",
+      "suite": "S",
+      "number": "12.2",
+      "part": null,
+      "docs": [
+        {
+          "docId": "ASA.S12.2.2008",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "ASA.S12.2.2019",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "ASA.S12.2.2019",
+      "latestAnyId": "ASA.S12.2.2019",
+      "latestDateKey": "201900",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "ASA.S12.2.2019",
+      "latestSupersededBaseId": "ASA.S12.2.2008",
+      "prevBaseId": "ASA.S12.2.2008",
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 2,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ASHRAE||52.1|",
+      "publisher": "ASHRAE",
+      "suite": null,
+      "number": "52.1",
+      "part": null,
+      "docs": [
+        {
+          "docId": "ASHRAE.52.1.2019",
+          "publicationDate": "1992-01-25",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "ASHRAE.52.1.2019",
+      "latestAnyId": "ASHRAE.52.1.2019",
+      "latestDateKey": "19920125",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "ASHRAE.52.1.2019",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [
+        "DOCID_PUBDATE_MISMATCH:ASHRAE.52.1.2019:docIdYear=2019,pubYear=1992"
+      ],
       "counts": {
         "bases": 1,
         "amendments": 0
@@ -9794,6 +9790,39 @@
       }
     },
     {
+      "key": "INCITS|X3|4|",
+      "publisher": "INCITS",
+      "suite": "X3",
+      "number": "4",
+      "part": null,
+      "docs": [
+        {
+          "docId": "INCITS.X3.4.1986",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "INCITS.X3.4.1986",
+      "latestAnyId": "INCITS.X3.4.1986",
+      "latestDateKey": "198600",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "INCITS.X3.4.1986",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
       "key": "ISO||5|2",
       "publisher": "ISO",
       "suite": null,
@@ -14301,6 +14330,544 @@
       }
     },
     {
+      "key": "NAPM||1|10",
+      "publisher": "NAPM",
+      "suite": null,
+      "number": "1",
+      "part": "10",
+      "docs": [
+        {
+          "docId": "NAPM.1.10.1995",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "NAPM.1.10.1995",
+      "latestAnyId": "NAPM.1.10.1995",
+      "latestDateKey": "199500",
+      "hasActiveBase": false,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "NAPM|IT|2|18",
+      "publisher": "NAPM",
+      "suite": "IT",
+      "number": "2",
+      "part": "18",
+      "docs": [
+        {
+          "docId": "NAPM.IT2.18.1996",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": true,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "NAPM.IT2.18.1996",
+      "latestAnyId": "NAPM.IT2.18.1996",
+      "latestDateKey": "199600",
+      "hasActiveBase": false,
+      "hasWithdrawn": true,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": "NAPM.IT2.18.1996",
+      "prevBaseId": null,
+      "flagInconsistencies": [
+        "SUPERSEDED_BY_OUT_OF_LINEAGE:NAPM.IT2.18.1996->ISO.5-3.2009"
+      ],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "NAPM|IT|2|19",
+      "publisher": "NAPM",
+      "suite": "IT",
+      "number": "2",
+      "part": "19",
+      "docs": [
+        {
+          "docId": "NAPM.IT2.19.1994",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": true,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "NAPM.IT2.19.1994",
+      "latestAnyId": "NAPM.IT2.19.1994",
+      "latestDateKey": "199400",
+      "hasActiveBase": false,
+      "hasWithdrawn": true,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": "NAPM.IT2.19.1994",
+      "prevBaseId": null,
+      "flagInconsistencies": [
+        "SUPERSEDED_BY_OUT_OF_LINEAGE:NAPM.IT2.19.1994->ISO.5-2.2009"
+      ],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "NAPM|IT|9|1",
+      "publisher": "NAPM",
+      "suite": "IT",
+      "number": "9",
+      "part": "1",
+      "docs": [
+        {
+          "docId": "NAPM.IT9.1.1996",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": true,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "NAPM.IT9.1.1996",
+      "latestAnyId": "NAPM.IT9.1.1996",
+      "latestDateKey": "199600",
+      "hasActiveBase": false,
+      "hasWithdrawn": true,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": "NAPM.IT9.1.1996",
+      "prevBaseId": null,
+      "flagInconsistencies": [
+        "SUPERSEDED_BY_OUT_OF_LINEAGE:NAPM.IT9.1.1996->ISO.18901.2010"
+      ],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "NAPM|IT|9|4",
+      "publisher": "NAPM",
+      "suite": "IT",
+      "number": "9",
+      "part": "4",
+      "docs": [
+        {
+          "docId": "NAPM.IT9.4.1994",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "NAPM.IT9.4.1994",
+      "latestAnyId": "NAPM.IT9.4.1994",
+      "latestDateKey": "199400",
+      "hasActiveBase": false,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "NAPM|IT|9|5",
+      "publisher": "NAPM",
+      "suite": "IT",
+      "number": "9",
+      "part": "5",
+      "docs": [
+        {
+          "docId": "NAPM.IT9.5.1994",
+          "publicationDate": "1994-08-01",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": true,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "NAPM.IT9.5.1996",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": true,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "NAPM.IT9.5.1996",
+      "latestAnyId": "NAPM.IT9.5.1996",
+      "latestDateKey": "199600",
+      "hasActiveBase": false,
+      "hasWithdrawn": true,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": "NAPM.IT9.5.1996",
+      "prevBaseId": null,
+      "flagInconsistencies": [
+        "SUPERSEDED_BY_OUT_OF_LINEAGE:NAPM.IT9.5.1996->ISO.18905.2002"
+      ],
+      "counts": {
+        "bases": 2,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "NAPM|IT|9|6",
+      "publisher": "NAPM",
+      "suite": "IT",
+      "number": "9",
+      "part": "6",
+      "docs": [
+        {
+          "docId": "NAPM.IT9.6.1991",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": true,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "NAPM.IT9.6.1991",
+      "latestAnyId": "NAPM.IT9.6.1991",
+      "latestDateKey": "199100",
+      "hasActiveBase": false,
+      "hasWithdrawn": true,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": "NAPM.IT9.6.1991",
+      "prevBaseId": null,
+      "flagInconsistencies": [
+        "SUPERSEDED_BY_OUT_OF_LINEAGE:NAPM.IT9.6.1991->ISO.18906.2000"
+      ],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "NAPM|IT|9|11",
+      "publisher": "NAPM",
+      "suite": "IT",
+      "number": "9",
+      "part": "11",
+      "docs": [
+        {
+          "docId": "NAPM.IT9.11.1993",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": true,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "NAPM.IT9.11.1993",
+      "latestAnyId": "NAPM.IT9.11.1993",
+      "latestDateKey": "199300",
+      "hasActiveBase": false,
+      "hasWithdrawn": true,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": "NAPM.IT9.11.1993",
+      "prevBaseId": null,
+      "flagInconsistencies": [
+        "SUPERSEDED_BY_OUT_OF_LINEAGE:NAPM.IT9.11.1993->PIMA.IT9.11.1998"
+      ],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "NAPM|IT|9|12",
+      "publisher": "NAPM",
+      "suite": "IT",
+      "number": "9",
+      "part": "12",
+      "docs": [
+        {
+          "docId": "NAPM.IT9.12.1995",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": true,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "NAPM.IT9.12.1995",
+      "latestAnyId": "NAPM.IT9.12.1995",
+      "latestDateKey": "199500",
+      "hasActiveBase": false,
+      "hasWithdrawn": true,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": "NAPM.IT9.12.1995",
+      "prevBaseId": null,
+      "flagInconsistencies": [
+        "SUPERSEDED_BY_OUT_OF_LINEAGE:NAPM.IT9.12.1995->ISO.18912.2002"
+      ],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "NAPM|IT|9|13",
+      "publisher": "NAPM",
+      "suite": "IT",
+      "number": "9",
+      "part": "13",
+      "docs": [
+        {
+          "docId": "NAPM.IT9.13.1996",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "NAPM.IT9.13.1996",
+      "latestAnyId": "NAPM.IT9.13.1996",
+      "latestDateKey": "199600",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "NAPM.IT9.13.1996",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "NAPM|IT|9|15",
+      "publisher": "NAPM",
+      "suite": "IT",
+      "number": "9",
+      "part": "15",
+      "docs": [
+        {
+          "docId": "NAPM.IT9.15.1997",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": true,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "NAPM.IT9.15.1997",
+      "latestAnyId": "NAPM.IT9.15.1997",
+      "latestDateKey": "199700",
+      "hasActiveBase": false,
+      "hasWithdrawn": true,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": "NAPM.IT9.15.1997",
+      "prevBaseId": null,
+      "flagInconsistencies": [
+        "SUPERSEDED_BY_OUT_OF_LINEAGE:NAPM.IT9.15.1997->ISO.18915.2000"
+      ],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "NFPA||40|",
+      "publisher": "NFPA",
+      "suite": null,
+      "number": "40",
+      "part": null,
+      "docs": [
+        {
+          "docId": "NFPA.40.1997",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "NFPA.40.2001",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "NFPA.40.2022",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "NFPA.40.2022",
+      "latestAnyId": "NFPA.40.2022",
+      "latestDateKey": "202200",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "NFPA.40.2022",
+      "latestSupersededBaseId": "NFPA.40.2001",
+      "prevBaseId": "NFPA.40.2001",
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 3,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "NFPA||232|",
+      "publisher": "NFPA",
+      "suite": null,
+      "number": "232",
+      "part": null,
+      "docs": [
+        {
+          "docId": "NFPA.232.1995",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "NFPA.232.2022",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "NFPA.232.2022",
+      "latestAnyId": "NFPA.232.2022",
+      "latestDateKey": "202200",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "NFPA.232.2022",
+      "latestSupersededBaseId": "NFPA.232.1995",
+      "prevBaseId": "NFPA.232.1995",
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 2,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "NFPA||90A|",
+      "publisher": "NFPA",
+      "suite": null,
+      "number": "90A",
+      "part": null,
+      "docs": [
+        {
+          "docId": "NFPA.90A.1993",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "NFPA.90A.1999",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "NFPA.90A.2021",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "NFPA.90A.2021",
+      "latestAnyId": "NFPA.90A.2021",
+      "latestDateKey": "202100",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "NFPA.90A.2021",
+      "latestSupersededBaseId": "NFPA.90A.1999",
+      "prevBaseId": "NFPA.90A.1999",
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 3,
+        "amendments": 0
+      }
+    },
+    {
       "key": "NIST|FIPS|46|",
       "publisher": "NIST",
       "suite": "FIPS",
@@ -14757,6 +15324,152 @@
       "flagInconsistencies": [],
       "counts": {
         "bases": 2,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "PIMA|IT|3|301",
+      "publisher": "PIMA",
+      "suite": "IT",
+      "number": "3",
+      "part": "301",
+      "docs": [
+        {
+          "docId": "PIMA.IT3.301.1990",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": true,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "PIMA.IT3.301.1990",
+      "latestAnyId": "PIMA.IT3.301.1990",
+      "latestDateKey": "199000",
+      "hasActiveBase": false,
+      "hasWithdrawn": true,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": "PIMA.IT3.301.1990",
+      "prevBaseId": null,
+      "flagInconsistencies": [
+        "SUPERSEDED_BY_OUT_OF_LINEAGE:PIMA.IT3.301.1990->ISO.2721.2013"
+      ],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "PIMA|IT|7|231",
+      "publisher": "PIMA",
+      "suite": "IT",
+      "number": "7",
+      "part": "231",
+      "docs": [
+        {
+          "docId": "PIMA.IT7.231.1998",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "PIMA.IT7.231.1998",
+      "latestAnyId": "PIMA.IT7.231.1998",
+      "latestDateKey": "199800",
+      "hasActiveBase": false,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "PIMA|IT|9|2",
+      "publisher": "PIMA",
+      "suite": "IT",
+      "number": "9",
+      "part": "2",
+      "docs": [
+        {
+          "docId": "PIMA.IT9.2.1991",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": true,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "PIMA.IT9.2.1998",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": true,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "PIMA.IT9.2.1998",
+      "latestAnyId": "PIMA.IT9.2.1998",
+      "latestDateKey": "199800",
+      "hasActiveBase": false,
+      "hasWithdrawn": true,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": "PIMA.IT9.2.1998",
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 2,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "PIMA|IT|9|11",
+      "publisher": "PIMA",
+      "suite": "IT",
+      "number": "9",
+      "part": "11",
+      "docs": [
+        {
+          "docId": "PIMA.IT9.11.1998",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": true,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "PIMA.IT9.11.1998",
+      "latestAnyId": "PIMA.IT9.11.1998",
+      "latestDateKey": "199800",
+      "hasActiveBase": false,
+      "hasWithdrawn": true,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": "PIMA.IT9.11.1998",
+      "prevBaseId": null,
+      "flagInconsistencies": [
+        "SUPERSEDED_BY_OUT_OF_LINEAGE:PIMA.IT9.11.1998->ISO.18911.2010"
+      ],
+      "counts": {
+        "bases": 1,
         "amendments": 0
       }
     },
@@ -30695,6 +31408,49 @@
       "flagInconsistencies": [],
       "counts": {
         "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "UL||900|",
+      "publisher": "UL",
+      "suite": null,
+      "number": "900",
+      "part": null,
+      "docs": [
+        {
+          "docId": "UL.900.1995",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "UL.900.2015",
+          "publicationDate": "2015-04-21",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "UL.900.2015",
+      "latestAnyId": "UL.900.2015",
+      "latestDateKey": "20150421",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "UL.900.2015",
+      "latestSupersededBaseId": "UL.900.1995",
+      "prevBaseId": "UL.900.1995",
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 2,
         "amendments": 0
       }
     },
