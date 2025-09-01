@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2025-09-01T17:16:57.805Z",
+  "generatedAt": "2025-09-01T23:54:00.440Z",
   "sourcePath": "src/main/data/documents.json",
-  "sourceHash": "sha256:3cda7c440d5d02ee8f6a3ac3b4ca62a4750a0328e08930cb7a929de0930bd475",
+  "sourceHash": "sha256:3357892221e92fe7107f2846b4511a536dce994eb401b93974f1bd46091c6287",
   "publisherCounts": {
     "total": 1470,
     "counts": {
@@ -19,7 +19,7 @@
       "ISDCF": 17,
       "EBU": 16,
       "IEC": 15,
-      "ITU-T": 14,
+      "ITU-T": 13,
       "NAPM": 12,
       "ASA": 10,
       "NFPA": 8,
@@ -93,6 +93,7 @@
       "SMP": 1,
       "AUDIO": 1,
       "DLP": 1,
+      "ALDUS CORP/ADOBE": 1,
       "OWASP": 1,
       "UNSD": 1,
       "USPO": 1,
@@ -101,7 +102,7 @@
     }
   },
   "skippedDocs": {
-    "totalSkipped": 320,
+    "totalSkipped": 271,
     "byPublisher": {
       "POLYMER DEGRADATION AND STABILITY": {
         "count": 1,
@@ -423,44 +424,6 @@
           }
         ]
       },
-      "ANSI": {
-        "count": 2,
-        "docIds": [
-          "ANSI.S4.3.1982",
-          "ANSI.S4.6.1982"
-        ],
-        "items": [
-          {
-            "docId": "ANSI.S4.3.1982",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "ANSI.S4.6.1982",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          }
-        ]
-      },
-      "ARIB": {
-        "count": 1,
-        "docIds": [
-          "ARIB.STD-B32.v2.1.2001"
-        ],
-        "items": [
-          {
-            "docId": "ARIB.STD-B32.v2.1.2001",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          }
-        ]
-      },
       "ASC": {
         "count": 1,
         "docIds": [
@@ -484,160 +447,25 @@
         "items": [
           {
             "docId": "asn.1-ber-der.199311",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
+            "reason": "FILTERED",
+            "rule": "FILTERED",
+            "ruleDetail": "docType=Technical Note",
+            "category": "docType"
           }
         ]
       },
       "ITU-T": {
-        "count": 14,
+        "count": 1,
         "docIds": [
-          "asn1",
-          "T-REC-E.123.2001",
-          "T-REC-E.123.2001am1.2008",
-          "T-REC-E.123.2001e1.2008",
-          "T-REC-H.264.202108",
-          "T-REC-H.265.201612",
-          "T-REC-H.265.201911",
-          "T-REC-H.273.201612",
-          "T-REC-H.273.202107",
-          "T-REC-T.802.2005",
-          "T-REC-T.802.2005am1.2010",
-          "TIFF.r6.19920603",
-          "x509.199706",
-          "x509.201910"
+          "asn1"
         ],
         "items": [
           {
             "docId": "asn1",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "T-REC-E.123.2001",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "T-REC-E.123.2001am1.2008",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "T-REC-E.123.2001e1.2008",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "T-REC-H.264.202108",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "T-REC-H.265.201612",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "T-REC-H.265.201911",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "T-REC-H.273.201612",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "T-REC-H.273.202107",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "T-REC-T.802.2005",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "T-REC-T.802.2005am1.2010",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "TIFF.r6.19920603",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "x509.199706",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "x509.201910",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          }
-        ]
-      },
-      "ATSC": {
-        "count": 3,
-        "docIds": [
-          "atsc-a52.2015",
-          "atsc-a52.2018",
-          "atsc-a52.a.1995"
-        ],
-        "items": [
-          {
-            "docId": "atsc-a52.2015",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "atsc-a52.2018",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "atsc-a52.a.1995",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
+            "reason": "FILTERED",
+            "rule": "FILTERED",
+            "ruleDetail": "docType=Notation",
+            "category": "docType"
           }
         ]
       },
@@ -2750,253 +2578,6 @@
           }
         ]
       },
-      "ITU-R": {
-        "count": 30,
-        "docIds": [
-          "R-REC-BR.1352-1.2002",
-          "R-REC-BR.1352-2.2002",
-          "R-REC-BR.1384-2.201103",
-          "R-REC-BS.1196-a2.1995",
-          "R-REC-BS.1726-0.200504",
-          "R-REC-BS.1770-3.201208",
-          "R-REC-BS.1770-4.201510",
-          "R-REC-BS.2051-2.201807",
-          "R-REC-BS.2051-3.202205",
-          "R-REC-BT.2020-2.201510",
-          "R-REC-BT.2035.201307",
-          "R-REC-BT.2100-1.201706",
-          "R-REC-BT.2100-2.201807",
-          "R-REC-BT.2153-0.202212",
-          "R-REC-BT.2390-10.202111",
-          "R-REC-BT.2390-4.201804",
-          "R-REC-BT.2390-8.202002",
-          "R-REC-BT.470-6.199811",
-          "R-REC-BT.6-270.201103",
-          "R-REC-BT.601-4.199510",
-          "R-REC-BT.601-5.199510",
-          "R-REC-BT.601-6.200701",
-          "R-REC-BT.601-7.201103",
-          "R-REC-BT.656.199802",
-          "R-REC-BT.709-1.199311",
-          "R-REC-BT.709-2.199510",
-          "R-REC-BT.709-3.199802",
-          "R-REC-BT.709-4.200003",
-          "R-REC-BT.709-5.200204",
-          "R-REC-BT.709-6.201506"
-        ],
-        "items": [
-          {
-            "docId": "R-REC-BR.1352-1.2002",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BR.1352-2.2002",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BR.1384-2.201103",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BS.1196-a2.1995",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BS.1726-0.200504",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BS.1770-3.201208",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BS.1770-4.201510",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BS.2051-2.201807",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BS.2051-3.202205",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BT.2020-2.201510",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BT.2035.201307",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BT.2100-1.201706",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BT.2100-2.201807",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BT.2153-0.202212",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BT.2390-10.202111",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BT.2390-4.201804",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BT.2390-8.202002",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BT.470-6.199811",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BT.6-270.201103",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BT.601-4.199510",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BT.601-5.199510",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BT.601-6.200701",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BT.601-7.201103",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BT.656.199802",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BT.709-1.199311",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BT.709-2.199510",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BT.709-3.199802",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BT.709-4.200003",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BT.709-5.200204",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "R-REC-BT.709-6.201506",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          }
-        ]
-      },
       "NOISE CONTROL ENGINEERING": {
         "count": 1,
         "docIds": [
@@ -3204,15 +2785,15 @@
       }
     },
     "summaryByReason": {
-      "FILTERED": 168,
-      "UNKEYED": 152
+      "FILTERED": 170,
+      "UNKEYED": 101
     }
   },
   "flagSummary": {
-    "totalFlags": 154,
+    "totalFlags": 161,
     "byType": {
       "DOCID_PUBDATE_MISMATCH": {
-        "count": 57,
+        "count": 60,
         "examples": [
           {
             "lineage": "AES||3|",
@@ -3229,6 +2810,10 @@
           {
             "lineage": "AES||11|",
             "flag": "DOCID_PUBDATE_MISMATCH:AES11.2009ad1.2010:docIdYear=2010,pubYear=2019"
+          },
+          {
+            "lineage": "ARIB|STD|B32|",
+            "flag": "DOCID_PUBDATE_MISMATCH:ARIB.STD-B32.v2.1.2001:docIdYear=2001,pubYear=2007"
           },
           {
             "lineage": "ASHRAE||52.1|",
@@ -3273,6 +2858,14 @@
           {
             "lineage": "ISO||13818|2",
             "flag": "DOCID_PUBDATE_MISMATCH:ISO.13818-2.2000:docIdYear=2000,pubYear=2012"
+          },
+          {
+            "lineage": "ITU-R|BR|1352|",
+            "flag": "DOCID_PUBDATE_MISMATCH:R-REC-BR.1352-1.2002:docIdYear=2002,pubYear=2001"
+          },
+          {
+            "lineage": "ITU-T|E|123|",
+            "flag": "DOCID_PUBDATE_MISMATCH:T-REC-E.123.2001:docIdYear=2001,pubYear=2002"
           },
           {
             "lineage": "SMPTE|AG|01|",
@@ -3445,7 +3038,7 @@
         ]
       },
       "SUPERSEDED_BY_OUT_OF_LINEAGE": {
-        "count": 87,
+        "count": 91,
         "examples": [
           {
             "lineage": "AIM|BC|4|",
@@ -3456,8 +3049,16 @@
             "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:ampas-s-2008-001->SMPTE.ST2065-1.2012"
           },
           {
-            "lineage": "ASA|S|1.11|",
+            "lineage": "ASA|S1|11|",
             "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:ASA.S1.11.2004->ASA.S1.11.p1.2014"
+          },
+          {
+            "lineage": "ASA|S4|3|",
+            "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:ANSI.S4.3.1982->AES6.2008"
+          },
+          {
+            "lineage": "ASA|S4|6|",
+            "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:ANSI.S4.6.1982->AES7.2000"
           },
           {
             "lineage": "DCI|DCA|OBA|",
@@ -3682,6 +3283,14 @@
           {
             "lineage": "ISO||10646|1",
             "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:ISO.10646-1.2000->ISO.10646.2003"
+          },
+          {
+            "lineage": "ITU-R|BT|6|",
+            "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:R-REC-BT.6-270.201103->R-REC-BT.601-7.201103"
+          },
+          {
+            "lineage": "ITU-R|BT|601|",
+            "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:R-REC-BT.601-6.200701->R-REC-BT.6-270.201103"
           },
           {
             "lineage": "NAPM|IT|2|18",
@@ -4237,7 +3846,7 @@
       ],
       "latestBaseId": "AIIM.MS34.1990",
       "latestAnyId": "AIIM.MS34.1990",
-      "latestDateKey": "199000",
+      "latestDateKey": "19900000",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -4280,6 +3889,39 @@
       "flagInconsistencies": [
         "SUPERSEDED_BY_OUT_OF_LINEAGE:AIM.BC4.1999->ISO.15417.2007"
       ],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "Aldus Corp/Adobe|TIFF||",
+      "publisher": "Aldus Corp/Adobe",
+      "suite": "TIFF",
+      "number": null,
+      "part": null,
+      "docs": [
+        {
+          "docId": "TIFF.r6.19920603",
+          "publicationDate": "1992-06-03",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "TIFF.r6.19920603",
+      "latestAnyId": "TIFF.r6.19920603",
+      "latestDateKey": "19920603",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "TIFF.r6.19920603",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
       "counts": {
         "bases": 1,
         "amendments": 0
@@ -4618,60 +4260,15 @@
       }
     },
     {
-      "key": "ASA|S|1.11|",
-      "publisher": "ASA",
-      "suite": "S",
-      "number": "1.11",
+      "key": "ARIB|STD|B32|",
+      "publisher": "ARIB",
+      "suite": "STD",
+      "number": "B32",
       "part": null,
       "docs": [
         {
-          "docId": "ASA.S1.11.1986",
-          "publicationDate": null,
-          "releaseTag": null,
-          "statusActive": false,
-          "statusSuperseded": true,
-          "statusWithdrawn": false,
-          "statusStabilized": false,
-          "statusAmended": false
-        },
-        {
-          "docId": "ASA.S1.11.2004",
-          "publicationDate": null,
-          "releaseTag": null,
-          "statusActive": false,
-          "statusSuperseded": true,
-          "statusWithdrawn": false,
-          "statusStabilized": false,
-          "statusAmended": false
-        }
-      ],
-      "latestBaseId": "ASA.S1.11.2004",
-      "latestAnyId": "ASA.S1.11.2004",
-      "latestDateKey": "200400",
-      "hasActiveBase": false,
-      "hasWithdrawn": false,
-      "hasStabilized": false,
-      "latestActiveBaseId": null,
-      "latestSupersededBaseId": "ASA.S1.11.2004",
-      "prevBaseId": null,
-      "flagInconsistencies": [
-        "SUPERSEDED_BY_OUT_OF_LINEAGE:ASA.S1.11.2004->ASA.S1.11.p1.2014"
-      ],
-      "counts": {
-        "bases": 2,
-        "amendments": 0
-      }
-    },
-    {
-      "key": "ASA|S|1.11|1",
-      "publisher": "ASA",
-      "suite": "S",
-      "number": "1.11",
-      "part": "1",
-      "docs": [
-        {
-          "docId": "ASA.S1.11.p1.2014",
-          "publicationDate": null,
+          "docId": "ARIB.STD-B32.v2.1.2001",
+          "publicationDate": "2007-03-14",
           "releaseTag": null,
           "statusActive": true,
           "statusSuperseded": false,
@@ -4680,69 +4277,28 @@
           "statusAmended": false
         }
       ],
-      "latestBaseId": "ASA.S1.11.p1.2014",
-      "latestAnyId": "ASA.S1.11.p1.2014",
-      "latestDateKey": "201400",
+      "latestBaseId": "ARIB.STD-B32.v2.1.2001",
+      "latestAnyId": "ARIB.STD-B32.v2.1.2001",
+      "latestDateKey": "20070314",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": false,
-      "latestActiveBaseId": "ASA.S1.11.p1.2014",
+      "latestActiveBaseId": "ARIB.STD-B32.v2.1.2001",
       "latestSupersededBaseId": null,
       "prevBaseId": null,
-      "flagInconsistencies": [],
+      "flagInconsistencies": [
+        "DOCID_PUBDATE_MISMATCH:ARIB.STD-B32.v2.1.2001:docIdYear=2001,pubYear=2007"
+      ],
       "counts": {
         "bases": 1,
         "amendments": 0
       }
     },
     {
-      "key": "ASA|S|1.13|",
+      "key": "ASA|S1|4|",
       "publisher": "ASA",
-      "suite": "S",
-      "number": "1.13",
-      "part": null,
-      "docs": [
-        {
-          "docId": "ASA.S1.13.1995",
-          "publicationDate": null,
-          "releaseTag": null,
-          "statusActive": false,
-          "statusSuperseded": true,
-          "statusWithdrawn": false,
-          "statusStabilized": false,
-          "statusAmended": false
-        },
-        {
-          "docId": "ASA.S1.13.2005",
-          "publicationDate": null,
-          "releaseTag": null,
-          "statusActive": true,
-          "statusSuperseded": false,
-          "statusWithdrawn": false,
-          "statusStabilized": false,
-          "statusAmended": false
-        }
-      ],
-      "latestBaseId": "ASA.S1.13.2005",
-      "latestAnyId": "ASA.S1.13.2005",
-      "latestDateKey": "200500",
-      "hasActiveBase": true,
-      "hasWithdrawn": false,
-      "hasStabilized": false,
-      "latestActiveBaseId": "ASA.S1.13.2005",
-      "latestSupersededBaseId": "ASA.S1.13.1995",
-      "prevBaseId": "ASA.S1.13.1995",
-      "flagInconsistencies": [],
-      "counts": {
-        "bases": 2,
-        "amendments": 0
-      }
-    },
-    {
-      "key": "ASA|S|1.4|",
-      "publisher": "ASA",
-      "suite": "S",
-      "number": "1.4",
+      "suite": "S1",
+      "number": "4",
       "part": null,
       "docs": [
         {
@@ -4768,7 +4324,7 @@
       ],
       "latestBaseId": "ASA.S1.4.2014",
       "latestAnyId": "ASA.S1.4.2014",
-      "latestDateKey": "201400",
+      "latestDateKey": "20140000",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -4782,10 +4338,131 @@
       }
     },
     {
-      "key": "ASA|S|1.40|",
+      "key": "ASA|S1|11|",
       "publisher": "ASA",
-      "suite": "S",
-      "number": "1.40",
+      "suite": "S1",
+      "number": "11",
+      "part": null,
+      "docs": [
+        {
+          "docId": "ASA.S1.11.1986",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "ASA.S1.11.2004",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "ASA.S1.11.2004",
+      "latestAnyId": "ASA.S1.11.2004",
+      "latestDateKey": "20040000",
+      "hasActiveBase": false,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": "ASA.S1.11.2004",
+      "prevBaseId": null,
+      "flagInconsistencies": [
+        "SUPERSEDED_BY_OUT_OF_LINEAGE:ASA.S1.11.2004->ASA.S1.11.p1.2014"
+      ],
+      "counts": {
+        "bases": 2,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ASA|S1|11|1",
+      "publisher": "ASA",
+      "suite": "S1",
+      "number": "11",
+      "part": "1",
+      "docs": [
+        {
+          "docId": "ASA.S1.11.p1.2014",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "ASA.S1.11.p1.2014",
+      "latestAnyId": "ASA.S1.11.p1.2014",
+      "latestDateKey": "20140000",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "ASA.S1.11.p1.2014",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ASA|S1|13|",
+      "publisher": "ASA",
+      "suite": "S1",
+      "number": "13",
+      "part": null,
+      "docs": [
+        {
+          "docId": "ASA.S1.13.1995",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "ASA.S1.13.2005",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "ASA.S1.13.2005",
+      "latestAnyId": "ASA.S1.13.2005",
+      "latestDateKey": "20050000",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "ASA.S1.13.2005",
+      "latestSupersededBaseId": "ASA.S1.13.1995",
+      "prevBaseId": "ASA.S1.13.1995",
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 2,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ASA|S1|40|",
+      "publisher": "ASA",
+      "suite": "S1",
+      "number": "40",
       "part": null,
       "docs": [
         {
@@ -4801,7 +4478,7 @@
       ],
       "latestBaseId": "ASA.S1.40.2006",
       "latestAnyId": "ASA.S1.40.2006",
-      "latestDateKey": "200600",
+      "latestDateKey": "20060000",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -4815,10 +4492,10 @@
       }
     },
     {
-      "key": "ASA|S|12.2|",
+      "key": "ASA|S12|2|",
       "publisher": "ASA",
-      "suite": "S",
-      "number": "12.2",
+      "suite": "S12",
+      "number": "2",
       "part": null,
       "docs": [
         {
@@ -4844,7 +4521,7 @@
       ],
       "latestBaseId": "ASA.S12.2.2019",
       "latestAnyId": "ASA.S12.2.2019",
-      "latestDateKey": "201900",
+      "latestDateKey": "20190000",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -4854,6 +4531,76 @@
       "flagInconsistencies": [],
       "counts": {
         "bases": 2,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ASA|S4|3|",
+      "publisher": "ASA",
+      "suite": "S4",
+      "number": "3",
+      "part": null,
+      "docs": [
+        {
+          "docId": "ANSI.S4.3.1982",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": true,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "ANSI.S4.3.1982",
+      "latestAnyId": "ANSI.S4.3.1982",
+      "latestDateKey": "19820000",
+      "hasActiveBase": false,
+      "hasWithdrawn": true,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": "ANSI.S4.3.1982",
+      "prevBaseId": null,
+      "flagInconsistencies": [
+        "SUPERSEDED_BY_OUT_OF_LINEAGE:ANSI.S4.3.1982->AES6.2008"
+      ],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ASA|S4|6|",
+      "publisher": "ASA",
+      "suite": "S4",
+      "number": "6",
+      "part": null,
+      "docs": [
+        {
+          "docId": "ANSI.S4.6.1982",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": true,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "ANSI.S4.6.1982",
+      "latestAnyId": "ANSI.S4.6.1982",
+      "latestDateKey": "19820000",
+      "hasActiveBase": false,
+      "hasWithdrawn": true,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": "ANSI.S4.6.1982",
+      "prevBaseId": null,
+      "flagInconsistencies": [
+        "SUPERSEDED_BY_OUT_OF_LINEAGE:ANSI.S4.6.1982->AES7.2000"
+      ],
+      "counts": {
+        "bases": 1,
         "amendments": 0
       }
     },
@@ -4877,7 +4624,7 @@
       ],
       "latestBaseId": "ASHRAE.52.1.2019",
       "latestAnyId": "ASHRAE.52.1.2019",
-      "latestDateKey": "19920125",
+      "latestDateKey": "20190000",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -4889,6 +4636,59 @@
       ],
       "counts": {
         "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ATSC|AC3|A52|",
+      "publisher": "ATSC",
+      "suite": "AC3",
+      "number": "A52",
+      "part": null,
+      "docs": [
+        {
+          "docId": "ATSC.AC3.A52.AnnexA.1995",
+          "publicationDate": "1995-04-12",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "ATSC.AC3.A52.2015",
+          "publicationDate": "2015-11-24",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "ATSC.AC3.A52.2018",
+          "publicationDate": "2018-01-25",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "ATSC.AC3.A52.2018",
+      "latestAnyId": "ATSC.AC3.A52.2018",
+      "latestDateKey": "20180125",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "ATSC.AC3.A52.2018",
+      "latestSupersededBaseId": "ATSC.AC3.A52.2015",
+      "prevBaseId": "ATSC.AC3.A52.2015",
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 2,
         "amendments": 0
       }
     },
@@ -5043,7 +4843,7 @@
       ],
       "latestBaseId": "DCI.DCA-S.2017-0711",
       "latestAnyId": "DCI.DCA-S.2017-0711",
-      "latestDateKey": "20070711",
+      "latestDateKey": "20170711",
       "hasActiveBase": false,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -5567,16 +5367,6 @@
       "part": "3",
       "docs": [
         {
-          "docId": "IEC.60268-3.2018",
-          "publicationDate": "1991-03-13",
-          "releaseTag": null,
-          "statusActive": true,
-          "statusSuperseded": false,
-          "statusWithdrawn": false,
-          "statusStabilized": false,
-          "statusAmended": false
-        },
-        {
           "docId": "IEC.60268-3.2000",
           "publicationDate": "2000-08-30",
           "releaseTag": null,
@@ -5585,21 +5375,31 @@
           "statusWithdrawn": true,
           "statusStabilized": false,
           "statusAmended": false
+        },
+        {
+          "docId": "IEC.60268-3.2018",
+          "publicationDate": "1991-03-13",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
         }
       ],
       "latestBaseId": "IEC.60268-3.2018",
       "latestAnyId": "IEC.60268-3.2018",
-      "latestDateKey": "19910313",
+      "latestDateKey": "20180000",
       "hasActiveBase": true,
       "hasWithdrawn": true,
       "hasStabilized": false,
-      "latestActiveBaseId": "IEC.60268-3.2000",
+      "latestActiveBaseId": "IEC.60268-3.2018",
       "latestSupersededBaseId": "IEC.60268-3.2000",
-      "prevBaseId": "IEC.60268-3.2018",
+      "prevBaseId": "IEC.60268-3.2000",
       "flagInconsistencies": [
-        "DOCID_PUBDATE_MISMATCH:IEC.60268-3.2018:docIdYear=2018,pubYear=1991",
         "CONTRADICTORY_STATUS_FLAGS:IEC.60268-3.2000:ACTIVE_AND_WITHDRAWN",
-        "CONTRADICTORY_STATUS_FLAGS:IEC.60268-3.2000:ACTIVE_AND_SUPERSEDED"
+        "CONTRADICTORY_STATUS_FLAGS:IEC.60268-3.2000:ACTIVE_AND_SUPERSEDED",
+        "DOCID_PUBDATE_MISMATCH:IEC.60268-3.2018:docIdYear=2018,pubYear=1991"
       ],
       "counts": {
         "bases": 2,
@@ -5942,7 +5742,7 @@
       ],
       "latestBaseId": "IEEE.STD152.1992",
       "latestAnyId": "IEEE.STD152.1992",
-      "latestDateKey": "199200",
+      "latestDateKey": "19920000",
       "hasActiveBase": false,
       "hasWithdrawn": true,
       "hasStabilized": false,
@@ -9809,7 +9609,7 @@
       ],
       "latestBaseId": "INCITS.X3.4.1986",
       "latestAnyId": "INCITS.X3.4.1986",
-      "latestDateKey": "198600",
+      "latestDateKey": "19860000",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -11571,7 +11371,7 @@
       ],
       "latestBaseId": "ISO.11578.1998",
       "latestAnyId": "ISO.11578.1998",
-      "latestDateKey": "19961201",
+      "latestDateKey": "19980000",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -14330,6 +14130,940 @@
       }
     },
     {
+      "key": "ITU-R|BR|1352|",
+      "publisher": "ITU-R",
+      "suite": "BR",
+      "number": "1352",
+      "part": null,
+      "docs": [
+        {
+          "docId": "R-REC-BR.1352-1.2002",
+          "publicationDate": "2001-12-01",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "R-REC-BR.1352-2.2002",
+          "publicationDate": "2002-06-01",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "R-REC-BR.1352-2.2002",
+      "latestAnyId": "R-REC-BR.1352-2.2002",
+      "latestDateKey": "20020601",
+      "hasActiveBase": false,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": "R-REC-BR.1352-2.2002",
+      "prevBaseId": null,
+      "flagInconsistencies": [
+        "DOCID_PUBDATE_MISMATCH:R-REC-BR.1352-1.2002:docIdYear=2002,pubYear=2001"
+      ],
+      "counts": {
+        "bases": 2,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ITU-R|BR|1384|",
+      "publisher": "ITU-R",
+      "suite": "BR",
+      "number": "1384",
+      "part": null,
+      "docs": [
+        {
+          "docId": "R-REC-BR.1384-2.201103",
+          "publicationDate": "2011-03-08",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": false,
+          "statusWithdrawn": true,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "R-REC-BR.1384-2.201103",
+      "latestAnyId": "R-REC-BR.1384-2.201103",
+      "latestDateKey": "20110308",
+      "hasActiveBase": false,
+      "hasWithdrawn": true,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ITU-R|BS|1196|",
+      "publisher": "ITU-R",
+      "suite": "BS",
+      "number": "1196",
+      "part": null,
+      "docs": [
+        {
+          "docId": "R-REC-BS.1196-a2.1995",
+          "publicationDate": "1995-10-01",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "R-REC-BS.1196-a2.1995",
+      "latestAnyId": "R-REC-BS.1196-a2.1995",
+      "latestDateKey": "19951001",
+      "hasActiveBase": false,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": "R-REC-BS.1196-a2.1995",
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ITU-R|BS|1726|",
+      "publisher": "ITU-R",
+      "suite": "BS",
+      "number": "1726",
+      "part": null,
+      "docs": [
+        {
+          "docId": "R-REC-BS.1726-0.200504",
+          "publicationDate": "2005-04-08",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "R-REC-BS.1726-0.200504",
+      "latestAnyId": "R-REC-BS.1726-0.200504",
+      "latestDateKey": "20050408",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "R-REC-BS.1726-0.200504",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ITU-R|BS|1770|",
+      "publisher": "ITU-R",
+      "suite": "BS",
+      "number": "1770",
+      "part": null,
+      "docs": [
+        {
+          "docId": "R-REC-BS.1770-3.201208",
+          "publicationDate": "2012-08-01",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "R-REC-BS.1770-4.201510",
+          "publicationDate": "2015-10-14",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "R-REC-BS.1770-4.201510",
+      "latestAnyId": "R-REC-BS.1770-4.201510",
+      "latestDateKey": "20151014",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "R-REC-BS.1770-4.201510",
+      "latestSupersededBaseId": "R-REC-BS.1770-3.201208",
+      "prevBaseId": "R-REC-BS.1770-3.201208",
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 2,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ITU-R|BS|2051|",
+      "publisher": "ITU-R",
+      "suite": "BS",
+      "number": "2051",
+      "part": null,
+      "docs": [
+        {
+          "docId": "R-REC-BS.2051-2.201807",
+          "publicationDate": "2018-07-09",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "R-REC-BS.2051-3.202205",
+          "publicationDate": "2022-05-31",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "R-REC-BS.2051-3.202205",
+      "latestAnyId": "R-REC-BS.2051-3.202205",
+      "latestDateKey": "20220531",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "R-REC-BS.2051-3.202205",
+      "latestSupersededBaseId": "R-REC-BS.2051-2.201807",
+      "prevBaseId": "R-REC-BS.2051-2.201807",
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 2,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ITU-R|BT|6|",
+      "publisher": "ITU-R",
+      "suite": "BT",
+      "number": "6",
+      "part": null,
+      "docs": [
+        {
+          "docId": "R-REC-BT.6-270.201103",
+          "publicationDate": "2011-03-08",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "R-REC-BT.6-270.201103",
+      "latestAnyId": "R-REC-BT.6-270.201103",
+      "latestDateKey": "20110308",
+      "hasActiveBase": false,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": "R-REC-BT.6-270.201103",
+      "prevBaseId": null,
+      "flagInconsistencies": [
+        "SUPERSEDED_BY_OUT_OF_LINEAGE:R-REC-BT.6-270.201103->R-REC-BT.601-7.201103"
+      ],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ITU-R|BT|470|",
+      "publisher": "ITU-R",
+      "suite": "BT",
+      "number": "470",
+      "part": null,
+      "docs": [
+        {
+          "docId": "R-REC-BT.470-6.199811",
+          "publicationDate": "1998-11-01",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "R-REC-BT.470-6.199811",
+      "latestAnyId": "R-REC-BT.470-6.199811",
+      "latestDateKey": "19981101",
+      "hasActiveBase": false,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": "R-REC-BT.470-6.199811",
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ITU-R|BT|601|",
+      "publisher": "ITU-R",
+      "suite": "BT",
+      "number": "601",
+      "part": null,
+      "docs": [
+        {
+          "docId": "R-REC-BT.601-4.199510",
+          "publicationDate": "1994-07-30",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "R-REC-BT.601-5.199510",
+          "publicationDate": "1995-10-01",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "R-REC-BT.601-6.200701",
+          "publicationDate": "2007-01-26",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "R-REC-BT.601-7.201103",
+          "publicationDate": "2011-03-08",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "R-REC-BT.601-7.201103",
+      "latestAnyId": "R-REC-BT.601-7.201103",
+      "latestDateKey": "20110308",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "R-REC-BT.601-7.201103",
+      "latestSupersededBaseId": "R-REC-BT.601-6.200701",
+      "prevBaseId": "R-REC-BT.601-6.200701",
+      "flagInconsistencies": [
+        "SUPERSEDED_BY_OUT_OF_LINEAGE:R-REC-BT.601-6.200701->R-REC-BT.6-270.201103"
+      ],
+      "counts": {
+        "bases": 4,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ITU-R|BT|656|",
+      "publisher": "ITU-R",
+      "suite": "BT",
+      "number": "656",
+      "part": null,
+      "docs": [
+        {
+          "docId": "R-REC-BT.656.199802",
+          "publicationDate": "1998-02-01",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "R-REC-BT.656.199802",
+      "latestAnyId": "R-REC-BT.656.199802",
+      "latestDateKey": "19980201",
+      "hasActiveBase": false,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ITU-R|BT|709|",
+      "publisher": "ITU-R",
+      "suite": "BT",
+      "number": "709",
+      "part": null,
+      "docs": [
+        {
+          "docId": "R-REC-BT.709-1.199311",
+          "publicationDate": "1993-11-16",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "R-REC-BT.709-2.199510",
+          "publicationDate": "1995-10-20",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "R-REC-BT.709-3.199802",
+          "publicationDate": "1998-02-10",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "R-REC-BT.709-4.200003",
+          "publicationDate": "2000-03-06",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "R-REC-BT.709-5.200204",
+          "publicationDate": "2002-04-03",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "R-REC-BT.709-6.201506",
+          "publicationDate": "2015-07-06",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "R-REC-BT.709-6.201506",
+      "latestAnyId": "R-REC-BT.709-6.201506",
+      "latestDateKey": "20150706",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "R-REC-BT.709-6.201506",
+      "latestSupersededBaseId": "R-REC-BT.709-5.200204",
+      "prevBaseId": "R-REC-BT.709-5.200204",
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 6,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ITU-R|BT|2020|",
+      "publisher": "ITU-R",
+      "suite": "BT",
+      "number": "2020",
+      "part": null,
+      "docs": [
+        {
+          "docId": "R-REC-BT.2020-2.201510",
+          "publicationDate": "2015-10-14",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "R-REC-BT.2020-2.201510",
+      "latestAnyId": "R-REC-BT.2020-2.201510",
+      "latestDateKey": "20151014",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "R-REC-BT.2020-2.201510",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ITU-R|BT|2035|",
+      "publisher": "ITU-R",
+      "suite": "BT",
+      "number": "2035",
+      "part": null,
+      "docs": [
+        {
+          "docId": "R-REC-BT.2035.201307",
+          "publicationDate": "2013-07-16",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "R-REC-BT.2035.201307",
+      "latestAnyId": "R-REC-BT.2035.201307",
+      "latestDateKey": "20130716",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "R-REC-BT.2035.201307",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ITU-R|BT|2100|",
+      "publisher": "ITU-R",
+      "suite": "BT",
+      "number": "2100",
+      "part": null,
+      "docs": [
+        {
+          "docId": "R-REC-BT.2100-1.201706",
+          "publicationDate": "2017-06-20",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "R-REC-BT.2100-2.201807",
+          "publicationDate": "2018-07-09",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "R-REC-BT.2100-2.201807",
+      "latestAnyId": "R-REC-BT.2100-2.201807",
+      "latestDateKey": "20180709",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "R-REC-BT.2100-2.201807",
+      "latestSupersededBaseId": "R-REC-BT.2100-1.201706",
+      "prevBaseId": "R-REC-BT.2100-1.201706",
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 2,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ITU-R|BT|2153|",
+      "publisher": "ITU-R",
+      "suite": "BT",
+      "number": "2153",
+      "part": null,
+      "docs": [
+        {
+          "docId": "R-REC-BT.2153-0.202212",
+          "publicationDate": "2022-12-19",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "R-REC-BT.2153-0.202212",
+      "latestAnyId": "R-REC-BT.2153-0.202212",
+      "latestDateKey": "20221219",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "R-REC-BT.2153-0.202212",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ITU-R|BT|2390|",
+      "publisher": "ITU-R",
+      "suite": "BT",
+      "number": "2390",
+      "part": null,
+      "docs": [
+        {
+          "docId": "R-REC-BT.2390-4.201804",
+          "publicationDate": "2018-04-01",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "R-REC-BT.2390-8.202002",
+          "publicationDate": "2020-02-01",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "R-REC-BT.2390-10.202111",
+          "publicationDate": "2021-11-01",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "R-REC-BT.2390-10.202111",
+      "latestAnyId": "R-REC-BT.2390-10.202111",
+      "latestDateKey": "20211101",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "R-REC-BT.2390-10.202111",
+      "latestSupersededBaseId": "R-REC-BT.2390-8.202002",
+      "prevBaseId": "R-REC-BT.2390-8.202002",
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 3,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ITU-T|E|123|",
+      "publisher": "ITU-T",
+      "suite": "E",
+      "number": "123",
+      "part": null,
+      "docs": [
+        {
+          "docId": "T-REC-E.123.2001",
+          "publicationDate": "2002-01-26",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": true
+        },
+        {
+          "docId": "T-REC-E.123.2001am1.2008",
+          "publicationDate": "2008-05-01",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "T-REC-E.123.2001e1.2008",
+          "publicationDate": "2008-05-02",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "T-REC-E.123.2001",
+      "latestAnyId": "T-REC-E.123.2001e1.2008",
+      "latestDateKey": "20080502",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "T-REC-E.123.2001",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [
+        "DOCID_PUBDATE_MISMATCH:T-REC-E.123.2001:docIdYear=2001,pubYear=2002"
+      ],
+      "counts": {
+        "bases": 1,
+        "amendments": 2
+      }
+    },
+    {
+      "key": "ITU-T|H|264|",
+      "publisher": "ITU-T",
+      "suite": "H",
+      "number": "264",
+      "part": null,
+      "docs": [
+        {
+          "docId": "T-REC-H.264.202108",
+          "publicationDate": "2021-08-22",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "T-REC-H.264.202108",
+      "latestAnyId": "T-REC-H.264.202108",
+      "latestDateKey": "20210822",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "T-REC-H.264.202108",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ITU-T|H|265|",
+      "publisher": "ITU-T",
+      "suite": "H",
+      "number": "265",
+      "part": null,
+      "docs": [
+        {
+          "docId": "T-REC-H.265.201612",
+          "publicationDate": "2016-12-01",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "T-REC-H.265.201911",
+          "publicationDate": "2019-11-29",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "T-REC-H.265.201911",
+      "latestAnyId": "T-REC-H.265.201911",
+      "latestDateKey": "20191129",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "T-REC-H.265.201911",
+      "latestSupersededBaseId": "T-REC-H.265.201612",
+      "prevBaseId": "T-REC-H.265.201612",
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 2,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ITU-T|H|273|",
+      "publisher": "ITU-T",
+      "suite": "H",
+      "number": "273",
+      "part": null,
+      "docs": [
+        {
+          "docId": "T-REC-H.273.201612",
+          "publicationDate": "2016-12-22",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "T-REC-H.273.202107",
+          "publicationDate": "2021-07-14",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "T-REC-H.273.202107",
+      "latestAnyId": "T-REC-H.273.202107",
+      "latestDateKey": "20210714",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "T-REC-H.273.202107",
+      "latestSupersededBaseId": "T-REC-H.273.201612",
+      "prevBaseId": "T-REC-H.273.201612",
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 2,
+        "amendments": 0
+      }
+    },
+    {
+      "key": "ITU-T|T|802|",
+      "publisher": "ITU-T",
+      "suite": "T",
+      "number": "802",
+      "part": null,
+      "docs": [
+        {
+          "docId": "T-REC-T.802.2005",
+          "publicationDate": "2005-01-08",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": true
+        },
+        {
+          "docId": "T-REC-T.802.2005am1.2010",
+          "publicationDate": "2010-04-22",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "T-REC-T.802.2005",
+      "latestAnyId": "T-REC-T.802.2005am1.2010",
+      "latestDateKey": "20100422",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "T-REC-T.802.2005",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 1
+      }
+    },
+    {
+      "key": "ITU-T|X|509|",
+      "publisher": "ITU-T",
+      "suite": "X",
+      "number": "509",
+      "part": null,
+      "docs": [
+        {
+          "docId": "T-REC-X.509.199706",
+          "publicationDate": "1997-08-09",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "T-REC-X.509.201910",
+          "publicationDate": "2019-10-14",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "T-REC-X.509.201910",
+      "latestAnyId": "T-REC-X.509.201910",
+      "latestDateKey": "20191014",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "T-REC-X.509.201910",
+      "latestSupersededBaseId": "T-REC-X.509.199706",
+      "prevBaseId": "T-REC-X.509.199706",
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 2,
+        "amendments": 0
+      }
+    },
+    {
       "key": "NAPM||1|10",
       "publisher": "NAPM",
       "suite": null,
@@ -14349,7 +15083,7 @@
       ],
       "latestBaseId": "NAPM.1.10.1995",
       "latestAnyId": "NAPM.1.10.1995",
-      "latestDateKey": "199500",
+      "latestDateKey": "19950000",
       "hasActiveBase": false,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -14382,7 +15116,7 @@
       ],
       "latestBaseId": "NAPM.IT2.18.1996",
       "latestAnyId": "NAPM.IT2.18.1996",
-      "latestDateKey": "199600",
+      "latestDateKey": "19960000",
       "hasActiveBase": false,
       "hasWithdrawn": true,
       "hasStabilized": false,
@@ -14417,7 +15151,7 @@
       ],
       "latestBaseId": "NAPM.IT2.19.1994",
       "latestAnyId": "NAPM.IT2.19.1994",
-      "latestDateKey": "199400",
+      "latestDateKey": "19940000",
       "hasActiveBase": false,
       "hasWithdrawn": true,
       "hasStabilized": false,
@@ -14452,7 +15186,7 @@
       ],
       "latestBaseId": "NAPM.IT9.1.1996",
       "latestAnyId": "NAPM.IT9.1.1996",
-      "latestDateKey": "199600",
+      "latestDateKey": "19960000",
       "hasActiveBase": false,
       "hasWithdrawn": true,
       "hasStabilized": false,
@@ -14487,7 +15221,7 @@
       ],
       "latestBaseId": "NAPM.IT9.4.1994",
       "latestAnyId": "NAPM.IT9.4.1994",
-      "latestDateKey": "199400",
+      "latestDateKey": "19940000",
       "hasActiveBase": false,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -14530,7 +15264,7 @@
       ],
       "latestBaseId": "NAPM.IT9.5.1996",
       "latestAnyId": "NAPM.IT9.5.1996",
-      "latestDateKey": "199600",
+      "latestDateKey": "19960000",
       "hasActiveBase": false,
       "hasWithdrawn": true,
       "hasStabilized": false,
@@ -14565,7 +15299,7 @@
       ],
       "latestBaseId": "NAPM.IT9.6.1991",
       "latestAnyId": "NAPM.IT9.6.1991",
-      "latestDateKey": "199100",
+      "latestDateKey": "19910000",
       "hasActiveBase": false,
       "hasWithdrawn": true,
       "hasStabilized": false,
@@ -14600,7 +15334,7 @@
       ],
       "latestBaseId": "NAPM.IT9.11.1993",
       "latestAnyId": "NAPM.IT9.11.1993",
-      "latestDateKey": "199300",
+      "latestDateKey": "19930000",
       "hasActiveBase": false,
       "hasWithdrawn": true,
       "hasStabilized": false,
@@ -14635,7 +15369,7 @@
       ],
       "latestBaseId": "NAPM.IT9.12.1995",
       "latestAnyId": "NAPM.IT9.12.1995",
-      "latestDateKey": "199500",
+      "latestDateKey": "19950000",
       "hasActiveBase": false,
       "hasWithdrawn": true,
       "hasStabilized": false,
@@ -14670,7 +15404,7 @@
       ],
       "latestBaseId": "NAPM.IT9.13.1996",
       "latestAnyId": "NAPM.IT9.13.1996",
-      "latestDateKey": "199600",
+      "latestDateKey": "19960000",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -14703,7 +15437,7 @@
       ],
       "latestBaseId": "NAPM.IT9.15.1997",
       "latestAnyId": "NAPM.IT9.15.1997",
-      "latestDateKey": "199700",
+      "latestDateKey": "19970000",
       "hasActiveBase": false,
       "hasWithdrawn": true,
       "hasStabilized": false,
@@ -14758,7 +15492,7 @@
       ],
       "latestBaseId": "NFPA.40.2022",
       "latestAnyId": "NFPA.40.2022",
-      "latestDateKey": "202200",
+      "latestDateKey": "20220000",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -14801,7 +15535,7 @@
       ],
       "latestBaseId": "NFPA.232.2022",
       "latestAnyId": "NFPA.232.2022",
-      "latestDateKey": "202200",
+      "latestDateKey": "20220000",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -14854,7 +15588,7 @@
       ],
       "latestBaseId": "NFPA.90A.2021",
       "latestAnyId": "NFPA.90A.2021",
-      "latestDateKey": "202100",
+      "latestDateKey": "20210000",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -15347,7 +16081,7 @@
       ],
       "latestBaseId": "PIMA.IT3.301.1990",
       "latestAnyId": "PIMA.IT3.301.1990",
-      "latestDateKey": "199000",
+      "latestDateKey": "19900000",
       "hasActiveBase": false,
       "hasWithdrawn": true,
       "hasStabilized": false,
@@ -15382,7 +16116,7 @@
       ],
       "latestBaseId": "PIMA.IT7.231.1998",
       "latestAnyId": "PIMA.IT7.231.1998",
-      "latestDateKey": "199800",
+      "latestDateKey": "19980000",
       "hasActiveBase": false,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -15425,7 +16159,7 @@
       ],
       "latestBaseId": "PIMA.IT9.2.1998",
       "latestAnyId": "PIMA.IT9.2.1998",
-      "latestDateKey": "199800",
+      "latestDateKey": "19980000",
       "hasActiveBase": false,
       "hasWithdrawn": true,
       "hasStabilized": false,
@@ -15458,7 +16192,7 @@
       ],
       "latestBaseId": "PIMA.IT9.11.1998",
       "latestAnyId": "PIMA.IT9.11.1998",
-      "latestDateKey": "199800",
+      "latestDateKey": "19980000",
       "hasActiveBase": false,
       "hasWithdrawn": true,
       "hasStabilized": false,
@@ -17056,7 +17790,7 @@
       ],
       "latestBaseId": "SMPTE.EG25.2003",
       "latestAnyId": "SMPTE.EG25.2003",
-      "latestDateKey": "19991105",
+      "latestDateKey": "20030000",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": true,
@@ -17365,7 +18099,7 @@
       ],
       "latestBaseId": "SMPTE.OM.BL.2010",
       "latestAnyId": "SMPTE.OM.BL.2010",
-      "latestDateKey": "201000",
+      "latestDateKey": "20100000",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -18099,7 +18833,7 @@
       ],
       "latestBaseId": "SMPTE.RDD57.2021",
       "latestAnyId": "SMPTE.RDD57.2021",
-      "latestDateKey": "202100",
+      "latestDateKey": "20210000",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -21159,7 +21893,7 @@
       ],
       "latestBaseId": "SMPTE.RP210.10.2007",
       "latestAnyId": "SMPTE.RP210.10.2007",
-      "latestDateKey": "200700",
+      "latestDateKey": "20070000",
       "hasActiveBase": false,
       "hasWithdrawn": true,
       "hasStabilized": false,
@@ -21790,7 +22524,7 @@
       ],
       "latestBaseId": "SMPTE.ST12.1999",
       "latestAnyId": "SMPTE.ST12.1999",
-      "latestDateKey": "199900",
+      "latestDateKey": "19990000",
       "hasActiveBase": false,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -24429,7 +25163,7 @@
       ],
       "latestBaseId": "SMPTE.ST234.1998",
       "latestAnyId": "SMPTE.ST234.1998",
-      "latestDateKey": "19930322",
+      "latestDateKey": "19980000",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": true,
@@ -25059,7 +25793,7 @@
       ],
       "latestBaseId": "SMPTE.ST291.2011",
       "latestAnyId": "SMPTE.ST291.2011",
-      "latestDateKey": "201100",
+      "latestDateKey": "20110000",
       "hasActiveBase": false,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -25127,7 +25861,7 @@
       ],
       "latestBaseId": "SMPTE.ST292.2008",
       "latestAnyId": "SMPTE.ST292.2008",
-      "latestDateKey": "200800",
+      "latestDateKey": "20080000",
       "hasActiveBase": false,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -25182,7 +25916,7 @@
       ],
       "latestBaseId": "SMPTE.ST292-1.2019",
       "latestAnyId": "SMPTE.ST292-1.2019",
-      "latestDateKey": "20180425",
+      "latestDateKey": "20190000",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -25538,7 +26272,7 @@
       ],
       "latestBaseId": "SMPTE.ST330.2022",
       "latestAnyId": "SMPTE.ST330.2022",
-      "latestDateKey": "20110823",
+      "latestDateKey": "20220000",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -26806,7 +27540,7 @@
       ],
       "latestBaseId": "SMPTE.ST395.2014",
       "latestAnyId": "SMPTE.ST395.2014",
-      "latestDateKey": "20120801",
+      "latestDateKey": "20140000",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -27045,7 +27779,7 @@
       ],
       "latestBaseId": "SMPTE.ST425.2008",
       "latestAnyId": "SMPTE.ST425.2008",
-      "latestDateKey": "200800",
+      "latestDateKey": "20080000",
       "hasActiveBase": false,
       "hasWithdrawn": false,
       "hasStabilized": false,

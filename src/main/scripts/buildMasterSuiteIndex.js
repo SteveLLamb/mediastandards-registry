@@ -253,7 +253,9 @@ const NON_LINEAGE_DOCTYPES = new Set([
   'White Paper',
   'Registry',
   'Technical Bulletin',
-  'Procedure'
+  'Technical Note',
+  'Procedure',
+  'Notation'
 ]);
 
 // Collect skipped (unkeyed or filtered) docs for reporting
@@ -376,33 +378,88 @@ function isAmendmentDocId(docId) {
   //   e.g., aes11.2009ad1.2010
   const aesAd = /\.(?:19|20)\d{2}(?:-\d{2})?ad\d+\.(?:19|20)\d{2}(?:-\d{2})?$/i;
 
-  return smpteAm.test(docId) || isoIecAmCor.test(docId) || nistSpInline.test(docId) || nistSpHyphen.test(docId) || aesAd.test(docId);
+  // ITU-T amendments/errata: T-REC-<L>.<num>.<YYYY[MM]>am<d>.<YYYY[MM]> or ...e<d>.<YYYY[MM]>
+  const ituTAmErr = /^T-REC-[A-Za-z]\.[0-9A-Za-z.]+\.(?:\d{6}|\d{4})(?:am\d+|e\d+)\.(?:\d{6}|\d{4})$/i;
+
+  // ITU-R amendments/errata: R-REC-<L>.<num>-a<d>.<YYYY[MM]> or ...-e<d>.<YYYY[MM]>
+  const ituRAmErr = /^R-REC-[A-Za-z]\.[0-9A-Za-z.]+-(?:a\d+|e\d+)\.(?:\d{6}|\d{4})$/i;
+
+  return (
+    smpteAm.test(docId) ||
+    isoIecAmCor.test(docId) ||
+    nistSpInline.test(docId) ||
+    nistSpHyphen.test(docId) ||
+    aesAd.test(docId) ||
+    ituTAmErr.test(docId) ||
+    ituRAmErr.test(docId)
+  );
 }
 
+// Treat ATSC Annex (e.g., ATSC.AC3.A52.a.1995 or .AnnexA.) as supplements, not amendments
+function isSupplementDocId(docId) {
+  const atscAnnex = /^ATSC\.[^.]+\.[^.]+\.(?:a|annex[a-z])\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i;
+  return atscAnnex.test(docId);
+}
 
 function dateKeyFromDoc(d) {
-  // Priority: releaseTag (YYYYMMDD-...), then publicationDate (YYYY-MM-DD),
-  // then docId suffix: .YYYYMMDD | .YYYY-MM | .YYYY
-  if (typeof d.releaseTag === 'string' && /^\d{8}/.test(d.releaseTag)) {
-    return d.releaseTag.slice(0, 8);
+  // Build candidates:
+  //  • from releaseTag (YYYYMMDD…)
+  //  • from publicationDate (YYYY-MM-DD)
+  //  • from rightmost date-like token in docId (handles ...am1.YYYY[MM][DD], ...e1.YYYY[MM])
+  const keys = [];
+
+  // releaseTag → prefer first 8 digits
+  if (typeof d.releaseTag === 'string') {
+    const m = d.releaseTag.match(/^(\d{8})/);
+    if (m) keys.push(m[1]);
   }
-  if (typeof d.publicationDate === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(d.publicationDate)) {
-    return d.publicationDate.replace(/-/g, '');
+
+  // publicationDate → YYYYMMDD
+  if (typeof d.publicationDate === 'string') {
+    const mPub = d.publicationDate.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+    if (mPub) keys.push(`${mPub[1]}${mPub[2]}${mPub[3]}`);
   }
-  // Accept 8-digit date (W3C REC shortname style), or year-month, or just year at end of docId
-  const m8 = d.docId && d.docId.match(/\.([12]\d{7})$/); // .YYYYMMDD
-  if (m8) return m8[1];
-  // .YYYY-MM-DD  → YYYYMMDD
-  const mYMDdash = d.docId && d.docId.match(/\.([12]\d{3})-(\d{2})-(\d{2})$/);
-  if (mYMDdash) return `${mYMDdash[1]}${mYMDdash[2]}${mYMDdash[3]}`;
-  // .YYYY- MMDD  (e.g., 2012-1010, 2020-0714) → YYYYMMDD
-  const mY_MMD = d.docId && d.docId.match(/\.([12]\d{3})-(\d{4})$/);
-  if (mY_MMD) return `${mY_MMD[1]}${mY_MMD[2]}`;
-  const mYM = d.docId && d.docId.match(/\.([12]\d{3})-(\d{2})$/); // .YYYY-MM
-  if (mYM) return `${mYM[1]}${mYM[2]}`;
-  const mY = d.docId && d.docId.match(/\.([12]\d{3})$/); // .YYYY
-  if (mY) return `${mY[1]}00`;
-  return '00000000'; // last-resort floor
+
+  // --- extract rightmost date-like token from docId tail ---
+  if (typeof d.docId === 'string') {
+    const id = d.docId;
+    // 1) .YYYYMMDD at end
+    let m = id.match(/\.([12]\d{7})$/);
+    if (m) keys.push(m[1]);
+
+    // 2) .YYYY-MM-DD at end → YYYYMMDD
+    if (!m) {
+      const mYMDdash = id.match(/\.([12]\d{3})-(\d{2})-(\d{2})$/);
+      if (mYMDdash) keys.push(`${mYMDdash[1]}${mYMDdash[2]}${mYMDdash[3]}`);
+    }
+
+    // 3) .YYYY- MMDD (e.g., 2012-1010, 2020-0714) → YYYYMMDD
+    if (!m) {
+      const mY_MMD = id.match(/\.([12]\d{3})-(\d{4})$/);
+      if (mY_MMD) keys.push(`${mY_MMD[1]}${mY_MMD[2]}`);
+    }
+
+    // 4) .YYYY-MM → YYYYMM00 (sorts before full day)
+    if (!m) {
+      const mYM = id.match(/\.([12]\d{3})-(\d{2})$/);
+      if (mYM) keys.push(`${mYM[1]}${mYM[2]}00`);
+    }
+
+    // 5) .YYYY → YYYY0000
+    if (!m) {
+      const mY = id.match(/\.([12]\d{3})$/);
+      if (mY) keys.push(`${mY[1]}0000`);
+    }
+  }
+
+  // If we found any candidates, return the max (latest) lexicographically.
+  if (keys.length) {
+    keys.sort();
+    return keys[keys.length - 1];
+  }
+
+  // last-resort floor
+  return '00000000';
 }
 
 // Extract a 4-digit year from the docId tail, for cross-checks
@@ -593,17 +650,32 @@ function keyFromDocId(docId, doc = {}) {
     return { publisher: 'AMWA', suite: 'AS', number: m[1], part: null };
   }
 
-  // --- ANSI partner families (normalize lineage publisher to provided ANSI/… when present) ---
+  // ANSI legacy S-series that predate explicit ASA branding
+  // Examples:
+  //   ANSI.S4.3.1982            → {publisher:"ASA", suite:"S4", number:"3", part:null}
+  //   ANSI.S1.11.p1.2014        → {publisher:"ASA", suite:"S1", number:"11", part:"1"}
+  m = docId.match(/^ANSI\.S(\d+)(?:\.(\d+))?(?:\.(p?\d+))?\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    const suite = `S${m[1]}`;           // e.g., "S4"
+    const number = m[2] || null;        // e.g., "3"
+    const rawPart = m[3] || null;       // e.g., "p1" or "1"
+    const part = rawPart ? String(rawPart).replace(/^p/i, '') : null;
+    return { publisher: 'ASA', suite, number, part };
+  }
+
+   // --- ANSI partner families (normalize lineage publisher to provided ANSI/… when present) ---
   // ASA S-series (optionally dotted sub-number) with optional part token like .p1
   // Examples:
-  //   ASA.S1.11.1986           → {publisher:"ASA", suite:"S", number:"1.11", part:null}
-  //   ASA.S1.11.p1.2014        → {publisher:"ASA", suite:"S", number:"1.11", part:"1"}
-  m = docId.match(/^ASA\.S(\d+(?:\.\d+)?)(?:\.(p?\d+))?\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i);
+  //   ASA.S1.11.1986           → {publisher:"ASA", suite:"S1", number:"11", part:null}
+  //   ASA.S1.11.p1.2014        → {publisher:"ASA", suite:"S1", number:"11", part:"1"}
+  m = docId.match(/^ASA\.S(\d+)(?:\.(\d+))?(?:\.(p?\d+))?\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i);
   if (m) {
     const pub = 'ASA';
-    const rawPart = m[2] || null; // e.g., "p1" or "1"
+    const suite = `S${m[1]}`;           // e.g., "S4"
+    const number = m[2] || null;        // e.g., "3"
+    const rawPart = m[3] || null;       // e.g., "p1" or "1"
     const part = rawPart ? String(rawPart).replace(/^p/i, '') : null;
-    return { publisher: pub, suite: 'S', number: m[1], part };
+    return { publisher: pub, suite, number, part };
   }
 
   // PIMA IT-series (e.g., PIMA.IT9.2.1998 → IT series 9, part 2)
@@ -650,16 +722,6 @@ function keyFromDocId(docId, doc = {}) {
     return { publisher: pub, suite: null, number: m[1], part: null };
   }
 
-  // AIM (Association for Automatic Identification and Mobility)
-  // Barcode/auto-ID specs such as AIM.BC4.1999
-  // Normalize to publisher AIM, suite = series token (e.g., BC), number = digits
-  // Accept optional hyphen between series token and number, and typical date tails
-  m = docId.match(/^AIM\.([A-Za-z]+)-?(\d+)\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i);
-  if (m) {
-    const pub = 'AIM';
-    return { publisher: pub, suite: m[1].toUpperCase(), number: m[2], part: null };
-  }
-
   // NAPM (National Association of Photographic Manufacturers)
   // Handle IT series (e.g., NAPM.IT9.1.1996) and generic NAPM.<series>.<part>.<date>
   m = docId.match(/^NAPM\.IT(\d+)(?:\.(\d+))?\.(?:\d{8}|\d{4}(?:-\d{2})?)(?:T\d+\.\d+\.\d{4})?$/i);
@@ -673,6 +735,116 @@ function keyFromDocId(docId, doc = {}) {
   if (m) {
     const pub = 'NAPM';
     return { publisher: pub, suite: null, number: m[1], part: m[2] };
+  }
+
+  // AIM (Association for Automatic Identification and Mobility)
+  // Barcode/auto-ID specs such as AIM.BC4.1999
+  // Normalize to publisher AIM, suite = series token (e.g., BC), number = digits
+  // Accept optional hyphen between series token and number, and typical date tails
+  m = docId.match(/^AIM\.([A-Za-z]+)-?(\d+)\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    const pub = 'AIM';
+    return { publisher: pub, suite: m[1].toUpperCase(), number: m[2], part: null };
+  }
+
+  // --- ARIB (Association of Radio Industries and Businesses) --------------
+  // Typical form:
+  //   ARIB.STD-B32.v2.1.2001
+  // Pattern: ARIB.STD-<series>[.<subseries>].v<version>.<YYYY or YYYY-MM or YYYYMMDD>
+  // For lineage, group on the B-series token (e.g., "B32") and ignore inline version.
+  m = docId.match(/^ARIB\.STD-([A-Za-z]\d+(?:\.[A-Za-z0-9]+)?)\.v\d+(?:\.\d+)*\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    // Use "STD" as suite so other ARIB families (e.g., TR) can be supported later without collision.
+    // Number captures the B-series (or similar) token; part remains null.
+    return { publisher: 'ARIB', suite: 'STD', number: m[1].toUpperCase(), part: null };
+  }
+
+  // --- ITU‑T (T‑REC) ------------------------------------------------------
+  //
+  // Keying rule: drop the "T-REC" prefix. Suite is the single letter
+  // that follows (E, H, T, X, ...). Number is the digits (with optional dot/letter),
+  // and we ignore the trailing date segment(s) and any amendment/errata tails for lineage keying.
+  //
+  // Forms accepted:
+  //   T-REC-<L>.<num>.<YYYY|YYYYMM>
+  //   T-REC-<L>.<num>.<YYYY|YYYYMM>am<d>.<YYYY|YYYYMM>
+  //   T-REC-<L>.<num>.<YYYY|YYYYMM>e<d>.<YYYY|YYYYMM>
+  //
+  // IMPORTANT: Use non-greedy capture for <num> so it stops before the date segment,
+  // preventing cases like "E.123.2001am1" from being parsed as number="123.2001".
+  m = docId.match(/^T-REC-([A-Za-z])\.([0-9A-Za-z.]+?)\.(\d{6}|\d{4})(?:(am\d+|e\d+)\.(\d{6}|\d{4}))?$/i);
+  if (m) {
+    const suiteLetter = m[1].toUpperCase();
+    const number = m[2]; // e.g., "123", "X.509", "H.264"
+    return { publisher: 'ITU-T', suite: suiteLetter, number, part: null };
+  }
+
+  // --- ITU-R (R-REC) ------------------------------------------------------
+//
+// Keying rule: drop the "R-REC" prefix. Suite is the series letters
+// (BR, BS, BT, etc.). The number is the core identifier; a trailing
+// dash + small integer is typically an edition/revision (BT.709-6),
+// while for certain BR four-digit series a trailing -1/-2 denotes parts
+// (e.g., BR.1352-1, BR.1352-2). We treat '-a#' as an amendment and
+// '-e#' as errata to the base.
+//
+// Forms accepted:
+//   R-REC-<L>.<num>.<YYYY|YYYYMM>
+//   R-REC-<L>.<num>-a<d>.<YYYY|YYYYMM>   (amendment)
+//   R-REC-<L>.<num>-e<d>.<YYYY|YYYYMM>   (errata)
+//   R-REC-<L>.<num>-<rev>.<YYYY|YYYYMM>  (edition/revision)
+//
+// Heuristics:
+//   • If core looks like "<four digits>-<1..9>" and suite is BR, treat as part.
+//   • Else if core looks like "<digits>-<1..30>", treat as edition (strip the -rev for lineage).
+//   • Otherwise keep the core as-is (e.g., BT.6-270 stays "6-270").
+m = docId.match(/^R-REC-([A-Za-z]{1,3})\.([0-9A-Za-z.]+?)(?:-(a\d+|e\d+|[0-9]+))?\.(\d{6}|\d{4})$/i);
+if (m) {
+  const suiteLetter = m[1].toUpperCase();
+  const core = m[2];                // e.g., "709", "1352-1", "6-270"
+  const tail = m[3] || null;        // "a2", "e1", or plain "6", "10"
+  let number = core;
+  let part = null;
+
+  // Analyze a simple "<digits>-<digits>" core
+  const rev = core.match(/^(\d+)-(\d+)$/);
+  if (rev) {
+    const left = rev[1], right = parseInt(rev[2], 10);
+    if (suiteLetter === 'BR' && left.length === 4 && right >= 1 && right <= 9) {
+      // BR.1352-1, BR.1352-2 → treat as parts
+      number = left;
+      part = String(right);
+    } else if (right >= 1 && right <= 30) {
+      // Common edition marker like BT.709-6 → strip the trailing '-6' for lineage
+      number = left;
+    } else {
+      // Keep as-is for things like BT.6-270 (not an edition; part of the identifier)
+      number = core;
+    }
+  }
+
+  return { publisher: 'ITU-R', suite: suiteLetter, number, part };
+}
+
+  // --- ATSC ---------------------------------------------------------------
+  // Forms we support (carry into one lineage per AC3 family & A52 number):
+  //   ATSC.AC3.A52.2015
+  //   ATSC.AC3.A52.2018
+  //   ATSC.AC3.A52.a.1995   (annex update for the 1995 edition)
+  //   ATSC.AC3.A52.AnnexA.1995 (new annex forms)
+  // Keying rule: suite = <family> (e.g., AC3), number = <standard number> (e.g., A52), part = null
+  // Annex token ".a." or ".AnnexA." is treated as an amendment by isAmendmentDocId(); lineage key is unaffected.
+  m = docId.match(/^ATSC\.([A-Za-z0-9-]+)\.([A-Za-z0-9-]+)\.(?:(?:a|annex[a-z])\.)?(?:\d{8}|\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    return { publisher: 'ATSC', suite: m[1].toUpperCase(), number: m[2].toUpperCase(), part: null };
+  }
+
+  // --- TIFF (special case) -------------------------------------------------
+  // Rule: suite = "TIFF"; treat "r6" as a version label but do not use it
+  // for number/part in the lineage key. Group all TIFF revisions into one lineage.
+  m = docId.match(/^TIFF\.r\d+(?:\.(?:\d{8}|\d{4}(?:-\d{2})?))?$/i);
+  if (m) {
+    return { publisher: 'Aldus Corp/Adobe', suite: 'TIFF', number: null, part: null };
   }
 
   // --- IEEE ---------------------------------------------------------------
@@ -757,6 +929,7 @@ function buildIndex(allDocs) {
     const statusStabilized = !!status.stabilized;
     const statusAmended = !!status.amended;
     const releaseTag = typeof d.releaseTag === 'string' ? d.releaseTag : null;
+    const _isSupplement = isSupplementDocId(d.docId);
 
     map.get(keyStr).docs.push({
       docId: d.docId,
@@ -768,7 +941,8 @@ function buildIndex(allDocs) {
       statusStabilized,
       statusAmended,
       _dk: dateKeyFromDoc(d),
-      _isBase: !isAmendmentDocId(d.docId),
+      _isBase: !isAmendmentDocId(d.docId) && !_isSupplement,
+      _isSupplement,
       _statusLatest,
       _srcDocType,
       _srcPart,
@@ -792,6 +966,8 @@ function buildIndex(allDocs) {
     const idIndex = new Map(entry.docs.map(d => [d.docId, d]));
 
     const bases = entry.docs.filter(x => x._isBase);
+    const supplements = entry.docs.filter(x => x._isSupplement);
+    const amendments  = entry.docs.filter(x => !x._isBase && !x._isSupplement); 
     const flaggedBases = bases.filter(x => x._statusLatest);
     const flaggedAny = entry.docs.filter(x => x._statusLatest);
 
@@ -970,7 +1146,10 @@ function buildIndex(allDocs) {
       latestSupersededBaseId: latestSupersededBase ? latestSupersededBase.docId : null,
       prevBaseId: prevBase ? prevBase.docId : null,
       flagInconsistencies: flags,
-      counts: { bases: bases.length, amendments: entry.docs.length - bases.length }
+      counts: {
+        bases: bases.length,
+        amendments: amendments.length
+      }
     };
 
       lineages.push(lineageObj);
