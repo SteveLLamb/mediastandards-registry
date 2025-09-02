@@ -258,6 +258,21 @@ const NON_LINEAGE_DOCTYPES = new Set([
   'Notation'
 ]);
 
+// Helper to infer versionless (evergreen) documents
+function inferVersionless(doc) {
+  // Honor explicit status.versionless when present
+  if (doc && doc.status && typeof doc.status.versionless === 'boolean') {
+    return doc.status.versionless;
+  }
+  const id = (doc && doc.docId) ? String(doc.docId) : '';
+  const href = (doc && doc.href) ? String(doc.href) : '';
+  // Well-known versionless specs
+  if (/^WHATWG\.HTML$/i.test(id)) return true;
+  if (/html\.spec\.whatwg\.org/i.test(href)) return true;
+  // Add more publishers/IDs here as needed
+  return false;
+}
+
 // Collect skipped (unkeyed or filtered) docs for reporting
 function collectSkipped(allDocs) {
   const skipped = [];
@@ -269,6 +284,20 @@ function collectSkipped(allDocs) {
     normalizeW3C(d);
 
     const pub = publisherFromDoc(d);
+
+    // 0) Versionless (evergreen) documents: do not attempt lineage; audit as FILTERED:versionless
+    const isVersionless = inferVersionless(d);
+    if (isVersionless) {
+      skipped.push({
+        docId: d.docId,
+        publisher: pub,
+        reason: 'FILTERED',
+        rule: 'FILTERED',
+        ruleDetail: 'versionless',
+        category: 'versionless'
+      });
+      continue;
+    }
 
     // 1) DocType-first policy: if this is a non-lineage document type, mark as FILTERED
     const dt = (d.docType || '').trim();
@@ -398,7 +427,8 @@ function isAmendmentDocId(docId) {
 // Treat ATSC Annex (e.g., ATSC.AC3.A52.a.1995 or .AnnexA.) as supplements, not amendments
 function isSupplementDocId(docId) {
   const atscAnnex = /^ATSC\.[^.]+\.[^.]+\.(?:a|annex[a-z])\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i;
-  return atscAnnex.test(docId);
+  const ebuSupp = /^EBU\.(?:R|Tech)\d+s\d+\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i;
+  return atscAnnex.test(docId) || ebuSupp.test(docId);
 }
 
 function dateKeyFromDoc(d) {
@@ -475,6 +505,7 @@ function yearFromDocIdTail(docId) {
 }
 
 function keyFromDocId(docId, doc = {}) {
+  
   // Special-case: SMPTE RP series with inline edition token `v##` (treat as RP family, no part)
   // Examples:
   //   SMPTE.RP224v12.2012    → RP 224, part: null (edition 12)
@@ -632,6 +663,14 @@ function keyFromDocId(docId, doc = {}) {
   m = docId.match(/^DCI\.([A-Za-z]+)-([A-Za-z0-9]+)\.(?:\d{8}|\d{4}(?:-\d{2}){1,2}|\d{4}-\d{4})$/i);
   if (m) {
     return { publisher: 'DCI', suite: m[1].toUpperCase(), number: m[2].toUpperCase(), part: null };
+  }
+
+  // --- EIDR (Entertainment ID Registry) ----------------------------------
+  // Forms: EIDR.ID.<YYYYMM>, EIDR.SV-DFR.<YYYYMM>
+  // Keying: publisher=EIDR, suite=token before number, number=token (e.g., "ID", "SV-DFR")
+  m = docId.match(/^EIDR\.([A-Za-z0-9-]+)\.(\d{6}|\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    return { publisher: 'EIDR', suite: null, number: m[1].toUpperCase(), part: null };
   }
 
   // --- AMWA (Advanced Media Workflow Association) ---------------------------
@@ -882,10 +921,88 @@ if (m) {
 
   // --- AMPAS S series: ampas-s-2008-001, ampas-s-2013-001, etc.
   // Normalize to publisher "AMPAS", suite "S", number as year, part as trailing digits
-  m = docId.match(/^ampas-s-(\d{4})-(\d{3})$/i);
+  m = docId.match(/^AMPAS\.S\.(\d{4})-(\d{3})$/i);
   if (m) {
     return { publisher: 'AMPAS', suite: 'S', number: m[1], part: m[2] };
   }
+
+  // --- CEA (Consumer Electronics Association) -----------------------------
+  // Forms: CEA.<number>.<YYYY> or .<YYYY-MM>
+  m = docId.match(/^CEA\.(\d+)\.(\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    return { publisher: 'CEA', suite: null, number: m[1], part: null };
+  }
+
+  // --- CEN (European Committee for Standardization) -----------------------
+  // Forms: CEN.EN.<number>.<YYYY> or .<YYYY-MM>
+  //        CEN.TR.<number>.<YYYY> or .<YYYY-MM>
+  m = docId.match(/^CEN\.(EN|TR)\.([A-Za-z0-9-]+)\.(\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    return { publisher: 'CEN', suite: m[1].toUpperCase(), number: m[2], part: null };
+  }
+
+  // --- EBU (European Broadcasting Union) ---------------------------------
+  // Forms:
+  //   EBU.R<digits>[s<digits>].<YYYY or YYYY-MM or YYYYMMDD>
+  //   EBU.Tech<digits>[s<digits>].<YYYY or YYYY-MM or YYYYMMDD>
+  // Keying:
+  //   suite = "R" or "Tech"; number = the digits after the suite; ignore optional `s#` supplement for lineage.
+  // Update: allow for optional 's' with or without digits (e.g., 's', 's1', 's2', etc.)
+  m = docId.match(/^EBU\.(R|Tech)(\d+)(?:s\d*)?\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    return { publisher: 'EBU', suite: m[1].toUpperCase(), number: m[2], part: null };
+  }
+
+  // --- ETSI (European Telecommunications Standards Institute) --------------
+  // Forms: ETSI.<suite>-<number>.<YYYY> or ETSI.<suite>-<number>.<YYYY-MM>
+  // Examples: ETSI.ETR-154.1997, ETSI.EN-300-294.2005, ETSI.TS-101-154.2012
+  m = docId.match(/^ETSI\.([A-Za-z]+)-([0-9-]+)\.(\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    return { publisher: 'ETSI', suite: m[1].toUpperCase(), number: m[2], part: null };
+  }
+
+  // --- CIE (International Commission on Illumination) --------------------
+  // Forms: CIE.<three-digit standard number>.<YYYY|YYYY-MM|YYYYMMDD>
+  // Keep leading zeros in the number (e.g., 015 stays "015").
+  m = docId.match(/^CIE\.(\d{3})\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    return { publisher: 'CIE', suite: null, number: m[1], part: null };
+  }
+
+  // --- CTA (Consumer Technology Association) -----------------------------
+  // Forms: CTA.<number>-G.<YYYY>
+  // Example: CTA.861-G.2016
+  // Keying: publisher = CTA, suite = null, number = <number>, part = null
+  // The -G is a revision/version, not part of the lineage key.
+  m = docId.match(/^CTA\.(\d+)-[A-Za-z]\.\d{4}$/i);
+  if (m) {
+    return { publisher: 'CTA', suite: null, number: m[1], part: null };
+  }
+
+  // --- FIAF (International Federation of Film Archives) --------------------
+  // Forms: FIAF.<suite>.<number>.<YYYY | YYYY-MM | YYYYMMDD>
+  // Example: FIAF.TR.FP.1997  → suite "TR", number "FP"
+  m = docId.match(/^FIAF\.([A-Za-z]+)\.([A-Za-z0-9.-]+)\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    return { publisher: 'FIAF', suite: m[1].toUpperCase(), number: m[2], part: null };
+  }
+
+  // --- DMA (U.S. Defense Mapping Agency) -----------------------------------
+  // Forms: DMA.TR.<number>.<year?>
+  // Example: DMA.TR.8350.2 → {publisher:"U.S. DEFENSE MAPPING AGENCY", suite:"TR", number:"8350.2"}
+  m = docId.match(/^DMA\.(TR)\.([0-9.]+)$/i);
+  if (m) {
+    return { publisher: 'U.S. DEFENSE MAPPING AGENCY', suite: m[1].toUpperCase(), number: m[2], part: null };
+  }
+
+  // --- DPP (Digital Production Partnership) -------------------------------
+  // Forms: DPP.003, DPP.004, DPP.005
+  // Example: DPP.003 → {publisher:"DPP", suite:null, number:"003", part:null}
+  m = docId.match(/^DPP\.(\d{3})$/i);
+  if (m) {
+    return { publisher: 'DPP', suite: null, number: m[1], part: null };
+  }
+
   return null;
 }
 
@@ -1148,7 +1265,8 @@ function buildIndex(allDocs) {
       flagInconsistencies: flags,
       counts: {
         bases: bases.length,
-        amendments: amendments.length
+        amendments: amendments.length,
+        supplements: supplements.length
       }
     };
 
