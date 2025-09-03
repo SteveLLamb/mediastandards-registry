@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2025-09-02T23:23:10.671Z",
+  "generatedAt": "2025-09-03T20:48:19.061Z",
   "sourcePath": "src/main/data/documents.json",
-  "sourceHash": "sha256:06dd5ec33b7aa8b1bb7de66578860cf1536c6c029f142844dd2287ec57854af5",
+  "sourceHash": "sha256:e79c5131c1f7469632bac5bda5e544fe237d03830b116159275d2ae96326bfaf",
   "publisherCounts": {
     "total": 1470,
     "counts": {
@@ -101,7 +101,7 @@
     }
   },
   "skippedDocs": {
-    "totalSkipped": 231,
+    "totalSkipped": 227,
     "byPublisher": {
       "POLYMER DEGRADATION AND STABILITY": {
         "count": 1,
@@ -591,41 +591,10 @@
         "items": [
           {
             "docId": "ICAO.REF08-Doc9674.1984",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          }
-        ]
-      },
-      "ICC": {
-        "count": 3,
-        "docIds": [
-          "ICC.1.2004",
-          "ICC.1.2010",
-          "ICC.1.201005"
-        ],
-        "items": [
-          {
-            "docId": "ICC.1.2004",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "ICC.1.2010",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "ICC.1.201005",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
+            "reason": "FILTERED",
+            "rule": "FILTERED",
+            "ruleDetail": "docType=Manual",
+            "category": "docType"
           }
         ]
       },
@@ -2355,21 +2324,6 @@
           }
         ]
       },
-      "WHATWG": {
-        "count": 1,
-        "docIds": [
-          "WHATWG.HTML"
-        ],
-        "items": [
-          {
-            "docId": "WHATWG.HTML",
-            "reason": "FILTERED",
-            "rule": "FILTERED",
-            "ruleDetail": "versionless",
-            "category": "versionless"
-          }
-        ]
-      },
       "UNIVERSITY OF AUCKLAND": {
         "count": 1,
         "docIds": [
@@ -2388,7 +2342,7 @@
     },
     "summaryByReason": {
       "FILTERED": 172,
-      "UNKEYED": 59
+      "UNKEYED": 55
     }
   },
   "flagSummary": {
@@ -2987,7 +2941,7 @@
             "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:SMPTE.ST425.2008->SMPTE.ST425-1.2011"
           },
           {
-            "lineage": "W3C|rec-html5|2|",
+            "lineage": "W3C|HTML||",
             "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:W3C.REC-html52.20171214->WHATWG.HTML"
           },
           {
@@ -5066,6 +5020,11 @@
         "bases": 29,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "DCI.DCSS.v1.2.2012-1010",
+        "publisher": "DCI"
       }
     },
     {
@@ -5974,6 +5933,65 @@
         "bases": 1,
         "amendments": 0,
         "supplements": 0
+      }
+    },
+    {
+      "key": "ICC||1|",
+      "publisher": "ICC",
+      "suite": null,
+      "number": "1",
+      "part": null,
+      "docs": [
+        {
+          "docId": "ICC.1.2004",
+          "publicationDate": "2004-10-01",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        },
+        {
+          "docId": "ICC.1.2010",
+          "publicationDate": "2010-12-01",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": true
+        },
+        {
+          "docId": "ICC.1.2010e2019",
+          "publicationDate": "2019-05-29",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "ICC.1.2010",
+      "latestAnyId": "ICC.1.2010e2019",
+      "latestDateKey": "20190529",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "ICC.1.2010",
+      "latestSupersededBaseId": "ICC.1.2004",
+      "prevBaseId": "ICC.1.2004",
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 2,
+        "amendments": 1,
+        "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "ICC.1.2010e2019",
+        "publisher": "ICC"
       }
     },
     {
@@ -13769,6 +13787,11 @@
         "bases": 2,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "ISO.26428-1.20XX",
+        "publisher": "ISO"
       }
     },
     {
@@ -14425,6 +14448,11 @@
         "bases": 2,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "ISO.26430-9.2009am1.20XX",
+        "publisher": "ISO"
       }
     },
     {
@@ -14537,6 +14565,11 @@
         "bases": 2,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "ISO.26433.2009am1.20XX",
+        "publisher": "ISO"
       }
     },
     {
@@ -17164,6 +17197,11 @@
         "bases": 3,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "SMPTE.AG01.XXXX",
+        "publisher": "SMPTE"
       }
     },
     {
@@ -17194,7 +17232,7 @@
           "statusAmended": false
         },
         {
-          "docId": "SMPTE.AG02.XXXX",
+          "docId": "SMPTE.AG02",
           "publicationDate": "2022-12-06",
           "releaseTag": null,
           "statusActive": true,
@@ -17204,13 +17242,13 @@
           "statusAmended": false
         }
       ],
-      "latestBaseId": "SMPTE.AG02.XXXX",
-      "latestAnyId": "SMPTE.AG02.XXXX",
+      "latestBaseId": "SMPTE.AG02",
+      "latestAnyId": "SMPTE.AG02",
       "latestDateKey": "20221206",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": false,
-      "latestActiveBaseId": "SMPTE.AG02.XXXX",
+      "latestActiveBaseId": "SMPTE.AG02",
       "latestSupersededBaseId": "SMPTE.AG02.2015",
       "prevBaseId": "SMPTE.AG02.2015",
       "flagInconsistencies": [
@@ -17220,6 +17258,11 @@
         "bases": 3,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "SMPTE.AG02",
+        "publisher": "SMPTE"
       }
     },
     {
@@ -17264,6 +17307,11 @@
         "bases": 2,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "SMPTE.AG03.XXXX",
+        "publisher": "SMPTE"
       }
     },
     {
@@ -17374,6 +17422,11 @@
         "bases": 2,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "SMPTE.AG05.XXXX",
+        "publisher": "SMPTE"
       }
     },
     {
@@ -17431,6 +17484,11 @@
         "bases": 3,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "SMPTE.AG06.XXXX",
+        "publisher": "SMPTE"
       }
     },
     {
@@ -17548,6 +17606,11 @@
         "bases": 2,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "SMPTE.AG07.XXXX",
+        "publisher": "SMPTE"
       }
     },
     {
@@ -17592,6 +17655,11 @@
         "bases": 2,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "SMPTE.AG08.XXXX",
+        "publisher": "SMPTE"
       }
     },
     {
@@ -17636,6 +17704,11 @@
         "bases": 2,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "SMPTE.AG10.XXXX",
+        "publisher": "SMPTE"
       }
     },
     {
@@ -17682,6 +17755,11 @@
         "bases": 2,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "SMPTE.AG10B.XXXX",
+        "publisher": "SMPTE"
       }
     },
     {
@@ -17770,6 +17848,11 @@
         "bases": 3,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "SMPTE.AG12.XXXX",
+        "publisher": "SMPTE"
       }
     },
     {
@@ -17814,6 +17897,11 @@
         "bases": 2,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "SMPTE.AG14.XXXX",
+        "publisher": "SMPTE"
       }
     },
     {
@@ -17858,6 +17946,11 @@
         "bases": 2,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "SMPTE.AG15.XXXX",
+        "publisher": "SMPTE"
       }
     },
     {
@@ -17912,6 +18005,11 @@
         "bases": 3,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "SMPTE.AG16.XXXX",
+        "publisher": "SMPTE"
       }
     },
     {
@@ -17956,6 +18054,11 @@
         "bases": 2,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "SMPTE.AG18.XXXX",
+        "publisher": "SMPTE"
       }
     },
     {
@@ -18000,6 +18103,11 @@
         "bases": 2,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "SMPTE.AG19.XXXX",
+        "publisher": "SMPTE"
       }
     },
     {
@@ -18044,6 +18152,11 @@
         "bases": 2,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "SMPTE.AG20.XXXX",
+        "publisher": "SMPTE"
       }
     },
     {
@@ -18132,6 +18245,11 @@
         "bases": 3,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "SMPTE.AG22.XXXX",
+        "publisher": "SMPTE"
       }
     },
     {
@@ -18176,6 +18294,11 @@
         "bases": 2,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "SMPTE.AG24.XXXX",
+        "publisher": "SMPTE"
       }
     },
     {
@@ -22838,6 +22961,11 @@
         "bases": 3,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "SMPTE.RP200.20XX",
+        "publisher": "SMPTE"
       }
     },
     {
@@ -28193,6 +28321,11 @@
         "bases": 2,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "SMPTE.ST377-41.20XX",
+        "publisher": "SMPTE"
       }
     },
     {
@@ -28237,6 +28370,11 @@
         "bases": 2,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "SMPTE.ST377-42.20XX",
+        "publisher": "SMPTE"
       }
     },
     {
@@ -32311,6 +32449,11 @@
         "bases": 3,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "SMPTE.ST2067-101.20XX",
+        "publisher": "SMPTE"
       }
     },
     {
@@ -33075,6 +33218,11 @@
         "bases": 2,
         "amendments": 0,
         "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "in-lineage",
+        "docId": "SMPTE.ST2095-1.20XX",
+        "publisher": "SMPTE"
       }
     },
     {
@@ -33528,6 +33676,49 @@
       }
     },
     {
+      "key": "W3C|HTML||",
+      "publisher": "W3C",
+      "suite": "HTML",
+      "number": null,
+      "part": null,
+      "w3cFamily": "HTML",
+      "w3cVersion": null,
+      "docs": [
+        {
+          "docId": "W3C.REC-html52.20171214",
+          "publicationDate": "2017-12-14",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "W3C.REC-html52.20171214",
+      "latestAnyId": "W3C.REC-html52.20171214",
+      "latestDateKey": "20171214",
+      "hasActiveBase": false,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": "W3C.REC-html52.20171214",
+      "prevBaseId": null,
+      "flagInconsistencies": [
+        "SUPERSEDED_BY_OUT_OF_LINEAGE:W3C.REC-html52.20171214->WHATWG.HTML"
+      ],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      },
+      "versionlessSuccessor": {
+        "reason": "external",
+        "docId": "WHATWG.HTML",
+        "publisher": "WHATWG"
+      }
+    },
+    {
       "key": "W3C|qaframe.spec||",
       "publisher": "W3C",
       "suite": "qaframe.spec",
@@ -33619,44 +33810,6 @@
       ],
       "counts": {
         "bases": 2,
-        "amendments": 0,
-        "supplements": 0
-      }
-    },
-    {
-      "key": "W3C|rec-html5|2|",
-      "publisher": "W3C",
-      "suite": "rec-html5",
-      "number": "2",
-      "part": null,
-      "w3cFamily": "rec-html5",
-      "w3cVersion": "2",
-      "docs": [
-        {
-          "docId": "W3C.REC-html52.20171214",
-          "publicationDate": "2017-12-14",
-          "releaseTag": null,
-          "statusActive": false,
-          "statusSuperseded": true,
-          "statusWithdrawn": false,
-          "statusStabilized": false,
-          "statusAmended": false
-        }
-      ],
-      "latestBaseId": "W3C.REC-html52.20171214",
-      "latestAnyId": "W3C.REC-html52.20171214",
-      "latestDateKey": "20171214",
-      "hasActiveBase": false,
-      "hasWithdrawn": false,
-      "hasStabilized": false,
-      "latestActiveBaseId": null,
-      "latestSupersededBaseId": "W3C.REC-html52.20171214",
-      "prevBaseId": null,
-      "flagInconsistencies": [
-        "SUPERSEDED_BY_OUT_OF_LINEAGE:W3C.REC-html52.20171214->WHATWG.HTML"
-      ],
-      "counts": {
-        "bases": 1,
         "amendments": 0,
         "supplements": 0
       }
@@ -34596,6 +34749,40 @@
       "hasWithdrawn": false,
       "hasStabilized": false,
       "latestActiveBaseId": "W3C.xpath3.1.20170321",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "WHATWG|HTML||",
+      "publisher": "WHATWG",
+      "suite": "HTML",
+      "number": null,
+      "part": null,
+      "docs": [
+        {
+          "docId": "WHATWG.HTML",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false
+        }
+      ],
+      "latestBaseId": "WHATWG.HTML",
+      "latestAnyId": "WHATWG.HTML",
+      "latestDateKey": "00000000",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "WHATWG.HTML",
       "latestSupersededBaseId": null,
       "prevBaseId": null,
       "flagInconsistencies": [],

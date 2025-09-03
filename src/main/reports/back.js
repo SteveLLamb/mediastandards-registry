@@ -286,7 +286,6 @@ function collectSkipped(allDocs) {
   const skipped = [];
   for (const d of allDocs) {
     if (!d || !d.docId) continue;
-    
     // Apply global aliases for skipped/added parity
     applyGlobalAliases(d);
     // Normalize W3C like buildIndex does to keep parity
