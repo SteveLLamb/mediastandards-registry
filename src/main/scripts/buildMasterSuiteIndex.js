@@ -312,7 +312,20 @@ function collectSkipped(allDocs) {
       continue;
     }
 
-    // 2) Otherwise, try to key it; if unkeyed, it's a parser coverage gap.
+    // 2) Draft policy: filter documents explicitly marked as draft (status.draft === true)
+    if (d && d.status && d.status.draft === true) {
+      skipped.push({
+        docId: d.docId,
+        publisher: pub,
+        reason: 'FILTERED',
+        rule: 'FILTERED',
+        ruleDetail: 'draft:status-flag',
+        category: 'policy'
+      });
+      continue;
+    }
+
+    // 3) Otherwise, try to key it; if unkeyed, it's a parser coverage gap.
     //    Classify as UNKEYED first to avoid mislabeling e.g. versionless-but-unkeyed as "versionless".
     const k = keyFromDocId(d.docId, d);
     if (!k) {
@@ -327,7 +340,7 @@ function collectSkipped(allDocs) {
       continue;
     }
 
-    // 3) Keyed but policy-filtered (e.g., IEEE journals by suite)
+    // 4) Keyed but policy-filtered (e.g., IEEE journals by suite)
     if (shouldSkipKey(k)) {
       const suite = (k.suite || '').toUpperCase();
       const cat = (k.publisher === 'IEEE' && /^(JRPROC|TMAG)$/.test(suite)) ? 'journal' : 'policy';
@@ -405,8 +418,8 @@ function attachVersionlessSuccessors(lineages) {
       const stub = { docId: targetId };
       const isVersionless = inferVersionless(stub);
       if (isVersionless) {
-        li.versionlessSuccessor = {
-          reason: 'external',
+        li.externalSuccessor = {
+          reason: 'external-versionless',
           docId: targetId,
           publisher: publisherFromDoc(stub)
         }
@@ -417,31 +430,40 @@ function attachVersionlessSuccessors(lineages) {
   }
 }
 
-function attachInlineVersionless(lineages) {
-  if (!Array.isArray(lineages)) return;
-  // Undated docId: NOT ending with .YYYY, .YYYY-MM, or .YYYYMMDD
-  const HAS_DATE_TAIL = /\.(?:[12]\d{3}(?:-(?:\d{2})(?:-\d{2})?)?|[12]\d{7})$/;
-
-  for (const li of lineages) {
-    if (!li || !Array.isArray(li.docs)) continue;
-
-    // If an external successor is already attached, keep it; this pass is only for in-line cases
-    if (li.hasVersionlessSuccessor) continue;
-
-    const docs = li.docs.filter(Boolean);
-    const hasDated = docs.some(d => typeof d.docId === 'string' && HAS_DATE_TAIL.test(d.docId));
-    const undatedDoc = docs.find(d => typeof d.docId === 'string' && !HAS_DATE_TAIL.test(d.docId));
-
-    // Mark as “switched to versionless” only if we see both dated and undated in the same lineage
-    if (hasDated && undatedDoc) {
-      li.versionlessSuccessor = {
-        reason: 'in-lineage',
-        docId: undatedDoc.docId,
-        publisher: publisherFromDoc({ docId: undatedDoc.docId })
-      }
-    }
-  }
-}
+//function attachInlineVersionless(lineages) {
+//  if (!Array.isArray(lineages)) return;
+//
+//  for (const li of lineages) {
+//    if (!li || !Array.isArray(li.docs)) continue;
+//
+//    // If an external successor is already attached, keep it; this pass is only for in-line cases
+//    if (li.versionlessSuccessor) continue;
+//
+//    const docs = li.docs.filter(Boolean);
+//
+//    // Collect all docs explicitly flagged versionless; do not exclude amendments here —
+//    // the source data decides what is versionless, not our heuristics.
+//    const versionlessDocs = docs.filter(d => d && d.status && d.status.versionless === true);
+//
+//    if (!versionlessDocs.length) continue; // nothing to do for this lineage
+//
+//    // If multiple versionless docs exist, pick the most recent by our canonical date key.
+//    // This tolerates dates in either publicationDate/releaseTag or in the ID.
+//    const pick = versionlessDocs.reduce((best, d) => {
+//      const dk = dateKeyFromDoc(d);
+//      if (!best) return { d, dk };
+//      return dk >= best.dk ? { d, dk } : best;
+//    }, null);
+//
+//    if (pick && pick.d) {
+//      li.versionlessSuccessor = {
+//        reason: 'in-lineage',
+//        docId: pick.d.docId,
+//        publisher: publisherFromDoc({ docId: pick.d.docId })
+//      };
+//    }
+//  }
+//}
 
 function isAmendmentDocId(docId) {
   // SMPTE: ...YYYY[-MM]Am<d>.YYYY[-MM]
@@ -470,7 +492,7 @@ function isAmendmentDocId(docId) {
   const ituRAmErr = /^R-REC-[A-Za-z]\.[0-9A-Za-z.]+-(?:a\d+|e\d+)\.(?:\d{6}|\d{4})$/i;
 
   // ICC errata: base .YYYYeYYYY (e.g., ICC.1.2010e2019)
-  const iccErrata = /\.(?:19|20)\d{2}e(?:19|20)\d{2}$/i;
+  const iccErrata = /\.(?:19|20)\d{2}e\.?(?:19|20)\d{2}$/i;
 
   return (
     smpteAm.test(docId) ||
@@ -552,6 +574,11 @@ function dateKeyFromDoc(d) {
   return '00000000';
 }
 
+// True if a doc yields any concrete date key from releaseTag, publicationDate, or docId
+function isDatedDoc(d) {
+  return dateKeyFromDoc(d) !== '00000000';
+}
+
 // Extract a 4-digit year from the docId tail, for cross-checks
 function yearFromDocIdTail(docId) {
   // Looks for .YYYYMMDD or .YYYY-MM or .YYYY at the end of the docId
@@ -565,6 +592,8 @@ function yearFromDocIdTail(docId) {
 }
 
 function keyFromDocId(docId, doc = {}) {
+  // Draft policy: do not key documents explicitly marked as draft
+  if (doc && doc.status && doc.status.draft === true) return null;
   
   // Special-case: SMPTE RP series with inline edition token `v##` (treat as RP family, no part)
   // Examples:
@@ -770,7 +799,7 @@ function keyFromDocId(docId, doc = {}) {
   //   ICC.1.2004           → {publisher:"ICC", suite:"ICC", number:"1", part:null}
   //   ICC.1.2010           → {publisher:"ICC", suite:"ICC", number:"1", part:null}
   //   ICC.1.2010e2019      → same lineage; `e2019` treated as errata via isAmendmentDocId
-  m = docId.match(/^ICC\.(\d+)\.(?:\d{4})(?:e\d{4})?$/i);
+  m = docId.match(/^ICC\.(\d+)\.(?:\d{4})(?:e\.?\d{4})?$/i);
   if (m) {
     return { publisher: 'ICC', suite: null, number: m[1], part: null };
   }
@@ -1147,6 +1176,7 @@ function buildIndex(allDocs) {
     const statusWithdrawn = !!status.withdrawn;
     const statusStabilized = !!status.stabilized;
     const statusAmended = !!status.amended;
+    const statusVersionless = d.status.versionless === true
     const releaseTag = typeof d.releaseTag === 'string' ? d.releaseTag : null;
     const _isSupplement = isSupplementDocId(d.docId);
 
@@ -1159,6 +1189,7 @@ function buildIndex(allDocs) {
       statusWithdrawn,
       statusStabilized,
       statusAmended,
+      statusVersionless,
       _dk: dateKeyFromDoc(d),
       _isBase: !isAmendmentDocId(d.docId) && !_isSupplement,
       _isSupplement,
@@ -1342,7 +1373,8 @@ function buildIndex(allDocs) {
       statusSuperseded: x.statusSuperseded,
       statusWithdrawn: x.statusWithdrawn,
       statusStabilized: x.statusStabilized,
-      statusAmended: x.statusAmended
+      statusAmended: x.statusAmended,
+      statusVersionless: x.statusVersionless
     }));
 
     const lineageObj = {
@@ -1462,7 +1494,7 @@ function buildIndex(allDocs) {
 
   const lineages = buildIndex(docs);
   attachVersionlessSuccessors(lineages);
-  attachInlineVersionless(lineages);
+  //attachInlineVersionless(lineages);
   const flagSummary = computeFlagSummary(lineages);
   const outObj = {
     generatedAt: new Date().toISOString(),
