@@ -263,7 +263,11 @@ const NON_LINEAGE_DOCTYPES = new Set([
   'Technical Note',
   'Procedure',
   'Notation',
-  'Manual'
+  'Manual',
+  'Study Group Report',
+  'Dissertation',
+  'FAQ',
+  'Style Guide'
 ]);
 
 // Helper to infer versionless (evergreen) documents
@@ -319,7 +323,7 @@ function collectSkipped(allDocs) {
         publisher: pub,
         reason: 'FILTERED',
         rule: 'FILTERED',
-        ruleDetail: 'draft:status-flag',
+        ruleDetail: 'status.draft=true',
         category: 'policy'
       });
       continue;
@@ -605,6 +609,13 @@ function keyFromDocId(docId, doc = {}) {
     return { publisher: 'SMPTE', suite: 'RP', number: m[1], part: null };
   }
 
+  // --- OWASP documents: OWASP.<suite>.<doc> ---
+  // Example: OWASP.CS.TLP → { publisher: 'OWASP', suite: 'CS', number: 'TLP', part: null }
+  m = docId.match(/^OWASP\.([A-Za-z0-9]+)\.([A-Za-z0-9-]+)$/i);
+  if (m) {
+    return { publisher: 'OWASP', suite: m[1].toUpperCase(), number: m[2], part: null };
+  }
+
   // --- SMPTE AG/OM (without date) special-case ---
   // Match SMPTE.AG<num>[-<subpart>][.<YYYY> or .<YYYY-MM> or .<YYYYMMDD>], but also allow no date
   // e.g., SMPTE.AG02, SMPTE.AG06-01, SMPTE.OM01, SMPTE.OM02-01
@@ -620,7 +631,7 @@ function keyFromDocId(docId, doc = {}) {
     return { publisher: 'SMPTE', suite: 'OM', number: m[1], part: null };
   }
   // SMPTE.ST429-6.2023-05 -> {publisher:"SMPTE", suite:"ST", number:"429", part:"6"}
-  m = docId.match(/^SMPTE\.(OM|AG|ST|RP|EG|ER|TSP|RDD|OV)(\d+[A-Za-z]*)(?:-(\d+))?\./i);
+  m = docId.match(/^SMPTE\.(OM|AG|ST|RP|EG|ER|RDD|OV|TSP)(\d+[A-Za-z]*)(?:-(\d+))?\./i);
   if (m) {
     const docType = m[1].toUpperCase();
     const num = m[2];
@@ -633,6 +644,13 @@ function keyFromDocId(docId, doc = {}) {
 
     // For ST/RP/EG/RDD/OV: use the SMPTE doc type as the lineage suite to avoid cross-type collisions (e.g., RP6 vs RDD6)
     return { publisher: 'SMPTE', suite: docType, number: num, part };
+  }
+
+  // OMG specs: OMG.<doc>[.<version-ish>]
+  // We treat the token after OMG. as the doc family (lineage key) and ignore the rest as version info.
+  m = docId.match(/^OMG\.([A-Za-z0-9]+)(?:\.[A-Za-z0-9.-]+)?$/i);
+  if (m) {
+    return { publisher: 'OMG', suite: m[1].toUpperCase(), number: null, part: null };
   }
 
   // ISO/IEC Directives: ISO.Dir-P2.2011, ISO.Dir-P3.2021 etc.
@@ -677,6 +695,26 @@ function keyFromDocId(docId, doc = {}) {
   m = docId.match(/^ISDCF\.([A-Za-z0-9-]+)(?:\.(\d{4}(?:-\d{2}){0,2}|\d{8}))?$/i);
   if (m) {
     return { publisher: 'ISDCF', suite: null, number: m[1], part: null };
+  }
+
+  // Texas Instruments DLP specs: TI.DLP-<doc>[.<version-ish>][.<date>]
+  // Example: TI.DLP-CCC.1.1-rC.2005 → { publisher: 'TI', suite: 'DLP', number: 'CCC', part: null }
+  // We key on the family token after "DLP-" and ignore any version/date tails for lineage.
+  m = docId.match(/^TI\.DLP-([A-Za-z0-9-]+)(?:\.[A-Za-z0-9.-]+)?(?:\.(?:\d{8}|\d{4}(?:-\d{2})?))?$/i);
+  if (m) {
+    return { publisher: 'TI', suite: 'DLP', number: m[1], part: null };
+  }
+
+  // UNICODE CONSORTIUM — Unicode Standard & Technical Reports
+  //   UNICODE.STD.TR9-25  → { publisher:'UNICODE CONSORTIUM', suite:'STD', number:'TR', part:'9' }
+  //   UNICODE.STD.5.1.0   → { publisher:'UNICODE CONSORTIUM', suite:'STD', number:null, part:null }
+  m = docId.match(/^UNICODE\.STD\.TR(\d+)(?:[-.][A-Za-z0-9.-]+)?$/i);
+  if (m) {
+    return { publisher: 'UNICODE CONSORTIUM', suite: 'STD', number: 'TR', part: m[1] };
+  }
+  m = docId.match(/^UNICODE\.STD\.(\d+(?:\.\d+){1,2})$/i);
+  if (m) {
+    return { publisher: 'UNICODE CONSORTIUM', suite: 'STD', number: null, part: null };
   }
 
   // W3C shortnames: W3C.shortname.YYYYMMDD, W3C.shortname.YYYY, W3C.shortname.YYYY-MM, or W3C.shortname.LATEST
@@ -738,6 +776,13 @@ function keyFromDocId(docId, doc = {}) {
   m = docId.match(/^IETF\.([A-Za-z0-9-]+)(?:\.[A-Za-z0-9._-]+)?\.(\d{8}|\d{4}(?:-\d{2})?)$/i);
   if (m) {
     return { publisher: 'IETF', suite: m[1].toUpperCase(), number: null, part: null };
+  }
+
+  // NAB Standards: NAB.STD.<doc>[.<date>]
+  // Example: NAB.STD.E-416.1965 → { publisher: 'NAB', suite: 'STD', number: 'E-416', part: null }
+  m = docId.match(/^NAB\.STD\.([A-Za-z0-9-]+)(?:\.(?:\d{8}|\d{4}(?:-\d{2})?))?$/i);
+  if (m) {
+    return { publisher: 'NAB', suite: 'STD', number: m[1], part: null };
   }
 
   // NIST FIPS: group by family; treat dash suffix as edition (not a part)
@@ -1508,11 +1553,13 @@ function buildIndex(allDocs) {
   }
 
   // Build a simple reason summary and keep a detailed list for audits
+  // Always include all possible reason categories with count 0 if not present
+  const SKIP_REASONS = ['FILTERED', 'UNKEYED', 'UNKNOWN'];
   const skippedSummary = skippedDocs.reduce((acc, s) => {
     const r = s.reason || 'UNKNOWN';
     acc[r] = (acc[r] || 0) + 1;
     return acc;
-  }, {});
+  }, Object.fromEntries(SKIP_REASONS.map(r => [r, 0])));
 
   // Pre-calc publisher counts for unified report
   const pubCountsSummary = computePublisherCounts(docs);
