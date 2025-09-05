@@ -620,7 +620,7 @@ function keyFromDocId(docId, doc = {}) {
     return { publisher: 'SMPTE', suite: 'OM', number: m[1], part: null };
   }
   // SMPTE.ST429-6.2023-05 -> {publisher:"SMPTE", suite:"ST", number:"429", part:"6"}
-  m = docId.match(/^SMPTE\.(OM|AG|ST|RP|EG|RDD|OV)(\d+[A-Za-z]*)(?:-(\d+))?\./i);
+  m = docId.match(/^SMPTE\.(OM|AG|ST|RP|EG|ER|TSP|RDD|OV)(\d+[A-Za-z]*)(?:-(\d+))?\./i);
   if (m) {
     const docType = m[1].toUpperCase();
     const num = m[2];
@@ -635,6 +635,13 @@ function keyFromDocId(docId, doc = {}) {
     return { publisher: 'SMPTE', suite: docType, number: num, part };
   }
 
+  // ISO/IEC Directives: ISO.Dir-P2.2011, ISO.Dir-P3.2021 etc.
+  // Suite is 'Dir', number is 'P<part>', no part field.
+  m = docId.match(/^ISO\.Dir-P(\d+)\.(\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    return { publisher: 'ISO/IEC', suite: 'Dir', number: `P${m[1]}`, part: null };
+  }
+
   // ISO / IEC series with optional (possibly composite) part token
   // Examples:
   //   IEC.61966-2-1.1999  -> number: 61966, part: 2-1
@@ -643,6 +650,33 @@ function keyFromDocId(docId, doc = {}) {
   m = docId.match(/^(ISO(?:\.IEC)?|IEC)\.(\d+)(?:-([0-9-]+))?\./i);
   if (m) {
     return { publisher: m[1].toUpperCase(), suite: null, number: m[2], part: m[3] || null };
+  }
+
+  // IESNA Recommended Practice, e.g., IESNA.RP16.1996
+  m = docId.match(/^IESNA\.RP(\d+)\.(\d{4})$/i);
+  if (m) {
+    return { publisher: 'IESNA', suite: 'RP', number: m[1], part: null };
+  }
+
+  // IMFUG Best Practices: IMFUG.BP.<doc>.<date>
+  // Examples:
+  //   IMFUG.BP.DS1.2020
+  //   IMFUG.BP.001.2020 (preserve leading zeros)
+  // Date tail supports .YYYY, .YYYY-MM, or .YYYYMMDD
+  m = docId.match(/^IMFUG\.BP\.([A-Za-z0-9-]+)\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    return { publisher: 'IMFUG', suite: 'BP', number: m[1], part: null };
+  }
+
+  // ISDCF documents: ISDCF.<token>.<date> or ISDCF.<token>
+  // Examples:
+  //   ISDCF.D02.2011 → { publisher: 'ISDCF', suite: null, number: 'D02', part: null }
+  //   ISDCF.RP-430-10.2018 → { publisher: 'ISDCF', suite: null, number: 'RP-430-10', part: null }
+  //   ISDCF.P-HFR.2012 → { publisher: 'ISDCF', suite: null, number: 'P-HFR', part: null }
+  //   ISDCF.DCNC → { publisher: 'ISDCF', suite: null, number: 'DCNC', part: null }
+  m = docId.match(/^ISDCF\.([A-Za-z0-9-]+)(?:\.(\d{4}(?:-\d{2}){0,2}|\d{8}))?$/i);
+  if (m) {
+    return { publisher: 'ISDCF', suite: null, number: m[1], part: null };
   }
 
   // W3C shortnames: W3C.shortname.YYYYMMDD, W3C.shortname.YYYY, W3C.shortname.YYYY-MM, or W3C.shortname.LATEST
@@ -693,6 +727,17 @@ function keyFromDocId(docId, doc = {}) {
   m = docId.match(/^rfc(\d+)$/i);
   if (m) {
     return { publisher: 'IETF', suite: 'RFC', number: m[1], part: null };
+  }
+
+  // IETF.<suite>[.<version-ish>].<date>
+  // Examples:
+  //   IETF.FLS.2001
+  //   IETF.JSON.2022
+  //   IETF.JSON.draft-bhutton-json-schema-00.2020
+  // We ignore the middle token(s) and key strictly on the suite.
+  m = docId.match(/^IETF\.([A-Za-z0-9-]+)(?:\.[A-Za-z0-9._-]+)?\.(\d{8}|\d{4}(?:-\d{2})?)$/i);
+  if (m) {
+    return { publisher: 'IETF', suite: m[1].toUpperCase(), number: null, part: null };
   }
 
   // NIST FIPS: group by family; treat dash suffix as edition (not a part)
