@@ -52,7 +52,7 @@ jobs:
         run: |
           jq 'del(.generatedAt, .sourceHash)' src/main/reports/masterSuiteIndex.json > report.norm.json
           jq 'del(.generatedAt, .sourceHash)' baseline.json > baseline.norm.json
-          node -e "const fs=require('fs'); const path=require('path'); const a=JSON.parse(fs.readFileSync('baseline.norm.json','utf8')||'{}'); const b=JSON.parse(fs.readFileSync('report.norm.json','utf8')||'{}'); const onlyMeta=JSON.stringify(a)===JSON.stringify(b); const lineageChanged=JSON.stringify((a||{}).lineages||[])!==JSON.stringify((b||{}).lineages||[]); const flagSummaryChanged=JSON.stringify((a||{}).flagSummary||{})!==JSON.stringify((b||{}).flagSummary||{}); fs.writeFileSync('change-class.json', JSON.stringify({onlyMeta,lineageChanged,flagSummaryChanged},null,2));"
+          node -e "const fs=require('fs'); const a=JSON.parse(fs.readFileSync('baseline.norm.json','utf8')||'{}'); const b=JSON.parse(fs.readFileSync('report.norm.json','utf8')||'{}'); const onlyMeta=JSON.stringify(a)===JSON.stringify(b); const lineageChanged=JSON.stringify((a||{}).lineages||[])!==JSON.stringify((b||{}).lineages||[]); const flagSummaryChanged=JSON.stringify((a||{}).flagSummary||{})!==JSON.stringify((b||{}).flagSummary||{}); const getU=x=>(((x||{}).flagSummary||{}).byType||{}).UNKEYED||{}; const unkeyedBefore=getU(a).count||0; const unkeyedNow=getU(b).count||0; const unkeyedChanged=unkeyedBefore!==unkeyedNow; fs.writeFileSync('change-class.json', JSON.stringify({onlyMeta,lineageChanged,flagSummaryChanged,unkeyedBefore,unkeyedNow,unkeyedChanged},null,2));"
 
       - name: Decide path
         id: decide
@@ -60,6 +60,9 @@ jobs:
           echo "onlyMeta=$(jq -r '.onlyMeta' change-class.json)" >> $GITHUB_OUTPUT
           echo "lineage=$(jq -r '.lineageChanged' change-class.json)" >> $GITHUB_OUTPUT
           echo "flags=$(jq -r '.flagSummaryChanged' change-class.json)" >> $GITHUB_OUTPUT
+          echo "unkeyedChanged=$(jq -r '.unkeyedChanged' change-class.json)" >> $GITHUB_OUTPUT
+          echo "unkeyedNow=$(jq -r '.unkeyedNow' change-class.json)" >> $GITHUB_OUTPUT
+          echo "unkeyedBefore=$(jq -r '.unkeyedBefore' change-class.json)" >> $GITHUB_OUTPUT
 
       - name: Upload artifacts (snapshot)
         uses: actions/upload-artifact@v4
@@ -104,10 +107,14 @@ jobs:
           branch: chore/nightly-mastersuite
           add-paths: ${{ steps.files.outputs.paths }}
           labels: automated, reports
+          delete-branch: true
 
       - name: File/update Issue for UNKEYED (optional gate)
-        if: steps.decide.outputs.flags == 'true'
+        if: steps.decide.outputs.unkeyedChanged == 'true'
         uses: actions/github-script@v7
+        env:
+          UNKEYED_BEFORE: ${{ steps.decide.outputs.unkeyedBefore }}
+          UNKEYED_NOW: ${{ steps.decide.outputs.unkeyedNow }}
         with:
           script: |
             const fs = require('fs');
@@ -115,8 +122,10 @@ jobs:
             const info = report.flagSummary?.byType?.UNKEYED;
             if (!info || !info.count) { core.info('No UNKEYED flags.'); return; }
             const examples = (info.examples || []).slice(0, 10).map(e => `- ${e.lineage || e.docId || JSON.stringify(e)}`).join('\n');
-            const title = `UNKEYED present in nightly report (${info.count})`;
-            const body = `Detected ${info.count} UNKEYED items.\n\nTop examples:\n${examples}\n\nAction: extend keying in buildMasterSuiteIndex.js.`;
+            const before = Number(process.env.UNKEYED_BEFORE || 0);
+            const now = Number(process.env.UNKEYED_NOW || (info?.count || 0));
+            const title = `UNKEYED present in nightly report (was ${before}, now ${now})`;
+            const body = `Detected UNKEYED count changed from ${before} to ${now}.\n\nTop examples:\n${examples}\n\nAction: extend keying in buildMasterSuiteIndex.js.`;
             const { data: issues } = await github.rest.issues.listForRepo({ owner: context.repo.owner, repo: context.repo.repo, state: 'open', labels: 'automated,unkeyed' });
             const existing = issues.find(i => i.title.startsWith('UNKEYED present'));
             if (existing) {
