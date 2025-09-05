@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2025-09-05T20:12:41.255Z",
+  "generatedAt": "2025-09-05T21:25:40.454Z",
   "sourcePath": "src/main/data/documents.json",
   "sourceHash": "sha256:7342312858c910b5b235efbc7be82ef63be0bf5522895b5639b683c7da1a3ba9",
   "publisherCounts": {
@@ -2114,7 +2114,7 @@
     }
   },
   "flagSummary": {
-    "totalFlags": 166,
+    "totalFlags": 162,
     "byType": {
       "DOCID_PUBDATE_MISMATCH": {
         "count": 61,
@@ -2781,26 +2781,10 @@
         ]
       },
       "W3C_MISSING_VERSION": {
-        "count": 5,
+        "count": 1,
         "examples": [
           {
-            "lineage": "W3C|qaframe.spec||",
-            "flag": "W3C_MISSING_VERSION"
-          },
-          {
-            "lineage": "W3C|rddl||",
-            "flag": "W3C_MISSING_VERSION"
-          },
-          {
-            "lineage": "W3C|xml||",
-            "flag": "W3C_MISSING_VERSION"
-          },
-          {
             "lineage": "W3C|xmldsig-core||",
-            "flag": "W3C_MISSING_VERSION"
-          },
-          {
-            "lineage": "W3C|xmlnames||",
             "flag": "W3C_MISSING_VERSION"
           }
         ]
@@ -35651,9 +35635,7 @@
       "latestActiveBaseId": "W3C.qaframe.spec.20050817",
       "latestSupersededBaseId": "W3C.qaframe.spec.20041122",
       "prevBaseId": "W3C.qaframe.spec.20041122",
-      "flagInconsistencies": [
-        "W3C_MISSING_VERSION"
-      ],
+      "flagInconsistencies": [],
       "counts": {
         "bases": 2,
         "amendments": 0,
@@ -35701,9 +35683,7 @@
       "latestActiveBaseId": "W3C.rddl.2010",
       "latestSupersededBaseId": "W3C.rddl.2002",
       "prevBaseId": "W3C.rddl.2002",
-      "flagInconsistencies": [
-        "W3C_MISSING_VERSION"
-      ],
+      "flagInconsistencies": [],
       "counts": {
         "bases": 2,
         "amendments": 0,
@@ -36064,9 +36044,7 @@
       "latestActiveBaseId": "W3C.xml.20081126",
       "latestSupersededBaseId": "W3C.xml.20040204",
       "prevBaseId": "W3C.xml.20040204",
-      "flagInconsistencies": [
-        "W3C_MISSING_VERSION"
-      ],
+      "flagInconsistencies": [],
       "counts": {
         "bases": 2,
         "amendments": 0,
@@ -36403,9 +36381,7 @@
       "latestActiveBaseId": "W3C.xmlnames.20091208",
       "latestSupersededBaseId": "W3C.xmlnames.20060816",
       "prevBaseId": "W3C.xmlnames.20060816",
-      "flagInconsistencies": [
-        "W3C_MISSING_VERSION"
-      ],
+      "flagInconsistencies": [],
       "counts": {
         "bases": 3,
         "amendments": 0,

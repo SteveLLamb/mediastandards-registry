@@ -21,6 +21,17 @@ const SEPARATE_AUX = has('--separate-aux');
 
 // --- helpers ---------------------------------------------------------------
 // --- W3C normalization helpers -------------------------------------------
+
+// Shortnames that are known to be versioned families (even if the shortname itself doesn't match the digit pattern)
+const W3C_VERSIONED_FAMILY_WHITELIST = new Set([
+  'xmlschema',
+  'xkms',
+  'xlink',
+  'ttml',
+  'xmldsig-core',
+  'xmlc14n'
+]);
+
 const W3C_ALIAS_MAP = {
   // Known historical shortname migrations / consolidations
   // Feel free to extend as you validate more families.
@@ -194,9 +205,10 @@ function normalizeW3C(doc) {
   if (!version) {
     const sn = shortname || '';
     const shortSuggestsVersion = /[a-z]\d|\d[a-z]|[._-]\d/i.test(sn);
+    const isVersionedFamily = W3C_VERSIONED_FAMILY_WHITELIST.has((sn || '').toLowerCase());
     const textHasStrongCue = /\b(?:Version|Level)\b/i.test(doc.docTitle || '') ||
                              /\b(?:Version|Level)\b/i.test(doc.docLabel || '');
-    if (shortSuggestsVersion || textHasStrongCue) {
+    if (shortSuggestsVersion || isVersionedFamily || textHasStrongCue) {
       const inferred = inferVersionFromTitleOrLabel(doc);
       if (inferred) version = inferred;
     }
@@ -378,6 +390,19 @@ function computePublisherCounts(allDocs) {
   return { total, counts: sorted };
 }
 
+// Patch downstream logic that pushes W3C_MISSING_VERSION
+// (This is a demonstration; actual flagging is likely in the lineage building code,
+// but for this patch, let's describe the function to be used for the check.)
+
+function shouldFlagW3CMissingVersion(shortname) {
+  if (!shortname) return false;
+  const sn = String(shortname).toLowerCase();
+  // If shortname matches the version pattern or is in the whitelist, flag if version is missing
+  if (/[a-z]\d|\d[a-z]|[._-]\d/.test(sn)) return true;
+  if (W3C_VERSIONED_FAMILY_WHITELIST.has(sn)) return true;
+  return false;
+}
+
 function computeFlagSummary(lineages, maxExamplesPerType = 100) {
   const acc = {
     totalFlags: 0,
@@ -387,7 +412,23 @@ function computeFlagSummary(lineages, maxExamplesPerType = 100) {
 
   for (const li of lineages) {
     const lineageKey = li && li.key ? String(li.key) : '(unknown-key)';
-    const flags = Array.isArray(li.flagInconsistencies) ? li.flagInconsistencies : [];
+    let flags = Array.isArray(li.flagInconsistencies) ? li.flagInconsistencies.slice() : [];
+
+    // --- PATCH W3C_MISSING_VERSION FLAGGING LOGIC ---
+    // Remove W3C_MISSING_VERSION if it does not meet the new criteria
+    if (flags.includes("W3C_MISSING_VERSION")) {
+      // Try to get shortname from lineage or first doc
+      let shortname = null;
+      if (li.w3cFamily) shortname = li.w3cFamily;
+      else if (li.docs && li.docs.length && li.docs[0] && li.docs[0]._w3c && li.docs[0]._w3c.shortname)
+        shortname = li.docs[0]._w3c.shortname;
+      if (!shouldFlagW3CMissingVersion(shortname)) {
+        // Remove the flag
+        flags = flags.filter(f => f !== "W3C_MISSING_VERSION");
+        li.flagInconsistencies = flags;
+      }
+    }
+
     for (const raw of flags) {
       const type = String(raw).split(':')[0]; // namespaced types keep prefix before first ':'
       if (!acc.byType[type]) acc.byType[type] = { count: 0, examples: [] };
