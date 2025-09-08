@@ -81,8 +81,8 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/main/reports/masterSuiteIndex.json
-          git diff --cached --quiet || git commit -m "chore(reports): MasterSuiteIndex metadata refresh (generatedAt/sourceHash)"
-          git push
+          git diff --cached --quiet || git commit -m "chore: MasterSuiteIndex metadata refresh"
+          git push 
 
       - name: Compute PR file list
         id: files
@@ -98,7 +98,7 @@ jobs:
         if: steps.decide.outputs.lineage == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
-          commit-message: "chore(reports): MasterSuiteIndex (data change)"
+          commit-message: "chore: MasterSuiteIndex (data change)"
           title: "Nightly MasterSuiteIndex (data change)"
           body: |
             Automated nightly build detected content changes.
