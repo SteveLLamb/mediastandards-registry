@@ -52,7 +52,7 @@ jobs:
         run: |
           jq 'del(.generatedAt, .sourceHash)' src/main/reports/masterSuiteIndex.json > report.norm.json
           jq 'del(.generatedAt, .sourceHash)' baseline.json > baseline.norm.json
-          node -e "const fs=require('fs'); const a=JSON.parse(fs.readFileSync('baseline.norm.json','utf8')||'{}'); const b=JSON.parse(fs.readFileSync('report.norm.json','utf8')||'{}'); const onlyMeta=JSON.stringify(a)===JSON.stringify(b); const lineageChanged=JSON.stringify((a||{}).lineages||[])!==JSON.stringify((b||{}).lineages||[]); const flagSummaryChanged=JSON.stringify((a||{}).flagSummary||{})!==JSON.stringify((b||{}).flagSummary||{}); const getU=x=>(((x||{}).flagSummary||{}).byType||{}).UNKEYED||{}; const unkeyedBefore=getU(a).count||0; const unkeyedNow=getU(b).count||0; const unkeyedChanged=unkeyedBefore!==unkeyedNow; fs.writeFileSync('change-class.json', JSON.stringify({onlyMeta,lineageChanged,flagSummaryChanged,unkeyedBefore,unkeyedNow,unkeyedChanged},null,2));"
+          node -e "const fs=require('fs'); const a=JSON.parse(fs.readFileSync('baseline.norm.json','utf8')||'{}'); const b=JSON.parse(fs.readFileSync('report.norm.json','utf8')||'{}'); const onlyMeta=JSON.stringify(a)===JSON.stringify(b); const lineageChanged=JSON.stringify((a||{}).lineages||[])!==JSON.stringify((b||{}).lineages||[]); const flagSummaryChanged=JSON.stringify((a||{}).flagSummary||{})!==JSON.stringify((b||{}).flagSummary||{}); const unkeyed=x=>(((x||{}).skippedDocs||{}).summaryByReason||{}).UNKEYED||0; const unkeyedBefore=unkeyed(a); const unkeyedNow=unkeyed(b); const unkeyedChanged=unkeyedBefore!==unkeyedNow; fs.writeFileSync('change-class.json', JSON.stringify({onlyMeta,lineageChanged,flagSummaryChanged,unkeyedBefore,unkeyedNow,unkeyedChanged},null,2));"
 
       - name: Decide path
         id: decide
@@ -110,7 +110,7 @@ jobs:
           delete-branch: true
 
       - name: File/update Issue for UNKEYED (optional gate)
-        if: steps.decide.outputs.unkeyedChanged == 'true'
+        if: ${{ steps.decide.outputs.unkeyedChanged == 'true' || (steps.decide.outputs.unkeyedBefore == '0' && steps.decide.outputs.unkeyedNow != '0') }}
         uses: actions/github-script@v7
         env:
           UNKEYED_BEFORE: ${{ steps.decide.outputs.unkeyedBefore }}
@@ -119,15 +119,33 @@ jobs:
           script: |
             const fs = require('fs');
             const report = JSON.parse(fs.readFileSync('src/main/reports/masterSuiteIndex.json','utf8'));
-            const info = report.flagSummary?.byType?.UNKEYED;
-            if (!info || !info.count) { core.info('No UNKEYED flags.'); return; }
-            const examples = (info.examples || []).slice(0, 10).map(e => `- ${e.lineage || e.docId || JSON.stringify(e)}`).join('\n');
+            const byReason = report?.skippedDocs?.summaryByReason || {};
+            const now = Number(byReason.UNKEYED || 0);
             const before = Number(process.env.UNKEYED_BEFORE || 0);
-            const now = Number(process.env.UNKEYED_NOW || (info?.count || 0));
+            // If an issue already exists and the count hasn't changed, skip spamming comments
+            if (now === before) { core.info(`UNKEYED unchanged at ${now}; skipping.`); return; }
+            if (!now) { core.info('UNKEYED is zero; nothing to file.'); return; }
+
+            // Collect up to 10 example UNKEYED items from byPublisher
+            const byPub = report?.skippedDocs?.byPublisher || {};
+            const examplesArr = [];
+            for (const [pub, block] of Object.entries(byPub)) {
+              for (const it of (block.items || [])) {
+                if (it.reason === 'UNKEYED') {
+                  const id = it.key || it.docId || '(unknown)';
+                  examplesArr.push(`- ${id} — ${pub}`);
+                  if (examplesArr.length >= 10) break;
+                }
+              }
+              if (examplesArr.length >= 10) break;
+            }
+            const examples = examplesArr.length ? examplesArr.join('\n') : '- (no per-item examples captured in report)';
+
             const title = `UNKEYED present in nightly report (was ${before}, now ${now})`;
-            const body = `Detected UNKEYED count changed from ${before} to ${now}.\n\nTop examples:\n${examples}\n\nAction: extend keying in buildMasterSuiteIndex.js.`;
+            const body = `Detected UNKEYED skipped count changed from ${before} to ${now}.\n\nTop examples:\n${examples}\n\nAction: extend keying in buildMasterSuiteIndex.js.`;
+
             const { data: issues } = await github.rest.issues.listForRepo({ owner: context.repo.owner, repo: context.repo.repo, state: 'open', labels: 'automated,unkeyed' });
-            const existing = issues.find(i => i.title.startsWith('UNKEYED present'));
+            const existing = issues.find(i => i.title.startsWith('UNKEYED present in nightly report'));
             if (existing) {
               await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: existing.number, body });
             } else {
