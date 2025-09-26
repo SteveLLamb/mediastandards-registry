@@ -199,7 +199,7 @@ jobs:
               if (!currentUnkeyed.has(docKey)) {
                 await github.rest.issues.createComment({
                   owner: context.repo.owner, repo: context.repo.repo, issue_number: issue.number,
-                  body: `Resolved: no longer reported as UNKEYED in tonight's run (Run #${context.runId}). Closing.`
+                  body: `Resolved: no longer reported as UNKEYED (Run #${context.runId}). Closing.`
                 });
                 await github.rest.issues.update({
                   owner: context.repo.owner, repo: context.repo.repo, issue_number: issue.number, state: 'closed'
