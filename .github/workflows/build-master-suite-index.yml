@@ -79,10 +79,15 @@ jobs:
             const introduced=currUnkeyed.filter(x=>!prevSet.has(x));
             const unkeyedBefore=prevUnkeyed.length, unkeyedNow=currUnkeyed.length;
             const unkeyedChanged=unkeyedBefore!==unkeyedNow || introduced.length>0 || resolved.length>0;
+            // Inventory change detection
+            const docsTotalA = (a.publisherCounts && a.publisherCounts.total) || 0;
+            const docsTotalB = (b.publisherCounts && b.publisherCounts.total) || 0;
+            const inventoryChanged = docsTotalA !== docsTotalB;
             fs.writeFileSync('change-class.json', JSON.stringify({
               onlyMeta,lineageChanged,flagSummaryChanged,
               unkeyedBefore,unkeyedNow,unkeyedChanged,
-              currUnkeyed,prevUnkeyed,resolved,introduced
+              currUnkeyed,prevUnkeyed,resolved,introduced,
+              inventoryChanged, docsTotalA, docsTotalB
             },null,2));
           "
 
@@ -95,10 +100,12 @@ jobs:
           echo "unkeyedChanged=$(jq -r '.unkeyedChanged' change-class.json)" >> $GITHUB_OUTPUT
           echo "unkeyedNow=$(jq -r '.unkeyedNow' change-class.json)" >> $GITHUB_OUTPUT
           echo "unkeyedBefore=$(jq -r '.unkeyedBefore' change-class.json)" >> $GITHUB_OUTPUT
+          echo "inventoryChanged=$(jq -r '.inventoryChanged' change-class.json)" >> $GITHUB_OUTPUT
+          echo "docsTotalDelta=$(( $(jq -r '.docsTotalB' change-class.json) - $(jq -r '.docsTotalA' change-class.json) ))" >> $GITHUB_OUTPUT
 
       - name: Render PR body
         id: render_pr
-        if: steps.decide.outputs.lineage == 'true'
+        if: steps.decide.outputs.lineage == 'true' || steps.decide.outputs.inventoryChanged == 'true'
         run: |
           echo "Building PR body from change-class.json"
           UNKEYED_BEFORE=$(jq -r '.unkeyedBefore' change-class.json)
@@ -114,6 +121,7 @@ jobs:
             printf '%s\n' '**Flags**'
             printf '%s\n' "- lineageChanged: ${{ steps.decide.outputs.lineage }}"
             printf '%s\n' "- flagSummaryChanged: ${{ steps.decide.outputs.flags }}"
+            printf '%s\n' "- inventoryChanged: ${{ steps.decide.outputs.inventoryChanged }} (Δ total: ${{ steps.decide.outputs.docsTotalDelta }})"
             printf '%s\n' ''
             printf '%s\n' '**UNKEYED (informational — merge does not auto-close)**'
             printf '%s\n' "- Previously UNKEYED count: ${UNKEYED_BEFORE}"
@@ -137,7 +145,11 @@ jobs:
           retention-days: 30
 
       - name: Auto-commit metadata-only change to default branch
-        if: steps.decide.outputs.onlyMeta == 'true'
+        if: |
+          steps.decide.outputs.onlyMeta == 'true' ||
+          (steps.decide.outputs.lineage == 'false' &&
+           steps.decide.outputs.inventoryChanged == 'false' &&
+           (steps.decide.outputs.unkeyedChanged == 'true' || steps.decide.outputs.flags == 'true'))
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -156,7 +168,7 @@ jobs:
           echo "EOF" >> $GITHUB_OUTPUT
 
       - name: Create PR for content changes
-        if: steps.decide.outputs.lineage == 'true'
+        if: steps.decide.outputs.lineage == 'true' || steps.decide.outputs.inventoryChanged == 'true'
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "chore: Build MasterSuiteIndex (data change)"
