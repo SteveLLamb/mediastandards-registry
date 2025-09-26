@@ -52,7 +52,39 @@ jobs:
         run: |
           jq 'del(.generatedAt, .sourceHash)' src/main/reports/masterSuiteIndex.json > report.norm.json
           jq 'del(.generatedAt, .sourceHash)' baseline.json > baseline.norm.json
-          node -e "const fs=require('fs'); const a=JSON.parse(fs.readFileSync('baseline.norm.json','utf8')||'{}'); const b=JSON.parse(fs.readFileSync('report.norm.json','utf8')||'{}'); const onlyMeta=JSON.stringify(a)===JSON.stringify(b); const lineageChanged=JSON.stringify((a||{}).lineages||[])!==JSON.stringify((b||{}).lineages||[]); const flagSummaryChanged=JSON.stringify((a||{}).flagSummary||{})!==JSON.stringify((b||{}).flagSummary||{}); const unkeyed=x=>(((x||{}).skippedDocs||{}).summaryByReason||{}).UNKEYED||0; const unkeyedBefore=unkeyed(a); const unkeyedNow=unkeyed(b); const unkeyedChanged=unkeyedBefore!==unkeyedNow; fs.writeFileSync('change-class.json', JSON.stringify({onlyMeta,lineageChanged,flagSummaryChanged,unkeyedBefore,unkeyedNow,unkeyedChanged},null,2));"
+          node -e "
+            const fs=require('fs');
+            const getUnkeyed = (obj)=>{
+              const out=new Set();
+              const byPub=((obj||{}).skippedDocs||{}).byPublisher||{};
+              for(const block of Object.values(byPub)){
+                for(const it of (block.items||[])){
+                  if(it && it.reason==='UNKEYED'){
+                    const id=(it.key||it.docId||'').trim();
+                    if(id) out.add(id);
+                  }
+                }
+              }
+              return Array.from(out).sort();
+            };
+            const a=JSON.parse(fs.readFileSync('baseline.norm.json','utf8')||'{}');
+            const b=JSON.parse(fs.readFileSync('report.norm.json','utf8')||'{}');
+            const onlyMeta=JSON.stringify(a)===JSON.stringify(b);
+            const lineageChanged=JSON.stringify((a||{}).lineages||[])!==JSON.stringify((b||{}).lineages||[]);
+            const flagSummaryChanged=JSON.stringify((a||{}).flagSummary||{})!==JSON.stringify((b||{}).flagSummary||{});
+            const prevUnkeyed=getUnkeyed(a);
+            const currUnkeyed=getUnkeyed(b);
+            const prevSet=new Set(prevUnkeyed), currSet=new Set(currUnkeyed);
+            const resolved=prevUnkeyed.filter(x=>!currSet.has(x));
+            const introduced=currUnkeyed.filter(x=>!prevSet.has(x));
+            const unkeyedBefore=prevUnkeyed.length, unkeyedNow=currUnkeyed.length;
+            const unkeyedChanged=unkeyedBefore!==unkeyedNow || introduced.length>0 || resolved.length>0;
+            fs.writeFileSync('change-class.json', JSON.stringify({
+              onlyMeta,lineageChanged,flagSummaryChanged,
+              unkeyedBefore,unkeyedNow,unkeyedChanged,
+              currUnkeyed,prevUnkeyed,resolved,introduced
+            },null,2));
+          "
 
       - name: Decide path
         id: decide
@@ -63,6 +95,30 @@ jobs:
           echo "unkeyedChanged=$(jq -r '.unkeyedChanged' change-class.json)" >> $GITHUB_OUTPUT
           echo "unkeyedNow=$(jq -r '.unkeyedNow' change-class.json)" >> $GITHUB_OUTPUT
           echo "unkeyedBefore=$(jq -r '.unkeyedBefore' change-class.json)" >> $GITHUB_OUTPUT
+
+      - name: Render PR body
+        id: render_pr
+        if: steps.decide.outputs.lineage == 'true'
+        run: |
+          echo "Building PR body from change-class.json"
+          cat > pr_body.txt << 'EOF'
+          Automated build detected content changes.
+
+          **Flags**
+          - lineageChanged: ${{ steps.decide.outputs.lineage }}
+          - flagSummaryChanged: ${{ steps.decide.outputs.flags }}
+
+          **UNKEYED (informational — merge does not auto-close)**
+          - Previously UNKEYED count: $(jq -r '.unkeyedBefore' change-class.json)
+          - Currently UNKEYED count:  $(jq -r '.unkeyedNow' change-class.json)
+
+          **Resolved if merged (baseline → this branch):**
+          $(jq -r '.resolved[]? | "- [ ] " + .' change-class.json)
+
+          **Still UNKEYED on this branch:**
+          $(jq -r '.currUnkeyed[]? | "- " + .' change-class.json)
+          EOF
+          sed -n '1,200p' pr_body.txt
 
       - name: Upload artifacts (snapshot)
         uses: actions/upload-artifact@v4
@@ -99,17 +155,15 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "chore: MasterSuiteIndex (data change)"
-          title: "Build MasterSuiteIndex (data change)"
-          body: |
-            Automated build detected content changes.
-            - lineageChanged: ${{ steps.decide.outputs.lineage }}
-            - flagSummaryChanged: ${{ steps.decide.outputs.flags }}
+          title: "Nightly MasterSuiteIndex (data change)"
+          body-path: pr_body.txt
           branch: chore/build-mastersuite
           add-paths: ${{ steps.files.outputs.paths }}
           labels: automated, reports
           delete-branch: true
 
       - name: Ensure per-doc UNKEYED issues (one issue per docId; idempotent)
+        if: ${{ github.ref == format('refs/heads/{0}', github.event.repository.default_branch) }}
         uses: actions/github-script@v7
         with:
           script: |
@@ -156,7 +210,19 @@ jobs:
               ].filter(Boolean).join('\n');
 
               if (existing) {
-                core.info(`UNKEYED issue already exists for ${docKey}`);
+                // Avoid duplicate comments if the latest comment already includes this run tag
+                const comments = await github.paginate(github.rest.issues.listComments, {
+                  owner: context.repo.owner, repo: context.repo.repo, issue_number: existing.number
+                });
+                const last = comments[comments.length - 1];
+                if (!last || !String(last.body || '').includes(runTag)) {
+                  await github.rest.issues.createComment({
+                    owner: context.repo.owner, repo: context.repo.repo, issue_number: existing.number, body
+                  });
+                  core.info(`Commented on existing UNKEYED issue for ${docKey}`);
+                } else {
+                  core.info(`Skipped duplicate comment for ${docKey} (already commented this run/day).`);
+                }
                 return existing.number;
               } else {
                 const created = await github.rest.issues.create({
