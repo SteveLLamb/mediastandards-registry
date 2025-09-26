@@ -197,34 +197,21 @@ jobs:
             // Helper: get or create issue for a specific doc key
             async function getOrCreateIssueForDoc(docKey, details) {
               const existing = (await listOpenUnkeyedIssues()).find(i => i.title === `UNKEYED: ${docKey}`);
-              const stamp = new Date().toISOString().slice(0,10);
-              const runTag = `Run #${context.runId}`;
-              const body = [
-                `Detected as UNKEYED on ${stamp}. ${runTag}.`,
-                '',
-                'Context:',
-                `- Publisher: ${details.publisher || '(unknown)'}`,
-                `- Rule: ${details.rule || '(unknown)'}`,
-                `- Rule detail: ${details.ruleDetail || '(none)'}`,
-                details.lineageKey ? `- Lineage key: ${details.lineageKey}` : null
-              ].filter(Boolean).join('\n');
-
               if (existing) {
-                // Avoid duplicate comments if the latest comment already includes this run tag
-                const comments = await github.paginate(github.rest.issues.listComments, {
-                  owner: context.repo.owner, repo: context.repo.repo, issue_number: existing.number
-                });
-                const last = comments[comments.length - 1];
-                if (!last || !String(last.body || '').includes(runTag)) {
-                  await github.rest.issues.createComment({
-                    owner: context.repo.owner, repo: context.repo.repo, issue_number: existing.number, body
-                  });
-                  core.info(`Commented on existing UNKEYED issue for ${docKey}`);
-                } else {
-                  core.info(`Skipped duplicate comment for ${docKey} (already commented this run/day).`);
-                }
+                core.info(`UNKEYED issue already exists for ${docKey}`);
                 return existing.number;
               } else {
+                const stamp = new Date().toISOString().slice(0,10);
+                const runTag = `Run #${context.runId}`;
+                const body = [
+                  `Detected as UNKEYED on ${stamp}. ${runTag}.`,
+                  '',
+                  'Context:',
+                  `- Publisher: ${details.publisher || '(unknown)'}`,
+                  `- Rule: ${details.rule || '(unknown)'}`,
+                  `- Rule detail: ${details.ruleDetail || '(none)'}`,
+                  details.lineageKey ? `- Lineage key: ${details.lineageKey}` : null
+                ].filter(Boolean).join('\n');
                 const created = await github.rest.issues.create({
                   owner: context.repo.owner, repo: context.repo.repo,
                   title: `UNKEYED: ${docKey}`,
