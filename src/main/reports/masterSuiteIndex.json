@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2025-09-26T18:25:54.455Z",
+  "generatedAt": "2025-09-26T18:30:57.928Z",
   "sourcePath": "src/main/data/documents.json",
-  "sourceHash": "sha256:051844263b018ec95de6c22323f8ca5cf1fb46529ccca3c9454ff1c162e71566",
+  "sourceHash": "sha256:2f67a9117dadd9570eba7df6b11f1cb9b227c9446efb755719fe5bd1d006fe95",
   "publisherCounts": {
     "total": 1470,
     "counts": {
@@ -2099,17 +2099,17 @@
         "items": [
           {
             "docId": "x509-sg.2000",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
+            "reason": "FILTERED",
+            "rule": "FILTERED",
+            "ruleDetail": "docType=Style Guide",
+            "category": "docType"
           }
         ]
       }
     },
     "summaryByReason": {
-      "FILTERED": 203,
-      "UNKEYED": 1,
+      "FILTERED": 204,
+      "UNKEYED": 0,
       "UNKNOWN": 0
     }
   },
@@ -2746,7 +2746,7 @@
           },
           {
             "lineage": "W3C|xpath||",
-            "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:W3C.xpath.19991115->W3C.xpath3.1.20170321"
+            "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:W3C.xpath.19991116->W3C.xpath3.1.20170321"
           }
         ]
       },
@@ -36594,7 +36594,7 @@
       "w3cVersion": null,
       "docs": [
         {
-          "docId": "W3C.xpath.19991115",
+          "docId": "W3C.xpath.19991116",
           "publicationDate": "1999-11-16",
           "releaseTag": null,
           "statusActive": false,
@@ -36605,17 +36605,17 @@
           "statusVersionless": false
         }
       ],
-      "latestBaseId": "W3C.xpath.19991115",
-      "latestAnyId": "W3C.xpath.19991115",
+      "latestBaseId": "W3C.xpath.19991116",
+      "latestAnyId": "W3C.xpath.19991116",
       "latestDateKey": "19991116",
       "hasActiveBase": false,
       "hasWithdrawn": false,
       "hasStabilized": false,
       "latestActiveBaseId": null,
-      "latestSupersededBaseId": "W3C.xpath.19991115",
+      "latestSupersededBaseId": "W3C.xpath.19991116",
       "prevBaseId": null,
       "flagInconsistencies": [
-        "SUPERSEDED_BY_OUT_OF_LINEAGE:W3C.xpath.19991115->W3C.xpath3.1.20170321"
+        "SUPERSEDED_BY_OUT_OF_LINEAGE:W3C.xpath.19991116->W3C.xpath3.1.20170321"
       ],
       "counts": {
         "bases": 1,
