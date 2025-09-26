@@ -103,11 +103,9 @@ jobs:
           echo "Building PR body from change-class.json"
           UNKEYED_BEFORE=$(jq -r '.unkeyedBefore' change-class.json)
           UNKEYED_NOW=$(jq -r '.unkeyedNow' change-class.json)
-          RESOLVED_LIST=$(jq -r '.resolved[]? | "- [ ] " + .' change-class.json)
           CURR_LIST=$(jq -r '.currUnkeyed[]? | "- " + .' change-class.json)
 
-          # Provide fallbacks if lists are empty
-          if [ -z "$RESOLVED_LIST" ]; then RESOLVED_LIST="- [ ] (none)"; fi
+          # Provide fallback if list is empty
           if [ -z "$CURR_LIST" ]; then CURR_LIST="- (none)"; fi
 
           {
@@ -120,9 +118,6 @@ jobs:
             printf '%s\n' '**UNKEYED (informational — merge does not auto-close)**'
             printf '%s\n' "- Previously UNKEYED count: ${UNKEYED_BEFORE}"
             printf '%s\n' "- Currently UNKEYED count:  ${UNKEYED_NOW}"
-            printf '%s\n' ''
-            printf '%s\n' '**Resolved if merged (baseline → this branch):**'
-            printf '%s\n' "${RESOLVED_LIST}"
             printf '%s\n' ''
             printf '%s\n' '**Still UNKEYED on this branch:**'
             printf '%s\n' "${CURR_LIST}"
