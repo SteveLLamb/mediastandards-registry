@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2025-09-26T19:39:43.824Z",
+  "generatedAt": "2025-09-26T19:41:30.799Z",
   "sourcePath": "src/main/data/documents.json",
-  "sourceHash": "sha256:2f67a9117dadd9570eba7df6b11f1cb9b227c9446efb755719fe5bd1d006fe95",
+  "sourceHash": "sha256:af447e8690d1bd4c79c738f812a84d6d0f846042328748a11f9f4b7d74e8fcc4",
   "publisherCounts": {
-    "total": 1470,
+    "total": 1469,
     "counts": {
       "SMPTE": 754,
       "IETF": 109,
@@ -96,12 +96,11 @@
       "ALDUS CORP/ADOBE": 1,
       "UNITED NATIONS": 1,
       "USPO": 1,
-      "WHATWG": 1,
-      "UNIVERSITY OF AUCKLAND": 1
+      "WHATWG": 1
     }
   },
   "skippedDocs": {
-    "totalSkipped": 204,
+    "totalSkipped": 203,
     "byPublisher": {
       "POLYMER DEGRADATION AND STABILITY": {
         "count": 1,
@@ -2090,25 +2089,10 @@
             "category": "docType"
           }
         ]
-      },
-      "UNIVERSITY OF AUCKLAND": {
-        "count": 1,
-        "docIds": [
-          "x509-sg.2000"
-        ],
-        "items": [
-          {
-            "docId": "x509-sg.2000",
-            "reason": "FILTERED",
-            "rule": "FILTERED",
-            "ruleDetail": "docType=Style Guide",
-            "category": "docType"
-          }
-        ]
       }
     },
     "summaryByReason": {
-      "FILTERED": 204,
+      "FILTERED": 203,
       "UNKEYED": 0,
       "UNKNOWN": 0
     }
