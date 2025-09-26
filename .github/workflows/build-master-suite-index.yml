@@ -109,45 +109,104 @@ jobs:
           labels: automated, reports
           delete-branch: true
 
-      - name: File/update Issue for UNKEYED (optional gate)
-        if: ${{ steps.decide.outputs.unkeyedChanged == 'true' || (steps.decide.outputs.unkeyedBefore == '0' && steps.decide.outputs.unkeyedNow != '0') }}
+      - name: Ensure per-doc UNKEYED issues (one issue per docId; idempotent)
         uses: actions/github-script@v7
-        env:
-          UNKEYED_BEFORE: ${{ steps.decide.outputs.unkeyedBefore }}
-          UNKEYED_NOW: ${{ steps.decide.outputs.unkeyedNow }}
         with:
           script: |
             const fs = require('fs');
-            const report = JSON.parse(fs.readFileSync('src/main/reports/masterSuiteIndex.json','utf8'));
-            const byReason = report?.skippedDocs?.summaryByReason || {};
-            const now = Number(byReason.UNKEYED || 0);
-            const before = Number(process.env.UNKEYED_BEFORE || 0);
-            // If an issue already exists and the count hasn't changed, skip spamming comments
-            if (now === before) { core.info(`UNKEYED unchanged at ${now}; skipping.`); return; }
-            if (!now) { core.info('UNKEYED is zero; nothing to file.'); return; }
-
-            // Collect up to 10 example UNKEYED items from byPublisher
+            const path = 'src/main/reports/masterSuiteIndex.json';
+            const report = JSON.parse(fs.readFileSync(path, 'utf8'));
             const byPub = report?.skippedDocs?.byPublisher || {};
-            const examplesArr = [];
-            for (const [pub, block] of Object.entries(byPub)) {
+
+            // Build the CURRENT set of UNKEYED doc identifiers (prefer 'key' if present, else docId)
+            const currentUnkeyed = new Set();
+            for (const block of Object.values(byPub)) {
               for (const it of (block.items || [])) {
-                if (it.reason === 'UNKEYED') {
-                  const id = it.key || it.docId || '(unknown)';
-                  examplesArr.push(`- ${id} — ${pub}`);
-                  if (examplesArr.length >= 10) break;
+                if (it?.reason === 'UNKEYED') {
+                  const id = (it.key || it.docId || '').trim();
+                  if (id) currentUnkeyed.add(id);
                 }
               }
-              if (examplesArr.length >= 10) break;
             }
-            const examples = examplesArr.length ? examplesArr.join('\n') : '- (no per-item examples captured in report)';
 
-            const title = `UNKEYED present in nightly report (was ${before}, now ${now})`;
-            const body = `Detected UNKEYED skipped count changed from ${before} to ${now}.\n\nTop examples:\n${examples}\n\nAction: extend keying in buildMasterSuiteIndex.js.`;
+            core.info(`Current UNKEYED count in report: ${currentUnkeyed.size}`);
 
-            const { data: issues } = await github.rest.issues.listForRepo({ owner: context.repo.owner, repo: context.repo.repo, state: 'open', labels: 'automated,unkeyed' });
-            const existing = issues.find(i => i.title.startsWith('UNKEYED present in nightly report'));
-            if (existing) {
-              await github.rest.issues.createComment({ owner: context.repo.owner, repo: context.repo.repo, issue_number: existing.number, body });
-            } else {
-              await github.rest.issues.create({ owner: context.repo.owner, repo: context.repo.repo, title, body, labels: ['automated','unkeyed'] });
+            // Helper: fetch all open issues with label 'unkeyed' and title prefix 'UNKEYED: '
+            async function listOpenUnkeyedIssues() {
+              const issues = await github.paginate(
+                github.rest.issues.listForRepo,
+                { owner: context.repo.owner, repo: context.repo.repo, state: 'open', labels: 'unkeyed' }
+              );
+              return issues.filter(i => i.title.startsWith('UNKEYED: '));
             }
+
+            // Helper: get or create issue for a specific doc key
+            async function getOrCreateIssueForDoc(docKey, details) {
+              const existing = (await listOpenUnkeyedIssues()).find(i => i.title === `UNKEYED: ${docKey}`);
+              const stamp = new Date().toISOString().slice(0,10);
+              const runTag = `Run #${context.runId}`;
+              const body = [
+                `Detected as UNKEYED on ${stamp}. ${runTag}.`,
+                '',
+                'Context:',
+                `- Publisher: ${details.publisher || '(unknown)'}`,
+                `- Rule: ${details.rule || '(unknown)'}`,
+                `- Rule detail: ${details.ruleDetail || '(none)'}`,
+                details.lineageKey ? `- Lineage key: ${details.lineageKey}` : null
+              ].filter(Boolean).join('\n');
+
+              if (existing) {
+                core.info(`UNKEYED issue already exists for ${docKey}`);
+                return existing.number;
+              } else {
+                const created = await github.rest.issues.create({
+                  owner: context.repo.owner, repo: context.repo.repo,
+                  title: `UNKEYED: ${docKey}`,
+                  body,
+                  labels: ['automated','unkeyed','msi']
+                });
+                core.info(`Created UNKEYED issue #${created.data.number} for ${docKey}`);
+                return created.data.number;
+              }
+            }
+
+            // Map to collect per-doc details from report for nicer bodies
+            const detailByKey = {};
+            for (const [pub, block] of Object.entries(byPub)) {
+              for (const it of (block.items || [])) {
+                if (it?.reason === 'UNKEYED') {
+                  const key = (it.key || it.docId || '').trim();
+                  if (!key) continue;
+                  detailByKey[key] = {
+                    publisher: pub,
+                    rule: it.rule,
+                    ruleDetail: it.ruleDetail,
+                    lineageKey: it.key
+                  };
+                }
+              }
+            }
+
+            // 1) Ensure an issue exists per CURRENT unkeyed doc
+            for (const docKey of currentUnkeyed) {
+              await getOrCreateIssueForDoc(docKey, detailByKey[docKey] || {});
+            }
+
+            // 2) Close any stale UNKEYED issues whose docKey is no longer present
+            const openIssues = await listOpenUnkeyedIssues();
+            for (const issue of openIssues) {
+              const docKey = issue.title.replace(/^UNKEYED: /,'');
+              if (!currentUnkeyed.has(docKey)) {
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner, repo: context.repo.repo, issue_number: issue.number,
+                  body: `Resolved: no longer reported as UNKEYED in tonight's run (Run #${context.runId}). Closing.`
+                });
+                await github.rest.issues.update({
+                  owner: context.repo.owner, repo: context.repo.repo, issue_number: issue.number, state: 'closed'
+                });
+                core.info(`Closed resolved UNKEYED issue for ${docKey}`);
+              }
+            }
+      - name: Log UNKEYED summary (post-issue handling)
+        run: |
+          echo "UNKEYED per-doc issues ensured. See repository issues labeled 'unkeyed' for details."
