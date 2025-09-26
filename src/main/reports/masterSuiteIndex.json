@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2025-09-08T17:44:28.156Z",
+  "generatedAt": "2025-09-26T17:13:05.129Z",
   "sourcePath": "src/main/data/documents.json",
-  "sourceHash": "sha256:2f67a9117dadd9570eba7df6b11f1cb9b227c9446efb755719fe5bd1d006fe95",
+  "sourceHash": "sha256:20280a068767cb545672dc1947c7e378fbee521869cf7da090da69e5364cc70d",
   "publisherCounts": {
     "total": 1470,
     "counts": {
@@ -2099,17 +2099,17 @@
         "items": [
           {
             "docId": "x509-sg.2000",
-            "reason": "FILTERED",
-            "rule": "FILTERED",
-            "ruleDetail": "docType=Style Guide",
-            "category": "docType"
+            "reason": "UNKEYED",
+            "rule": "UNKEYED",
+            "ruleDetail": "noRegexMatch",
+            "category": "standard"
           }
         ]
       }
     },
     "summaryByReason": {
-      "FILTERED": 204,
-      "UNKEYED": 0,
+      "FILTERED": 203,
+      "UNKEYED": 1,
       "UNKNOWN": 0
     }
   },
@@ -36633,7 +36633,7 @@
       "w3cVersion": "1",
       "docs": [
         {
-          "docId": "W3C.xpath3.1.20170321",
+          "docId": "W3C.xpath3.1.20170322",
           "publicationDate": "2017-03-21",
           "releaseTag": null,
           "statusActive": true,
@@ -36644,13 +36644,13 @@
           "statusVersionless": false
         }
       ],
-      "latestBaseId": "W3C.xpath3.1.20170321",
-      "latestAnyId": "W3C.xpath3.1.20170321",
-      "latestDateKey": "20170321",
+      "latestBaseId": "W3C.xpath3.1.20170322",
+      "latestAnyId": "W3C.xpath3.1.20170322",
+      "latestDateKey": "20170322",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": false,
-      "latestActiveBaseId": "W3C.xpath3.1.20170321",
+      "latestActiveBaseId": "W3C.xpath3.1.20170322",
       "latestSupersededBaseId": null,
       "prevBaseId": null,
       "flagInconsistencies": [],
