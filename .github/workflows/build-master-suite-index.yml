@@ -99,12 +99,12 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "chore: MasterSuiteIndex (data change)"
-          title: "Nightly MasterSuiteIndex (data change)"
+          title: "Build MasterSuiteIndex (data change)"
           body: |
-            Automated nightly build detected content changes.
+            Automated build detected content changes.
             - lineageChanged: ${{ steps.decide.outputs.lineage }}
             - flagSummaryChanged: ${{ steps.decide.outputs.flags }}
-          branch: chore/nightly-mastersuite
+          branch: chore/build-mastersuite
           add-paths: ${{ steps.files.outputs.paths }}
           labels: automated, reports
           delete-branch: true
