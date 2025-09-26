@@ -2,7 +2,10 @@ name: Build MasterSuite Index
 
 on:
   schedule:
-    - cron: "15 16 * * *"   # 09:15 PT (cron uses UTC)
+    - cron: "15 04 * * *"   # 21:15 PT (cron in UTC; aligns with 9:15pm during PDT)
+  push:
+    branches:
+      - main                # Run whenever changes land on the default branch
   workflow_dispatch:        # Manual run for testing
 
 permissions:
