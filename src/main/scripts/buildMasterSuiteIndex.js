@@ -50,7 +50,7 @@ const NIST_ALIAS_MAP = {
 // Map a historically-seen or mistaken docId to the canonical docId we store in the index.
 const GLOBAL_ALIAS_MAP = {
   // Examples (uncomment / extend as needed):
-  // 'SMPTE.AG10b.2020': 'SMPTE.AG10B.2020',
+  //'SMPTE.AG10b.2020': 'SMPTE.AG10B.2020',
   // 'W3C.ttaf1-dfxp.20061114': 'W3C.ttml1.20061114'
 };
 

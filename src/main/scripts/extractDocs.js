@@ -15,6 +15,68 @@ const cheerio = require('cheerio');
 const dayjs = require('dayjs');
 const fs = require('fs');
 
+// Optional reference normalization via patterns (patterns-only, no byCite exact map)
+let refMap = {};
+try {
+  refMap = require('../input/refMap.json');
+} catch (_) {
+  refMap = {};
+}
+
+// byCitePatterns maps *refId* → pattern(s)
+// A pattern can be:
+//   - plain string (normalized exact match: collapse spaces, trim, lowercase)
+//   - regex written as "/.../flags"
+// Values can be a single pattern string or an array of patterns.
+function normalizePatterns(val) {
+  if (Array.isArray(val)) return val.filter(v => typeof v === 'string' && v.trim().length > 0);
+  if (typeof val === 'string' && val.trim().length > 0) return [val];
+  return [];
+}
+
+const refMapPatterns = [];
+if (refMap && refMap.byCitePatterns && typeof refMap.byCitePatterns === 'object') {
+  for (const [refId, patternsVal] of Object.entries(refMap.byCitePatterns)) {
+    const patterns = normalizePatterns(patternsVal);
+    if (!patterns.length) continue;
+    for (const pat of patterns) {
+      const m = pat.match(/^\s*\/(.*)\/([a-z]*)\s*$/i);
+      if (m) {
+        const body = m[1];
+        const flags = m[2] || 'i';
+        try {
+          refMapPatterns.push({ type: 'regex', re: new RegExp(body, flags), refId });
+        } catch (_) { /* ignore bad regex */ }
+      } else {
+        const key = String(pat).replace(/\s+/g, ' ').trim().toLowerCase();
+        if (key) refMapPatterns.push({ type: 'plain', key, refId });
+      }
+    }
+  }
+}
+
+function mapRefByCite(text) {
+  if (!text) return null;
+  const norm = String(text).replace(/\s+/g, ' ').trim().toLowerCase();
+  // 1) plain exact matches first (normalized)
+  for (const p of refMapPatterns) {
+    if (p.type === 'plain' && p.key === norm) return p.refId;
+  }
+  // 2) regex patterns
+  for (const p of refMapPatterns) {
+    if (p.type === 'regex') {
+      try { if (p.re.test(text)) return p.refId; } catch (_) {}
+    }
+  }
+  return null;
+}
+
+// Normalize titles by removing a leading "SMPTE" token (and common punctuation/spaces)
+function stripLeadingSmpte(title) {
+  if (!title) return title;
+  return String(title).replace(/^\s*SMPTE\s*[:\-–—]?\s*/i, '').trim();
+}
+
 const typeMap = {
         AG: 'Administrative Guideline',
         ST: 'Standard',
@@ -28,6 +90,38 @@ const typeMap = {
 const FILTER_ENABLED = true; // false = process all
 const filterList = require('../input/filterList.smpte.json');
 const suiteMap = new Map();
+
+// --- Seed URL helpers ---
+function normalizeSeedUrl(u) {
+  try {
+    // Force https and strip query/hash
+    const url = new URL(u);
+    url.protocol = 'https:';
+    url.hash = '';
+    url.search = '';
+    let s = url.toString();
+    // Ensure trailing slash for consistency with discovery URLs
+    if (!s.endsWith('/')) s += '/';
+    return s;
+  } catch (_) {
+    return u; // leave untouched if not a valid URL string
+  }
+}
+
+function shouldFilterUrl(url) {
+  if (!FILTER_ENABLED) return false;
+  // Reuse filterList semantics: exact match or prefix match
+  for (const f of filterList) {
+    if (f === url) return true;
+    if (url.startsWith(f)) return true;
+    // If a suite URL is present in filterList and we know its children, treat as filtered
+    if (suiteMap.has(f)) {
+      const children = suiteMap.get(f) || [];
+      if (children.some(child => child === url || url.startsWith(child))) return true;
+    }
+  }
+  return false;
+}
 
 function printUrlsSuiteWithChildren(label, urls) {
   if (!urls.length) return;
@@ -303,7 +397,11 @@ function injectMetaForDoc(doc, source, mode, changedFieldsMap = {}) {
   const resolvedStatusFields = ['active', 'latestVersion', 'superseded'];
 
   for (const field of Object.keys(doc)) {
-    if (typeof doc[field] !== 'object' || Array.isArray(doc[field])) {
+    const value = doc[field];
+    // Skip $meta fields themselves and any undefined values
+    if (field.endsWith('$meta')) continue;
+    if (value === undefined) continue;
+    if (typeof value !== 'object' || Array.isArray(value)) {
       const fieldSource = resolvedFields.includes(field) ? 'resolved' : source;
       injectMeta(doc, field, fieldSource, mode, changedFieldsMap[field]);
     }
@@ -311,10 +409,11 @@ function injectMetaForDoc(doc, source, mode, changedFieldsMap = {}) {
 
   if (doc.status && typeof doc.status === 'object') {
     for (const sField of Object.keys(doc.status)) {
-      if (typeof doc.status[sField] !== 'object') {
-        const fieldSource = resolvedStatusFields.includes(sField) ? 'resolved' : source;
-        injectMeta(doc.status, sField, fieldSource, mode, changedFieldsMap[`status.${sField}`]);
-      }
+      if (sField.endsWith('$meta')) continue;
+      const sVal = doc.status[sField];
+      if (sVal === undefined || typeof sVal === 'object') continue;
+      const fieldSource = resolvedStatusFields.includes(sField) ? 'resolved' : source;
+      injectMeta(doc.status, sField, fieldSource, mode, changedFieldsMap[`status.${sField}`]);
     }
   }
 }
@@ -412,6 +511,10 @@ function mergeInferredInto(existingDoc, inferredDoc) {
 }
 
 const parseRefId = (text, href = '') => {
+  // allow explicit cite→refId normalization via refMap.json
+  const mapped = mapRefByCite(text);
+  if (mapped) return mapped;
+
   if (/w3\.org\/TR\/\d{4}\/REC-([^\/]+)-(\d{8})\//i.test(href)) {
     const [, shortname, yyyymmdd] = href.match(/REC-([^\/]+)-(\d{8})/i);
     return `W3C.${shortname}.${yyyymmdd}`;
@@ -422,17 +525,23 @@ const parseRefId = (text, href = '') => {
   }
   const parts = text.split('|').map(p => p.trim());
   text = parts.find(p => /ISO\/IEC|ISO/.test(p)) || parts[0];
-  // SMPTE refs: support all known doc types (ST, RP, RDD, EG, AG, OV)
-  // If a year (and optional month) is present after a colon, pin to that version; otherwise use .LATEST
-  if (/SMPTE\s+(ST|RP|RDD|EG|AG|OV)\s+(\d+)(?:-(\d+))?(?::\s*(\d{4})(?:-(\d{2}))?)?/i.test(text)) {
-    const [, type, num, part, year, month] = text.match(/SMPTE\s+(ST|RP|RDD|EG|AG|OV)\s+(\d+)(?:-(\d+))?(?::\s*(\d{4})(?:-(\d{2}))?)?/i);
-    const lineage = `SMPTE.${type.toUpperCase()}${part ? `${num}-${part}` : num}`;
-    if (year) {
-      // Match SMPTE docId year formatting used elsewhere: YYYY for <2023, YYYY-MM for 2023+ when month provided
-      const suffix = (parseInt(year, 10) >= 2023 && month) ? `${year}-${month}` : year;
-      return `${lineage}.${suffix}`;
+  // SMPTE refs: support ST/RP/RDD/EG/AG/OV
+  // Allow space or hyphen (incl. common Unicode dashes) between type and number
+  // Allow optional alpha suffix in the number (e.g., AG-10B)
+  {
+    const smpteRe = /SMPTE\s+(ST|RP|RDD|EG|AG|OV)[\s\u00A0\u2010-\u2015\-]+(\d+[A-Za-z]?)(?:-(\d+))?(?::\s*(\d{4})(?:-(\d{2}))?)?/i;
+    const m = text.match(smpteRe);
+    if (m) {
+      const [, type, numRaw, part, year, month] = m;
+      const num = String(numRaw).toUpperCase();
+      const lineage = `SMPTE.${type.toUpperCase()}${part ? `${num}-${part}` : num}`;
+      if (year) {
+        const y = parseInt(year, 10);
+        const suffix = (y >= 2023 && month) ? `${year}-${month}` : year;
+        return `${lineage}.${suffix}`;
+      }
+      return `${lineage}`;
     }
-    return `${lineage}`;
   }
   if (/RFC\s*(\d+)/i.test(text)) {
     return `RFC${text.match(/RFC\s*(\d+)/i)[1]}`;
@@ -471,11 +580,118 @@ const parseRefId = (text, href = '') => {
     const year = years.length ? Math.max(...years) : null;
     return `IEC.${base}${year ? `.${year}` : ''}`;
   }
-  if (/Language Subtag Registry/i.test(text)) return 'IANA.LSR';
-  if (/Digital Cinema Naming/i.test(text)) return 'ISDCF.DCNC';
-  if (/Common Metadata Ratings/i.test(text)) return 'CMR.ML';
-  if (/UN/i.test(text)) return 'UN.SCAC.R4';
   return null;
+};
+
+// Extract a single document from a "seed" URL that points directly to a doc page (no release folders).
+// Assumes the page hosts an index.html with the same meta structure used by SMPTE doc pages.
+const extractFromSeedDoc = async (seedRootUrl) => {
+  const rootUrl = seedRootUrl.endsWith('/') ? seedRootUrl : seedRootUrl + '/';
+  const indexUrl = rootUrl + 'index.html';
+  try {
+    const indexRes = await axios.get(indexUrl);
+    const $index = cheerio.load(indexRes.data);
+
+    const pubType = $index('[itemprop="pubType"]').attr('content');
+    const pubNumber = $index('[itemprop="pubNumber"]').attr('content');
+    const pubPart = $index('[itemprop="pubPart"]').attr('content');
+    const pubDate = $index('[itemprop="pubDateTime"]').attr('content');
+    const suiteTitle = $index('[itemprop="pubSuiteTitle"]').attr('content');
+    const title = ($index('title').text() || '').trim();
+    const tc = $index('[itemprop="pubTC"]').attr('content');
+
+    const pubDateObj = dayjs(pubDate);
+    const dateFormatted = pubDateObj.isValid() ? pubDateObj.format('YYYY-MM-DD') : undefined;
+    // Create a synthetic releaseTag from the date (keeps downstream status wiring happy)
+    const syntheticTag = pubDateObj.isValid() ? `${pubDateObj.format('YYYYMMDD')}-pub` : '00000000-pub';
+
+    const docType = typeMap[pubType?.toUpperCase()] || pubType;
+    let label = `SMPTE ${pubType} ${pubNumber}${pubPart ? `-${pubPart}` : ''}`;
+    let id = `SMPTE.${pubType}${pubNumber}${pubPart ? `-${pubPart}` : ''}`;
+    // Special case: OM documents — label fixed to "SMPTE OM" and id maps from title via refMap patterns
+    if ((pubType || '').toUpperCase() === 'OM') {
+      const rawTitleForMap = (suiteTitle && suiteTitle.trim()) ? suiteTitle : title;
+      const normTitleForMap = stripLeadingSmpte(rawTitleForMap);
+      const mappedId = mapRefByCite(normTitleForMap) || mapRefByCite(rawTitleForMap);
+      if (mappedId) {
+        label = 'SMPTE OM';
+        id = mappedId;
+      }
+    }
+    const href = rootUrl;
+    const pubTypeNum = `${pubType}${pubNumber}${pubPart ? `-${pubPart}` : ''}`;
+    const repoUrl = `https://github.com/SMPTE/${(pubTypeNum || '').toLowerCase()}/`;
+
+    const pubStage = $index('[itemprop="pubStage"]').attr('content');
+    const pubState = $index('[itemprop="pubState"]').attr('content');
+
+    const pubPublisher =
+      ($index('[itemprop="publisher"]').text() || $index('[itemprop="publisher"]').attr('content') || '').trim() || 'SMPTE';
+
+    // References
+    const refSections = { normative: [], bibliographic: [] };
+    ['normative-references', 'bibliography'].forEach((sectionId) => {
+      const type = sectionId.includes('normative') ? 'normative' : 'bibliographic';
+      $index(`#sec-${sectionId} ul li`).each((_, el) => {
+        const cite = $index(el).find('cite');
+        const refText = cite.text();
+        const href = $index(el).find('a.ext-ref').attr('href') || '';
+        const refId = parseRefId(refText, href);
+        if (refId) {
+          if (Array.isArray(refId)) refSections[type].push(...refId);
+          else refSections[type].push(refId);
+        } else {
+          badRefs.push({ docId: id, type, refText, href });
+        }
+      });
+    });
+
+    const revisionRaw = $index('[itemprop="pubRevisionOf"]').attr('content');
+    let revisionOf;
+    if (revisionRaw) {
+      const match = revisionRaw.match(/SMPTE\s+([A-Z]+)\s+(\d+)(?:-(\d+))?:?(\d{4})(?:-(\d{2}))?/);
+      if (match) {
+        const [, type, number, part, year, month] = match;
+        const suffix = (parseInt(year) >= 2023 && month) ? `${year}-${month}` : year;
+        const baseId = `SMPTE.${type.toUpperCase()}${part ? `${number}-${part}` : number}.${suffix}`;
+        revisionOf = [baseId];
+      }
+    }
+
+    const doc = {
+      docId: id,
+      docLabel: label,
+      docNumber: pubNumber,
+      docPart: pubPart,
+      docTitle: `${suiteTitle || ''} ${title}`.trim(),
+      docType,
+      group: tc ? `smpte-${tc.toLowerCase()}-tc` : undefined,
+      publicationDate: dateFormatted,
+      releaseTag: syntheticTag,
+      publisher: pubPublisher,
+      href,
+      repo: repoUrl,
+      status: {
+        active: true,                 // single page represents the latest available view
+        latestVersion: true,
+        stage: pubStage,
+        state: pubState,
+        superseded: false
+      },
+      references: refSections,
+      ...(revisionOf && { revisionOf })
+    };
+
+    Object.defineProperty(doc, '__sourceUrl', {
+      value: rootUrl,
+      enumerable: false
+    });
+
+    return [doc];
+  } catch (err) {
+    console.warn(`⚠️ Seed doc parse failed at ${indexUrl}: ${err.message}`);
+    return [];
+  }
 };
 
 const extractFromUrl = async (rootUrl) => {
@@ -638,8 +854,18 @@ const extractFromUrl = async (rootUrl) => {
       const dateShort = pubDateObj.format('YYYY-MM');
 
       const docType = typeMap[pubType?.toUpperCase()] || pubType;
-      const label = `SMPTE ${pubType} ${pubNumber}${pubPart ? `-${pubPart}` : ''}:${dateShort}`;
-      const id = `SMPTE.${pubType}${pubNumber}${pubPart ? `-${pubPart}` : ''}.${dateShort}`;
+      let label = `SMPTE ${pubType} ${pubNumber}${pubPart ? `-${pubPart}` : ''}:${dateShort}`;
+      let id = `SMPTE.${pubType}${pubNumber}${pubPart ? `-${pubPart}` : ''}.${dateShort}`;
+      // Special case: OM documents — label fixed to "SMPTE OM" and id maps from title via refMap patterns
+      if ((pubType || '').toUpperCase() === 'OM') {
+        const rawTitleForMap = (suiteTitle && suiteTitle.trim()) ? suiteTitle : title;
+        const normTitleForMap = stripLeadingSmpte(rawTitleForMap);
+        const mappedId = mapRefByCite(normTitleForMap) || mapRefByCite(rawTitleForMap);
+        if (mappedId) {
+          label = 'SMPTE OM';
+          id = mappedId;
+        }
+      }
       const doi = `10.5594/SMPTE.${pubType}${pubNumber}${pubPart ? `-${pubPart}` : ''}.${pubDateObj.format('YYYY')}`;
       const href = `https://doi.org/${doi}`;
       const pubTypeNum = `${pubType}${pubNumber}${pubPart ? `-${pubPart}` : ''}`;
@@ -661,7 +887,8 @@ const extractFromUrl = async (rootUrl) => {
           const href = $index(el).find('a.ext-ref').attr('href') || '';
           const refId = parseRefId(refText, href);
           if (refId) {
-            refSections[type].push(refId);
+            if (Array.isArray(refId)) refSections[type].push(...refId);
+            else refSections[type].push(refId);
           } else {
             badRefs.push({ docId: id, type, refText, href });
           }
@@ -848,18 +1075,46 @@ const extractFromUrl = async (rootUrl) => {
   return docs;
 };
 
+// Main async block
 (async () => {
   //const urls = require('../input/urls.json');
-  let urls;
-  urls = await discoverFromRootDocPage();
-  console.log(`\n📂 Processing ${urls.length} SMPTE URLs...`);
+  let urls = await discoverFromRootDocPage(); // already filtered via filterDiscoveredDocs()
+  // --- Optional: merge in seed URLs (union) ---
+  const seedPath = 'src/main/input/seedUrls.smpte.json';
+  const seedSet = new Set();
+  let seedsAdded = 0, seedsSkipped = 0;
+  if (fs.existsSync(seedPath)) {
+    try {
+      const rawSeeds = JSON.parse(fs.readFileSync(seedPath, 'utf-8'));
+      if (Array.isArray(rawSeeds)) {
+        for (const raw of rawSeeds) {
+          const seed = normalizeSeedUrl(raw);
+          if (!seed) continue;
+          if (shouldFilterUrl(seed)) {
+            seedsSkipped++;
+            continue;
+          }
+          if (!urls.includes(seed)) {
+            urls.push(seed);
+            seedsAdded++;
+          }
+          seedSet.add(seed);
+        }
+      }
+    } catch (e) {
+      console.warn(`⚠️ Failed to read/parse ${seedPath}: ${e.message}`);
+    }
+  }
+  console.log(`\n📂 Processing ${urls.length} SMPTE URLs... (seeds added: ${seedsAdded}, seeds skipped: ${seedsSkipped})`);
   
   const results = [];
 
   for (const url of urls) {
     try {
-      const docs = await extractFromUrl(url);  // extractFromUrl now returns an array
-      results.push(...docs);                   // flatten and add all versions
+      const docs = seedSet.has(url)
+        ? await extractFromSeedDoc(url)
+        : await extractFromUrl(url);
+      results.push(...docs);
     } catch (e) {
       console.error(`❌ Failed to process ${url}:`, e.message);
     }
