@@ -69,12 +69,11 @@ function applyGlobalAliases(doc) {
 
   // 2) Lightweight canonicalizations that we want to handle centrally
   //    SMPTE.AG<digits><letter> → uppercase the letter (AG10b → AG10B) to keep a single lineage
-  //    Only canonicalize when followed by a dot (so we don't touch things like AG100 inadvertently)
-  const mAg = id.match(/^SMPTE\.AG(\d+)([a-z])\./);
+  //    Allow either a dot (date tail) or end-of-id after the letter.
+  const mAg = id.match(/^SMPTE\.AG(\d+)([a-z])(?=\.|$)/);
   if (mAg) {
-    const up = `SMPTE.AG${mAg[1]}${mAg[2].toUpperCase()}.`;
     from = from || id;
-    id = id.replace(/^SMPTE\.AG\d+[a-z]\./, up);
+    id = id.replace(/^SMPTE\.AG(\d+)([a-z])(?=\.|$)/, (m, d, l) => `SMPTE.AG${d}${l.toUpperCase()}`);
   }
 
   if (from && id !== doc.docId) {
@@ -658,15 +657,14 @@ function keyFromDocId(docId, doc = {}) {
   }
 
   // --- SMPTE AG/OM (without date) special-case ---
-  // Match SMPTE.AG<num>[-<subpart>][.<YYYY> or .<YYYY-MM> or .<YYYYMMDD>], but also allow no date
-  // e.g., SMPTE.AG02, SMPTE.AG06-01, SMPTE.OM01, SMPTE.OM02-01
-  m = docId.match(/^SMPTE\.(AG|OM)(\d+)(?:-([0-9]+))?(?:\.(?:\d{4}(?:-\d{2}){0,2}|\d{8}))?$/i);
+  // Match SMPTE.AG<num>[letter]?[-<subpart>][.<YYYY> or .<YYYY-MM> or .<YYYYMMDD>], but also allow no date
+  // e.g., SMPTE.AG02, SMPTE.AG06-01, SMPTE.AG10B, SMPTE.AG10C, SMPTE.OM01, SMPTE.OM02-01
+  m = docId.match(/^SMPTE\.(AG|OM)(\d+[A-Za-z]?)(?:-([0-9]+))?(?:\.(?:\d{4}(?:-\d{2}){0,2}|\d{8}))?$/i);
   if (m) {
-    // e.g., SMPTE.AG02 → AG, 02, null; SMPTE.AG06-01 → AG, 06, 01
     return { publisher: 'SMPTE', suite: m[1].toUpperCase(), number: m[2], part: m[3] || null };
   }
-  // SMPTE OM sub-suites without numeric series, e.g., SMPTE.OM.Std, SMPTE.OM.BL.20240101
-  m = docId.match(/^SMPTE\.OM\.([A-Za-z][A-Za-z0-9-]*)\.(?:\d{8}|\d{4}(?:-\d{2})?)$/i);
+  // SMPTE OM sub-suites without numeric series, e.g., SMPTE.OM.Std, SMPTE.OM.BL, SMPTE.OM.BL.20240101
+  m = docId.match(/^SMPTE\.OM\.([A-Za-z][A-Za-z0-9-]*)(?:\.(?:\d{8}|\d{4}(?:-\d{2})?))?$/i);
   if (m) {
     // Treat the token after OM as the lineage "number" slot so Std and BL live in distinct buckets
     return { publisher: 'SMPTE', suite: 'OM', number: m[1], part: null };
