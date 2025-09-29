@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2025-09-29T23:28:39.356Z",
+  "generatedAt": "2025-09-29T23:39:17.456Z",
   "sourcePath": "src/main/data/documents.json",
-  "sourceHash": "sha256:013008f9f9e6cdb123b42051cb05c3dd4d03d6bb1eba87982fe747d1667bee4d",
+  "sourceHash": "sha256:e85f9b43a85b9f7b4bc1d65df750c3e3caed495e822a1642a1def874da70f218",
   "publisherCounts": {
     "total": 1470,
     "counts": {
@@ -2082,7 +2082,7 @@
     }
   },
   "flagSummary": {
-    "totalFlags": 165,
+    "totalFlags": 166,
     "byType": {
       "DOCID_PUBDATE_MISMATCH": {
         "count": 61,
@@ -2334,7 +2334,7 @@
         ]
       },
       "SUPERSEDED_BY_OUT_OF_LINEAGE": {
-        "count": 98,
+        "count": 99,
         "examples": [
           {
             "lineage": "AIM|BC|4|",
@@ -2671,6 +2671,10 @@
           {
             "lineage": "SMPTE|EG|9|",
             "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:SMPTE.EG9.2005->SMPTE.RP155.2014"
+          },
+          {
+            "lineage": "SMPTE|OM|Std|",
+            "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:SMPTE.OM.Std.2015->SMPTE.OM.Std"
           },
           {
             "lineage": "SMPTE|ST|12|",
@@ -20616,8 +20620,8 @@
           "docId": "SMPTE.OM.Std.2015",
           "publicationDate": "2015-04-04",
           "releaseTag": null,
-          "statusActive": true,
-          "statusSuperseded": false,
+          "statusActive": false,
+          "statusSuperseded": true,
           "statusWithdrawn": false,
           "statusStabilized": false,
           "statusAmended": false,
@@ -20627,13 +20631,15 @@
       "latestBaseId": "SMPTE.OM.Std.2015",
       "latestAnyId": "SMPTE.OM.Std.2015",
       "latestDateKey": "20150404",
-      "hasActiveBase": true,
+      "hasActiveBase": false,
       "hasWithdrawn": false,
       "hasStabilized": false,
-      "latestActiveBaseId": "SMPTE.OM.Std.2015",
-      "latestSupersededBaseId": null,
+      "latestActiveBaseId": null,
+      "latestSupersededBaseId": "SMPTE.OM.Std.2015",
       "prevBaseId": null,
-      "flagInconsistencies": [],
+      "flagInconsistencies": [
+        "SUPERSEDED_BY_OUT_OF_LINEAGE:SMPTE.OM.Std.2015->SMPTE.OM.Std"
+      ],
       "counts": {
         "bases": 1,
         "amendments": 0,

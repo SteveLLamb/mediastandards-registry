@@ -65209,8 +65209,24 @@
       "updated": "2025-07-01T00:00:00Z"
     },
     "status": {
-      "active": true,
+      "active": false,
       "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededBy": [
+        "SMPTE.OM.Std"
+      ],
+      "supersededBy$meta": {
         "confidence": "medium",
         "note": "Legacy data, has not been verified",
         "source": "manual",
