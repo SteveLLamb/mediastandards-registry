@@ -435,7 +435,7 @@ const parseRefId = (text, href = '') => {
     return `${lineage}.LATEST`;
   }
   if (/RFC\s*(\d+)/i.test(text)) {
-    return `rfc${text.match(/RFC\s*(\d+)/i)[1]}`;
+    return `RFC${text.match(/RFC\s*(\d+)/i)[1]}`;
   }
   if (/10\.6028\/NIST\.(.+)/i.test(href)) {
     const [, id] = href.match(/10\.6028\/NIST\.(.+)/i);
@@ -471,10 +471,10 @@ const parseRefId = (text, href = '') => {
     const year = years.length ? Math.max(...years) : null;
     return `IEC.${base}${year ? `.${year}` : '.LATEST'}`;
   }
-  if (/Language Subtag Registry/i.test(text)) return 'IANA.LanguageSubtagRegistry.LATEST';
-  if (/Digital Cinema Naming/i.test(text)) return 'ISDCF.DCNC.LATEST';
-  if (/Common Metadata Ratings/i.test(text)) return 'MovieLabs.Ratings.LATEST';
-  if (/UN/i.test(text)) return 'UN.M49.LATEST';
+  if (/Language Subtag Registry/i.test(text)) return 'IANA.LSR';
+  if (/Digital Cinema Naming/i.test(text)) return 'ISDCF.DCNC';
+  if (/Common Metadata Ratings/i.test(text)) return 'CMR.ML';
+  if (/UN/i.test(text)) return 'UN.SCAC.R4';
   return null;
 };
 
