@@ -418,7 +418,7 @@ const parseRefId = (text, href = '') => {
   }
   if (/w3\.org\/TR\/([^\/]+)\/?$/i.test(href)) {
     const [, shortname] = href.match(/w3\.org\/TR\/([^\/]+)\/?$/i);
-    return `W3C.${shortname}.LATEST`;
+    return `W3C.${shortname}`;
   }
   const parts = text.split('|').map(p => p.trim());
   text = parts.find(p => /ISO\/IEC|ISO/.test(p)) || parts[0];
@@ -432,7 +432,7 @@ const parseRefId = (text, href = '') => {
       const suffix = (parseInt(year, 10) >= 2023 && month) ? `${year}-${month}` : year;
       return `${lineage}.${suffix}`;
     }
-    return `${lineage}.LATEST`;
+    return `${lineage}`;
   }
   if (/RFC\s*(\d+)/i.test(text)) {
     return `RFC${text.match(/RFC\s*(\d+)/i)[1]}`;
@@ -457,19 +457,19 @@ const parseRefId = (text, href = '') => {
     const [, base, suffix] = text.match(/ISO\/IEC\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/);
     const years = suffix ? [...suffix.matchAll(/(\d{4})/g)].map(m => parseInt(m[1])) : [];
     const year = years.length ? Math.max(...years) : null;
-    return `ISO.${base}${year ? `.${year}` : '.LATEST'}`;
+    return `ISO.${base}${year ? `.${year}` : ''}`;
   }
   if (/ISO\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/.test(text)) {
     const [, base, suffix] = text.match(/ISO\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/);
     const years = suffix ? [...suffix.matchAll(/(\d{4})/g)].map(m => parseInt(m[1])) : [];
     const year = years.length ? Math.max(...years) : null;
-    return `ISO.${base}${year ? `.${year}` : '.LATEST'}`;
+    return `ISO.${base}${year ? `.${year}` : ''}`;
   }
   if (/IEC\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/.test(text)) {
     const [, base, suffix] = text.match(/IEC\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/);
     const years = suffix ? [...suffix.matchAll(/(\d{4})/g)].map(m => parseInt(m[1])) : [];
     const year = years.length ? Math.max(...years) : null;
-    return `IEC.${base}${year ? `.${year}` : '.LATEST'}`;
+    return `IEC.${base}${year ? `.${year}` : ''}`;
   }
   if (/Language Subtag Registry/i.test(text)) return 'IANA.LSR';
   if (/Digital Cinema Naming/i.test(text)) return 'ISDCF.DCNC';
