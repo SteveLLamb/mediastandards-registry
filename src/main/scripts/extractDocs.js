@@ -649,6 +649,14 @@ const extractFromSeedDoc = async (seedRootUrl) => {
       });
     });
 
+    const hasNorm = Array.isArray(refSections.normative) && refSections.normative.length > 0;
+    const hasBibl = Array.isArray(refSections.bibliographic) && refSections.bibliographic.length > 0;
+    //const hasRefs = hasNorm || hasBibl;
+    const refsOut = {};
+    if (hasNorm) refsOut.normative = refSections.normative;
+    if (hasBibl) refsOut.bibliographic = refSections.bibliographic;
+    const hasRefsOut = Object.keys(refsOut).length > 0;
+
     const revisionRaw = $index('[itemprop="pubRevisionOf"]').attr('content');
     let revisionOf;
     if (revisionRaw) {
@@ -668,7 +676,7 @@ const extractFromSeedDoc = async (seedRootUrl) => {
       docPart: pubPart,
       docTitle: `${suiteTitle || ''} ${title}`.trim(),
       docType,
-      group: tc ? `smpte-${tc.toLowerCase()}-tc` : undefined,
+      group: tc ? `smpte-${tc.toLowerCase()}-tc` : "smpte-02c-st",
       publicationDate: dateFormatted,
       releaseTag: syntheticTag,
       publisher: pubPublisher,
@@ -681,7 +689,7 @@ const extractFromSeedDoc = async (seedRootUrl) => {
         state: pubState,
         superseded: false
       },
-      references: refSections,
+      ...(hasRefsOut ? { references: refsOut } : {}),
       ...(revisionOf && { revisionOf })
     };
 
@@ -900,6 +908,14 @@ const extractFromUrl = async (rootUrl) => {
         });
       });
 
+      const hasNorm = Array.isArray(refSections.normative) && refSections.normative.length > 0;
+      const hasBibl = Array.isArray(refSections.bibliographic) && refSections.bibliographic.length > 0;
+      //const hasRefs = hasNorm || hasBibl;
+      const refsOut = {};
+      if (hasNorm) refsOut.normative = refSections.normative;
+      if (hasBibl) refsOut.bibliographic = refSections.bibliographic;
+      const hasRefsOut = Object.keys(refsOut).length > 0;
+
       const revisionRaw = $index('[itemprop="pubRevisionOf"]').attr('content');
       let revisionOf;
 
@@ -934,7 +950,7 @@ const extractFromUrl = async (rootUrl) => {
           state: pubState,
           superseded: !isLatest
         },
-        references: refSections,
+        ...(hasRefsOut ? { references: refsOut } : {}),
         ...(revisionOf && { revisionOf })
       };
 
@@ -1163,8 +1179,14 @@ for (const doc of results) {
       }
       injectMetaForDoc(doc, sourceType, 'new');
       if (doc.references) {
-        injectMeta(doc.references, 'normative', sourceType, 'new', []);
-        injectMeta(doc.references, 'bibliographic', sourceType, 'new', []);
+        const hasNorm = Array.isArray(doc.references.normative) && doc.references.normative.length > 0;
+        const hasBibl = Array.isArray(doc.references.bibliographic) && doc.references.bibliographic.length > 0;
+        if (!hasNorm && !hasBibl) {
+          delete doc.references;
+        } else {
+          if (hasNorm) injectMeta(doc.references, 'normative', sourceType, 'new', []);
+          if (hasBibl) injectMeta(doc.references, 'bibliographic', sourceType, 'new', []);
+        }
       }
       if (doc.revisionOf) {
         injectMeta(doc, 'revisionOf', sourceType, 'new', []);
@@ -1244,17 +1266,33 @@ for (const doc of results) {
           changedFields.push('references');
         }
 
-        const refsChanged =
-          refsAreDifferent(newRefs.normative, oldRefs.normative) ||
-          refsAreDifferent(newRefs.bibliographic, oldRefs.bibliographic);
+        const normChanged = refsAreDifferent(newRefs.normative, oldRefs.normative);
+        const biblChanged = refsAreDifferent(newRefs.bibliographic, oldRefs.bibliographic);
+        const refsChanged = normChanged || biblChanged;
 
         if (refsChanged) {
-          existingDoc.references = newRefs;
-          newValues.references = newRefs;
+          const hasNormNew = Array.isArray(newRefs.normative) && newRefs.normative.length > 0;
+          const hasBiblNew = Array.isArray(newRefs.bibliographic) && newRefs.bibliographic.length > 0;
 
           const fieldSource = doc.__inferred ? 'inferred' : 'parsed';
-          injectMeta(existingDoc.references, 'normative', fieldSource, 'update', oldRefs.normative);
-          injectMeta(existingDoc.references, 'bibliographic', fieldSource, 'update', oldRefs.bibliographic);
+
+          if (!hasNormNew && !hasBiblNew) {
+            delete existingDoc.references;
+            delete newValues.references;
+          } else {
+            existingDoc.references = {
+              ...(hasNormNew ? { normative: newRefs.normative } : {}),
+              ...(hasBiblNew ? { bibliographic: newRefs.bibliographic } : {})
+            };
+            newValues.references = existingDoc.references;
+
+            if (hasNormNew && normChanged) {
+              injectMeta(existingDoc.references, 'normative', fieldSource, 'update', oldRefs.normative || []);
+            }
+            if (hasBiblNew && biblChanged) {
+              injectMeta(existingDoc.references, 'bibliographic', fieldSource, 'update', oldRefs.bibliographic || []);
+            }
+          }
         }
       }
 
