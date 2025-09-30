@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2025-09-29T23:39:17.456Z",
+  "generatedAt": "2025-09-30T03:52:23.817Z",
   "sourcePath": "src/main/data/documents.json",
-  "sourceHash": "sha256:e85f9b43a85b9f7b4bc1d65df750c3e3caed495e822a1642a1def874da70f218",
+  "sourceHash": "sha256:3b3becdb2a3808ff3c978f0509492263c8e9cebd9bd549f198317399226054d6",
   "publisherCounts": {
     "total": 1470,
     "counts": {
@@ -101,7 +101,7 @@
     }
   },
   "skippedDocs": {
-    "totalSkipped": 200,
+    "totalSkipped": 198,
     "byPublisher": {
       "POLYMER DEGRADATION AND STABILITY": {
         "count": 1,
@@ -933,7 +933,7 @@
         ]
       },
       "SMPTE": {
-        "count": 104,
+        "count": 102,
         "docIds": [
           "J01217",
           "J01273",
@@ -1017,8 +1017,6 @@
           "J17833",
           "J18005",
           "M00395",
-          "SMPTE.AG10B",
-          "SMPTE.AG10C",
           "SMPTE.EG428-23.20XX",
           "SMPTE.J107.9.603.815.1998",
           "SMPTE.PH22-52.1960",
@@ -1616,20 +1614,6 @@
             "category": "docType"
           },
           {
-            "docId": "SMPTE.AG10B",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
-            "docId": "SMPTE.AG10C",
-            "reason": "UNKEYED",
-            "rule": "UNKEYED",
-            "ruleDetail": "noRegexMatch",
-            "category": "standard"
-          },
-          {
             "docId": "SMPTE.EG428-23.20XX",
             "reason": "FILTERED",
             "rule": "FILTERED",
@@ -2077,12 +2061,12 @@
     },
     "summaryByReason": {
       "FILTERED": 198,
-      "UNKEYED": 2,
+      "UNKEYED": 0,
       "UNKNOWN": 0
     }
   },
   "flagSummary": {
-    "totalFlags": 166,
+    "totalFlags": 164,
     "byType": {
       "DOCID_PUBDATE_MISMATCH": {
         "count": 61,
@@ -2334,7 +2318,7 @@
         ]
       },
       "SUPERSEDED_BY_OUT_OF_LINEAGE": {
-        "count": 99,
+        "count": 98,
         "examples": [
           {
             "lineage": "AIM|BC|4|",
@@ -2665,10 +2649,6 @@
             "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:SMPTE.AG06-02.2021->SMPTE.AG06"
           },
           {
-            "lineage": "SMPTE|AG|10B|",
-            "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:SMPTE.AG10B.2020->SMPTE.AG10B"
-          },
-          {
             "lineage": "SMPTE|EG|9|",
             "flag": "SUPERSEDED_BY_OUT_OF_LINEAGE:SMPTE.EG9.2005->SMPTE.RP155.2014"
           },
@@ -2752,15 +2732,6 @@
           {
             "lineage": "SMPTE|ST|2067|20",
             "flag": "CONTRADICTORY_STATUS_FLAGS:SMPTE.ST2067-20.2013:ACTIVE_AND_SUPERSEDED"
-          }
-        ]
-      },
-      "ALIASED_ID": {
-        "count": 1,
-        "examples": [
-          {
-            "lineage": "SMPTE|AG|10B|",
-            "flag": "ALIASED_ID:SMPTE.AG10b.2020->SMPTE.AG10B.2020"
           }
         ]
       },
@@ -19054,21 +19025,64 @@
           "statusStabilized": false,
           "statusAmended": false,
           "statusVersionless": false
+        },
+        {
+          "docId": "SMPTE.AG10B",
+          "publicationDate": "2023-01-31",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false,
+          "statusVersionless": false
         }
       ],
-      "latestBaseId": "SMPTE.AG10B.2020",
-      "latestAnyId": "SMPTE.AG10B.2020",
-      "latestDateKey": "20200121",
-      "hasActiveBase": false,
+      "latestBaseId": "SMPTE.AG10B",
+      "latestAnyId": "SMPTE.AG10B",
+      "latestDateKey": "20230131",
+      "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": false,
-      "latestActiveBaseId": null,
+      "latestActiveBaseId": "SMPTE.AG10B",
       "latestSupersededBaseId": "SMPTE.AG10B.2020",
-      "prevBaseId": null,
-      "flagInconsistencies": [
-        "SUPERSEDED_BY_OUT_OF_LINEAGE:SMPTE.AG10B.2020->SMPTE.AG10B",
-        "ALIASED_ID:SMPTE.AG10b.2020->SMPTE.AG10B.2020"
+      "prevBaseId": "SMPTE.AG10B.2020",
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 2,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|AG|10C|",
+      "publisher": "SMPTE",
+      "suite": "AG",
+      "number": "10C",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.AG10C",
+          "publicationDate": null,
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
       ],
+      "latestBaseId": "SMPTE.AG10C",
+      "latestAnyId": "SMPTE.AG10C",
+      "latestDateKey": "00000000",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "SMPTE.AG10C",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
       "counts": {
         "bases": 1,
         "amendments": 0,
