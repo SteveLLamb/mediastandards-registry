@@ -111,8 +111,8 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "Update documents.json from SMPTE sources"
           commit-options: '--allow-empty'
-          branch: update-documents-json-${{ github.run_id }}
-          title: "Update documents.json - ${{ env.ts }}"
+          branch: chore/extract-docs             
+          title: "Update documents.json (${{ env.ts }})"
           body: ${{ steps.prlog.outputs.body }}
           add-paths: |
             src/main/data/documents.json

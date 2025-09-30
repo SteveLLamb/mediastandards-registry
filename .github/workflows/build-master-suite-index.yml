@@ -175,7 +175,7 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "chore: Build MasterSuiteIndex (data change)"
-          title: "Build MasterSuiteIndex (data change)"
+          title: "Build MasterSuiteIndex (data change - ${{ env.ts }})"
           body-path: pr_body.txt
           branch: chore/build-mastersuite
           add-paths: ${{ steps.files.outputs.paths }}

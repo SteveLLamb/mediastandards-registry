@@ -79,6 +79,7 @@ function stripLeadingSmpte(title) {
 
 const typeMap = {
         AG: 'Administrative Guideline',
+        OM: 'Operations Manual',
         ST: 'Standard',
         RP: 'Recommended Practice',
         EG: 'Engineering Guideline',
@@ -324,8 +325,8 @@ const metaConfig = {
     docId: { confidence: 'high', note: 'Calculated from parsed/inferred metadata' },
     docLabel: { confidence: 'high', note: 'Constructed from parsed/inferred typenumber/number/date' },
     doi: { confidence: 'medium', note: 'Constructed from parsed/inferred type/date' },
-    href: { confidence: 'high', note: 'DOI link generated and verified via redirect resolution' },
-    resolvedHref: { confidence: 'high', note: 'Final DOI link resolved via URL redirect verification' },
+    href: { confidence: 'high', note: 'URL generated and verified via redirect resolution' },
+    resolvedHref: { confidence: 'high', note: 'Final URL resolved via URL redirect verification' },
     repo: { confidence: 'high', note: 'Calculated from parsed or inferred publication type/number/part and verified to exist' },
     'status.active': { confidence: 'high', note: 'Calculated from the releaseTag(s) and other status values' },
     'status.latestVersion': { confidence: 'high', note: 'Calculated from the releaseTag(s)' },
@@ -593,7 +594,9 @@ const extractFromSeedDoc = async (seedRootUrl) => {
     const $index = cheerio.load(indexRes.data);
 
     const pubType = $index('[itemprop="pubType"]').attr('content');
-    const pubNumber = $index('[itemprop="pubNumber"]').attr('content');
+    let pubNumber = $index('[itemprop="pubNumber"]').attr('content');
+    // Normalize: force any letters in pubNumber to uppercase
+    if (pubNumber) pubNumber = pubNumber.replace(/([a-z]+)/g, (m) => m.toUpperCase());
     const pubPart = $index('[itemprop="pubPart"]').attr('content');
     const pubDate = $index('[itemprop="pubDateTime"]').attr('content');
     const suiteTitle = $index('[itemprop="pubSuiteTitle"]').attr('content');
@@ -842,7 +845,9 @@ const extractFromUrl = async (rootUrl) => {
       const $index = cheerio.load(indexRes.data);
 
       const pubType = $index('[itemprop="pubType"]').attr('content');
-      const pubNumber = $index('[itemprop="pubNumber"]').attr('content');
+      let pubNumber = $index('[itemprop="pubNumber"]').attr('content');
+      // Normalize: force any letters in pubNumber to uppercase
+      if (pubNumber) pubNumber = pubNumber.replace(/([a-z]+)/g, (m) => m.toUpperCase());
       const pubPart = $index('[itemprop="pubPart"]').attr('content');
       const pubDate = $index('[itemprop="pubDateTime"]').attr('content');
       const suiteTitle = $index('[itemprop="pubSuiteTitle"]').attr('content');
