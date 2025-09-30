@@ -2,7 +2,7 @@ name: Build MasterSuite Index
 
 on:
   schedule:
-    - cron: "15 03 * * *"   # 20:15 PT (cron in UTC; aligns with 8:15pm during PDT)
+    - cron: "30 03 * * *"   # 20:30 PT (cron in UTC; aligns with 8:30pm during PDT)
   push:
     branches:
       - main                # Run whenever changes land on the default branch
