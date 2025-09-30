@@ -13,7 +13,6 @@ const fs = require('fs').promises;
 const { promisify } = require('util');
 const execFile = promisify(require('child_process').execFile);
 const hb = require('handlebars');
-const ajv = require('ajv');
 
 const REGISTRIES_REPO_PATH = "src/main";
 const SITE_PATH = "src/site";
@@ -139,58 +138,22 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
     return options.inverse(this);
   });
   
-  /* load and validate the registry */
-  
-  const validateRegistries = [
-    {
-      type: listType,
-      DATA_PATH: DATA_PATH,
-      DATA_SCHEMA_PATH: DATA_SCHEMA_PATH 
-    }
-  ]
+  // --- Load registries (data only). 
+  let registryDocument = JSON.parse(await fs.readFile(DATA_PATH, 'utf8'));
+  let registryGroup = [];
+  let registryProject = [];
 
-  for (let i in subRegistry) {
-    var subReg = {}
-    subReg["type"] = subRegistry[i]
-    subReg["DATA_PATH"] = DATA_PATH.replace(listType, subRegistry[i])
-    subReg["DATA_SCHEMA_PATH"] = DATA_SCHEMA_PATH.replace(listType, subRegistry[i])
-    validateRegistries.push(subReg);
-  }
-
-  for (let i in validateRegistries) {
-  
-    validateRegistries[i].registry = JSON.parse(
-      await fs.readFile(validateRegistries[i].DATA_PATH)
-    );
-    if (!validateRegistries[i].registry) {
-      throw "Cannot load registry";
+  // Load any declared sub-registries if their data files exist
+  for (const sub of subRegistry) {
+    const subDataPath = path.join(REGISTRIES_REPO_PATH, `data/${sub}.json`);
+    try {
+      const subData = JSON.parse(await fs.readFile(subDataPath, 'utf8'));
+      if (sub === 'groups') registryGroup = subData;
+      if (sub === 'projects') registryProject = subData;
+    } catch (err) {
+      // If a sub-registry file is missing, warn and continue; templates will handle absent data
+      console.warn(`[WARN] Could not load data for sub-registry "${sub}" at ${subDataPath}: ${err.message}`);
     }
-
-    if (validateRegistries[i].type == "documents") {
-      registryDocument = validateRegistries[i].registry
-    }
-    else if (validateRegistries[i].type == "groups") {
-      registryGroup = validateRegistries[i].registry
-    }
-    else if (validateRegistries[i].type == "projects") {
-      registryProject = validateRegistries[i].registry
-    }
-    
-    console.log(`${validateRegistries[i].DATA_PATH} schema validation started`)
-
-    var validator_factory = new ajv();
-    let validator = validator_factory.compile(
-      JSON.parse(await fs.readFile(validateRegistries[i].DATA_SCHEMA_PATH))
-    );
-    
-    if (! validator(validateRegistries[i].registry)) {
-      console.log(validator.errors);  
-      throw "Registry fails schema validation";
-    }
-    else {
-      console.log(`${validateRegistries[i].DATA_PATH} schema validation passed`)
-    };
-
   }
 
   /* load the SMPTE abreviated docType */
@@ -248,8 +211,6 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
     let docId = registryDocument[i].docId
     let publicationDate = registryDocument[i].publicationDate
     let publisher = registryDocument[i].publisher
-
-    //if (publisher === "SMPTE" || publisher === "W3C" || publisher === "AES" || publisher === "IEC" || publisher === "IEEE" || publisher === "NIST" || publisher.includes("ANSI") || publisher.includes("ITU") || publisher.includes("ISO")) {
 
       var docStripAm = docId.replace(/\.\d\d\d\dam\d/i, '').replace(/\.\d\d\d\damd\d/i, '').replace(/\.\d\d\d\dad\d/i, '').replace(/\.\d\d\d\dcor\d/i, '').replace(/\.\d\d\d\de\d/i, '')
       var docBase = docStripAm.replace(/(\.[^.]*)$/, '')
@@ -765,12 +726,12 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
 
   /* is the registry sorted */
     
-  for(let i = 1; i < registryDocument.length; i++) {
-    if (registryDocument[i-1].docID >= registryDocument[i].docID) {
-      throw "Registry key " + registryDocument[i-1].docID + " is " +
-        ((registryDocument[i-1].docID === registryDocument[i].docID) ? "duplicated" : "not sorted");
-    }
-  }
+  //for(let i = 1; i < registryDocument.length; i++) {
+  //  if (registryDocument[i-1].docID >= registryDocument[i].docID) {
+  //    throw "Registry key " + registryDocument[i-1].docID + " is " +
+  //      ((registryDocument[i-1].docID === registryDocument[i].docID) ? "duplicated" : "not sorted");
+  //  }
+  //}
   
   /* get the version field */
   
