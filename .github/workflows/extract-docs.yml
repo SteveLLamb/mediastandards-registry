@@ -1,6 +1,8 @@
 name: Extract SMPTE Documents
 
 on:
+  schedule:
+    - cron: "15 04 * * *"   # 21:15 PT (cron in UTC; aligns with 9:15pm during PDT)
   workflow_dispatch: # Manual trigger
 
 permissions:
@@ -109,7 +111,7 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: "Update documents.json from SMPTE sources"
+          commit-message: "chore: Update documents.json from SMPTE sources"
           commit-options: '--allow-empty'
           branch: chore/extract-docs             
           title: "Update documents.json (${{ env.ts }})"
