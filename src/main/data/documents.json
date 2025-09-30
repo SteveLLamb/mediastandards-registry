@@ -2189,6 +2189,11 @@
       "updated": "2025-07-01T00:00:00Z"
     },
     "href": "https://aes2.org/publications/elibrary-page/?id=3824",
+    "href$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-09-30T04:23:09.076Z"
+    },
     "publicationDate": "1982-09-01",
     "publicationDate$meta": {
       "confidence": "medium",
@@ -4230,7 +4235,6 @@
       }
     }
   },
-  
   {
     "docId": "AMWA.AAF",
     "docId$meta": {
@@ -57341,26 +57345,31 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "group": "smpte-02c-st",
     "group$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": "smpte-02c-st",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:57.410Z"
     },
-    "href": "https://doc.smpte-doc.org/ag-01/4e44ce0f5da1596d2a1cf7e88c502093e5789266/",
+    "href": "https://doc.smpte-doc.org/ag-01/main/",
     "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": "https://doc.smpte-doc.org/ag-01/4e44ce0f5da1596d2a1cf7e88c502093e5789266/",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:57.410Z"
     },
-    "publicationDate": "2022-12-06",
+    "publicationDate": "2025-04-29",
     "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": "2022-12-06",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:57.410Z"
     },
     "publisher": "SMPTE",
     "publisher$meta": {
@@ -57380,6 +57389,14 @@
         "updated": "2025-07-01T00:00:00Z"
       }
     },
+    "releaseTag": "20250429-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:57.410Z"
+    },
     "status": {
       "active": true,
       "active$meta": {
@@ -57387,6 +57404,30 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:57.410Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:57.410Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:57.410Z"
       }
     }
   },
@@ -57563,7 +57604,6 @@
       }
     }
   },
-  
   {
     "docId": "SMPTE.AG02",
     "docId$meta": {
@@ -57600,26 +57640,31 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "group": "smpte-02c-st",
     "group$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": "smpte-02c-st",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:57.774Z"
     },
-    "href": "https://doc.smpte-doc.org/ag-02/4b17ef0f1d612ab8c7b8b060784e07f38a6bb374/",
+    "href": "https://doc.smpte-doc.org/ag-02/main/",
     "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": "https://doc.smpte-doc.org/ag-02/4b17ef0f1d612ab8c7b8b060784e07f38a6bb374/",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:57.774Z"
     },
-    "publicationDate": "2022-12-06",
+    "publicationDate": "2025-03-25",
     "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": "2022-12-06",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:57.774Z"
     },
     "publisher": "SMPTE",
     "publisher$meta": {
@@ -57629,15 +57674,53 @@
       "updated": "2025-07-01T00:00:00Z"
     },
     "references": {
+      "bibliographic": [
+        "W3C.xml",
+        "IANA",
+        "W3C.xmlschema-1.20041028",
+        "W3C.WSDL.1.1",
+        "OMG.XMI",
+        "ISO.80000-2",
+        "LOC.DWG",
+        "LOC.VSDX"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:57.774Z"
+      },
       "normative": [
-        "SMPTE.OM.Std"
+        "SMPTE.OM.Std",
+        "SMPTE.AG03",
+        "SMPTE.AG26",
+        "SMPTE.AG27",
+        "SMPTE.AG28",
+        "ISO.Dir-P2.2011",
+        "ISO.8601",
+        "IANA.MT"
       ],
       "normative$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+          "SMPTE.OM.Std"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:57.774Z"
       }
+    },
+    "releaseTag": "20250325-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:57.774Z"
     },
     "status": {
       "active": true,
@@ -57646,6 +57729,30 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:57.774Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:57.774Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:57.774Z"
       },
       "versionless": true,
       "versionless$meta": {
@@ -57865,26 +57972,31 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "group": "smpte-02c-st",
     "group$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": "smpte-02c-st",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:58.176Z"
     },
-    "href": "https://doc.smpte-doc.org/ag-03/3d52bf5896efbcbf22adddf2a64823df3d0bb69d/",
+    "href": "https://doc.smpte-doc.org/ag-03/main/",
     "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": "https://doc.smpte-doc.org/ag-03/3d52bf5896efbcbf22adddf2a64823df3d0bb69d/",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:58.176Z"
     },
-    "publicationDate": "2022-12-20",
+    "publicationDate": "2024-06-12",
     "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": "2022-12-20",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:58.176Z"
     },
     "publisher": "SMPTE",
     "publisher$meta": {
@@ -57904,6 +58016,14 @@
         "updated": "2025-07-01T00:00:00Z"
       }
     },
+    "releaseTag": "20240612-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:58.176Z"
+    },
     "status": {
       "active": true,
       "active$meta": {
@@ -57911,6 +58031,30 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:58.176Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:58.176Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:58.176Z"
       }
     }
   },
@@ -57997,7 +58141,149 @@
       }
     }
   },
-  
+  {
+    "docId": "SMPTE.AG04",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-04/main/",
+      "updated": "2025-09-30T04:22:58.520Z"
+    },
+    "docLabel": "SMPTE AG 04",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-04/main/",
+      "updated": "2025-09-30T04:22:58.520Z"
+    },
+    "docNumber": "04",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-04/main/",
+      "updated": "2025-09-30T04:22:58.520Z"
+    },
+    "docTitle": "Engineering Document Templates",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-04/main/",
+      "updated": "2025-09-30T04:22:58.520Z"
+    },
+    "docType": "Administrative Guideline",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-04/main/",
+      "updated": "2025-09-30T04:22:58.520Z"
+    },
+    "href": "https://doc.smpte-doc.org/ag-04/main/",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-04/main/",
+      "updated": "2025-09-30T04:22:58.520Z"
+    },
+    "publicationDate": "2025-03-25",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-04/main/",
+      "updated": "2025-09-30T04:22:58.520Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-04/main/",
+      "updated": "2025-09-30T04:22:58.520Z"
+    },
+    "references": {
+      "bibliographic": [
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+        ],
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:58.520Z"
+      },
+      "normative": [
+        "SMPTE.OM.Std",
+        "SMPTE.AG02",
+        "SMPTE.AG26",
+        "SMPTE.AG27"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+        ],
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:58.520Z"
+      }
+    },
+    "releaseTag": "20250325-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-04/main/",
+      "updated": "2025-09-30T04:22:58.520Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:58.520Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:58.520Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:58.520Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:58.520Z"
+      }
+    }
+  },
   {
     "docId": "SMPTE.AG04.2016",
     "docId$meta": {
@@ -58368,26 +58654,31 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "group": "smpte-02c-st",
     "group$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": "smpte-02c-st",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:58.888Z"
     },
-    "href": "https://doc.smpte-doc.org/ag-05/28dab089ea9458d62cc8e2805b9cf10d17d646ea/",
+    "href": "https://doc.smpte-doc.org/ag-05/main/",
     "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": "https://doc.smpte-doc.org/ag-05/28dab089ea9458d62cc8e2805b9cf10d17d646ea/",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:58.888Z"
     },
-    "publicationDate": "2022-12-20",
+    "publicationDate": "2025-04-29",
     "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": "2022-12-20",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:58.888Z"
     },
     "publisher": "SMPTE",
     "publisher$meta": {
@@ -58398,31 +58689,55 @@
     },
     "references": {
       "bibliographic": [
-        "W3C.qaframe.spec.20050817",
+        "WHATWG.HTML",
         "IETF.FLS.2001",
-        "SMPTE.AG04.ST",
-        "SMPTE.AG04.EG"
+        "SMPTE.AG27"
       ],
       "bibliographic$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+          "W3C.qaframe.spec.20050817",
+          "IETF.FLS.2001",
+          "SMPTE.AG04.ST",
+          "SMPTE.AG04.EG"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:58.888Z"
       },
       "normative": [
         "W3C.xmlschema-1.20041028",
         "W3C.xml.20081126",
-        "W3C.xmlnames.20091208",
-        "W3C.REC-html52.20171214",
+        "W3C.xml-names.20091208",
+        "W3C.html5",
         "RFC3986",
-        "RFC7405"
+        "RFC7405",
+        "SMPTE.AG30"
       ],
       "normative$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+          "W3C.xmlschema-1.20041028",
+          "W3C.xml.20081126",
+          "W3C.xmlnames.20091208",
+          "W3C.REC-html52.20171214",
+          "RFC3986",
+          "RFC7405"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:58.888Z"
       }
+    },
+    "releaseTag": "20250429-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:58.888Z"
     },
     "status": {
       "active": true,
@@ -58431,6 +58746,30 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:58.888Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:58.888Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:58.888Z"
       }
     }
   },
@@ -58553,26 +58892,31 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "group": "smpte-02c-st",
     "group$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": "smpte-02c-st",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:59.475Z"
     },
-    "href": "https://doc.smpte-doc.org/ag-06/58545c096ff3f6f09b5f7970dc04f9d690c287ec/",
+    "href": "https://doc.smpte-doc.org/ag-06/main/",
     "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": "https://doc.smpte-doc.org/ag-06/58545c096ff3f6f09b5f7970dc04f9d690c287ec/",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:59.475Z"
     },
-    "publicationDate": "2023-01-31",
+    "publicationDate": "2025-03-25",
     "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": "2023-01-31",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:59.475Z"
     },
     "publisher": "SMPTE",
     "publisher$meta": {
@@ -58587,20 +58931,38 @@
         "SMPTE.AG22"
       ],
       "bibliographic$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+          "SMPTE.AG02",
+          "SMPTE.AG22"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:59.475Z"
       },
       "normative": [
-        "SMPTE.OM.Std"
+        "SMPTE.OM.Std",
+        "SMPTE.AG26"
       ],
       "normative$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+          "SMPTE.OM.Std"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:59.475Z"
       }
+    },
+    "releaseTag": "20250325-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:59.475Z"
     },
     "status": {
       "active": true,
@@ -58609,6 +58971,30 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:59.475Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:59.475Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:59.475Z"
       }
     }
   },
@@ -58981,19 +59367,22 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "group": "smpte-02c-st",
     "group$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": "smpte-02c-st",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:59.810Z"
     },
-    "href": "https://doc.smpte-doc.org/ag-07/dceca0fbfabc046cda502f4baa96a5b2dedcfeeb/",
+    "href": "https://doc.smpte-doc.org/ag-07/main/",
     "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": "https://doc.smpte-doc.org/ag-07/dceca0fbfabc046cda502f4baa96a5b2dedcfeeb/",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:59.810Z"
     },
     "publicationDate": "2022-12-20",
     "publicationDate$meta": {
@@ -59020,6 +59409,14 @@
         "updated": "2025-07-01T00:00:00Z"
       }
     },
+    "releaseTag": "20221220-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:59.810Z"
+    },
     "status": {
       "active": true,
       "active$meta": {
@@ -59027,6 +59424,30 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:59.810Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:59.810Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:59.810Z"
       }
     }
   },
@@ -59149,19 +59570,22 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "group": "smpte-02c-st",
     "group$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": "smpte-02c-st",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:59.963Z"
     },
-    "href": "https://doc.smpte-doc.org/ag-08/47ab7a6649b1ba8707bd573cbae0f84b12bee46e/",
+    "href": "https://doc.smpte-doc.org/ag-08/main/",
     "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": "https://doc.smpte-doc.org/ag-08/47ab7a6649b1ba8707bd573cbae0f84b12bee46e/",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:59.963Z"
     },
     "publicationDate": "2023-01-31",
     "publicationDate$meta": {
@@ -59188,6 +59612,14 @@
         "updated": "2025-07-01T00:00:00Z"
       }
     },
+    "releaseTag": "20230131-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:59.963Z"
+    },
     "status": {
       "active": true,
       "active$meta": {
@@ -59195,6 +59627,30 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:59.963Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:59.963Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:59.963Z"
       }
     }
   },
@@ -59317,26 +59773,31 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "group": "smpte-02c-st",
     "group$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": "smpte-02c-st",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:00.279Z"
     },
-    "href": "https://smpte.github.io/ag-10/",
+    "href": "https://doc.smpte-doc.org/ag-10/main/",
     "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": "https://smpte.github.io/ag-10/",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-09-30T04:23:00.279Z"
     },
-    "publicationDate": "2022-04-12",
+    "publicationDate": "2023-08-29",
     "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": "2022-04-12",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:00.279Z"
     },
     "publisher": "SMPTE",
     "publisher$meta": {
@@ -59357,6 +59818,14 @@
         "updated": "2025-07-01T00:00:00Z"
       }
     },
+    "releaseTag": "20230829-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:00.279Z"
+    },
     "status": {
       "active": true,
       "active$meta": {
@@ -59364,6 +59833,30 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:00.279Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:00.279Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:00.279Z"
       }
     }
   },
@@ -59442,19 +59935,23 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "docLabel": "SMPTE AG 10b",
+    "docLabel": "SMPTE AG 10B",
     "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": "SMPTE AG 10b",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-09-30T04:23:00.433Z"
     },
-    "docNumber": "10b",
+    "docNumber": "10B",
     "docNumber$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": "10b",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:00.433Z"
     },
     "docTitle": "Liaisons Agreements",
     "docTitle$meta": {
@@ -59470,19 +59967,22 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "group": "smpte-02c-st",
     "group$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": "smpte-02c-st",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:00.433Z"
     },
-    "href": "https://doc.smpte-doc.org/ag-10b/f3e7fe4bd2e0f379bf6b1fa4e9670b2155b30c09/",
+    "href": "https://doc.smpte-doc.org/ag-10b/main/",
     "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": "https://doc.smpte-doc.org/ag-10b/f3e7fe4bd2e0f379bf6b1fa4e9670b2155b30c09/",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-09-30T04:23:00.433Z"
     },
     "publicationDate": "2023-01-31",
     "publicationDate$meta": {
@@ -59509,6 +60009,14 @@
         "updated": "2025-07-01T00:00:00Z"
       }
     },
+    "releaseTag": "20230131-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:00.433Z"
+    },
     "status": {
       "active": true,
       "active$meta": {
@@ -59516,6 +60024,30 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:00.433Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:00.433Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:00.433Z"
       }
     }
   },
@@ -59602,7 +60134,6 @@
       }
     }
   },
-  
   {
     "details": "SMTPE ST member access only",
     "details$meta": {
@@ -59670,7 +60201,7 @@
       }
     }
   },
-    {
+  {
     "docId": "SMPTE.AG12",
     "docId$meta": {
       "confidence": "high",
@@ -59706,19 +60237,22 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "group": "smpte-02c-st",
     "group$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": "smpte-02c-st",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:00.648Z"
     },
-    "href": "https://doc.smpte-doc.org/ag-12/b1d277355a58b6bb74a104a259675d438668cf5f/",
+    "href": "https://doc.smpte-doc.org/ag-12/main/",
     "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": "https://doc.smpte-doc.org/ag-12/b1d277355a58b6bb74a104a259675d438668cf5f/",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-09-30T04:23:00.648Z"
     },
     "publicationDate": "2023-01-31",
     "publicationDate$meta": {
@@ -59745,6 +60279,14 @@
         "updated": "2025-07-01T00:00:00Z"
       }
     },
+    "releaseTag": "20230131-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:00.648Z"
+    },
     "status": {
       "active": true,
       "active$meta": {
@@ -59752,6 +60294,30 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:00.648Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:00.648Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:00.648Z"
       }
     }
   },
@@ -59921,7 +60487,7 @@
       }
     }
   },
-{
+  {
     "docId": "SMPTE.AG14",
     "docId$meta": {
       "confidence": "high",
@@ -59957,19 +60523,22 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "group": "smpte-02c-st",
     "group$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": "smpte-02c-st",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:04.903Z"
     },
-    "href": "https://doc.smpte-doc.org/ag-14/3e23bd69cffde17ad783ecc61ac0587a33725f1c/",
+    "href": "https://doc.smpte-doc.org/ag-14/main/",
     "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": "https://doc.smpte-doc.org/ag-14/3e23bd69cffde17ad783ecc61ac0587a33725f1c/",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-09-30T04:23:04.903Z"
     },
     "publicationDate": "2023-01-31",
     "publicationDate$meta": {
@@ -59997,6 +60566,14 @@
         "updated": "2025-07-01T00:00:00Z"
       }
     },
+    "releaseTag": "20230131-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:04.903Z"
+    },
     "status": {
       "active": true,
       "active$meta": {
@@ -60004,6 +60581,30 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:04.903Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:04.903Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:04.903Z"
       }
     }
   },
@@ -60090,8 +60691,6 @@
       }
     }
   },
-  
-  
   {
     "docId": "SMPTE.AG15",
     "docId$meta": {
@@ -60128,12 +60727,13 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "group": "smpte-02c-st",
     "group$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": "smpte-02c-st",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:05.072Z"
     },
     "href": "https://doc.smpte-doc.org/ag-15/main/",
     "href$meta": {
@@ -60142,12 +60742,14 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "publicationDate": "2023-01-18",
+    "publicationDate": "2023-03-21",
     "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": "2023-01-18",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:05.072Z"
     },
     "publisher": "SMPTE",
     "publisher$meta": {
@@ -60168,6 +60770,14 @@
         "updated": "2025-07-01T00:00:00Z"
       }
     },
+    "releaseTag": "20230321-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:05.072Z"
+    },
     "status": {
       "active": true,
       "active$meta": {
@@ -60175,6 +60785,30 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:05.072Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:05.072Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:05.072Z"
       }
     }
   },
@@ -60261,7 +60895,7 @@
       }
     }
   },
-    {
+  {
     "docId": "SMPTE.AG16",
     "docId$meta": {
       "confidence": "high",
@@ -60297,26 +60931,31 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "group": "smpte-02c-st",
     "group$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": "smpte-02c-st",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:05.384Z"
     },
-    "href": "https://doc.smpte-doc.org/ag-16/8520f69a15780eab721f2a99b4dbf9b89aa8eb42/",
+    "href": "https://doc.smpte-doc.org/ag-16/main/",
     "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": "https://doc.smpte-doc.org/ag-16/8520f69a15780eab721f2a99b4dbf9b89aa8eb42/",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-09-30T04:23:05.384Z"
     },
-    "publicationDate": "2022-12-06",
+    "publicationDate": "2025-03-25",
     "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": "2022-12-06",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:05.384Z"
     },
     "publisher": "SMPTE",
     "publisher$meta": {
@@ -60331,43 +60970,71 @@
         "ISO.80000-1"
       ],
       "bibliographic$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+          "IETF.JSON.draft-bhutton-json-schema-00.2020",
+          "ISO.80000-1"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:05.384Z"
       },
       "normative": [
         "SMPTE.OM.Std",
         "SMPTE.AG02",
         "SMPTE.AG03",
-        "SMPTE.AG04.ST",
-        "SMPTE.AG04.RP",
-        "SMPTE.AG04.EG",
-        "ISO.Dir-P2.2021",
-        "ISO.80000-1",
-        "ISO.80000-2",
-        "ISO.80000-3",
-        "ISO.80000-4",
-        "ISO.80000-5",
-        "ISO.80000-6",
-        "ISO.80000-7",
-        "ISO.80000-8",
-        "ISO.80000-9",
-        "ISO.80000-10",
-        "ISO.80000-11",
-        "ISO.80000-12",
-        "ISO.80000-13",
-        "ISO.8601.2004",
+        "SMPTE.AG04",
+        "SMPTE.AG26",
+        "SMPTE.AG27",
+        "ISO.Dir-P2.2011",
+        "ISO.80000",
+        "ISO.8601",
         "ISO.10646",
         "ISBN.9780205309023",
         "ISBN.0195392884"
       ],
       "normative$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+          "SMPTE.OM.Std",
+          "SMPTE.AG02",
+          "SMPTE.AG03",
+          "SMPTE.AG04.ST",
+          "SMPTE.AG04.RP",
+          "SMPTE.AG04.EG",
+          "ISO.Dir-P2.2021",
+          "ISO.80000-1",
+          "ISO.80000-2",
+          "ISO.80000-3",
+          "ISO.80000-4",
+          "ISO.80000-5",
+          "ISO.80000-6",
+          "ISO.80000-7",
+          "ISO.80000-8",
+          "ISO.80000-9",
+          "ISO.80000-10",
+          "ISO.80000-11",
+          "ISO.80000-12",
+          "ISO.80000-13",
+          "ISO.8601.2004",
+          "ISO.10646",
+          "ISBN.9780205309023",
+          "ISBN.0195392884"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:05.384Z"
       }
+    },
+    "releaseTag": "20250325-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:05.384Z"
     },
     "status": {
       "active": true,
@@ -60376,6 +61043,30 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:05.384Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:05.384Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:05.384Z"
       }
     }
   },
@@ -60545,7 +61236,7 @@
       }
     }
   },
-{
+  {
     "docId": "SMPTE.AG18",
     "docId$meta": {
       "confidence": "high",
@@ -60581,26 +61272,31 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "group": "smpte-02c-st",
     "group$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": "smpte-02c-st",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:05.573Z"
     },
-    "href": "https://doc.smpte-doc.org/ag-18/a8e2afca77af87de5dc9e7bbcfb90b2922cdfb99/",
+    "href": "https://doc.smpte-doc.org/ag-18/main/",
     "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": "https://doc.smpte-doc.org/ag-18/a8e2afca77af87de5dc9e7bbcfb90b2922cdfb99/",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-09-30T04:23:05.573Z"
     },
-    "publicationDate": "2023-01-18",
+    "publicationDate": "2025-03-25",
     "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": "2023-01-18",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:05.573Z"
     },
     "publisher": "SMPTE",
     "publisher$meta": {
@@ -60611,31 +61307,55 @@
     },
     "references": {
       "bibliographic": [
-        "SMPTE.AG02"
-      ],
-      "bibliographic$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
-      },
-      "normative": [
-        "SMPTE.ST2003",
-        "SMPTE.ST335.2012",
-        "SMPTE.ST335.2012Am1.2019",
+        "SMPTE.AG02",
+        "SMPTE.ST335",
         "SMPTE.ST395",
         "SMPTE.ST400",
+        "SMPTE.ST2003",
+        "SMPTE.ST2088"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+          "SMPTE.AG02"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:05.573Z"
+      },
+      "normative": [
         "SMPTE.ST298",
         "SMPTE.ST336",
         "SMPTE.OM.Std",
         "SMPTE.AG03"
       ],
       "normative$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+          "SMPTE.ST2003",
+          "SMPTE.ST335.2012",
+          "SMPTE.ST335.2012Am1.2019",
+          "SMPTE.ST395",
+          "SMPTE.ST400",
+          "SMPTE.ST298",
+          "SMPTE.ST336",
+          "SMPTE.OM.Std",
+          "SMPTE.AG03"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:05.573Z"
       }
+    },
+    "releaseTag": "20250325-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:05.573Z"
     },
     "status": {
       "active": true,
@@ -60644,6 +61364,30 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:05.573Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:05.573Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:05.573Z"
       }
     }
   },
@@ -60730,7 +61474,7 @@
       }
     }
   },
-    {
+  {
     "docId": "SMPTE.AG19",
     "docId$meta": {
       "confidence": "high",
@@ -60766,12 +61510,13 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "group": "smpte-02c-st",
     "group$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": "smpte-02c-st",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:05.736Z"
     },
     "href": "https://doc.smpte-doc.org/ag-19/main/",
     "href$meta": {
@@ -60780,12 +61525,14 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "publicationDate": "2023-01-19",
+    "publicationDate": "2023-03-21",
     "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": "2023-01-19",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:05.736Z"
     },
     "publisher": "SMPTE",
     "publisher$meta": {
@@ -60806,6 +61553,14 @@
         "updated": "2025-07-01T00:00:00Z"
       }
     },
+    "releaseTag": "20230321-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:05.736Z"
+    },
     "status": {
       "active": true,
       "active$meta": {
@@ -60813,6 +61568,30 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:05.736Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:05.736Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:05.736Z"
       }
     }
   },
@@ -60935,12 +61714,13 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "group": "smpte-02c-st",
     "group$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": "smpte-02c-st",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:05.905Z"
     },
     "href": "https://doc.smpte-doc.org/ag-20/main/",
     "href$meta": {
@@ -60949,12 +61729,14 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "publicationDate": "2023-01-18",
+    "publicationDate": "2023-03-21",
     "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": "2023-01-18",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:05.905Z"
     },
     "publisher": "SMPTE",
     "publisher$meta": {
@@ -60963,6 +61745,14 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
+    "releaseTag": "20230321-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:05.905Z"
+    },
     "status": {
       "active": true,
       "active$meta": {
@@ -60970,6 +61760,30 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:05.905Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:05.905Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:05.905Z"
       }
     }
   },
@@ -61056,7 +61870,6 @@
       }
     }
   },
-  
   {
     "docId": "SMPTE.AG21",
     "docId$meta": {
@@ -61093,19 +61906,22 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "group": "smpte-02c-st",
     "group$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": "smpte-02c-st",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:06.093Z"
     },
-    "href": "https://doc.smpte-doc.org/ag-21/6e7ad6fa44dfa6998d9d1a2508eac08e57f75751/",
+    "href": "https://doc.smpte-doc.org/ag-21/main/",
     "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": "https://doc.smpte-doc.org/ag-21/6e7ad6fa44dfa6998d9d1a2508eac08e57f75751/",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-09-30T04:23:06.093Z"
     },
     "publicationDate": "2022-12-06",
     "publicationDate$meta": {
@@ -61148,6 +61964,14 @@
         "updated": "2025-07-01T00:00:00Z"
       }
     },
+    "releaseTag": "20221206-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:06.093Z"
+    },
     "status": {
       "active": true,
       "active$meta": {
@@ -61155,6 +61979,30 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:06.093Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:06.093Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:06.093Z"
       }
     }
   },
@@ -61194,12 +62042,13 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "group": "smpte-02c-st",
     "group$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": "smpte-02c-st",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:06.259Z"
     },
     "href": "https://doc.smpte-doc.org/ag-22/main/",
     "href$meta": {
@@ -61208,12 +62057,14 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "publicationDate": "2023-01-20",
+    "publicationDate": "2025-03-25",
     "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": "2023-01-20",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:06.259Z"
     },
     "publisher": "SMPTE",
     "publisher$meta": {
@@ -61223,15 +62074,40 @@
       "updated": "2025-07-01T00:00:00Z"
     },
     "references": {
+      "bibliographic": [
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:06.259Z"
+      },
       "normative": [
-        "SMPTE.OM.Std"
+        "SMPTE.OM.Std",
+        "SMPTE.AG26",
+        "SMPTE.AG31"
       ],
       "normative$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+          "SMPTE.OM.Std"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:06.259Z"
       }
+    },
+    "releaseTag": "20250325-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:06.259Z"
     },
     "status": {
       "active": true,
@@ -61240,6 +62116,30 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:06.259Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:06.260Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:06.260Z"
       }
     }
   },
@@ -61445,26 +62345,31 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "group": "smpte-02c-st",
     "group$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": "smpte-02c-st",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:06.420Z"
     },
-    "href": "https://doc.smpte-doc.org/ag-24/0cda94e7470a65b57f1762bcd3a1820277b81803/",
+    "href": "https://doc.smpte-doc.org/ag-24/main/",
     "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": "https://doc.smpte-doc.org/ag-24/0cda94e7470a65b57f1762bcd3a1820277b81803/",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-09-30T04:23:06.420Z"
     },
-    "publicationDate": "2023-02-02",
+    "publicationDate": "2025-03-25",
     "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": "2023-02-02",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:06.420Z"
     },
     "publisher": "SMPTE",
     "publisher$meta": {
@@ -61475,35 +62380,61 @@
     },
     "references": {
       "bibliographic": [
-        "ISO.Dir-P2.2021",
-        "SMPTE.AG04.ST",
-        "SMPTE.AG04.RP",
-        "SMPTE.AG04.EG",
-        "SMPTE.ST2094-2.2017",
-        "SMPTE.ST381-4.2017",
-        "SMPTE.ST377-1.2019",
-        "ISO.13818-7.2006",
-        "ISO.14496-3.2009",
-        "ISO.14496-3.2009amd4.2013"
+        "ISO.Dir-P2.2011",
+        "SMPTE.AG27",
+        "SMPTE.ST2094-2",
+        "SMPTE.ST381-4",
+        "SMPTE.ST377-1",
+        "ISO.13818-7",
+        "ISO.14496-3"
       ],
       "bibliographic$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+          "ISO.Dir-P2.2021",
+          "SMPTE.AG04.ST",
+          "SMPTE.AG04.RP",
+          "SMPTE.AG04.EG",
+          "SMPTE.ST2094-2.2017",
+          "SMPTE.ST381-4.2017",
+          "SMPTE.ST377-1.2019",
+          "ISO.13818-7.2006",
+          "ISO.14496-3.2009",
+          "ISO.14496-3.2009amd4.2013"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:06.420Z"
       },
       "normative": [
         "SMPTE.OM.Std",
         "SMPTE.AG02",
         "SMPTE.AG16",
-        "SMPTE.AG18"
+        "SMPTE.AG18",
+        "SMPTE.AG26"
       ],
       "normative$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+          "SMPTE.OM.Std",
+          "SMPTE.AG02",
+          "SMPTE.AG16",
+          "SMPTE.AG18"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:06.420Z"
       }
+    },
+    "releaseTag": "20250325-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:06.420Z"
     },
     "status": {
       "active": true,
@@ -61512,6 +62443,30 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:06.420Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:06.420Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:06.420Z"
       }
     }
   },
@@ -61598,7 +62553,6 @@
       }
     }
   },
-  
   {
     "docId": "SMPTE.AG25",
     "docId$meta": {
@@ -61635,26 +62589,31 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "group": "smpte-02c-st",
     "group$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": "smpte-02c-st",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:06.581Z"
     },
-    "href": "https://smpte.github.io/ag-25/",
+    "href": "https://doc.smpte-doc.org/ag-25/main/",
     "href$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": "https://smpte.github.io/ag-25/",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-09-30T04:23:06.581Z"
     },
-    "publicationDate": "2022-07-05",
+    "publicationDate": "2025-04-29",
     "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": "2022-07-05",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:06.581Z"
     },
     "publisher": "SMPTE",
     "publisher$meta": {
@@ -61670,23 +62629,45 @@
         "IETF.JSON.draft-bhutton-json-schema-00.2020"
       ],
       "bibliographic$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+          "SMPTE.OM.Std",
+          "SMPTE.AG03",
+          "IETF.JSON.draft-bhutton-json-schema-00.2020"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:06.581Z"
       },
       "normative": [
         "RFC3986",
         "RFC5234",
         "RFC7405",
-        "RFC8259"
+        "RFC8259",
+        "SMPTE.AG30"
       ],
       "normative$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+          "RFC3986",
+          "RFC5234",
+          "RFC7405",
+          "RFC8259"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:06.581Z"
       }
+    },
+    "releaseTag": "20250429-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:23:06.581Z"
     },
     "status": {
       "active": true,
@@ -61695,6 +62676,740 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:06.581Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:06.581Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:06.581Z"
+      }
+    }
+  },
+  {
+    "docId": "SMPTE.AG26",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/html-pub/main/",
+      "updated": "2025-09-30T04:23:06.957Z"
+    },
+    "docLabel": "SMPTE AG 26",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/html-pub/main/",
+      "updated": "2025-09-30T04:23:06.957Z"
+    },
+    "docNumber": "26",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/html-pub/main/",
+      "updated": "2025-09-30T04:23:06.957Z"
+    },
+    "docTitle": "HTML Pub Tooling and documentation for HTML documents",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/html-pub/main/",
+      "updated": "2025-09-30T04:23:06.957Z"
+    },
+    "docType": "Administrative Guideline",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/html-pub/main/",
+      "updated": "2025-09-30T04:23:06.957Z"
+    },
+    "href": "https://doc.smpte-doc.org/html-pub/main/",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/html-pub/main/",
+      "updated": "2025-09-30T04:23:06.957Z"
+    },
+    "publicationDate": "2025-02-26",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/html-pub/main/",
+      "updated": "2025-09-30T04:23:06.957Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/html-pub/main/",
+      "updated": "2025-09-30T04:23:06.957Z"
+    },
+    "references": {
+      "bibliographic": [
+        "ISO.Dir-P2.2011",
+        "SMPTE.AG02",
+        "SMPTE.AG16",
+        "SMPTE.OM.GH"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+        ],
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:06.957Z"
+      },
+      "normative": [
+        "WHATWG.HTML"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+        ],
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:06.957Z"
+      }
+    },
+    "releaseTag": "20250226-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/html-pub/main/",
+      "updated": "2025-09-30T04:23:06.957Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:06.957Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:06.957Z"
+      },
+      "state": "draft",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:06.957Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:06.957Z"
+      }
+    }
+  },
+  {
+    "docId": "SMPTE.AG28",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/document-repo-spec/main/",
+      "updated": "2025-09-30T04:23:07.070Z"
+    },
+    "docLabel": "SMPTE AG 28",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/document-repo-spec/main/",
+      "updated": "2025-09-30T04:23:07.070Z"
+    },
+    "docNumber": "28",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/document-repo-spec/main/",
+      "updated": "2025-09-30T04:23:07.070Z"
+    },
+    "docTitle": "Document Library Repo Spec (Structure)",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/document-repo-spec/main/",
+      "updated": "2025-09-30T04:23:07.070Z"
+    },
+    "docType": "Administrative Guideline",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/document-repo-spec/main/",
+      "updated": "2025-09-30T04:23:07.070Z"
+    },
+    "href": "https://doc.smpte-doc.org/document-repo-spec/main/",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/document-repo-spec/main/",
+      "updated": "2025-09-30T04:23:07.070Z"
+    },
+    "publicationDate": "2025-02-26",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/document-repo-spec/main/",
+      "updated": "2025-09-30T04:23:07.070Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/document-repo-spec/main/",
+      "updated": "2025-09-30T04:23:07.070Z"
+    },
+    "references": {
+      "bibliographic": [
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+        ],
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:07.070Z"
+      },
+      "normative": [
+        "ISO.ICS",
+        "ISO.26324",
+        "ISO.2108"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+        ],
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:07.070Z"
+      }
+    },
+    "releaseTag": "20250226-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/document-repo-spec/main/",
+      "updated": "2025-09-30T04:23:07.070Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:07.070Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:07.070Z"
+      },
+      "state": "draft",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:07.070Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:07.070Z"
+      }
+    }
+  },
+  {
+    "docId": "SMPTE.AG29",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/document-url-spec/main/",
+      "updated": "2025-09-30T04:23:07.190Z"
+    },
+    "docLabel": "SMPTE AG 29",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/document-url-spec/main/",
+      "updated": "2025-09-30T04:23:07.190Z"
+    },
+    "docNumber": "29",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/document-url-spec/main/",
+      "updated": "2025-09-30T04:23:07.190Z"
+    },
+    "docTitle": "Document Library URL Spec (Persistent URIs)",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/document-url-spec/main/",
+      "updated": "2025-09-30T04:23:07.190Z"
+    },
+    "docType": "Administrative Guideline",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/document-url-spec/main/",
+      "updated": "2025-09-30T04:23:07.190Z"
+    },
+    "href": "https://doc.smpte-doc.org/document-url-spec/main/",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/document-url-spec/main/",
+      "updated": "2025-09-30T04:23:07.190Z"
+    },
+    "publicationDate": "2025-02-26",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/document-url-spec/main/",
+      "updated": "2025-09-30T04:23:07.190Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/document-url-spec/main/",
+      "updated": "2025-09-30T04:23:07.190Z"
+    },
+    "references": {
+      "bibliographic": [
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+        ],
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:07.190Z"
+      },
+      "normative": [
+        "WHATWG.HTML",
+        "RFC7405",
+        "RFC3986"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+        ],
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:07.190Z"
+      }
+    },
+    "releaseTag": "20250226-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/document-url-spec/main/",
+      "updated": "2025-09-30T04:23:07.190Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:07.190Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:07.190Z"
+      },
+      "state": "draft",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:07.190Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:07.190Z"
+      }
+    }
+  },
+  {
+    "docId": "SMPTE.AG30",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-30/main/",
+      "updated": "2025-09-30T04:23:07.357Z"
+    },
+    "docLabel": "SMPTE AG 30",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-30/main/",
+      "updated": "2025-09-30T04:23:07.357Z"
+    },
+    "docNumber": "30",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-30/main/",
+      "updated": "2025-09-30T04:23:07.357Z"
+    },
+    "docTitle": "Software license",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-30/main/",
+      "updated": "2025-09-30T04:23:07.357Z"
+    },
+    "docType": "Administrative Guideline",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-30/main/",
+      "updated": "2025-09-30T04:23:07.357Z"
+    },
+    "href": "https://doc.smpte-doc.org/ag-30/main/",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-30/main/",
+      "updated": "2025-09-30T04:23:07.357Z"
+    },
+    "publicationDate": "2024-08-20",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-30/main/",
+      "updated": "2025-09-30T04:23:07.357Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-30/main/",
+      "updated": "2025-09-30T04:23:07.357Z"
+    },
+    "references": {
+      "bibliographic": [
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+        ],
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:07.357Z"
+      },
+      "normative": [
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+        ],
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:07.357Z"
+      }
+    },
+    "releaseTag": "20240820-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-30/main/",
+      "updated": "2025-09-30T04:23:07.357Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:07.357Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:07.357Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:07.357Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:07.357Z"
+      }
+    }
+  },
+  {
+    "docId": "SMPTE.AG31",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-31/main/",
+      "updated": "2025-09-30T04:23:07.557Z"
+    },
+    "docLabel": "SMPTE AG 31",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-31/main/",
+      "updated": "2025-09-30T04:23:07.557Z"
+    },
+    "docNumber": "31",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-31/main/",
+      "updated": "2025-09-30T04:23:07.557Z"
+    },
+    "docTitle": "GitHub Operating Guidelines",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-31/main/",
+      "updated": "2025-09-30T04:23:07.557Z"
+    },
+    "docType": "Administrative Guideline",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-31/main/",
+      "updated": "2025-09-30T04:23:07.557Z"
+    },
+    "href": "https://doc.smpte-doc.org/ag-31/main/",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-31/main/",
+      "updated": "2025-09-30T04:23:07.557Z"
+    },
+    "publicationDate": "2025-03-25",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-31/main/",
+      "updated": "2025-09-30T04:23:07.557Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-31/main/",
+      "updated": "2025-09-30T04:23:07.557Z"
+    },
+    "references": {
+      "bibliographic": [
+        "SMPTE.AG22"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+        ],
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:07.557Z"
+      },
+      "normative": [
+        "SMPTE.AG04",
+        "SMPTE.AG26",
+        "SMPTE.AG27"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+        ],
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:07.557Z"
+      }
+    },
+    "releaseTag": "20250325-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-31/main/",
+      "updated": "2025-09-30T04:23:07.557Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:07.557Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:07.557Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:07.557Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:07.557Z"
       }
     }
   },
@@ -65148,6 +66863,136 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "docId": "SMPTE.OM.Std",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/standards-operations-manual/main/",
+      "updated": "2025-09-30T04:23:07.709Z"
+    },
+    "docLabel": "SMPTE OM",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/standards-operations-manual/main/",
+      "updated": "2025-09-30T04:23:07.709Z"
+    },
+    "docTitle": "Standards Operations Manual",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/standards-operations-manual/main/",
+      "updated": "2025-09-30T04:23:07.709Z"
+    },
+    "docType": "Operations Manual",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/standards-operations-manual/main/",
+      "updated": "2025-09-30T04:23:07.709Z"
+    },
+    "href": "https://doc.smpte-doc.org/standards-operations-manual/main/",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/standards-operations-manual/main/",
+      "updated": "2025-09-30T04:23:07.709Z"
+    },
+    "publicationDate": "2025-06-26",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/standards-operations-manual/main/",
+      "updated": "2025-09-30T04:23:07.709Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/standards-operations-manual/main/",
+      "updated": "2025-09-30T04:23:07.709Z"
+    },
+    "references": {
+      "bibliographic": [
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+        ],
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:07.709Z"
+      },
+      "normative": [
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+        ],
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:07.709Z"
+      }
+    },
+    "releaseTag": "20250626-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/standards-operations-manual/main/",
+      "updated": "2025-09-30T04:23:07.709Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:07.709Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:07.709Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:23:07.709Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:23:07.709Z"
       }
     }
   },
@@ -78421,6 +80266,220 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      }
+    }
+  },
+  {
+    "docId": "SMPTE.RP428-22.2025-06",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T04:22:54.593Z"
+    },
+    "docLabel": "SMPTE RP 428-22:2025-06",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T04:22:54.593Z"
+    },
+    "docNumber": "428",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T04:22:54.593Z"
+    },
+    "docPart": "22",
+    "docPart$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubPart meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T04:22:54.593Z"
+    },
+    "docTitle": "D-Cinema Distribution Master Minimal Timed Text XML Requirements",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T04:22:54.593Z"
+    },
+    "docType": "Recommended Practice",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T04:22:54.593Z"
+    },
+    "doi": "10.5594/SMPTE.RP428-22.2025",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T04:22:54.593Z"
+    },
+    "group": "smpte-27c-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T04:22:54.593Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.RP428-22.2025",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T04:22:54.593Z"
+    },
+    "publicationDate": "2025-06-27",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T04:22:54.593Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T04:22:54.593Z"
+    },
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST429-2",
+        "SMPTE.RDD52",
+        "ISO.14496-22.2015"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+        ],
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:54.593Z"
+      },
+      "normative": [
+        "SMPTE.ST428-7"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+        ],
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:54.593Z"
+      }
+    },
+    "releaseTag": "20250627-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T04:22:54.593Z"
+    },
+    "repo": "https://github.com/SMPTE/rp428-22/",
+    "repo$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed or inferred publication type/number/part and verified to exist",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T04:22:54.593Z"
+    },
+    "resolvedHref": "https://my.smpte.org/s/product-details?id=a1BVR000003VZB42AO",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T04:22:54.593Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:54.593Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:54.593Z"
+      },
+      "amendedBy": [
+      ],
+      "amendedBy$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendment",
+        "originalValue": [
+        ],
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:54.593Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:54.593Z"
+      },
+      "stage": "PUB",
+      "stage$meta": {
+        "confidence": "high",
+        "note": "Stage parsed from HTML pubStage meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:54.593Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:54.593Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:54.593Z"
       }
     }
   },
@@ -96640,6 +98699,11 @@
       "updated": "2025-07-01T00:00:00Z"
     },
     "docNumber": "2067",
+    "docNumber$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-09-30T04:23:09.076Z"
+    },
     "docPart": "21",
     "docPart$meta": {
       "confidence": "medium",
@@ -120970,12 +123034,14 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "docLabel": "SMPTE ST 429-2:20",
+    "docLabel": "SMPTE ST 429-2:2009",
     "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": "SMPTE ST 429-2:20",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:55.295Z"
     },
     "docNumber": "429",
     "docNumber$meta": {
@@ -121020,6 +123086,11 @@
       "updated": "2025-07-01T00:00:00Z"
     },
     "href": "https://doi.org/10.5594/SMPTE.ST429-2.2009",
+    "href$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-09-30T04:23:09.076Z"
+    },
     "keywords": [
       "DCinema",
       "Packaging",
@@ -121046,9 +123117,54 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
+    "releaseTag": "20090311-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:55.295Z"
+    },
+    "repo": "https://github.com/SMPTE/st429-2/",
+    "repo$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed or inferred publication type/number/part and verified to exist",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:55.295Z"
+    },
+    "resolvedHref": "https://my.smpte.org/s/product-details?id=a1BVR0000007NgI",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:55.295Z"
+    },
     "status": {
       "active": false,
-      "amended": true,
+      "active$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-09-30T04:23:09.076Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": true,
+        "overridden": true,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:55.295Z"
+      },
+      "latestVersion": false,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:55.295Z"
+      },
       "superseded": true,
       "superseded$meta": {
         "confidence": "medium",
@@ -121059,6 +123175,11 @@
       "supersededBy": [
         "SMPTE.ST429-2.2011"
       ],
+      "supersededBy$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-09-30T04:23:09.076Z"
+      },
       "supersededDate": "2011-09-23",
       "supersededDate$meta": {
         "confidence": "medium",
@@ -121083,7 +123204,15 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "docLabel": "",
+    "docLabel": "SMPTE ST 429-2:2011",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": "",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:55.567Z"
+    },
     "docNumber": "429",
     "docNumber$meta": {
       "confidence": "medium",
@@ -121159,6 +123288,30 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
+    "releaseTag": "20110923-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:55.567Z"
+    },
+    "repo": "https://github.com/SMPTE/st429-2/",
+    "repo$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed or inferred publication type/number/part and verified to exist",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:55.567Z"
+    },
+    "resolvedHref": "https://my.smpte.org/s/product-details?id=a1BVR0000007NgI",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:55.567Z"
+    },
     "status": {
       "active": false,
       "active$meta": {
@@ -121166,6 +123319,54 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "amended": true,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:55.567Z"
+      },
+      "amendedBy": [
+        "SMPTE.ST429-2.2011Am1.2013"
+      ],
+      "amendedBy$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendment",
+        "originalValue": [
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:55.567Z"
+      },
+      "latestVersion": false,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:55.567Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:55.567Z"
+      },
+      "supersededBy": [
+        "SMPTE.ST429-2.2013"
+      ],
+      "supersededBy$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": [
+        ],
+        "overridden": true,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:55.567Z"
       },
       "supersededDate": "2013-09-28",
       "supersededDate$meta": {
@@ -121212,12 +123413,14 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "docTitle": "D-Cinema Packaging — DCP Operational Constraints — Amendment 1",
+    "docTitle": "D-Cinema Packaging — DCP Operational Constraints",
     "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": "D-Cinema Packaging — DCP Operational Constraints — Amendment 1",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:55.794Z"
     },
     "docType": "Standard",
     "docType$meta": {
@@ -121273,6 +123476,30 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
+    "releaseTag": "20130116-am1-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:55.794Z"
+    },
+    "repo": "https://github.com/SMPTE/st429-2/",
+    "repo$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed or inferred publication type/number/part and verified to exist",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:55.794Z"
+    },
+    "resolvedHref": "https://my.smpte.org/s/product-details?id=a1BVR0000007NgI",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:55.794Z"
+    },
     "status": {
       "active": false,
       "active$meta": {
@@ -121280,6 +123507,14 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "latestVersion": false,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:55.794Z"
       },
       "superseded": true,
       "superseded$meta": {
@@ -121449,12 +123684,28 @@
         "updated": "2025-07-01T00:00:00Z"
       }
     },
+    "releaseTag": "20130928-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:56.099Z"
+    },
     "repo": "https://github.com/SMPTE/st429-2/",
     "repo$meta": {
       "confidence": "medium",
       "note": "Legacy data, has not been verified",
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
+    },
+    "resolvedHref": "https://my.smpte.org/s/product-details?id=a1BVR0000007NgI",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:56.099Z"
     },
     "status": {
       "active": false,
@@ -121480,6 +123731,14 @@
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
       },
+      "latestVersion": false,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:56.099Z"
+      },
       "superseded": true,
       "superseded$meta": {
         "confidence": "medium",
@@ -121495,6 +123754,14 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededDate": "2019-11-11",
+      "supersededDate$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:56.099Z"
       }
     }
   },
@@ -121506,12 +123773,14 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "docLabel": "SMPTE ST 429-2:2013 Am 1:2018",
+    "docLabel": "SMPTE ST 429-2:2013 Am1:2018",
     "docLabel$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": "SMPTE ST 429-2:2013 Am 1:2018",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:56.378Z"
     },
     "docNumber": "429",
     "docNumber$meta": {
@@ -121527,12 +123796,14 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "docTitle": "D-Cinema Packaging – DCP Operational Constraints",
+    "docTitle": "D-Cinema Packaging — DCP Operational Constraints",
     "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": "D-Cinema Packaging – DCP Operational Constraints",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:56.378Z"
     },
     "docType": "Standard",
     "docType$meta": {
@@ -121574,12 +123845,14 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "publicationDate": "2019-01-25",
+    "publicationDate": "2018-12-31",
     "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": "2019-01-25",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:56.378Z"
     },
     "publisher": "SMPTE",
     "publisher$meta": {
@@ -121638,6 +123911,30 @@
         "updated": "2025-07-01T00:00:00Z"
       }
     },
+    "releaseTag": "20181231-am1-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:56.378Z"
+    },
+    "repo": "https://github.com/SMPTE/st429-2/",
+    "repo$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed or inferred publication type/number/part and verified to exist",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:56.378Z"
+    },
+    "resolvedHref": "https://my.smpte.org/s/product-details?id=a1BVR0000007NgI",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:56.378Z"
+    },
     "status": {
       "active": false,
       "active$meta": {
@@ -121645,6 +123942,14 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "latestVersion": false,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:56.378Z"
       },
       "superseded": true,
       "superseded$meta": {
@@ -121661,6 +123966,14 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededDate": "2019-11-11",
+      "supersededDate$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:56.378Z"
       }
     }
   },
@@ -121747,12 +124060,14 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "publicationDate": "2020-05-12",
+    "publicationDate": "2019-11-11",
     "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": "2020-05-12",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:56.627Z"
     },
     "publisher": "SMPTE",
     "publisher$meta": {
@@ -121817,6 +124132,30 @@
         "updated": "2025-07-01T00:00:00Z"
       }
     },
+    "releaseTag": "20191111-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:56.627Z"
+    },
+    "repo": "https://github.com/SMPTE/st429-2/",
+    "repo$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed or inferred publication type/number/part and verified to exist",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:56.627Z"
+    },
+    "resolvedHref": "https://my.smpte.org/s/product-details?id=a1BVR0000007NgI2AU",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:56.627Z"
+    },
     "status": {
       "active": false,
       "active$meta": {
@@ -121824,6 +124163,22 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:56.627Z"
+      },
+      "latestVersion": false,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:56.627Z"
       },
       "superseded": true,
       "superseded$meta": {
@@ -121841,12 +124196,14 @@
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
       },
-      "supersededDate": "2020-12-22",
+      "supersededDate": "2020-10-27",
       "supersededDate$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": "2020-12-22",
+        "overridden": true,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:56.627Z"
       }
     }
   },
@@ -122084,12 +124441,14 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "publicationDate": "2020-12-22",
+    "publicationDate": "2020-10-27",
     "publicationDate$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": "2020-12-22",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:56.909Z"
     },
     "publisher": "SMPTE",
     "publisher$meta": {
@@ -122147,12 +124506,28 @@
         "updated": "2025-07-01T00:00:00Z"
       }
     },
+    "releaseTag": "20201027-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:56.909Z"
+    },
     "repo": "https://github.com/SMPTE/st429-2/",
     "repo$meta": {
       "confidence": "medium",
       "note": "Legacy data, has not been verified",
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
+    },
+    "resolvedHref": "https://my.smpte.org/s/product-details?id=a1BVR0000007NgI",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:56.909Z"
     },
     "status": {
       "active": false,
@@ -122162,12 +124537,28 @@
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
       },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:56.909Z"
+      },
       "draft": false,
       "draft$meta": {
         "confidence": "medium",
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "latestVersion": false,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T04:22:56.909Z"
       },
       "superseded": true,
       "superseded$meta": {
@@ -122223,12 +124614,14 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "docTitle": "D-Cinema Packaging — DCP Operational",
+    "docTitle": "D-Cinema Packaging DCP Operational Constraints",
     "docTitle$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": "D-Cinema Packaging — DCP Operational",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:57.250Z"
     },
     "docType": "Standard",
     "docType$meta": {
@@ -122236,6 +124629,14 @@
       "note": "Legacy data, has not been verified",
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
+    },
+    "doi": "10.5594/SMPTE.ST429-2.2023",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:57.250Z"
     },
     "group": "smpte-27c-tc",
     "group$meta": {
@@ -122270,26 +124671,35 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
-    "publisher": "SMP",
+    "publisher": "SMPTE",
     "publisher$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": "SMP",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:57.250Z"
     },
     "references": {
       "bibliographic": [
         "SMPTE.ST428-3",
-        "SMPTE.ST429-10",
-        "SMPTE.ST429-13",
+        "SMPTE.ST428-11",
         "SMPTE.ST429-13",
         "SMPTE.ST430-1"
       ],
       "bibliographic$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+          "SMPTE.ST428-3",
+          "SMPTE.ST429-10",
+          "SMPTE.ST429-13",
+          "SMPTE.ST429-13",
+          "SMPTE.ST430-1"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:57.250Z"
       },
       "normative": [
         "SMPTE.ST330",
@@ -122300,6 +124710,8 @@
         "SMPTE.ST428-1",
         "SMPTE.ST428-2",
         "SMPTE.ST428-7",
+        "SMPTE.ST428-10",
+        "SMPTE.ST428-12",
         "SMPTE.ST429-3",
         "SMPTE.ST429-4",
         "SMPTE.ST429-5",
@@ -122317,8 +124729,6 @@
         "ISO.15444-1",
         "ISO.15948",
         "IEC.61966-2-1",
-        "IEC.61966-2-1",
-        "RFC4122",
         "RFC4122",
         "RFC4246",
         "RFC5646",
@@ -122326,11 +124736,54 @@
         "W3C.xml"
       ],
       "normative$meta": {
-        "confidence": "medium",
-        "note": "Legacy data, has not been verified",
-        "source": "manual",
-        "updated": "2025-07-01T00:00:00Z"
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+          "SMPTE.ST330",
+          "SMPTE.ST377-1",
+          "SMPTE.ST377-4",
+          "SMPTE.ST382",
+          "SMPTE.ST422",
+          "SMPTE.ST428-1",
+          "SMPTE.ST428-2",
+          "SMPTE.ST428-7",
+          "SMPTE.ST429-3",
+          "SMPTE.ST429-4",
+          "SMPTE.ST429-5",
+          "SMPTE.ST429-6",
+          "SMPTE.ST429-7",
+          "SMPTE.ST429-8",
+          "SMPTE.ST429-10",
+          "SMPTE.ST429-12",
+          "SMPTE.ST429-16",
+          "SMPTE.ST429-20",
+          "SMPTE.ST430-2",
+          "SMPTE.ST2029",
+          "SMPTE.ST429-17",
+          "ISO.10646",
+          "ISO.15444-1",
+          "ISO.15948",
+          "IEC.61966-2-1",
+          "IEC.61966-2-1",
+          "RFC4122",
+          "RFC4122",
+          "RFC4246",
+          "RFC5646",
+          "RFC7972",
+          "W3C.xml"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:57.250Z"
       }
+    },
+    "releaseTag": "20230912-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:57.250Z"
     },
     "repo": "https://github.com/SMPTE/st429-2/",
     "repo$meta": {
@@ -122339,14 +124792,27 @@
       "source": "manual",
       "updated": "2025-07-01T00:00:00Z"
     },
+    "resolvedHref": "https://my.smpte.org/s/product-details?id=a1BVR0000007NgI",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2025-09-30T04:22:57.250Z"
+    },
     "revisionOf": [
-      "SMPTE.ST429-2.2019Am1.2019"
+      "SMPTE.ST429-2.2019Am1.2019",
+      "SMPTE.ST429-2.2020"
     ],
     "revisionOf$meta": {
-      "confidence": "medium",
-      "note": "Legacy data, has not been verified",
-      "source": "manual",
-      "updated": "2025-07-01T00:00:00Z"
+      "confidence": "high",
+      "note": "Parsed from HTML pubRevisionOf meta tag",
+      "originalValue": [
+        "SMPTE.ST429-2.2019Am1.2019"
+      ],
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-09-30T04:22:57.250Z"
     },
     "status": {
       "active": true,
@@ -122355,6 +124821,14 @@
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T04:22:57.250Z"
       },
       "draft": false,
       "draft$meta": {
