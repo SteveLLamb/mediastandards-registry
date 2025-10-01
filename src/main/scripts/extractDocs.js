@@ -15,61 +15,7 @@ const cheerio = require('cheerio');
 const dayjs = require('dayjs');
 const fs = require('fs');
 
-// Optional reference normalization via patterns (patterns-only, no byCite exact map)
-let refMap = {};
-try {
-  refMap = require('../input/refMap.json');
-} catch (_) {
-  refMap = {};
-}
-
-// byCitePatterns maps *refId* → pattern(s)
-// A pattern can be:
-//   - plain string (normalized exact match: collapse spaces, trim, lowercase)
-//   - regex written as "/.../flags"
-// Values can be a single pattern string or an array of patterns.
-function normalizePatterns(val) {
-  if (Array.isArray(val)) return val.filter(v => typeof v === 'string' && v.trim().length > 0);
-  if (typeof val === 'string' && val.trim().length > 0) return [val];
-  return [];
-}
-
-const refMapPatterns = [];
-if (refMap && refMap.byCitePatterns && typeof refMap.byCitePatterns === 'object') {
-  for (const [refId, patternsVal] of Object.entries(refMap.byCitePatterns)) {
-    const patterns = normalizePatterns(patternsVal);
-    if (!patterns.length) continue;
-    for (const pat of patterns) {
-      const m = pat.match(/^\s*\/(.*)\/([a-z]*)\s*$/i);
-      if (m) {
-        const body = m[1];
-        const flags = m[2] || 'i';
-        try {
-          refMapPatterns.push({ type: 'regex', re: new RegExp(body, flags), refId });
-        } catch (_) { /* ignore bad regex */ }
-      } else {
-        const key = String(pat).replace(/\s+/g, ' ').trim().toLowerCase();
-        if (key) refMapPatterns.push({ type: 'plain', key, refId });
-      }
-    }
-  }
-}
-
-function mapRefByCite(text) {
-  if (!text) return null;
-  const norm = String(text).replace(/\s+/g, ' ').trim().toLowerCase();
-  // 1) plain exact matches first (normalized)
-  for (const p of refMapPatterns) {
-    if (p.type === 'plain' && p.key === norm) return p.refId;
-  }
-  // 2) regex patterns
-  for (const p of refMapPatterns) {
-    if (p.type === 'regex') {
-      try { if (p.re.test(text)) return p.refId; } catch (_) {}
-    }
-  }
-  return null;
-}
+const { parseRefId, extractRefs, mapRefByCite } = require('../lib/referencing');
 
 // Normalize titles by removing a leading "SMPTE" token (and common punctuation/spaces)
 function stripLeadingSmpte(title) {
@@ -511,78 +457,6 @@ function mergeInferredInto(existingDoc, inferredDoc) {
 
 }
 
-const parseRefId = (text, href = '') => {
-  // allow explicit cite→refId normalization via refMap.json
-  const mapped = mapRefByCite(text);
-  if (mapped) return mapped;
-
-  if (/w3\.org\/TR\/\d{4}\/REC-([^\/]+)-(\d{8})\//i.test(href)) {
-    const [, shortname, yyyymmdd] = href.match(/REC-([^\/]+)-(\d{8})/i);
-    return `W3C.${shortname}.${yyyymmdd}`;
-  }
-  if (/w3\.org\/TR\/([^\/]+)\/?$/i.test(href)) {
-    const [, shortname] = href.match(/w3\.org\/TR\/([^\/]+)\/?$/i);
-    return `W3C.${shortname}`;
-  }
-  const parts = text.split('|').map(p => p.trim());
-  text = parts.find(p => /ISO\/IEC|ISO/.test(p)) || parts[0];
-  // SMPTE refs: support ST/RP/RDD/EG/AG/OV
-  // Allow space or hyphen (incl. common Unicode dashes) between type and number
-  // Allow optional alpha suffix in the number (e.g., AG-10B)
-  {
-    const smpteRe = /SMPTE\s+(ST|RP|RDD|EG|AG|OV)[\s\u00A0\u2010-\u2015\-]+(\d+[A-Za-z]?)(?:-(\d+))?(?::\s*(\d{4})(?:-(\d{2}))?)?/i;
-    const m = text.match(smpteRe);
-    if (m) {
-      const [, type, numRaw, part, year, month] = m;
-      const num = String(numRaw).toUpperCase();
-      const lineage = `SMPTE.${type.toUpperCase()}${part ? `${num}-${part}` : num}`;
-      if (year) {
-        const y = parseInt(year, 10);
-        const suffix = (y >= 2023 && month) ? `${year}-${month}` : year;
-        return `${lineage}.${suffix}`;
-      }
-      return `${lineage}`;
-    }
-  }
-  if (/RFC\s*(\d+)/i.test(text)) {
-    return `RFC${text.match(/RFC\s*(\d+)/i)[1]}`;
-  }
-  if (/10\.6028\/NIST\.(.+)/i.test(href)) {
-    const [, id] = href.match(/10\.6028\/NIST\.(.+)/i);
-    return `NIST.${id}`;
-  }
-  // NIST FIPS references (strip optional "PUB" token)
-  if (/NIST\s+FIPS\s+(?:PUB\s+)?(\d+)(-\d+)?/i.test(text)) {
-    const [, num, rev] = text.match(/NIST\s+FIPS\s+(?:PUB\s+)?(\d+)(-\d+)?/i);
-    return `NIST.FIPS.${num}${rev || ''}`;
-  }
-  // Also recognize FIPS structure in hrefs like .../fips/186/2/...
-  if (/csrc\.nist\.gov\/.+\/fips\/(\d+)(?:\/(\d+))?/i.test(href)) {
-    const m = href.match(/fips\/(\d+)(?:\/(\d+))?/i);
-    const num = m[1];
-    const rev = m[2] ? `-${m[2]}` : '';
-    return `NIST.FIPS.${num}${rev}`;
-  }
-  if (/ISO\/IEC\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/.test(text)) {
-    const [, base, suffix] = text.match(/ISO\/IEC\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/);
-    const years = suffix ? [...suffix.matchAll(/(\d{4})/g)].map(m => parseInt(m[1])) : [];
-    const year = years.length ? Math.max(...years) : null;
-    return `ISO.${base}${year ? `.${year}` : ''}`;
-  }
-  if (/ISO\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/.test(text)) {
-    const [, base, suffix] = text.match(/ISO\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/);
-    const years = suffix ? [...suffix.matchAll(/(\d{4})/g)].map(m => parseInt(m[1])) : [];
-    const year = years.length ? Math.max(...years) : null;
-    return `ISO.${base}${year ? `.${year}` : ''}`;
-  }
-  if (/IEC\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/.test(text)) {
-    const [, base, suffix] = text.match(/IEC\s+([\d\-]+)(:[\dA-Za-z+:\.-]+)?/);
-    const years = suffix ? [...suffix.matchAll(/(\d{4})/g)].map(m => parseInt(m[1])) : [];
-    const year = years.length ? Math.max(...years) : null;
-    return `IEC.${base}${year ? `.${year}` : ''}`;
-  }
-  return null;
-};
 
 // Extract a single document from a "seed" URL that points directly to a doc page (no release folders).
 // Assumes the page hosts an index.html with the same meta structure used by SMPTE doc pages.
@@ -632,29 +506,8 @@ const extractFromSeedDoc = async (seedRootUrl) => {
       ($index('[itemprop="publisher"]').text() || $index('[itemprop="publisher"]').attr('content') || '').trim() || 'SMPTE';
 
     // References
-    const refSections = { normative: [], bibliographic: [] };
-    ['normative-references', 'bibliography'].forEach((sectionId) => {
-      const type = sectionId.includes('normative') ? 'normative' : 'bibliographic';
-      $index(`#sec-${sectionId} ul li`).each((_, el) => {
-        const cite = $index(el).find('cite');
-        const refText = cite.text();
-        const href = $index(el).find('a.ext-ref').attr('href') || '';
-        const refId = parseRefId(refText, href);
-        if (refId) {
-          if (Array.isArray(refId)) refSections[type].push(...refId);
-          else refSections[type].push(refId);
-        } else {
-          badRefs.push({ docId: id, type, refText, href });
-        }
-      });
-    });
-
-    const hasNorm = Array.isArray(refSections.normative) && refSections.normative.length > 0;
-    const hasBibl = Array.isArray(refSections.bibliographic) && refSections.bibliographic.length > 0;
-    //const hasRefs = hasNorm || hasBibl;
-    const refsOut = {};
-    if (hasNorm) refsOut.normative = refSections.normative;
-    if (hasBibl) refsOut.bibliographic = refSections.bibliographic;
+    const { references: refsOut = {}, badRefs: localBad = [] } = extractRefs($index, id);
+    if (localBad.length) badRefs.push(...localBad);
     const hasRefsOut = Object.keys(refsOut).length > 0;
 
     const revisionRaw = $index('[itemprop="pubRevisionOf"]').attr('content');
@@ -891,29 +744,8 @@ const extractFromUrl = async (rootUrl) => {
       const pubPublisher =
         ($index('[itemprop="publisher"]').text() || $index('[itemprop="publisher"]').attr('content') || '').trim() || 'SMPTE';
 
-      const refSections = { normative: [], bibliographic: [] };
-      ['normative-references', 'bibliography'].forEach((sectionId) => {
-        const type = sectionId.includes('normative') ? 'normative' : 'bibliographic';
-        $index(`#sec-${sectionId} ul li`).each((_, el) => {
-          const cite = $index(el).find('cite');
-          const refText = cite.text();
-          const href = $index(el).find('a.ext-ref').attr('href') || '';
-          const refId = parseRefId(refText, href);
-          if (refId) {
-            if (Array.isArray(refId)) refSections[type].push(...refId);
-            else refSections[type].push(refId);
-          } else {
-            badRefs.push({ docId: id, type, refText, href });
-          }
-        });
-      });
-
-      const hasNorm = Array.isArray(refSections.normative) && refSections.normative.length > 0;
-      const hasBibl = Array.isArray(refSections.bibliographic) && refSections.bibliographic.length > 0;
-      //const hasRefs = hasNorm || hasBibl;
-      const refsOut = {};
-      if (hasNorm) refsOut.normative = refSections.normative;
-      if (hasBibl) refsOut.bibliographic = refSections.bibliographic;
+      const { references: refsOut = {}, badRefs: localBad = [] } = extractRefs($index, id);
+      if (localBad.length) badRefs.push(...localBad);
       const hasRefsOut = Object.keys(refsOut).length > 0;
 
       const revisionRaw = $index('[itemprop="pubRevisionOf"]').attr('content');
@@ -1010,7 +842,7 @@ const extractFromUrl = async (rootUrl) => {
         if (/-am\d+-/i.test(baseTag)) continue;
         baseDoc.status = baseDoc.status || {};
         if (baseDoc.status.amended === undefined) baseDoc.status.amended = false;
-        if (!Array.isArray(baseDoc.status.amendedBy)) baseDoc.status.amendedBy = [];
+        // Do not create empty amendedBy; leave undefined when there are no amendments.
       }
     }
   } catch (e) {
@@ -1191,12 +1023,22 @@ for (const doc of results) {
       if (doc.revisionOf) {
         injectMeta(doc, 'revisionOf', sourceType, 'new', []);
       }
-      // Inject $meta for status.amendedBy on new docs when present
+      // Only persist non-empty arrays and their $meta; drop empties to avoid JSON noise
       if (doc.status && Array.isArray(doc.status.amendedBy)) {
-        injectMeta(doc.status, 'amendedBy', sourceType, 'new', []);
+        if (doc.status.amendedBy.length > 0) {
+          injectMeta(doc.status, 'amendedBy', sourceType, 'new', []);
+        } else {
+          delete doc.status.amendedBy;
+          delete doc.status['amendedBy$meta'];
+        }
       }
       if (doc.status && Array.isArray(doc.status.supersededBy)) {
-        injectMeta(doc.status, 'supersededBy', 'resolved', 'new', []);
+        if (doc.status.supersededBy.length > 0) {
+          injectMeta(doc.status, 'supersededBy', 'resolved', 'new', []);
+        } else {
+          delete doc.status.supersededBy;
+          delete doc.status['supersededBy$meta'];
+        }
       }
       if (doc.status && typeof doc.status.supersededDate === 'string') {
         injectMeta(doc.status, 'supersededDate', 'resolved', 'new', null);
@@ -1343,9 +1185,15 @@ for (const doc of results) {
               const newAB = newVal.amendedBy;
               const same = JSON.stringify(oldAB) === JSON.stringify(newAB);
               if (!same) {
-                existingDoc.status.amendedBy = newAB;
-                const fieldSourceAB = 'parsed';
-                injectMeta(existingDoc.status, 'amendedBy', fieldSourceAB, 'update', oldAB);
+                if (newAB.length > 0) {
+                  existingDoc.status.amendedBy = newAB;
+                  const fieldSourceAB = 'parsed';
+                  injectMeta(existingDoc.status, 'amendedBy', fieldSourceAB, 'update', oldAB);
+                } else {
+                  // Drop empty arrays and their meta
+                  delete existingDoc.status.amendedBy;
+                  delete existingDoc.status['amendedBy$meta'];
+                }
                 if (!changedFields.includes('status')) changedFields.push('status');
               }
             }
@@ -1355,9 +1203,14 @@ for (const doc of results) {
               const newSB = newVal.supersededBy;
               const sameSB = JSON.stringify(oldSB) === JSON.stringify(newSB);
               if (!sameSB) {
-                existingDoc.status.supersededBy = newSB;
-                const fieldSourceSB = 'resolved'; // derived from cross-version wiring logic
-                injectMeta(existingDoc.status, 'supersededBy', fieldSourceSB, 'update', oldSB);
+                if (newSB.length > 0) {
+                  existingDoc.status.supersededBy = newSB;
+                  const fieldSourceSB = 'resolved'; // derived from cross-version wiring logic
+                  injectMeta(existingDoc.status, 'supersededBy', fieldSourceSB, 'update', oldSB);
+                } else {
+                  delete existingDoc.status.supersededBy;
+                  delete existingDoc.status['supersededBy$meta'];
+                }
                 if (!changedFields.includes('status')) changedFields.push('status');
               }
             }
