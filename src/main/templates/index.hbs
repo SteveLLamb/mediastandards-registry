@@ -30,7 +30,7 @@
           <td class="doclabel">
             <a class="anchor" id="{{docId}}" href="#{{docId}}"></a><code>{{docLabel}}</code>
             {{#if latestDoc}}
-            <br><span class="small">(Latest Version of "{{docBase}}")</span>
+            <br><span class="small">Latest Version of {{docBase}}</span>
             {{/if}}
           </td>
           <td class="publisher">
@@ -351,22 +351,52 @@
             {{/currentWork}}
           </td>
           <td class="p-1">
-            {{#if references/normative}}
+            {{#if referencesResolved/normative}}
+            <ul class="list-group list-group-flush">
+            {{#referencesResolved/normative}}
+              <li class="list-group-item">
+                <span class="small">
+                  <a class="{{../../idType}}-link clear-filter" href="#{{id}}" title="{{getLabel id}}">
+                    {{#if undated}}{{getUndatedLabel id}}{{else}}{{getLabel id}}{{/if}}
+                  </a>
+                  [{{getStatus id}}]
+                </span>
+                {{{getstatusButton id "10"}}}
+                {{#with (docProjLookup ../../docProjs id)}}{{#ifnoteq projectStatus "Complete"}}<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#F6BE00" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg>{{/ifnoteq}}{{/with}}
+              </li>
+            {{/referencesResolved/normative}}
+            </ul>
+            {{else if references/normative}}
             <ul class="list-group list-group-flush">
             {{#references/normative}}
               <li class="list-group-item">
-                <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}} {{#with (docProjLookup ../../docProjs this)}}{{#ifnoteq projectStatus "Complete"}}<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#F6BE00" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg>{{/ifnoteq}}{{/with}}
+                <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getUndatedLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}} {{#with (docProjLookup ../../docProjs this)}}{{#ifnoteq projectStatus "Complete"}}<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#F6BE00" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg>{{/ifnoteq}}{{/with}}
               </li>
             {{/references/normative}}
             </ul>
             {{/if}}
           </td>
           <td class="p-1">
-            {{#if references/bibliographic}}
+            {{#if referencesResolved/bibliographic}}
+            <ul class="list-group list-group-flush">
+            {{#referencesResolved/bibliographic}}
+              <li class="list-group-item">
+                <span class="small">
+                  <a class="{{../../idType}}-link clear-filter" href="#{{id}}" title="{{getLabel id}}">
+                    {{#if undated}}{{getUndatedLabel id}}{{else}}{{getLabel id}}{{/if}}
+                  </a>
+                  [{{getStatus id}}]
+                </span>
+                {{{getstatusButton id "10"}}}
+                {{#with (docProjLookup ../../docProjs id)}}{{#ifnoteq projectStatus "Complete"}}<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#F6BE00" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg>{{/ifnoteq}}{{/with}}
+              </li>
+            {{/referencesResolved/bibliographic}}
+            </ul>
+            {{else if references/bibliographic}}
             <ul class="list-group list-group-flush">
             {{#references/bibliographic}}
               <li class="list-group-item">
-                <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}} {{#with (docProjLookup ../../docProjs this)}}{{#ifnoteq projectStatus "Complete"}}<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#F6BE00" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg>{{/ifnoteq}}{{/with}}
+                <span class="small"><a class="{{../../idType}}-link clear-filter" href="#{{this}}">{{getUndatedLabel this}}</a> [{{getStatus this}}]</span> {{{getstatusButton this "10"}}} {{#with (docProjLookup ../../docProjs this)}}{{#ifnoteq projectStatus "Complete"}}<svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="#F6BE00" class="bi bi-slash-circle-fill align-baseline" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.646-2.646a.5.5 0 0 0-.708-.708l-6 6a.5.5 0 0 0 .708.708l6-6z"/></svg>{{/ifnoteq}}{{/with}}
               </li>
             {{/references/bibliographic}}
             </ul>

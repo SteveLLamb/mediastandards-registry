@@ -12,11 +12,19 @@ const path = require('path');
 const fs = require('fs').promises;
 const { promisify } = require('util');
 const execFile = promisify(require('child_process').execFile);
+
+
 const hb = require('handlebars');
+// Minimal shared keying import for MSI lineage lookups
+const keying = require('../lib/keying');
+const { lineageKeyFromDoc, lineageKeyFromDocId } = keying;
 
 const REGISTRIES_REPO_PATH = "src/main";
 const SITE_PATH = "src/site";
 const BUILD_PATH = "build";
+
+// Warn once per process for empty MSI
+let __msiWarnedEmpty = false;
 
 const argv = require('yargs').argv;
 const { readFile, writeFile } = require('fs').promises;
@@ -137,9 +145,21 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
     }
     return options.inverse(this);
   });
+
+  // Render a human-friendly label from a lineage key like "ISO||15444|1" → "ISO 15444-1"
+  hb.registerHelper('formatLineageKey', function(key) {
+    if (!key || typeof key !== 'string') return '';
+    const [pub = '', suite = '', number = '', part = ''] = key.split('|');
+    let out = pub || '';
+    if (suite) out += (out ? ' ' : '') + suite;
+    if (number) out += (out ? ' ' : '') + number + (part ? `-${part}` : '');
+    return out.trim();
+  });
   
   // --- Load registries (data only). 
   let registryDocument = JSON.parse(await fs.readFile(DATA_PATH, 'utf8'));
+  // Fast lookup of existing docIds in the current registry — used to short-circuit MSI ref upgrades
+  const __docIdSet = new Set(Array.isArray(registryDocument) ? registryDocument.map(d => d && d.docId).filter(Boolean) : []);
   let registryGroup = [];
   let registryProject = [];
 
@@ -153,6 +173,96 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
     } catch (err) {
       // If a sub-registry file is missing, warn and continue; templates will handle absent data
       console.warn(`[WARN] Could not load data for sub-registry "${sub}" at ${subDataPath}: ${err.message}`);
+    }
+  }
+
+  // --- Load MasterSuiteIndex (MSI) once and build a lineage → latest lookup
+  const MSI_PATH = path.join(REGISTRIES_REPO_PATH, 'reports/masterSuiteIndex.json');
+  let __msiLatestByLineage = null;
+  try {
+    const msiRaw = await fs.readFile(MSI_PATH, 'utf8');
+    const msi = JSON.parse(msiRaw);
+    if (msi && Array.isArray(msi.lineages)) {
+      __msiLatestByLineage = new Map(
+        msi.lineages
+          .filter(li => li && typeof li.key === 'string')
+          .map(li => [li.key, { latestAnyId: li.latestAnyId || null, latestBaseId: li.latestBaseId || null }])
+      );
+    }
+  } catch (e) {
+    if (!__msiWarnedEmpty) {
+      console.warn(`[WARN] Could not load MSI at ${MSI_PATH}: ${e.message}`);
+      __msiWarnedEmpty = true;
+    }
+  }
+
+  // Build a base-id → { lineageKey, latestBaseId, latestAnyId } index from MSI for undated ref resolution
+  let __msiBaseIndex = null;
+  if (__msiLatestByLineage) {
+    __msiBaseIndex = new Map();
+    const TAIL_RE = /\.(?:\d{4}(?:-\d{2}){0,2}|\d{8})(?:[A-Za-z0-9].*)?$/;
+
+    const safeBase = (id) => (typeof id === 'string') ? id.replace(TAIL_RE, '') : id;
+
+    try {
+      const msiRaw = await fs.readFile(MSI_PATH, 'utf8');
+      const msi = JSON.parse(msiRaw);
+      if (msi && Array.isArray(msi.lineages)) {
+        for (const li of msi.lineages) {
+          if (!li || !li.key || !Array.isArray(li.docs)) continue;
+          const latestBaseId = li.latestBaseId || null;
+          const latestAnyId  = li.latestAnyId  || null;
+          const payload = { lineageKey: li.key, latestBaseId, latestAnyId };
+
+          // Index bases for every doc in the lineage
+          for (const d of li.docs) {
+            const base = safeBase(d && d.docId);
+            if (base) __msiBaseIndex.set(base, payload);
+          }
+          // Also ensure bases for latest ids are present (belt-and-suspenders)
+          if (latestBaseId) __msiBaseIndex.set(safeBase(latestBaseId), payload);
+          if (latestAnyId)  __msiBaseIndex.set(safeBase(latestAnyId),  payload);
+        }
+      }
+      // Optional visibility: uncomment for diagnostics
+      // console.log(`[MSI] Built baseIndex entries: ${__msiBaseIndex.size}`);
+    } catch (e) {
+      if (!__msiWarnedEmpty) {
+        console.warn(`[WARN] Could not rebuild MSI baseIndex: ${e.message}`);
+        __msiWarnedEmpty = true;
+      }
+    }
+  }
+
+  // --- Annotate each document with MSI latest flags (no rewrites)
+  // Utility to render a human-friendly label from a lineage key
+  const labelFromLineageKey = (key) => {
+    if (!key || typeof key !== 'string') return '';
+    const [pub = '', suite = '', number = '', part = ''] = key.split('|');
+    let out = pub || '';
+    if (suite) out += (out ? ' ' : '') + suite;
+    if (number) out += (out ? ' ' : '') + number + (part ? `-${part}` : '');
+    return out.trim();
+  };
+  if (__msiLatestByLineage) {
+    for (const doc of registryDocument) {
+      if (!doc || !doc.docId) continue;
+      const key = lineageKeyFromDoc(doc);
+      if (!key) continue;
+      const li = __msiLatestByLineage.get(key);
+      if (!li) continue;
+      const { latestAnyId, latestBaseId } = li;
+      // expose read-only annotations for templates/consumers
+      doc.msiLatestAny = latestAnyId || null;
+      doc.msiLatestBase = latestBaseId || null;
+      doc.isLatestAny = latestAnyId ? (doc.docId === latestAnyId) : false;
+      // Backwards compatibility flag for templates
+      if (doc.isLatestAny) {
+        doc.latestDoc = true;
+        doc.docBase = key
+        doc.docBaseLabel = labelFromLineageKey(key);
+      }
+      doc.isLatestBase = latestBaseId ? (doc.docId === latestBaseId) : false;
     }
   }
 
@@ -202,144 +312,136 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
     }
   }
 
-  /* load "latest" and altDocId aliases per doc */
-
-  const docLatest = []
-
-  for (let i in registryDocument) {
-
-    let docId = registryDocument[i].docId
-    let publicationDate = registryDocument[i].publicationDate
-    let publisher = registryDocument[i].publisher
-
-      var docStripAm = docId.replace(/\.\d\d\d\dam\d/i, '').replace(/\.\d\d\d\damd\d/i, '').replace(/\.\d\d\d\dad\d/i, '').replace(/\.\d\d\d\dcor\d/i, '').replace(/\.\d\d\d\de\d/i, '')
-      var docBase = docStripAm.replace(/(\.[^.]*)$/, '')
-      var docDate = docId.replace(/(.*(?=\.)\.)(?:-\w{2})?/, '')
-
-      if (docDate === "XXXX") {
-        var docDate = "9999"
-      }
-
-      var docBases = {}
-      var docDates = []
-      var docDateDetails = {}
-
-      docDateDetails.docDate = docDate;
-      docDateDetails.docId = docId;
-      docDates.push(docDateDetails)
-
-      var checkDocBase = docLatest.find(function(doc, index) {
-        if(doc.docBase == docBase)
-          return true;
-      });
-
-      if (!checkDocBase) { 
-        docBases.docBase = docBase
-        docBases.docDates = docDates
-        docLatest.push(docBases)
-      } else {
-        checkDocBase.docDates.push(docDateDetails)
-      }
-
-      registryDocument[i].docBase = docBase;
-      registryDocument[i].docDate = docDate;
-
-    //}
-
+  /* lightweight ref parsing (no MSI lookups) */
+  const DATED_TAIL_RE = /\.(?:\d{8}|\d{4}(?:-\d{2})(?:-\d{2})?)$/;
+  function isUndatedRef(id) {
+    return typeof id === 'string' ? !DATED_TAIL_RE.test(id) : false;
   }
 
-  for (let i in docLatest) {
-
-    var dateList = []
-    let docBase = docLatest[i].docBase
-
-    for (d in docLatest[i].docDates) {
-      docDateDec = docLatest[i].docDates[d].docDate.replace(/\-/g, '.')
-      if (docDateDec !== "20XX") {
-        dateList.push(Number(docDateDec))
-      }
-    }
-
-    if (dateList.length !== 0) {
-      var latestDoc = Math.max.apply(null, dateList)
-      for (dD in docLatest[i].docDates) {
-        var doc = docLatest[i].docDates[dD].docDate
-        if (doc === latestDoc.toString().replace(/\./g, '-')) {
-          docLatest[i].docDates[dD].latestDoc = true
-        } 
-      }
-    }
-
-    for (dB in docLatest[i].docDates) {
-      if (docLatest[i].docDates[dB].latestDoc === true) {
-        let docId = docLatest[i].docDates[dB].docId
-        let checkDocId = registryDocument.find(function(doc, index) {
-          if(doc.docId === docId)
-            return true;
-        });
-        //if (!checkDocId.status.superseded) {
-          checkDocId.latestDoc = true
-          checkDocId.altDocId = docBase + ".LATEST"
-       //}
-      }
-    }
-
-  }
-
-  /* load all references per doc */   
+  /* load all references per doc */
 
   const docReferences = []
 
   for (let i in registryDocument) {
-
     let references = registryDocument[i]["references"];
     if (references) {
-
       let docId = registryDocument[i].docId
       let refs = []
       let normRefs = references.normative
       let bibRefs = references.bibliographic
 
-      function getLatestRef (r) {
-        let ref = ''
-        if (r.endsWith("LATEST")) {
+      console.log(`\n++ Checking refs for ${docId} ++`)
 
-          let checkAltDocId = registryDocument.find(function(doc, index) {
-            if(doc.altDocId === r)
-              return true;
-          });
-          ref = checkAltDocId.docId
-        } else {
-          ref = r
+      const normResolved = [];
+      const bibResolved = [];
+
+      // Always consult MSI; only *upgrade* when the ref is undated.
+      function getLatestRef(r) {
+        // Compute base form by stripping a date tail once; treat rest as the lineage base token
+        const base = typeof r === 'string' ? r.replace(DATED_TAIL_RE, '') : r;
+        const wasUndated = (base === r);
+        let resolved = r;
+
+        console.log(`... checking ${r}`);
+        if (!wasUndated) console.log(`       (dated; base=${base})`);
+
+        // If this reference is an exact docId present in our registry, skip MSI checks entirely
+        if (__docIdSet && __docIdSet.has(r)) {
+          console.log(`    skipping ${r} (exact docId present in registry)`);
+          refs.push(resolved);
+          return { id: resolved, undated: wasUndated };
         }
-        refs.push(ref); 
-        return ref
+
+        if (__msiLatestByLineage) {
+          // 1) Base-index fast path: try the base token regardless of dated/undated;
+          //    only *apply* upgrade when undated to avoid rewriting explicit dates.
+          if (__msiBaseIndex) {
+            const hit = __msiBaseIndex.get(base);
+            if (hit) {
+              if (wasUndated) {
+                const next = hit.latestBaseId || hit.latestAnyId || r;
+                if (next !== r) {
+                  resolved = next;
+                  console.log(`[Refs] Upgraded via baseIndex ${r} → ${resolved}`);
+                }
+              } else {
+                console.log(`[Refs] baseIndex hit for ${base} (dated ref, no upgrade)`);
+              }
+            }
+          }
+
+          // 2) Fallback: compute lineage key from the *base* token and ask MSI by lineage
+          if (resolved === r) {
+            // Some keyers (ISO/IEC/IEC) expect a trailing '.' after the base token in docIds.
+            // Example: "ISO.15444-1" → matcher is anchored up to a dot before the date tail.
+            const baseForKey = (typeof base === 'string' && !base.endsWith('.')) ? (base + '.') : base;
+            const key = lineageKeyFromDocId(baseForKey);
+            if (wasUndated) {
+              console.log(`   [Refs] MSI probe undated: ${r}`);
+              console.log(`       probeBase: ${baseForKey}`);
+            }
+            if (key) {
+              if (wasUndated) {
+                console.log(`       key: ${key}`);
+              }
+              const li = __msiLatestByLineage.get(key);
+              if (li) {
+                if (wasUndated) {
+                  console.log(`       HIT in MSI (latestBaseId=${li.latestBaseId} latestAnyId=${li.latestAnyId})`);
+                  const next = li.latestBaseId || li.latestAnyId || r;
+                  if (next !== r) {
+                    resolved = next;
+                    console.log(`   [Refs] Upgraded via lineage ${r} → ${resolved}`);
+                  }
+                } else {
+                  console.log('       MSI lineage hit (dated ref, no upgrade)');
+                }
+              } else if (wasUndated) {
+                console.log('       MISS in MSI');
+              }
+            } else if (wasUndated) {
+              console.log(`   [Refs] No lineage key derivable for ${r}`);
+            }
+          }
+        }
+
+        // Build parallel structures only; do not mutate original arrays
+        refs.push(resolved);
+        return { id: resolved, undated: wasUndated };
       }
 
-      if (normRefs) {
+      if (normRefs && Array.isArray(normRefs)) {
         normRefs.sort();
-        let refs = normRefs
-        for (let r of refs) {
-          var index = refs.indexOf(r);
-          if (index !== -1) {
-            refs[index] = getLatestRef(r);
-          }
+        for (let i = 0; i < normRefs.length; i++) {
+          const r = normRefs[i];
+          const obj = getLatestRef(r);
+          // do NOT overwrite normRefs[i]; leave the source data untouched
+          normResolved.push(obj);
         }
       }
 
-      if (bibRefs) {
+      if (bibRefs && Array.isArray(bibRefs)) {
         bibRefs.sort();
-        let refs = bibRefs
-        for (let r of refs) {
-          var index = refs.indexOf(r);
-          if (index !== -1) {
-            refs[index] = getLatestRef(r);
-          }
+        for (let i = 0; i < bibRefs.length; i++) {
+          const r = bibRefs[i];
+          const obj = getLatestRef(r);
+          // do NOT overwrite bibRefs[i]; leave the source data untouched
+          bibResolved.push(obj);
         }
       }
+
+      // Expose structured references so the template can render undated labels when appropriate
+      const resolvedOut = {};
+      if (normResolved.length) resolvedOut.normative = normResolved;
+      if (bibResolved.length) resolvedOut.bibliographic = bibResolved;
+      if (Object.keys(resolvedOut).length) {
+        registryDocument[i].referencesResolved = resolvedOut;
+      }
+      //console.log(`[Refs] for docId: ${docId}`)
+      //console.log(refs)
 
       docReferences[docId] = refs
-    }   
+    }
   }
 
   /* load referenced by docs */
@@ -549,7 +651,7 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
         return "";
       }
     } else {
-      console.error(`Cannot find the status for referenced document: ${docId}`);
+      //console.error(`Cannot find the status for referenced document: ${docId}`);
     }
 
     return docStatuses[docId];
@@ -577,6 +679,13 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
 
   hb.registerHelper("getTitle", function(docId) {
     return docTitles[docId];
+  });
+
+  // Render a label without trailing date (e.g., "SMPTE ST 429-2:2023-09" -> "SMPTE ST 429-2")
+  hb.registerHelper("getUndatedLabel", function(docId) {
+    const label = docLabels.hasOwnProperty(docId) ? docLabels[docId] : docId;
+    // Strip ":YYYY", ":YYYY-MM" or ":YYYYMMDD" and anything after
+    return String(label).replace(/:\s?\d{4}(?:-\d{2}){0,2}.*$/, '');
   });
 
   /* lookup if any projects exist for current document */
