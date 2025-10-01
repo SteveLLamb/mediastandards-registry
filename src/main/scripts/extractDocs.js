@@ -15,7 +15,10 @@ const cheerio = require('cheerio');
 const dayjs = require('dayjs');
 const fs = require('fs');
 
-const { parseRefId, extractRefs, mapRefByCite } = require('../lib/referencing');
+const { parseRefId, extractRefs, mapRefByCite, mriFlush, mriEnsureFile } = require('../lib/referencing');
+
+// Ensure MRI file exists even if this run skips all documents
+try { mriEnsureFile(); } catch (_) {}
 
 // Normalize titles by removing a leading "SMPTE" token (and common punctuation/spaces)
 function stripLeadingSmpte(title) {
@@ -1496,5 +1499,11 @@ for (const doc of results) {
   console.log(`\n📄 PR log updated: ${prLogPath}`);
   console.log(`📄 Full PR log details saved: ${fullDetailsPath}`);
   console.log(`🔗 Full details (raw): ${detailsFileRawUrl}`);
+  try {
+    const mriStats = mriFlush();
+    console.log(`🧠 MRI updated: ${mriStats.uniqueRefIds} unique refIds, ${mriStats.orphanCount} orphan(s) — ${mriStats.path}`);
+  } catch (e) {
+    console.warn(`⚠️ MRI flush failed: ${e.message}`);
+  }
 
 })();
