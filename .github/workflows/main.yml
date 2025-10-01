@@ -6,6 +6,8 @@ on:
       - main
     types:
       - closed
+  workflow_dispatch:        # Manual run for testing
+
 
 jobs:
   build:
