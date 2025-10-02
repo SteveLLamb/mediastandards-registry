@@ -15,10 +15,18 @@ const cheerio = require('cheerio');
 const dayjs = require('dayjs');
 const fs = require('fs');
 
+// Generate timestamp string in format YYYYMMDD-HHmmss
+const timestamp = dayjs().format('YYYYMMDD-HHmmss');
+const fullDetailsPath = `src/main/logs/extract-runs/pr-log-full-${timestamp}.log`;
+// Raw URL (kept for logging/diagnostics)
+const detailsFileRawUrl = `https://raw.githubusercontent.com/SteveLLamb/mediastandards-registry/main/${fullDetailsPath}`;
+
 const { parseRefId, extractRefs, mapRefByCite, mriFlush, mriEnsureFile } = require('../lib/referencing');
 
 // Guard to avoid double logging/flushing MRI on multiple exit signals
 let _mriFlushedOnce = false;
+let _mriPreFlushed = false;  
+let _mriPreFlushResult = null;
 
 // Ensure MRI file exists even if this run skips all documents
 try { mriEnsureFile(); } catch (_) {}
@@ -27,32 +35,32 @@ try { mriEnsureFile(); } catch (_) {}
 // This writes only when _dirty=true (i.e., sightings recorded) or the file is missing.
 function _flushMRIOnExit(label) {
   try {
-    // If we've already flushed once in this process, do nothing.
     if (_mriFlushedOnce) return;
 
-    const res = mriFlush({ force: false });
+    // Reuse pre-flush result if present; otherwise do a real flush now
+    const res = (_mriPreFlushed && _mriPreFlushResult) ? _mriPreFlushResult : mriFlush({ force: false });
 
-    // If this call performed a real write, mark as flushed and log once.
     if (res.wrote) {
       _mriFlushedOnce = true;
       console.log(`🧠 MRI updated (${label}) — uniqueRefIds=${res.uniqueRefIds}, orphans=${res.orphanCount}: ${res.path}`);
-      // Write to PR log when MRI actually updates
+      // Minimal PR note for MRI-only or MRI-also updates
       try {
-        const prLine = `\n### 🧠 MRI updated (${label}) — uniqueRefIds=${res.uniqueRefIds}, orphans=${res.orphanCount}\n`;
-        fs.appendFileSync(prLogPath, prLine, 'utf8');
-      } catch (e) {
-        console.warn(`⚠️ Failed to append MRI update to PR log: ${e.message} (${prLogPath})`);
+        const line = `\n### 🧠 MRI updated (${label}) — uniqueRefIds=${res.uniqueRefIds}, orphans=${res.orphanCount}`;
+        fs.appendFileSync(prLogPath, line + '\n', 'utf8');
+        fs.appendFileSync(fullDetailsPath, line + '\n', 'utf8');
+      } catch (e2) {
+        console.warn(`⚠️ Failed to append MRI update to PR log: ${e2.message}`);
       }
       return;
     }
 
-    // Suppress noisy duplicate "unchanged" logs on final 'exit'
     if (label !== 'exit') {
       if (res.reason === 'timestamp-only') {
         console.log(`🧠 MRI skipped write (${label}) — only generatedAt would have changed`);
         try {
           const prLine = `\n### 🧠 MRI skipped write (${label}) — only generatedAt would have changed`;
           fs.appendFileSync(prLogPath, prLine, 'utf8');
+          fs.appendFileSync(fullDetailsPath, prLine + '\n', 'utf8');
         } catch (e) {
           console.warn(`⚠️ Failed to append MRI update to PR log: ${e.message} (${prLogPath})`);
         }
@@ -60,11 +68,11 @@ function _flushMRIOnExit(label) {
         console.log(`🧠 MRI unchanged (${label}) — ${res.reason || 'no delta'}`);
       }
     }
-    // no state change when unchanged
   } catch (e) {
     console.warn(`⚠️ MRI flush failed (${label}): ${e.message}`);
   }
 }
+
 process.on('beforeExit', () => _flushMRIOnExit('beforeExit'));
 process.on('exit',       () => _flushMRIOnExit('exit'));
 process.on('SIGINT',  () => { _flushMRIOnExit('SIGINT');  process.exit(130); });
@@ -1380,9 +1388,28 @@ for (const doc of results) {
   }
 
   if (newDocs.length === 0 && updatedDocs.length === 0) {
+  // Consider MRI-only updates: flush first
+  let mriRes = { wrote: false };
+  try {
+    mriRes = mriFlush({ force: false }) || { wrote: false };
+  } catch (e) {
+    console.warn(`⚠️ MRI flush check failed: ${e.message}`);
+  }
+
+  if (!mriRes.wrote) {
     console.log('\nℹ️ No new or updated documents — skipping PR creation.');
     process.exit(0);
+  } else {
+    // Minimal PR log note; PR creation continues
+    try {
+
+      _mriPreFlushed = true;
+      _mriPreFlushResult = mriRes;
+    } catch (e) {
+      console.warn(`⚠️ Failed to append MRI update to PR log: ${e.message}`);
+    }
   }
+}
 
   // --- PR log summary capping and full details file creation ---
 
@@ -1391,11 +1418,6 @@ for (const doc of results) {
     return { shown: arr.slice(0, max), hidden: Math.max(0, arr.length - max) };
   }
 
-  // Generate timestamp string in format YYYYMMDD-HHmmss
-  const timestamp = dayjs().format('YYYYMMDD-HHmmss');
-  const fullDetailsPath = `src/main/logs/extract-runs/pr-log-full-${timestamp}.log`;
-  // Raw URL (kept for logging/diagnostics)
-  const detailsFileRawUrl = `https://raw.githubusercontent.com/SteveLLamb/mediastandards-registry/main/${fullDetailsPath}`;
   // NEW: placeholder token that the workflow will replace with the PR /files#diff-<blob> link
   const DETAILS_DIFF_TOKEN = '__PR_DETAILS_DIFF_LINK__';
 
