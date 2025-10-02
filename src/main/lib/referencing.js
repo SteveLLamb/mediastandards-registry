@@ -17,7 +17,7 @@ function _initEmptyMRI() {
   return {
     version: '1.0.0',
     generatedAt: new Date().toISOString(),
-    stats: { uniqueRefIds: 0, totalSightings: 0 },
+    stats: { uniqueRefIds: 0 },
     refs: {},
     reverse: {},
     orphans: { unmapped: [] }
@@ -103,14 +103,15 @@ function _dedupeStrings(arr) {
 
 function mriRecordSighting({ docId, type, refId, cite, href, mapSource, mapDetail, rawRef, title }) {
   const mri = _loadMRI();
-  const ts = new Date().toISOString();
 
   _dirty = true;
 
   if (refId) {
     const entry = _ensureRef(refId);
     // provenance
-    entry.provenance.firstSeen = entry.provenance.firstSeen || ts;
+    if (!entry.provenance.firstSeen) {
+      entry.provenance.firstSeen = new Date().toISOString();
+    }
     if (mapSource) {
       entry.provenance.mapSource = _dedupeStrings([...(entry.provenance.mapSource || []), String(mapSource)]);
     }
@@ -137,8 +138,6 @@ function mriRecordSighting({ docId, type, refId, cite, href, mapSource, mapDetai
   // stats
   const keys = Object.keys(mri.refs);
   mri.stats.uniqueRefIds = keys.length;
-  mri.stats.totalSightings = (mri.stats.totalSightings || 0) + 1;
-  mri.generatedAt = ts;
 }
 
 function mriFlush(opts = {}) {
@@ -146,6 +145,59 @@ function mriFlush(opts = {}) {
   const mri = _loadMRI();
   const fileExists = fs.existsSync(MRI_PATH);
   const shouldWrite = force || _dirty || !fileExists;
+
+  // --- Check if only generatedAt changed, so we can skip writing and log a distinct reason
+  if (!force && fileExists) {
+    // Prepare comparable objects for diff, ignoring generatedAt
+    let existing = null;
+    try {
+      existing = JSON.parse(fs.readFileSync(MRI_PATH, 'utf-8'));
+    } catch {}
+    if (existing) {
+      // Prepare baseOut and existingComparable (without generatedAt)
+      const sortedRefsKeys = Object.keys(mri.refs || {}).sort();
+      const refsOut = {};
+      for (const k of sortedRefsKeys) {
+        const e = mri.refs[k];
+        const sortedVariants = _stableSort(e.rawVariants || [], v => `${v.docId}||${v.type}||${(v.cite || '').toLowerCase()}`);
+        const sortedMapSource = (e.provenance?.mapSource || []).slice().sort();
+        const sortedMapDetails = (e.provenance?.mapDetails || []).slice(); // keep order (capped)
+        refsOut[k] = {
+          refId: e.refId,
+          normalized: e.normalized || null,
+          resolution: e.resolution || null,
+          provenance: {
+            firstSeen: e.provenance?.firstSeen || null,
+            mapSource: sortedMapSource.length ? sortedMapSource : undefined,
+            mapDetails: sortedMapDetails.length ? sortedMapDetails : undefined
+          },
+          rawVariants: sortedVariants.length ? sortedVariants : undefined
+        };
+      }
+      const baseOut = {
+        version: mri.version || '1.0.0',
+        // omit generatedAt for comparison
+        stats: { uniqueRefIds: Object.keys(refsOut).length },
+        refs: refsOut,
+        reverse: mri.reverse || {},
+        orphans: {
+          unmapped: (mri.orphans?.unmapped || []).slice(0, 200)
+        }
+      };
+      // Build comparable version of existing (without generatedAt)
+      const { generatedAt, ...existingComparable } = existing;
+      if (JSON.stringify(existingComparable) === JSON.stringify(baseOut)) {
+        _dirty = false;
+        return {
+          path: MRI_PATH,
+          wrote: false,
+          reason: 'timestamp-only',
+          uniqueRefIds: baseOut.stats.uniqueRefIds,
+          orphanCount: baseOut.orphans.unmapped.length
+        };
+      }
+    }
+  }
 
   if (!shouldWrite) {
     return { path: MRI_PATH, wrote: false, reason: 'unchanged', uniqueRefIds: Object.keys(mri.refs || {}).length, orphanCount: (mri.orphans?.unmapped || []).length };
@@ -174,7 +226,7 @@ function mriFlush(opts = {}) {
   const out = {
     version: mri.version || '1.0.0',
     generatedAt: mri.generatedAt || new Date().toISOString(),
-    stats: mri.stats || { uniqueRefIds: Object.keys(refsOut).length, totalSightings: 0 },
+    stats: { uniqueRefIds: Object.keys(refsOut).length },
     refs: refsOut,
     reverse: mri.reverse || {},
     orphans: {

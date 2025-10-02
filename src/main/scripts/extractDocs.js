@@ -17,6 +17,9 @@ const fs = require('fs');
 
 const { parseRefId, extractRefs, mapRefByCite, mriFlush, mriEnsureFile } = require('../lib/referencing');
 
+// Guard to avoid double logging/flushing MRI on multiple exit signals
+let _mriFlushedOnce = false;
+
 // Ensure MRI file exists even if this run skips all documents
 try { mriEnsureFile(); } catch (_) {}
 
@@ -24,12 +27,27 @@ try { mriEnsureFile(); } catch (_) {}
 // This writes only when _dirty=true (i.e., sightings recorded) or the file is missing.
 function _flushMRIOnExit(label) {
   try {
+    // If we've already flushed once in this process, do nothing.
+    if (_mriFlushedOnce) return;
+
     const res = mriFlush({ force: false });
+
+    // If this call performed a real write, mark as flushed and log once.
     if (res.wrote) {
-      console.log(`🧠 MRI updated (${label}) — uniqueRefIds=${res.uniqueRefIds}, orphans=${res.orphanCount}`);
-    } else {
-      console.log(`🧠 MRI unchanged (${label}) — ${res.reason || 'no delta'}`);
+      _mriFlushedOnce = true;
+      console.log(`🧠 MRI updated (${label}) — uniqueRefIds=${res.uniqueRefIds}, orphans=${res.orphanCount}: ${res.path}`);
+      return;
     }
+
+    // Suppress noisy duplicate "unchanged" logs on final 'exit'
+    if (label !== 'exit') {
+      if (res.reason === 'timestamp-only') {
+        console.log(`🧠 MRI skipped write (${label}) — only generatedAt would have changed`);
+      } else {
+        console.log(`🧠 MRI unchanged (${label}) — ${res.reason || 'no delta'}`);
+      }
+    }
+    // no state change when unchanged
   } catch (e) {
     console.warn(`⚠️ MRI flush failed (${label}): ${e.message}`);
   }
@@ -1518,11 +1536,5 @@ for (const doc of results) {
   console.log(`\n📄 PR log updated: ${prLogPath}`);
   console.log(`📄 Full PR log details saved: ${fullDetailsPath}`);
   console.log(`🔗 Full details (raw): ${detailsFileRawUrl}`);
-  try {
-    const mriStats = mriFlush();
-    console.log(`🧠 MRI updated: ${mriStats.uniqueRefIds} unique refIds, ${mriStats.orphanCount} orphan(s) — ${mriStats.path}`);
-  } catch (e) {
-    console.warn(`⚠️ MRI flush failed: ${e.message}`);
-  }
 
 })();
