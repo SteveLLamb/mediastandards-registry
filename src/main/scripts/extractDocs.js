@@ -20,6 +20,25 @@ const { parseRefId, extractRefs, mapRefByCite, mriFlush, mriEnsureFile } = requi
 // Ensure MRI file exists even if this run skips all documents
 try { mriEnsureFile(); } catch (_) {}
 
+// Ensure MRI is flushed at process end — even if all docs were filtered/skipped.
+// This writes only when _dirty=true (i.e., sightings recorded) or the file is missing.
+function _flushMRIOnExit(label) {
+  try {
+    const res = mriFlush({ force: false });
+    if (res.wrote) {
+      console.log(`🧠 MRI updated (${label}) — uniqueRefIds=${res.uniqueRefIds}, orphans=${res.orphanCount}`);
+    } else {
+      console.log(`🧠 MRI unchanged (${label}) — ${res.reason || 'no delta'}`);
+    }
+  } catch (e) {
+    console.warn(`⚠️ MRI flush failed (${label}): ${e.message}`);
+  }
+}
+process.on('beforeExit', () => _flushMRIOnExit('beforeExit'));
+process.on('exit',       () => _flushMRIOnExit('exit'));
+process.on('SIGINT',  () => { _flushMRIOnExit('SIGINT');  process.exit(130); });
+process.on('SIGTERM', () => { _flushMRIOnExit('SIGTERM'); process.exit(143); });
+
 // Normalize titles by removing a leading "SMPTE" token (and common punctuation/spaces)
 function stripLeadingSmpte(title) {
   if (!title) return title;

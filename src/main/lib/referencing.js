@@ -115,9 +115,8 @@ function mriRecordSighting({ docId, type, refId, cite, href, mapSource, mapDetai
       entry.provenance.mapSource = _dedupeStrings([...(entry.provenance.mapSource || []), String(mapSource)]);
     }
     if (mapDetail) {
-      const capped = [...(entry.provenance.mapDetails || []), String(mapDetail)];
-      // Cap mapDetails at 10 to reduce PR noise
-      entry.provenance.mapDetails = capped.slice(-10);
+      const details = [...(entry.provenance.mapDetails || []), String(mapDetail)];
+      entry.provenance.mapDetails = _dedupeStrings(details);
     }
     // variants (now include rawRef + title)
     entry.rawVariants = _dedupeVariants([
@@ -174,7 +173,7 @@ function mriFlush(opts = {}) {
   }
   const out = {
     version: mri.version || '1.0.0',
-    generatedAt: new Date().toISOString(),
+    generatedAt: mri.generatedAt || new Date().toISOString(),
     stats: mri.stats || { uniqueRefIds: Object.keys(refsOut).length, totalSightings: 0 },
     refs: refsOut,
     reverse: mri.reverse || {},
@@ -182,6 +181,9 @@ function mriFlush(opts = {}) {
       unmapped: (mri.orphans?.unmapped || []).slice(0, 200)
     }
   };
+  if (shouldWrite) {
+    out.generatedAt = new Date().toISOString();
+  }
   fs.mkdirSync(path.dirname(MRI_PATH), { recursive: true });
   fs.writeFileSync(MRI_PATH, JSON.stringify(out, null, 2) + '\n');
 
