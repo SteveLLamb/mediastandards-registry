@@ -36,6 +36,13 @@ function _flushMRIOnExit(label) {
     if (res.wrote) {
       _mriFlushedOnce = true;
       console.log(`🧠 MRI updated (${label}) — uniqueRefIds=${res.uniqueRefIds}, orphans=${res.orphanCount}: ${res.path}`);
+      // Write to PR log when MRI actually updates
+      try {
+        const prLine = `\n### 🧠 MRI updated (${label}) — uniqueRefIds=${res.uniqueRefIds}, orphans=${res.orphanCount}\n`;
+        fs.appendFileSync(prLogPath, prLine, 'utf8');
+      } catch (e) {
+        console.warn(`⚠️ Failed to append MRI update to PR log: ${e.message} (${prLogPath})`);
+      }
       return;
     }
 
@@ -43,6 +50,12 @@ function _flushMRIOnExit(label) {
     if (label !== 'exit') {
       if (res.reason === 'timestamp-only') {
         console.log(`🧠 MRI skipped write (${label}) — only generatedAt would have changed`);
+        try {
+          const prLine = `\n### 🧠 MRI skipped write (${label}) — only generatedAt would have changed`;
+          fs.appendFileSync(prLogPath, prLine, 'utf8');
+        } catch (e) {
+          console.warn(`⚠️ Failed to append MRI update to PR log: ${e.message} (${prLogPath})`);
+        }
       } else {
         console.log(`🧠 MRI unchanged (${label}) — ${res.reason || 'no delta'}`);
       }
