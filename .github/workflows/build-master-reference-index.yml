@@ -93,15 +93,25 @@ jobs:
           git commit -m "chore: Build MasterReferenceIndex (data change)"
           git push -u origin chore/build-mri || git push -u origin chore/build-mri
 
-      - name: Create PR for MRI
+      - name: Render PR body (MRI)
+        id: render_pr_mri
         if: steps.commit_pr.outcome == 'success'
+        run: |
+          MISSING=$(jq -r '.missingCount' src/main/reports/mri_presence_audit.json 2>/dev/null || echo 0)
+          {
+            printf '%s\n' 'Automated MRI build detected content changes.'
+            printf '%s\n' ''
+            printf '%s\n' "**Missing refs**: ${MISSING}"
+          } > mri_pr_body.txt
+          sed -n '1,120p' mri_pr_body.txt
+
+      - name: Create PR for MRI
+        if: steps.commit_pr.outcome == 'success' && !startsWith(github.ref, 'refs/heads/chore/build-mri')
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "chore: Build MasterReferenceIndex (data change)"
           title: "Build MasterReferenceIndex (data change)"
-          body: |
-            Automated MRI build detected content changes.
-            - Missing refs: $(jq -r '.missingCount' src/main/reports/mri_presence_audit.json)
+          body-path: mri_pr_body.txt
           branch: chore/build-mri
           add-paths: |
             src/main/reports/masterReferenceIndex.json
