@@ -261,7 +261,10 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
         doc.latestDoc = true;
         doc.docBase = key
         doc.docBaseLabel = labelFromLineageKey(key);
+      } else {
+        doc.newerDoc = true;
       }
+
       doc.isLatestBase = latestBaseId ? (doc.docId === latestBaseId) : false;
     }
   }
@@ -343,13 +346,13 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
         let resolved = r;
 
         console.log(`... checking ${r}`);
-        if (!wasUndated) console.log(`       (dated; base=${base})`);
+        //if (!wasUndated) console.log(`       (dated; base=${base})`);
 
         // If this reference is an exact docId present in our registry, skip MSI checks entirely
         if (__docIdSet && __docIdSet.has(r)) {
-          console.log(`    skipping ${r} (exact docId present in registry)`);
+          //console.log(`    skipping ${r} (exact docId present in registry)`);
           refs.push(resolved);
-          return { id: resolved, undated: wasUndated };
+          return { id: resolved };
         }
 
         if (__msiLatestByLineage) {
@@ -362,7 +365,7 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
                 const next = hit.latestBaseId || hit.latestAnyId || r;
                 if (next !== r) {
                   resolved = next;
-                  console.log(`[Refs] Upgraded via baseIndex ${r} → ${resolved}`);
+                  console.log(`   [Refs] Upgraded via baseIndex ${r} → ${resolved}`);
                 }
               } else {
                 console.log(`[Refs] baseIndex hit for ${base} (dated ref, no upgrade)`);
@@ -400,7 +403,7 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
                 console.log('       MISS in MSI');
               }
             } else if (wasUndated) {
-              console.log(`   [Refs] No lineage key derivable for ${r}`);
+              console.warn(`   [WARN] No lineage key derivable for ${r}`);
             }
           }
         }
@@ -577,49 +580,32 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
   /* load the doc Current Statuses and Labels */
 
   for (let i in registryDocument) {
+    const d = registryDocument[i] || {};
+    const status = (d.status && typeof d.status === 'object') ? d.status : {};
 
-    let status = registryDocument[i]["status"];
-    var cS = ""
+    let cS = "";
 
-    if(status.draft){
-      cS = "Draft"
-      if (status.publicCd){
-        cS = cS.concat(", Public CD");
-      }
-    }
-    else if(status.unknown){
-      cS = "Unknown"
-    }
-    else if(status.withdrawn){
-      cS = "Withdrawn"
-    }
-    else if(status.superseded){
-      cS = "Superseded"
-    }
-    else if(status.active){
-      cS = "Active"
-
-      if (status.amended){
-        cS = cS.concat(", Amended");
-      }
-      
-      if (status.stabilized){
-        cS = cS.concat(", Stabilized");
-      }
-      else if(status.reaffirmed){
-        cS = cS.concat(", Reaffirmed");
-      }
-
-    }
-    else{
-      cS = "Unknown"
+    if (status.active) {
+      cS = "Active";
+      if (status.amended) cS += ", Amended";
+      if (status.stabilized) cS += ", Stabilized"; else if (status.reaffirmed) cS += ", Reaffirmed";
+    } else if (status.draft) {
+      cS = "Draft";
+      if (status.publicCd) cS += ", Public CD";
+    } else if (status.withdrawn) {
+      cS = "Withdrawn";
+    } else if (status.superseded) {
+      cS = "Superseded";
+    } else if (status.unknown) {
+      cS = "Unknown";
+    } else {
+      cS = "Unknown";
     }
 
-    if(status.statusNote){
-      cS = cS.concat("*");
-    }
+    if (status.statusNote) cS += "*";
 
-    registryDocument[i].currentStatus = cS;
+    d.currentStatus = cS;
+    registryDocument[i] = d;
   }
 
   const docStatuses = {}
