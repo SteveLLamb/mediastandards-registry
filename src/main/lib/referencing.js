@@ -6,6 +6,146 @@
 const fs = require('fs');
 const path = require('path');
 
+// ---- documents.json presence index (for quick source checks) ----
+// Resolve documents.json robustly (works no matter where Node is launched from)
+function _resolveDocumentsPath() {
+  const candidates = [
+    // Relative to this file's directory (preferred)
+    path.resolve(__dirname, '..', 'data', 'documents.json'), // src/main/reports/documents.json
+    // Relative to repo root based on common cwd patterns
+    path.resolve(process.cwd(), 'src/main/data/documents.json'),
+    path.resolve(process.cwd(), 'data', 'documents.json'),
+  ];
+  for (const p of candidates) {
+    try { if (fs.existsSync(p)) return p; } catch {}
+  }
+  return candidates[0]; // fallback to the expected path relative to __dirname
+}
+
+let _DOCS_PATH = null;
+function _getDocsPath() {
+  if (_DOCS_PATH) return _DOCS_PATH;
+  _DOCS_PATH = _resolveDocumentsPath();
+  return _DOCS_PATH;
+}
+let _docIdIndex = null; // Set<string> of docIds from documents.json
+let _docBaseIndex = null; // Map<string base, string[]> of docIds by base
+const DATED_TAIL_RE = /\.(?:\d{8}|\d{4}(?:-\d{2}){0,2})$/; // .YYYY | .YYYY-MM | .YYYY-MM-DD | .YYYYMMDD
+
+function _loadDocumentsIndex() {
+  if (_docIdIndex && _docBaseIndex) return _docIdIndex;
+  try {
+    _docIdIndex = new Set();
+    _docBaseIndex = new Map();
+    const DOCS_PATH = _getDocsPath();
+    if (!fs.existsSync(DOCS_PATH)) {
+      if (process.env.DEBUG || process.env.MSR_DEBUG) {
+        console.warn(`⚠️ documents.json not found at ${DOCS_PATH} — sourcePresent checks will return false`);
+      }
+      return _docIdIndex;
+    }
+    const raw = fs.readFileSync(DOCS_PATH, 'utf-8');
+    const parsed = JSON.parse(raw);
+
+    const addId = (id) => {
+      if (!id || typeof id !== 'string') return;
+      _docIdIndex.add(id);
+      const base = id.replace(DATED_TAIL_RE, '');
+      if (base) {
+        const arr = _docBaseIndex.get(base) || [];
+        if (!arr.includes(id)) arr.push(id);
+        _docBaseIndex.set(base, arr);
+      }
+    };
+
+    if (Array.isArray(parsed)) {
+      for (const d of parsed) {
+        if (d && typeof d === 'object') {
+          if (typeof d.docId === 'string') addId(d.docId);
+          if (typeof d.docBase === 'string') addId(d.docBase);
+        }
+      }
+    } else if (parsed && typeof parsed === 'object') {
+      for (const k of Object.keys(parsed)) addId(k);
+      for (const v of Object.values(parsed)) {
+        if (v && typeof v === 'object') {
+          if (typeof v.docId === 'string') addId(v.docId);
+          if (typeof v.docBase === 'string') addId(v.docBase);
+        }
+      }
+    }
+  } catch {
+    _docIdIndex = new Set();
+    _docBaseIndex = new Map();
+  }
+  return _docIdIndex;
+}
+
+function _hasDocId(id) {
+  if (!id) return false;
+  const idx = _loadDocumentsIndex();
+  return idx.has(String(id));
+}
+
+function _dateRankFromId(id) {
+  // Return a numeric rank for comparing dated ids; higher = newer. Undated -> -Infinity.
+  if (!id || typeof id !== 'string') return Number.NEGATIVE_INFINITY;
+  const m = id.match(/\.(\d{4})(?:-(\d{2}))?(?:-(\d{2}))?$|\.(\d{8})$/);
+  if (!m) return Number.NEGATIVE_INFINITY;
+  if (m[4]) { // YYYYMMDD
+    return parseInt(m[4], 10);
+  }
+  const y = parseInt(m[1], 10);
+  const mo = m[2] ? parseInt(m[2], 10) : 0;
+  const d = m[3] ? parseInt(m[3], 10) : 0;
+  return y * 10000 + mo * 100 + d;
+}
+
+function _findSourceDocIdForRefId(refId) {
+  if (!refId) return null;
+  _loadDocumentsIndex();
+  const id = String(refId);
+  // 1) exact id present
+  if (_docIdIndex && _docIdIndex.has(id)) return id;
+  // 2) base match: choose the latest dated docId for the same base
+  const base = id.replace(DATED_TAIL_RE, '');
+  let arr = _docBaseIndex ? _docBaseIndex.get(base) : null;
+
+  // Fallback: if base map is empty (e.g., index built from array without docBase fields),
+  // derive candidates by scanning all docIds that start with `${base}.` (dated forms)
+  if ((!arr || arr.length === 0) && _docIdIndex && _docIdIndex.size) {
+    const prefix = `${base}.`;
+    arr = [];
+    for (const cand of _docIdIndex) {
+      if (cand === base || cand.startsWith(prefix)) arr.push(cand);
+    }
+  }
+
+  if (arr && arr.length) {
+    // Prefer exact base if present, else highest date rank
+    let best = null;
+    let bestRank = Number.NEGATIVE_INFINITY;
+    for (const cand of arr) {
+      if (cand === base) return cand; // exact base id present
+      const r = _dateRankFromId(cand);
+      if (r > bestRank) { bestRank = r; best = cand; }
+    }
+    return best || null;
+  }
+  return null;
+}
+
+function _hasDocIdOrBase(id) {
+  return !!_findSourceDocIdForRefId(id);
+}
+
+function reloadDocumentsIndex() {
+  _docIdIndex = null;
+  _docBaseIndex = null;
+  _DOCS_PATH = null;
+  return _loadDocumentsIndex();
+}
+
 // ---- refMap pattern loading / normalization ----
 
 // ---- Master Reference Index (MRI) helpers ----
@@ -119,6 +259,12 @@ function mriRecordSighting({ docId, type, refId, cite, href, mapSource, mapDetai
       const details = [...(entry.provenance.mapDetails || []), String(mapDetail)];
       entry.provenance.mapDetails = _dedupeStrings(details);
     }
+    // resolution/source presence: note if this refId exists as a source doc in documents.json
+    entry.resolution = entry.resolution || {};
+    // Tentative hint; final truth set in mriFlush after documents.json is finalized
+    if (typeof entry.resolution.sourcePresent !== 'boolean') {
+      entry.resolution.sourcePresent = _hasDocIdOrBase(refId);
+    }
     // variants (now include rawRef + title)
     entry.rawVariants = _dedupeVariants([
       ...(entry.rawVariants || []),
@@ -140,11 +286,20 @@ function mriRecordSighting({ docId, type, refId, cite, href, mapSource, mapDetai
   mri.stats.uniqueRefIds = keys.length;
 }
 
+mriFlush
 function mriFlush(opts = {}) {
   const { force = false } = opts;
   const mri = _loadMRI();
   const fileExists = fs.existsSync(MRI_PATH);
   const shouldWrite = force || _dirty || !fileExists;
+
+  // Ensure documents index reflects the final state of this run
+  try { reloadDocumentsIndex(); } catch {}
+
+  // Optionally, print debug info about which documents.json path was used
+  if (process.env.DEBUG || process.env.MSR_DEBUG) {
+    try { console.log(`🔎 Using documents.json at: ${_getDocsPath()}`); } catch {}
+  }
 
   // --- Check if only generatedAt changed, so we can skip writing and log a distinct reason
   if (!force && fileExists) {
@@ -161,7 +316,23 @@ function mriFlush(opts = {}) {
         const e = mri.refs[k];
         const sortedVariants = _stableSort(e.rawVariants || [], v => `${v.docId}||${v.type}||${(v.cite || '').toLowerCase()}`);
         const sortedMapSource = (e.provenance?.mapSource || []).slice().sort();
-        const sortedMapDetails = (e.provenance?.mapDetails || []).slice(); // keep order (capped)
+        const sortedMapDetails = (e.provenance?.mapDetails || []).slice(); // keep order
+
+        // Final authority: check documents.json (docId and docBase) now that it should be finalized
+        const matchDocId = _findSourceDocIdForRefId(e.refId);
+        const present = !!matchDocId;
+        e.resolution = e.resolution || {};
+        const prevPresent = !!e.resolution.sourcePresent;
+        const prevDoc = e.resolution.sourceDocId || null;
+        if (present !== prevPresent || matchDocId !== prevDoc) {
+          e.resolution.sourcePresent = present;
+          e.resolution.sourceDocId = matchDocId || null;
+          if (present && !e.resolution.firstConfirmedSourceAt) {
+            e.resolution.firstConfirmedSourceAt = new Date().toISOString();
+          }
+          _dirty = true;
+        }
+
         refsOut[k] = {
           refId: e.refId,
           normalized: e.normalized || null,
@@ -210,7 +381,23 @@ function mriFlush(opts = {}) {
     const e = mri.refs[k];
     const sortedVariants = _stableSort(e.rawVariants || [], v => `${v.docId}||${v.type}||${(v.cite || '').toLowerCase()}`);
     const sortedMapSource = (e.provenance?.mapSource || []).slice().sort();
-    const sortedMapDetails = (e.provenance?.mapDetails || []).slice(); // keep order (capped)
+    const sortedMapDetails = (e.provenance?.mapDetails || []).slice(); // keep order
+
+    // Final authority: check documents.json (docId and docBase) now that it should be finalized
+    const matchDocId = _findSourceDocIdForRefId(e.refId);
+    const present = !!matchDocId;
+    e.resolution = e.resolution || {};
+    const prevPresent = !!e.resolution.sourcePresent;
+    const prevDoc = e.resolution.sourceDocId || null;
+    if (present !== prevPresent || matchDocId !== prevDoc) {
+      e.resolution.sourcePresent = present;
+      e.resolution.sourceDocId = matchDocId || null;
+      if (present && !e.resolution.firstConfirmedSourceAt) {
+        e.resolution.firstConfirmedSourceAt = new Date().toISOString();
+      }
+      _dirty = true;
+    }
+
     refsOut[k] = {
       refId: e.refId,
       normalized: e.normalized || null,
@@ -504,6 +691,7 @@ module.exports = {
   parseRefId,
   extractRefs,
   reloadRefMap,
+  reloadDocumentsIndex,
   // MRI helpers
   mriRecordSighting,
   mriFlush,
