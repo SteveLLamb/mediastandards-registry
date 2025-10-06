@@ -179,7 +179,7 @@ jobs:
           body-path: pr_body.txt
           branch: chore/build-mastersuite
           add-paths: ${{ steps.files.outputs.paths }}
-          labels: automated, reports
+          labels: automated, msi, reports
           delete-branch: true
 
       - name: Ensure per-doc UNKEYED issues (one issue per docId; idempotent)
