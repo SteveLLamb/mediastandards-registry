@@ -5,8 +5,13 @@ on:
     - cron: "30 03 * * *"   # 20:30 PT (cron in UTC; aligns with 8:30pm during PDT)
   push:
     branches:
-      - main                # Run whenever changes land on the default branch
-  workflow_dispatch:        # Manual run for testing
+      - main                
+    paths:
+      - 'src/main/data/documents.json'
+      - 'src/main/scripts/buildMasterSuiteIndex.js'
+      - 'src/main/input/**'
+      - 'src/main/lib/**'
+  workflow_dispatch:        
 
 permissions:
   contents: write

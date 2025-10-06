@@ -1,0 +1,148 @@
+name: Build MasterReference Index
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'src/main/data/documents.json'
+      - 'src/main/scripts/buildMasterReferenceIndex.js'
+      - 'src/main/input/**'
+      - 'src/main/lib/**'
+  schedule:
+    - cron: '00 04 * * *'    # 21:00 PT (UTC cron)
+  workflow_dispatch:
+  workflow_run:
+    workflows: [ "Build MasterSuite Index" ]
+    types: [ completed ]
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: masterreference-index
+  cancel-in-progress: false
+
+jobs:
+  build-mri:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 0 }
+
+      - uses: actions/setup-node@v4
+        with: { node-version: 'lts/*', cache: 'npm' }
+
+      - name: Install deps
+        run: npm ci
+
+      - name: Build MRI (full replay + prune)
+        run: |
+          node src/main/scripts/buildMasterReferenceIndex.js \
+            --in src/main/data/documents.json \
+            --audit-out src/main/reports/mri_presence_audit.json
+
+      - name: Sanity check invariant sourcePath (if you add it)
+        run: |
+          test -f src/main/reports/masterReferenceIndex.json || { echo "MRI not emitted"; exit 1; }
+
+      - name: Fetch baseline
+        run: |
+          git fetch --no-tags --depth=1 origin +refs/heads/${{ github.event.repository.default_branch }}:refs/remotes/origin/${{ github.event.repository.default_branch }}
+          git show origin/${{ github.event.repository.default_branch }}:src/main/reports/masterReferenceIndex.json > baseline.json || echo '{}' > baseline.json
+
+      - name: Normalize & classify changes
+        run: |
+          jq 'del(.generatedAt)' src/main/reports/masterReferenceIndex.json > report.norm.json
+          jq 'del(.generatedAt)' baseline.json > baseline.norm.json
+          node -e "
+            const fs=require('fs');
+            const a=JSON.parse(fs.readFileSync('baseline.norm.json','utf8')||'{}');
+            const b=JSON.parse(fs.readFileSync('report.norm.json','utf8')||'{}');
+            const onlyMeta = JSON.stringify(a)===JSON.stringify(b);
+            // Presence audit
+            const audit = JSON.parse(fs.readFileSync('src/main/reports/mri_presence_audit.json','utf8'));
+            const missingCount = audit.missingCount||0;
+            fs.writeFileSync('mri-change-class.json', JSON.stringify({ onlyMeta, missingCount }, null, 2));
+          "
+          cat mri-change-class.json
+
+      - name: Auto-commit metadata-only change
+        if: ${{ fromJSON(steps.class.outputs || 'null') == null }} # noop guard
+        run: echo "noop"
+
+      - name: Commit MRI content
+        if: "! fromJSON(needs.nil || 'false')" # just a placeholder; see next two steps
+        run: echo "noop"
+
+      - name: Commit MRI changes to default branch (no PR) when only timestamp changed
+        if: ${{ fromJSON( github.steps ) == null }} # placeholder to avoid confusion
+        run: echo "noop"
+
+      - name: Commit MRI content changes (open PR)
+        id: commit_pr
+        run: |
+          set -e
+          onlyMeta=$(jq -r '.onlyMeta' mri-change-class.json)
+          if [ "$onlyMeta" = "true" ]; then
+            echo "No content delta (only generatedAt). Skipping PR."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/main/reports/masterReferenceIndex.json src/main/reports/mri_presence_audit.json
+          git diff --cached --quiet && { echo "No staged changes"; exit 0; }
+          git checkout -b chore/build-mri || git checkout chore/build-mri
+          git commit -m "chore: Build MasterReferenceIndex (data change)"
+          git push -u origin chore/build-mri || git push -u origin chore/build-mri
+
+      - name: Create PR for MRI
+        if: steps.commit_pr.outcome == 'success'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: Build MasterReferenceIndex (data change)"
+          title: "Build MasterReferenceIndex (data change)"
+          body: |
+            Automated MRI build detected content changes.
+            - Missing refs: $(jq -r '.missingCount' src/main/reports/mri_presence_audit.json)
+          branch: chore/build-mri
+          add-paths: |
+            src/main/reports/masterReferenceIndex.json
+            src/main/reports/mri_presence_audit.json
+          labels: automated, reports, mri
+          delete-branch: true
+
+      - name: Ensure issues for missing refs (idempotent)
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const audit = JSON.parse(fs.readFileSync('src/main/reports/mri_presence_audit.json','utf8'));
+            const missing = audit.missing || [];
+            const labelSet = new Set(['automated','mri','missing-ref']);
+            async function listOpen() {
+              return await github.paginate(github.rest.issues.listForRepo, {
+                owner: context.repo.owner, repo: context.repo.repo, state: 'open', labels: 'missing-ref'
+              });
+            }
+            const open = await listOpen();
+            const openByKey = new Map(open.map(i => [i.title, i]));
+            for (const m of missing) {
+              const title = `MISSING REF: ${m.refId}`;
+              if (openByKey.has(title)) continue;
+              const body = [
+                `RefId: ${m.refId}`,
+                `Sightings: ${m.sightingCount}`,
+                '',
+                'First few sightings:',
+                ...(m.sightings || []).slice(0,10).map(s => `- ${s.docId} (${s.type}) — ${s.cite||''} ${s.href||''}`),
+                '',
+                '_Created automatically from MRI presence audit_'
+              ].join('\\n');
+              await github.rest.issues.create({
+                owner: context.repo.owner, repo: context.repo.repo,
+                title, body, labels: Array.from(labelSet)
+              });
+            }
