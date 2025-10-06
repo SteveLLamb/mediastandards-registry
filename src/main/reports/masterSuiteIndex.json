@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2025-10-06T23:33:42.979Z",
+  "generatedAt": "2025-10-06T23:36:21.113Z",
   "sourcePath": "src/main/data/documents.json",
-  "sourceHash": "sha256:3fe5e8f2df2ad7350eb2de8ead78c37e012c6e4c13666cca0b607a2467650609",
+  "sourceHash": "sha256:c78b9dfd5e331e85f5da2c9be1e441a5ebf0da29f11f41e62180485c1c0506f0",
   "publisherCounts": {
     "total": 1478,
     "counts": {
@@ -2050,17 +2050,17 @@
         "items": [
           {
             "docId": "x509-sg.2000",
-            "reason": "FILTERED",
-            "rule": "FILTERED",
-            "ruleDetail": "docType=Style Guide",
-            "category": "docType"
+            "reason": "UNKEYED",
+            "rule": "UNKEYED",
+            "ruleDetail": "noRegexMatch",
+            "category": "standard"
           }
         ]
       }
     },
     "summaryByReason": {
-      "FILTERED": 198,
-      "UNKEYED": 0,
+      "FILTERED": 197,
+      "UNKEYED": 1,
       "UNKNOWN": 0
     }
   },
