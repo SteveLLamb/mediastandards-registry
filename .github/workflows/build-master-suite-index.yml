@@ -6,6 +6,11 @@ on:
   push:
     branches:
       - main                
+    paths:
+      - 'src/main/data/documents.json'
+      - 'src/main/scripts/buildMasterSuiteIndex.js'
+      - 'src/main/input/**'
+      - 'src/main/lib/**'
   workflow_dispatch:        
 
 permissions:
