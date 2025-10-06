@@ -119,7 +119,7 @@ jobs:
           if [ -z "$CURR_LIST" ]; then CURR_LIST="- (none)"; fi
 
           {
-            printf '%s\n' 'Automated build detected content changes.'
+            printf '%s\n' 'Automated MSI build detected content changes.'
             printf '%s\n' ''
             printf '%s\n' '**Flags**'
             printf '%s\n' "- lineageChanged: ${{ steps.decide.outputs.lineage }}"
