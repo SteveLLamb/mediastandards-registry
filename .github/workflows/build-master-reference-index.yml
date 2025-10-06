@@ -1,8 +1,8 @@
 name: Build MasterReference Index
 
 on:
-  push:
-    branches: [ main ]
+  #push:
+  #  branches: [ main ]
   schedule:
     - cron: '00 04 * * *'    # 21:00 PT (UTC cron)
   workflow_dispatch:
@@ -64,17 +64,22 @@ jobs:
           "
           cat mri-change-class.json
 
-      - name: Auto-commit metadata-only change
-        if: ${{ fromJSON(steps.class.outputs || 'null') == null }} # noop guard
-        run: echo "noop"
-
-      - name: Commit MRI content
-        if: "! fromJSON(needs.nil || 'false')" # just a placeholder; see next two steps
-        run: echo "noop"
-
-      - name: Commit MRI changes to default branch (no PR) when only timestamp changed
-        if: ${{ fromJSON( github.steps ) == null }} # placeholder to avoid confusion
-        run: echo "noop"
+      - name: Commit MRI metadata-only change
+        if: ${{ success() }}
+        run: |
+          set -e
+          onlyMeta=$(jq -r '.onlyMeta' mri-change-class.json)
+          if [ "$onlyMeta" = "true" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add src/main/reports/masterReferenceIndex.json
+            git diff --cached --quiet && { echo "No changes to commit"; exit 0; }
+            git commit -m "chore: refresh MRI metadata timestamp"
+            git push origin HEAD:${{ github.event.repository.default_branch }}
+            echo "✅ Metadata-only MRI refresh committed directly to main"
+            exit 0
+          fi
+          echo "Not metadata-only, continuing to PR path"
 
       - name: Commit MRI content changes (open PR)
         id: commit_pr
