@@ -1,4 +1,50 @@
 
+/**
+ * Prune MRI to keep only sightings present in the given index.
+ * @param {Set<string>} index - Set of keys `${refId}||${docId}||${type}` representing current truth.
+ * @param {object} opts - Options: { removeEmptyRefs?: boolean }
+ * @returns {{ removedVariants: number, removedRefs: number }}
+ */
+function mriPruneToSightings(index, opts = {}) {
+  // index: Set of keys `${refId}||${docId}||${type}` representing CURRENT truth
+  const removeEmptyRefs = opts.removeEmptyRefs !== false; // default true
+  const mri = _loadMRI();
+  let removedVariants = 0;
+  let removedRefs = 0;
+
+  for (const [refId, entry] of Object.entries(mri.refs || {})) {
+    const before = Array.isArray(entry.rawVariants) ? entry.rawVariants.length : 0;
+    if (before) {
+      const kept = [];
+      for (const v of entry.rawVariants) {
+        const key = `${refId}||${v.docId || ''}||${v.type || ''}`;
+        if (index.has(key)) kept.push(v); else removedVariants++;
+      }
+      if (kept.length !== before) {
+        entry.rawVariants = kept;
+        _dirty = true;
+      }
+    }
+
+    // Optionally drop the entire refId if it has no variants and isn't a source doc itself
+    const hasAny = Array.isArray(entry.rawVariants) && entry.rawVariants.length > 0;
+    const isSource = !!(entry.resolution && entry.resolution.sourcePresent);
+    if (removeEmptyRefs && !hasAny && !isSource) {
+      delete mri.refs[refId];
+      removedRefs++;
+      _dirty = true;
+    }
+  }
+
+  // Recompute stats
+  mri.stats.uniqueRefIds = Object.keys(mri.refs || {}).length;
+
+  if (process.env.DEBUG || process.env.MSR_DEBUG) {
+    console.log(`🧹 MRI prune: removedVariants=${removedVariants}, removedRefs=${removedRefs}`);
+  }
+
+  return { removedVariants, removedRefs };
+}
 
 // referencing.js — shared helpers for building references from HTML
 // Centralizes refMap pattern loading, cite→refId mapping, and DOM extraction
@@ -265,11 +311,46 @@ function mriRecordSighting({ docId, type, refId, cite, href, mapSource, mapDetai
     if (typeof entry.resolution.sourcePresent !== 'boolean') {
       entry.resolution.sourcePresent = _hasDocIdOrBase(refId);
     }
-    // variants (now include rawRef + title)
-    entry.rawVariants = _dedupeVariants([
-      ...(entry.rawVariants || []),
-      { docId, type, cite, href, rawRef, title }
-    ]);
+    // variants (merge by (docId,type); never overwrite filled fields with blanks)
+    entry.rawVariants = entry.rawVariants || [];
+    const norm = v => (typeof v === 'string' ? v : (v == null ? '' : String(v)));
+    const newVar = { docId, type, cite: norm(cite), href: norm(href), rawRef: norm(rawRef), title: title == null ? '' : String(title) };
+
+    let merged = false;
+    for (let i = 0; i < entry.rawVariants.length; i++) {
+      const v = entry.rawVariants[i] || {};
+      if (v.docId === newVar.docId && v.type === newVar.type) {
+        const out = { ...v };
+        // Enrich field-wise: prefer existing non-empty; fill from new when existing is empty
+        out.cite   = (out.cite && out.cite.trim().length)     ? out.cite   : newVar.cite;
+        out.href   = (out.href && out.href.trim().length)     ? out.href   : newVar.href;
+        out.rawRef = (out.rawRef && out.rawRef.trim().length) ? out.rawRef : newVar.rawRef;
+        // title can legitimately be null; treat empty-string as missing
+        const oldTitle = (out.title == null || String(out.title).trim() === '') ? '' : String(out.title);
+        const newTitle = (newVar.title == null || String(newVar.title).trim() === '') ? '' : String(newVar.title);
+        out.title = oldTitle || newTitle || null;
+
+        // Only mark dirty if something actually changed
+        const changed = (
+          out.cite !== v.cite ||
+          out.href !== v.href ||
+          out.rawRef !== v.rawRef ||
+          (out.title || null) !== (v.title || null)
+        );
+        if (changed) {
+          entry.rawVariants[i] = out;
+        }
+        merged = true;
+        break;
+      }
+    }
+    if (!merged) {
+      // Normalize empty fields to '' except title→null for consistency
+      const v = { ...newVar, title: (newVar.title && newVar.title.trim().length) ? newVar.title : null };
+      entry.rawVariants.push(v);
+    }
+    // Final safety: collapse any accidental dupes
+    entry.rawVariants = _dedupeVariants(entry.rawVariants);
   } else {
     // orphan
     mri.orphans = mri.orphans || { unmapped: [] };
@@ -695,5 +776,6 @@ module.exports = {
   // MRI helpers
   mriRecordSighting,
   mriFlush,
-  mriEnsureFile
+  mriEnsureFile,
+  mriPruneToSightings
 };

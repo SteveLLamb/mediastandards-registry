@@ -4,7 +4,8 @@
   "description": "Doc Registry",
   "scripts": {
     "build": "node src/main/scripts/build.js",
-    "build-masterSuite": "node src/main/scripts/buildMasterSuiteIndex.js --in src/main/data/documents.json --out src/main/reports/masterSuiteIndex.json",
+    "build-msi": "node src/main/scripts/buildMasterSuiteIndex.js --in src/main/data/documents.json --out src/main/reports/masterSuiteIndex.json",
+    "build-mri": "node src/main/scripts/buildMasterReferenceIndex.js",
     "extract": "node src/main/scripts/extractDocs.js",
     "validate": "node src/main/scripts/validate.js",
     "validate-url": "node src/main/scripts/url.validate.js",
