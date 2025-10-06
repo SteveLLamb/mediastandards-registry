@@ -3,8 +3,8 @@ name: Build MasterReference Index
 on:
   #push:
   #  branches: [ main ]
-  schedule:
-    - cron: '00 04 * * *'    # 21:00 PT (UTC cron)
+  #schedule:
+  #  - cron: '00 04 * * *'    # 21:00 PT (UTC cron)
   workflow_dispatch:
   workflow_run:
     workflows: [ "Build MasterSuite Index" ]
