@@ -1,12 +1,11 @@
 name: Build MasterSuite Index
-
+    
 on:
-  schedule:
-    - cron: "30 06 * * *"   # 23:30 PT (cron in UTC)
   push:
-    branches:
-      - main                
-  workflow_dispatch:        
+    branches: [ main ]
+  schedule:
+    - cron: "30 06 * * *" # 23:30 PT (cron in UTC)
+  workflow_dispatch:
 
 permissions:
   contents: write
