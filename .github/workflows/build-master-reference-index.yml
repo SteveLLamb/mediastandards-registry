@@ -69,18 +69,34 @@ jobs:
         run: |
           echo "onlyMeta=$(jq -r '.onlyMeta' mri-change-class.json)" >> $GITHUB_OUTPUT
           echo "missing=$(jq -r '.missingCount' mri-change-class.json)" >> $GITHUB_OUTPUT
+          echo "onlyMeta=$(jq -r '.onlyMeta' mri-change-class.json)"
+
+      - name: Debug git status
+          run: |
+            git status --porcelain
+            git log --oneline -5 || true
+
 
       - name: Commit MRI metadata-only change
         if: steps.decide_mri.outputs.onlyMeta == 'true'
         run: |
           set -e
+          BR="${{ github.event.repository.default_branch }}"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/main/reports/masterReferenceIndex.json
-          git diff --cached --quiet && { echo "No changes to commit"; exit 0; }
+          git fetch origin "$BR":"refs/remotes/origin/$BR" --depth=1
+          git checkout "$BR"
+          git reset --hard "origin/$BR"
+          # Stage both MRI and audit if present
+          test -f src/main/reports/masterReferenceIndex.json && git add src/main/reports/masterReferenceIndex.json || true
+          test -f src/main/reports/mri_presence_audit.json && git add src/main/reports/mri_presence_audit.json || true
+          if git diff --cached --quiet; then
+            echo "No metadata-only changes to commit."
+            exit 0
+          fi
           git commit -m "chore: refresh MasterReferenceIndex metadata timestamp"
-          git push origin HEAD:${{ github.event.repository.default_branch }}
-          echo "✅ Metadata-only MasterReferenceIndex refresh committed directly to main"
+          git push origin "$BR"
+          echo "✅ Metadata-only MasterReferenceIndex refresh committed directly to $BR"
 
       - name: Commit MRI content changes (open PR)
         id: commit_pr
@@ -91,9 +107,9 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/main/reports/masterReferenceIndex.json src/main/reports/mri_presence_audit.json
           git diff --cached --quiet && { echo "No staged changes"; exit 0; }
-          git checkout -b chore/build-masterreference || git checkout chore/build-masterreference
+          git checkout -B chore/build-masterreference
           git commit -m "chore: Build MasterReferenceIndex (data change)"
-          git push -u origin chore/build-masterreference || git push -u origin chore/build-masterreference
+          git push -u origin chore/build-masterreference --force-with-lease
 
       - name: Render PR body (MRI)
         id: render_pr_mri
@@ -102,7 +118,7 @@ jobs:
           MISSING="${{ steps.decide_mri.outputs.missing }}"
           {
             printf '%s\n' 'Automated MRI build detected content changes.'
-            printf '%s\n' ''
+            printf '%s\n' ""
             printf '%s\n' "**Missing refs**: ${MISSING}"
           } > mri_pr_body.txt
           sed -n '1,120p' mri_pr_body.txt
