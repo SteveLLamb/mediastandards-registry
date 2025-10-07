@@ -64,32 +64,29 @@ jobs:
           "
           cat mri-change-class.json
 
+      - name: Decide (MRI)
+        id: decide_mri
+        run: |
+          echo "onlyMeta=$(jq -r '.onlyMeta' mri-change-class.json)" >> $GITHUB_OUTPUT
+          echo "missing=$(jq -r '.missingCount' mri-change-class.json)" >> $GITHUB_OUTPUT
+
       - name: Commit MRI metadata-only change
-        if: ${{ success() }}
+        if: steps.decide_mri.outputs.onlyMeta == 'true'
         run: |
           set -e
-          onlyMeta=$(jq -r '.onlyMeta' mri-change-class.json)
-          if [ "$onlyMeta" = "true" ]; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add src/main/reports/masterReferenceIndex.json
-            git diff --cached --quiet && { echo "No changes to commit"; exit 0; }
-            git commit -m "chore: refresh MasterReferenceIndex metadata timestamp"
-            git push origin HEAD:${{ github.event.repository.default_branch }}
-            echo "✅ Metadata-only MasterReferenceIndex refresh committed directly to main"
-            exit 0
-          fi
-          echo "Not metadata-only, continuing to PR path"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/main/reports/masterReferenceIndex.json
+          git diff --cached --quiet && { echo "No changes to commit"; exit 0; }
+          git commit -m "chore: refresh MasterReferenceIndex metadata timestamp"
+          git push origin HEAD:${{ github.event.repository.default_branch }}
+          echo "✅ Metadata-only MasterReferenceIndex refresh committed directly to main"
 
       - name: Commit MRI content changes (open PR)
         id: commit_pr
+        if: steps.decide_mri.outputs.onlyMeta != 'true'
         run: |
           set -e
-          onlyMeta=$(jq -r '.onlyMeta' mri-change-class.json)
-          if [ "$onlyMeta" = "true" ]; then
-            echo "No content delta (only generatedAt). Skipping PR."
-            exit 0
-          fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/main/reports/masterReferenceIndex.json src/main/reports/mri_presence_audit.json
@@ -100,9 +97,9 @@ jobs:
 
       - name: Render PR body (MRI)
         id: render_pr_mri
-        if: steps.commit_pr.outcome == 'success'
+        if: steps.decide_mri.outputs.onlyMeta != 'true' && steps.commit_pr.outcome == 'success'
         run: |
-          MISSING=$(jq -r '.missingCount' src/main/reports/mri_presence_audit.json 2>/dev/null || echo 0)
+          MISSING="${{ steps.decide_mri.outputs.missing }}"
           {
             printf '%s\n' 'Automated MRI build detected content changes.'
             printf '%s\n' ''
@@ -111,7 +108,7 @@ jobs:
           sed -n '1,120p' mri_pr_body.txt
 
       - name: Create PR for MRI
-        if: steps.commit_pr.outcome == 'success' && !startsWith(github.ref, 'refs/heads/chore/build-masterreference')
+        if: steps.decide_mri.outputs.onlyMeta != 'true' && steps.commit_pr.outcome == 'success' && !startsWith(github.ref, 'refs/heads/chore/build-masterreference')
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "chore: Build MasterReferenceIndex (data change)"
