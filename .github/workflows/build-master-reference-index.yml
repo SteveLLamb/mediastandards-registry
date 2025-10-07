@@ -1,14 +1,10 @@
 name: Build MasterReference Index
 
 on:
-  #push:
-  #  branches: [ main ]
-  #schedule:
-  #  - cron: '00 04 * * *'    # 21:00 PT (UTC cron)
-  workflow_dispatch:
   workflow_run:
     workflows: [ "Build MasterSuite Index" ]
     types: [ completed ]
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -191,7 +187,7 @@ jobs:
             for (const issue of openIssues) {
               const refId = issue.title.replace(/^MISSING REF: /, '');
               if (!currentMissing.has(refId)) {
-                await github.rest.issues.createComment({ owner, repo, issue_number: issue.number, body: `Resolved: refId **${refId}** no longer missing in current MRI audit. ${runTag}. Closing.` });
+                await github.rest.issues.createComment({ owner, repo, issue_number: issue.number, body: `Resolved: no longer reported as MISSING REF. ${runTag}. Closing.` });
                 await github.rest.issues.update({ owner, repo, issue_number: issue.number, state: 'closed' });
               }
             }

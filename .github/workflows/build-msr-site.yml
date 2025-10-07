@@ -1,11 +1,10 @@
-name: build and test
+name: Build MSR Siteand Test
 
 on:
-  pull_request:
-    branches:
-      - main
-    types:
-      - closed
+  workflow_run:
+    workflows: [ "Build MasterReference Index" ]
+    types: [ completed ]
+  workflow_dispatch:
 
 jobs:
   build:

@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2025-10-07T21:02:25.019Z",
+  "generatedAt": "2025-10-07T21:51:15.146Z",
   "sourcePath": "src/main/data/documents.json",
-  "processedDocs": 1478,
+  "processedDocs": 1485,
   "replayMode": "full-replay",
-  "seenRefs": 2708,
-  "seenSightings": 2708,
-  "presentCount": 989,
-  "missingCount": 52,
+  "seenRefs": 2742,
+  "seenSightings": 2742,
+  "presentCount": 998,
+  "missingCount": 51,
   "missing": [
     {
       "refId": "AES3-1.2009",
@@ -114,9 +114,9 @@
         {
           "docId": "SMPTE.AG02",
           "type": "bibliographic",
-          "cite": "",
-          "href": "",
-          "rawRef": "",
+          "cite": "IANA",
+          "href": "https://www.iana.org/",
+          "rawRef": "IANA url: https://www.iana.org/",
           "title": null
         }
       ]
@@ -510,6 +510,21 @@
       ]
     },
     {
+      "refId": "RFC4187",
+      "sourceDocId": null,
+      "sightingCount": 1,
+      "sightings": [
+        {
+          "docId": "SMPTE.ST429-6.2023-05",
+          "type": "normative",
+          "cite": "IETF RFC 4187",
+          "href": "https://www.rfc-editor.org/info/rfc4187",
+          "rawRef": "IETF RFC 4187, Extensible Authentication Protocol Method for 3rd Generation Authentication and Key Agreement (EAP-AKA). url: https://www.rfc-editor.org/info/rfc4187",
+          "title": "Extensible Authentication Protocol Method for 3rd Generation Authentication and Key Agreement (EAP-AKA)."
+        }
+      ]
+    },
+    {
       "refId": "SMPTE.AG27",
       "sourceDocId": null,
       "sightingCount": 6,
@@ -561,21 +576,6 @@
           "href": "https://github.com/SMPTE/html-pub-template",
           "rawRef": "SMPTE AG-27, HTML Pub: Template (Base HTML Repo with Tooling) url: https://github.com/SMPTE/html-pub-template",
           "title": "HTML Pub: Template (Base HTML Repo with Tooling)"
-        }
-      ]
-    },
-    {
-      "refId": "SMPTE.OM.GH",
-      "sourceDocId": null,
-      "sightingCount": 1,
-      "sightings": [
-        {
-          "docId": "SMPTE.AG26",
-          "type": "bibliographic",
-          "cite": "",
-          "href": "",
-          "rawRef": "",
-          "title": null
         }
       ]
     },
@@ -1052,6 +1052,7 @@
           "title": null
         }
       ]
+<<<<<<< HEAD
     },
     {
       "refId": "W3C.html5",
@@ -1067,6 +1068,8 @@
           "title": "W3C Recommendation, \"\", 14 December 2017,"
         }
       ]
+=======
+>>>>>>> 45b15e2 (first pass update workflows)
     }
   ]
 }

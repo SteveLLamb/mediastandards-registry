@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "generatedAt": "2025-10-07T20:59:24.965Z",
+  "generatedAt": "2025-10-07T21:51:15.135Z",
   "stats": {
-    "uniqueRefIds": 1041
+    "uniqueRefIds": 1049
   },
   "refs": {
     "40290752": {
@@ -2862,19 +2862,21 @@
       "provenance": {
         "firstSeen": "2025-10-06T22:30:59.012Z",
         "mapSource": [
+          "plain",
           "replay"
         ],
         "mapDetails": [
-          "from-documents.json"
+          "from-documents.json",
+          "=iana"
         ]
       },
       "rawVariants": [
         {
           "docId": "SMPTE.AG02",
           "type": "bibliographic",
-          "cite": "",
-          "href": "",
-          "rawRef": "",
+          "cite": "IANA",
+          "href": "https://www.iana.org/",
+          "rawRef": "IANA url: https://www.iana.org/",
           "title": null
         }
       ]
@@ -5679,6 +5681,36 @@
         }
       ]
     },
+    "ISO.14496-10": {
+      "refId": "ISO.14496-10",
+      "normalized": null,
+      "resolution": {
+        "sourcePresent": true,
+        "sourceDocId": "ISO.14496-10.2020",
+        "firstConfirmedSourceAt": "2025-10-07T21:12:24.964Z"
+      },
+      "provenance": {
+        "firstSeen": "2025-10-07T21:11:23.055Z",
+        "mapSource": [
+          "regex",
+          "replay"
+        ],
+        "mapDetails": [
+          "iso|iec designator",
+          "from-documents.json"
+        ]
+      },
+      "rawVariants": [
+        {
+          "docId": "SMPTE.ST429-6.2023-05",
+          "type": "bibliographic",
+          "cite": "Rec. ITU-T H.264 | ISO/IEC 14496-10",
+          "href": "",
+          "rawRef": "Rec. ITU-T H.264 | ISO/IEC 14496-10 (latest edition), Advanced video coding for generic audiovisual services.",
+          "title": "(latest edition), Advanced video coding for generic audiovisual services."
+        }
+      ]
+    },
     "ISO.14496-10.2005": {
       "refId": "ISO.14496-10.2005",
       "normalized": null,
@@ -6452,6 +6484,14 @@
           "href": "",
           "rawRef": "",
           "title": null
+        },
+        {
+          "docId": "SMPTE.ST428-24.2024-11",
+          "type": "bibliographic",
+          "cite": "Rec. ITU-T T.814 | ISO/IEC 15444-15",
+          "href": "",
+          "rawRef": "Rec. ITU-T T.814 | ISO/IEC 15444-15, Information technology — JPEG 2000 image coding system — Part 15: High-Throughput JPEG 2000.",
+          "title": "Information technology — JPEG 2000 image coding system — Part 15: High-Throughput JPEG 2000."
         }
       ]
     },
@@ -12576,6 +12616,14 @@
           "href": "",
           "rawRef": "",
           "title": null
+        },
+        {
+          "docId": "SMPTE.ST429-6.2023-05",
+          "type": "bibliographic",
+          "cite": "NIST FIPS PUB 186-2",
+          "href": "https://csrc.nist.gov/csrc/media/publications/fips/186/2/archive/2000-01-27/documents/fips186-2.pdf",
+          "rawRef": "NIST FIPS PUB 186-2, Digital Signature Standard (DSS). url: https://csrc.nist.gov/csrc/media/publications/fips/186/2/archive/2000-01-27/documents/fips186-2.pdf",
+          "title": "Digital Signature Standard (DSS)."
         }
       ]
     },
@@ -12682,6 +12730,14 @@
           "href": "",
           "rawRef": "",
           "title": null
+        },
+        {
+          "docId": "SMPTE.ST429-6.2023-05",
+          "type": "normative",
+          "cite": "NIST FIPS 197",
+          "href": "https://doi.org/10.6028/NIST.FIPS.197",
+          "rawRef": "NIST FIPS 197, Advanced Encryption Standard (AES). url: https://doi.org/10.6028/NIST.FIPS.197",
+          "title": "Advanced Encryption Standard (AES)."
         },
         {
           "docId": "SMPTE.ST430-3.2012",
@@ -12900,6 +12956,14 @@
           "href": "",
           "rawRef": "",
           "title": null
+        },
+        {
+          "docId": "SMPTE.ST429-6.2023-05",
+          "type": "normative",
+          "cite": "NIST SP 800-38A",
+          "href": "https://doi.org/10.6028/NIST.SP.800-38A",
+          "rawRef": "NIST SP 800-38A, Recommendation for Block Cipher Modes of Operation Methods and Techniques. url: https://doi.org/10.6028/NIST.SP.800-38A",
+          "title": "Recommendation for Block Cipher Modes of Operation Methods and Techniques."
         }
       ]
     },
@@ -14556,6 +14620,14 @@
           "href": "",
           "rawRef": "",
           "title": null
+        },
+        {
+          "docId": "SMPTE.ST429-6.2023-05",
+          "type": "normative",
+          "cite": "IETF RFC 2104",
+          "href": "https://www.rfc-editor.org/info/rfc2104",
+          "rawRef": "IETF RFC 2104, HMAC: Keyed-Hashing for Message Authentication. url: https://www.rfc-editor.org/info/rfc2104",
+          "title": "HMAC: Keyed-Hashing for Message Authentication."
         }
       ]
     },
@@ -15378,6 +15450,14 @@
           "href": "",
           "rawRef": "",
           "title": null
+        },
+        {
+          "docId": "SMPTE.ST429-6.2023-05",
+          "type": "normative",
+          "cite": "IETF RFC 2898",
+          "href": "https://www.rfc-editor.org/info/rfc2898",
+          "rawRef": "IETF RFC 2898, PKCS #5: Password-Based Cryptography Specification – Version 2.0. url: https://www.rfc-editor.org/info/rfc2898",
+          "title": "PKCS #5: Password-Based Cryptography Specification – Version 2.0."
         }
       ]
     },
@@ -15542,6 +15622,14 @@
           "href": "",
           "rawRef": "",
           "title": null
+        },
+        {
+          "docId": "SMPTE.ST429-6.2023-05",
+          "type": "normative",
+          "cite": "IETF RFC 3174",
+          "href": "https://www.rfc-editor.org/info/rfc3174",
+          "rawRef": "IETF RFC 3174, US Secure Hash Algorithm 1 (SHA1). url: https://www.rfc-editor.org/info/rfc3174",
+          "title": "US Secure Hash Algorithm 1 (SHA1)."
         },
         {
           "docId": "SMPTE.ST429-7.2006",
@@ -16571,6 +16659,34 @@
         }
       ]
     },
+    "RFC4187": {
+      "refId": "RFC4187",
+      "normalized": null,
+      "resolution": {
+        "sourcePresent": false
+      },
+      "provenance": {
+        "firstSeen": "2025-10-07T21:11:23.053Z",
+        "mapSource": [
+          "regex",
+          "replay"
+        ],
+        "mapDetails": [
+          "rfc-number",
+          "from-documents.json"
+        ]
+      },
+      "rawVariants": [
+        {
+          "docId": "SMPTE.ST429-6.2023-05",
+          "type": "normative",
+          "cite": "IETF RFC 4187",
+          "href": "https://www.rfc-editor.org/info/rfc4187",
+          "rawRef": "IETF RFC 4187, Extensible Authentication Protocol Method for 3rd Generation Authentication and Key Agreement (EAP-AKA). url: https://www.rfc-editor.org/info/rfc4187",
+          "title": "Extensible Authentication Protocol Method for 3rd Generation Authentication and Key Agreement (EAP-AKA)."
+        }
+      ]
+    },
     "RFC4234": {
       "refId": "RFC4234",
       "normalized": null,
@@ -16894,6 +17010,14 @@
           "title": null
         },
         {
+          "docId": "SMPTE.ST428-24.2024-11",
+          "type": "normative",
+          "cite": "IETF RFC 5234",
+          "href": "",
+          "rawRef": "IETF RFC 5234, Augmented BNF for Syntax Specifications: ABNF.",
+          "title": "Augmented BNF for Syntax Specifications: ABNF."
+        },
+        {
           "docId": "SMPTE.ST429-16.2014",
           "type": "normative",
           "cite": "",
@@ -17138,6 +17262,14 @@
           "href": "https://datatracker.ietf.org/doc/html/rfc6838",
           "rawRef": "IETF RFC 6838 – Media Type Specifications and Registration Procedures, 1/2013. url: https://datatracker.ietf.org/doc/html/rfc6838",
           "title": "– Media Type Specifications and Registration Procedures, 1/2013."
+        },
+        {
+          "docId": "SMPTE.ST429-3.2023-09",
+          "type": "normative",
+          "cite": "IETF RFC 6838",
+          "href": "https://www.rfc-editor.org/rfc/rfc6838",
+          "rawRef": "IETF RFC 6838, Media Type Specifications and Registration Procedures. url: https://www.rfc-editor.org/rfc/rfc6838",
+          "title": "Media Type Specifications and Registration Procedures."
         }
       ]
     },
@@ -18228,6 +18360,14 @@
           "href": "https://doc.smpte-doc.org/ag-31/main/",
           "rawRef": "SMPTE AG-31, GitHub Operating Guidelines url: https://doc.smpte-doc.org/ag-31/main/",
           "title": "GitHub Operating Guidelines"
+        },
+        {
+          "docId": "SMPTE.AG26",
+          "type": "bibliographic",
+          "cite": "SMPTE GitHub Operating Manual",
+          "href": "https://github.com/SMPTE/github-operating-manual",
+          "rawRef": "SMPTE GitHub Operating Manual url: https://github.com/SMPTE/github-operating-manual",
+          "title": null
         }
       ]
     },
@@ -18480,6 +18620,44 @@
           "href": "",
           "rawRef": "",
           "title": null
+        }
+      ]
+    },
+    "SMPTE.EG42": {
+      "refId": "SMPTE.EG42",
+      "normalized": null,
+      "resolution": {
+        "sourcePresent": true,
+        "sourceDocId": "SMPTE.EG42.2015",
+        "firstConfirmedSourceAt": "2025-10-07T21:12:24.965Z"
+      },
+      "provenance": {
+        "firstSeen": "2025-10-07T21:11:18.897Z",
+        "mapSource": [
+          "regex",
+          "replay"
+        ],
+        "mapDetails": [
+          "smpte-designator",
+          "from-documents.json"
+        ]
+      },
+      "rawVariants": [
+        {
+          "docId": "SMPTE.ST429-3.2023-09",
+          "type": "bibliographic",
+          "cite": "SMPTE EG 42",
+          "href": "",
+          "rawRef": "SMPTE EG 42, Material Exchange Format (MXF) — MXF Descriptive Metadata",
+          "title": "Material Exchange Format (MXF) — MXF Descriptive Metadata"
+        },
+        {
+          "docId": "SMPTE.ST429-6.2023-05",
+          "type": "bibliographic",
+          "cite": "SMPTE EG 42",
+          "href": "",
+          "rawRef": "SMPTE EG 42, Material Exchange Format (MXF) — MXF Descriptive Metadata.",
+          "title": "Material Exchange Format (MXF) — MXF Descriptive Metadata."
         }
       ]
     },
@@ -18837,32 +19015,6 @@
           "cite": "SMPTE Bylaws",
           "href": "https://f.hubspotusercontent00.net/hubfs/5253154/SMPTE_Bylaws_2010x.pdf",
           "rawRef": "SMPTE Bylaws url: https://f.hubspotusercontent00.net/hubfs/5253154/SMPTE_Bylaws_2010x.pdf",
-          "title": null
-        }
-      ]
-    },
-    "SMPTE.OM.GH": {
-      "refId": "SMPTE.OM.GH",
-      "normalized": null,
-      "resolution": {
-        "sourcePresent": false
-      },
-      "provenance": {
-        "firstSeen": "2025-10-06T22:30:59.013Z",
-        "mapSource": [
-          "replay"
-        ],
-        "mapDetails": [
-          "from-documents.json"
-        ]
-      },
-      "rawVariants": [
-        {
-          "docId": "SMPTE.AG26",
-          "type": "bibliographic",
-          "cite": "",
-          "href": "",
-          "rawRef": "",
           "title": null
         }
       ]
@@ -20516,6 +20668,14 @@
           "href": "",
           "rawRef": "",
           "title": null
+        },
+        {
+          "docId": "SMPTE.ST429-6.2023-05",
+          "type": "bibliographic",
+          "cite": "SMPTE RP 205",
+          "href": "",
+          "rawRef": "SMPTE RP 205, Application of Unique Material Identifiers in Production and Broadcast Environments.",
+          "title": "Application of Unique Material Identifiers in Production and Broadcast Environments."
         }
       ]
     },
@@ -21276,6 +21436,66 @@
           "href": "",
           "rawRef": "",
           "title": null
+        }
+      ]
+    },
+    "SMPTE.RP428-5": {
+      "refId": "SMPTE.RP428-5",
+      "normalized": null,
+      "resolution": {
+        "sourcePresent": true,
+        "sourceDocId": "SMPTE.RP428-5.2010",
+        "firstConfirmedSourceAt": "2025-10-07T21:12:24.966Z"
+      },
+      "provenance": {
+        "firstSeen": "2025-10-07T21:11:09.564Z",
+        "mapSource": [
+          "regex",
+          "replay"
+        ],
+        "mapDetails": [
+          "smpte-designator",
+          "from-documents.json"
+        ]
+      },
+      "rawVariants": [
+        {
+          "docId": "SMPTE.ST428-24.2024-11",
+          "type": "bibliographic",
+          "cite": "SMPTE RP 428-5",
+          "href": "",
+          "rawRef": "SMPTE RP 428-5, D-Cinema Distribution Master — Mapping of Images into Constrained Tag Image File.",
+          "title": "D-Cinema Distribution Master — Mapping of Images into Constrained Tag Image File."
+        }
+      ]
+    },
+    "SMPTE.RP428-6": {
+      "refId": "SMPTE.RP428-6",
+      "normalized": null,
+      "resolution": {
+        "sourcePresent": true,
+        "sourceDocId": "SMPTE.RP428-6.2009",
+        "firstConfirmedSourceAt": "2025-10-07T21:12:24.966Z"
+      },
+      "provenance": {
+        "firstSeen": "2025-10-07T21:11:09.564Z",
+        "mapSource": [
+          "regex",
+          "replay"
+        ],
+        "mapDetails": [
+          "smpte-designator",
+          "from-documents.json"
+        ]
+      },
+      "rawVariants": [
+        {
+          "docId": "SMPTE.ST428-24.2024-11",
+          "type": "bibliographic",
+          "cite": "SMPTE RP 428-6",
+          "href": "",
+          "rawRef": "SMPTE RP 428-6, D-Cinema Distribution Master — Digital Leader.",
+          "title": "D-Cinema Distribution Master — Digital Leader."
         }
       ]
     },
@@ -26627,6 +26847,36 @@
         }
       ]
     },
+    "SMPTE.ST2067-40": {
+      "refId": "SMPTE.ST2067-40",
+      "normalized": null,
+      "resolution": {
+        "sourcePresent": true,
+        "sourceDocId": "SMPTE.ST2067-40.2021",
+        "firstConfirmedSourceAt": "2025-10-07T21:12:24.966Z"
+      },
+      "provenance": {
+        "firstSeen": "2025-10-07T21:11:09.560Z",
+        "mapSource": [
+          "regex",
+          "replay"
+        ],
+        "mapDetails": [
+          "smpte-designator",
+          "from-documents.json"
+        ]
+      },
+      "rawVariants": [
+        {
+          "docId": "SMPTE.ST428-24.2024-11",
+          "type": "normative",
+          "cite": "SMPTE ST 2067-40",
+          "href": "",
+          "rawRef": "SMPTE ST 2067-40, Interoperable Master Format — Application #4 Cinema Mezzanine.",
+          "title": "Interoperable Master Format — Application #4 Cinema Mezzanine."
+        }
+      ]
+    },
     "SMPTE.ST2067-5": {
       "refId": "SMPTE.ST2067-5",
       "normalized": null,
@@ -26654,6 +26904,14 @@
           "href": "",
           "rawRef": "",
           "title": null
+        },
+        {
+          "docId": "SMPTE.ST429-6.2023-05",
+          "type": "bibliographic",
+          "cite": "SMPTE ST 2067-5",
+          "href": "",
+          "rawRef": "SMPTE ST 2067-5, Interoperable Master Format – Essence Component.",
+          "title": "Interoperable Master Format – Essence Component."
         }
       ]
     },
@@ -27904,6 +28162,14 @@
           "href": "",
           "rawRef": "",
           "title": null
+        },
+        {
+          "docId": "SMPTE.ST429-3.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 2123",
+          "href": "",
+          "rawRef": "SMPTE ST 2123, SMPTE Metadata Registers",
+          "title": "SMPTE Metadata Registers"
         }
       ]
     },
@@ -29936,6 +30202,14 @@
           "href": "",
           "rawRef": "SMPTE ST 330, Unique Material Identifier (UMID).",
           "title": "Unique Material Identifier (UMID)."
+        },
+        {
+          "docId": "SMPTE.ST429-3.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 330",
+          "href": "",
+          "rawRef": "SMPTE ST 330, Unique Material Identifier (UMID)",
+          "title": "Unique Material Identifier (UMID)"
         }
       ]
     },
@@ -30447,6 +30721,14 @@
           "cite": "SMPTE ST 336",
           "href": "https://pub.smpte.org/pub/st336/",
           "rawRef": "SMPTE ST 336, Data Encoding Protocol Using Key-Length-Value url: https://pub.smpte.org/pub/st336/",
+          "title": "Data Encoding Protocol Using Key-Length-Value"
+        },
+        {
+          "docId": "SMPTE.ST429-6.2023-05",
+          "type": "normative",
+          "cite": "SMPTE ST 336",
+          "href": "",
+          "rawRef": "SMPTE ST 336, Data Encoding Protocol Using Key-Length-Value",
           "title": "Data Encoding Protocol Using Key-Length-Value"
         }
       ]
@@ -31474,6 +31756,30 @@
           "href": "",
           "rawRef": "SMPTE ST 377-1, Material Exchange Format (MXF) — File Format Specification.",
           "title": "Material Exchange Format (MXF) — File Format Specification."
+        },
+        {
+          "docId": "SMPTE.ST429-3.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 377-1",
+          "href": "",
+          "rawRef": "SMPTE ST 377-1, Material Exchange Format (MXF) — File Format Specification",
+          "title": "Material Exchange Format (MXF) — File Format Specification"
+        },
+        {
+          "docId": "SMPTE.ST429-4.2023-05",
+          "type": "normative",
+          "cite": "SMPTE ST 377-1",
+          "href": "",
+          "rawRef": "SMPTE ST 377-1, Material Exchange Format (MXF) — File Format Specification",
+          "title": "Material Exchange Format (MXF) — File Format Specification"
+        },
+        {
+          "docId": "SMPTE.ST429-6.2023-05",
+          "type": "normative",
+          "cite": "SMPTE ST 377-1",
+          "href": "",
+          "rawRef": "SMPTE ST 377-1, Material Exchange Format (MXF) — File Format Specification",
+          "title": "Material Exchange Format (MXF) — File Format Specification"
         }
       ]
     },
@@ -32439,6 +32745,44 @@
         }
       ]
     },
+    "SMPTE.ST379-1": {
+      "refId": "SMPTE.ST379-1",
+      "normalized": null,
+      "resolution": {
+        "sourcePresent": true,
+        "sourceDocId": "SMPTE.ST379-1.2009",
+        "firstConfirmedSourceAt": "2025-10-07T21:12:24.967Z"
+      },
+      "provenance": {
+        "firstSeen": "2025-10-07T21:11:18.895Z",
+        "mapSource": [
+          "regex",
+          "replay"
+        ],
+        "mapDetails": [
+          "smpte-designator",
+          "from-documents.json"
+        ]
+      },
+      "rawVariants": [
+        {
+          "docId": "SMPTE.ST429-3.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 379-1",
+          "href": "",
+          "rawRef": "SMPTE ST 379-1, Material Exchange Format (MXF) — MXF Generic Container",
+          "title": "Material Exchange Format (MXF) — MXF Generic Container"
+        },
+        {
+          "docId": "SMPTE.ST429-6.2023-05",
+          "type": "bibliographic",
+          "cite": "SMPTE ST 379-1",
+          "href": "",
+          "rawRef": "SMPTE ST 379-1, Material Exchange Format (MXF) — MXF Generic Container.",
+          "title": "Material Exchange Format (MXF) — MXF Generic Container."
+        }
+      ]
+    },
     "SMPTE.ST379-1.2009": {
       "refId": "SMPTE.ST379-1.2009",
       "normalized": null,
@@ -32789,6 +33133,36 @@
         }
       ]
     },
+    "SMPTE.ST380": {
+      "refId": "SMPTE.ST380",
+      "normalized": null,
+      "resolution": {
+        "sourcePresent": true,
+        "sourceDocId": "SMPTE.ST380.2004",
+        "firstConfirmedSourceAt": "2025-10-07T21:12:24.967Z"
+      },
+      "provenance": {
+        "firstSeen": "2025-10-07T21:11:23.055Z",
+        "mapSource": [
+          "regex",
+          "replay"
+        ],
+        "mapDetails": [
+          "smpte-designator",
+          "from-documents.json"
+        ]
+      },
+      "rawVariants": [
+        {
+          "docId": "SMPTE.ST429-6.2023-05",
+          "type": "bibliographic",
+          "cite": "SMPTE ST 380",
+          "href": "",
+          "rawRef": "SMPTE ST 380, Material Exchange Format (MXF) — Descriptive Metadata Scheme-1.",
+          "title": "Material Exchange Format (MXF) — Descriptive Metadata Scheme-1."
+        }
+      ]
+    },
     "SMPTE.ST380.2004": {
       "refId": "SMPTE.ST380.2004",
       "normalized": null,
@@ -33130,6 +33504,36 @@
           "href": "",
           "rawRef": "",
           "title": null
+        }
+      ]
+    },
+    "SMPTE.ST390": {
+      "refId": "SMPTE.ST390",
+      "normalized": null,
+      "resolution": {
+        "sourcePresent": true,
+        "sourceDocId": "SMPTE.ST390.2011",
+        "firstConfirmedSourceAt": "2025-10-07T21:12:24.967Z"
+      },
+      "provenance": {
+        "firstSeen": "2025-10-07T21:11:18.895Z",
+        "mapSource": [
+          "regex",
+          "replay"
+        ],
+        "mapDetails": [
+          "smpte-designator",
+          "from-documents.json"
+        ]
+      },
+      "rawVariants": [
+        {
+          "docId": "SMPTE.ST429-3.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 390",
+          "href": "",
+          "rawRef": "SMPTE ST 390, Material Exchange Format (MXF) — Specialized Operational Pattern \"Atom\" (Simplified Representation of a Single Item)",
+          "title": "Material Exchange Format (MXF) — Specialized Operational Pattern \"Atom\" (Simplified Representation of a Single Item)"
         }
       ]
     },
@@ -33880,6 +34284,14 @@
           "href": "",
           "rawRef": "SMPTE ST 422, Material Exchange Format — Mapping JPEG 2000 Codestreams into the MXF Generic Container.",
           "title": "Material Exchange Format — Mapping JPEG 2000 Codestreams into the MXF Generic Container."
+        },
+        {
+          "docId": "SMPTE.ST429-4.2023-05",
+          "type": "normative",
+          "cite": "SMPTE ST 422",
+          "href": "",
+          "rawRef": "SMPTE ST 422, Material Exchange Format (MXF) — Mapping JPEG 2000 Codestreams into the MXF Generic Container",
+          "title": "Material Exchange Format (MXF) — Mapping JPEG 2000 Codestreams into the MXF Generic Container"
         }
       ]
     },
@@ -34216,12 +34628,28 @@
           "title": null
         },
         {
+          "docId": "SMPTE.ST428-24.2024-11",
+          "type": "normative",
+          "cite": "SMPTE ST 428-1",
+          "href": "",
+          "rawRef": "SMPTE ST 428-1, D-Cinema Distribution Master — Image Characteristics.",
+          "title": "D-Cinema Distribution Master — Image Characteristics."
+        },
+        {
           "docId": "SMPTE.ST429-2.2023-09",
           "type": "normative",
           "cite": "SMPTE ST 428-1",
           "href": "",
           "rawRef": "SMPTE ST 428-1, D-Cinema Distribution Master — Image Characteristics.",
           "title": "D-Cinema Distribution Master — Image Characteristics."
+        },
+        {
+          "docId": "SMPTE.ST429-4.2023-05",
+          "type": "normative",
+          "cite": "SMPTE ST 428-1",
+          "href": "",
+          "rawRef": "SMPTE ST 428-1, D-Cinema Distribution Master — Image Characteristics",
+          "title": "D-Cinema Distribution Master — Image Characteristics"
         }
       ]
     },
@@ -36088,6 +36516,14 @@
           "href": "",
           "rawRef": "",
           "title": null
+        },
+        {
+          "docId": "SMPTE.ST429-6.2023-05",
+          "type": "bibliographic",
+          "cite": "SMPTE ST 429-2",
+          "href": "",
+          "rawRef": "SMPTE ST 429-2, D-Cinema Packaging — DCP Operational Constraints.",
+          "title": "D-Cinema Packaging — DCP Operational Constraints."
         }
       ]
     },
@@ -36334,6 +36770,14 @@
           "href": "",
           "rawRef": "SMPTE ST 429-20, D-Cinema Packaging — MXF Constraints.",
           "title": "D-Cinema Packaging — MXF Constraints."
+        },
+        {
+          "docId": "SMPTE.ST429-3.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 429-20",
+          "href": "",
+          "rawRef": "SMPTE ST 429-20, D-Cinema Packaging — MXF constraints",
+          "title": "D-Cinema Packaging — MXF constraints"
         }
       ]
     },
@@ -36342,7 +36786,7 @@
       "normalized": null,
       "resolution": {
         "sourcePresent": true,
-        "sourceDocId": "SMPTE.ST429-3.2007",
+        "sourceDocId": "SMPTE.ST429-3.2023-09",
         "firstConfirmedSourceAt": "2025-10-06T22:30:59.150Z"
       },
       "provenance": {
@@ -36388,6 +36832,14 @@
           "href": "",
           "rawRef": "SMPTE ST 429-3, D-Cinema Packaging — Sound and Picture Track File",
           "title": "D-Cinema Packaging — Sound and Picture Track File"
+        },
+        {
+          "docId": "SMPTE.ST429-6.2023-05",
+          "type": "bibliographic",
+          "cite": "SMPTE ST 429-3",
+          "href": "",
+          "rawRef": "SMPTE ST 429-3, D-Cinema Packaging — Sound and Picture Track File.",
+          "title": "D-Cinema Packaging — Sound and Picture Track File."
         }
       ]
     },
@@ -36872,7 +37324,7 @@
       "normalized": null,
       "resolution": {
         "sourcePresent": true,
-        "sourceDocId": "SMPTE.ST429-6.2006",
+        "sourceDocId": "SMPTE.ST429-6.2023-05",
         "firstConfirmedSourceAt": "2025-10-06T22:30:59.150Z"
       },
       "provenance": {
@@ -37655,6 +38107,14 @@
         },
         {
           "docId": "SMPTE.ST429-2.2023-09",
+          "type": "bibliographic",
+          "cite": "SMPTE ST 430-1",
+          "href": "",
+          "rawRef": "SMPTE ST 430-1, D-Cinema Operations — Key Delivery Message.",
+          "title": "D-Cinema Operations — Key Delivery Message."
+        },
+        {
+          "docId": "SMPTE.ST429-6.2023-05",
           "type": "bibliographic",
           "cite": "SMPTE ST 430-1",
           "href": "",
@@ -40245,6 +40705,36 @@
         }
       ]
     },
+    "W3C.REC-html52.20171214": {
+      "refId": "W3C.REC-html52.20171214",
+      "normalized": null,
+      "resolution": {
+        "sourcePresent": true,
+        "sourceDocId": "W3C.REC-html52.20171214",
+        "firstConfirmedSourceAt": "2025-10-07T21:45:43.276Z"
+      },
+      "provenance": {
+        "firstSeen": "2025-10-07T21:44:53.926Z",
+        "mapSource": [
+          "plain",
+          "replay"
+        ],
+        "mapDetails": [
+          "=html 5.2",
+          "from-documents.json"
+        ]
+      },
+      "rawVariants": [
+        {
+          "docId": "SMPTE.AG05",
+          "type": "normative",
+          "cite": "HTML 5.2",
+          "href": "https://www.w3.org/TR/html5/",
+          "rawRef": "W3C Recommendation, \"HTML 5.2\", 14 December 2017, url: https://www.w3.org/TR/html5/",
+          "title": "W3C Recommendation, \"\", 14 December 2017,"
+        }
+      ]
+    },
     "W3C.WSDL.1.1": {
       "refId": "W3C.WSDL.1.1",
       "normalized": null,
@@ -40270,34 +40760,6 @@
           "href": "https://www.w3.org/TR/2001/NOTE-wsdl-20010315",
           "rawRef": "W3C Web Services Description Language (WSDL) 1.1 url: https://www.w3.org/TR/2001/NOTE-wsdl-20010315",
           "title": null
-        }
-      ]
-    },
-    "W3C.html5": {
-      "refId": "W3C.html5",
-      "normalized": null,
-      "resolution": {
-        "sourcePresent": false
-      },
-      "provenance": {
-        "firstSeen": "2025-10-02T16:31:55.034Z",
-        "mapSource": [
-          "href",
-          "replay"
-        ],
-        "mapDetails": [
-          "w3c:shortname",
-          "from-documents.json"
-        ]
-      },
-      "rawVariants": [
-        {
-          "docId": "SMPTE.AG05",
-          "type": "normative",
-          "cite": "HTML 5.2",
-          "href": "https://www.w3.org/TR/html5/",
-          "rawRef": "W3C Recommendation, \"HTML 5.2\", 14 December 2017, url: https://www.w3.org/TR/html5/",
-          "title": "W3C Recommendation, \"\", 14 December 2017,"
         }
       ]
     },
@@ -40567,6 +41029,199 @@
         }
       ]
     },
+<<<<<<< HEAD
+=======
+    "W3C.xml-names.19990114": {
+      "refId": "W3C.xml-names.19990114",
+      "normalized": null,
+      "resolution": {
+        "sourcePresent": true,
+        "sourceDocId": "W3C.xml-names.19990114",
+        "firstConfirmedSourceAt": "2025-10-07T21:51:12.508Z"
+      },
+      "provenance": {
+        "firstSeen": "2025-10-07T21:51:12.437Z",
+        "mapSource": [
+          "replay"
+        ],
+        "mapDetails": [
+          "from-documents.json"
+        ]
+      },
+      "rawVariants": [
+        {
+          "docId": "SMPTE.ST395.2014",
+          "type": "normative",
+          "cite": "",
+          "href": "",
+          "rawRef": "",
+          "title": null
+        }
+      ]
+    },
+    "W3C.xml-names.20060816": {
+      "refId": "W3C.xml-names.20060816",
+      "normalized": null,
+      "resolution": {
+        "sourcePresent": true,
+        "sourceDocId": "W3C.xml-names.20060816",
+        "firstConfirmedSourceAt": "2025-10-07T21:51:12.508Z"
+      },
+      "provenance": {
+        "firstSeen": "2025-10-07T21:51:12.405Z",
+        "mapSource": [
+          "replay"
+        ],
+        "mapDetails": [
+          "from-documents.json"
+        ]
+      },
+      "rawVariants": [
+        {
+          "docId": "SMPTE.ST2003.2012",
+          "type": "normative",
+          "cite": "",
+          "href": "",
+          "rawRef": "",
+          "title": null
+        },
+        {
+          "docId": "SMPTE.ST2088.2019",
+          "type": "normative",
+          "cite": "",
+          "href": "",
+          "rawRef": "",
+          "title": null
+        },
+        {
+          "docId": "SMPTE.ST335.2012Am1.2019",
+          "type": "normative",
+          "cite": "",
+          "href": "",
+          "rawRef": "",
+          "title": null
+        },
+        {
+          "docId": "SMPTE.ST335.2012",
+          "type": "normative",
+          "cite": "",
+          "href": "",
+          "rawRef": "",
+          "title": null
+        },
+        {
+          "docId": "SMPTE.ST400.2012",
+          "type": "normative",
+          "cite": "",
+          "href": "",
+          "rawRef": "",
+          "title": null
+        },
+        {
+          "docId": "SMPTE.ST429-7.2006",
+          "type": "bibliographic",
+          "cite": "",
+          "href": "",
+          "rawRef": "",
+          "title": null
+        },
+        {
+          "docId": "SMPTE.ST429-8.2007",
+          "type": "bibliographic",
+          "cite": "",
+          "href": "",
+          "rawRef": "",
+          "title": null
+        },
+        {
+          "docId": "SMPTE.ST430-9.2008Am1.2011",
+          "type": "bibliographic",
+          "cite": "",
+          "href": "",
+          "rawRef": "",
+          "title": null
+        },
+        {
+          "docId": "SMPTE.ST430-9.2008",
+          "type": "bibliographic",
+          "cite": "",
+          "href": "",
+          "rawRef": "",
+          "title": null
+        }
+      ]
+    },
+    "W3C.xml-names.20091208": {
+      "refId": "W3C.xml-names.20091208",
+      "normalized": null,
+      "resolution": {
+        "sourcePresent": true,
+        "sourceDocId": "W3C.xml-names.20091208",
+        "firstConfirmedSourceAt": "2025-10-07T21:15:47.839Z"
+      },
+      "provenance": {
+        "firstSeen": "2025-10-02T16:31:55.034Z",
+        "mapSource": [
+          "href",
+          "replay"
+        ],
+        "mapDetails": [
+          "w3c:dated-REC",
+          "from-documents.json"
+        ]
+      },
+      "rawVariants": [
+        {
+          "docId": "SMPTE.AG05",
+          "type": "normative",
+          "cite": "Namespaces in XML 1.0 (Third Edition)",
+          "href": "http://www.w3.org/TR/2009/REC-xml-names-20091208/",
+          "rawRef": "W3C Recommendation, \"Namespaces in XML 1.0 (Third Edition)\", 8 December 2009 url: http://www.w3.org/TR/2009/REC-xml-names-20091208/",
+          "title": "W3C Recommendation, \"\", 8 December 2009"
+        },
+        {
+          "docId": "SMPTE.RDD28.2014",
+          "type": "normative",
+          "cite": "",
+          "href": "",
+          "rawRef": "",
+          "title": null
+        },
+        {
+          "docId": "SMPTE.ST2001-1.2015",
+          "type": "normative",
+          "cite": "",
+          "href": "",
+          "rawRef": "",
+          "title": null
+        },
+        {
+          "docId": "SMPTE.ST2067-200.2018",
+          "type": "normative",
+          "cite": "",
+          "href": "",
+          "rawRef": "",
+          "title": null
+        },
+        {
+          "docId": "SMPTE.ST2067-9.2018",
+          "type": "bibliographic",
+          "cite": "",
+          "href": "",
+          "rawRef": "",
+          "title": null
+        },
+        {
+          "docId": "SMPTE.ST429-9.2014",
+          "type": "normative",
+          "cite": "",
+          "href": "",
+          "rawRef": "",
+          "title": null
+        }
+      ]
+    },
+>>>>>>> 45b15e2 (first pass update workflows)
     "W3C.xml.20040204": {
       "refId": "W3C.xml.20040204",
       "normalized": null,
@@ -41195,6 +41850,7 @@
         }
       ]
     },
+<<<<<<< HEAD
     "W3C.xmlnames.19990114": {
       "refId": "W3C.xmlnames.19990114",
       "normalized": null,
@@ -41383,6 +42039,8 @@
         }
       ]
     },
+=======
+>>>>>>> 45b15e2 (first pass update workflows)
     "W3C.xmlschema-0.20041028": {
       "refId": "W3C.xmlschema-0.20041028",
       "normalized": null,
@@ -42623,6 +43281,319 @@
   },
   "reverse": {},
   "orphans": {
-    "unmapped": []
+    "unmapped": [
+      {
+        "docId": "SMPTE.AG01",
+        "type": "normative",
+        "cite": "SMPTE Standards Operations Manual",
+        "href": "https://www.smpte.org/about/policies-and-governance",
+        "rawRef": "SMPTE Standards Operations Manual url: https://www.smpte.org/about/policies-and-governance",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG02",
+        "type": "normative",
+        "cite": "SMPTE Standards Operations Manual",
+        "href": "https://www.smpte.org/about/policies-and-governance",
+        "rawRef": "SMPTE Standards Operations Manual url: https://www.smpte.org/about/policies-and-governance",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG02",
+        "type": "normative",
+        "cite": "ISO/IEC Directives, Part 2",
+        "href": "https://www.iso.org/sites/directives/current/part2/index.xhtml",
+        "rawRef": "ISO/IEC Directives, Part 2, Principles and rules for the structure and drafting of ISO and IEC documents url: https://www.iso.org/sites/directives/current/part2/index.xhtml",
+        "title": "Principles and rules for the structure and drafting of ISO and IEC documents"
+      },
+      {
+        "docId": "SMPTE.AG02",
+        "type": "normative",
+        "cite": "IANA Media Types",
+        "href": "https://www.iana.org/assignments/media-types/media-types.xhtml",
+        "rawRef": "IANA Media Types url: https://www.iana.org/assignments/media-types/media-types.xhtml",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG02",
+        "type": "bibliographic",
+        "cite": "IANA",
+        "href": "https://www.iana.org/",
+        "rawRef": "IANA url: https://www.iana.org/",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG02",
+        "type": "bibliographic",
+        "cite": "W3C Web Services Description Language (WSDL) 1.1",
+        "href": "https://www.w3.org/TR/2001/NOTE-wsdl-20010315",
+        "rawRef": "W3C Web Services Description Language (WSDL) 1.1 url: https://www.w3.org/TR/2001/NOTE-wsdl-20010315",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG02",
+        "type": "bibliographic",
+        "cite": "XML Metadata Interchange (XMI)",
+        "href": "http://www.omg.org/spec/XMI/",
+        "rawRef": "XML Metadata Interchange (XMI) url: http://www.omg.org/spec/XMI/",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG02",
+        "type": "bibliographic",
+        "cite": "DWG (AutoCAD Drawing) Format Family",
+        "href": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000445.shtml",
+        "rawRef": "DWG (AutoCAD Drawing) Format Family url: https://www.loc.gov/preservation/digital/formats/fdd/fdd000445.shtml",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG02",
+        "type": "bibliographic",
+        "cite": "Visio VSDX Drawing File Format",
+        "href": "https://www.loc.gov/preservation/digital/formats/fdd/fdd000021.shtml",
+        "rawRef": "Visio VSDX Drawing File Format url: https://www.loc.gov/preservation/digital/formats/fdd/fdd000021.shtml",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG03",
+        "type": "normative",
+        "cite": "SMPTE Standards Operations Manual",
+        "href": "https://www.smpte.org/about/policies-and-governance",
+        "rawRef": "SMPTE Standards Operations Manual url: https://www.smpte.org/about/policies-and-governance",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG04",
+        "type": "normative",
+        "cite": "SMPTE Standards Operations Manual",
+        "href": "https://www.smpte.org/about/policies-and-governance",
+        "rawRef": "SMPTE Standards Operations Manual url: https://www.smpte.org/about/policies-and-governance",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG05",
+        "type": "bibliographic",
+        "cite": "HTML Living Standard",
+        "href": "https://html.spec.whatwg.org/",
+        "rawRef": "WHATWG, \"HTML Living Standard\" url: https://html.spec.whatwg.org/",
+        "title": "WHATWG, \"\""
+      },
+      {
+        "docId": "SMPTE.AG05",
+        "type": "bibliographic",
+        "cite": "Guidelines for the Use of Formal Languages in IETF Specifications",
+        "href": "https://www.ietf.org/about/groups/iesg/statements/formal-languages-use/",
+        "rawRef": "IETF Guidelines for the Use of Formal Languages in IETF Specifications url: https://www.ietf.org/about/groups/iesg/statements/formal-languages-use/",
+        "title": "IETF"
+      },
+      {
+        "docId": "SMPTE.AG06",
+        "type": "normative",
+        "cite": "SMPTE Standards Operations Manual",
+        "href": "https://www.smpte.org/about/policies-and-governance",
+        "rawRef": "SMPTE Standards Operations Manual url: https://www.smpte.org/about/policies-and-governance",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG07",
+        "type": "normative",
+        "cite": "SMPTE Standards Operations Manual",
+        "href": "https://www.smpte.org/about/policies-and-governance",
+        "rawRef": "SMPTE Standards Operations Manual url: https://www.smpte.org/about/policies-and-governance",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG08",
+        "type": "normative",
+        "cite": "SMPTE Standards Operations Manual",
+        "href": "https://www.smpte.org/about/policies-and-governance",
+        "rawRef": "SMPTE Standards Operations Manual url: https://www.smpte.org/about/policies-and-governance",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG12",
+        "type": "normative",
+        "cite": "SMPTE Standards Operations Manual",
+        "href": "https://www.smpte.org/about/policies-and-governance",
+        "rawRef": "SMPTE Standards Operations Manual url: https://www.smpte.org/about/policies-and-governance",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG14",
+        "type": "normative",
+        "cite": "SMPTE Standards Operations Manual",
+        "href": "https://www.smpte.org/about/policies-and-governance",
+        "rawRef": "SMPTE Standards Operations Manual url: https://www.smpte.org/about/policies-and-governance",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG14",
+        "type": "normative",
+        "cite": "SMPTE Bylaws",
+        "href": "https://f.hubspotusercontent00.net/hubfs/5253154/SMPTE_Bylaws_2010x.pdf",
+        "rawRef": "SMPTE Bylaws url: https://f.hubspotusercontent00.net/hubfs/5253154/SMPTE_Bylaws_2010x.pdf",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG15",
+        "type": "normative",
+        "cite": "SMPTE Standards Operations Manual",
+        "href": "https://www.smpte.org/about/policies-and-governance",
+        "rawRef": "SMPTE Standards Operations Manual url: https://www.smpte.org/about/policies-and-governance",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG15",
+        "type": "normative",
+        "cite": "SMPTE Bylaws",
+        "href": "https://f.hubspotusercontent00.net/hubfs/5253154/SMPTE_Bylaws_2010x.pdf",
+        "rawRef": "SMPTE Bylaws url: https://f.hubspotusercontent00.net/hubfs/5253154/SMPTE_Bylaws_2010x.pdf",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG16",
+        "type": "normative",
+        "cite": "SMPTE Standards Operations Manual",
+        "href": "https://www.smpte.org/about/policies-and-governance",
+        "rawRef": "SMPTE Standards Operations Manual url: https://www.smpte.org/about/policies-and-governance",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG16",
+        "type": "normative",
+        "cite": "ISO/IEC Directives, Part 2",
+        "href": "https://www.iso.org/sites/directives/current/part2/index.xhtml",
+        "rawRef": "ISO/IEC Directives, Part 2, Principles and rules for the structure and drafting of ISO and IEC documents (Ninth edition, 2021) url: https://www.iso.org/sites/directives/current/part2/index.xhtml",
+        "title": "Principles and rules for the structure and drafting of ISO and IEC documents (Ninth edition, 2021)"
+      },
+      {
+        "docId": "SMPTE.AG16",
+        "type": "normative",
+        "cite": "William Strunk, Jr. and E. B. White, Elements of Style, Fourth Edition, Longman, 1999",
+        "href": "",
+        "rawRef": "William Strunk, Jr. and E. B. White, Elements of Style, Fourth Edition, Longman, 1999",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG16",
+        "type": "normative",
+        "cite": "New Oxford American Dictionary, Third Edition, 2010",
+        "href": "",
+        "rawRef": "New Oxford American Dictionary, Third Edition, 2010",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG16",
+        "type": "bibliographic",
+        "cite": "IETF draft-bhutton-json-schema-00",
+        "href": "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-00",
+        "rawRef": "IETF draft-bhutton-json-schema-00, Wright, A., H. Andrews; B. Hutton, G. Dennis, \"JSON Schema: A Media Type for Describing JSON Documents\", Work in Progress, December 8, 2020. url: https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-00",
+        "title": "Wright, A., H. Andrews; B. Hutton, G. Dennis, \"JSON Schema: A Media Type for Describing JSON Documents\", Work in Progress, December 8, 2020."
+      },
+      {
+        "docId": "SMPTE.AG18",
+        "type": "normative",
+        "cite": "SMPTE Standards Operations Manual",
+        "href": "https://www.smpte.org/about/policies-and-governance",
+        "rawRef": "SMPTE Standards Operations Manual, v3.1 url: https://www.smpte.org/about/policies-and-governance",
+        "title": "v3.1"
+      },
+      {
+        "docId": "SMPTE.AG19",
+        "type": "normative",
+        "cite": "SMPTE Standards Operations Manual",
+        "href": "https://www.smpte.org/about/policies-and-governance",
+        "rawRef": "SMPTE Standards Operations Manual url: https://www.smpte.org/about/policies-and-governance",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG21",
+        "type": "normative",
+        "cite": "SMPTE Standards Operations Manual",
+        "href": "https://www.smpte.org/about/policies-and-governance",
+        "rawRef": "SMPTE Standards Operations Manual url: https://www.smpte.org/about/policies-and-governance",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG22",
+        "type": "normative",
+        "cite": "SMPTE Standards Operations Manual",
+        "href": "https://www.smpte.org/about/policies-and-governance",
+        "rawRef": "SMPTE Standards Operations Manual url: https://www.smpte.org/about/policies-and-governance",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG24",
+        "type": "normative",
+        "cite": "SMPTE Standards Operation Manual",
+        "href": "https://f.hubspotusercontent00.net/hubfs/5253154/SMPTE%20Standards%20OM%20v3.1.pdf",
+        "rawRef": "SMPTE Standards Operation Manual, v3.1 url: https://f.hubspotusercontent00.net/hubfs/5253154/SMPTE%20Standards%20OM%20v3.1.pdf",
+        "title": "v3.1"
+      },
+      {
+        "docId": "SMPTE.AG24",
+        "type": "bibliographic",
+        "cite": "ISO/IEC Directives, Part 2",
+        "href": "https://www.iso.org/sites/directives/current/part2/index.xhtml",
+        "rawRef": "ISO/IEC Directives, Part 2, Principles and rules for the structure and drafting of ISO and IEC documents (Ninth edition, 2021) url: https://www.iso.org/sites/directives/current/part2/index.xhtml",
+        "title": "Principles and rules for the structure and drafting of ISO and IEC documents (Ninth edition, 2021)"
+      },
+      {
+        "docId": "SMPTE.AG25",
+        "type": "bibliographic",
+        "cite": "SMPTE Standards Operations Manual",
+        "href": "https://www.smpte.org/about/policies-and-governance",
+        "rawRef": "SMPTE Standards Operations Manual url: https://www.smpte.org/about/policies-and-governance",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG25",
+        "type": "bibliographic",
+        "cite": "\"JSON Schema: A Media Type for Describing JSON Documents\"",
+        "href": "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-00",
+        "rawRef": "Wright, A., H. Andrews; B. Hutton, G. Dennis, \"JSON Schema: A Media Type for Describing JSON Documents\", IETF, December 8, 2020, url: https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-00",
+        "title": "Wright, A., H. Andrews; B. Hutton, G. Dennis, , IETF, December 8, 2020,"
+      },
+      {
+        "docId": "SMPTE.AG26",
+        "type": "normative",
+        "cite": "HTML Standard",
+        "href": "https://html.spec.whatwg.org/multipage/",
+        "rawRef": "HTML Standard, Living Standard url: https://html.spec.whatwg.org/multipage/",
+        "title": "Living Standard"
+      },
+      {
+        "docId": "SMPTE.AG26",
+        "type": "bibliographic",
+        "cite": "ISO/IEC Directives, Part 2",
+        "href": "https://www.iso.org/sites/directives/current/part2/index.xhtml",
+        "rawRef": "ISO/IEC Directives, Part 2, Principles and rules for the structure and drafting of ISO and IEC documents (Ninth edition, 2021) url: https://www.iso.org/sites/directives/current/part2/index.xhtml",
+        "title": "Principles and rules for the structure and drafting of ISO and IEC documents (Ninth edition, 2021)"
+      },
+      {
+        "docId": "SMPTE.AG26",
+        "type": "bibliographic",
+        "cite": "SMPTE GitHub Operating Manual",
+        "href": "https://github.com/SMPTE/github-operating-manual",
+        "rawRef": "SMPTE GitHub Operating Manual url: https://github.com/SMPTE/github-operating-manual",
+        "title": null
+      },
+      {
+        "docId": "SMPTE.AG28",
+        "type": "normative",
+        "cite": "International Classification for Standards\n      (ICS)",
+        "href": "https://www.iso.org/publication/PUB100033.html",
+        "rawRef": "International Classification for Standards (ICS), International Organization for Standardization (ISO). url: https://www.iso.org/publication/PUB100033.html",
+        "title": "International Organization for Standardization (ISO)."
+      },
+      {
+        "docId": "SMPTE.AG29",
+        "type": "normative",
+        "cite": "HTML Standard",
+        "href": "https://html.spec.whatwg.org/multipage/",
+        "rawRef": "HTML Standard, Living Standard. url: https://html.spec.whatwg.org/multipage/",
+        "title": "Living Standard."
+      }
+    ]
   }
 }
