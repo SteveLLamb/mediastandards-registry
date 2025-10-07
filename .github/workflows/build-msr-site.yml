@@ -1,50 +1,74 @@
-name: Build MSR Siteand Test
+name: Build MSR Site and Test
 
 on:
   workflow_run:
-    workflows: [ "Build MasterReference Index" ]
-    types: [ completed ]
+    workflows: ["Build MasterReference Index"]
+    types: [completed]
   workflow_dispatch:
+
+permissions:
+  contents: write   # commit canonicalized registries and publish to gh-pages
+
+concurrency:
+  group: msr-site-${{ github.ref_name }}
+  cancel-in-progress: true
 
 jobs:
   build:
-    if: github.event.pull_request.merged == true
+    # Run only when the upstream workflow completed successfully,
+    # and only when that upstream run was triggered by a push to main.
+    if: >
+      github.event_name == 'workflow_dispatch' ||
+      (github.event_name == 'workflow_run' &&
+       github.event.workflow_run.conclusion == 'success' &&
+       github.event.workflow_run.event == 'push' &&
+       github.event.workflow_run.head_branch == 'main')
     runs-on: ubuntu-latest
+    env:
+      CI: true
 
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: '14'
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-    - run: npm install
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
 
-    - name: validate registries
-      run: npm run validate
+      - name: Install
+        run: npm ci
 
-    - name: verify that the registries are canonicalized
-      run: |
+      - name: Validate registries
+        run: npm run validate
+
+      - name: Canonicalize registries (no-op if clean)
+        run: |
           npm run canonicalize
           git add src/main/data
-          git diff-index --quiet HEAD src/main/data
+          if git diff --cached --quiet; then
+            echo "No canonicalization changes."
+          else
+            git config user.name 'github-actions[bot]'
+            git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+            git commit -m "chore: canonicalize registries"
+            git push
+          fi
 
-    - name: commit canonicalized registries
-      run: |
-          npm run canonicalize
-          git add src/main/data
-          git config --global user.name 'Steve LLamb'
-          git config --global user.email 'steve.llamb@bydeluxe.com'
-          git diff-index --quiet HEAD src/main/data || git commit -m "Registries have been canonicalized"
-          git push
+      - name: Build site
+        env:
+          GH_PAGES_BUILD: true
+        run: npm run build
 
-    - run: npm run build
-      env:
-        GH_PAGES_BUILD: true
-    
-    - name: Add CNAME for custom domain
-      run: echo 'mediastandardsregistry.org' > ./build/CNAME
+      - name: Add CNAME for custom domain
+        run: echo 'mediastandardsregistry.org' > ./build/CNAME
 
-    - uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./build
+      - name: Publish to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          # optional hardening:
+          # publish_branch: gh-pages
+          # force_orphan: true

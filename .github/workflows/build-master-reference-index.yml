@@ -2,8 +2,8 @@ name: Build MasterReference Index
 
 on:
   workflow_run:
-    workflows: [ "Build MasterSuite Index" ]
-    types: [ completed ]
+    workflows: ["Build MasterSuite Index"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
