@@ -65,7 +65,7 @@ jobs:
           cat mri-change-class.json
 
       - name: Decide path
-        id: decide
+        id: decide_mri
         run: |
           echo "onlyMeta=$(jq -r '.onlyMeta' mri-change-class.json)" >> $GITHUB_OUTPUT
           echo "missing=$(jq -r '.missingCount' mri-change-class.json)" >> $GITHUB_OUTPUT
@@ -131,6 +131,7 @@ jobs:
             src/main/reports/mri_presence_audit.json
           labels: automated, reports, mri
           delete-branch: true
+          base: ${{ github.event.repository.default_branch }}
 
       - name: Ensure issues for missing refs (idempotent)
         uses: actions/github-script@v7
