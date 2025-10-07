@@ -92,22 +92,9 @@ jobs:
           git push origin HEAD:"$BR"
           echo "✅ Metadata-only MasterReferenceIndex refresh committed to $BR"
 
-      - name: Commit MRI content changes (open PR)
-        id: commit_pr
-        if: steps.decide_mri.outputs.onlyMeta != 'true'
-        run: |
-          set -e
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add src/main/reports/masterReferenceIndex.json src/main/reports/mri_presence_audit.json
-          git diff --cached --quiet && { echo "No staged changes"; exit 0; }
-          git checkout -B chore/build-masterreference
-          git commit -m "chore: Build MasterReferenceIndex (data change)"
-          git push -u origin chore/build-masterreference --force-with-lease
-
       - name: Render PR body (MRI)
         id: render_pr_mri
-        if: steps.decide_mri.outputs.onlyMeta != 'true' && steps.commit_pr.outcome == 'success'
+        if: steps.decide_mri.outputs.onlyMeta != 'true'
         run: |
           MISSING="${{ steps.decide_mri.outputs.missing }}"
           {
@@ -118,7 +105,7 @@ jobs:
           sed -n '1,120p' mri_pr_body.txt
 
       - name: Create PR for MRI
-        if: steps.decide_mri.outputs.onlyMeta != 'true' && steps.commit_pr.outcome == 'success' && !startsWith(github.ref, 'refs/heads/chore/build-masterreference')
+        if: steps.decide_mri.outputs.onlyMeta != 'true' && !startsWith(github.ref, 'refs/heads/chore/build-masterreference')
         uses: peter-evans/create-pull-request@v6
         with:
           commit-message: "chore: Build MasterReferenceIndex (data change)"
