@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2025-10-07T21:46:14.186Z",
+  "generatedAt": "2025-10-07T22:45:42.157Z",
   "sourcePath": "src/main/data/documents.json",
-  "sourceHash": "sha256:9f69a867e9716febcfbd2a26ebda43b8b0678aa77e3c02dcdc065e3e0bc4d0f6",
+  "sourceHash": "sha256:172175d7c0fe784ebf090e285e4fcea5173bea72bf65b236d7d28eeb3ecc72c3",
   "publisherCounts": {
     "total": 1485,
     "counts": {
@@ -36307,6 +36307,65 @@
       }
     },
     {
+      "key": "W3C|xml-names||",
+      "publisher": "W3C",
+      "suite": "xml-names",
+      "number": null,
+      "part": null,
+      "w3cFamily": "xml-names",
+      "w3cVersion": null,
+      "docs": [
+        {
+          "docId": "W3C.xml-names.19990114",
+          "publicationDate": "1999-01-14",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false,
+          "statusVersionless": false
+        },
+        {
+          "docId": "W3C.xml-names.20060816",
+          "publicationDate": "2006-08-16",
+          "releaseTag": null,
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false,
+          "statusVersionless": false
+        },
+        {
+          "docId": "W3C.xml-names.20091208",
+          "publicationDate": "2009-12-08",
+          "releaseTag": null,
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "W3C.xml-names.20091208",
+      "latestAnyId": "W3C.xml-names.20091208",
+      "latestDateKey": "20091208",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "W3C.xml-names.20091208",
+      "latestSupersededBaseId": "W3C.xml-names.20060816",
+      "prevBaseId": "W3C.xml-names.20060816",
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 3,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
       "key": "W3C|xmlc14n||",
       "publisher": "W3C",
       "suite": "xmlc14n",
@@ -36580,65 +36639,6 @@
       "flagInconsistencies": [],
       "counts": {
         "bases": 1,
-        "amendments": 0,
-        "supplements": 0
-      }
-    },
-    {
-      "key": "W3C|xmlnames||",
-      "publisher": "W3C",
-      "suite": "xmlnames",
-      "number": null,
-      "part": null,
-      "w3cFamily": "xmlnames",
-      "w3cVersion": null,
-      "docs": [
-        {
-          "docId": "W3C.xmlnames.19990114",
-          "publicationDate": "1999-01-14",
-          "releaseTag": null,
-          "statusActive": false,
-          "statusSuperseded": true,
-          "statusWithdrawn": false,
-          "statusStabilized": false,
-          "statusAmended": false,
-          "statusVersionless": false
-        },
-        {
-          "docId": "W3C.xmlnames.20060816",
-          "publicationDate": "2006-08-16",
-          "releaseTag": null,
-          "statusActive": false,
-          "statusSuperseded": true,
-          "statusWithdrawn": false,
-          "statusStabilized": false,
-          "statusAmended": false,
-          "statusVersionless": false
-        },
-        {
-          "docId": "W3C.xmlnames.20091208",
-          "publicationDate": "2009-12-08",
-          "releaseTag": null,
-          "statusActive": true,
-          "statusSuperseded": false,
-          "statusWithdrawn": false,
-          "statusStabilized": false,
-          "statusAmended": false,
-          "statusVersionless": false
-        }
-      ],
-      "latestBaseId": "W3C.xmlnames.20091208",
-      "latestAnyId": "W3C.xmlnames.20091208",
-      "latestDateKey": "20091208",
-      "hasActiveBase": true,
-      "hasWithdrawn": false,
-      "hasStabilized": false,
-      "latestActiveBaseId": "W3C.xmlnames.20091208",
-      "latestSupersededBaseId": "W3C.xmlnames.20060816",
-      "prevBaseId": "W3C.xmlnames.20060816",
-      "flagInconsistencies": [],
-      "counts": {
-        "bases": 3,
         "amendments": 0,
         "supplements": 0
       }
