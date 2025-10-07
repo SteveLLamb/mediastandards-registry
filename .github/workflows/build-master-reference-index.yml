@@ -159,7 +159,7 @@ jobs:
                 if (s.cite) extras.push(s.cite);
                 if (s.title) extras.push(s.title);
                 if (s.href) extras.push(s.href);
-                if (extras.length) parts[0] += ' , Source info:\n ' + extras.join(' \n ');
+                if (extras.length) parts[0] += ' - Source info:\n ' + extras.join(' \n ');
                 return parts.join('');
               }).join('\n');
             }

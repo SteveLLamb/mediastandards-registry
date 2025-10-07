@@ -227,11 +227,12 @@ jobs:
                   `Detected as UNKEYED`,
                   `RefId: **${docKey}**`,
                   '',
-                  'Context:',
+                  '\nContext:',
                   `- Publisher: ${details.publisher || '(unknown)'}`,
                   `- Rule: ${details.rule || '(unknown)'}`,
                   `- Rule detail: ${details.ruleDetail || '(none)'}`,
                   details.lineageKey ? `- Lineage key: ${details.lineageKey}` : null,
+                  '',
                   `_Created automatically from MSI on ${stamp} — ${runTag}_`
                 ].filter(Boolean).join('\n');
                 const created = await github.rest.issues.create({
