@@ -79,19 +79,18 @@ jobs:
           BR="${{ github.event.repository.default_branch }}"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git fetch origin "$BR":"refs/remotes/origin/$BR" --depth=1
-          git checkout "$BR"
-          git reset --hard "origin/$BR"
           # Stage both MRI and audit if present
-          test -f src/main/reports/masterReferenceIndex.json && git add src/main/reports/masterReferenceIndex.json || true
-          test -f src/main/reports/mri_presence_audit.json && git add src/main/reports/mri_presence_audit.json || true
+          [ -f src/main/reports/masterReferenceIndex.json ] && git add src/main/reports/masterReferenceIndex.json || true
+          [ -f src/main/reports/mri_presence_audit.json ] && git add src/main/reports/mri_presence_audit.json || true
           if git diff --cached --quiet; then
-            echo "No metadata-only changes to commit."
-            exit 0
+            echo "No metadata-only changes to commit.";
+            exit 0;
           fi
+          # Commit on the current checkout and push to the default branch ref
           git commit -m "chore: refresh MasterReferenceIndex metadata timestamp"
-          git push origin "$BR"
-          echo "✅ Metadata-only MasterReferenceIndex refresh committed directly to $BR"
+          # Fast-forward push from detached HEAD to the branch ref
+          git push origin HEAD:"$BR"
+          echo "✅ Metadata-only MasterReferenceIndex refresh committed to $BR"
 
       - name: Commit MRI content changes (open PR)
         id: commit_pr
