@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2025-10-07T23:35:37.810Z",
+  "generatedAt": "2025-10-07T23:39:22.564Z",
   "sourcePath": "src/main/data/documents.json",
-  "sourceHash": "sha256:c626ab5cf6dcbe8635bd23660d40d1eddf969b06c28297e807a20c7e43ad23bf",
+  "sourceHash": "sha256:d005e930a4699b3d028a98dbfdb6a3705bd2a207586020563688fbfd1a8f02b7",
   "publisherCounts": {
-    "total": 1485,
+    "total": 1486,
     "counts": {
-      "SMPTE": 770,
+      "SMPTE": 771,
       "IETF": 109,
       "ISO": 105,
       "ISO/IEC": 87,
@@ -29773,6 +29773,41 @@
       "flagInconsistencies": [],
       "counts": {
         "bases": 2,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|ST|341|",
+      "publisher": "SMPTE",
+      "suite": "ST",
+      "number": "341",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.ST341.2000",
+          "publicationDate": "2000-04-06",
+          "releaseTag": "20000406-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.ST341.2000",
+      "latestAnyId": "SMPTE.ST341.2000",
+      "latestDateKey": "20000406",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.ST341.2000",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
         "amendments": 0,
         "supplements": 0
       }
