@@ -18,12 +18,9 @@ jobs:
     # Run only when the upstream workflow completed successfully,
     # and only when that upstream run was triggered by a push to main.
     if: >
-      github.event_name == 'workflow_dispatch' ||
-      github.event_name == 'push' ||
-      (github.event_name == 'workflow_run' &&
-       github.event.workflow_run.conclusion == 'success' &&
-       github.event.workflow_run.event == 'push' &&
-       github.event.workflow_run.head_branch == 'main')
+      github.event_name != 'workflow_run' || 
+      github.event.workflow_run.conclusion == 'success'
+    
     runs-on: ubuntu-latest
     env:
       CI: true

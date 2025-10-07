@@ -333,7 +333,8 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
       let normRefs = references.normative
       let bibRefs = references.bibliographic
 
-      console.log(`\n++ Checking refs for ${docId} ++`)
+      // Optional visibility: uncomment for diagnostics
+      //console.log(`\n++ Checking refs for ${docId} ++`)
 
       const normResolved = [];
       const bibResolved = [];
@@ -345,7 +346,8 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
         const wasUndated = (base === r);
         let resolved = r;
 
-        console.log(`... checking ${r}`);
+        // Optional visibility: uncomment for diagnostics
+        //console.log(`... checking ${r}`);
         //if (!wasUndated) console.log(`       (dated; base=${base})`);
 
         // If this reference is an exact docId present in our registry, skip MSI checks entirely
@@ -365,11 +367,14 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
                 const next = hit.latestBaseId || hit.latestAnyId || r;
                 if (next !== r) {
                   resolved = next;
-                  console.log(`   [Refs] Upgraded via baseIndex ${r} → ${resolved}`);
+                  // Optional visibility: uncomment for diagnostics
+                  //console.log(`   [Refs] Upgraded via baseIndex ${r} → ${resolved}`);
                 }
-              } else {
-                console.log(`[Refs] baseIndex hit for ${base} (dated ref, no upgrade)`);
-              }
+              } 
+                // Optional visibility: uncomment for diagnostics
+                //else {
+                //console.log(`[Refs] baseIndex hit for ${base} (dated ref, no upgrade)`);
+              //}
             }
           }
 
@@ -379,29 +384,35 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
             // Example: "ISO.15444-1" → matcher is anchored up to a dot before the date tail.
             const baseForKey = (typeof base === 'string' && !base.endsWith('.')) ? (base + '.') : base;
             const key = lineageKeyFromDocId(baseForKey);
-            if (wasUndated) {
-              console.log(`   [Refs] MSI probe undated: ${r}`);
-              console.log(`       probeBase: ${baseForKey}`);
-            }
+            // Optional visibility: uncomment for diagnostics
+            //if (wasUndated) {
+            //  console.log(`   [Refs] MSI probe undated: ${r}`);
+            //  console.log(`       probeBase: ${baseForKey}`);
+            //}
             if (key) {
-              if (wasUndated) {
-                console.log(`       key: ${key}`);
-              }
+              // Optional visibility: uncomment for diagnostics
+              //if (wasUndated) {
+              //  console.log(`       key: ${key}`);
+              //}
               const li = __msiLatestByLineage.get(key);
               if (li) {
                 if (wasUndated) {
-                  console.log(`       HIT in MSI (latestBaseId=${li.latestBaseId} latestAnyId=${li.latestAnyId})`);
+                  // Optional visibility: uncomment for diagnostics
+                  //console.log(`       HIT in MSI (latestBaseId=${li.latestBaseId} latestAnyId=${li.latestAnyId})`);
                   const next = li.latestBaseId || li.latestAnyId || r;
                   if (next !== r) {
                     resolved = next;
-                    console.log(`   [Refs] Upgraded via lineage ${r} → ${resolved}`);
+                    // Optional visibility: uncomment for diagnostics
+                    //console.log(`   [Refs] Upgraded via lineage ${r} → ${resolved}`);
                   }
-                } else {
-                  console.log('       MSI lineage hit (dated ref, no upgrade)');
-                }
-              } else if (wasUndated) {
-                console.log('       MISS in MSI');
-              }
+                } // Optional visibility: uncomment for diagnostics
+                  //else {
+                  //console.log('       MSI lineage hit (dated ref, no upgrade)');
+                //}
+              } // Optional visibility: uncomment for diagnostics
+                //else if (wasUndated) {
+                //console.log('       MISS in MSI');
+                //}
             } else if (wasUndated) {
               console.warn(`   [WARN] No lineage key derivable for ${r}`);
             }
@@ -440,6 +451,7 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
       if (Object.keys(resolvedOut).length) {
         registryDocument[i].referencesResolved = resolvedOut;
       }
+      // Optional visibility: uncomment for diagnostics
       //console.log(`[Refs] for docId: ${docId}`)
       //console.log(refs)
 
@@ -636,9 +648,9 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
       else {
         return "";
       }
-    } else {
+    } //else {
       //console.error(`Cannot find the status for referenced document: ${docId}`);
-    }
+    //}
 
     return docStatuses[docId];
   });
