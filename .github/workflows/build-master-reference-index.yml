@@ -159,21 +159,23 @@ jobs:
                 if (s.cite) extras.push(s.cite);
                 if (s.title) extras.push(s.title);
                 if (s.href) extras.push(s.href);
-                if (extras.length) parts[0] += ' — ' + extras.join(' \n ');
+                if (extras.length) parts[0] += ' , Source info:\n ' + extras.join(' \n ');
                 return parts.join('');
               }).join('\n');
             }
 
             for (const m of missing) {
               const title = `MISSING REF: ${m.refId}`;
+              const stamp = new Date().toISOString().slice(0,10);
               const body = [
+                `Detected as MISSING`,
                 `RefId: **${m.refId}**`,
                 `Sightings: **${m.sightingCount}**`,
                 '',
                 'First few sightings:',
                 formatSightings(m, 10),
                 '',
-                `_Created automatically from MRI presence audit — ${runTag}_`
+                `_Created automatically from MRI presence audit on ${stamp} — ${runTag}_`
               ].join('\n');
 
               const existing = openByTitle.get(title);
