@@ -157,8 +157,9 @@ jobs:
                 const parts = [`- ${s.docId || '(unknown doc)'} (${s.type || '?'})`];
                 const extras = [];
                 if (s.cite) extras.push(s.cite);
+                if (s.title) extras.push(s.title);
                 if (s.href) extras.push(s.href);
-                if (extras.length) parts[0] += ' — ' + extras.join(' — ');
+                if (extras.length) parts[0] += ' — ' + extras.join(' \n ');
                 return parts.join('');
               }).join('\n');
             }
