@@ -124,30 +124,70 @@ jobs:
         with:
           script: |
             const fs = require('fs');
-            const audit = JSON.parse(fs.readFileSync('src/main/reports/mri_presence_audit.json','utf8'));
-            const missing = audit.missing || [];
-            const labelSet = new Set(['automated','mri','missing-ref']);
-            async function listOpen() {
-              return await github.paginate(github.rest.issues.listForRepo, {
-                owner: context.repo.owner, repo: context.repo.repo, state: 'open', labels: 'missing-ref'
+            const path = 'src/main/reports/mri_presence_audit.json';
+            const audit = JSON.parse(fs.readFileSync(path, 'utf8'));
+            const missing = Array.isArray(audit.missing) ? audit.missing : [];
+
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+
+            // Current missing set and quick lookup
+            const currentMissing = new Set(missing.map(m => m.refId));
+            const byRef = new Map(missing.map(m => [m.refId, m]));
+
+            // Helper: list open issues with label 'missing-ref' and title prefix
+            async function listOpenMissingIssues() {
+              const all = await github.paginate(github.rest.issues.listForRepo, {
+                owner, repo, state: 'open', labels: 'missing-ref'
               });
+              return all.filter(i => i.title && i.title.startsWith('MISSING REF: '));
             }
-            const open = await listOpen();
-            const openByKey = new Map(open.map(i => [i.title, i]));
+
+            const openIssues = await listOpenMissingIssues();
+            const openByTitle = new Map(openIssues.map(i => [i.title, i]));
+
+            // Upsert issues for each currently-missing ref
+            const labels = ['automated', 'mri', 'missing-ref'];
+            const runTag = `Run #${context.runId}`;
+
+            function formatSightings(m, max = 10) {
+              const arr = (m.sightings || []).slice(0, max);
+              if (arr.length === 0) return '- (none listed)';
+              return arr.map(s => {
+                const parts = [`- ${s.docId || '(unknown doc)'} (${s.type || '?'})`];
+                const extras = [];
+                if (s.cite) extras.push(s.cite);
+                if (s.href) extras.push(s.href);
+                if (extras.length) parts[0] += ' — ' + extras.join(' — ');
+                return parts.join('');
+              }).join('\n');
+            }
+
             for (const m of missing) {
               const title = `MISSING REF: ${m.refId}`;
-              if (openByKey.has(title)) continue;
               const body = [
-                `RefId: ${m.refId}`,
-                `Sightings: ${m.sightingCount}`,
+                `RefId: **${m.refId}**`,
+                `Sightings: **${m.sightingCount}**`,
                 '',
                 'First few sightings:',
-                ...(m.sightings || []).slice(0,10).map(s => `- ${s.docId} (${s.type}) — ${s.cite||''} ${s.href||''}`),
+                formatSightings(m, 10),
                 '',
-                '_Created automatically from MRI presence audit_'
-              ].join('\\n');
-              await github.rest.issues.create({
-                owner: context.repo.owner, repo: context.repo.repo,
-                title, body, labels: Array.from(labelSet)
-              });
+                `_Created automatically from MRI presence audit — ${runTag}_`
+              ].join('\n');
+
+              const existing = openByTitle.get(title);
+              if (existing) {
+                await github.rest.issues.update({ owner, repo, issue_number: existing.number, body, labels });
+              } else {
+                await github.rest.issues.create({ owner, repo, title, body, labels });
+              }
+            }
+
+            // Close resolved issues (those no longer in current audit)
+            for (const issue of openIssues) {
+              const refId = issue.title.replace(/^MISSING REF: /, '');
+              if (!currentMissing.has(refId)) {
+                await github.rest.issues.createComment({ owner, repo, issue_number: issue.number, body: `Resolved: refId **${refId}** no longer missing in current MRI audit. ${runTag}. Closing.` });
+                await github.rest.issues.update({ owner, repo, issue_number: issue.number, state: 'closed' });
+              }
             }
