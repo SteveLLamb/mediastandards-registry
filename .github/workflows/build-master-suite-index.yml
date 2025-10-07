@@ -225,15 +225,15 @@ jobs:
                 const runTag = `Run #${context.runId}`;
                 const body = [
                   `Detected as UNKEYED`,
-                  `RefId: **${docKey}**`,
+                  `RefId: **${docKey}**\n`,
                   '',
-                  '\nContext:',
+                  'Context:',
                   `- Publisher: ${details.publisher || '(unknown)'}`,
                   `- Rule: ${details.rule || '(unknown)'}`,
                   `- Rule detail: ${details.ruleDetail || '(none)'}`,
                   details.lineageKey ? `- Lineage key: ${details.lineageKey}` : null,
                   '',
-                  `_Created automatically from MSI on ${stamp} — ${runTag}_`
+                  `\n_Created automatically from MSI on ${stamp} — ${runTag}_`
                 ].filter(Boolean).join('\n');
                 const created = await github.rest.issues.create({
                   owner: context.repo.owner, repo: context.repo.repo,
