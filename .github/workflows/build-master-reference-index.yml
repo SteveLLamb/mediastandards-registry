@@ -33,7 +33,7 @@ jobs:
       - name: Install deps
         run: npm ci
 
-      - name: Build MRI (full replay + prune)
+      - name: Build MasterReferenceIndex (full replay + prune)
         run: |
           node src/main/scripts/buildMasterReferenceIndex.js \
             --in src/main/data/documents.json \
@@ -64,8 +64,8 @@ jobs:
           "
           cat mri-change-class.json
 
-      - name: Decide (MRI)
-        id: decide_mri
+      - name: Decide path
+        id: decide
         run: |
           echo "onlyMeta=$(jq -r '.onlyMeta' mri-change-class.json)" >> $GITHUB_OUTPUT
           echo "missing=$(jq -r '.missingCount' mri-change-class.json)" >> $GITHUB_OUTPUT
