@@ -71,11 +71,6 @@ jobs:
           echo "missing=$(jq -r '.missingCount' mri-change-class.json)" >> $GITHUB_OUTPUT
           echo "onlyMeta=$(jq -r '.onlyMeta' mri-change-class.json)"
 
-      - name: Debug git status
-          run: |
-            git status --porcelain
-            git log --oneline -5 || true
-
 
       - name: Commit MRI metadata-only change
         if: steps.decide_mri.outputs.onlyMeta == 'true'
