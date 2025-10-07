@@ -225,7 +225,7 @@ jobs:
                 const runTag = `Run #${context.runId}`;
                 const body = [
                   `Detected as UNKEYED`,
-                  `docId: **${${docKey}}**`,
+                  `RefId: **${docKey}**`,
                   '',
                   'Context:',
                   `- Publisher: ${details.publisher || '(unknown)'}`,
