@@ -156,10 +156,10 @@ jobs:
               return arr.map(s => {
                 const parts = [`- ${s.docId || '(unknown doc)'} (${s.type || '?'})`];
                 const extras = [];
-                if (s.cite) extras.push(`cite: ` + s.cite);
-                if (s.title) extras.push(`title: ` + s.title);
-                if (s.href) extras.push(`href: ` + s.href);
-                if (s.rawRef) extras.push(`rawRef: ` + s.rawRef);
+                if (s.cite) extras.push(` cite - ` + s.cite);
+                if (s.title) extras.push(` title - ` + s.title);
+                if (s.href) extras.push(` href - ` + s.href);
+                if (s.rawRef) extras.push(` rawRef - ` + s.rawRef);
                 if (extras.length) parts[0] += '\n_Source info:_\n ' + extras.join(' \n ');
                 return parts.join('');
               }).join('\n');
