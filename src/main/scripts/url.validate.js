@@ -22,7 +22,6 @@ const SKIP_VALIDATION_DOMAINS = [
 const SKIP_PUBLISHERS = [
   // Add exact publisher names here to skip validation for their entries entirely
   // e.g., 'Some Problematic Publisher'
-  'SMPTE' //testing
 ];
 
 const shouldSkipPublisher = (entry) => {
