@@ -2,7 +2,7 @@ name: Extract SMPTE Documents
 
 on:
   schedule:
-    - cron: "15 04 * * 3"   # 21:15 PT, Wed (cron in UTC)
+    - cron: "15 04 * * 2"   # 21:15 PT, Tues (cron in UTC)
   workflow_dispatch: 
 
 permissions:
