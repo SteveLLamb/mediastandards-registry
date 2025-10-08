@@ -130,9 +130,6 @@ const RULES = [
 // These rules do not construct URLs. They assert that a given field value
 // matches an expected *shape* (e.g., prefix/host) and report mismatches.
 
-const isSmpteStandard = (docId = '') => /^(SMPTE\.(ST|RP|EG|TSP)\b)/i.test(String(docId));
-const isSmpteJournalId = (docId = '') => /^[Jj]\d{5,}/.test(String(docId));
-
 function startsWithPrefix(u, prefix) {
   if (!u || !prefix) return false;
   try { return String(u).startsWith(prefix); } catch { return false; }
@@ -143,7 +140,7 @@ function startsWithPrefix(u, prefix) {
 
 const expSMPTE_HREF_DOI = {
   name: 'SMPTE.href.doi-prefix',
-  when: ({ entry, field }) => field === 'href' && hasDocType(entry, 'Standard', 'Recommended Practice', 'Engineering Guideline', 'Registered Disclosure Document'. 'Overview Document', 'Journal Article')
+  when: ({ entry, field }) => field === 'href' && hasDocType(entry, 'Standard', 'Recommended Practice', 'Engineering Guideline', 'Registered Disclosure Document', 'Overview Document', 'Journal Article')
   check: ({ url, field }) => {
     const expectedPrefix = 'https://doi.org/10.5594/';
     const ok = startsWithPrefix(url, expectedPrefix);
