@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2025-10-08T16:28:04.140Z",
+  "generatedAt": "2025-10-08T16:45:50.765Z",
   "sourcePath": "src/main/data/documents.json",
-  "sourceHash": "sha256:ce4b31575085e2c73f70ef3a259e44c83604acb144397e39b392ef7570cc8440",
+  "sourceHash": "sha256:8ab43072ae0b85391840fea0ce791e2814dbaefe4b83019d9766630602381c16",
   "publisherCounts": {
-    "total": 1523,
+    "total": 1524,
     "counts": {
-      "SMPTE": 807,
+      "SMPTE": 808,
       "IETF": 109,
       "ISO": 105,
       "ISO/IEC": 87,
@@ -100,7 +100,7 @@
     }
   },
   "skippedDocs": {
-    "totalSkipped": 199,
+    "totalSkipped": 200,
     "byPublisher": {
       "POLYMER DEGRADATION AND STABILITY": {
         "count": 1,
@@ -932,7 +932,7 @@
         ]
       },
       "SMPTE": {
-        "count": 102,
+        "count": 103,
         "docIds": [
           "J01217",
           "J01273",
@@ -1016,6 +1016,7 @@
           "J17833",
           "J18005",
           "M00395",
+          "SMPTE.AG27",
           "SMPTE.EG428-23.20XX",
           "SMPTE.J107.9.603.815.1998",
           "SMPTE.PH22-52.1960",
@@ -1613,6 +1614,13 @@
             "category": "docType"
           },
           {
+            "docId": "SMPTE.AG27",
+            "reason": "FILTERED",
+            "rule": "FILTERED",
+            "ruleDetail": "docType=Template",
+            "category": "docType"
+          },
+          {
             "docId": "SMPTE.EG428-23.20XX",
             "reason": "FILTERED",
             "rule": "FILTERED",
@@ -2067,7 +2075,7 @@
       }
     },
     "summaryByReason": {
-      "FILTERED": 199,
+      "FILTERED": 200,
       "UNKEYED": 0,
       "UNKNOWN": 0
     }
