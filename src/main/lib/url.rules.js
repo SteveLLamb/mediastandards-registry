@@ -140,7 +140,10 @@ function startsWithPrefix(u, prefix) {
 
 const expSMPTE_HREF_DOI = {
   name: 'SMPTE.href.doi-prefix',
-  when: ({ entry, field }) => field === 'href' && hasDocType(entry, 'Standard', 'Recommended Practice', 'Engineering Guideline', 'Registered Disclosure Document', 'Overview Document', 'Journal Article')
+  when: ({ entry, field }) => 
+    field === 'href' && 
+    isSMPTE(entry) &&
+    hasDocType(entry, 'Standard', 'Recommended Practice', 'Engineering Guideline', 'Registered Disclosure Document', 'Overview Document', 'Journal Article'),
   check: ({ url, field }) => {
     const expectedPrefix = 'https://doi.org/10.5594/';
     const ok = startsWithPrefix(url, expectedPrefix);
@@ -151,7 +154,9 @@ const expSMPTE_HREF_DOI = {
 const expSMPTE_RESOLVED_STANDARDS = {
   name: 'SMPTE.resolvedHref.standards-prefix',
   when: ({ entry, field }) => (
-    field === 'resolvedHref' && hasDocType(entry, 'standard', 'std')
+    field === 'resolvedHref' &&
+    isSMPTE(entry) &&
+    hasDocType(entry, 'Standard', 'Recommended Practice', 'Engineering Guideline', 'Registered Disclosure Document', 'Overview Document')
   ),
   check: ({ url, field }) => {
     const expectedPrefix = 'https://my.smpte.org/s/';
@@ -163,7 +168,9 @@ const expSMPTE_RESOLVED_STANDARDS = {
 const expSMPTE_RESOLVED_JOURNALS = {
   name: 'SMPTE.resolvedHref.journals-prefix',
   when: ({ entry, field }) => (
-    field === 'resolvedHref' && hasDocType(entry, 'journal', 'periodical')
+    field === 'resolvedHref' && 
+    isSMPTE(entry) &&
+    hasDocType(entry, 'Journal Article')
   ),
   check: ({ url, field }) => {
     const expectedPrefix = 'https://journal.smpte.org/periodicals/';
