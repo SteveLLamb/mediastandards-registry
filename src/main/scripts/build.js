@@ -599,6 +599,7 @@ async function buildRegistry ({ listType, templateType, templateName, idType, li
 
     if (status.active) {
       cS = "Active";
+      if (status.versionless) cS += ", Versionless";
       if (status.amended) cS += ", Amended";
       if (status.stabilized) cS += ", Stabilized"; else if (status.reaffirmed) cS += ", Reaffirmed";
     } else if (status.draft) {

@@ -601,7 +601,8 @@ const extractFromSeedDoc = async (seedRootUrl) => {
         latestVersion: true,
         stage: pubStage,
         state: pubState,
-        superseded: false
+        superseded: false,
+        versionless: true
       },
       ...(hasRefsOut ? { references: refsOut } : {}),
       ...(revisionOf && { revisionOf })
@@ -1225,9 +1226,10 @@ for (const doc of results) {
               'state',
               'stabilized',
               'withdrawn',
-              'withdrawnNotice',  
+              'withdrawnNotice',
               'amended',
-              'supersededDate'
+              'supersededDate',
+              'versionless'
             ];
             for (const field of statusFields) {
               if (newVal[field] !== undefined && existingDoc.status[field] !== newVal[field]) {
