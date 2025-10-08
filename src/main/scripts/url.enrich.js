@@ -30,7 +30,7 @@ function loadJson(p) {
 }
 
 function inferPublisher(entry) {
-  return (entry && (entry.publisher || entry.publisherName || entry.org || entry.organization)) || '';
+  return (entry && entry.publisher) || '';
 }
 
 function setWithMeta(obj, key, value, meta) {

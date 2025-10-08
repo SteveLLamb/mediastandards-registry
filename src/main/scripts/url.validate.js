@@ -1,11 +1,3 @@
-/*
-Copyright (c), Steve LLamb
-
-This work is licensed under the Creative Commons Attribution 4.0 International License.
-
-You should have received a copy of the license along with this work.  If not, see <https://creativecommons.org/licenses/by/4.0/>.
-*/
-
 const fs = require('fs');
 const path = require('path');
 const { resolveUrl } = require('./url.resolve.js');
@@ -25,7 +17,7 @@ const SKIP_PUBLISHERS = [
 ];
 
 const shouldSkipPublisher = (entry) => {
-  const pub = (entry && (entry.publisher || entry.publisherName || entry.org || entry.organization)) || '';
+  const pub = (entry && entry.publisher) || '';
   if (!pub) return false;
   return SKIP_PUBLISHERS.some(p => typeof p === 'string' && p.toLowerCase() === String(pub).toLowerCase());
 };
@@ -161,6 +153,7 @@ const validateEntry = async (entry, key, urlFields) => {
           if (!f.ok) {
             expectationMismatchCount++;
             expectationStats[f.rule] = (expectationStats[f.rule] || 0) + 1;
+            console.warn(`❗ ${key} → ${field}: ${url} → expected ${f.field} to start with ${f.expectedPrefix}`);
             problems.push({
               type: 'expectation',
               rule: f.rule,
@@ -237,7 +230,7 @@ const runValidation = async () => {
   for (const entry of registry) {
     if (shouldSkipPublisher(entry)) {
       const key = entry.docId || entry.groupId || entry.projectId || '(unknown-id)';
-      console.log(`⚠️  Skipping validation for entry by publisher: ${key} — publisher=${entry.publisher || entry.publisherName || entry.org || entry.organization}`);
+      console.log(`⚠️  Skipping validation for entry by publisher: ${key} — publisher=${entry.publisher || ''}`);
       skippedByPublisher++;
       continue;
     }
