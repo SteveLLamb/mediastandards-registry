@@ -28,5 +28,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: url-validation-report
-          path: src/main/reports/documents.validation-report-url-*.json
+          path: src/main/reports/url_validate_audit.json
           if-no-files-found: ignore

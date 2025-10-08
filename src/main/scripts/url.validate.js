@@ -10,12 +10,24 @@ const fs = require('fs');
 const path = require('path');
 const { resolveUrl } = require('./url.resolve.js');
 
+
 const SKIP_VALIDATION_DOMAINS = [
   'https://teams.microsoft.com',
   'https://smpte.sharepoint.com/',
   'https://web.powerapps.com/',
   'https://github.com/orgs/SMPTE/teams/'
 ];
+
+const SKIP_PUBLISHERS = [
+  // Add exact publisher names here to skip validation for their entries entirely
+  // e.g., 'Some Problematic Publisher'
+];
+
+const shouldSkipPublisher = (entry) => {
+  const pub = (entry && (entry.publisher || entry.publisherName || entry.org || entry.organization)) || '';
+  if (!pub) return false;
+  return SKIP_PUBLISHERS.some(p => typeof p === 'string' && p.toLowerCase() === String(pub).toLowerCase());
+};
 
 const ERROR_METADATA = {
   '404': {
@@ -75,9 +87,8 @@ const TARGET_BASE = TARGET_FILE.replace(/\.json$/, '');
 const DATA_PATH = 'src/main/data/';
 const REPORT_PATH = 'src/main/reports/';
 const FULL_PATH = path.join(DATA_PATH, TARGET_FILE);
-const timestamp = new Date().toISOString().replace(/[:.]/g, '-');
-const reportFile = `${TARGET_BASE}.validation-report-url-${timestamp}.json`;
-const reportPath = path.join(REPORT_PATH, reportFile);
+const REPORT_FILE = 'url_validate_audit.json';
+const reportPath = path.join(REPORT_PATH, REPORT_FILE);
 
 if (!fs.existsSync(FULL_PATH)) {
   console.error(`❌ File not found: ${FULL_PATH}`);
@@ -89,6 +100,10 @@ console.log(`🔍 Checking URL fields in ${TARGET_FILE}`);
 const registry = JSON.parse(fs.readFileSync(FULL_PATH, 'utf8'));
 const issues = [];
 const errorStats = {};
+
+let goodCount = 0;
+let skippedByDomain = 0;
+let skippedByPublisher = 0;
 
 const shouldSkip = (url) => {
   return SKIP_VALIDATION_DOMAINS.some(domain => url.startsWith(domain));
@@ -105,17 +120,22 @@ const validateEntry = async (entry, key, urlFields) => {
 
     if (shouldSkip(url)) {
       console.log(`⚠️  Skipping validation for ${key} → ${field}: ${url}`);
+      skippedByDomain++;
       continue;
     }
 
     const result = await resolveUrl(url);
 
     if (result.ok) {
-      if (result.resolvedUrl && result.resolvedUrl !== url) {
+      let mismatchFlagged = false;
+
+      // For 'repo' fields, don't enforce a resolved-* comparison; only check reachability.
+      if (field !== 'repo' && result.resolvedUrl && result.resolvedUrl !== url) {
         const resolvedField = `resolved${field.charAt(0).toUpperCase()}${field.slice(1)}`;
         const expectedResolved = entry[resolvedField];
 
         if (!expectedResolved || result.resolvedUrl !== expectedResolved) {
+          mismatchFlagged = true;
           problems.push({
             type: 'redirect',
             field,
@@ -127,6 +147,11 @@ const validateEntry = async (entry, key, urlFields) => {
 
           console.warn(`❗ ${key} → ${field}: ${url} → resolved to ${result.resolvedUrl} — expected ${expectedResolved || 'undefined'}`);
         }
+      }
+
+      if (!mismatchFlagged) {
+        // Count as a good (clean) URL when reachable and no mismatch was raised
+        goodCount++;
       }
 
     } else {
@@ -162,6 +187,12 @@ const runValidation = async () => {
   let redirectMismatchCount = 0;
 
   for (const entry of registry) {
+    if (shouldSkipPublisher(entry)) {
+      const key = entry.docId || entry.groupId || entry.projectId || '(unknown-id)';
+      console.log(`⚠️  Skipping validation for entry by publisher: ${key} — publisher=${entry.publisher || entry.publisherName || entry.org || entry.organization}`);
+      skippedByPublisher++;
+      continue;
+    }
     if (TARGET_FILE === 'documents.json') {
       await validateEntry(entry, entry.docId, ['href', 'repo']);
     } else if (TARGET_FILE === 'groups.json') {
@@ -171,36 +202,53 @@ const runValidation = async () => {
     }
   }
 
-  if (issues.length) {
-    if (!fs.existsSync(REPORT_PATH)) fs.mkdirSync(REPORT_PATH, { recursive: true });
-    fs.writeFileSync(reportPath, JSON.stringify(issues, null, 2));
-
-    for (const entry of issues) {
-      for (const problemList of Object.values(entry)) {
-        for (const p of problemList) {
-          if (p.type === 'unreachable') unreachableCount++;
-          else if (p.type === 'redirect') redirectMismatchCount++;
-        }
+  // Tally counts
+  for (const entry of issues) {
+    for (const problemList of Object.values(entry)) {
+      for (const p of problemList) {
+        if (p.type === 'unreachable') unreachableCount++;
+        else if (p.type === 'redirect') redirectMismatchCount++;
       }
     }
+  }
 
-    if (unreachableCount > 0 || redirectMismatchCount > 0) {
-      console.log('\n### URL validation issue summary:');
-      if (unreachableCount > 0) {
-        console.log(`- 🚫 ${unreachableCount} unreachable entr${unreachableCount === 1 ? 'y' : 'ies'}`);
-        const summary = Object.entries(errorStats)
-          .map(([msg, count]) => `    ${count.toString().padStart(3)} ${msg}`)
-          .join('\n');
-        console.log('  🔎 Unreachable error breakdown:\n' + summary);
-      }
-      if (redirectMismatchCount > 0) {
-        console.log(`- 🔁 ${redirectMismatchCount} redirect mismatch${redirectMismatchCount === 1 ? '' : 'es'}`);
-      }
+  // Build header
+  const header = {
+    generatedAt: new Date().toISOString(),
+    target: TARGET_FILE,
+    unreachableCount,
+    redirectMismatchCount,
+    goodCount,
+    skippedByDomain,
+    skippedByPublisher,
+    errorBreakdown: Object.fromEntries(Object.entries(errorStats).sort((a,b)=> a[0]<b[0]? -1 : a[0]>b[0]? 1 : 0))
+  };
+
+  // Ensure directory and write a single stable audit file
+  if (!fs.existsSync(REPORT_PATH)) fs.mkdirSync(REPORT_PATH, { recursive: true });
+  const payload = { ...header, report: issues };
+  fs.writeFileSync(reportPath, JSON.stringify(payload, null, 2));
+
+  // Console summary mirrors header
+  if (unreachableCount > 0 || redirectMismatchCount > 0) {
+    console.log('\n### URL validation issue summary:');
+    if (unreachableCount > 0) {
+      console.log(`- 🚫 ${unreachableCount} unreachable entr${unreachableCount === 1 ? 'y' : 'ies'}`);
+      const summary = Object.entries(header.errorBreakdown)
+        .map(([msg, count]) => `    ${count.toString().padStart(3)} ${msg}`)
+        .join('\n');
+      if (summary) console.log('  🔎 Unreachable error breakdown:\n' + summary);
     }
-
+    if (redirectMismatchCount > 0) {
+      console.log(`- 🔁 ${redirectMismatchCount} redirect mismatch${redirectMismatchCount === 1 ? '' : 'es'}`);
+    }
+    console.log(`- ✅ ${goodCount} good url${goodCount === 1 ? '' : 's'}`);
+    if (skippedByDomain > 0) console.log(`- ⏭️ ${skippedByDomain} skipped by domain`);
+    if (skippedByPublisher > 0) console.log(`- ⏭️ ${skippedByPublisher} skipped by publisher`);
     console.warn(`⚠️ URL validation report written to ${reportPath}`);
   } else {
-    console.log('✅ All URLs resolved successfully — no report generated.');
+    console.log('✅ All URLs resolved successfully — wrote clean audit header.');
+    console.log(`📝 URL validation audit at ${reportPath}`);
   }
 };
 
