@@ -11,7 +11,8 @@
       "IANA"
     ],
     "IANA.LSR": [
-      "Language Subtag Registry"
+      "Language Subtag Registry",
+      "/\\bIANA Language Subtag Registry\\b/i"
     ],
     "IETF.JSON.draft-bhutton-json-schema-00.2020": [
       "IETF draft-bhutton-json-schema-00",
@@ -28,7 +29,8 @@
       "/\\bElements of Style, Fourth Edition\\b/i"
     ],
     "ISDCF.DCNC": [
-      "Digital Cinema Naming"
+      "Digital Cinema Naming",
+      "Digital Cinema Naming Convention"
     ],
     "ISO.ICS": [
       "/\\bInternational Classification for Standards\\b/i"
@@ -58,6 +60,11 @@
     "SMPTE.AG31": [
       "SMPTE GitHub Operating Manual",
       "SMPTE GitHub Operating Guidelines"
+    ],
+    "UN.M49": [
+      "Standard Country or Area Codes for Statistical Use (Series M, No. 49)",
+      "/(?:United\\s*Nations|U\\.?N\\.?|Statistics\\s*Division[,\\.\\s]*)?.*Standard\\s*Country\\s*or\\s*Area\\s*Codes\\s*for\\s*Statistical\\s*Use\\s*\\(?\\s*Series\\s*M[,\\.\\s]*(?:No\\.?|Number)?\\s*49\\)?/i",
+      "/\\bUN(?:ited)?\\s*Nations.*\\bM\\s*49\\b/i"
     ],
     "UN.SCAC.R4": [
       "Standard Country or Area Codes for Statistics Use, 1999 (Revision 4)"

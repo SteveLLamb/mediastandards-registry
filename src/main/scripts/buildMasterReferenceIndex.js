@@ -123,7 +123,7 @@ function main() {
   // Prune only during full replay unless explicitly disabled
   if (!PRESENCE_ONLY && !NO_PRUNE) {
     const pr = mriPruneToSightings(sightIdx, { removeEmptyRefs: true });
-    if (!QUIET) console.log(`🧹 Pruned MRI: -${pr.removedVariants} variants, -${pr.removedRefs} refs`);
+    if (!QUIET) console.log(`🧹 Pruned MRI: -${pr.removedVariants} variants, -${pr.removedRefs} refs, -${pr.removedOrphans || 0} orphans`);
   }
 
   // Flush MRI (will recompute sourcePresent/sourceDocId and suppress timestamp-only writes)

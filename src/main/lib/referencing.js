@@ -39,11 +39,53 @@ function mriPruneToSightings(index, opts = {}) {
   // Recompute stats
   mri.stats.uniqueRefIds = Object.keys(mri.refs || {}).length;
 
-  if (process.env.DEBUG || process.env.MSR_DEBUG) {
-    console.log(`🧹 MRI prune: removedVariants=${removedVariants}, removedRefs=${removedRefs}`);
+  // Orphan pruning: drop orphans that are now resolvable or belong to removed docs
+  let removedOrphans = 0;
+  if (mri.orphans && Array.isArray(mri.orphans.unmapped)) {
+    // Build a quick set of docIds present in current truth for fast lookups
+    const presentDocIds = new Set();
+    for (const key of index) {
+      const parts = String(key).split('||');
+      // key format: `${refId}||${docId}||${type}`
+      if (parts.length >= 3 && parts[1]) presentDocIds.add(parts[1]);
+    }
+
+    const keptOrphans = [];
+    for (const o of mri.orphans.unmapped) {
+      const docId = o && o.docId ? String(o.docId) : '';
+      const type = o && o.type ? String(o.type) : '';
+
+      // If the document no longer exists in current truth, drop the orphan
+      const docGone = docId && !presentDocIds.has(docId);
+
+      // If we can now resolve this orphan to a refId and that sighting exists, drop it
+      let nowResolved = false;
+      try {
+        const rid = parseRefId(o && o.cite ? o.cite : '', o && o.href ? o.href : '');
+        if (rid) {
+          const key = `${rid}||${docId}||${type}`;
+          if (index.has(key)) nowResolved = true;
+        }
+      } catch {}
+
+      if (docGone || nowResolved) {
+        removedOrphans++;
+        _dirty = true;
+      } else {
+        keptOrphans.push(o);
+      }
+    }
+
+    if (keptOrphans.length !== mri.orphans.unmapped.length) {
+      mri.orphans.unmapped = keptOrphans;
+    }
   }
 
-  return { removedVariants, removedRefs };
+  if (process.env.DEBUG || process.env.MSR_DEBUG) {
+    console.log(`🧹 MRI prune: removedVariants=${removedVariants}, removedRefs=${removedRefs}, removedOrphans=${typeof removedOrphans === 'number' ? removedOrphans : 0}`);
+  }
+
+  return { removedVariants, removedRefs, removedOrphans: typeof removedOrphans === 'number' ? removedOrphans : 0 };
 }
 
 // referencing.js — shared helpers for building references from HTML

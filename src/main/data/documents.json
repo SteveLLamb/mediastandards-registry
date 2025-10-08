@@ -138516,6 +138516,65 @@
     }
   },
   {
+    "docId": "UN.M49",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "UN Series M, No. 49",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "Standard Country or Area Codes for Statistical Use (M49)",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Registry",
+    "docType$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://unstats.un.org/unsd/methodology/m49/",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "United Nations",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Legacy data, has not been verified",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Legacy data, has not been verified",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "versionless": true,
+      "versionless$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-10-08T01:13:28.140Z"
+      }
+    }
+  },
+  {
     "docId": "UN.SCAC.R4",
     "docId$meta": {
       "confidence": "high",
@@ -138566,12 +138625,26 @@
       "updated": "2025-07-01T00:00:00Z"
     },
     "status": {
-      "active": true,
+      "active": false,
       "active$meta": {
         "confidence": "medium",
         "note": "Legacy data, has not been verified",
         "source": "manual",
         "updated": "2025-07-01T00:00:00Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-10-08T01:13:28.140Z"
+      },
+      "supersededBy": [
+        "UN.M49"
+      ],
+      "supersededBy$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-10-08T01:13:28.140Z"
       }
     }
   },
