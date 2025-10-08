@@ -95,9 +95,9 @@ jobs:
         id: prlog
         run: |
           {
-            echo 'body<<EOF'
-            cat ${{ runner.temp }}/pr-log.log
-            echo 'EOF'
+            printf 'body<<__PR_BODY__\n'
+            cat /home/runner/work/_temp/pr-log.log
+            printf '\n__PR_BODY__\n'
           } >> $GITHUB_OUTPUT
 
       - name: Set timestamp env var
