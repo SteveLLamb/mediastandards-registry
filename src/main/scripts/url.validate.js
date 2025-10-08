@@ -122,6 +122,8 @@ const validateEntry = async (entry, key, urlFields) => {
       console.log(`⚠️  Skipping validation for ${key} → ${field}: ${url}`);
       skippedByDomain++;
       continue;
+    } else {
+      console.log(`  Validating ${field}: ${url}`);
     }
 
     const result = await resolveUrl(url);
