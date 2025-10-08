@@ -112,8 +112,6 @@ const shouldSkip = (url) => {
 const validateEntry = async (entry, key, urlFields) => {
   const problems = [];
 
-  console.log(`🔎 Checking ${key}`);
-
   for (const field of urlFields) {
     if (!entry[field]) continue;
     const url = entry[field];
@@ -123,7 +121,7 @@ const validateEntry = async (entry, key, urlFields) => {
       skippedByDomain++;
       continue;
     } else {
-      console.log(`  Validating ${field}: ${url}`);
+      console.log(`🔎 Checking ${key} → ${field}: ${url}`);
     }
 
     const result = await resolveUrl(url);
