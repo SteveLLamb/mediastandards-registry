@@ -185,6 +185,8 @@ const validateEntry = async (entry, key, urlFields) => {
 const runValidation = async () => {
   let unreachableCount = 0;
   let redirectMismatchCount = 0;
+  let redirectUndefinedCount = 0;
+  let redirectOtherCount = 0;
 
   for (const entry of registry) {
     if (shouldSkipPublisher(entry)) {
@@ -207,7 +209,14 @@ const runValidation = async () => {
     for (const problemList of Object.values(entry)) {
       for (const p of problemList) {
         if (p.type === 'unreachable') unreachableCount++;
-        else if (p.type === 'redirect') redirectMismatchCount++;
+        else if (p.type === 'redirect') {
+          redirectMismatchCount++;
+          if (p.resolvedHref === 'undefined' || p.resolvedHref === undefined) {
+            redirectUndefinedCount++;
+          } else {
+            redirectOtherCount++;
+          }
+        }
       }
     }
   }
@@ -218,6 +227,8 @@ const runValidation = async () => {
     target: TARGET_FILE,
     unreachableCount,
     redirectMismatchCount,
+    redirectUndefinedCount,
+    redirectOtherCount,
     goodCount,
     skippedByDomain,
     skippedByPublisher,
@@ -241,6 +252,10 @@ const runValidation = async () => {
     }
     if (redirectMismatchCount > 0) {
       console.log(`- 🔁 ${redirectMismatchCount} redirect mismatch${redirectMismatchCount === 1 ? '' : 'es'}`);
+      if (redirectMismatchCount > 0) {
+        console.log(`  ├─ ⚪ ${redirectUndefinedCount} undefined`);
+        console.log(`  └─ ⚫ ${redirectOtherCount} other`);
+      }
     }
     console.log(`- ✅ ${goodCount} good url${goodCount === 1 ? '' : 's'}`);
     if (skippedByDomain > 0) console.log(`- ⏭️ ${skippedByDomain} skipped by domain`);
