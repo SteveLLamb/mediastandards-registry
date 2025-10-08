@@ -9,6 +9,7 @@ You should have received a copy of the license along with this work.  If not, se
 const fs = require('fs');
 const path = require('path');
 const { resolveUrl } = require('./url.resolve.js');
+const { checkExpectations } = require('../lib/url.rules.js');
 
 
 const SKIP_VALIDATION_DOMAINS = [
@@ -106,6 +107,9 @@ let goodCount = 0;
 let skippedByDomain = 0;
 let skippedByPublisher = 0;
 
+const expectationStats = {}; // by rule name
+let expectationMismatchCount = 0;
+
 const shouldSkip = (url) => {
   return SKIP_VALIDATION_DOMAINS.some(domain => url.startsWith(domain));
 };
@@ -148,6 +152,48 @@ const validateEntry = async (entry, key, urlFields) => {
 
           console.warn(`❗ ${key} → ${field}: ${url} → resolved to ${result.resolvedUrl} — expected ${expectedResolved || 'undefined'}`);
         }
+      }
+
+      // Run non-destructive expectation checks (prefix/host shape assertions)
+      // 1) Check expectations against the original field value (e.g., href)
+      try {
+        const findingsOrig = checkExpectations({ entry, field, url, docId: entry.docId, publisher: entry.publisher });
+        for (const f of findingsOrig) {
+          if (!f.ok) {
+            expectationMismatchCount++;
+            expectationStats[f.rule] = (expectationStats[f.rule] || 0) + 1;
+            problems.push({
+              type: 'expectation',
+              rule: f.rule,
+              field: f.field,
+              expectedPrefix: f.expectedPrefix,
+              actual: f.actual,
+              message: `Expected ${f.field} to start with ${f.expectedPrefix}`
+            });
+          }
+        }
+      } catch {}
+
+      // 2) If we have a resolved URL, check expectations for the corresponding resolved* field
+      if (result.resolvedUrl) {
+        const resolvedField = `resolved${field.charAt(0).toUpperCase()}${field.slice(1)}`; // e.g., resolvedHref
+        try {
+          const findingsResolved = checkExpectations({ entry, field: resolvedField, url: result.resolvedUrl, docId: entry.docId, publisher: entry.publisher });
+          for (const f of findingsResolved) {
+            if (!f.ok) {
+              expectationMismatchCount++;
+              expectationStats[f.rule] = (expectationStats[f.rule] || 0) + 1;
+              problems.push({
+                type: 'expectation',
+                rule: f.rule,
+                field: f.field,
+                expectedPrefix: f.expectedPrefix,
+                actual: f.actual,
+                message: `Expected ${f.field} to start with ${f.expectedPrefix}`
+              });
+            }
+          }
+        } catch {}
       }
 
       if (!mismatchFlagged) {
@@ -209,14 +255,18 @@ const runValidation = async () => {
   for (const entry of issues) {
     for (const problemList of Object.values(entry)) {
       for (const p of problemList) {
-        if (p.type === 'unreachable') unreachableCount++;
-        else if (p.type === 'redirect') {
+        if (p.type === 'unreachable') {
+          unreachableCount++;
+        } else if (p.type === 'redirect') {
           redirectMismatchCount++;
           if (p.resolvedHref === 'undefined' || p.resolvedHref === undefined) {
             redirectUndefinedCount++;
           } else {
             redirectOtherCount++;
           }
+        } else if (p.type === 'expectation') {
+          expectationMismatchCount++;
+          if (p.rule) expectationStats[p.rule] = (expectationStats[p.rule] || 0) + 1;
         }
       }
     }
@@ -230,6 +280,8 @@ const runValidation = async () => {
     redirectMismatchCount,
     redirectUndefinedCount,
     redirectOtherCount,
+    expectationMismatchCount,
+    expectationBreakdown: expectationStats,
     goodCount,
     skippedByDomain,
     skippedByPublisher,
@@ -257,6 +309,14 @@ const runValidation = async () => {
         console.log(`  ├─ ⚪ ${redirectUndefinedCount} undefined`);
         console.log(`  └─ ⚫ ${redirectOtherCount} other`);
       }
+    }
+    if (expectationMismatchCount > 0) {
+      console.log(`- 📏 ${expectationMismatchCount} expectation mismatch${expectationMismatchCount === 1 ? '' : 'es'}`);
+      const expLines = Object.entries(expectationStats)
+        .sort((a,b) => b[1]-a[1])
+        .map(([rule, count]) => `    ${count.toString().padStart(3)} ${rule}`)
+        .join('\n');
+      if (expLines) console.log(expLines);
     }
     console.log(`- ✅ ${goodCount} good url${goodCount === 1 ? '' : 's'}`);
     if (skippedByDomain > 0) console.log(`- ⏭️ ${skippedByDomain} skipped by domain`);

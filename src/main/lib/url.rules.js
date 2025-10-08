@@ -1,105 +1,110 @@
 /**
- * URL Rules — deterministic canonical URL resolvers
+ * URL Rules — deterministic canonical URL resolvers (EXPECTATIONS)
  *
- * Each rule has:
- *  - name: string (identifier for provenance)
- *  - when(ctx): boolean — decide if this rule applies
- *  - resolve(ctx): string|null — return expected canonical URL for the field; null if no opinion
+ * Goal in this context: define what a URL for a given publisher *should* look like.
+ * These expectations are used by validators to flag store/host drift and by enrichers
+ * (optionally) to polish a known good `resolvedUrl` — but should never *invent* links.
  *
- * ctx shape:
- *  {
- *    entry,          // the document/group/project record
- *    field,          // 'href' | 'repo' | 'groupLink' | 'groupRepo' | 'projectLink' ...
- *    url,            // the original value of entry[field]
- *    docId,          // doc/group/project id string
- *    publisher,      // best-effort publisher string
- *  }
+ * API:
+ *   resolveExpected(ctx) -> { field, expected, rule } | null
+ *
+ * ctx:
+ *   {
+ *     entry,          // the document/group/project record
+ *     field,          // 'href' | 'repo' | 'groupLink' | 'groupRepo' | 'projectLink' ...
+ *     url,            // candidate url (resolvedUrl or original)
+ *     docId,          // document id if present
+ *     publisher,      // publisher/org string if present
+ *   }
  */
 
+// -- helpers -----------------------------------------------------------------
 const getPublisher = (e) => (e && (e.publisher || e.publisherName || e.org || e.organization)) || '';
-
-// -- Helpers
-const looksLike = (re, s) => !!(s && re.test(String(s)));
 const hasHost = (host, url) => {
   try { return new URL(url).hostname.toLowerCase().includes(host.toLowerCase()); } catch { return false; }
 };
 const ensureHttps = (u) => {
-  try {
-    const x = new URL(u);
-    x.protocol = 'https:';
-    return x.toString();
-  } catch { return null; }
+  try { const x = new URL(u); x.protocol = 'https:'; return x.toString(); } catch { return null; }
 };
-const trimTrailingSlash = (u) => u && u.replace(/\/$/, '');
+const stripHashQuery = (u) => {
+  try { const x = new URL(u); x.hash = ''; x.search = ''; return x.toString(); } catch { return null; }
+};
+const trimTrailingSlash = (u) => typeof u === 'string' ? u.replace(/\/$/, '') : u;
 
-// --- Simple deterministic rules (low-risk) ---
+// Build a safe https+no-fragment baseline without rewriting host
+const baselineNormalize = (u) => trimTrailingSlash(stripHashQuery(ensureHttps(u)) || u);
 
-// WHATWG: normalize to canonical spec root if already a WHATWG link
+// -- rule definitions ---------------------------------------------------------
+// Each rule exposes: { name, when(ctx), resolve(ctx) -> expectedUrl|null }
+
+// WHATWG — keep host/path, https, no fragment
 const ruleWHATWG = {
   name: 'WHATWG',
-  when: ({ url, publisher }) => hasHost('whatwg.org', url) || /whatwg/i.test(publisher),
-  resolve: ({ url }) => {
-    // Keep path but force https + strip fragment/query noise
-    try {
-      const u = new URL(url);
-      u.protocol = 'https:';
-      u.hash = '';
-      return u.toString();
-    } catch { return null; }
-  }
+  when: ({ url, publisher }) => hasHost('whatwg.org', url) || /whatwg/i.test(publisher || ''),
+  resolve: ({ url }) => baselineNormalize(url)
 };
 
-// IETF/RFC Editor: normalize RFC links to rfc-editor canonical
+// IETF / RFC-Editor — prefer rfc-editor canonical when RFC number is known from docId; otherwise baseline
 const ruleIETF = {
   name: 'IETF',
-  when: ({ url, publisher }) => hasHost('ietf.org', url) || hasHost('rfc-editor.org', url) || /ietf/i.test(publisher),
-  resolve: ({ entry }) => {
-    // Try to derive RFC number from docId like IETF.RFC7231 or RFC.7231 or similar
-    const docId = String(entry && entry.docId || '');
-    const m = docId.match(/RFC[-.]?(\d{3,5})/i);
-    if (m) {
-      return `https://www.rfc-editor.org/rfc/rfc${m[1]}`;
-    }
-    return null;
+  when: ({ url, publisher, docId }) => (
+    hasHost('ietf.org', url) || hasHost('rfc-editor.org', url) || hasHost('datatracker.ietf.org', url) || /ietf/i.test(publisher || '') || /RFC[-.]?\d{3,5}/i.test(String(docId || ''))
+  ),
+  resolve: ({ url, docId }) => {
+    const m = String(docId || '').match(/RFC[-.]?(\d{3,5})/i);
+    if (m) return `https://www.rfc-editor.org/rfc/rfc${m[1]}`;
+    return baselineNormalize(url);
   }
 };
 
-// W3C: if it’s a /TR/ shortname, prefer https and no fragment
+// W3C TR — https, no fragment; do not synthesize shortnames (too risky)
 const ruleW3C = {
   name: 'W3C',
-  when: ({ url, publisher }) => hasHost('w3.org', url) || /w3c/i.test(publisher),
-  resolve: ({ url }) => {
-    try {
-      const u = new URL(url);
-      u.protocol = 'https:';
-      u.hash = '';
-      return u.toString();
-    } catch { return null; }
-  }
+  when: ({ url, publisher }) => hasHost('w3.org', url) || /\bW3C\b/i.test(publisher || ''),
+  resolve: ({ url }) => baselineNormalize(url)
 };
 
-// NIST: prefer https and drop fragments
+// NIST — prefer https
 const ruleNIST = {
   name: 'NIST',
-  when: ({ url, publisher }) => hasHost('nist.gov', url) || /nist/i.test(publisher),
-  resolve: ({ url }) => ensureHttps(url)
+  when: ({ url, publisher }) => hasHost('nist.gov', url) || /nist/i.test(publisher || ''),
+  resolve: ({ url }) => baselineNormalize(url)
 };
 
-// SMPTE: prefer https and stable content root
+// SMPTE — prefer https and stable path
 const ruleSMPTE = {
   name: 'SMPTE',
-  when: ({ url, publisher }) => hasHost('smpte.org', url) || /smpte/i.test(publisher),
-  resolve: ({ url }) => ensureHttps(trimTrailingSlash(url))
+  when: ({ url, publisher }) => hasHost('smpte.org', url) || /smpte/i.test(publisher || ''),
+  resolve: ({ url }) => baselineNormalize(url)
 };
 
-// IEEE: conservative https normalization only (public access varies)
+// IEEE — https baseline; public access varies so avoid deeper rewrites
 const ruleIEEE = {
   name: 'IEEE',
-  when: ({ url, publisher }) => hasHost('ieee.org', url) || /ieee/i.test(publisher),
-  resolve: ({ url }) => ensureHttps(url)
+  when: ({ url, publisher }) => hasHost('ieee.org', url) || hasHost('ieeexplore.ieee.org', url) || /ieee/i.test(publisher || ''),
+  resolve: ({ url }) => baselineNormalize(url)
 };
 
-// Add additional orgs here (ETSI, 3GPP, ISO/IEC webstore, etc.) when patterns are deterministic.
+// ETSI — conservative baseline
+const ruleETSI = {
+  name: 'ETSI',
+  when: ({ url, publisher }) => hasHost('etsi.org', url) || /etsi/i.test(publisher || ''),
+  resolve: ({ url }) => baselineNormalize(url)
+};
+
+// 3GPP — conservative baseline
+const rule3GPP = {
+  name: '3GPP',
+  when: ({ url, publisher }) => hasHost('3gpp.org', url) || /3gpp/i.test(publisher || ''),
+  resolve: ({ url }) => baselineNormalize(url)
+};
+
+// ISO/IEC — vendor portals vary; keep to https baseline only
+const ruleISOIEC = {
+  name: 'ISO/IEC',
+  when: ({ url, publisher }) => hasHost('iso.org', url) || hasHost('iec.ch', url) || /(\bISO\b|\bIEC\b)/i.test(publisher || ''),
+  resolve: ({ url }) => baselineNormalize(url)
+};
 
 const RULES = [
   ruleWHATWG,
@@ -108,15 +113,109 @@ const RULES = [
   ruleNIST,
   ruleSMPTE,
   ruleIEEE,
+  ruleETSI,
+  rule3GPP,
+  ruleISOIEC,
 ];
 
+// ---------------- EXPECTATION CHECKS (non-rewriting) -------------------------
+// These rules do not construct URLs. They assert that a given field value
+// matches an expected *shape* (e.g., prefix/host) and report mismatches.
+
+const isSmpteStandard = (docId = '') => /^(SMPTE\.(ST|RP|EG|TSP)\b)/i.test(String(docId));
+const isSmpteJournalId = (docId = '') => /^[Jj]\d{5,}/.test(String(docId));
+
+function startsWithPrefix(u, prefix) {
+  if (!u || !prefix) return false;
+  try { return String(u).startsWith(prefix); } catch { return false; }
+}
+
+// Expectation rule signature:
+//  { name, when(ctx), check(ctx) -> { ok, expectedPrefix, actual, field }|null }
+
+const expSMPTE_HREF_DOI = {
+  name: 'SMPTE.href.doi-prefix',
+  when: ({ entry, field }) => field === 'href' && (/(^|\b)SMPTE(\b|$)/i.test(getPublisher(entry)) || /^SMPTE\./i.test(String(entry?.docId || ''))),
+  check: ({ url, field }) => {
+    const expectedPrefix = 'https://doi.org/10.5594/';
+    const ok = startsWithPrefix(url, expectedPrefix);
+    return { ok, expectedPrefix, actual: url, field };
+  }
+};
+
+const expSMPTE_RESOLVED_STANDARDS = {
+  name: 'SMPTE.resolvedHref.standards-prefix',
+  when: ({ entry, field }) => field === 'resolvedHref' && isSmpteStandard(entry?.docId || ''),
+  check: ({ url, field }) => {
+    const expectedPrefix = 'https://my.smpte.org/s/';
+    const ok = startsWithPrefix(url, expectedPrefix);
+    return { ok, expectedPrefix, actual: url, field };
+  }
+};
+
+const expSMPTE_RESOLVED_JOURNALS = {
+  name: 'SMPTE.resolvedHref.journals-prefix',
+  when: ({ entry, field }) => field === 'resolvedHref' && (isSmpteJournalId(entry?.docId || '') || /journal/i.test(String(entry?.series || ''))),
+  check: ({ url, field }) => {
+    const expectedPrefix = 'https://journal.smpte.org/periodicals/';
+    const ok = startsWithPrefix(url, expectedPrefix);
+    return { ok, expectedPrefix, actual: url, field };
+  }
+};
+
+// Add more expectation rules per-publisher as needed
+const EXPECTATION_RULES = [
+  expSMPTE_HREF_DOI,
+  expSMPTE_RESOLVED_STANDARDS,
+  expSMPTE_RESOLVED_JOURNALS,
+];
+
+/**
+ * checkExpectations(ctx)
+ * Returns an array of findings for rules that apply. Each finding has:
+ *   { rule, ok, expectedPrefix, actual, field }
+ */
+function checkExpectations(ctx) {
+  const findings = [];
+  const safeCtx = {
+    entry: ctx.entry,
+    field: ctx.field,
+    url: ctx.url,
+    docId: ctx.docId || (ctx.entry && ctx.entry.docId) || '',
+    publisher: ctx.publisher || getPublisher(ctx.entry)
+  };
+  for (const r of EXPECTATION_RULES) {
+    try {
+      if (r.when(safeCtx)) {
+        const f = r.check(safeCtx);
+        if (f) findings.push({ rule: r.name, ...f });
+      }
+    } catch {/* ignore */}
+  }
+  return findings;
+}
+
+/**
+ * Try rules in order and return the first deterministic expectation produced.
+ * Never fabricate a URL from thin air — we either normalize the given url, or, when
+ * safe (IETF RFC), synthesize from docId pattern.
+ */
 function resolveExpected(ctx) {
+  // Derive defaults commonly used by rules
+  const safeCtx = {
+    entry: ctx.entry,
+    field: ctx.field,
+    url: ctx.url,
+    docId: ctx.docId || (ctx.entry && ctx.entry.docId) || '',
+    publisher: ctx.publisher || getPublisher(ctx.entry)
+  };
+
   for (const r of RULES) {
     try {
-      if (r.when(ctx)) {
-        const expected = r.resolve(ctx);
+      if (r.when(safeCtx)) {
+        const expected = r.resolve(safeCtx);
         if (expected && typeof expected === 'string') {
-          return { field: ctx.field, expected, rule: r.name };
+          return { field: safeCtx.field, expected, rule: r.name };
         }
       }
     } catch {/* ignore rule errors */}
@@ -125,3 +224,5 @@ function resolveExpected(ctx) {
 }
 
 module.exports = { RULES, resolveExpected };
+module.exports.EXPECTATION_RULES = EXPECTATION_RULES;
+module.exports.checkExpectations = checkExpectations;
