@@ -69,7 +69,8 @@ const NON_LINEAGE_DOCTYPES = new Set([
   'Study Group Report',
   'Dissertation',
   'FAQ',
-  'Style Guide'
+  'Style Guide',
+  'Template'
 ]);
 
 // Helper to infer versionless (evergreen) documents
