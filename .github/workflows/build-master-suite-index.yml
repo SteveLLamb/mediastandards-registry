@@ -3,8 +3,10 @@ name: Build MasterSuite Index
 on:
   push:
     branches: [ main ]
-  schedule:
-    - cron: "30 06 * * *" # 23:30 PT (cron in UTC)
+    paths:
+      - 'src/main/data/documents.json'
+      - 'src/main/reports/**'
+      - 'src/main/lib/**'
   workflow_dispatch:
 
 permissions:
