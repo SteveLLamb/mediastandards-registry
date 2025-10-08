@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2025-10-08T00:39:27.888Z",
+  "generatedAt": "2025-10-08T04:41:46.390Z",
   "sourcePath": "src/main/data/documents.json",
-  "sourceHash": "sha256:d005e930a4699b3d028a98dbfdb6a3705bd2a207586020563688fbfd1a8f02b7",
+  "sourceHash": "sha256:903a9a7f6ce08de9777b57112a847e1317385fa564046f500219c387abd43209",
   "publisherCounts": {
-    "total": 1486,
+    "total": 1487,
     "counts": {
       "SMPTE": 771,
       "IETF": 109,
@@ -48,6 +48,7 @@
       "JAES": 2,
       "FRANKLIN INSTITUTE": 2,
       "UL": 2,
+      "UNITED NATIONS": 2,
       "POLYMER DEGRADATION AND STABILITY": 1,
       "SCIENTIFIC INSTRUMENTS": 1,
       "PHYSICS TODAY": 1,
@@ -93,14 +94,13 @@
       "AUDIO": 1,
       "DLP": 1,
       "ALDUS CORP/ADOBE": 1,
-      "UNITED NATIONS": 1,
       "USPO": 1,
       "WHATWG": 1,
       "UNIVERSITY OF AUCKLAND": 1
     }
   },
   "skippedDocs": {
-    "totalSkipped": 198,
+    "totalSkipped": 199,
     "byPublisher": {
       "POLYMER DEGRADATION AND STABILITY": {
         "count": 1,
@@ -1998,11 +1998,19 @@
         ]
       },
       "UNITED NATIONS": {
-        "count": 1,
+        "count": 2,
         "docIds": [
+          "UN.M49",
           "UN.SCAC.R4"
         ],
         "items": [
+          {
+            "docId": "UN.M49",
+            "reason": "FILTERED",
+            "rule": "FILTERED",
+            "ruleDetail": "docType=Registry",
+            "category": "docType"
+          },
           {
             "docId": "UN.SCAC.R4",
             "reason": "FILTERED",
@@ -2059,7 +2067,7 @@
       }
     },
     "summaryByReason": {
-      "FILTERED": 198,
+      "FILTERED": 199,
       "UNKEYED": 0,
       "UNKNOWN": 0
     }
