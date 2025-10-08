@@ -1,22 +1,23 @@
 {
-  "generatedAt": "2025-10-08T18:30:45.228Z",
+  "generatedAt": "2025-10-08T18:45:10.121Z",
   "target": "documents.json",
-  "unreachableCount": 212,
-  "redirectMismatchCount": 708,
-  "redirectUndefinedCount": 708,
+  "unreachableCount": 210,
+  "redirectMismatchCount": 707,
+  "redirectUndefinedCount": 707,
   "redirectOtherCount": 0,
-  "goodCount": 528,
+  "goodCount": 531,
   "skippedByDomain": 0,
   "skippedByPublisher": 0,
   "errorBreakdown": {
     "Unreachable (400)": 1,
     "Unreachable (403)": 46,
-    "Unreachable (404)": 74,
-    "Unreachable (429)": 70,
+    "Unreachable (404)": 75,
+    "Unreachable (429)": 67,
+    "Unreachable (503)": 1,
     "Unreachable (ENOTFOUND)": 2,
     "Unreachable (ERR_BAD_REQUEST)": 1,
     "Unreachable (ERR_FR_TOO_MANY_REDIRECTS)": 1,
-    "Unreachable (HPE_INVALID_CONSTANT)": 16,
+    "Unreachable (HPE_INVALID_CONSTANT)": 15,
     "Unreachable (UNABLE_TO_VERIFY_LEAF_SIGNATURE)": 1
   },
   "report": [
@@ -27,18 +28,6 @@
           "field": "href",
           "url": "https://doi.org/10.1016/0141-3910(90)90019-4",
           "resolvedUrl": "https://linkinghub.elsevier.com/retrieve/pii/0141391090900194",
-          "resolvedHref": "undefined",
-          "message": "resolved url mismatch"
-        }
-      ]
-    },
-    {
-      "0950-7671.1.3.302": [
-        {
-          "type": "redirect",
-          "field": "href",
-          "url": "https://doi.org/10.1088/0950-7671/1/3/302",
-          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=619000d1-8d89-4c4c-b4a2-4bcc09c45e6c&ssb=34779208550&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=06773a5f-cnvj-4cb5-b1fa-602542ff0d91&ssk=botmanager_support@radware.com&ssm=25405188828341322101889502768810&ssn=236caeac72d7d14d3cc3331aa8bf7dded53ac0ea257f-0485-45db-9fbcd0&sso=8219ecc7-13613481909c217809b312816692b6b080354be6bb104e53&ssp=97497855791759908276175996123399456&ssq=98564234794526152511047945810615284775191&ssr=NC4yMzYuMTU4Ljg4&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJyZCI6ImlvcC5vcmciLCJfX3V6bWYiOiI3ZjkwMDBjMGVhMjU3Zi0wNDg1LTQ1ZGItOWNjNy0xMzYxMzQ4MTkwOWMxLTE3NTk5NDc5NDU3OTQwLTAwMTQ3Zjg2MjczNjU2OTNiMzgxMCIsInV6bXgiOiI3ZjkwMDA0NzhiZTY2Zi0xOTE3LTQwZmQtOGRhOS1hMjFiMjM1MjFjN2MxLTE3NTk5NDc5NDU3OTQwLTUyYjBiNjA4OWNmZWE1MDIxMCJ9",
           "resolvedHref": "undefined",
           "message": "resolved url mismatch"
         }
@@ -565,10 +554,10 @@
           "type": "unreachable",
           "field": "href",
           "url": "http://j.mp/TB-2018-001",
-          "message": "Unreachable (HPE_INVALID_CONSTANT)",
-          "explanation": "Malformed response or unexpected protocol from server.",
-          "recommendedAction": "Verify the URL manually. It may be non-HTTP content.",
-          "riskLevel": "Medium"
+          "message": "Unreachable (503)",
+          "explanation": "Service is temporarily unavailable or overloaded.",
+          "recommendedAction": "Try again later. Consider flagging for recheck.",
+          "riskLevel": "Medium-High"
         }
       ]
     },
@@ -2137,36 +2126,10 @@
           "type": "unreachable",
           "field": "href",
           "url": "https://www.iso.org/standard/80072.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        }
-      ]
-    },
-    {
-      "ISO.2721.2013": [
-        {
-          "type": "unreachable",
-          "field": "href",
-          "url": "https://www.iso.org/standard/62742.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        }
-      ]
-    },
-    {
-      "ISO.2906.2002": [
-        {
-          "type": "unreachable",
-          "field": "href",
-          "url": "https://www.iso.org/standard/30126.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
+          "message": "Unreachable (404)",
+          "explanation": "The URL points to a resource that was not found (dead link).",
+          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
+          "riskLevel": "High"
         }
       ]
     },
