@@ -208,7 +208,7 @@ jobs:
               // Compact, deterministic body
               const lines = arr
                 .sort((a,b) => (a.docId || '').localeCompare(b.docId || ''))
-                .map(i => `- ${i.docId} — ${i.field} — ${i.url}`);
+                .map(i => `- docId: **${i.docId}**\n  — _${i.field}_: ${i.url}`);
               const body = [
                 `**Count:** ${arr.length}`,
                 '',
@@ -223,9 +223,8 @@ jobs:
             for (const i of list400) {
               const title = `URL ERROR (400): ${i.docId}`;
               const body = [
-                `**Doc:** ${i.docId}`,
-                `**Field:** ${i.field}`,
-                `**URL:** ${i.url}`,
+                `docId: **${i.docId}**`,
+                `- _${i.field}_: ${i.url}`,
                 '',
                 `_Created automatically from URL validation audit on ${genAt} — ${runTag}_`
               ].join('\n');
