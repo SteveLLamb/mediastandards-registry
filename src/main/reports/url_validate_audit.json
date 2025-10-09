@@ -1,25 +1,26 @@
 {
-  "generatedAt": "2025-10-09T19:58:04.685Z",
+  "generatedAt": "2025-10-09T20:16:38.649Z",
   "target": "documents.json",
-  "good": 1339,
+  "good": 1338,
   "skippedByDomain": 0,
   "skippedByPublisher": 0,
   "index": {
-    "error": 148,
+    "error": 150,
     "errorBreakdown": {
       "Unreachable (400)": 1,
       "Unreachable (403)": 46,
       "Unreachable (404)": 80,
+      "Unreachable (ECONNABORTED)": 2,
       "Unreachable (ENOTFOUND)": 2,
       "Unreachable (ERR_BAD_REQUEST)": 1,
       "Unreachable (ERR_FR_TOO_MANY_REDIRECTS)": 1,
       "Unreachable (HPE_INVALID_CONSTANT)": 16,
       "Unreachable (UNABLE_TO_VERIFY_LEAF_SIGNATURE)": 1
     },
-    "redirectMismatch": 3,
+    "redirectMismatch": 2,
     "redirectBreakdown": {
       "undefined": 1,
-      "other": 2
+      "other": 1
     },
     "expectationMismatch": 35,
     "expectationBreakdown": {
@@ -1480,6 +1481,28 @@
           "riskLevel": "High"
         }
       ],
+      "ECONNABORTED": [
+        {
+          "docId": "IETF.FLS.2001",
+          "publisher": "IETF",
+          "field": "href",
+          "url": "https://www.ietf.org/about/groups/iesg/statements/formal-languages-use/",
+          "message": "Unreachable (ECONNABORTED)",
+          "explanation": "Connection timed out.",
+          "recommendedAction": "Retry later or check the server’s responsiveness.",
+          "riskLevel": "Medium-High"
+        },
+        {
+          "docId": "IETF.JSON.draft-bhutton-json-schema-00.2020",
+          "publisher": "IETF",
+          "field": "href",
+          "url": "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-00",
+          "message": "Unreachable (ECONNABORTED)",
+          "explanation": "Connection timed out.",
+          "recommendedAction": "Retry later or check the server’s responsiveness.",
+          "riskLevel": "Medium-High"
+        }
+      ],
       "UNABLE_TO_VERIFY_LEAF_SIGNATURE": [
         {
           "docId": "ISO.15444-1.2004amd2.2009",
@@ -1546,19 +1569,9 @@
           "publisher": "Scientific Instruments",
           "field": "href",
           "url": "https://doi.org/10.1088/0950-7671/1/3/302",
-          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=949e2f55-06d0-429f-9225-ec1baee95594&ssb=76257273917&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=3af2edba-cnvj-4f5c-8316-85a477bf6170&ssk=botmanager_support@radware.com&ssm=80653687961702384102724116003220&ssn=2fc52b57dc4fbd4222237e9049d36c7518595f17bf41-a995-4f92-8e4ab4&sso=2236f659-76791053a89acf8dcb6acb95d6db9a002382e62a40d942f6&ssp=28513613871760047383176006823565240&ssq=57417373940191632661039401862171460279611&ssr=NjguMjIwLjU2LjI0Mw==&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJyZCI6ImlvcC5vcmciLCJ1em14IjoiN2Y5MDAwOWNlZmQxMDAtYTM3ZS00MDkzLTliMDQtYTQyZWMyMmEzNzhkMS0xNzYwMDM5NDAxNjg2MC1kYjk1ZjYzMjZhNjY1M2FmMTAiLCJfX3V6bWYiOiI3ZjkwMDA1ZjE3YmY0MS1hOTk1LTRmOTItODY1OS03Njc5MTA1M2E4OWExLTE3NjAwMzk0MDE2ODYwLTAwMTFhMjgyY2Y2NTRjMmQ4OWMxMCJ9",
+          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=f0ccd11c-4b0d-4c9f-b2a9-08db2c4f0604&ssb=48877293327&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=632d1ccd-cnvj-462b-8f0f-ac2b6c99e726&ssk=botmanager_support@radware.com&ssm=46729620944808694100970133004339&ssn=d319fe539ec6439110143d25ce61b2ea8a58e3218e20-0e82-4573-9bdc8c&sso=b9ddd088-ca9f9dd61faedf3e3557bc92c67364b9a957ca513bec075f&ssp=28724929851760016443176004318576134&ssq=33305164049205306847940492134841856978514&ssr=MTcyLjIwOC4xMjcuMTk1&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJyZCI6ImlvcC5vcmciLCJ1em14IjoiN2Y5MDAwNzUxN2VmODMtYTQ0NC00ZTljLTk5MDMtNDUxMmRmMzI1ZGU0MS0xNzYwMDQwNDkyNzUzMC00ZWNhNjQ2OGI4MTQwZmE3MTAiLCJfX3V6bWYiOiI3ZjkwMDBlMzIxOGUyMC0wZTgyLTQ1NzMtOTA4OC1jYTlmOWRkNjFmYWUxLTE3NjAwNDA0OTI3NTMwLTAwMTUxMjFhZWJmODI4Yjc0OWIxMCJ9",
           "resolvedField": "resolvedHref",
           "expectedResolved": "https://iopscience.iop.org/article/10.1088/0950-7671/1/3/302",
-          "message": "resolved url mismatch"
-        },
-        {
-          "docId": "ML3807.M56.1916",
-          "publisher": "MacMillan Co.",
-          "field": "href",
-          "url": "https://ia800204.us.archive.org/19/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
-          "resolvedUrl": "https://ia801303.us.archive.org/1/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
-          "resolvedField": "resolvedHref",
-          "expectedResolved": "https://ia601303.us.archive.org/1/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
           "message": "resolved url mismatch"
         }
       ]
