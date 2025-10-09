@@ -208,7 +208,7 @@ jobs:
               // Compact, deterministic body
               const lines = arr
                 .sort((a,b) => (a.docId || '').localeCompare(b.docId || ''))
-                .map(i => `- docId: **${i.docId}**\n  — _${i.field}_: ${i.url}`);
+                .map(i => `- docId: **${i.docId}**\n_${i.field}_: ${i.url}`);
               const body = [
                 `**Count:** ${arr.length}`,
                 '',
