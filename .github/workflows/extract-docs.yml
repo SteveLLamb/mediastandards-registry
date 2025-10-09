@@ -121,6 +121,7 @@ jobs:
           body: ${{ steps.prlog.outputs.body }}
           add-paths: |
             src/main/data/documents.json
+            src/main/reports/masterReferenceIndex.json
           base: main
 
       # NEW: rewrite the PR body to use the PR Files diff anchor (not the raw URL)
