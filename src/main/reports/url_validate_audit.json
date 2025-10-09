@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2025-10-09T05:28:02.588Z",
+  "generatedAt": "2025-10-09T05:49:39.578Z",
   "target": "documents.json",
-  "unreachableCount": 219,
-  "redirectMismatchCount": 691,
-  "redirectUndefinedCount": 690,
+  "unreachableCount": 218,
+  "redirectMismatchCount": 692,
+  "redirectUndefinedCount": 691,
   "redirectOtherCount": 1,
   "expectationMismatchCount": 35,
   "expectationBreakdown": {
@@ -17,7 +17,7 @@
   "errorBreakdown": {
     "Unreachable (400)": 1,
     "Unreachable (403)": 46,
-    "Unreachable (404)": 80,
+    "Unreachable (404)": 79,
     "Unreachable (429)": 71,
     "Unreachable (ENOTFOUND)": 2,
     "Unreachable (ERR_BAD_REQUEST)": 1,
@@ -44,7 +44,7 @@
           "type": "redirect",
           "field": "href",
           "url": "https://doi.org/10.1088/0950-7671/1/3/302",
-          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=ca5fe7fb-5c79-4c9b-ba57-e1656c5bd7e6&ssb=14645292058&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=0ad22909-cnvj-490b-87e5-8fdf1e631926&ssk=botmanager_support@radware.com&ssm=55291193512620313106774640613338&ssn=910f86ac0c45d7e5a101fb58933bf142a68fc8c0f42f-f8a1-4f7f-90f611&sso=2a9eea3d-eab5ac0e59a016dc843cc4994604524293a5a9b1a666bd7f&ssp=07785640991759991398175998105720192&ssq=37912748735252407325687352711470638532405&ssr=MTQ1LjEzMi4xMDMuNzI=&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJyZCI6ImlvcC5vcmciLCJ1em14IjoiN2Y5MDAwMzNlY2ZkNDgtNDc4Zi00ZTEyLWJjZGYtYThmMDc1ZDdhNmE2MS0xNzU5OTg3MzUyOTUzMC1hZjUxNWRkMDMzZWFhZDQ5MTAiLCJfX3V6bWYiOiI3ZjkwMDBjOGMwZjQyZi1mOGExLTRmN2YtOWEzZC1lYWI1YWMwZTU5YTAxLTE3NTk5ODczNTI5NTMwLTAwMTRjMjk1NjM1OWQ3MWIxMWYxMCJ9",
+          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=a7330eec-50b6-4c31-a37e-93bbde17c30f&ssb=39509244428&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=be551e35-cnvj-4ef6-b02a-df6cc10a77fa&ssk=botmanager_support@radware.com&ssm=72909180758788998106427642671214&ssn=57424dd074dfbb24d770c0ca3d93d5fb91a7fafa93d0-875b-4fc3-8466c7&sso=01d3eac9-3c39326f37cbc67c0c350fe5e0107d4403b515612b10ee1d&ssp=91960905221759939115175990833793810&ssq=53243868847875230848888478548972497406815&ssr=MTcyLjE4Mi4yMTMuMw==&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJyZCI6ImlvcC5vcmciLCJ1em14IjoiN2Y5MDAwMTFjNTQzZGUtYzM2My00MDg2LTk2NDMtNTQzYWU2YmFlMWJlMS0xNzU5OTg4NDc4OTYwMC0wOGU5YTkyOGU4OTY0ZWNlMTAiLCJfX3V6bWYiOiI3ZjkwMDBmYWZhOTNkMC04NzViLTRmYzMtOGFjOS0zYzM5MzI2ZjM3Y2IxLTE3NTk5ODg0Nzg5NjAwLTAwMTZjYWIwYWMxZmIwNzcxNmIxMCJ9",
           "resolvedHref": "https://iopscience.iop.org/article/10.1088/0950-7671/1/3/302",
           "message": "resolved url mismatch"
         }
@@ -4258,7 +4258,7 @@
           "type": "redirect",
           "field": "href",
           "url": "https://ia800204.us.archive.org/19/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
-          "resolvedUrl": "https://ia601303.us.archive.org/1/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
+          "resolvedUrl": "https://ia801303.us.archive.org/1/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
           "resolvedHref": "undefined",
           "message": "resolved url mismatch"
         }
@@ -4638,13 +4638,12 @@
     {
       "NIST.SP.800-57p2": [
         {
-          "type": "unreachable",
+          "type": "redirect",
           "field": "href",
           "url": "https://doi.org/10.6028/NIST.SP.800-57p2",
-          "message": "Unreachable (404)",
-          "explanation": "The URL points to a resource that was not found (dead link).",
-          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
-          "riskLevel": "High"
+          "resolvedUrl": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-57p2.pdf",
+          "resolvedHref": "undefined",
+          "message": "resolved url mismatch"
         }
       ]
     },
