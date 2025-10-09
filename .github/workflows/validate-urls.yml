@@ -123,7 +123,9 @@ jobs:
             - Script: src/main/scripts/url.normalize.js --apply
             - Detected missing resolved*: ${{ steps.audit.outputs.redirect_undefined }}
             - Applied backfills: ${{ steps.norm.outputs.applied }}
-          branch: chore/url-normalize/${{ github.run_id }}
+          branch: chore/url-normalize/
+          base: ${{ github.event.repository.default_branch }}
+          delete-branch: true
           add-paths: |
             src/main/data/documents.json
             src/main/reports/url_validate_normalize.json

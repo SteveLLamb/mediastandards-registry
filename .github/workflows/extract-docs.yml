@@ -113,7 +113,8 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: "chore: Update documents.json from SMPTE sources"
           commit-options: '--allow-empty'
-          branch: chore/extract-docs             
+          branch: chore/extract-docs       
+          delete-branch: true      
           title: "Update documents.json (${{ env.ts }})"
           body: ${{ steps.prlog.outputs.body }}
           add-paths: |
