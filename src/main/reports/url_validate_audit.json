@@ -1,26 +1,26 @@
 {
-  "generatedAt": "2025-10-09T18:25:17.381Z",
+  "generatedAt": "2025-10-09T19:20:05.078Z",
   "target": "documents.json",
-  "good": 1270,
+  "good": 1338,
   "skippedByDomain": 0,
   "skippedByPublisher": 0,
   "index": {
-    "error": 219,
+    "error": 150,
     "errorBreakdown": {
       "Unreachable (400)": 1,
       "Unreachable (403)": 46,
-      "Unreachable (404)": 80,
-      "Unreachable (429)": 71,
+      "Unreachable (404)": 81,
+      "Unreachable (ECONNABORTED)": 1,
       "Unreachable (ENOTFOUND)": 2,
       "Unreachable (ERR_BAD_REQUEST)": 1,
       "Unreachable (ERR_FR_TOO_MANY_REDIRECTS)": 1,
       "Unreachable (HPE_INVALID_CONSTANT)": 16,
       "Unreachable (UNABLE_TO_VERIFY_LEAF_SIGNATURE)": 1
     },
-    "redirectMismatch": 1,
+    "redirectMismatch": 2,
     "redirectBreakdown": {
       "undefined": 0,
-      "other": 1
+      "other": 2
     },
     "expectationMismatch": 35,
     "expectationBreakdown": {
@@ -34,6 +34,7 @@
       "400": [
         {
           "docId": "T-REC-H.264.202108",
+          "publisher": "ITU-T",
           "field": "href",
           "url": "https://www.itu.int/rec/https://www.itu.int/rec/T-REC-H.264-202108-I/en/en",
           "message": "Unreachable (400)",
@@ -45,6 +46,7 @@
       "403": [
         {
           "docId": "1.1915182",
+          "publisher": "Acoustical Society of America",
           "field": "href",
           "url": "https://doi.org/10.1121/1.1915182",
           "message": "Unreachable (403)",
@@ -54,6 +56,7 @@
         },
         {
           "docId": "1.1915951",
+          "publisher": "Acoustical Society of America",
           "field": "href",
           "url": "https://doi.org/10.1121/1.1915951",
           "message": "Unreachable (403)",
@@ -63,6 +66,7 @@
         },
         {
           "docId": "1.1916111",
+          "publisher": "Acoustical Society of America",
           "field": "href",
           "url": "https://doi.org/10.1121/1.1916111",
           "message": "Unreachable (403)",
@@ -72,6 +76,7 @@
         },
         {
           "docId": "1.3061757",
+          "publisher": "Physics Today",
           "field": "href",
           "url": "https://doi.org/10.1063/1.3061757",
           "message": "Unreachable (403)",
@@ -81,6 +86,7 @@
         },
         {
           "docId": "40290752",
+          "publisher": "Society of American Archivists",
           "field": "href",
           "url": "https://www.jstor.org/stable/40290752",
           "message": "Unreachable (403)",
@@ -90,6 +96,7 @@
         },
         {
           "docId": "AIIM.MS34.1990",
+          "publisher": "ANSI/AIIM",
           "field": "href",
           "url": "https://webstore.ansi.org/standards/aiim/ansiaiimms341990",
           "message": "Unreachable (403)",
@@ -99,6 +106,7 @@
         },
         {
           "docId": "AIM.BC4.1999",
+          "publisher": "Association for Automatic Identification & Mobility",
           "field": "href",
           "url": "https://www.intertekinform.com/en-ca/standards/aim-bc4-1999-93924_saig_aim_aim_196679/?srsltid=AfmBOorrxiO18fwEVVBbLc4896_WWJF07W3mkf0GKnQNOpIMkeGjxYyT",
           "message": "Unreachable (403)",
@@ -108,6 +116,7 @@
         },
         {
           "docId": "ASA.S1.11.1986",
+          "publisher": "ANSI/ASA",
           "field": "href",
           "url": "https://webstore.ansi.org/standards/asa/ansis1111986r1998",
           "message": "Unreachable (403)",
@@ -117,6 +126,7 @@
         },
         {
           "docId": "ASA.S1.11.2004",
+          "publisher": "ANSI/ASA",
           "field": "href",
           "url": "https://webstore.ansi.org/standards/asa/ansiasas1112004r2009",
           "message": "Unreachable (403)",
@@ -126,6 +136,7 @@
         },
         {
           "docId": "ASA.S1.11.p1.2014",
+          "publisher": "ANSI/ASA",
           "field": "href",
           "url": "https://webstore.ansi.org/standards/asa/ANSIASAS1112014PartIEC61260",
           "message": "Unreachable (403)",
@@ -135,6 +146,7 @@
         },
         {
           "docId": "ASA.S1.13.2005",
+          "publisher": "ANSI/ASA",
           "field": "href",
           "url": "https://webstore.ansi.org/standards/asa/ansis1132005",
           "message": "Unreachable (403)",
@@ -144,6 +156,7 @@
         },
         {
           "docId": "ASA.S1.4.1983",
+          "publisher": "ANSI/ASA",
           "field": "href",
           "url": "https://webstore.ansi.org/standards/asa/ansis11983r20064a1985",
           "message": "Unreachable (403)",
@@ -153,6 +166,7 @@
         },
         {
           "docId": "ASA.S1.4.2014",
+          "publisher": "ANSI/ASA",
           "field": "href",
           "url": "https://webstore.ansi.org/standards/asa/ansiasas12014partiec616722013",
           "message": "Unreachable (403)",
@@ -162,6 +176,7 @@
         },
         {
           "docId": "ASA.S1.40.2006",
+          "publisher": "ANSI/ASA",
           "field": "href",
           "url": "https://webstore.ansi.org/Standards/ASA/ansiasas1402006r2011",
           "message": "Unreachable (403)",
@@ -171,6 +186,7 @@
         },
         {
           "docId": "ASA.S12.2.2008",
+          "publisher": "ANSI/ASA",
           "field": "href",
           "url": "https://webstore.ansi.org/Standards/ASA/ansiasas122008",
           "message": "Unreachable (403)",
@@ -180,6 +196,7 @@
         },
         {
           "docId": "ASA.S12.2.2019",
+          "publisher": "ANSI/ASA",
           "field": "href",
           "url": "https://webstore.ansi.org/Standards/ASA/ANSIASAS122019",
           "message": "Unreachable (403)",
@@ -189,6 +206,7 @@
         },
         {
           "docId": "ASHRAE.52.1.2019",
+          "publisher": "ANSI/ASHRAE",
           "field": "href",
           "url": "https://webstore.ansi.org/standards/ashrae/ansiashrae521992",
           "message": "Unreachable (403)",
@@ -198,6 +216,7 @@
         },
         {
           "docId": "CEA.608.2008",
+          "publisher": "CEA",
           "field": "href",
           "url": "https://webstore.ansi.org/Standards/CEA/CEA6082008ANSI",
           "message": "Unreachable (403)",
@@ -207,6 +226,7 @@
         },
         {
           "docId": "CEA.608.2014",
+          "publisher": "CEA",
           "field": "href",
           "url": "https://webstore.ansi.org/Standards/CEA/CEA6082008R2014ANSI",
           "message": "Unreachable (403)",
@@ -216,6 +236,7 @@
         },
         {
           "docId": "CEA.708.2008",
+          "publisher": "CEA",
           "field": "href",
           "url": "https://webstore.ansi.org/standards/cea/cea7082008",
           "message": "Unreachable (403)",
@@ -225,6 +246,7 @@
         },
         {
           "docId": "CEA.708.2013",
+          "publisher": "CEA",
           "field": "href",
           "url": "https://webstore.ansi.org/Standards/CEA/CEA7082013",
           "message": "Unreachable (403)",
@@ -234,6 +256,7 @@
         },
         {
           "docId": "CEA.708.2013-08",
+          "publisher": "CEA",
           "field": "href",
           "url": "https://webstore.ansi.org/Standards/CEA/CEA7082013ANSI",
           "message": "Unreachable (403)",
@@ -243,6 +266,7 @@
         },
         {
           "docId": "CTA.861-G.2016",
+          "publisher": "CTA",
           "field": "href",
           "url": "https://webstore.ansi.org/standards/ansi/cta8612016",
           "message": "Unreachable (403)",
@@ -252,6 +276,7 @@
         },
         {
           "docId": "EBU.Tech3245s.1988",
+          "publisher": "EBU",
           "field": "href",
           "url": "https://tech.ebu.ch/publications/tech3245s",
           "message": "Unreachable (403)",
@@ -261,6 +286,7 @@
         },
         {
           "docId": "EBU.Tech3267.1992",
+          "publisher": "EBU",
           "field": "href",
           "url": "https://tech.ebu.ch/publications/tech3267",
           "message": "Unreachable (403)",
@@ -270,6 +296,7 @@
         },
         {
           "docId": "EBU.Tech3289s.2004",
+          "publisher": "EBU",
           "field": "href",
           "url": "https://tech.ebu.ch/publications/tech3289s",
           "message": "Unreachable (403)",
@@ -279,6 +306,7 @@
         },
         {
           "docId": "IEC.60942.2003",
+          "publisher": "IEC",
           "field": "href",
           "url": "https://webstore.ansi.org/Standards/IEC/iec60942ed2003?gclid=Cj0KCQiA1NebBhDDARIsAANiDD26JsPj8OzVkY4eaEyEyyY44AuCibUBoWJFkJElQxCBEhSUf6p6XtgaAnHDEALw_wcB",
           "message": "Unreachable (403)",
@@ -288,6 +316,7 @@
         },
         {
           "docId": "IEC.60942.2017",
+          "publisher": "IEC",
           "field": "href",
           "url": "https://webstore.ansi.org/Standards/IEC/IEC60942Ed2017",
           "message": "Unreachable (403)",
@@ -297,6 +326,7 @@
         },
         {
           "docId": "IEC.61260-1.2014",
+          "publisher": "IEC",
           "field": "href",
           "url": "https://webstore.ansi.org/Standards/IEC/IEC61260Ed2014?gclid=Cj0KCQiA1NebBhDDARIsAANiDD3jVHcsJVmzFtzXv0qlg7FwAo4R0ITV4qqj5yLfXDuC7x24gxEBDFwaAiHbEALw_wcB",
           "message": "Unreachable (403)",
@@ -306,6 +336,7 @@
         },
         {
           "docId": "INCITS.X3.4.1986",
+          "publisher": "ANSI/INCITS",
           "field": "href",
           "url": "https://webstore.ansi.org/standards/incits/ansix31986r1997",
           "message": "Unreachable (403)",
@@ -315,6 +346,7 @@
         },
         {
           "docId": "ISBN.9780471223573",
+          "publisher": "Wiley",
           "field": "href",
           "url": "https://www.wiley.com/en-gb/Practical+Cryptography-p-9780471223573",
           "message": "Unreachable (403)",
@@ -324,6 +356,7 @@
         },
         {
           "docId": "ISBN.9781119183471",
+          "publisher": "Wiley",
           "field": "href",
           "url": "https://onlinelibrary.wiley.com/doi/book/10.1002/9781119183471",
           "message": "Unreachable (403)",
@@ -333,6 +366,7 @@
         },
         {
           "docId": "ISSN.15502716",
+          "publisher": "The Journal of the Illuminating Engineering Society",
           "field": "href",
           "url": "https://doi.org/10.1080/15502724.2014.839020",
           "message": "Unreachable (403)",
@@ -342,6 +376,7 @@
         },
         {
           "docId": "JAIC.019713697806124475",
+          "publisher": "Journal of the American Institute for Conservation",
           "field": "href",
           "url": "https://doi.org/10.1179/019713697806124475",
           "message": "Unreachable (403)",
@@ -351,6 +386,7 @@
         },
         {
           "docId": "NAPM.IT2.18.1996",
+          "publisher": "ANSI/NAPM",
           "field": "href",
           "url": "https://webstore.ansi.org/standards/i3a/ansinapmit2191994",
           "message": "Unreachable (403)",
@@ -360,6 +396,7 @@
         },
         {
           "docId": "NAPM.IT2.19.1994",
+          "publisher": "ANSI/NAPM",
           "field": "href",
           "url": "https://webstore.ansi.org/standards/i3a/ansinapmit2191994",
           "message": "Unreachable (403)",
@@ -369,6 +406,7 @@
         },
         {
           "docId": "NAPM.IT9.1.1996",
+          "publisher": "ANSI/NAPM",
           "field": "href",
           "url": "https://webstore.ansi.org/standards/i3a/ansinapmit91996",
           "message": "Unreachable (403)",
@@ -378,6 +416,7 @@
         },
         {
           "docId": "NAPM.IT9.12.1995",
+          "publisher": "ANSI/NAPM",
           "field": "href",
           "url": "https://webstore.ansi.org/standards/i3a/ansinapmit9121995",
           "message": "Unreachable (403)",
@@ -387,6 +426,7 @@
         },
         {
           "docId": "NAPM.IT9.13.1996",
+          "publisher": "ANSI/NAPM",
           "field": "href",
           "url": "https://webstore.ansi.org/standards/i3a/ansinapmit9131996",
           "message": "Unreachable (403)",
@@ -396,6 +436,7 @@
         },
         {
           "docId": "NAPM.IT9.5.1996",
+          "publisher": "ANSI/NAPM",
           "field": "href",
           "url": "https://webstore.ansi.org/standards/i3a/ansiiso82251995napmit91996",
           "message": "Unreachable (403)",
@@ -405,6 +446,7 @@
         },
         {
           "docId": "NAPM.IT9.6.1991",
+          "publisher": "ANSI/NAPM",
           "field": "href",
           "url": "https://webstore.ansi.org/standards/i3a/ansinapmit91991r1996",
           "message": "Unreachable (403)",
@@ -414,6 +456,7 @@
         },
         {
           "docId": "NFPA.232.1995",
+          "publisher": "NFPA",
           "field": "href",
           "url": "https://webstore.ansi.org/standards/nfpa/nfpa2321995",
           "message": "Unreachable (403)",
@@ -423,6 +466,7 @@
         },
         {
           "docId": "NFPA.232.2022",
+          "publisher": "NFPA",
           "field": "href",
           "url": "https://webstore.ansi.org/standards/nfpa/nfpa2322022",
           "message": "Unreachable (403)",
@@ -432,6 +476,7 @@
         },
         {
           "docId": "NFPA.90A.1999",
+          "publisher": "NFPA",
           "field": "href",
           "url": "https://webstore.ansi.org/standards/nfpa/nfpa90a1999",
           "message": "Unreachable (403)",
@@ -441,6 +486,7 @@
         },
         {
           "docId": "NFPA.90A.2021",
+          "publisher": "NFPA",
           "field": "href",
           "url": "https://webstore.ansi.org/standards/nfpa/nfpa90a2021",
           "message": "Unreachable (403)",
@@ -450,6 +496,7 @@
         },
         {
           "docId": "PIMA.IT3.301.1990",
+          "publisher": "ANSI/PIMA",
           "field": "href",
           "url": "https://webstore.ansi.org/standards/i3a/ansiiso27211982r1997pimait3301",
           "message": "Unreachable (403)",
@@ -461,6 +508,7 @@
       "404": [
         {
           "docId": "AIM.USS-128.1986",
+          "publisher": "Automatic Identification Manufacturers",
           "field": "href",
           "url": "https://www.expresscorp.com/uploads/specifications/45/USS-128.pdf",
           "message": "Unreachable (404)",
@@ -470,6 +518,7 @@
         },
         {
           "docId": "ATSC.AC3.A52.2018",
+          "publisher": "ATSC",
           "field": "href",
           "url": "https://www.atsc.org/wp-content/uploads/2015/03/A52-2018-1.pdf",
           "message": "Unreachable (404)",
@@ -479,6 +528,7 @@
         },
         {
           "docId": "DCI.DCA-DVD.2022-0303",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/specification/DCI-Direct-View-Display-Addendum-v100_2022-0330.pdf",
           "message": "Unreachable (404)",
@@ -488,6 +538,7 @@
         },
         {
           "docId": "DCI.DCA-OBA.2013-0909",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/archives/spec_v1_2_With_Errata_Incorporated/DCI_Object-Based_Audio_Addendum_2013-0909.pdf",
           "message": "Unreachable (404)",
@@ -497,6 +548,7 @@
         },
         {
           "docId": "DCI.DCA-OBA.2018-1001",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/specification/DCI_Object-Based_Audio_Addendum_2018-1001.pdf",
           "message": "Unreachable (404)",
@@ -506,6 +558,7 @@
         },
         {
           "docId": "DCI.DCA-S.2017-0711",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/specification/DCI_Stereoscopic_DC_Addendum.pdf",
           "message": "Unreachable (404)",
@@ -515,6 +568,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.2.2012-1010",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/archives/spec_v1_2_With_Errata_Incorporated/DCI_DCSS_v12_with_errata_2012-1010.pdf",
           "message": "Unreachable (404)",
@@ -524,6 +578,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.2.2013-0821",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/errata/v1_2_with-errata-8-12/Errata_1-2_2013-0821.pdf",
           "message": "Unreachable (404)",
@@ -533,6 +588,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.2.2014-0904",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/errata/v1_2_with-errata-8-12/DCI-Errata-3-9_v1-2-inc_2014-0904.pdf",
           "message": "Unreachable (404)",
@@ -542,6 +598,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.2.2014-0905",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/errata/v1_2_with-errata-8-12/DCSS-replacement_Chapter_9--20140904.pdf",
           "message": "Unreachable (404)",
@@ -551,6 +608,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.2.2015-0826",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/errata/v1_2_with-errata-8-12/DCI-Errata_10-13_Aug-26-2015_v1-2_08-30-2012.pdf",
           "message": "Unreachable (404)",
@@ -560,6 +618,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.2.2015-0925",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/errata/v1_2_with-errata-8-12/DCI-Errata_14_Sept-25-2015_v1-2_08-30-2012.pdf",
           "message": "Unreachable (404)",
@@ -569,6 +628,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.2.2016-0331",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/errata/v1_2_with-errata-8-12/DCI-Errata_15-23_March-31-2016_v1-2_08-30-2012.pdf",
           "message": "Unreachable (404)",
@@ -578,6 +638,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.2.2016-0428",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/errata/v1_2_with-errata-8-12/DCI-Errata_24_APRIL-28-2016_v1-2_08-30-2012.pdf",
           "message": "Unreachable (404)",
@@ -587,6 +648,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.2.2017-0302",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/errata/v1_2_with-errata-8-12/DCSS_Errata_25-38_as_Approved_2017-0302.pdf",
           "message": "Unreachable (404)",
@@ -596,6 +658,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.2.2017-0802",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/errata/v1_2_with-errata-8-12/DCI_DCSS_Erratum_39_2017-0802.pdf",
           "message": "Unreachable (404)",
@@ -605,6 +668,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.2.2017-0829",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/errata/v1_2_with-errata-8-12/DCI_DCSS_Errata_40-42_2017-0829.pdf",
           "message": "Unreachable (404)",
@@ -614,6 +678,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.2.2017-1005",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/errata/v1_2_with-errata-8-12/DCI_DCSS_Erratum_43_2017-1005.pdf",
           "message": "Unreachable (404)",
@@ -623,6 +688,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.2.2018-0124",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/errata/v1_2_with-errata-8-12/DCI_DCSS_Errata_44-45_2018-0124.pdf",
           "message": "Unreachable (404)",
@@ -632,6 +698,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.3.2018-0627",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/specification/DCI_DCSS_Ver1-3_2018-0627.pdf",
           "message": "Unreachable (404)",
@@ -641,6 +708,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.3.2018-1001",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/errata/v1_3/DCI_DCSS_Errata_1-9_2018-1001.pdf",
           "message": "Unreachable (404)",
@@ -650,6 +718,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.3.2018-1207",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/errata/v1_3/DCI_DCSS_Errata_10-12_2018-1207.pdf",
           "message": "Unreachable (404)",
@@ -659,6 +728,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.3.20190809",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/errata/v1_3/DCI_DCSS_Errata_13-17_2019-0809.pdf",
           "message": "Unreachable (404)",
@@ -668,6 +738,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.3.20191219",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/errata/v1_3/DCI_DCSS_Errata_18-20_2019-1219.pdf",
           "message": "Unreachable (404)",
@@ -677,6 +748,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.3.2020-0206",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/errata/v1_3/DCI_DCSS_Erratum_21_2020-0206.pdf",
           "message": "Unreachable (404)",
@@ -686,6 +758,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.3.2020-0506",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/errata/v1_3/DCI_DCSS_Errata_22-28_2020-0506.pdf",
           "message": "Unreachable (404)",
@@ -695,6 +768,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.3.2020-0714",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/errata/v1_3/DCI_DCSS_Errata_29_2020-0714.pdf",
           "message": "Unreachable (404)",
@@ -704,6 +778,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.4.0.2020-0720",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/specification/DCI_DCSS_v1-4_20-July-2020.pdf",
           "message": "Unreachable (404)",
@@ -713,6 +788,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.4.0.2020-0902",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/specification/DCI_DCSSv1-4_Errata_1-2_9-02-2020.pdf",
           "message": "Unreachable (404)",
@@ -722,6 +798,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.4.0.2020-1118",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/specification/DCI_DCSSv1-4_Errata_3-15_11-18-2020.pdf",
           "message": "Unreachable (404)",
@@ -731,6 +808,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.4.0.2021-0106",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/specification/DCI_DCSSv1-4_Errata_16-17_1-6-2021.pdf",
           "message": "Unreachable (404)",
@@ -740,6 +818,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.4.0.2021-0324",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/specification/DCI_DCSSv1-4_Errata-18-19_2021-03-24.pdf",
           "message": "Unreachable (404)",
@@ -749,6 +828,7 @@
         },
         {
           "docId": "DCI.DCSS.v1.4.0.2021-0512",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/specification/DCI_DCSSv1-4_Errata_20-23_05-12-2021.pdf",
           "message": "Unreachable (404)",
@@ -758,6 +838,7 @@
         },
         {
           "docId": "DCI.M-DVD.2018-0627",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/announcements/DCI-Memo-On-Direct-View-Displays_2108-0627.pdf",
           "message": "Unreachable (404)",
@@ -767,6 +848,7 @@
         },
         {
           "docId": "DCI.M-HDR.2021-0701",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/announcements/DCI-Memo-on-HDR-Image-Testing_2021-0701.pdf",
           "message": "Unreachable (404)",
@@ -776,6 +858,7 @@
         },
         {
           "docId": "DCI.M-NIST.2020-0701",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/FIPS/DCI_Memo_on_NIST_Standards_transitions_and_Non-FIPS_mode_2020-07-01.pdf",
           "message": "Unreachable (404)",
@@ -785,6 +868,7 @@
         },
         {
           "docId": "DCI.M-RNG.2018-0511",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/announcements/DCI-Memo-on-RNG-Revocation_20180511.pdf",
           "message": "Unreachable (404)",
@@ -794,6 +878,7 @@
         },
         {
           "docId": "DCI.RP-HFR.2012-0928",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/Recommended_Practice/DCI_HFR_RP_2015-0716.pdf",
           "message": "Unreachable (404)",
@@ -803,6 +888,7 @@
         },
         {
           "docId": "DCI.S-TES.2019-0329",
+          "publisher": "DCI",
           "field": "href",
           "url": "https://www.dcimovies.com/announcements/DCI-Technology-Evolution-Statement_2019-0329.pdf",
           "message": "Unreachable (404)",
@@ -812,6 +898,7 @@
         },
         {
           "docId": "ICAO.REF08-Doc9674",
+          "publisher": "International Civil Aviation Organization",
           "field": "href",
           "url": "https://www.icao.int/NACC/Documents/Meetings/2014/ECARAIM/REF08-Doc9674.pdf",
           "message": "Unreachable (404)",
@@ -821,6 +908,7 @@
         },
         {
           "docId": "ISDCF.D02.2011",
+          "publisher": "ISDCF",
           "field": "href",
           "url": "https://isdcf.com/papers/ISDCF-Doc2-DCP-TransitionReview.pdf",
           "message": "Unreachable (404)",
@@ -830,6 +918,7 @@
         },
         {
           "docId": "ISDCF.D03.2017",
+          "publisher": "ISDCF",
           "field": "href",
           "url": "https://isdcf.com/papers/ISDCF-Doc3-Delivery-Recs.pdf",
           "message": "Unreachable (404)",
@@ -839,6 +928,7 @@
         },
         {
           "docId": "ISDCF.D04.2017",
+          "publisher": "ISDCF",
           "field": "href",
           "url": "https://isdcf.com/papers/ISDCF-Doc4-Audio-channel-recommendations.pdf",
           "message": "Unreachable (404)",
@@ -848,6 +938,7 @@
         },
         {
           "docId": "ISDCF.D05.2017",
+          "publisher": "ISDCF",
           "field": "href",
           "url": "https://isdcf.com/papers/ISDCF-Doc5-kdm-certs.pdf",
           "message": "Unreachable (404)",
@@ -857,6 +948,7 @@
         },
         {
           "docId": "ISDCF.D07.2017",
+          "publisher": "ISDCF",
           "field": "href",
           "url": "https://isdcf.com/papers/ISDCF-Doc7-DigitalCinemaLanguageCodes.pdf",
           "message": "Unreachable (404)",
@@ -866,6 +958,7 @@
         },
         {
           "docId": "ISDCF.D08.2012",
+          "publisher": "ISDCF",
           "field": "href",
           "url": "http://isdcf.com/papers/ISDCF-Doc8-TheaterKeyRetrieval-TKR-v03.pdf",
           "message": "Unreachable (404)",
@@ -875,6 +968,7 @@
         },
         {
           "docId": "ISDCF.D09.2016",
+          "publisher": "ISDCF",
           "field": "href",
           "url": "https://isdcf.com/papers/ISDCF-Doc9-Closed-Caption-Authoring-Best-Practices.pdf",
           "message": "Unreachable (404)",
@@ -884,6 +978,7 @@
         },
         {
           "docId": "ISDCF.D10.2016",
+          "publisher": "ISDCF",
           "field": "href",
           "url": "https://isdcf.com/papers/ISDCF-Doc10-Subtitles-and-Captions-in%20Digital-Cinema-20160211.pdf",
           "message": "Unreachable (404)",
@@ -893,6 +988,7 @@
         },
         {
           "docId": "ISDCF.D11.2016",
+          "publisher": "ISDCF",
           "field": "href",
           "url": "https://isdcf.com/papers/ISDCF-Doc11-MovieLoudnessMeasurement20160315.pdf",
           "message": "Unreachable (404)",
@@ -902,6 +998,7 @@
         },
         {
           "docId": "ISDCF.D12.2017",
+          "publisher": "ISDCF",
           "field": "href",
           "url": "https://isdcf.com/papers/ISDCF-Doc12-Recommended-Practice-for-Ingest-Behavior-DRAFT-20170322.pdf",
           "message": "Unreachable (404)",
@@ -911,6 +1008,7 @@
         },
         {
           "docId": "ISDCF.D13.2018",
+          "publisher": "ISDCF",
           "field": "href",
           "url": "https://isdcf.com/papers/ISDCF-Doc13-Sign-Language-Video-Encoding-for-Digital-Cinema.pdf",
           "message": "Unreachable (404)",
@@ -920,6 +1018,7 @@
         },
         {
           "docId": "ISDCF.D14.2019",
+          "publisher": "ISDCF",
           "field": "href",
           "url": "https://isdcf.com/papers/ISDCF-Doc14-Digital-Delivery-of-DCPs.pdf",
           "message": "Unreachable (404)",
@@ -929,6 +1028,7 @@
         },
         {
           "docId": "ISDCF.D15.2020",
+          "publisher": "ISDCF",
           "field": "href",
           "url": "https://isdcf.com/papers/ISDCF-Doc15-IAB-Profile-1-202006012.pdf",
           "message": "Unreachable (404)",
@@ -938,6 +1038,7 @@
         },
         {
           "docId": "ISDCF.P-HFR.2012",
+          "publisher": "ISDCF",
           "field": "href",
           "url": "https://isdcf.com/papers/ISDCF-HighFrameRate-DCP.pdf",
           "message": "Unreachable (404)",
@@ -947,6 +1048,7 @@
         },
         {
           "docId": "ISDCF.RP-430-10.2018",
+          "publisher": "ISDCF",
           "field": "href",
           "url": "http://isdcf.com/papers/ISDCF-SMPTE-ST-430-10-Implementation-Notes20180308.pdf",
           "message": "Unreachable (404)",
@@ -956,6 +1058,7 @@
         },
         {
           "docId": "ISO.26428-1.20XX",
+          "publisher": "ISO",
           "field": "href",
           "url": "https://www.iso.org/standard/80068.html",
           "message": "Unreachable (404)",
@@ -965,6 +1068,7 @@
         },
         {
           "docId": "ISO.26430-9.2009am1.20XX",
+          "publisher": "ISO",
           "field": "href",
           "url": "https://www.iso.org/standard/80075.html",
           "message": "Unreachable (404)",
@@ -973,7 +1077,18 @@
           "riskLevel": "High"
         },
         {
+          "docId": "ISO.26433.2009am1.20XX",
+          "publisher": "ISO",
+          "field": "href",
+          "url": "https://www.iso.org/standard/80072.html",
+          "message": "Unreachable (404)",
+          "explanation": "The URL points to a resource that was not found (dead link).",
+          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
+          "riskLevel": "High"
+        },
+        {
           "docId": "LSI.WP-PSTA.200307",
+          "publisher": "Live Sound International",
           "field": "href",
           "url": "http://www.livesoundint.com/archives/2003/july/align/align.php",
           "message": "Unreachable (404)",
@@ -983,6 +1098,7 @@
         },
         {
           "docId": "NIST.SP.800-57p2",
+          "publisher": "NIST",
           "field": "href",
           "url": "https://doi.org/10.6028/NIST.SP.800-57p2",
           "message": "Unreachable (404)",
@@ -992,6 +1108,7 @@
         },
         {
           "docId": "R-REC-BS.1726-0.200504",
+          "publisher": "ITU-R",
           "field": "href",
           "url": "https://www.itu.int/dms_pubrec/itu-r/rec/bs/R-REC-BS.1726-0-200504-I!!MSW-E.doc",
           "message": "Unreachable (404)",
@@ -1001,6 +1118,7 @@
         },
         {
           "docId": "R-REC-BS.1770-4.201510",
+          "publisher": "ITU-R",
           "field": "href",
           "url": "https://www.itu.int/dms_pubrec/itu-r/rec/bs/R-REC-BS.1770-4-201510-I!!MSW-E.docx",
           "message": "Unreachable (404)",
@@ -1010,6 +1128,7 @@
         },
         {
           "docId": "SMPTE.AG16.2020",
+          "publisher": "SMPTE",
           "field": "href",
           "url": "https://www.smpte.org/sites/default/files/AG-16-Standards-Style-Guide.pdf",
           "message": "Unreachable (404)",
@@ -1019,6 +1138,7 @@
         },
         {
           "docId": "SMPTE.EG16.2014",
+          "publisher": "SMPTE",
           "field": "href",
           "url": "https://doi.org/10.5594/SMPTE.EG16.2014",
           "message": "Unreachable (404)",
@@ -1028,6 +1148,7 @@
         },
         {
           "docId": "SMPTE.OM.Mem.2018",
+          "publisher": "SMPTE",
           "field": "href",
           "url": "https://www.smpte.org/sites/default/files/SMPTE%20Membership%20OM%20v3.4.pdf",
           "message": "Unreachable (404)",
@@ -1037,6 +1158,7 @@
         },
         {
           "docId": "SMPTE.OV2067-0.2021",
+          "publisher": "SMPTE",
           "field": "href",
           "url": "https://doi.org/10.5594/SMPTE.SMPTE.OV2067-0.2021",
           "message": "Unreachable (404)",
@@ -1046,6 +1168,7 @@
         },
         {
           "docId": "SMPTE.RDD29.2018",
+          "publisher": "SMPTE",
           "field": "href",
           "url": "https://doi.org/10.5594/SMPTE.RDD29.2018",
           "message": "Unreachable (404)",
@@ -1055,6 +1178,7 @@
         },
         {
           "docId": "SMPTE.RP27-1.1989",
+          "publisher": "SMPTE",
           "field": "href",
           "url": "https://doi.org/10.5594/SMPTE.RP27-1.1989",
           "message": "Unreachable (404)",
@@ -1064,6 +1188,7 @@
         },
         {
           "docId": "SMPTE.RP27-2.1989",
+          "publisher": "SMPTE",
           "field": "href",
           "url": "https://doi.org/10.5594/SMPTE.RP27-2.1989",
           "message": "Unreachable (404)",
@@ -1073,6 +1198,7 @@
         },
         {
           "docId": "SMPTE.RP27-3.1989",
+          "publisher": "SMPTE",
           "field": "href",
           "url": "https://doi.org/10.5594/SMPTE.RP27-3.1989",
           "message": "Unreachable (404)",
@@ -1082,6 +1208,7 @@
         },
         {
           "docId": "SMPTE.RP27-4.1994",
+          "publisher": "SMPTE",
           "field": "href",
           "url": "https://doi.org/10.5594/SMPTE.RP27-4.1994",
           "message": "Unreachable (404)",
@@ -1091,6 +1218,7 @@
         },
         {
           "docId": "SMPTE.RP27-5.1989",
+          "publisher": "SMPTE",
           "field": "href",
           "url": "https://doi.org/10.5594/SMPTE.RP27-5.1989",
           "message": "Unreachable (404)",
@@ -1100,6 +1228,7 @@
         },
         {
           "docId": "SMPTE.ST11.1995",
+          "publisher": "SMPTE",
           "field": "href",
           "url": "https://doi.org/10.5594/SMPTE.ST11.1995",
           "message": "Unreachable (404)",
@@ -1109,6 +1238,7 @@
         },
         {
           "docId": "SMPTE.ST123.XXXX",
+          "publisher": "SMPTE",
           "field": "href",
           "url": "https://doi.org/10.5594/SMPTE.ST123.2023",
           "message": "Unreachable (404)",
@@ -1118,6 +1248,7 @@
         },
         {
           "docId": "SMPTE.ST292-1.2019",
+          "publisher": "SMPTE",
           "field": "href",
           "url": "https://doi.org/10.5594/SMPTE.ST292-1.2019",
           "message": "Unreachable (404)",
@@ -1127,6 +1258,7 @@
         },
         {
           "docId": "SMPTE.ST334-2.2015",
+          "publisher": "SMPTE",
           "field": "href",
           "url": "https://doi.org/10.5594/SMPTE.ST334-2.2015",
           "message": "Unreachable (404)",
@@ -1136,6 +1268,7 @@
         },
         {
           "docId": "SMPTE.ST377-1.2011Am2.2012",
+          "publisher": "SMPTE",
           "field": "href",
           "url": "https://doi.org/10.5594/SMPTE.ST377-1.2011Am2.2012",
           "message": "Unreachable (404)",
@@ -1145,6 +1278,7 @@
         },
         {
           "docId": "SMPTE.ST377-42.2021",
+          "publisher": "SMPTE",
           "field": "href",
           "url": "https://doi.org/10.5594/SMPTE.ST377-42.2021",
           "message": "Unreachable (404)",
@@ -1154,6 +1288,7 @@
         },
         {
           "docId": "SMPTE.ST429-6.2006Am1.2017",
+          "publisher": "SMPTE",
           "field": "href",
           "url": "https://doi.org/10.5594/SMPTE.ST429-6.2006Am1.2017",
           "message": "Unreachable (404)",
@@ -1163,6 +1298,7 @@
         },
         {
           "docId": "SMPTE.ST429-9.2007Am1.2010",
+          "publisher": "SMPTE",
           "field": "href",
           "url": "https://doi.org/10.5594/SMPTE.ST429-9.2007Am1.2010",
           "message": "Unreachable (404)",
@@ -1172,6 +1308,7 @@
         },
         {
           "docId": "SMPTE.ST430-3.2008Am2.2012",
+          "publisher": "SMPTE",
           "field": "href",
           "url": "https://doi.org/10.5594/SMPTE.ST430-3.2008Am2.2012",
           "message": "Unreachable (404)",
@@ -1180,650 +1317,10 @@
           "riskLevel": "High"
         }
       ],
-      "429": [
-        {
-          "docId": "ISO.26433.2009",
-          "field": "href",
-          "url": "https://www.iso.org/standard/52793.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.26433.2009am1.20XX",
-          "field": "href",
-          "url": "https://www.iso.org/standard/80072.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.2721.2013",
-          "field": "href",
-          "url": "https://www.iso.org/standard/62742.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.2906.2002",
-          "field": "href",
-          "url": "https://www.iso.org/standard/30126.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.2907.2002",
-          "field": "href",
-          "url": "https://www.iso.org/standard/25425.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.3166-1.1997",
-          "field": "href",
-          "url": "https://www.iso.org/standard/24591.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.3166-1.2006",
-          "field": "href",
-          "url": "https://www.iso.org/standard/39719.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.3166-1.2006cor1.2007",
-          "field": "href",
-          "url": "https://www.iso.org/standard/46123.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.3166-1.2013",
-          "field": "href",
-          "url": "https://www.iso.org/standard/63545.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.3166.1993",
-          "field": "href",
-          "url": "https://www.iso.org/standard/22748.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.3382-1.2009",
-          "field": "href",
-          "url": "https://www.iso.org/standard/40979.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.3382-3.2012",
-          "field": "href",
-          "url": "https://www.iso.org/standard/46520.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.3382-3.2022",
-          "field": "href",
-          "url": "https://www.iso.org/standard/77437.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.3741.2010",
-          "field": "href",
-          "url": "https://www.iso.org/standard/52053.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.3743-1.2010",
-          "field": "href",
-          "url": "https://www.iso.org/standard/52054.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.3743-2.1994",
-          "field": "href",
-          "url": "https://www.iso.org/standard/21753.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.3743-2.2018",
-          "field": "href",
-          "url": "https://www.iso.org/standard/69600.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.3744.2010",
-          "field": "href",
-          "url": "https://www.iso.org/standard/52055.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.3745.2003",
-          "field": "href",
-          "url": "https://www.iso.org/cms/%20render/live/en/sites/isoorg/contents/data/standard/02/17/21750.html?browse=tc",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.3745.2012",
-          "field": "href",
-          "url": "https://www.iso.org/cms/%20render/live/en/sites/isoorg/contents/data/standard/04/53/45362.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.3746.2010",
-          "field": "href",
-          "url": "https://www.iso.org/standard/52056.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.5-2.1991",
-          "field": "href",
-          "url": "https://www.iso.org/standard/20037.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.5-2.2001",
-          "field": "href",
-          "url": "https://www.iso.org/standard/28004.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.5-2.2009",
-          "field": "href",
-          "url": "https://www.iso.org/standard/52914.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.5-3.2009",
-          "field": "href",
-          "url": "https://www.iso.org/standard/52915.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.5768.1998",
-          "field": "href",
-          "url": "https://www.iso.org/standard/30125.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.5926.2023",
-          "field": "href",
-          "url": "https://www.iso.org/standard/81846.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.639-1.2002",
-          "field": "href",
-          "url": "https://www.iso.org/standard/22109.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.639-2.1998",
-          "field": "href",
-          "url": "https://www.iso.org/standard/4767.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.646.1991",
-          "field": "href",
-          "url": "https://www.iso.org/standard/4777.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.7064.2003",
-          "field": "href",
-          "url": "https://www.iso.org/standard/31531.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.7185.1990",
-          "field": "href",
-          "url": "https://www.iso.org/standard/13802.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.7589.2002",
-          "field": "href",
-          "url": "https://www.iso.org/standard/33979.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.80000-1.2022",
-          "field": "href",
-          "url": "https://www.iso.org/standard/76921.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.80000-10.2019",
-          "field": "href",
-          "url": "https://www.iso.org/standard/64980.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.80000-11.2019",
-          "field": "href",
-          "url": "https://www.iso.org/standard/64982.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.80000-12.2019",
-          "field": "href",
-          "url": "https://www.iso.org/standard/63480.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.80000-13.2008",
-          "field": "href",
-          "url": "https://www.iso.org/standard/31898.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.80000-2.2019",
-          "field": "href",
-          "url": "https://www.iso.org/standard/64973.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.80000-3.2019",
-          "field": "href",
-          "url": "https://www.iso.org/standard/64974.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.80000-4.2019",
-          "field": "href",
-          "url": "https://www.iso.org/standard/64975.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.80000-5.2019",
-          "field": "href",
-          "url": "https://www.iso.org/standard/64976.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.80000-6.2022",
-          "field": "href",
-          "url": "https://www.iso.org/standard/77846.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.80000-7.2019",
-          "field": "href",
-          "url": "https://www.iso.org/standard/64977.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.80000-8.2020",
-          "field": "href",
-          "url": "https://www.iso.org/standard/64978.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.80000-9.2019",
-          "field": "href",
-          "url": "https://www.iso.org/standard/64979.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.8601-1.2019",
-          "field": "href",
-          "url": "https://www.iso.org/standard/70907.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.8601-2.2019",
-          "field": "href",
-          "url": "https://www.iso.org/standard/70908.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.8601.2004",
-          "field": "href",
-          "url": "https://www.iso.org/standard/40874.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.8824-1.2002",
-          "field": "href",
-          "url": "https://www.iso.org/standard/35684.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.8824-1.2008",
-          "field": "href",
-          "url": "https://www.iso.org/standard/54012.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.8824-1.2015",
-          "field": "href",
-          "url": "https://www.iso.org/standard/68350.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.8824-1.2015amd1.2019",
-          "field": "href",
-          "url": "https://www.iso.org/standard/76502.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.8824-1.2015cor1.2017",
-          "field": "href",
-          "url": "https://www.iso.org/standard/73293.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.8824-1.2015cor2.2018",
-          "field": "href",
-          "url": "https://www.iso.org/standard/76503.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.8824-1.2015cor3.2018",
-          "field": "href",
-          "url": "https://www.iso.org/standard/76759.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.8825-1.1998",
-          "field": "href",
-          "url": "https://www.iso.org/standard/32306.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.8825-1.2002",
-          "field": "href",
-          "url": "https://www.iso.org/standard/35688.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.8825-1.2008",
-          "field": "href",
-          "url": "https://www.iso.org/standard/54011.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.8825-1.2015",
-          "field": "href",
-          "url": "https://www.iso.org/standard/68345.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.8859-1.1998",
-          "field": "href",
-          "url": "https://www.iso.org/standard/28245.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.8860-1.1987",
-          "field": "href",
-          "url": "https://www.iso.org/standard/16348.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.8860-1.1987cor1.1990",
-          "field": "href",
-          "url": "https://www.iso.org/standard/16349.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.8860-2.1987",
-          "field": "href",
-          "url": "https://www.iso.org/standard/16350.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.8860-2.1987cor1.1990",
-          "field": "href",
-          "url": "https://www.iso.org/standard/16351.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.9293.1987",
-          "field": "href",
-          "url": "https://www.iso.org/standard/16948.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.9293.1994",
-          "field": "href",
-          "url": "https://www.iso.org/standard/21273.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.9899.1999",
-          "field": "href",
-          "url": "https://www.iso.org/standard/29237.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.9899.2011",
-          "field": "href",
-          "url": "https://www.iso.org/standard/57853.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.9899.2018",
-          "field": "href",
-          "url": "https://www.iso.org/standard/74528.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
-          "docId": "ISO.Dir-P2.2021",
-          "field": "href",
-          "url": "https://www.iso.org/sites/directives/current/part2/index.xhtml",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        }
-      ],
       "HPE_INVALID_CONSTANT": [
         {
           "docId": "AMPAS.P.2013-001",
+          "publisher": "AMPAS",
           "field": "href",
           "url": "http://j.mp/P-2013-001",
           "message": "Unreachable (HPE_INVALID_CONSTANT)",
@@ -1833,6 +1330,7 @@
         },
         {
           "docId": "AMPAS.S.2013-001",
+          "publisher": "AMPAS",
           "field": "href",
           "url": "http://j.mp/S-2013-001",
           "message": "Unreachable (HPE_INVALID_CONSTANT)",
@@ -1842,6 +1340,7 @@
         },
         {
           "docId": "AMPAS.S.2014-002",
+          "publisher": "AMPAS",
           "field": "href",
           "url": "http://j.mp/S-2014-002",
           "message": "Unreachable (HPE_INVALID_CONSTANT)",
@@ -1851,6 +1350,7 @@
         },
         {
           "docId": "AMPAS.S.2014-003",
+          "publisher": "AMPAS",
           "field": "href",
           "url": "http://j.mp/S-2014-003",
           "message": "Unreachable (HPE_INVALID_CONSTANT)",
@@ -1860,6 +1360,7 @@
         },
         {
           "docId": "AMPAS.S.2014-004",
+          "publisher": "AMPAS",
           "field": "href",
           "url": "http://j.mp/S-2014-004",
           "message": "Unreachable (HPE_INVALID_CONSTANT)",
@@ -1869,6 +1370,7 @@
         },
         {
           "docId": "AMPAS.S.2014-006",
+          "publisher": "AMPAS",
           "field": "href",
           "url": "http://j.mp/S-2014-006",
           "message": "Unreachable (HPE_INVALID_CONSTANT)",
@@ -1878,6 +1380,7 @@
         },
         {
           "docId": "AMPAS.TB.2014-001",
+          "publisher": "AMPAS",
           "field": "href",
           "url": "http://j.mp/TB-2014-001",
           "message": "Unreachable (HPE_INVALID_CONSTANT)",
@@ -1887,6 +1390,7 @@
         },
         {
           "docId": "AMPAS.TB.2014-002",
+          "publisher": "AMPAS",
           "field": "href",
           "url": "http://j.mp/TB-2014-002",
           "message": "Unreachable (HPE_INVALID_CONSTANT)",
@@ -1896,6 +1400,7 @@
         },
         {
           "docId": "AMPAS.TB.2014-004",
+          "publisher": "AMPAS",
           "field": "href",
           "url": "http://j.mp/TB-2014-004",
           "message": "Unreachable (HPE_INVALID_CONSTANT)",
@@ -1905,6 +1410,7 @@
         },
         {
           "docId": "AMPAS.TB.2014-005",
+          "publisher": "AMPAS",
           "field": "href",
           "url": "http://j.mp/TB-2014-005",
           "message": "Unreachable (HPE_INVALID_CONSTANT)",
@@ -1914,6 +1420,7 @@
         },
         {
           "docId": "AMPAS.TB.2014-006",
+          "publisher": "AMPAS",
           "field": "href",
           "url": "http://j.mp/TB-2014-006",
           "message": "Unreachable (HPE_INVALID_CONSTANT)",
@@ -1923,6 +1430,7 @@
         },
         {
           "docId": "AMPAS.TB.2014-007",
+          "publisher": "AMPAS",
           "field": "href",
           "url": "http://j.mp/TB-2014-007",
           "message": "Unreachable (HPE_INVALID_CONSTANT)",
@@ -1932,6 +1440,7 @@
         },
         {
           "docId": "AMPAS.TB.2014-010",
+          "publisher": "AMPAS",
           "field": "href",
           "url": "http://j.mp/TB-2014-010",
           "message": "Unreachable (HPE_INVALID_CONSTANT)",
@@ -1941,6 +1450,7 @@
         },
         {
           "docId": "AMPAS.TB.2014-012",
+          "publisher": "AMPAS",
           "field": "href",
           "url": "http://j.mp/TB-2014-012",
           "message": "Unreachable (HPE_INVALID_CONSTANT)",
@@ -1950,6 +1460,7 @@
         },
         {
           "docId": "AMPAS.TB.2014-013",
+          "publisher": "AMPAS",
           "field": "href",
           "url": "http://j.mp/TB-2014-013",
           "message": "Unreachable (HPE_INVALID_CONSTANT)",
@@ -1959,6 +1470,7 @@
         },
         {
           "docId": "AMPAS.TB.2018-001",
+          "publisher": "AMPAS",
           "field": "href",
           "url": "http://j.mp/TB-2018-001",
           "message": "Unreachable (HPE_INVALID_CONSTANT)",
@@ -1970,6 +1482,7 @@
       "ERR_BAD_REQUEST": [
         {
           "docId": "IANA.STZ-DST",
+          "publisher": "IANA",
           "field": "href",
           "url": "ftp://ftp.iana.org/tz/tzdb-2016i/tz-link.htm",
           "message": "Unreachable (ERR_BAD_REQUEST)",
@@ -1981,6 +1494,7 @@
       "UNABLE_TO_VERIFY_LEAF_SIGNATURE": [
         {
           "docId": "ISO.15444-1.2004amd2.2009",
+          "publisher": "ISO/IEC",
           "field": "href",
           "url": "https://iso.org/standard/52174.html",
           "message": "Unreachable (UNABLE_TO_VERIFY_LEAF_SIGNATURE)",
@@ -1992,6 +1506,7 @@
       "ERR_FR_TOO_MANY_REDIRECTS": [
         {
           "docId": "IST.157",
+          "publisher": "Society for Imaging Science and Technology",
           "field": "href",
           "url": "https://www.imaging.org/site/PDFS/Papers/1997/IST-0-4/157.pdf",
           "message": "Unreachable (ERR_FR_TOO_MANY_REDIRECTS)",
@@ -2000,9 +1515,22 @@
           "riskLevel": "Medium"
         }
       ],
+      "ECONNABORTED": [
+        {
+          "docId": "RFC8098",
+          "publisher": "IETF",
+          "field": "href",
+          "url": "https://tools.ietf.org/html/rfc8098",
+          "message": "Unreachable (ECONNABORTED)",
+          "explanation": "Connection timed out.",
+          "recommendedAction": "Retry later or check the server’s responsiveness.",
+          "riskLevel": "Medium-High"
+        }
+      ],
       "ENOTFOUND": [
         {
           "docId": "W3C.rddl.2002",
+          "publisher": "W3C",
           "field": "href",
           "url": "http://www.rddl.org/",
           "message": "Unreachable (ENOTFOUND)",
@@ -2012,6 +1540,7 @@
         },
         {
           "docId": "W3C.rddl.2010",
+          "publisher": "W3C",
           "field": "href",
           "url": "http://www.rddl.org/2",
           "message": "Unreachable (ENOTFOUND)",
@@ -2026,11 +1555,22 @@
       "other": [
         {
           "docId": "0950-7671.1.3.302",
+          "publisher": "Scientific Instruments",
           "field": "href",
           "url": "https://doi.org/10.1088/0950-7671/1/3/302",
-          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=ff21b648-168b-4a2a-b2f9-1bb5f06ae147&ssb=30656299268&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=b2d2d943-cnvj-4d9a-92aa-8dae46149b75&ssk=botmanager_support@radware.com&ssm=49927630263458557102928680863390&ssn=7f7935be5d4ea3d943d89e284ea727112e2d31730260-bf0a-4064-91748d&sso=3fbd3386-0ad3c8384ef255c1f6976eaed0af6321f82e9d8903c97075&ssp=04802887731760079041176009453083113&ssq=30008723397402559420033974984076425860971&ssr=MjAuMTAyLjQ3LjIwMQ==&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDAzMTczMDI2MC1iZjBhLTQwNjQtOTM4Ni0wYWQzYzgzODRlZjIxLTE3NjAwMzM5NzQ2MDQwLTAwMTc4ZWU4ZjMyNzdmNWVjYTkxMCIsInJkIjoiaW9wLm9yZyIsInV6bXgiOiI3ZjkwMDBkNDlmYmFkYS0xMzI3LTRmZmUtOTRmOC02YmE5ZjBjOTM0NWMxLTE3NjAwMzM5NzQ2MDQwLTdiMTI2ZWE1MTg3ZjRmOTgxMCJ9",
+          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=8fc79d6d-5286-452d-b7a1-3b3b4b9b5619&ssb=77575268009&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=3b73c21f-cnvj-40db-9a77-6ef107d3f427&ssk=botmanager_support@radware.com&ssm=70453511180225561105808536773260&ssn=b21d616789c02f0825ed776e38cf52f78e4e084cc600-81bb-4450-aef3ae&sso=8033d6bb-b52a90ca71701c7fa0fdd2a37a3b75372f6e9f093f2b4fa5&ssp=56752527181760072792176009651736821&ssq=93739573695962883748036959769830007502644&ssr=NTIuMTU5LjI0NC43NA==&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDAwODRjYzYwMC04MWJiLTQ0NTAtYTZiYi1iNTJhOTBjYTcxNzAxLTE3NjAwMzY5NTkxODEwLTAwMTlhOGUyODJlZmYxZWMzNWUxMCIsInJkIjoiaW9wLm9yZyIsInV6bXgiOiI3ZjkwMDA1ZWMyODZlOC0wYzNjLTQxNDctYTU5NC1lNjRjYzZhZTg5NzgxLTE3NjAwMzY5NTkxODEwLTg2NWVkMWQ3ZDI4NDk2YTQxMCJ9",
           "resolvedField": "resolvedHref",
           "expectedResolved": "https://iopscience.iop.org/article/10.1088/0950-7671/1/3/302",
+          "message": "resolved url mismatch"
+        },
+        {
+          "docId": "IETF.FLS.2001",
+          "publisher": "IETF",
+          "field": "href",
+          "url": "https://www.ietf.org/about/groups/iesg/statements/formal-languages-use/",
+          "resolvedUrl": "https://datatracker.ietf.org/doc/statement-iesg-guidelines-for-the-use-of-formal-languages-in-ietf-specifications-20011001",
+          "resolvedField": "resolvedHref",
+          "expectedResolved": "https://datatracker.ietf.org/doc/statement-iesg-guidelines-for-the-use-of-formal-languages-in-ietf-specifications-20011001/",
           "message": "resolved url mismatch"
         }
       ]
@@ -2039,6 +1579,7 @@
       "SMPTE.href.ag-prefix": [
         {
           "docId": "SMPTE.AG01.2014",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://www.smpte.org/sites/default/files/AG-01-Technology-Committees-List.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2046,6 +1587,7 @@
         },
         {
           "docId": "SMPTE.AG01.2020",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-01-Technology-Committees-List.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2053,6 +1595,7 @@
         },
         {
           "docId": "SMPTE.AG02.2014",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://www.smpte.org/sites/default/files/AG-02-Document-Naming-and-Packaging.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2060,6 +1603,7 @@
         },
         {
           "docId": "SMPTE.AG02.2015",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-02-Document-Naming-and-Packaging.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2067,6 +1611,7 @@
         },
         {
           "docId": "SMPTE.AG03.2014",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-03-Permitted-Normative-References.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2074,6 +1619,7 @@
         },
         {
           "docId": "SMPTE.AG04.2016",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-04-Deprecated-Standards-Template.dotx",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2081,6 +1627,7 @@
         },
         {
           "docId": "SMPTE.AG04.EG.2020",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-04-EG-Engineering%20Guideline%20Template.dotx",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2088,6 +1635,7 @@
         },
         {
           "docId": "SMPTE.AG04.RP.2020",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-04-RP-Recommended-Practice-Template.docx",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2095,6 +1643,7 @@
         },
         {
           "docId": "SMPTE.AG04.ST.2020",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-04-ST-Standards-Template.docx",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2102,6 +1651,7 @@
         },
         {
           "docId": "SMPTE.AG05.2018",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-05-XML-in-Engineering-Documents.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2109,6 +1659,7 @@
         },
         {
           "docId": "SMPTE.AG06-01.2020",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/AG-06-1-New-Project-Form-Instructions-2021.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2116,6 +1667,7 @@
         },
         {
           "docId": "SMPTE.AG06-02.2021",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/AG-06-2-New-Project%20Form-2021.docx",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2123,6 +1675,7 @@
         },
         {
           "docId": "SMPTE.AG06.2016",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://www.smpte.org/sites/default/files/AG-06-Starting-a-Project.docx",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2130,6 +1683,7 @@
         },
         {
           "docId": "SMPTE.AG06.2020",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://www.smpte.org/sites/default/files/AG-06-Starting-a-Project.docx",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2137,6 +1691,7 @@
         },
         {
           "docId": "SMPTE.AG07.2016",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-07-Document-Flowcharts.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2144,6 +1699,7 @@
         },
         {
           "docId": "SMPTE.AG08.2014",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-08-Patent-Statement.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2151,6 +1707,7 @@
         },
         {
           "docId": "SMPTE.AG10.2020",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-10a-Liaisons-Delegates-Rapporteurs.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2158,6 +1715,7 @@
         },
         {
           "docId": "SMPTE.AG10B.2020",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-10b-Liaisons-Agreements.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2165,6 +1723,7 @@
         },
         {
           "docId": "SMPTE.AG12.2017",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://www.smpte.org/sites/default/files/AG-12-Meeting-Policy-Announcement.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2172,6 +1731,7 @@
         },
         {
           "docId": "SMPTE.AG12.2021",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/AG-12-Attendance-Policy-2021.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2179,6 +1739,7 @@
         },
         {
           "docId": "SMPTE.AG14.2014",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-14-Participation-Agreement.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2186,6 +1747,7 @@
         },
         {
           "docId": "SMPTE.AG15.2015",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-15-Guest-Participation-Agreement.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2193,6 +1755,7 @@
         },
         {
           "docId": "SMPTE.AG16.2020",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://www.smpte.org/sites/default/files/AG-16-Standards-Style-Guide.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2200,6 +1763,7 @@
         },
         {
           "docId": "SMPTE.AG16.2020-08",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/ag-16-2020.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2207,6 +1771,7 @@
         },
         {
           "docId": "SMPTE.AG18.2017",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-18-Metadata-Registers-Procedures.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2214,6 +1779,7 @@
         },
         {
           "docId": "SMPTE.AG19.2019",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-19-Project-Status-Values.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2221,6 +1787,7 @@
         },
         {
           "docId": "SMPTE.AG20.2019",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-20-Overview-Documents-(OV).pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2228,6 +1795,7 @@
         },
         {
           "docId": "SMPTE.AG22.2018",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://www.smpte.org/sites/default/files/AG22-2018-specifications_0.zip",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2235,6 +1803,7 @@
         },
         {
           "docId": "SMPTE.AG22.2020",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/ag-22-2020.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2242,6 +1811,7 @@
         },
         {
           "docId": "SMPTE.AG24.2019",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-24-MXF-UL-Style-Guide.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2249,6 +1819,7 @@
         },
         {
           "docId": "SMPTE.OM.BL.2010",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/SMPTE_Bylaws_2010x.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2256,6 +1827,7 @@
         },
         {
           "docId": "SMPTE.OM.Mem.2018",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://www.smpte.org/sites/default/files/SMPTE%20Membership%20OM%20v3.4.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2263,6 +1835,7 @@
         },
         {
           "docId": "SMPTE.OM.Std.2015",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://www.smpte.org/sites/default/files/SMPTE%20Standards%20OM%20v3.1.pdf",
           "expectedPrefix": "https://doc.smpte-doc.org/",
@@ -2272,6 +1845,7 @@
       "SMPTE.href.doi-prefix": [
         {
           "docId": "SMPTE.J107.9.603.815.1998",
+          "publisher": "SMPTE",
           "field": "href",
           "actual": "https://tech.ebu.ch/docs/techreview/ebu-smpte-tf-bitstreams.pdf",
           "expectedPrefix": "https://doi.org/10.5594/",
@@ -2281,6 +1855,7 @@
       "SMPTE.resolvedHref.journals-prefix": [
         {
           "docId": "SMPTE.J107.9.603.815.1998",
+          "publisher": "SMPTE",
           "field": "resolvedHref",
           "actual": "https://tech.ebu.ch/docs/techreview/ebu-smpte-tf-bitstreams.pdf",
           "expectedPrefix": "https://journal.smpte.org/periodicals/",
