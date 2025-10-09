@@ -128,7 +128,7 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           commit-message: 'fix: backfill resolved* from URL validation (missing resolved)'
-          title: "Backfill resolved* for ${{ steps.audit.outputs.redirect_undefined }} entries"
+          title: "URL Backfill resolved* for ${{ steps.audit.outputs.redirect_undefined }} entries"
           body: |
             This PR backfills resolved* fields for entries missing them based on the URL validation audit.
             - Source: src/main/reports/url_validate_audit.json
