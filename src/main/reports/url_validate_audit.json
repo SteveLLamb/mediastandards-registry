@@ -1,22 +1,20 @@
 {
-  "generatedAt": "2025-10-08T23:18:01.158Z",
+  "generatedAt": "2025-10-09T00:14:34.500Z",
   "target": "documents.json",
-  "unreachableCount": 197,
+  "unreachableCount": 191,
   "redirectMismatchCount": 691,
   "redirectUndefinedCount": 690,
   "redirectOtherCount": 1,
-  "expectationMismatchCount": 136,
-  "expectationBreakdown": {
-    "SMPTE.href.doi-prefix": 136
-  },
-  "goodCount": 602,
+  "expectationMismatchCount": 0,
+  "expectationBreakdown": {},
+  "goodCount": 608,
   "skippedByDomain": 0,
   "skippedByPublisher": 0,
   "errorBreakdown": {
     "Unreachable (400)": 1,
     "Unreachable (403)": 46,
     "Unreachable (404)": 81,
-    "Unreachable (429)": 48,
+    "Unreachable (429)": 42,
     "Unreachable (ENOTFOUND)": 2,
     "Unreachable (ERR_BAD_REQUEST)": 1,
     "Unreachable (ERR_FR_TOO_MANY_REDIRECTS)": 1,
@@ -42,7 +40,7 @@
           "type": "redirect",
           "field": "href",
           "url": "https://doi.org/10.1088/0950-7671/1/3/302",
-          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=09c6b91d-97b8-4e8e-a257-8354629f58ce&ssb=34039258628&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=b7f1a503-cnvj-4774-ae45-981a54fe3343&ssk=botmanager_support@radware.com&ssm=02303763805113576100889905557965&ssn=de469eac89d116f3a3a5589e880ee022e99fa25fcd18-456b-4572-92602e&sso=adb71f2d-acc67d8af8abf3d82947b310f87d4a14d41be78e9c6dd16c&ssp=19180803531759981185175992335846309&ssq=02066976503486561269665034899503511280275&ssr=NTIuMTYwLjE2Ni42NQ==&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDBhMjVmY2QxOC00NTZiLTQ1NzItOWYyZC1hY2M2N2Q4YWY4YWIxLTE3NTk5NjUwMzQ2NzIwLTAwMTAxY2NmN2ZhZjNkYTA3ZWYxMCIsInV6bXgiOiI3ZjkwMDA4OTVmOWY0NC1jMDgyLTQ3ODktYjZlYy02M2NmZjRkOGQ5ODQxLTE3NTk5NjUwMzQ2NzIwLWI0NDQwNjI0ZmM2YzU1ODcxMCIsInJkIjoiaW9wLm9yZyJ9",
+          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=fd30cf78-f1c5-4a17-a72a-32e498c09f00&ssb=55362232860&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=bcb750f2-cnvj-4562-b6f7-f9b699cb8a36&ssk=botmanager_support@radware.com&ssm=56512688487649715101725525242939&ssn=7b846e13571ea1439ee4e2c6c8a78ac057af6e9fc997-532b-4e82-91998f&sso=d1d680da-19d2744ea8a3388ae1d7c23bacdf424f96dc49a6467aa44d&ssp=41741023271759907349175990471822720&ssq=31669816845295659508768452494862888072952&ssr=MTcyLjE4NC4yMTkuODQ=&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJyZCI6ImlvcC5vcmciLCJfX3V6bWYiOiI3ZjkwMDA2ZTlmYzk5Ny01MzJiLTRlODItOTBkYS0xOWQyNzQ0ZWE4YTMxLTE3NTk5Njg0NTI1NjMwLTAwMTRiYWQwMjVkZWE1NzZjNzUxMCIsInV6bXgiOiI3ZjkwMDAzYTg3NmRkZS0zNGU4LTRlYzQtYWIxNC1mOTczNjNmNWExNGQxLTE3NTk5Njg0NTI1NjMwLTc1ZTA5YTZmOThiYWNmYTkxMCJ9",
           "resolvedHref": "https://iopscience.iop.org/article/10.1088/0950-7671/1/3/302",
           "message": "resolved url mismatch"
         }
@@ -2149,71 +2147,6 @@
       ]
     },
     {
-      "ISO.3745.2012": [
-        {
-          "type": "unreachable",
-          "field": "href",
-          "url": "https://www.iso.org/cms/%20render/live/en/sites/isoorg/contents/data/standard/04/53/45362.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        }
-      ]
-    },
-    {
-      "ISO.3746.2010": [
-        {
-          "type": "unreachable",
-          "field": "href",
-          "url": "https://www.iso.org/standard/52056.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        }
-      ]
-    },
-    {
-      "ISO.5-2.1991": [
-        {
-          "type": "unreachable",
-          "field": "href",
-          "url": "https://www.iso.org/standard/20037.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        }
-      ]
-    },
-    {
-      "ISO.5-2.2001": [
-        {
-          "type": "unreachable",
-          "field": "href",
-          "url": "https://www.iso.org/standard/28004.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        }
-      ]
-    },
-    {
-      "ISO.5-2.2009": [
-        {
-          "type": "unreachable",
-          "field": "href",
-          "url": "https://www.iso.org/standard/52914.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        }
-      ]
-    },
-    {
       "ISO.5-3.2009": [
         {
           "type": "unreachable",
@@ -2253,6 +2186,32 @@
       ]
     },
     {
+      "ISO.639-1.2002": [
+        {
+          "type": "unreachable",
+          "field": "href",
+          "url": "https://www.iso.org/standard/22109.html",
+          "message": "Unreachable (429)",
+          "explanation": "Unknown error during URL resolution.",
+          "recommendedAction": "Manual investigation required.",
+          "riskLevel": "Unknown"
+        }
+      ]
+    },
+    {
+      "ISO.639-2.1998": [
+        {
+          "type": "unreachable",
+          "field": "href",
+          "url": "https://www.iso.org/standard/4767.html",
+          "message": "Unreachable (429)",
+          "explanation": "Unknown error during URL resolution.",
+          "recommendedAction": "Manual investigation required.",
+          "riskLevel": "Unknown"
+        }
+      ]
+    },
+    {
       "ISO.646.1991": [
         {
           "type": "unreachable",
@@ -2271,6 +2230,19 @@
           "type": "unreachable",
           "field": "href",
           "url": "https://www.iso.org/standard/31531.html",
+          "message": "Unreachable (429)",
+          "explanation": "Unknown error during URL resolution.",
+          "recommendedAction": "Manual investigation required.",
+          "riskLevel": "Unknown"
+        }
+      ]
+    },
+    {
+      "ISO.7185.1990": [
+        {
+          "type": "unreachable",
+          "field": "href",
+          "url": "https://www.iso.org/standard/13802.html",
           "message": "Unreachable (429)",
           "explanation": "Unknown error during URL resolution.",
           "recommendedAction": "Manual investigation required.",
@@ -2474,19 +2446,6 @@
       ]
     },
     {
-      "ISO.8601-2.2019": [
-        {
-          "type": "unreachable",
-          "field": "href",
-          "url": "https://www.iso.org/standard/70908.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        }
-      ]
-    },
-    {
       "ISO.8601.2004": [
         {
           "type": "unreachable",
@@ -2578,19 +2537,6 @@
       ]
     },
     {
-      "ISO.8824-1.2015cor3.2018": [
-        {
-          "type": "unreachable",
-          "field": "href",
-          "url": "https://www.iso.org/standard/76759.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        }
-      ]
-    },
-    {
       "ISO.8825-1.1998": [
         {
           "type": "unreachable",
@@ -2622,6 +2568,19 @@
           "type": "unreachable",
           "field": "href",
           "url": "https://www.iso.org/standard/54011.html",
+          "message": "Unreachable (429)",
+          "explanation": "Unknown error during URL resolution.",
+          "recommendedAction": "Manual investigation required.",
+          "riskLevel": "Unknown"
+        }
+      ]
+    },
+    {
+      "ISO.8825-1.2015": [
+        {
+          "type": "unreachable",
+          "field": "href",
+          "url": "https://www.iso.org/standard/68345.html",
           "message": "Unreachable (429)",
           "explanation": "Unknown error during URL resolution.",
           "recommendedAction": "Manual investigation required.",
@@ -2695,19 +2654,6 @@
       ]
     },
     {
-      "ISO.9293.1987": [
-        {
-          "type": "unreachable",
-          "field": "href",
-          "url": "https://www.iso.org/standard/16948.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        }
-      ]
-    },
-    {
       "ISO.9293.1994": [
         {
           "type": "unreachable",
@@ -2721,37 +2667,11 @@
       ]
     },
     {
-      "ISO.9899.1999": [
-        {
-          "type": "unreachable",
-          "field": "href",
-          "url": "https://www.iso.org/standard/29237.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        }
-      ]
-    },
-    {
       "ISO.9899.2011": [
         {
           "type": "unreachable",
           "field": "href",
           "url": "https://www.iso.org/standard/57853.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        }
-      ]
-    },
-    {
-      "ISO.9899.2018": [
-        {
-          "type": "unreachable",
-          "field": "href",
-          "url": "https://www.iso.org/standard/74528.html",
           "message": "Unreachable (429)",
           "explanation": "Unknown error during URL resolution.",
           "recommendedAction": "Manual investigation required.",
@@ -3970,7 +3890,7 @@
           "type": "redirect",
           "field": "href",
           "url": "https://ia800204.us.archive.org/19/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
-          "resolvedUrl": "https://ia601303.us.archive.org/1/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
+          "resolvedUrl": "https://ia801303.us.archive.org/1/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
           "resolvedHref": "undefined",
           "message": "resolved url mismatch"
         }
@@ -5528,18 +5448,6 @@
       ]
     },
     {
-      "SMPTE.AG01": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/ag-01/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
       "SMPTE.AG01.2014": [
         {
           "type": "redirect",
@@ -5548,38 +5456,6 @@
           "resolvedUrl": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-01-Technology-Committees-List.pdf",
           "resolvedHref": "undefined",
           "message": "resolved url mismatch"
-        },
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://www.smpte.org/sites/default/files/AG-01-Technology-Committees-List.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG01.2020": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-01-Technology-Committees-List.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG02": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/ag-02/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
         }
       ]
     },
@@ -5592,170 +5468,6 @@
           "resolvedUrl": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-02-Document-Naming-and-Packaging.pdf",
           "resolvedHref": "undefined",
           "message": "resolved url mismatch"
-        },
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://www.smpte.org/sites/default/files/AG-02-Document-Naming-and-Packaging.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG02.2015": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-02-Document-Naming-and-Packaging.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG03": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/ag-03/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG03.2014": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-03-Permitted-Normative-References.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG04": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/ag-04/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG04.2016": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-04-Deprecated-Standards-Template.dotx",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG04.EG.2020": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-04-EG-Engineering%20Guideline%20Template.dotx",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG04.RP.2020": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-04-RP-Recommended-Practice-Template.docx",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG04.ST.2020": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-04-ST-Standards-Template.docx",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG05": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/ag-05/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG05.2018": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-05-XML-in-Engineering-Documents.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG06": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/ag-06/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG06-01.2020": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/AG-06-1-New-Project-Form-Instructions-2021.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG06-02.2021": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/AG-06-2-New-Project%20Form-2021.docx",
-          "message": "Expected href to start with https://doi.org/10.5594/"
         }
       ]
     },
@@ -5768,14 +5480,6 @@
           "resolvedUrl": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-06-Starting-a-Project.docx",
           "resolvedHref": "undefined",
           "message": "resolved url mismatch"
-        },
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://www.smpte.org/sites/default/files/AG-06-Starting-a-Project.docx",
-          "message": "Expected href to start with https://doi.org/10.5594/"
         }
       ]
     },
@@ -5788,122 +5492,6 @@
           "resolvedUrl": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-06-Starting-a-Project.docx",
           "resolvedHref": "undefined",
           "message": "resolved url mismatch"
-        },
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://www.smpte.org/sites/default/files/AG-06-Starting-a-Project.docx",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG07": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/ag-07/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG07.2016": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-07-Document-Flowcharts.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG08": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/ag-08/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG08.2014": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-08-Patent-Statement.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG10": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/ag-10/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG10.2020": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-10a-Liaisons-Delegates-Rapporteurs.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG10B": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/ag-10b/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG10B.2020": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-10b-Liaisons-Agreements.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG12": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/ag-12/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
         }
       ]
     },
@@ -5916,86 +5504,6 @@
           "resolvedUrl": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-12-Meeting-Policy-Announcement.pdf",
           "resolvedHref": "undefined",
           "message": "resolved url mismatch"
-        },
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://www.smpte.org/sites/default/files/AG-12-Meeting-Policy-Announcement.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG12.2021": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/AG-12-Attendance-Policy-2021.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG14": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/ag-14/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG14.2014": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-14-Participation-Agreement.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG15": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/ag-15/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG15.2015": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-15-Guest-Participation-Agreement.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG16": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/ag-16/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
         }
       ]
     },
@@ -6013,114 +5521,6 @@
       ]
     },
     {
-      "SMPTE.AG16.2020-08": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/ag-16-2020.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG18": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/ag-18/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG18.2017": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-18-Metadata-Registers-Procedures.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG19": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/ag-19/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG19.2019": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-19-Project-Status-Values.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG20": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/ag-20/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG20.2019": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-20-Overview-Documents-(OV).pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG21": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/ag-21/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG22": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/ag-22/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
       "SMPTE.AG22.2018": [
         {
           "type": "redirect",
@@ -6129,134 +5529,6 @@
           "resolvedUrl": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG22-2018-specifications_0.zip",
           "resolvedHref": "undefined",
           "message": "resolved url mismatch"
-        },
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://www.smpte.org/sites/default/files/AG22-2018-specifications_0.zip",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG22.2020": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/ag-22-2020.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG24": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/ag-24/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG24.2019": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/AG-24-MXF-UL-Style-Guide.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG25": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/ag-25/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG26": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/html-pub/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG27": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://github.com/SMPTE/html-pub-template",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG28": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/document-repo-spec/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG29": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/document-url-spec/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG30": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/ag-30/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.AG31": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/ag-31/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
         }
       ]
     },
@@ -6346,78 +5618,6 @@
       ]
     },
     {
-      "SMPTE.ER0989.2014": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/er0989-2014%20(1).zip",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.ER0994.2014": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/er0994-2014.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.ER1006.2021": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/er1006-2021%20(1).pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.ER1008.2022": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://5253154.fs1.hubspotusercontent-na1.net/hubfs/5253154/SMPTE-ER-DigitalCinemaOverviewDocumentSuties.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.J107.9.603.815.1998": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://tech.ebu.ch/docs/techreview/ebu-smpte-tf-bitstreams.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.OM.BL.2010": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/SMPTE_Bylaws_2010x.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
       "SMPTE.OM.Mem.2018": [
         {
           "type": "unreachable",
@@ -6431,18 +5631,6 @@
       ]
     },
     {
-      "SMPTE.OM.Std": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://doc.smpte-doc.org/standards-operations-manual/main/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
       "SMPTE.OM.Std.2015": [
         {
           "type": "redirect",
@@ -6451,14 +5639,6 @@
           "resolvedUrl": "https://f.hubspotusercontent00.net/hubfs/5253154/SMPTE%20Standards%20OM%20v3.1.pdf",
           "resolvedHref": "undefined",
           "message": "resolved url mismatch"
-        },
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://www.smpte.org/sites/default/files/SMPTE%20Standards%20OM%20v3.1.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
         }
       ]
     },
@@ -6520,30 +5700,6 @@
           "resolvedUrl": "https://my.smpte.org/s/product-details?id=a1BVR0000007NZa",
           "resolvedHref": "undefined",
           "message": "resolved url mismatch"
-        }
-      ]
-    },
-    {
-      "SMPTE.PubReg.2018": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://registry.smpte-ra.org/apps/pages/published/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.RA.2021": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://smpte-ra.org/",
-          "message": "Expected href to start with https://doi.org/10.5594/"
         }
       ]
     },
@@ -11527,30 +10683,6 @@
           "resolvedUrl": "https://my.smpte.org/s/product-details?id=a1BVR0000007Ngy",
           "resolvedHref": "undefined",
           "message": "resolved url mismatch"
-        }
-      ]
-    },
-    {
-      "SMPTE.TSP2121-1.2018": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/Standards%20Files/tsp2121-1-2018_1.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
-        }
-      ]
-    },
-    {
-      "SMPTE.TSP2121-4.2019": [
-        {
-          "type": "expectation",
-          "rule": "SMPTE.href.doi-prefix",
-          "field": "href",
-          "expectedPrefix": "https://doi.org/10.5594/",
-          "actual": "https://f.hubspotusercontent00.net/hubfs/5253154/tsp2121-4-2019.pdf",
-          "message": "Expected href to start with https://doi.org/10.5594/"
         }
       ]
     },
