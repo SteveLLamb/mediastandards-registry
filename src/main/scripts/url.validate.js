@@ -133,7 +133,8 @@ const validateEntry = async (entry, key, urlFields) => {
             field: f.field,
             expectedPrefix: f.expectedPrefix,
             actual: f.actual,
-            message: `Expected ${f.field} to start with ${f.expectedPrefix}`
+            message: `Expected ${f.field} to start with ${f.expectedPrefix}`,
+            docId: key
           });
         }
       }
@@ -159,7 +160,7 @@ const validateEntry = async (entry, key, urlFields) => {
             [resolvedField]: expectedResolved || 'undefined',
             message: 'resolved url mismatch'
           };
-          problems.push(problem);
+          problems.push({ ...problem, docId: key });
           console.warn(`❗ ${key} → ${field}: ${url} → resolved to ${result.resolvedUrl} — expected ${expectedResolved || 'undefined'}`);
         }
       }
@@ -177,7 +178,8 @@ const validateEntry = async (entry, key, urlFields) => {
                 field: f.field,
                 expectedPrefix: f.expectedPrefix,
                 actual: f.actual,
-                message: `Expected ${f.field} to start with ${f.expectedPrefix}`
+                message: `Expected ${f.field} to start with ${f.expectedPrefix}`,
+                docId: key
               });
             }
           }
@@ -201,9 +203,11 @@ const validateEntry = async (entry, key, urlFields) => {
         field,
         url,
         message: result.message,
+        code: result.code,
         explanation: meta.explanation,
         recommendedAction: meta.recommendedAction,
-        riskLevel: meta.riskLevel
+        riskLevel: meta.riskLevel,
+        docId: key
       });
 
       errorStats[result.message] = (errorStats[result.message] || 0) + 1;
@@ -260,6 +264,57 @@ const runValidation = async () => {
     }
   }
 
+  // Build grouped report structure for easier skimming
+  const groupedReport = {
+    unreachable: {},            // { code: [ { docId, field, url, message, ... } ] }
+    redirect: {                 // split by undefined vs other
+      undefined: [],
+      other: []
+    },
+    expectation: {}             // { rule: [ { docId, field, actual, expectedPrefix } ] }
+  };
+
+  for (const entry of issues) {
+    const key = Object.keys(entry)[0];
+    const problemList = entry[key];
+    for (const p of problemList) {
+      if (p.type === 'unreachable') {
+        const code = p.code ? String(p.code) : 'other';
+        if (!groupedReport.unreachable[code]) groupedReport.unreachable[code] = [];
+        groupedReport.unreachable[code].push({
+          docId: p.docId || key,
+          field: p.field,
+          url: p.url,
+          message: p.message,
+          explanation: p.explanation,
+          recommendedAction: p.recommendedAction,
+          riskLevel: p.riskLevel
+        });
+      } else if (p.type === 'redirect') {
+        const bucket = (p.resolvedHref === 'undefined' || typeof p.resolvedHref === 'undefined') ? 'undefined' : 'other';
+        groupedReport.redirect[bucket].push({
+          docId: p.docId || key,
+          field: p.field,
+          url: p.url,
+          resolvedUrl: p.resolvedUrl,
+          resolvedField: `resolved${p.field.charAt(0).toUpperCase()}${p.field.slice(1)}`,
+          expectedResolved: p.resolvedHref,
+          message: p.message
+        });
+      } else if (p.type === 'expectation') {
+        const rule = p.rule || 'unknown-rule';
+        if (!groupedReport.expectation[rule]) groupedReport.expectation[rule] = [];
+        groupedReport.expectation[rule].push({
+          docId: p.docId || key,
+          field: p.field,
+          actual: p.actual,
+          expectedPrefix: p.expectedPrefix,
+          message: p.message
+        });
+      }
+    }
+  }
+
   // Build header
   const header = {
     generatedAt: new Date().toISOString(),
@@ -276,9 +331,17 @@ const runValidation = async () => {
     errorBreakdown: Object.fromEntries(Object.entries(errorStats).sort((a,b)=> a[0]<b[0]? -1 : a[0]>b[0]? 1 : 0))
   };
 
+  // Build index object with major counts
+  const index = {
+    unreachable: unreachableCount,
+    redirectUndefined: redirectUndefinedCount,
+    redirectOther: redirectOtherCount,
+    expectationMismatch: expectationMismatchCount
+  };
+
   // Ensure directory and write a single stable audit file
   if (!fs.existsSync(REPORT_PATH)) fs.mkdirSync(REPORT_PATH, { recursive: true });
-  const payload = { ...header, report: issues };
+  const payload = { ...header, index, report: groupedReport };
   fs.writeFileSync(reportPath, JSON.stringify(payload, null, 2));
 
   // Console summary mirrors header
