@@ -1,12 +1,17 @@
 name: Validate Document URLs
 
-permissions:
-  contents: write
-
 on:
   schedule:
     - cron: "15 04 * * 4"   # 21:15 PT, Thurs (cron in UTC)
   workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: validate-urls-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   validate-urls:
@@ -21,6 +26,7 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
@@ -69,8 +75,43 @@ jobs:
         run: |
           node src/main/scripts/url.normalize.js --apply
 
-      - name: Create PR for normalized URLs
+      - name: Read normalize applied count
+        id: norm
         if: steps.audit.outputs.redirect_undefined != '0'
+        run: |
+          if [ -f src/main/reports/url_validate_normalize.json ]; then
+            APPLIED=$(jq -r '.applied // 0' src/main/reports/url_validate_normalize.json)
+          else
+            APPLIED=0
+          fi
+          echo "applied=$APPLIED" >> $GITHUB_OUTPUT
+          echo "normalizeApplied=$APPLIED"
+
+      - name: Validate documents.json
+        if: steps.norm.outputs.applied != '0'
+        run: npm run validate
+
+      - name: Canonicalize documents.json
+        if: steps.norm.outputs.applied != '0'
+        env:
+          IS_PR_RUN: true
+          PR_LOG_PATH: ${{ runner.temp }}/pr-log.log
+        run: npm run canonicalize
+
+      - name: Commit canonicalized documents.json
+        if: steps.norm.outputs.applied != '0'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/main/data/documents.json
+          if git diff --cached --quiet; then
+            echo "No canonicalized changes to commit."
+            exit 0
+          fi
+          git commit -m "Canonicalize documents.json after normalize"
+
+      - name: Create PR for normalized URLs
+        if: steps.norm.outputs.applied != '0'
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -80,7 +121,8 @@ jobs:
             This PR backfills resolved* fields for entries missing them based on the URL validation audit.
             - Source: src/main/reports/url_validate_audit.json
             - Script: src/main/scripts/url.normalize.js --apply
-            - Count: ${{ steps.audit.outputs.redirect_undefined }}
+            - Detected missing resolved*: ${{ steps.audit.outputs.redirect_undefined }}
+            - Applied backfills: ${{ steps.norm.outputs.applied }}
           branch: chore/url-normalize/${{ github.run_id }}
           add-paths: |
             src/main/data/documents.json
