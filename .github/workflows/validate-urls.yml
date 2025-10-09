@@ -236,12 +236,12 @@ jobs:
             const open404 = await listOpenWithLabel('url-404');
             const livePubs = new Set([...byPub404.keys()]);
             for (const iss of open404) {
-              const m = /^URL 404s — (.+)$/.exec(iss.title || '');
+              const m = /^URL ERROR \(404\): (.+)$/.exec(iss.title || '');
               const pub = m && m[1] ? m[1].trim() : null;
               if (!pub || !livePubs.has(pub)) {
                 await github.rest.issues.createComment({
                   owner, repo, issue_number: iss.number,
-                  body: `Resolved: no outstanding 404s for this publisher. ${runTag}. Closing.` });
+                  body: `Resolved: no outstanding 404s for this publisher. ${runTag}. Closing.`
                 });
                 await github.rest.issues.update({ owner, repo, issue_number: iss.number, state: 'closed' });
               }
@@ -250,12 +250,12 @@ jobs:
             // 400s: close any docId issue not in current set
             const open400 = await listOpenWithLabel('url-400');
             for (const iss of open400) {
-              const m = /^URL 400 — (.+)$/.exec(iss.title || '');
+              const m = /^URL ERROR \(400\): (.+)$/.exec(iss.title || '');
               const docId = m && m[1] ? m[1].trim() : null;
               if (!docId || !current400.has(docId)) {
                 await github.rest.issues.createComment({
                   owner, repo, issue_number: iss.number,
-                  body: `Resolved: no longer present as 400. ${runTag}. Closing.` });
+                  body: `Resolved: no longer present as 400. ${runTag}. Closing.`
                 });
                 await github.rest.issues.update({ owner, repo, issue_number: iss.number, state: 'closed' });
               }
