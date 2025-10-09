@@ -1,19 +1,3 @@
-
-/* URL Validation Enrichment — backfill expected resolved* fields
- *
- * Usage:
- *   node src/main/scripts/url.enrich.js [--apply]
- *
- * Inputs:
- *   - src/main/reports/url_validate_audit.json
- *   - src/main/data/documents.json
- *
- * Outputs:
- *   - src/main/reports/url_validate_backfill_patch.json (proposals)
- *   - src/main/reports/url_validate_enrich_summary.json (counts)
- *   - (when --apply) in-place updates to documents.json with resolved* and $meta
- */
-
 const fs = require('fs');
 const path = require('path');
 
@@ -22,7 +6,7 @@ const DATA_DIR = 'src/main/data';
 const REPORT_DIR = 'src/main/reports';
 const AUDIT_PATH = path.join(REPORT_DIR, 'url_validate_audit.json');
 const DOCS_PATH = path.join(DATA_DIR, 'documents.json');
-const COMBINED_PATH = path.join(REPORT_DIR, 'url_validate_enrich_report.json');
+const COMBINED_PATH = path.join(REPORT_DIR, 'url_validate_normalize.json');
 
 function loadJson(p) {
   if (!fs.existsSync(p)) throw new Error(`File not found: ${p}`);

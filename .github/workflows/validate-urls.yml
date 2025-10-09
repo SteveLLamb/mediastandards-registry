@@ -36,6 +36,18 @@ jobs:
           path: src/main/reports/url_validate_audit.json
           if-no-files-found: ignore
 
+      - name: Read redirectUndefinedCount from audit
+        id: audit
+        if: success() || failure()
+        run: |
+          if [ ! -f src/main/reports/url_validate_audit.json ]; then
+            echo "redirect_undefined=0" >> $GITHUB_OUTPUT
+            exit 0
+          fi
+          RU=$(jq -r '.redirectUndefinedCount // 0' src/main/reports/url_validate_audit.json)
+          echo "redirect_undefined=$RU" >> $GITHUB_OUTPUT
+          echo "redirectUndefinedCount=$RU"
+
       - name: Auto-commit audit back to main (if changed)
         if: success() || failure()
         run: |
@@ -51,3 +63,25 @@ jobs:
           git commit -m "chore: url validation audit update"
           git push origin HEAD:"$BR"
           echo "✅ Committed url_validate_audit.json to ${BR}"
+
+      - name: Run URL normalizer (apply) for missing resolved*
+        if: steps.audit.outputs.redirect_undefined != '0'
+        run: |
+          node src/main/scripts/url.normalize.js --apply
+
+      - name: Create PR for normalized URLs
+        if: steps.audit.outputs.redirect_undefined != '0'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: 'fix: backfill resolved* from URL validation (missing resolved)'
+          title: "Backfill resolved* for ${{ steps.audit.outputs.redirect_undefined }} entries"
+          body: |
+            This PR backfills resolved* fields for entries missing them based on the URL validation audit.
+            - Source: src/main/reports/url_validate_audit.json
+            - Script: src/main/scripts/url.normalize.js --apply
+            - Count: ${{ steps.audit.outputs.redirect_undefined }}
+          branch: chore/url-normalize/${{ github.run_id }}
+          add-paths: |
+            src/main/data/documents.json
+            src/main/reports/url_validate_normalize.json
