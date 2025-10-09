@@ -20,8 +20,9 @@ function inferPublisher(entry) {
 function setWithMeta(obj, key, value, meta) {
   obj[key] = value;
   obj[`${key}$meta`] = {
-    note: 'Backfilled from url.validate report #resolvedHref',
     confidence: meta.confidence || 'high',
+    originalValue: null,
+    note: 'Backfilled from url.validate report #resolvedHref',
     source: meta.rule || undefined,
     updated: new Date().toISOString()
   };
