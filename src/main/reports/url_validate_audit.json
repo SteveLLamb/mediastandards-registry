@@ -1,27 +1,26 @@
 {
-  "generatedAt": "2025-10-09T17:39:39.622Z",
+  "generatedAt": "2025-10-09T17:49:22.814Z",
   "target": "documents.json",
-  "good": 1265,
+  "good": 1270,
   "skippedByDomain": 0,
   "skippedByPublisher": 0,
   "index": {
-    "error": 222,
+    "error": 218,
     "errorBreakdown": {
       "Unreachable (400)": 1,
       "Unreachable (403)": 46,
       "Unreachable (404)": 80,
-      "Unreachable (429)": 71,
-      "Unreachable (ECONNABORTED)": 3,
+      "Unreachable (429)": 70,
       "Unreachable (ENOTFOUND)": 2,
       "Unreachable (ERR_BAD_REQUEST)": 1,
       "Unreachable (ERR_FR_TOO_MANY_REDIRECTS)": 1,
       "Unreachable (HPE_INVALID_CONSTANT)": 16,
       "Unreachable (UNABLE_TO_VERIFY_LEAF_SIGNATURE)": 1
     },
-    "redirectMismatch": 3,
+    "redirectMismatch": 2,
     "redirectBreakdown": {
       "undefined": 1,
-      "other": 2
+      "other": 1
     },
     "expectationMismatch": 35,
     "expectationBreakdown": {
@@ -1183,15 +1182,6 @@
       ],
       "429": [
         {
-          "docId": "ISO.26433.2009",
-          "field": "href",
-          "url": "https://www.iso.org/standard/52793.html",
-          "message": "Unreachable (429)",
-          "explanation": "Unknown error during URL resolution.",
-          "recommendedAction": "Manual investigation required.",
-          "riskLevel": "Unknown"
-        },
-        {
           "docId": "ISO.26433.2009am1.20XX",
           "field": "href",
           "url": "https://www.iso.org/standard/80072.html",
@@ -2001,35 +1991,6 @@
           "riskLevel": "Medium"
         }
       ],
-      "ECONNABORTED": [
-        {
-          "docId": "R-REC-BT.2390-10.202111",
-          "field": "href",
-          "url": "https://www.itu.int/pub/R-REP-BT.2390-10-2021",
-          "message": "Unreachable (ECONNABORTED)",
-          "explanation": "Connection timed out.",
-          "recommendedAction": "Retry later or check the server’s responsiveness.",
-          "riskLevel": "Medium-High"
-        },
-        {
-          "docId": "R-REC-BT.2390-4.201804",
-          "field": "href",
-          "url": "https://www.itu.int/pub/R-REP-BT.2390-4-2018",
-          "message": "Unreachable (ECONNABORTED)",
-          "explanation": "Connection timed out.",
-          "recommendedAction": "Retry later or check the server’s responsiveness.",
-          "riskLevel": "Medium-High"
-        },
-        {
-          "docId": "R-REC-BT.2390-8.202002",
-          "field": "href",
-          "url": "https://www.itu.int/pub/R-REP-BT.2390-8-2020",
-          "message": "Unreachable (ECONNABORTED)",
-          "explanation": "Connection timed out.",
-          "recommendedAction": "Retry later or check the server’s responsiveness.",
-          "riskLevel": "Medium-High"
-        }
-      ],
       "ENOTFOUND": [
         {
           "docId": "W3C.rddl.2002",
@@ -2068,18 +2029,9 @@
           "docId": "0950-7671.1.3.302",
           "field": "href",
           "url": "https://doi.org/10.1088/0950-7671/1/3/302",
-          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=4141291b-6ba8-4122-8fcd-36445539dca1&ssb=36861201239&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=6b6ec3a0-cnvj-4781-95f0-23e660429c7d&ssk=botmanager_support@radware.com&ssm=04690482976628383103341059971277&ssn=a210d44c492e375cd3788098c36873d189de0e0b66e5-41a3-41bd-8e1391&sso=be8b1f3b-e5e7c74821dcef696ce836a2a96f2717327d2128bc3ecc4e&ssp=91142315561760047143176002916370037&ssq=52060733126453049549431264474396715710808&ssr=MjAuNTEuMTk4LjE5OA==&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDAwZTBiNjZlNS00MWEzLTQxYmQtOGYzYi1lNWU3Yzc0ODIxZGMxLTE3NjAwMzEyNjQ1MTUwLTAwMTVmNDUxMTkyMDhkYTViMjIxMCIsInV6bXgiOiI3ZjkwMDA2ZmFhMWFjNy1jYmVkLTRlNzgtYjVmNC03M2IwZGRlMWQ0YjExLTE3NjAwMzEyNjQ1MTUwLWUwZGJkNjU2Njk1ZDgwZWYxMCIsInJkIjoiaW9wLm9yZyJ9",
+          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=1df74a60-a4ab-4e12-ba43-d68825f44b9f&ssb=51685267650&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=42c8a405-cnvj-412b-978c-92a6d45054c0&ssk=botmanager_support@radware.com&ssm=74431246298465799107387879042319&ssn=e7977bd7d63ed5c7e0f051e6268a4bd725ce689fa15e-dbbc-494f-af529c&sso=16d1ca25-668bd7e2dba3cbae3546a856b238b5501a8e2b50be1e9fc9&ssp=58359178981760005538176006139901487&ssq=00434323183153025130831831060328853006576&ssr=MjAuMTA5LjM5LjUy&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDA2ODlmYTE1ZS1kYmJjLTQ5NGYtYWEyNS02NjhiZDdlMmRiYTMxLTE3NjAwMzE4MzEwNTQwLTAwMTczMjQ0MjUwZGQ0NjllMGYxMCIsInV6bXgiOiI3ZjkwMDBjYzBiNWY2ZC1jOTJiLTRmYzUtODVmNy1iZmNiY2Q0MDlkMWExLTE3NjAwMzE4MzEwNTQwLWIyNGZmMmY2YjZiOWY3ZDkxMCIsInJkIjoiaW9wLm9yZyJ9",
           "resolvedField": "resolvedHref",
           "expectedResolved": "https://iopscience.iop.org/article/10.1088/0950-7671/1/3/302",
-          "message": "resolved url mismatch"
-        },
-        {
-          "docId": "ML3807.M56.1916",
-          "field": "href",
-          "url": "https://ia800204.us.archive.org/19/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
-          "resolvedUrl": "https://ia801303.us.archive.org/1/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
-          "resolvedField": "resolvedHref",
-          "expectedResolved": "https://ia601303.us.archive.org/1/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
           "message": "resolved url mismatch"
         }
       ]
