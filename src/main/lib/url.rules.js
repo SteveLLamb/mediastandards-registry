@@ -138,6 +138,8 @@ function startsWithPrefix(u, prefix) {
 // Expectation rule signature:
 //  { name, when(ctx), check(ctx) -> { ok, expectedPrefix, actual, field }|null }
 
+const isSMPTE = (e) => /^SMPTE$/i.test((e && e.publisher) || '');
+
 const expSMPTE_HREF_DOI = {
   name: 'SMPTE.href.doi-prefix',
   when: ({ entry, field }) => 

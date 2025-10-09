@@ -120,6 +120,24 @@ const validateEntry = async (entry, key, urlFields) => {
       console.log(`🔎 Checking ${key} → ${field}: ${url}`);
     }
 
+    // Run non-destructive expectation checks on the stored value BEFORE any network touch
+    try {
+      const findingsOrig = checkExpectations({ entry, field, url, docId: entry.docId, publisher: entry.publisher });
+      for (const f of findingsOrig) {
+        if (!f.ok) {
+          console.warn(`❗ ${key} → ${field}: ${url} → expected ${f.field} to start with ${f.expectedPrefix}`);
+          problems.push({
+            type: 'expectation',
+            rule: f.rule,
+            field: f.field,
+            expectedPrefix: f.expectedPrefix,
+            actual: f.actual,
+            message: `Expected ${f.field} to start with ${f.expectedPrefix}`
+          });
+        }
+      }
+    } catch {}
+
     const result = await resolveUrl(url);
 
     if (result.ok) {
@@ -145,27 +163,6 @@ const validateEntry = async (entry, key, urlFields) => {
         }
       }
 
-      // Run non-destructive expectation checks (prefix/host shape assertions)
-      // 1) Check expectations against the original field value (e.g., href)
-      try {
-        const findingsOrig = checkExpectations({ entry, field, url, docId: entry.docId, publisher: entry.publisher });
-        for (const f of findingsOrig) {
-          if (!f.ok) {
-            expectationMismatchCount++;
-            expectationStats[f.rule] = (expectationStats[f.rule] || 0) + 1;
-            console.warn(`❗ ${key} → ${field}: ${url} → expected ${f.field} to start with ${f.expectedPrefix}`);
-            problems.push({
-              type: 'expectation',
-              rule: f.rule,
-              field: f.field,
-              expectedPrefix: f.expectedPrefix,
-              actual: f.actual,
-              message: `Expected ${f.field} to start with ${f.expectedPrefix}`
-            });
-          }
-        }
-      } catch {}
-
       // 2) If we have a resolved URL, check expectations for the corresponding resolved* field
       if (result.resolvedUrl) {
         const resolvedField = `resolved${field.charAt(0).toUpperCase()}${field.slice(1)}`; // e.g., resolvedHref
@@ -173,8 +170,6 @@ const validateEntry = async (entry, key, urlFields) => {
           const findingsResolved = checkExpectations({ entry, field: resolvedField, url: result.resolvedUrl, docId: entry.docId, publisher: entry.publisher });
           for (const f of findingsResolved) {
             if (!f.ok) {
-              expectationMismatchCount++;
-              expectationStats[f.rule] = (expectationStats[f.rule] || 0) + 1;
               problems.push({
                 type: 'expectation',
                 rule: f.rule,
