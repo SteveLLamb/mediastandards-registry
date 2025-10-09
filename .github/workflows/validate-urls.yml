@@ -1,13 +1,15 @@
 name: Validate Document URLs
 
 on:
-  schedule:
-    - cron: "15 04 * * 4"   # 21:15 PT, Thurs (cron in UTC)
+  workflow_run:
+    workflows: ["Build MSR Site and Test"]
+    types: [completed]
   workflow_dispatch:
 
 permissions:
   contents: write
   pull-requests: write
+  issues: write
 
 concurrency:
   group: validate-urls
@@ -15,7 +17,10 @@ concurrency:
 
 jobs:
   validate-urls:
-    name: Validate URLs in documents.json
+    if: 
+      github.event_name != 'workflow_run' || 
+      github.event.workflow_run.conclusion == 'success'
+    name: Validate URLs
     runs-on: ubuntu-latest
 
     steps:

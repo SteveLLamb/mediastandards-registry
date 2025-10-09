@@ -19,8 +19,12 @@ concurrency:
 
 jobs:
   build:
-    if: github.event_name != 'pull_request' || github.event.pull_request.merged == true
+    if: 
+      github.event_name != 'pull_request' || 
+      github.event.pull_request.merged == true
+    name: Build MSI
     runs-on: ubuntu-latest
+    
     steps:
       - uses: actions/checkout@v4
         with:
