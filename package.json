@@ -7,7 +7,7 @@
     "build-msi": "node src/main/scripts/buildMasterSuiteIndex.js --in src/main/data/documents.json --out src/main/reports/masterSuiteIndex.json",
     "build-mri": "node src/main/scripts/buildMasterReferenceIndex.js",
     "extract": "node src/main/scripts/extractDocs.js",
-    "enrich-url": "node src/main/scripts/url.enrich.js --apply",
+    "normalize-url": "node src/main/scripts/url.normalize.js --apply",
     "validate": "node src/main/scripts/validate.js",
     "validate-url": "node src/main/scripts/url.validate.js",
     "canonicalize": "node src/main/scripts/canonicalize.js"
