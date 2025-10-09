@@ -10,7 +10,7 @@ permissions:
   pull-requests: write
 
 concurrency:
-  group: validate-urls-${{ github.ref }}
+  group: validate-urls
   cancel-in-progress: true
 
 jobs:
@@ -70,6 +70,12 @@ jobs:
           git push origin HEAD:"$BR"
           echo "✅ Committed url_validate_audit.json to ${BR}"
 
+      - name: Sync to latest base after audit push
+        run: |
+          git fetch origin
+          git checkout ${{ github.event.repository.default_branch }}
+          git reset --hard origin/${{ github.event.repository.default_branch }}
+
       - name: Run URL normalizer (apply) for missing resolved*
         if: steps.audit.outputs.redirect_undefined != '0'
         run: |
@@ -111,7 +117,7 @@ jobs:
           git commit -m "Canonicalize documents.json after normalize"
 
       - name: Create PR for normalized URLs
-        if: steps.norm.outputs.applied != '0'
+        if: steps.norm.outputs.applied != '0' && github.ref != 'refs/heads/chore/url-normalize'
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
