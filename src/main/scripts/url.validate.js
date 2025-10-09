@@ -101,10 +101,6 @@ let skippedByPublisher = 0;
 const expectationStats = {}; // by rule name
 let expectationMismatchCount = 0;
 
-const suggestionCounts = {
-  total: 0, autofixable: 0, review: 0,
-  breakdown: { backfillResolved: 0 }
-};
 
 const shouldSkip = (url) => {
   return SKIP_VALIDATION_DOMAINS.some(domain => url.startsWith(domain));
@@ -163,17 +159,7 @@ const validateEntry = async (entry, key, urlFields) => {
             [resolvedField]: expectedResolved || 'undefined',
             message: 'resolved url mismatch'
           };
-
-          // Delegate publisher-specific autofix ideas to rules (agnostic validator)
-          const { suggestAutofix } = require('../lib/url.rules.js');
-          const suggestions = suggestAutofix({
-            entry, field: resolvedField, url: result.resolvedUrl,
-            docId: entry.docId, publisher: entry.publisher
-          });
-          if (suggestions.length) problem.suggestions = suggestions;
-
           problems.push(problem);
-
           console.warn(`❗ ${key} → ${field}: ${url} → resolved to ${result.resolvedUrl} — expected ${expectedResolved || 'undefined'}`);
         }
       }
@@ -270,15 +256,6 @@ const runValidation = async () => {
           expectationMismatchCount++;
           if (p.rule) expectationStats[p.rule] = (expectationStats[p.rule] || 0) + 1;
         }
-        if (Array.isArray(p.suggestions)) {
-          for (const s of p.suggestions) {
-            suggestionCounts.total++;
-            if (s.autofix) {
-              suggestionCounts.autofixable++;
-              if (s.type === 'set' && typeof s.field === 'string' && s.field.startsWith('resolved')) suggestionCounts.breakdown.backfillResolved++;
-            } else { suggestionCounts.review++; }
-          }
-        }
       }
     }
   }
@@ -296,8 +273,7 @@ const runValidation = async () => {
     goodCount,
     skippedByDomain,
     skippedByPublisher,
-    errorBreakdown: Object.fromEntries(Object.entries(errorStats).sort((a,b)=> a[0]<b[0]? -1 : a[0]>b[0]? 1 : 0)),
-    suggestionCounts,
+    errorBreakdown: Object.fromEntries(Object.entries(errorStats).sort((a,b)=> a[0]<b[0]? -1 : a[0]>b[0]? 1 : 0))
   };
 
   // Ensure directory and write a single stable audit file
@@ -329,12 +305,6 @@ const runValidation = async () => {
         .map(([rule, count]) => `    ${count.toString().padStart(3)} ${rule}`)
         .join('\n');
       if (expLines) console.log(expLines);
-    }
-    if (suggestionCounts.total > 0) {
-      console.log(`- 💡 ${suggestionCounts.total} suggestion${suggestionCounts.total === 1 ? '' : 's'} (${suggestionCounts.autofixable} autofixable)`);
-      if (suggestionCounts.breakdown.backfillResolved > 0) {
-        console.log(`  └─ 🔧 backfill resolved*: ${suggestionCounts.breakdown.backfillResolved}`);
-      }
     }
     console.log(`- ✅ ${goodCount} good url${goodCount === 1 ? '' : 's'}`);
     if (skippedByDomain > 0) console.log(`- ⏭️ ${skippedByDomain} skipped by domain`);
