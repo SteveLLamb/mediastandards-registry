@@ -44,40 +44,36 @@ function main() {
   let backfillable = 0;
   let applied = 0;
 
-  // Audit format: { generatedAt, target, ..., report: [ { "<key>": [ problems... ] }, ... ] }
-  const items = Array.isArray(audit.report) ? audit.report : [];
+  // Audit format (grouped): { generatedAt, target, ..., report: { redirect: { undefined: [ { docId, field, resolvedUrl, resolvedField? } ] } } }
+  // Consume grouped report: look only at redirect.undefined entries
+  const redirectUndefined = (audit && audit.report && audit.report.redirect && Array.isArray(audit.report.redirect.undefined))
+    ? audit.report.redirect.undefined
+    : [];
 
-  for (const bucket of items) {
-    const key = Object.keys(bucket)[0];
-    const problems = bucket[key];
-    if (!Array.isArray(problems)) continue;
-
-    // Only handle documents.json entries for now
-    const doc = byDocId.get(key);
+  for (const p of redirectUndefined) {
+    const docId = p.docId;
+    const doc = byDocId.get(docId);
     if (!doc) continue;
 
-    for (const p of problems) {
-      if (p.type !== 'redirect') continue;
+    const field = p.field; // e.g., 'href'
+    const resolvedField = p.resolvedField || `resolved${field.charAt(0).toUpperCase()}${field.slice(1)}`; // e.g., 'resolvedHref'
 
-      const field = p.field; // e.g., 'href'
-      const resolvedField = `resolved${field.charAt(0).toUpperCase()}${field.slice(1)}`; // e.g., 'resolvedHref'
+    considered++;
+    eligible++; // by definition of this bucket
 
-      // Only backfill when expected was undefined per validator output
-      const wasUndefined = (p[resolvedField] === 'undefined' || p[resolvedField] === undefined);
-      considered++;
-      if (!wasUndefined) continue;
-      eligible++;
+    // Prefer validator's resolvedUrl; fall back to the document's current field value
+    const candidate = p.resolvedUrl || doc[field];
+    if (!candidate) continue;
 
-      // Prefer the validator's resolvedUrl if present; otherwise fall back to the original field
-      const candidate = p.resolvedUrl || doc[field];
-      if (!candidate) continue;
+    const existing = doc[resolvedField];
+    // If already set to the same value, skip applying but still count as backfillable candidate
+    const finalUrl = candidate;
+    const finalRule = 'resolved';
 
-      // Use the validator's resolvedUrl as the source of truth; fall back to the original field value
-      const finalUrl = candidate;
-      const finalRule = 'resolved';
-
-      backfillable++;
-      proposals.push({ docId: doc.docId, field: resolvedField, old: null, new: finalUrl, rule: finalRule });
+    backfillable++;
+    // Only record and write when it actually changes the document
+    if (existing !== finalUrl) {
+      proposals.push({ docId, field: resolvedField, old: existing ?? null, new: finalUrl, rule: finalRule });
       if (APPLY) {
         setWithMeta(doc, resolvedField, finalUrl, { rule: finalRule });
         applied++;
@@ -105,4 +101,4 @@ function main() {
   console.log(`🧾 Enrich report → ${COMBINED_PATH} (backfillable: ${backfillable}, eligible: ${eligible}, considered: ${considered})`);
 }
 
-try { main(); } catch (e) { console.error(`❌ url.enrich failed: ${e.message}`); process.exit(1); }
+try { main(); } catch (e) { console.error(`❌ url.normalize failed: ${e.message}`); process.exit(1); }

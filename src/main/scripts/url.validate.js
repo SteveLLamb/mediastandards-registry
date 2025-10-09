@@ -319,24 +319,19 @@ const runValidation = async () => {
   const header = {
     generatedAt: new Date().toISOString(),
     target: TARGET_FILE,
-    unreachableCount,
-    redirectMismatchCount,
-    redirectUndefinedCount,
-    redirectOtherCount,
-    expectationMismatchCount,
-    expectationBreakdown: expectationStats,
-    goodCount,
+    good: goodCount,
     skippedByDomain,
-    skippedByPublisher,
-    errorBreakdown: Object.fromEntries(Object.entries(errorStats).sort((a,b)=> a[0]<b[0]? -1 : a[0]>b[0]? 1 : 0))
+    skippedByPublisher
   };
 
   // Build index object with major counts
   const index = {
     unreachable: unreachableCount,
+    errorBreakdown: Object.fromEntries(Object.entries(errorStats).sort((a,b)=> a[0]<b[0]? -1 : a[0]>b[0]? 1 : 0))
     redirectUndefined: redirectUndefinedCount,
     redirectOther: redirectOtherCount,
-    expectationMismatch: expectationMismatchCount
+    expectationMismatch: expectationMismatchCount,
+    expectationBreakdown: expectationStats
   };
 
   // Ensure directory and write a single stable audit file
