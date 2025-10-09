@@ -321,15 +321,18 @@ const runValidation = async () => {
     target: TARGET_FILE,
     good: goodCount,
     skippedByDomain,
-    skippedByPublisher
+    skippedByPublisher,    
   };
 
   // Build index object with major counts
   const index = {
     unreachable: unreachableCount,
     errorBreakdown: Object.fromEntries(Object.entries(errorStats).sort((a,b)=> a[0]<b[0]? -1 : a[0]>b[0]? 1 : 0))
-    redirectUndefined: redirectUndefinedCount,
-    redirectOther: redirectOtherCount,
+    redirectMismatch: redirectMismatchCount,
+    redirectBreakdown: {
+      undefined: redirectUndefinedCount,
+      other: redirectOtherCount
+    },
     expectationMismatch: expectationMismatchCount,
     expectationBreakdown: expectationStats
   };
