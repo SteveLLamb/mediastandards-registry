@@ -1,26 +1,25 @@
 {
-  "generatedAt": "2025-10-09T21:09:46.601Z",
+  "generatedAt": "2025-10-09T21:27:56.385Z",
   "target": "documents.json",
-  "good": 1282,
+  "good": 1287,
   "skippedByDomain": 0,
   "skippedByPublisher": 0,
   "index": {
-    "error": 206,
+    "error": 202,
     "errorBreakdown": {
-      "Unreachable (400)": 1,
       "Unreachable (403)": 46,
-      "Unreachable (404)": 80,
-      "Unreachable (429)": 58,
+      "Unreachable (404)": 64,
+      "Unreachable (429)": 71,
       "Unreachable (ENOTFOUND)": 2,
       "Unreachable (ERR_BAD_REQUEST)": 1,
       "Unreachable (ERR_FR_TOO_MANY_REDIRECTS)": 1,
       "Unreachable (HPE_INVALID_CONSTANT)": 16,
       "Unreachable (UNABLE_TO_VERIFY_LEAF_SIGNATURE)": 1
     },
-    "redirectMismatch": 2,
+    "redirectMismatch": 1,
     "redirectBreakdown": {
       "undefined": 0,
-      "other": 2
+      "other": 1
     },
     "expectationMismatch": 35,
     "expectationBreakdown": {
@@ -31,18 +30,6 @@
   },
   "report": {
     "unreachable": {
-      "400": [
-        {
-          "docId": "T-REC-H.264.202108",
-          "publisher": "ITU-T",
-          "field": "href",
-          "url": "https://www.itu.int/rec/https://www.itu.int/rec/T-REC-H.264-202108-I/en/en",
-          "message": "Unreachable (400)",
-          "explanation": "The server rejected the request as malformed.",
-          "recommendedAction": "Inspect for typos or formatting issues.",
-          "riskLevel": "High"
-        }
-      ],
       "403": [
         {
           "docId": "1.1915182",
@@ -907,156 +894,6 @@
           "riskLevel": "High"
         },
         {
-          "docId": "ISDCF.D02.2011",
-          "publisher": "ISDCF",
-          "field": "href",
-          "url": "https://isdcf.com/papers/ISDCF-Doc2-DCP-TransitionReview.pdf",
-          "message": "Unreachable (404)",
-          "explanation": "The URL points to a resource that was not found (dead link).",
-          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
-          "riskLevel": "High"
-        },
-        {
-          "docId": "ISDCF.D03.2017",
-          "publisher": "ISDCF",
-          "field": "href",
-          "url": "https://isdcf.com/papers/ISDCF-Doc3-Delivery-Recs.pdf",
-          "message": "Unreachable (404)",
-          "explanation": "The URL points to a resource that was not found (dead link).",
-          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
-          "riskLevel": "High"
-        },
-        {
-          "docId": "ISDCF.D04.2017",
-          "publisher": "ISDCF",
-          "field": "href",
-          "url": "https://isdcf.com/papers/ISDCF-Doc4-Audio-channel-recommendations.pdf",
-          "message": "Unreachable (404)",
-          "explanation": "The URL points to a resource that was not found (dead link).",
-          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
-          "riskLevel": "High"
-        },
-        {
-          "docId": "ISDCF.D05.2017",
-          "publisher": "ISDCF",
-          "field": "href",
-          "url": "https://isdcf.com/papers/ISDCF-Doc5-kdm-certs.pdf",
-          "message": "Unreachable (404)",
-          "explanation": "The URL points to a resource that was not found (dead link).",
-          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
-          "riskLevel": "High"
-        },
-        {
-          "docId": "ISDCF.D07.2017",
-          "publisher": "ISDCF",
-          "field": "href",
-          "url": "https://isdcf.com/papers/ISDCF-Doc7-DigitalCinemaLanguageCodes.pdf",
-          "message": "Unreachable (404)",
-          "explanation": "The URL points to a resource that was not found (dead link).",
-          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
-          "riskLevel": "High"
-        },
-        {
-          "docId": "ISDCF.D08.2012",
-          "publisher": "ISDCF",
-          "field": "href",
-          "url": "http://isdcf.com/papers/ISDCF-Doc8-TheaterKeyRetrieval-TKR-v03.pdf",
-          "message": "Unreachable (404)",
-          "explanation": "The URL points to a resource that was not found (dead link).",
-          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
-          "riskLevel": "High"
-        },
-        {
-          "docId": "ISDCF.D09.2016",
-          "publisher": "ISDCF",
-          "field": "href",
-          "url": "https://isdcf.com/papers/ISDCF-Doc9-Closed-Caption-Authoring-Best-Practices.pdf",
-          "message": "Unreachable (404)",
-          "explanation": "The URL points to a resource that was not found (dead link).",
-          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
-          "riskLevel": "High"
-        },
-        {
-          "docId": "ISDCF.D10.2016",
-          "publisher": "ISDCF",
-          "field": "href",
-          "url": "https://isdcf.com/papers/ISDCF-Doc10-Subtitles-and-Captions-in%20Digital-Cinema-20160211.pdf",
-          "message": "Unreachable (404)",
-          "explanation": "The URL points to a resource that was not found (dead link).",
-          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
-          "riskLevel": "High"
-        },
-        {
-          "docId": "ISDCF.D11.2016",
-          "publisher": "ISDCF",
-          "field": "href",
-          "url": "https://isdcf.com/papers/ISDCF-Doc11-MovieLoudnessMeasurement20160315.pdf",
-          "message": "Unreachable (404)",
-          "explanation": "The URL points to a resource that was not found (dead link).",
-          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
-          "riskLevel": "High"
-        },
-        {
-          "docId": "ISDCF.D12.2017",
-          "publisher": "ISDCF",
-          "field": "href",
-          "url": "https://isdcf.com/papers/ISDCF-Doc12-Recommended-Practice-for-Ingest-Behavior-DRAFT-20170322.pdf",
-          "message": "Unreachable (404)",
-          "explanation": "The URL points to a resource that was not found (dead link).",
-          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
-          "riskLevel": "High"
-        },
-        {
-          "docId": "ISDCF.D13.2018",
-          "publisher": "ISDCF",
-          "field": "href",
-          "url": "https://isdcf.com/papers/ISDCF-Doc13-Sign-Language-Video-Encoding-for-Digital-Cinema.pdf",
-          "message": "Unreachable (404)",
-          "explanation": "The URL points to a resource that was not found (dead link).",
-          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
-          "riskLevel": "High"
-        },
-        {
-          "docId": "ISDCF.D14.2019",
-          "publisher": "ISDCF",
-          "field": "href",
-          "url": "https://isdcf.com/papers/ISDCF-Doc14-Digital-Delivery-of-DCPs.pdf",
-          "message": "Unreachable (404)",
-          "explanation": "The URL points to a resource that was not found (dead link).",
-          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
-          "riskLevel": "High"
-        },
-        {
-          "docId": "ISDCF.D15.2020",
-          "publisher": "ISDCF",
-          "field": "href",
-          "url": "https://isdcf.com/papers/ISDCF-Doc15-IAB-Profile-1-202006012.pdf",
-          "message": "Unreachable (404)",
-          "explanation": "The URL points to a resource that was not found (dead link).",
-          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
-          "riskLevel": "High"
-        },
-        {
-          "docId": "ISDCF.P-HFR.2012",
-          "publisher": "ISDCF",
-          "field": "href",
-          "url": "https://isdcf.com/papers/ISDCF-HighFrameRate-DCP.pdf",
-          "message": "Unreachable (404)",
-          "explanation": "The URL points to a resource that was not found (dead link).",
-          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
-          "riskLevel": "High"
-        },
-        {
-          "docId": "ISDCF.RP-430-10.2018",
-          "publisher": "ISDCF",
-          "field": "href",
-          "url": "http://isdcf.com/papers/ISDCF-SMPTE-ST-430-10-Implementation-Notes20180308.pdf",
-          "message": "Unreachable (404)",
-          "explanation": "The URL points to a resource that was not found (dead link).",
-          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
-          "riskLevel": "High"
-        },
-        {
           "docId": "ISO.26428-1.20XX",
           "publisher": "ISO",
           "field": "href",
@@ -1071,16 +908,6 @@
           "publisher": "ISO",
           "field": "href",
           "url": "https://www.iso.org/standard/80075.html",
-          "message": "Unreachable (404)",
-          "explanation": "The URL points to a resource that was not found (dead link).",
-          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
-          "riskLevel": "High"
-        },
-        {
-          "docId": "ISO.26433.2009am1.20XX",
-          "publisher": "ISO",
-          "field": "href",
-          "url": "https://www.iso.org/standard/80072.html",
           "message": "Unreachable (404)",
           "explanation": "The URL points to a resource that was not found (dead link).",
           "recommendedAction": "Double-check the URL or remove it if no longer valid.",
@@ -1308,6 +1135,126 @@
         }
       ],
       "429": [
+        {
+          "docId": "ISO.26433.2009",
+          "publisher": "ISO",
+          "field": "href",
+          "url": "https://www.iso.org/standard/52793.html",
+          "message": "Unreachable (429)",
+          "explanation": "Unknown error during URL resolution.",
+          "recommendedAction": "Manual investigation required.",
+          "riskLevel": "Unknown"
+        },
+        {
+          "docId": "ISO.26433.2009am1.20XX",
+          "publisher": "ISO",
+          "field": "href",
+          "url": "https://www.iso.org/standard/80072.html",
+          "message": "Unreachable (429)",
+          "explanation": "Unknown error during URL resolution.",
+          "recommendedAction": "Manual investigation required.",
+          "riskLevel": "Unknown"
+        },
+        {
+          "docId": "ISO.2721.2013",
+          "publisher": "ISO",
+          "field": "href",
+          "url": "https://www.iso.org/standard/62742.html",
+          "message": "Unreachable (429)",
+          "explanation": "Unknown error during URL resolution.",
+          "recommendedAction": "Manual investigation required.",
+          "riskLevel": "Unknown"
+        },
+        {
+          "docId": "ISO.2906.2002",
+          "publisher": "ISO",
+          "field": "href",
+          "url": "https://www.iso.org/standard/30126.html",
+          "message": "Unreachable (429)",
+          "explanation": "Unknown error during URL resolution.",
+          "recommendedAction": "Manual investigation required.",
+          "riskLevel": "Unknown"
+        },
+        {
+          "docId": "ISO.2907.2002",
+          "publisher": "ISO",
+          "field": "href",
+          "url": "https://www.iso.org/standard/25425.html",
+          "message": "Unreachable (429)",
+          "explanation": "Unknown error during URL resolution.",
+          "recommendedAction": "Manual investigation required.",
+          "riskLevel": "Unknown"
+        },
+        {
+          "docId": "ISO.3166-1.1997",
+          "publisher": "ISO",
+          "field": "href",
+          "url": "https://www.iso.org/standard/24591.html",
+          "message": "Unreachable (429)",
+          "explanation": "Unknown error during URL resolution.",
+          "recommendedAction": "Manual investigation required.",
+          "riskLevel": "Unknown"
+        },
+        {
+          "docId": "ISO.3166-1.2006",
+          "publisher": "ISO",
+          "field": "href",
+          "url": "https://www.iso.org/standard/39719.html",
+          "message": "Unreachable (429)",
+          "explanation": "Unknown error during URL resolution.",
+          "recommendedAction": "Manual investigation required.",
+          "riskLevel": "Unknown"
+        },
+        {
+          "docId": "ISO.3166-1.2006cor1.2007",
+          "publisher": "ISO",
+          "field": "href",
+          "url": "https://www.iso.org/standard/46123.html",
+          "message": "Unreachable (429)",
+          "explanation": "Unknown error during URL resolution.",
+          "recommendedAction": "Manual investigation required.",
+          "riskLevel": "Unknown"
+        },
+        {
+          "docId": "ISO.3166-1.2013",
+          "publisher": "ISO",
+          "field": "href",
+          "url": "https://www.iso.org/standard/63545.html",
+          "message": "Unreachable (429)",
+          "explanation": "Unknown error during URL resolution.",
+          "recommendedAction": "Manual investigation required.",
+          "riskLevel": "Unknown"
+        },
+        {
+          "docId": "ISO.3166.1993",
+          "publisher": "ISO",
+          "field": "href",
+          "url": "https://www.iso.org/standard/22748.html",
+          "message": "Unreachable (429)",
+          "explanation": "Unknown error during URL resolution.",
+          "recommendedAction": "Manual investigation required.",
+          "riskLevel": "Unknown"
+        },
+        {
+          "docId": "ISO.3382-1.2009",
+          "publisher": "ISO",
+          "field": "href",
+          "url": "https://www.iso.org/standard/40979.html",
+          "message": "Unreachable (429)",
+          "explanation": "Unknown error during URL resolution.",
+          "recommendedAction": "Manual investigation required.",
+          "riskLevel": "Unknown"
+        },
+        {
+          "docId": "ISO.3382-3.2012",
+          "publisher": "ISO",
+          "field": "href",
+          "url": "https://www.iso.org/standard/46520.html",
+          "message": "Unreachable (429)",
+          "explanation": "Unknown error during URL resolution.",
+          "recommendedAction": "Manual investigation required.",
+          "riskLevel": "Unknown"
+        },
         {
           "docId": "ISO.3382-3.2022",
           "publisher": "ISO",
@@ -1603,6 +1550,16 @@
           "publisher": "ISO",
           "field": "href",
           "url": "https://www.iso.org/standard/64976.html",
+          "message": "Unreachable (429)",
+          "explanation": "Unknown error during URL resolution.",
+          "recommendedAction": "Manual investigation required.",
+          "riskLevel": "Unknown"
+        },
+        {
+          "docId": "ISO.80000-6.2022",
+          "publisher": "ISO",
+          "field": "href",
+          "url": "https://www.iso.org/standard/77846.html",
           "message": "Unreachable (429)",
           "explanation": "Unknown error during URL resolution.",
           "recommendedAction": "Manual investigation required.",
@@ -2118,19 +2075,9 @@
           "publisher": "Scientific Instruments",
           "field": "href",
           "url": "https://doi.org/10.1088/0950-7671/1/3/302",
-          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=060c27da-08de-48ea-9ca3-1fff725a0c7c&ssb=52737292878&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=335d7990-cnvj-47fe-8eb1-a8f6dfe09b93&ssk=botmanager_support@radware.com&ssm=91766531634251695104855588019561&ssn=438cc8444242f5e5d23a5eb7647e7fa9e328634889f6-fe8d-42b4-98bc87&sso=1fdbe573-736a47691e9548e772ade1f5e8e702d22a3ad1c0e0737aaa&ssp=93087293061760005889176008528959110&ssq=45234014366885550990743668485265301302508&ssr=MTcyLjIwOC4xNTMuNw==&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2Y5MDAwMzg0NTYyZGMtMmEyNS00NGUxLTk0YTEtYTMzMjg4ZWEzOGU3MS0xNzYwMDQzNjY4MDY2MC1iMDljOTg0MzM5NDZlZjI2MTAiLCJyZCI6ImlvcC5vcmciLCJfX3V6bWYiOiI3ZjkwMDA2MzQ4ODlmNi1mZThkLTQyYjQtOTU3My03MzZhNDc2OTFlOTUxLTE3NjAwNDM2NjgwNjYwLTAwMTFhYjVlZmJkZjBlZGE1OGQxMCJ9",
+          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=77000144-8ea0-41f4-a177-5bab3e050529&ssb=20210238687&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=afcb56c3-cnvj-4555-b8e7-8cbfe2efd8ff&ssk=botmanager_support@radware.com&ssm=10229795991196416106229393899989&ssn=968a3a908c391f439bbc8e4c7260a00cb968b405c50b-2932-43e8-811afe&sso=3a1031da-b90cac21452d709d56b4821733d133a6a582f09364e955cd&ssp=00152970351760084940176008902324414&ssq=11987864497396623492544973712835041490628&ssr=MjAuNTUuMTUuMjI3&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2Y5MDAwZGVjOTAxYmItZGRlZS00OTJiLWE3ZTMtZjMzOTM5ZDM5YmNmMS0xNzYwMDQ0OTczNDkwMC00Y2UyY2ZjNDEyZWU3MzM1MTAiLCJyZCI6ImlvcC5vcmciLCJfX3V6bWYiOiI3ZjkwMDBiNDA1YzUwYi0yOTMyLTQzZTgtODFkYS1iOTBjYWMyMTQ1MmQxLTE3NjAwNDQ5NzM0OTAwLTAwMWE4YTY5MWRmNWNlYzVjOWUxMCJ9",
           "resolvedField": "resolvedHref",
           "expectedResolved": "https://iopscience.iop.org/article/10.1088/0950-7671/1/3/302",
-          "message": "resolved url mismatch"
-        },
-        {
-          "docId": "ML3807.M56.1916",
-          "publisher": "MacMillan Co.",
-          "field": "href",
-          "url": "https://ia800204.us.archive.org/19/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
-          "resolvedUrl": "https://ia801303.us.archive.org/1/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
-          "resolvedField": "resolvedHref",
-          "expectedResolved": "https://ia601303.us.archive.org/1/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
           "message": "resolved url mismatch"
         }
       ]
