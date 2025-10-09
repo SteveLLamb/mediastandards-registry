@@ -327,7 +327,7 @@ const runValidation = async () => {
   // Build index object with major counts
   const index = {
     unreachable: unreachableCount,
-    errorBreakdown: Object.fromEntries(Object.entries(errorStats).sort((a,b)=> a[0]<b[0]? -1 : a[0]>b[0]? 1 : 0))
+    errorBreakdown: Object.fromEntries(Object.entries(errorStats).sort((a,b)=> a[0]<b[0]? -1 : a[0]>b[0]? 1 : 0)),
     redirectMismatch: redirectMismatchCount,
     redirectBreakdown: {
       undefined: redirectUndefinedCount,
