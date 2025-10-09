@@ -347,7 +347,7 @@ const runValidation = async () => {
     console.log('\n### URL validation issue summary:');
     if (unreachableCount > 0) {
       console.log(`- 🚫 ${unreachableCount} unreachable entr${unreachableCount === 1 ? 'y' : 'ies'}`);
-      const summary = Object.entries(header.errorBreakdown)
+      const summary = Object.entries(index.errorBreakdown)
         .map(([msg, count]) => `    ${count.toString().padStart(3)} ${msg}`)
         .join('\n');
       if (summary) console.log('  🔎 Unreachable error breakdown:\n' + summary);
