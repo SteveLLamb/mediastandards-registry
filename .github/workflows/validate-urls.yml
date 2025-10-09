@@ -135,6 +135,7 @@ jobs:
             - Script: src/main/scripts/url.normalize.js --apply
             - Detected missing resolved*: ${{ steps.audit.outputs.redirect_undefined }}
             - Applied backfills: ${{ steps.norm.outputs.applied }}
+          labels: automated, reports, url
           branch: chore/url-normalize
           base: ${{ github.event.repository.default_branch }}
           delete-branch: true
