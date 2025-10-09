@@ -1,25 +1,24 @@
 {
-  "generatedAt": "2025-10-09T19:20:05.078Z",
+  "generatedAt": "2025-10-09T19:58:04.685Z",
   "target": "documents.json",
-  "good": 1338,
+  "good": 1339,
   "skippedByDomain": 0,
   "skippedByPublisher": 0,
   "index": {
-    "error": 150,
+    "error": 148,
     "errorBreakdown": {
       "Unreachable (400)": 1,
       "Unreachable (403)": 46,
-      "Unreachable (404)": 81,
-      "Unreachable (ECONNABORTED)": 1,
+      "Unreachable (404)": 80,
       "Unreachable (ENOTFOUND)": 2,
       "Unreachable (ERR_BAD_REQUEST)": 1,
       "Unreachable (ERR_FR_TOO_MANY_REDIRECTS)": 1,
       "Unreachable (HPE_INVALID_CONSTANT)": 16,
       "Unreachable (UNABLE_TO_VERIFY_LEAF_SIGNATURE)": 1
     },
-    "redirectMismatch": 2,
+    "redirectMismatch": 3,
     "redirectBreakdown": {
-      "undefined": 0,
+      "undefined": 1,
       "other": 2
     },
     "expectationMismatch": 35,
@@ -1097,16 +1096,6 @@
           "riskLevel": "High"
         },
         {
-          "docId": "NIST.SP.800-57p2",
-          "publisher": "NIST",
-          "field": "href",
-          "url": "https://doi.org/10.6028/NIST.SP.800-57p2",
-          "message": "Unreachable (404)",
-          "explanation": "The URL points to a resource that was not found (dead link).",
-          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
-          "riskLevel": "High"
-        },
-        {
           "docId": "R-REC-BS.1726-0.200504",
           "publisher": "ITU-R",
           "field": "href",
@@ -1515,18 +1504,6 @@
           "riskLevel": "Medium"
         }
       ],
-      "ECONNABORTED": [
-        {
-          "docId": "RFC8098",
-          "publisher": "IETF",
-          "field": "href",
-          "url": "https://tools.ietf.org/html/rfc8098",
-          "message": "Unreachable (ECONNABORTED)",
-          "explanation": "Connection timed out.",
-          "recommendedAction": "Retry later or check the server’s responsiveness.",
-          "riskLevel": "Medium-High"
-        }
-      ],
       "ENOTFOUND": [
         {
           "docId": "W3C.rddl.2002",
@@ -1551,26 +1528,37 @@
       ]
     },
     "redirect": {
-      "undefined": [],
+      "undefined": [
+        {
+          "docId": "W3C.xmlc14n1.1.20080502",
+          "publisher": "W3C",
+          "field": "href",
+          "url": "http://www.w3.org/TR/2008/REC-xml-c14n11-20080502/",
+          "resolvedUrl": "https://www.w3.org/TR/2008/REC-xml-c14n11-20080502/",
+          "resolvedField": "resolvedHref",
+          "expectedResolved": "undefined",
+          "message": "resolved url mismatch"
+        }
+      ],
       "other": [
         {
           "docId": "0950-7671.1.3.302",
           "publisher": "Scientific Instruments",
           "field": "href",
           "url": "https://doi.org/10.1088/0950-7671/1/3/302",
-          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=8fc79d6d-5286-452d-b7a1-3b3b4b9b5619&ssb=77575268009&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=3b73c21f-cnvj-40db-9a77-6ef107d3f427&ssk=botmanager_support@radware.com&ssm=70453511180225561105808536773260&ssn=b21d616789c02f0825ed776e38cf52f78e4e084cc600-81bb-4450-aef3ae&sso=8033d6bb-b52a90ca71701c7fa0fdd2a37a3b75372f6e9f093f2b4fa5&ssp=56752527181760072792176009651736821&ssq=93739573695962883748036959769830007502644&ssr=NTIuMTU5LjI0NC43NA==&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDAwODRjYzYwMC04MWJiLTQ0NTAtYTZiYi1iNTJhOTBjYTcxNzAxLTE3NjAwMzY5NTkxODEwLTAwMTlhOGUyODJlZmYxZWMzNWUxMCIsInJkIjoiaW9wLm9yZyIsInV6bXgiOiI3ZjkwMDA1ZWMyODZlOC0wYzNjLTQxNDctYTU5NC1lNjRjYzZhZTg5NzgxLTE3NjAwMzY5NTkxODEwLTg2NWVkMWQ3ZDI4NDk2YTQxMCJ9",
+          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=949e2f55-06d0-429f-9225-ec1baee95594&ssb=76257273917&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=3af2edba-cnvj-4f5c-8316-85a477bf6170&ssk=botmanager_support@radware.com&ssm=80653687961702384102724116003220&ssn=2fc52b57dc4fbd4222237e9049d36c7518595f17bf41-a995-4f92-8e4ab4&sso=2236f659-76791053a89acf8dcb6acb95d6db9a002382e62a40d942f6&ssp=28513613871760047383176006823565240&ssq=57417373940191632661039401862171460279611&ssr=NjguMjIwLjU2LjI0Mw==&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJyZCI6ImlvcC5vcmciLCJ1em14IjoiN2Y5MDAwOWNlZmQxMDAtYTM3ZS00MDkzLTliMDQtYTQyZWMyMmEzNzhkMS0xNzYwMDM5NDAxNjg2MC1kYjk1ZjYzMjZhNjY1M2FmMTAiLCJfX3V6bWYiOiI3ZjkwMDA1ZjE3YmY0MS1hOTk1LTRmOTItODY1OS03Njc5MTA1M2E4OWExLTE3NjAwMzk0MDE2ODYwLTAwMTFhMjgyY2Y2NTRjMmQ4OWMxMCJ9",
           "resolvedField": "resolvedHref",
           "expectedResolved": "https://iopscience.iop.org/article/10.1088/0950-7671/1/3/302",
           "message": "resolved url mismatch"
         },
         {
-          "docId": "IETF.FLS.2001",
-          "publisher": "IETF",
+          "docId": "ML3807.M56.1916",
+          "publisher": "MacMillan Co.",
           "field": "href",
-          "url": "https://www.ietf.org/about/groups/iesg/statements/formal-languages-use/",
-          "resolvedUrl": "https://datatracker.ietf.org/doc/statement-iesg-guidelines-for-the-use-of-formal-languages-in-ietf-specifications-20011001",
+          "url": "https://ia800204.us.archive.org/19/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
+          "resolvedUrl": "https://ia801303.us.archive.org/1/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
           "resolvedField": "resolvedHref",
-          "expectedResolved": "https://datatracker.ietf.org/doc/statement-iesg-guidelines-for-the-use-of-formal-languages-in-ietf-specifications-20011001/",
+          "expectedResolved": "https://ia601303.us.archive.org/1/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
           "message": "resolved url mismatch"
         }
       ]
