@@ -141,3 +141,124 @@ jobs:
           add-paths: |
             src/main/data/documents.json
             src/main/reports/url_validate_normalize.json
+
+      - name: Upsert URL issues 
+        if: success() || failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = require('path');
+
+            const owner = context.repo.owner;
+            const repo = context.repo.repo;
+            const auditPath = path.join(process.cwd(), 'src', 'main', 'reports', 'url_validate_audit.json');
+
+            if (!fs.existsSync(auditPath)) {
+              core.info('No audit file found; skipping issue upsert.');
+              return;
+            }
+
+            const audit = JSON.parse(fs.readFileSync(auditPath, 'utf8'));
+            const genAt = audit.generatedAt || new Date().toISOString();
+            const runTag = `Run #${context.runId}`;
+
+            const unr = (audit.report && audit.report.unreachable) || {};
+            const list404 = Array.isArray(unr['404']) ? unr['404'] : [];
+            const list400 = Array.isArray(unr['400']) ? unr['400'] : [];
+
+            // Build current state: 404 by publisher, 400 by docId
+            const byPub404 = new Map(); // pub -> array of entries
+            for (const item of list404) {
+              const pub = (item.publisher || 'Unknown').trim();
+              if (!byPub404.has(pub)) byPub404.set(pub, []);
+              byPub404.get(pub).push(item);
+            }
+            const current400 = new Set(list400.map(i => i.docId));
+
+            // Helper: list all open issues with label
+            async function listOpenWithLabel(label) {
+              const issues = await github.paginate(github.rest.issues.listForRepo, {
+                owner, repo, state: 'open', labels: label, per_page: 100
+              });
+              // Exclude PRs (listForRepo returns both)
+              return issues.filter(i => !i.pull_request);
+            }
+
+            // Helper: create or update issue
+            async function upsertIssue({title, body, labels}) {
+              // Search open issues by exact title
+              const openIssues = await github.paginate(github.rest.issues.listForRepo, {
+                owner, repo, state: 'open', per_page: 100
+              });
+              const found = openIssues.find(i => i.title === title && !i.pull_request);
+              if (found) {
+                await github.rest.issues.update({ owner, repo, issue_number: found.number, body, labels });
+                return found.number;
+              } else {
+                const created = await github.rest.issues.create({ owner, repo, title, body, labels });
+                return created.data.number;
+              }
+            }
+
+            // Upsert 404-by-publisher issues
+            for (const [pub, arr] of byPub404.entries()) {
+              const title = `URL ERROR (404): ${pub}`;
+              // Compact, deterministic body
+              const lines = arr
+                .sort((a,b) => (a.docId || '').localeCompare(b.docId || ''))
+                .map(i => `- ${i.docId} — ${i.field} — ${i.url}`);
+              const body = [
+                `**Count:** ${arr.length}`,
+                '',
+                ...lines,
+                '',
+                `_Created automatically from URL validation audit on ${genAt} — ${runTag}_`
+              ].join('\n');
+              await upsertIssue({ title, body, labels: ['automated', 'url-404'] });
+            }
+
+            // Upsert 400-per-item issues
+            for (const i of list400) {
+              const title = `URL ERROR (400): ${i.docId}`;
+              const body = [
+                `**Doc:** ${i.docId}`,
+                `**Field:** ${i.field}`,
+                `**URL:** ${i.url}`,
+                '',
+                `_Created automatically from URL validation audit on ${genAt} — ${runTag}_`
+              ].join('\n');
+              await upsertIssue({ title, body, labels: ['automated', 'url-400'] });
+            }
+
+            // Autoclose resolved issues
+            // 404s: close any publisher issue not in current set
+            const open404 = await listOpenWithLabel('url-404');
+            const livePubs = new Set([...byPub404.keys()]);
+            for (const iss of open404) {
+              const m = /^URL 404s — (.+)$/.exec(iss.title || '');
+              const pub = m && m[1] ? m[1].trim() : null;
+              if (!pub || !livePubs.has(pub)) {
+                await github.rest.issues.createComment({
+                  owner, repo, issue_number: iss.number,
+                  body: `Resolved: no outstanding 404s for this publisher. ${runTag}. Closing.` });
+                });
+                await github.rest.issues.update({ owner, repo, issue_number: iss.number, state: 'closed' });
+              }
+            }
+
+            // 400s: close any docId issue not in current set
+            const open400 = await listOpenWithLabel('url-400');
+            for (const iss of open400) {
+              const m = /^URL 400 — (.+)$/.exec(iss.title || '');
+              const docId = m && m[1] ? m[1].trim() : null;
+              if (!docId || !current400.has(docId)) {
+                await github.rest.issues.createComment({
+                  owner, repo, issue_number: iss.number,
+                  body: `Resolved: no longer present as 400. ${runTag}. Closing.` });
+                });
+                await github.rest.issues.update({ owner, repo, issue_number: iss.number, state: 'closed' });
+              }
+            }
+
+            core.info('Issue upsert/close pass complete.');
