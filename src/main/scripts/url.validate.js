@@ -134,7 +134,8 @@ const validateEntry = async (entry, key, urlFields) => {
             expectedPrefix: f.expectedPrefix,
             actual: f.actual,
             message: `Expected ${f.field} to start with ${f.expectedPrefix}`,
-            docId: key
+            docId: key,
+            publisher: entry.publisher || 'Unknown'
           });
         }
       }
@@ -160,7 +161,7 @@ const validateEntry = async (entry, key, urlFields) => {
             [resolvedField]: expectedResolved || 'undefined',
             message: 'resolved url mismatch'
           };
-          problems.push({ ...problem, docId: key });
+          problems.push({ ...problem, docId: key, publisher: entry.publisher || 'Unknown' });
           console.warn(`❗ ${key} → ${field}: ${url} → resolved to ${result.resolvedUrl} — expected ${expectedResolved || 'undefined'}`);
         }
       }
@@ -179,7 +180,8 @@ const validateEntry = async (entry, key, urlFields) => {
                 expectedPrefix: f.expectedPrefix,
                 actual: f.actual,
                 message: `Expected ${f.field} to start with ${f.expectedPrefix}`,
-                docId: key
+                docId: key,
+                publisher: entry.publisher || 'Unknown'
               });
             }
           }
@@ -207,7 +209,8 @@ const validateEntry = async (entry, key, urlFields) => {
         explanation: meta.explanation,
         recommendedAction: meta.recommendedAction,
         riskLevel: meta.riskLevel,
-        docId: key
+        docId: key,
+        publisher: entry.publisher || 'Unknown' 
       });
 
       errorStats[result.message] = (errorStats[result.message] || 0) + 1;
@@ -283,6 +286,7 @@ const runValidation = async () => {
         if (!groupedReport.unreachable[code]) groupedReport.unreachable[code] = [];
         groupedReport.unreachable[code].push({
           docId: p.docId || key,
+          publisher: p.publisher || 'Unknown',
           field: p.field,
           url: p.url,
           message: p.message,
@@ -294,6 +298,7 @@ const runValidation = async () => {
         const bucket = (p.resolvedHref === 'undefined' || typeof p.resolvedHref === 'undefined') ? 'undefined' : 'other';
         groupedReport.redirect[bucket].push({
           docId: p.docId || key,
+          publisher: p.publisher || 'Unknown',
           field: p.field,
           url: p.url,
           resolvedUrl: p.resolvedUrl,
@@ -306,6 +311,7 @@ const runValidation = async () => {
         if (!groupedReport.expectation[rule]) groupedReport.expectation[rule] = [];
         groupedReport.expectation[rule].push({
           docId: p.docId || key,
+          publisher: p.publisher || 'Unknown',
           field: p.field,
           actual: p.actual,
           expectedPrefix: p.expectedPrefix,
