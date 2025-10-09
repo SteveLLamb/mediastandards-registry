@@ -268,6 +268,43 @@ function resolveExpected(ctx) {
   return null;
 }
 
-module.exports = { RULES, resolveExpected };
-module.exports.EXPECTATION_RULES = EXPECTATION_RULES;
-module.exports.checkExpectations = checkExpectations;
+function suggestAutofix(ctx) {
+  const out = [];
+  // Only make suggestions for resolved* fields (post-redirect truth)
+  const isResolvedField = String(ctx.field || '').startsWith('resolved');
+  if (!isResolvedField || !ctx.url) return out;
+  let host = '';
+  try { host = new URL(ctx.url).hostname.toLowerCase(); } catch {}
+
+  // IETF: rfc-editor.org is canonical for RFCs — safe to backfill resolved*
+  if (host.endsWith('rfc-editor.org')) {
+    out.push({
+      type: 'set',
+      field: ctx.field,          // e.g., 'resolvedHref'
+      newValue: ctx.url,
+      autofix: true,
+      confidence: 'high',
+      rationale: 'IETF canonical host (rfc-editor.org) observed via redirect.'
+    });
+  }
+  // W3C: TR space on w3.org is stable enough for resolved* backfill
+  else if (host.endsWith('w3.org')) {
+    out.push({
+      type: 'set',
+      field: ctx.field,
+      newValue: ctx.url,
+      autofix: true,
+      confidence: 'high',
+      rationale: 'W3C TR host (w3.org) observed via redirect.'
+    });
+  }
+  return out;
+}
+
+module.exports = {
+  RULES,
+  resolveExpected,
+  EXPECTATION_RULES,
+  checkExpectations,
+  suggestAutofix
+};
