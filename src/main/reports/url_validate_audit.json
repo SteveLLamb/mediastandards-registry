@@ -1,35 +1,34 @@
 {
-  "generatedAt": "2025-10-09T17:00:19.875Z",
+  "generatedAt": "2025-10-09T17:39:39.622Z",
   "target": "documents.json",
-  "unreachableCount": 219,
-  "redirectMismatchCount": 3,
-  "redirectUndefinedCount": 1,
-  "redirectOtherCount": 2,
-  "expectationMismatchCount": 35,
-  "expectationBreakdown": {
-    "SMPTE.href.ag-prefix": 33,
-    "SMPTE.href.doi-prefix": 1,
-    "SMPTE.resolvedHref.journals-prefix": 1
-  },
-  "goodCount": 1268,
+  "good": 1265,
   "skippedByDomain": 0,
   "skippedByPublisher": 0,
-  "errorBreakdown": {
-    "Unreachable (400)": 1,
-    "Unreachable (403)": 46,
-    "Unreachable (404)": 80,
-    "Unreachable (429)": 71,
-    "Unreachable (ENOTFOUND)": 2,
-    "Unreachable (ERR_BAD_REQUEST)": 1,
-    "Unreachable (ERR_FR_TOO_MANY_REDIRECTS)": 1,
-    "Unreachable (HPE_INVALID_CONSTANT)": 16,
-    "Unreachable (UNABLE_TO_VERIFY_LEAF_SIGNATURE)": 1
-  },
   "index": {
-    "unreachable": 219,
-    "redirectUndefined": 1,
-    "redirectOther": 2,
-    "expectationMismatch": 35
+    "error": 222,
+    "errorBreakdown": {
+      "Unreachable (400)": 1,
+      "Unreachable (403)": 46,
+      "Unreachable (404)": 80,
+      "Unreachable (429)": 71,
+      "Unreachable (ECONNABORTED)": 3,
+      "Unreachable (ENOTFOUND)": 2,
+      "Unreachable (ERR_BAD_REQUEST)": 1,
+      "Unreachable (ERR_FR_TOO_MANY_REDIRECTS)": 1,
+      "Unreachable (HPE_INVALID_CONSTANT)": 16,
+      "Unreachable (UNABLE_TO_VERIFY_LEAF_SIGNATURE)": 1
+    },
+    "redirectMismatch": 3,
+    "redirectBreakdown": {
+      "undefined": 1,
+      "other": 2
+    },
+    "expectationMismatch": 35,
+    "expectationBreakdown": {
+      "SMPTE.href.ag-prefix": 33,
+      "SMPTE.href.doi-prefix": 1,
+      "SMPTE.resolvedHref.journals-prefix": 1
+    }
   },
   "report": {
     "unreachable": {
@@ -2002,6 +2001,35 @@
           "riskLevel": "Medium"
         }
       ],
+      "ECONNABORTED": [
+        {
+          "docId": "R-REC-BT.2390-10.202111",
+          "field": "href",
+          "url": "https://www.itu.int/pub/R-REP-BT.2390-10-2021",
+          "message": "Unreachable (ECONNABORTED)",
+          "explanation": "Connection timed out.",
+          "recommendedAction": "Retry later or check the server’s responsiveness.",
+          "riskLevel": "Medium-High"
+        },
+        {
+          "docId": "R-REC-BT.2390-4.201804",
+          "field": "href",
+          "url": "https://www.itu.int/pub/R-REP-BT.2390-4-2018",
+          "message": "Unreachable (ECONNABORTED)",
+          "explanation": "Connection timed out.",
+          "recommendedAction": "Retry later or check the server’s responsiveness.",
+          "riskLevel": "Medium-High"
+        },
+        {
+          "docId": "R-REC-BT.2390-8.202002",
+          "field": "href",
+          "url": "https://www.itu.int/pub/R-REP-BT.2390-8-2020",
+          "message": "Unreachable (ECONNABORTED)",
+          "explanation": "Connection timed out.",
+          "recommendedAction": "Retry later or check the server’s responsiveness.",
+          "riskLevel": "Medium-High"
+        }
+      ],
       "ENOTFOUND": [
         {
           "docId": "W3C.rddl.2002",
@@ -2040,7 +2068,7 @@
           "docId": "0950-7671.1.3.302",
           "field": "href",
           "url": "https://doi.org/10.1088/0950-7671/1/3/302",
-          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=49938513-d387-4c97-9e13-dc9730571ec3&ssb=65004228081&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=57f24e2e-cnvj-4a7e-b836-d2d487dc43a2&ssk=botmanager_support@radware.com&ssm=22345689644808156105379799102218&ssn=9afc5dec28967c79ea80cc4ed307425d2a030d4d0cef-bf7b-4cf9-8cfdd6&sso=03bdf5b4-87ea864b1db7e5af635734a45e5bc56bd816a8eb67eeb557&ssp=14728662271760059968176004710923735&ssq=16745702890562630510428905074017883741256&ssr=NzQuMjM1LjE1MS43&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJyZCI6ImlvcC5vcmciLCJ1em14IjoiN2Y5MDAwZjJiZWJhNWYtMGE4ZC00NTIwLWEyYWQtNTY0YWYxZWJjY2MxMS0xNzYwMDI4OTA1Njg1MC1lNDRjMjg2Y2M3Y2U2ZGZlMTAiLCJfX3V6bWYiOiI3ZjkwMDAwZDRkMGNlZi1iZjdiLTRjZjktODViNC04N2VhODY0YjFkYjcxLTE3NjAwMjg5MDU2ODUwLTAwMWZlMDIwZjQ1NDU5MjQxNmIxMCJ9",
+          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=4141291b-6ba8-4122-8fcd-36445539dca1&ssb=36861201239&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=6b6ec3a0-cnvj-4781-95f0-23e660429c7d&ssk=botmanager_support@radware.com&ssm=04690482976628383103341059971277&ssn=a210d44c492e375cd3788098c36873d189de0e0b66e5-41a3-41bd-8e1391&sso=be8b1f3b-e5e7c74821dcef696ce836a2a96f2717327d2128bc3ecc4e&ssp=91142315561760047143176002916370037&ssq=52060733126453049549431264474396715710808&ssr=MjAuNTEuMTk4LjE5OA==&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDAwZTBiNjZlNS00MWEzLTQxYmQtOGYzYi1lNWU3Yzc0ODIxZGMxLTE3NjAwMzEyNjQ1MTUwLTAwMTVmNDUxMTkyMDhkYTViMjIxMCIsInV6bXgiOiI3ZjkwMDA2ZmFhMWFjNy1jYmVkLTRlNzgtYjVmNC03M2IwZGRlMWQ0YjExLTE3NjAwMzEyNjQ1MTUwLWUwZGJkNjU2Njk1ZDgwZWYxMCIsInJkIjoiaW9wLm9yZyJ9",
           "resolvedField": "resolvedHref",
           "expectedResolved": "https://iopscience.iop.org/article/10.1088/0950-7671/1/3/302",
           "message": "resolved url mismatch"
