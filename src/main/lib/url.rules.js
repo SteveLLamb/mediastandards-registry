@@ -151,6 +151,31 @@ const expSMPTE_HREF_DOI = {
   }
 };
 
+const expSMPTE_HREF_AG = {
+  name: 'SMPTE.href.ag-prefix',
+  when: ({ entry, field }) => 
+    field === 'href' && 
+    isSMPTE(entry) &&
+    hasDocType(entry, 'Administrative Guideline', 'Operations Manual'),
+  check: ({ url, field }) => {
+    const expectedPrefix = 'https://doc.smpte-doc.org/';
+    const ok = startsWithPrefix(url, expectedPrefix);
+    return { ok, expectedPrefix, actual: url, field };
+  }
+};
+
+const expSMPTE_REPO_GH = {
+  name: 'SMPTE.repo.gh-prefix',
+  when: ({ entry, field }) => 
+    field === 'repo' && 
+    isSMPTE(entry),
+  check: ({ url, field }) => {
+    const expectedPrefix = 'https://github.com/SMPTE/';
+    const ok = startsWithPrefix(url, expectedPrefix);
+    return { ok, expectedPrefix, actual: url, field };
+  }
+};
+
 const expSMPTE_RESOLVED_STANDARDS = {
   name: 'SMPTE.resolvedHref.standards-prefix',
   when: ({ entry, field }) => (
@@ -182,6 +207,8 @@ const expSMPTE_RESOLVED_JOURNALS = {
 // Add more expectation rules per-publisher as needed
 const EXPECTATION_RULES = [
   expSMPTE_HREF_DOI,
+  expSMPTE_HREF_AG,
+  expSMPTE_REPO_GH,
   expSMPTE_RESOLVED_STANDARDS,
   expSMPTE_RESOLVED_JOURNALS,
 ];
