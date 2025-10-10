@@ -110,7 +110,7 @@ _Build preview of MSR site during PR creation, prior to publication to manually 
 **Sample Run:** [Run #18398206332](https://github.com/SteveLLamb/mediastandards-registry/actions/runs/18398206332)
 
 **Sample PRs:** 
-- [Fix 493 - ATSC URL (#512)](https://github.com/SteveLLamb/mediastandards-registry/pull/512)  
+- [Fix 404 - ITUR (#514)](https://github.com/SteveLLamb/mediastandards-registry/pull/514)  
 
 
 > **Trigger:** creation of PR with changes to `src/main/data/documents.json` or site rendering. 
@@ -121,7 +121,8 @@ _Build preview of MSR site during PR creation, prior to publication to manually 
 - Fully autonomous workflow chain:  
   Extract → MSI → MRI → MSR → URL Validate  
 - Each stage runs independently but triggers the next when changes are detected and generates auditable JSON reports.  
-- PRs are opened only when data changes; PR generate MSR preview links when appropriate; metadata and validation commits go directly to `main`.  
+- PRs are opened only when data changes; metadata and validation commits go directly to `main`. 
+- PR generate MSR preview links when appropriate; when closed and/or merged, self cleans to remove stale preview links and branches. 
 - Permanent artifacts reports are stored in `src/main/reports`.  
 - All runs are concurrency-protected, idempotent, and self-healing.
 
