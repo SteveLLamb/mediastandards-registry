@@ -12,7 +12,7 @@ on:
       # Extract PRs (bot): include because they change the dataset used by the site
       - "src/main/data/**"
   workflow_run:
-    workflows: ["Extract Documents"]
+    workflows: ["Extract SMPTE Documents"]
     types: [completed]
 
 permissions:
