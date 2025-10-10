@@ -1,0 +1,41 @@
+name: Preview Sweeper
+on:
+  schedule:
+    - cron: "0 9 * * 1"  # Mondays 09:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Remove previews for closed PRs
+        env:
+          REPO: ${{ github.repository }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -e
+          # list pr directories
+          for d in pr/*/ ; do
+            [ -d "$d" ] || continue
+            num="${d%/}"; num="${num#pr/}"
+            state=$(gh pr view "$num" --repo "$REPO" --json state -q .state || echo "MISSING")
+            if [ "$state" != "OPEN" ]; then
+              echo "Removing preview for closed PR #$num"
+              git rm -r "$d"
+            fi
+          done
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --cached --quiet; then
+            git commit -m "Sweep: remove previews for closed PRs"
+            git push origin gh-pages
+          else
+            echo "Nothing to sweep."
+          fi

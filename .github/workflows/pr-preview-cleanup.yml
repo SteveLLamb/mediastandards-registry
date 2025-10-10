@@ -1,0 +1,54 @@
+name: PR Preview Cleanup
+
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  cleanup:
+    # Only for PRs from this repo (matches your preview guard)
+    if: github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+
+      - name: Remove pr/<PR#> directory
+        run: |
+          set -e
+          TARGET="pr/${{ github.event.number }}"
+          if [ -d "$TARGET" ]; then
+            git rm -r "$TARGET"
+          else
+            echo "No preview dir to remove: $TARGET"
+          fi
+
+      - name: Commit and push removal (if any)
+        run: |
+          set -e
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --cached --quiet; then
+            git commit -m "Cleanup preview for PR #${{ github.event.number }}"
+            git push origin gh-pages
+          else
+            echo "Nothing to commit."
+          fi
+
+      - name: Update PR comment to mark preview removed
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          header: msr-preview
+          message: |
+            Preview removed (PR closed):
+            https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr/${{ github.event.number }}/
+
+            _This URL should now return 404 (directory deleted)._
