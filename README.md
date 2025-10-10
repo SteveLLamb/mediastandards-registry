@@ -42,7 +42,7 @@ The Media Standards Registry (MSR) updates itself through a chain of automated G
 | MRI | Maps references across all docs | After MSI | `masterReferenceIndex.json` |
 | MSR | Builds and publishes the site | After MRI | <https://mediastandardsregistry.org/> |
 | URL Validate | Checks and normalizes links | After MSR | `url_validate_audit.json` |
-| PR Build | Builds MSR preview | PR Creation | <https://stevellamb.github.io/mediastandards-registry/pr/###/> |
+| PR Build Preview| Builds MSR preview prior to publication | PR Creation | <https://stevellamb.github.io/mediastandards-registry/pr/###/> |
 
 ```mermaid
 graph LR
@@ -52,8 +52,8 @@ graph LR
   D --> E[URL Validate]
 
   %% PR preview paths (dotted lines indicate PR-triggered previews)
-  A -. "PR opened (documents.json)" .-> P[PR Build Preview]
-  S[Site/Template change PR] -.-> P
+  A -. "PR Created (documents.json)" .-> P[PR Build Preview]
+  S[Site/Template PR] -.-> P
 ```
 
 _Dotted lines indicate PR-triggered preview builds._
