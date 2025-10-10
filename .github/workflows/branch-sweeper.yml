@@ -26,9 +26,6 @@ jobs:
       - uses: actions/github-script@v7
         with:
           script: |
-            const core = require('@actions/core');
-            const github = require('@actions/github');
-
             const inputDry = core.getInput('dry_run');
             const inputDays = core.getInput('days_old');
             const inputIgnoreAge = core.getInput('ignore_age');
@@ -37,31 +34,37 @@ jobs:
             const IGNORE_AGE = inputIgnoreAge ? inputIgnoreAge === 'true' : false;
             const cutoffMs = Date.now() - daysOld * 24 * 60 * 60 * 1000;
 
+            const { owner, repo } = context.repo;
+            const { data: repoInfo } = await github.rest.repos.get({ owner, repo });
+            const defaultBranch = repoInfo.default_branch;
+
             async function run() {
-              const repo = github.context.repo;
-              const branches = await github.rest.repos.listBranches({
-                owner: repo.owner,
-                repo: repo.repo,
-                protected: false,
-                per_page: 100,
-              });
+              let page = 1;
+              const per_page = 100;
+              while (true) {
+                const { data: branches } = await github.rest.repos.listBranches({
+                  owner, repo, protected: false, per_page, page
+                });
+                if (!branches.length) break;
 
-              for (const branch of branches.data) {
-                if (branch.name === 'main' || branch.name === 'master') continue;
+                for (const b of branches) {
+                  const name = b.name;
 
-                const commitDate = new Date(branch.commit.committer.date).getTime();
-                if (!IGNORE_AGE && daysOld > 0 && commitDate > cutoffMs) continue; // still fresh
+                  // Skip protected/default branches
+                  if (name === defaultBranch || name === 'main' || name === 'master' || name === 'gh-pages') continue;
 
-                if (DRY) {
-                  core.info(`Would delete branch: ${branch.name}`);
-                } else {
-                  await github.rest.git.deleteRef({
-                    owner: repo.owner,
-                    repo: repo.repo,
-                    ref: `heads/${branch.name}`
-                  });
-                  core.info(`Deleted branch: ${branch.name}`);
+                  const { data: commit } = await github.rest.repos.getCommit({ owner, repo, ref: b.commit.sha });
+                  const commitDate = new Date(commit.commit.committer.date).getTime();
+                  if (!IGNORE_AGE && daysOld > 0 && commitDate > cutoffMs) continue; // still fresh
+
+                  if (DRY) {
+                    core.info(`Would delete branch: ${name}`);
+                  } else {
+                    await github.rest.git.deleteRef({ owner, repo, ref: `heads/${name}` });
+                    core.info(`Deleted branch: ${name}`);
+                  }
                 }
+                page++;
               }
             }
 
