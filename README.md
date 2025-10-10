@@ -52,7 +52,7 @@ graph LR
   D --> E[URL Validate]
 
   %% PR preview paths (dotted lines indicate PR-triggered previews)
-  A -. PR opened (documents.json) .-> P[PR Build Preview]
+  A -. "PR opened (documents.json)" .-> P[PR Build Preview]
   S[Site/Template change PR] -.-> P
 ```
 
