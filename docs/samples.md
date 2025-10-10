@@ -121,7 +121,7 @@ _Build preview of MSR site during PR creation, prior to publication to manually 
 - Fully autonomous workflow chain:  
   Extract → MSI → MRI → MSR → URL Validate  
 - Each stage runs independently but triggers the next when changes are detected and generates auditable JSON reports.  
-- PRs are opened only when data changes; metadata and validation commits go directly to `main`.  
+- PRs are opened only when data changes; PR generate MSR preview links when appropriate; metadata and validation commits go directly to `main`.  
 - Permanent artifacts reports are stored in `src/main/reports`.  
 - All runs are concurrency-protected, idempotent, and self-healing.
 
