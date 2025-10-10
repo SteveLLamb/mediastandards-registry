@@ -1,0 +1,15 @@
+name: "Feature Request"
+about: Suggest a new feature or improvement for MSR
+title: "[FEATURE] "
+labels: ["enhancement"]
+assignees: ["SteveLLamb"]
+---
+
+## Summary
+Brief description of what you’d like to see.
+
+## Rationale
+Why is this important or useful?
+
+## Implementation thoughts
+If known, how it could be implemented (script, workflow, UI, etc.).
