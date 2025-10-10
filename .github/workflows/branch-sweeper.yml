@@ -6,9 +6,9 @@ on:
   workflow_dispatch:
     inputs:
       dry_run:
-        description: 'Dry run mode'
-        required: false
-        default: 'true'
+        description: "Dry run mode (check to simulate deletions only)"
+        type: boolean
+        default: false
       days_old:
         description: 'Only delete branches older than this many days'
         required: false
@@ -53,14 +53,14 @@ jobs:
                 if (!IGNORE_AGE && daysOld > 0 && commitDate > cutoffMs) continue; // still fresh
 
                 if (DRY) {
-                  core.info(`✅ Would delete branch: ${branch.name}`);
+                  core.info(`Would delete branch: ${branch.name}`);
                 } else {
                   await github.rest.git.deleteRef({
                     owner: repo.owner,
                     repo: repo.repo,
                     ref: `heads/${branch.name}`
                   });
-                  core.info(`🗑️ Deleted branch: ${branch.name}`);
+                  core.info(`Deleted branch: ${branch.name}`);
                 }
               }
             }
