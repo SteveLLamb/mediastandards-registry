@@ -30,9 +30,16 @@ jobs:
       - uses: actions/github-script@v7
         with:
           script: |
-            const DRY = String(core.getInput('dry_run') || '').toLowerCase() === 'true';
-            const IGNORE_AGE = String(core.getInput('ignore_age') || '').toLowerCase() === 'true';
-            const daysOld = parseInt(String(core.getInput('days_old') || '30'), 10);
+            const isDispatch = context.eventName === 'workflow_dispatch';
+            const inputs = isDispatch ? (context.payload.inputs || {}) : {};
+            const DRY = isDispatch ? String(inputs.dry_run || '').toLowerCase() === 'true' : false; // scheduled default: hard delete
+            const IGNORE_AGE = isDispatch ? String(inputs.ignore_age || '').toLowerCase() === 'true' : false;
+            const daysOld = isDispatch ? parseInt(String(inputs.days_old || '30'), 10) : 30;
+            core.startGroup('Inputs Debug');
+            core.info(`event: ${context.eventName}`);
+            core.info(`inputs.raw: ${JSON.stringify(inputs)}`);
+            core.info(`DRY=${DRY}, IGNORE_AGE=${IGNORE_AGE}, daysOld=${daysOld}`);
+            core.endGroup();
             const cutoffMs = Date.now() - daysOld * 24 * 60 * 60 * 1000;
 
             const { owner, repo } = context.repo;
