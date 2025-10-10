@@ -71,7 +71,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           header: msr-preview
           message: |
-            MSR preview is ready:
-            https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr/${{ github.event.pull_request.number }}/
+            # Review link
+
+            [MSR Build Preview](https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr/${{ github.event.pull_request.number }}/)
 
             _This link updates on new commits to this PR._
