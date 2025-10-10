@@ -1,6 +1,6 @@
 ---
 name:  "Bug Report"
-about: Report an issue with MSR workflows or data
+about: Use this to report a problem with the site, data, or automation
 title: "[BUG] "
 labels: ["bug"]
 assignees: ["SteveLLamb"]

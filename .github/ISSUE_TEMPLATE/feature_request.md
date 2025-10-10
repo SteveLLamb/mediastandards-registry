@@ -1,6 +1,6 @@
 ---
 name: "Feature Request"
-about: Suggest a new feature or improvement for MSR
+about: Suggest a new capability, enhancement, or improvement
 title: "[FEATURE] "
 labels: ["enhancement"]
 assignees: ["SteveLLamb"]
