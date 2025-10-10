@@ -1,0 +1,69 @@
+name: PR Build Preview (MSR site)
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      # Manual PRs that touch site or templates
+      - "src/site/**"
+      - "src/main/templates/**"
+      - "package.json"
+      - "package-lock.json"
+      # Extract PRs (bot): include because they change the dataset used by the site
+      - "src/main/data/**"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-pr-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: >
+      github.event.pull_request.head.repo.full_name == github.repository
+      && !startsWith(github.head_ref, 'gh-pages')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "lts/*"
+          cache: "npm"
+
+      - run: npm ci
+      - run: npm run build   # produces ./dist
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+  deploy:
+    needs: build
+    if: ${{ needs.build.result == 'success' }}
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+        with:
+          preview: true
+
+      - name: Comment preview URL on PR
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: marocchino/sticky-pull-request-comment@v2
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          header: msr-preview
+          message: |
+            MSR preview is ready:
+            ${{ steps.deployment.outputs.page_url }}
+
+            _This link updates on new commits to this PR._
