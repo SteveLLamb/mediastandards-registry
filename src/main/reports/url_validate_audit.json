@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2025-10-10T16:18:11.632Z",
+  "generatedAt": "2025-10-10T16:54:48.508Z",
   "target": "documents.json",
   "good": 1377,
   "skippedByDomain": 0,
   "skippedByPublisher": 0,
   "index": {
-    "error": 131,
+    "error": 130,
     "errorBreakdown": {
       "Unreachable (403)": 46,
-      "Unreachable (404)": 64,
+      "Unreachable (404)": 63,
       "Unreachable (ENOTFOUND)": 2,
       "Unreachable (ERR_BAD_REQUEST)": 1,
       "Unreachable (ERR_FR_TOO_MANY_REDIRECTS)": 1,
       "Unreachable (HPE_INVALID_CONSTANT)": 16,
       "Unreachable (UNABLE_TO_VERIFY_LEAF_SIGNATURE)": 1
     },
-    "redirectMismatch": 1,
+    "redirectMismatch": 2,
     "redirectBreakdown": {
       "undefined": 0,
-      "other": 1
+      "other": 2
     },
     "expectationMismatch": 35,
     "expectationBreakdown": {
@@ -923,20 +923,10 @@
           "riskLevel": "High"
         },
         {
-          "docId": "R-REC-BS.1726-0.200504",
-          "publisher": "ITU-R",
+          "docId": "NIST.SP.800-57p2",
+          "publisher": "NIST",
           "field": "href",
-          "url": "https://www.itu.int/dms_pubrec/itu-r/rec/bs/R-REC-BS.1726-0-200504-I!!MSW-E.doc",
-          "message": "Unreachable (404)",
-          "explanation": "The URL points to a resource that was not found (dead link).",
-          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
-          "riskLevel": "High"
-        },
-        {
-          "docId": "R-REC-BS.1770-4.201510",
-          "publisher": "ITU-R",
-          "field": "href",
-          "url": "https://www.itu.int/dms_pubrec/itu-r/rec/bs/R-REC-BS.1770-4-201510-I!!MSW-E.docx",
+          "url": "https://doi.org/10.6028/NIST.SP.800-57p2",
           "message": "Unreachable (404)",
           "explanation": "The URL points to a resource that was not found (dead link).",
           "recommendedAction": "Double-check the URL or remove it if no longer valid.",
@@ -1362,9 +1352,19 @@
           "publisher": "Scientific Instruments",
           "field": "href",
           "url": "https://doi.org/10.1088/0950-7671/1/3/302",
-          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=d18a5dd6-70c9-4a20-9ca5-8f4f3c6acdbe&ssb=53768299087&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=593672db-cnvj-4595-a387-1a6404660d49&ssk=botmanager_support@radware.com&ssm=40840280662668947109482810382033&ssn=976b2d44958ea874b2d5330d19ab7696a67b1ace5964-cc0d-4cbb-a2a885&sso=aeb7a449-3ef5703864d75c702c9ecc106a2119f4582dbaf0df096767&ssp=40273510621760167108176012256602408&ssq=59565031249900171464512499229999864662526&ssr=NTIuMjM0LjQwLjE5Mg==&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJyZCI6ImlvcC5vcmciLCJfX3V6bWYiOiI3ZjkwMDAxYWNlNTk2NC1jYzBkLTRjYmItYTQ0OS0zZWY1NzAzODY0ZDcxLTE3NjAxMTI0OTk4NzIwLTAwMWIxODZiNzM4ZDQxMjcxZGMxMCIsInV6bXgiOiI3ZjkwMDBiY2Y4ZDEyNy1hNDliLTRkNDEtOWM2ZC0zNzY4NWI1MDg4YWExLTE3NjAxMTI0OTk4NzIwLTMwODUxNWE1NmNkNzU4ZDcxMCJ9",
+          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=45c2908c-a21a-4c92-9041-0dc91c56ba16&ssb=45475291892&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=5b734a9f-cnvj-452b-bda1-c85fb7864fc9&ssk=botmanager_support@radware.com&ssm=59241810258895254103900577168756&ssn=37f77b95dd6087c1c3b6fa3825421b3473948efae6ec-2e1d-4216-9b0e1d&sso=e947c7f8-20d481c3191fa5f0091337c6e07a0220fe7f7bc54d1c5127&ssp=57319502981760105092176013344257505&ssq=97945451483331544423514833741738841225211&ssr=MTcyLjIxMi4xNjkuMTQ1&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJyZCI6ImlvcC5vcmciLCJfX3V6bWYiOiI3ZjkwMDA4ZWZhZTZlYy0yZTFkLTQyMTYtOTdmOC0yMGQ0ODFjMzE5MWYxLTE3NjAxMTQ4MzMyMTUwLTAwMWM0NGM0NGY2Nzk0YzRkMGQxMCIsInV6bXgiOiI3ZjkwMDAzNjdjNDZkOC1hOTliLTQzNWYtOTZkNC03ZDg4NzU1NzE5MzIxLTE3NjAxMTQ4MzMyMTUwLTc2YWI4NTRiMmZhMDQwNjQxMCJ9",
           "resolvedField": "resolvedHref",
           "expectedResolved": "https://iopscience.iop.org/article/10.1088/0950-7671/1/3/302",
+          "message": "resolved url mismatch"
+        },
+        {
+          "docId": "ML3807.M56.1916",
+          "publisher": "MacMillan Co.",
+          "field": "href",
+          "url": "https://ia800204.us.archive.org/19/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
+          "resolvedUrl": "https://ia801303.us.archive.org/1/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
+          "resolvedField": "resolvedHref",
+          "expectedResolved": "https://ia601303.us.archive.org/1/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
           "message": "resolved url mismatch"
         }
       ]
