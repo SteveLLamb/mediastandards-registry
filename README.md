@@ -6,6 +6,7 @@ _Automated cross-publisher standards index built and maintained by [Steve LLamb]
 [![Build MasterSuite Index](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/build-master-suite-index.yml/badge.svg)](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/build-master-suite-index.yml)
 [![Build MSR Site and Test](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/build-msr-site.yml/badge.svg)](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/build-msr-site.yml)
 [![Validate Document URLs](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/validate-urls.yml/badge.svg)](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/validate-urls.yml)
+[![PR Build Preview (MSR site)](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/pr-build-preview.yml/badge.svg)](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/pr-build-preview.yml)
 
 ## Why It Exists
 The Media Standards Registry (MSR) is a live, automated (and hand curated) registry of media technology documents — extracting, validating, and linking documents across SMPTE, ISO, ITU, AES, and others. 

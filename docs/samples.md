@@ -101,6 +101,22 @@ _Validates and normalizes URLs in the dataset. Creates PRs and manages issues as
 
 ---
 
+---
+
+### 6. PR Build Preview (MSR site)
+_Build preview of MSR site during PR creation, prior to publication to manually check rendering._
+
+**Workflow:** [Build Preview](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/pr-build-preview.yml)  
+**Sample Run:** [Run #18398206332](https://github.com/SteveLLamb/mediastandards-registry/actions/runs/18398206332)
+
+**Sample PRs:** 
+- [Fix 493 - ATSC URL (#512)](https://github.com/SteveLLamb/mediastandards-registry/pull/512)  
+
+
+> **Trigger:** creation of PR with changes to `src/main/data/documents.json` or site rendering. 
+
+---
+
 ### Summary
 - Fully autonomous workflow chain:  
   Extract → MSI → MRI → MSR → URL Validate  
