@@ -92,7 +92,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
-          destination_dir: pr/${{ github.event.pull_request.number }}
+          destination_dir: pr/${{ github.event_name == 'pull_request' && github.event.pull_request.number || steps.findpr.outputs.number }}
           keep_files: true
 
       - name: Comment preview URL on PR
