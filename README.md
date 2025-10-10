@@ -1,9 +1,11 @@
 # Media Standards Registry (MSR)
 _Automated cross-publisher standards index built and maintained by [Steve LLamb](https://github.com/SteveLLamb)_
 
-![Extract Documents](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/extract-docs.yml/badge.svg)
-![Build MSR](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/build-msr-site.yml/badge.svg) 
-![Validate URLs](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/validate-urls.yml/badge.svg) 
+[![Extract SMPTE Documents](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/extract-docs.yml/badge.svg)](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/extract-docs.yml)
+[![Build MasterReference Index](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/build-master-reference-index.yml/badge.svg)](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/build-master-reference-index.yml)
+[![Build MasterSuite Index](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/build-master-suite-index.yml/badge.svg)](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/build-master-suite-index.yml)
+[![Build MSR Site and Test](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/build-msr-site.yml/badge.svg)](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/build-msr-site.yml)
+[![Validate Document URLs](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/validate-urls.yml/badge.svg)](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/validate-urls.yml)
 
 ## Why It Exists
 The Media Standards Registry (MSR) is a live, automated (and hand curated) registry of media technology documents — extracting, validating, and linking documents across SMPTE, ISO, ITU, AES, and others. 
@@ -31,7 +33,7 @@ What started as a personal tool to make sense of tangled reference trees has gro
 ## Automation Overview
 The Media Standards Registry (MSR) updates itself through a chain of automated GitHub Actions. 
 
-See [`samples.md`](./samples.md) for full workflow details and live run sample links.
+> See [`docs/samples.md`](docs/samples.md) for full workflow details and live run sample links.
 
 | Stage | Purpose | Trigger | Key Output |
 |:------|:---------|:---------|:------------|

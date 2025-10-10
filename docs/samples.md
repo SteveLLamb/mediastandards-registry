@@ -25,7 +25,7 @@ _Crawls defined URL maps to parse and populate data (currently only SMPTE). Crea
 
 **Sample PR:** [Update documents.json (20251009-221046) (#506)](https://github.com/SteveLLamb/mediastandards-registry/pull/506)  
 
-**Trigger:** weekly schedule or manual dispatch
+>  **Trigger:** weekly schedule or manual dispatch
 
 ---
 
@@ -42,7 +42,7 @@ _Builds a master lineage of documents, mapping each family, suite, and amendment
 **Sample PR:** [Build MasterSuiteIndex (data change) (#483)](https://github.com/SteveLLamb/mediastandards-registry/pull/483)  
 **Sample Issue:** [UNKEYED: x509-sg.2000 (#469)](https://github.com/SteveLLamb/mediastandards-registry/issues/469)
 
-**Trigger:** weekly schedule, PR merge, or manual dispatch
+> **Trigger:** weekly schedule, PR merge, or manual dispatch
 
 ---
 
@@ -61,7 +61,7 @@ _Builds a master reference map and determines whether referenced documents are p
 **Sample PR:** [Build MasterReferenceIndex (data change) (#481)](https://github.com/SteveLLamb/mediastandards-registry/pull/481)  
 **Sample Issue:** [MISSING REF: W3C.xml-names.20091208 (#467)](https://github.com/SteveLLamb/mediastandards-registry/issues/467)
 
-**Trigger:** completion of Build MSI
+> > **Trigger:** completion of Build MSI
 
 ---
 
@@ -78,7 +78,7 @@ _Builds the front-end site from data and publishes to GitHub Pages._
 
 **Build Output:** [mediastandardsregistry.org](https://mediastandardsregistry.org/)
 
-**Trigger:** completion of Build MRI
+> **Trigger:** completion of Build MRI
 
 ---
 
@@ -97,7 +97,7 @@ _Validates and normalizes URLs in the dataset. Creates PRs and manages issues as
 - [URL ERROR (400): T-REC-H.264.202108 (#501)](https://github.com/SteveLLamb/mediastandards-registry/issues/501)  
 - [URL ERROR (404): ISDCF (#496)](https://github.com/SteveLLamb/mediastandards-registry/issues/496)
 
-**Trigger:** completion of Build MSR
+> **Trigger:** completion of Build MSR
 
 ---
 
