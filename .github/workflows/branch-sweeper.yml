@@ -17,6 +17,10 @@ on:
         description: "Ignore age threshold (delete regardless of last commit date)"
         type: boolean
         default: false
+      include_chore:
+        description: "Include chore/ branches in manual runs"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -48,6 +52,8 @@ jobs:
 
             const protectedNames = new Set([defaultBranch, 'main', 'master', 'gh-pages']);
             const includePrefixes = ['chore/', 'issues/', 'feature/', 'fix/', 'hotfix/', 'release/'];
+            const includeChore = isDispatch ? String(inputs.include_chore || '').toLowerCase() === 'true' : false;
+            const excludePrefixes = includeChore ? [] : ['chore/'];
 
             const wouldDelete = [];
             const deleted = [];
@@ -65,6 +71,8 @@ jobs:
 
                 // Skip protected/default branches
                 if (protectedNames.has(name)) continue;
+                // Skip branches that match excluded prefixes
+                if (excludePrefixes.some(p => name.startsWith(p))) continue;
                 // Skip branches that don't match our prefixes
                 if (!includePrefixes.some(p => name.startsWith(p))) continue;
 
