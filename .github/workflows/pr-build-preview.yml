@@ -36,12 +36,30 @@ jobs:
           cache: "npm"
 
       - run: npm ci
-      - run: npm run build   # produces ./dist
+
+      - name: Canonicalize data (sanity)
+        run: npm run canonicalize
+
+      - name: Validate dataset
+        run: npm run validate
+
+      - run: npm run build   # produces ./build
+
+      - name: Verify build output exists
+        run: |
+          if [ ! -d build ]; then
+            echo "::error::No build/ output directory found after 'npm run build'.";
+            echo "Contents of repo root:";
+            ls -la;
+            echo "\nLikely build output directories in top 2 levels:";
+            find . -maxdepth 2 -type d -name "*dist*" -o -name "*build*" -o -name "*public*";
+            exit 1;
+          fi
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./build
 
   deploy:
     needs: build
