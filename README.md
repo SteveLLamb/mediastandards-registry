@@ -31,7 +31,7 @@ What started as a personal tool to make sense of tangled reference trees has gro
 - 🌐 Public Site generated from `main` at <https://mediastandardsregistry.org>
 
 ## Automation Overview
-The Media Standards Registry (MSR) updates itself through a chain of automated GitHub Actions. 
+The Media Standards Registry (MSR) updates itself through a chain of automated GitHub Actions. When appropriate, PRs generate MSR Build Preview review links. 
 
 > See [`docs/samples.md`](docs/samples.md) for full workflow details and live run sample links.
 
@@ -42,14 +42,21 @@ The Media Standards Registry (MSR) updates itself through a chain of automated G
 | MRI | Maps references across all docs | After MSI | `masterReferenceIndex.json` |
 | MSR | Builds and publishes the site | After MRI | <https://mediastandardsregistry.org/> |
 | URL Validate | Checks and normalizes links | After MSR | `url_validate_audit.json` |
+| PR Build | Builds MSR preview | PR Creation | <https://stevellamb.github.io/mediastandards-registry/pr/###/> |
 
 ```mermaid
 graph LR
-A[Extract] --> B[MSI]
-B --> C[MRI]
-C --> D[MSR]
-D --> E[URL Validate]
+  A[Extract] --> B[MSI]
+  B --> C[MRI]
+  C --> D[MSR]
+  D --> E[URL Validate]
+
+  %% PR preview paths (dotted lines indicate PR-triggered previews)
+  A -. PR opened (documents.json) .-> P[PR Build Preview]
+  S[Site/Template change PR] -.-> P
 ```
+
+_Dotted lines indicate PR-triggered preview builds._
 ---
 
 ### Development
