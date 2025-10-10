@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2025-10-10T05:00:00.140Z",
+  "generatedAt": "2025-10-10T16:18:11.632Z",
   "target": "documents.json",
-  "good": 1374,
+  "good": 1377,
   "skippedByDomain": 0,
   "skippedByPublisher": 0,
   "index": {
-    "error": 133,
+    "error": 131,
     "errorBreakdown": {
       "Unreachable (403)": 46,
-      "Unreachable (404)": 66,
+      "Unreachable (404)": 64,
       "Unreachable (ENOTFOUND)": 2,
       "Unreachable (ERR_BAD_REQUEST)": 1,
       "Unreachable (ERR_FR_TOO_MANY_REDIRECTS)": 1,
       "Unreachable (HPE_INVALID_CONSTANT)": 16,
       "Unreachable (UNABLE_TO_VERIFY_LEAF_SIGNATURE)": 1
     },
-    "redirectMismatch": 2,
+    "redirectMismatch": 1,
     "redirectBreakdown": {
       "undefined": 0,
-      "other": 2
+      "other": 1
     },
     "expectationMismatch": 35,
     "expectationBreakdown": {
@@ -503,16 +503,6 @@
           "riskLevel": "High"
         },
         {
-          "docId": "ATSC.AC3.A52.2018",
-          "publisher": "ATSC",
-          "field": "href",
-          "url": "https://www.atsc.org/wp-content/uploads/2015/03/A52-2018-1.pdf",
-          "message": "Unreachable (404)",
-          "explanation": "The URL points to a resource that was not found (dead link).",
-          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
-          "riskLevel": "High"
-        },
-        {
           "docId": "DCI.DCA-DVD.2022-0303",
           "publisher": "DCI",
           "field": "href",
@@ -927,16 +917,6 @@
           "publisher": "Live Sound International",
           "field": "href",
           "url": "http://www.livesoundint.com/archives/2003/july/align/align.php",
-          "message": "Unreachable (404)",
-          "explanation": "The URL points to a resource that was not found (dead link).",
-          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
-          "riskLevel": "High"
-        },
-        {
-          "docId": "NIST.SP.800-57p2",
-          "publisher": "NIST",
-          "field": "href",
-          "url": "https://doi.org/10.6028/NIST.SP.800-57p2",
           "message": "Unreachable (404)",
           "explanation": "The URL points to a resource that was not found (dead link).",
           "recommendedAction": "Double-check the URL or remove it if no longer valid.",
@@ -1382,19 +1362,9 @@
           "publisher": "Scientific Instruments",
           "field": "href",
           "url": "https://doi.org/10.1088/0950-7671/1/3/302",
-          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=2205dee6-91d4-4af1-bbab-99cc113d5b50&ssb=37243251794&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=18d822b4-cnvj-41fa-aa39-f74095cc7182&ssk=botmanager_support@radware.com&ssm=46242207042973141109499264868817&ssn=0102a5204566a914adc7625322daf0b93c6d9cdd2362-6853-4d62-94fe01&sso=4d402515-8ddc6a14a4fbddf8b0f7d2f7e33beda735cfe2a7bf4fbb03&ssp=82887332571760071393176000179698748&ssq=29277157179863117293771798211268648682051&ssr=NTIuMTU5LjI0NC4xNzc=&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDA5Y2RkMjM2Mi02ODUzLTRkNjItOTUxNS04ZGRjNmExNGE0ZmIxLTE3NjAwNzE3OTg4OTYwLTAwMTMwYjliNjc0MzUyZWNiYTcxMCIsInV6bXgiOiI3ZjkwMDBiOWIzZDFmYi02YmNmLTQ1NzUtYTMwOC1mZDdiYjFjZmFlYmYxLTE3NjAwNzE3OTg4OTYwLWY4ZDU3OTY0YWEyMTkwNWExMCIsInJkIjoiaW9wLm9yZyJ9",
+          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=d18a5dd6-70c9-4a20-9ca5-8f4f3c6acdbe&ssb=53768299087&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=593672db-cnvj-4595-a387-1a6404660d49&ssk=botmanager_support@radware.com&ssm=40840280662668947109482810382033&ssn=976b2d44958ea874b2d5330d19ab7696a67b1ace5964-cc0d-4cbb-a2a885&sso=aeb7a449-3ef5703864d75c702c9ecc106a2119f4582dbaf0df096767&ssp=40273510621760167108176012256602408&ssq=59565031249900171464512499229999864662526&ssr=NTIuMjM0LjQwLjE5Mg==&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJyZCI6ImlvcC5vcmciLCJfX3V6bWYiOiI3ZjkwMDAxYWNlNTk2NC1jYzBkLTRjYmItYTQ0OS0zZWY1NzAzODY0ZDcxLTE3NjAxMTI0OTk4NzIwLTAwMWIxODZiNzM4ZDQxMjcxZGMxMCIsInV6bXgiOiI3ZjkwMDBiY2Y4ZDEyNy1hNDliLTRkNDEtOWM2ZC0zNzY4NWI1MDg4YWExLTE3NjAxMTI0OTk4NzIwLTMwODUxNWE1NmNkNzU4ZDcxMCJ9",
           "resolvedField": "resolvedHref",
           "expectedResolved": "https://iopscience.iop.org/article/10.1088/0950-7671/1/3/302",
-          "message": "resolved url mismatch"
-        },
-        {
-          "docId": "ML3807.M56.1916",
-          "publisher": "MacMillan Co.",
-          "field": "href",
-          "url": "https://ia800204.us.archive.org/19/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
-          "resolvedUrl": "https://ia801303.us.archive.org/1/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
-          "resolvedField": "resolvedHref",
-          "expectedResolved": "https://ia601303.us.archive.org/1/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
           "message": "resolved url mismatch"
         }
       ]
