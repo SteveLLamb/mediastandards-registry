@@ -1,3 +1,4 @@
+---
 name:  "Bug Report"
 about: Report an issue with MSR workflows or data
 title: "[BUG] "
