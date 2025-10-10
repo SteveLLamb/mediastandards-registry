@@ -18,6 +18,10 @@ on:
         type: boolean
         default: false
 
+permissions:
+  contents: write
+  pull-requests: read
+
 jobs:
   sweep:
     runs-on: ubuntu-latest
@@ -26,46 +30,69 @@ jobs:
       - uses: actions/github-script@v7
         with:
           script: |
-            const inputDry = core.getInput('dry_run');
-            const inputDays = core.getInput('days_old');
-            const inputIgnoreAge = core.getInput('ignore_age');
-            const DRY = inputDry ? inputDry === 'true' : false; // default to HARD DELETE on schedule
-            const daysOld = inputDays ? parseInt(inputDays, 10) : 30;
-            const IGNORE_AGE = inputIgnoreAge ? inputIgnoreAge === 'true' : false;
+            const DRY = core.getBooleanInput('dry_run');
+            const IGNORE_AGE = core.getBooleanInput('ignore_age');
+            const daysOld = parseInt(core.getInput('days_old') || '30', 10);
             const cutoffMs = Date.now() - daysOld * 24 * 60 * 60 * 1000;
 
             const { owner, repo } = context.repo;
             const { data: repoInfo } = await github.rest.repos.get({ owner, repo });
             const defaultBranch = repoInfo.default_branch;
 
-            async function run() {
-              let page = 1;
-              const per_page = 100;
-              while (true) {
-                const { data: branches } = await github.rest.repos.listBranches({
-                  owner, repo, protected: false, per_page, page
-                });
-                if (!branches.length) break;
+            const protectedNames = new Set([defaultBranch, 'main', 'master', 'gh-pages']);
+            const includePrefixes = ['chore/', 'issues/', 'feature/', 'fix/', 'hotfix/', 'release/'];
 
-                for (const b of branches) {
-                  const name = b.name;
+            const wouldDelete = [];
+            const deleted = [];
+            const skippedPR = [];
+            const skippedYoung = [];
 
-                  // Skip protected/default branches
-                  if (name === defaultBranch || name === 'main' || name === 'master' || name === 'gh-pages') continue;
+            let page = 1;
+            const per_page = 100;
+            while (true) {
+              const { data: branches } = await github.rest.repos.listBranches({ owner, repo, protected: false, per_page, page });
+              if (!branches.length) break;
 
-                  const { data: commit } = await github.rest.repos.getCommit({ owner, repo, ref: b.commit.sha });
-                  const commitDate = new Date(commit.commit.committer.date).getTime();
-                  if (!IGNORE_AGE && daysOld > 0 && commitDate > cutoffMs) continue; // still fresh
+              for (const b of branches) {
+                const name = b.name;
 
-                  if (DRY) {
-                    core.info(`Would delete branch: ${name}`);
-                  } else {
+                // Skip protected/default branches
+                if (protectedNames.has(name)) continue;
+                // Skip branches that don't match our prefixes
+                if (!includePrefixes.some(p => name.startsWith(p))) continue;
+
+                // Skip if there is an open PR for this branch
+                const { data: prs } = await github.rest.pulls.list({ owner, repo, state: 'open', head: `${owner}:${name}` });
+                if (prs.length) { skippedPR.push(name); continue; }
+
+                // Age check
+                const { data: commit } = await github.rest.repos.getCommit({ owner, repo, ref: b.commit.sha });
+                const commitDate = new Date(commit.commit.committer.date).getTime();
+                if (!IGNORE_AGE && daysOld > 0 && commitDate > cutoffMs) { skippedYoung.push(name); continue; }
+
+                if (DRY) {
+                  core.info(`✅ DRY-RUN — would delete: ${name}`);
+                  wouldDelete.push(name);
+                } else {
+                  try {
                     await github.rest.git.deleteRef({ owner, repo, ref: `heads/${name}` });
-                    core.info(`Deleted branch: ${name}`);
+                    core.info(`🗑️ Deleted: ${name}`);
+                    deleted.push(name);
+                  } catch (err) {
+                    core.warning(`Failed to delete ${name}: ${err.message}`);
                   }
                 }
-                page++;
               }
+              page++;
             }
 
-            run().catch(error => core.setFailed(error.message));
+            // Summary output
+            core.startGroup('Branch Sweeper Summary');
+            core.info(`DRY-RUN: ${DRY}`);
+            core.info(`Ignored age threshold: ${IGNORE_AGE}`);
+            core.info(`Days old threshold: ${daysOld}`);
+            core.info(`Would delete (${wouldDelete.length}): ${wouldDelete.join(', ') || '—'}`);
+            core.info(`Deleted (${deleted.length}): ${deleted.join(', ') || '—'}`);
+            core.info(`Skipped (open PR) (${skippedPR.length}): ${skippedPR.join(', ') || '—'}`);
+            core.info(`Skipped (too recent) (${skippedYoung.length}): ${skippedYoung.join(', ') || '—'}`);
+            core.endGroup();
