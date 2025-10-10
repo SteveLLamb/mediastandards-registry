@@ -32,7 +32,7 @@ jobs:
             const inputDry = core.getInput('dry_run');
             const inputDays = core.getInput('days_old');
             const inputIgnoreAge = core.getInput('ignore_age');
-            const DRY = inputDry ? inputDry === 'true' : true; // default to DRY-RUN on schedule
+            const DRY = inputDry ? inputDry === 'true' : false; // default to HARD DELETE on schedule
             const daysOld = inputDays ? parseInt(inputDays, 10) : 30;
             const IGNORE_AGE = inputIgnoreAge ? inputIgnoreAge === 'true' : false;
             const cutoffMs = Date.now() - daysOld * 24 * 60 * 60 * 1000;
@@ -53,14 +53,14 @@ jobs:
                 if (!IGNORE_AGE && daysOld > 0 && commitDate > cutoffMs) continue; // still fresh
 
                 if (DRY) {
-                  core.info(`Would delete branch: ${branch.name}`);
+                  core.info(`✅ Would delete branch: ${branch.name}`);
                 } else {
                   await github.rest.git.deleteRef({
                     owner: repo.owner,
                     repo: repo.repo,
                     ref: `heads/${branch.name}`
                   });
-                  core.info(`Deleted branch: ${branch.name}`);
+                  core.info(`🗑️ Deleted branch: ${branch.name}`);
                 }
               }
             }
