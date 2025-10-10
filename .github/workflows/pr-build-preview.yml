@@ -13,9 +13,7 @@ on:
       - "src/main/data/**"
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages-pr-${{ github.event.pull_request.number }}
@@ -56,23 +54,13 @@ jobs:
             exit 1;
           fi
 
-      - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy PR preview to gh-pages/pr/<PR#>
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          path: ./build
-
-  deploy:
-    needs: build
-    if: ${{ needs.build.result == 'success' }}
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
-        with:
-          preview: true
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+          destination_dir: pr/${{ github.event.pull_request.number }}
+          keep_files: true
 
       - name: Comment preview URL on PR
         if: ${{ github.event_name == 'pull_request' }}
@@ -82,6 +70,6 @@ jobs:
           header: msr-preview
           message: |
             MSR preview is ready:
-            ${{ steps.deployment.outputs.page_url }}
+            https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/pr/${{ github.event.pull_request.number }}/
 
             _This link updates on new commits to this PR._
