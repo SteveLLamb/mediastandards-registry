@@ -2,94 +2,67 @@ name: Branch Sweeper
 
 on:
   schedule:
-    - cron: "0 10 * * 1"  # Mondays 10:00 UTC
+    - cron: '0 0 * * *' # every day at midnight UTC
   workflow_dispatch:
     inputs:
       dry_run:
-        description: "Dry run (do not delete)"
-        type: boolean
-        default: true
+        description: 'Dry run mode'
+        required: false
+        default: 'true'
       days_old:
-        description: "Delete branches with no updates in N days"
-        type: number
-        default: 30
-
-permissions:
-  contents: write
-  pull-requests: read
+        description: 'Only delete branches older than this many days'
+        required: false
+        default: '30'
+      ignore_age:
+        description: "Ignore age threshold (delete regardless of last commit date)"
+        type: boolean
+        default: false
 
 jobs:
   sweep:
     runs-on: ubuntu-latest
     steps:
-      - name: Sweep stale branches
-        id: sweep
-        uses: actions/github-script@v7
+      - uses: actions/checkout@v3
+      - uses: actions/github-script@v7
         with:
           script: |
-            const { owner, repo } = context.repo;
+            const core = require('@actions/core');
+            const github = require('@actions/github');
 
-            // Inputs (manual dispatch) or defaults (scheduled)
             const inputDry = core.getInput('dry_run');
             const inputDays = core.getInput('days_old');
-            const DRY = inputDry ? inputDry === 'true' : false; // scheduled run ⇒ hard delete by default
+            const inputIgnoreAge = core.getInput('ignore_age');
+            const DRY = inputDry ? inputDry === 'true' : true; // default to DRY-RUN on schedule
             const daysOld = inputDays ? parseInt(inputDays, 10) : 30;
+            const IGNORE_AGE = inputIgnoreAge ? inputIgnoreAge === 'true' : false;
             const cutoffMs = Date.now() - daysOld * 24 * 60 * 60 * 1000;
 
-            // Determine default branch to avoid deleting it even if renamed
-            const { data: repoInfo } = await github.rest.repos.get({ owner, repo });
-            const defaultBranch = repoInfo.default_branch;
+            async function run() {
+              const repo = github.context.repo;
+              const branches = await github.rest.repos.listBranches({
+                owner: repo.owner,
+                repo: repo.repo,
+                protected: false,
+                per_page: 100,
+              });
 
-            const includePrefixes = ['chore/', 'issues/', 'feature/', 'fix/', 'hotfix/', 'release/'];
-            const protectedNames = new Set([defaultBranch, 'gh-pages']);
+              for (const branch of branches.data) {
+                if (branch.name === 'main' || branch.name === 'master') continue;
 
-            const removed = [];
-            let page = 1;
-            const per_page = 100;
+                const commitDate = new Date(branch.commit.committer.date).getTime();
+                if (!IGNORE_AGE && daysOld > 0 && commitDate > cutoffMs) continue; // still fresh
 
-            while (true) {
-              const { data: branches } = await github.rest.repos.listBranches({ owner, repo, per_page, page });
-              if (!branches.length) break;
-
-              for (const b of branches) {
-                const name = b.name;
-
-                // Skip protected and non-target branches
-                if (protectedNames.has(name)) continue;
-                if (!includePrefixes.some(p => name.startsWith(p))) continue;
-
-                // Skip if there is an open PR targeting this branch
-                const { data: prs } = await github.rest.pulls.list({ owner, repo, state: 'open', head: `${owner}:${name}` });
-                if (prs.length) continue;
-
-                // Get last commit date
-                try {
-                  const { data: commit } = await github.rest.repos.getCommit({ owner, repo, ref: b.commit.sha });
-                  const commitDate = new Date(commit.commit.committer.date).getTime();
-                  if (commitDate > cutoffMs) continue; // still fresh
-
-                  // Delete (or simulate)
-                  if (!DRY) {
-                    try {
-                      await github.rest.git.deleteRef({ owner, repo, ref: `heads/${name}` });
-                    } catch (err) {
-                      core.warning(`Failed to delete ${name}: ${err.message}`);
-                      continue;
-                    }
-                  }
-
-                  removed.push({ name, lastCommit: commit.commit.committer.date });
-                } catch (err) {
-                  core.warning(`Skipping ${name}: ${err.message}`);
+                if (DRY) {
+                  core.info(`Would delete branch: ${branch.name}`);
+                } else {
+                  await github.rest.git.deleteRef({
+                    owner: repo.owner,
+                    repo: repo.repo,
+                    ref: `heads/${branch.name}`
+                  });
+                  core.info(`Deleted branch: ${branch.name}`);
                 }
               }
-
-              page++;
             }
 
-            core.setOutput('removed', JSON.stringify(removed, null, 2));
-
-      - name: Summary
-        run: |
-          echo "Removed branches (dry-run may be true):"
-          echo '${{ steps.sweep.outputs.removed }}'
+            run().catch(error => core.setFailed(error.message));
