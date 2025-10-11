@@ -105,6 +105,7 @@ jobs:
           sed -n '1,120p' mri_pr_body.txt
 
       - name: Create PR for MRI
+        id: create_pr_mri
         if: steps.decide_mri.outputs.onlyMeta != 'true' && !startsWith(github.ref, 'refs/heads/chore/build-masterreference')
         uses: peter-evans/create-pull-request@v6
         with:
@@ -118,6 +119,21 @@ jobs:
           labels: automated, reports, mri
           delete-branch: true
           base: ${{ github.event.repository.default_branch }}
+
+      - name: Emit skip-site-build marker (MRI PR)
+        if: steps.decide_mri.outputs.onlyMeta != 'true'
+        run: |
+          mkdir -p .emit
+          PR=${{ steps.create_pr_mri.outputs.pull-request-number }}
+          echo "PR created by MRI workflow at ${{ github.run_id }} (PR #${PR})" > .emit/skip-site-build.txt
+
+      - name: Upload skip-site-build artifact (MRI)
+        if: steps.decide_mri.outputs.onlyMeta != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: skip-site-build-pr-${{ steps.create_pr_mri.outputs.pull-request-number }}
+          path: .emit/skip-site-build.txt
+          retention-days: 3
 
       - name: Ensure issues for missing refs (idempotent)
         uses: actions/github-script@v7

@@ -12,7 +12,10 @@ on:
       # Extract PRs (bot): include because they change the dataset used by the site
       - "src/main/data/**"
   workflow_run:
-    workflows: ["Extract SMPTE Documents"]
+    workflows:
+      - "Extract SMPTE Documents"
+      - "Build Master Suite Index"
+      - "Build Master Reference Index"
     types: [completed]
 
 permissions:
@@ -39,30 +42,44 @@ jobs:
       )
     runs-on: ubuntu-latest
     steps:
-      - name: Resolve PR for chore/extract-docs (workflow_run only)
+      - name: Resolve PR for workflow_run (extract/MSI/MRI)
         if: ${{ github.event_name == 'workflow_run' }}
         id: findpr
         uses: actions/github-script@v7
         with:
           script: |
-            const { data: prs } = await github.rest.pulls.list({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              state: 'open',
-              head: `${context.repo.owner}:chore/extract-docs`
-            });
-            const pr = prs[0];
-            core.setOutput('number', pr ? pr.number : '');
-            core.setOutput('sha', pr ? pr.head.sha : '');
-      - name: Stop if no open Extract PR
+            const { owner, repo } = context.repo;
+            const runName = context.payload.workflow_run && context.payload.workflow_run.name || '';
+            const branchMap = {
+              'Extract SMPTE Documents': 'chore/extract-docs',
+              'Build Master Suite Index': 'chore/build-master-suite-index',
+              'Build Master Reference Index': 'chore/build-master-reference-index'
+            };
+            const headBranch = branchMap[runName];
+            if (!headBranch) {
+              core.info(`No branch mapping for workflow_run: "${runName}".`);
+              core.setOutput('number', '');
+              core.setOutput('sha', '');
+              core.setOutput('branch', '');
+            } else {
+              const { data: prs } = await github.rest.pulls.list({
+                owner, repo, state: 'open', head: `${owner}:${headBranch}`, per_page: 10
+              });
+              const pr = prs[0];
+              core.setOutput('number', pr ? pr.number : '');
+              core.setOutput('sha', pr ? pr.head.sha : '');
+              core.setOutput('branch', pr ? pr.head.ref : headBranch);
+              core.info(`Resolved head branch: ${headBranch}; PR #: ${pr ? pr.number : '(none)'}`);
+            }
+      - name: Stop if no open PR for current workflow_run
         if: ${{ github.event_name == 'workflow_run' && steps.findpr.outputs.number == '' }}
         run: |
-          echo "No open PR found for branch chore/extract-docs — nothing to preview."
+          echo "No open PR found for this workflow_run — nothing to preview."
           exit 0
 
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.event_name == 'pull_request' && github.head_ref || 'chore/extract-docs' }}
+          ref: ${{ github.event_name == 'pull_request' && github.head_ref || steps.findpr.outputs.branch || 'main' }}
 
       - uses: actions/setup-node@v4
         with:
