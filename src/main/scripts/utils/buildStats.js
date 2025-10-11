@@ -10,21 +10,21 @@ const activeDocs = documents.filter(d => d?.status?.active === true).length;
 const supersededDocs = documents.filter(d => d?.status?.superseded === true).length;
 
 // Reference counts (normative + bibliographic)
-const totalReferences = documents.reduce((sum, d) => {
+const references = documents.reduce((sum, d) => {
   const normative = Array.isArray(d.references?.normative) ? d.references.normative.length : 0;
   const bibliographic = Array.isArray(d.references?.bibliographic) ? d.references.bibliographic.length : 0;
   return sum + normative + bibliographic;
 }, 0);
 
 // Publisher stats (unique count)
-const totalPublishers = new Set(
+const publishers = new Set(
   documents
     .map(d => (typeof d.publisher === 'string' && d.publisher.trim().length ? d.publisher.trim() : null))
     .filter(Boolean)
 ).size;
 
 // docType distribution (grouped counts)
-const byDocType = documents.reduce((acc, d) => {
+const docsByType = documents.reduce((acc, d) => {
   const key = (typeof d.docType === 'string' && d.docType.trim().length) ? d.docType.trim() : 'Unknown';
   acc[key] = (acc[key] || 0) + 1;
   return acc;
@@ -37,12 +37,12 @@ const stats = {
   // New structured top-level bucket to allow future siblings (e.g., "namespaces", "references", etc.)
   documents: {
     total: totalDocs,
-    totalReferences,
-    totalPublishers,
+    references,
+    publishers,
     active: activeDocs,
     //superseded: supersededDocs,
-    totalDocTypes: Object.keys(byDocType).length,
-    byDocType
+    docTypes: Object.keys(docsByType).length,
+    docsByType
   }
 };
 
