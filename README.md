@@ -18,6 +18,8 @@ Critical documents from SMPTE, ISO, ITU, AES, and others have always been interc
 
 What started as a personal tool to make sense of tangled reference trees has grown into a self-maintaining system that reveals the lineage, dependencies, and context of the world’s media technology standards.
 
+> See [docs/changelog.md](docs/changelog.md) for details on updates since Q2 2025.
+
 ### Live Stats
 
 [![Documents](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmediastandardsregistry.org%2Fapi%2Fstats.json&query=%24.documents.total&label=Documents&color=blue&style=flat&cacheSeconds=3600)](https://mediastandardsregistry.org/api/viewer.html?path=documents.total)
@@ -67,9 +69,7 @@ graph LR
   A -. "PR Created (documents.json)" .-> P[PR Build Preview]
   S[Site/Template PR] -.-> P
 ```
-
 _Dotted lines indicate PR-triggered preview builds._
----
 
 ### Development
 Requires Node 20 + npm.  
