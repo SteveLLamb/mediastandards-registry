@@ -56,20 +56,22 @@ The Media Standards Registry (MSR) updates itself through a chain of automated G
 | MRI | Maps references across all docs | After MSI | `masterReferenceIndex.json` |
 | MSR | Builds and publishes the site | After MRI | <https://mediastandardsregistry.org/> |
 | URL Validate | Checks and normalizes links | After MSR | `url_validate_audit.json` |
-| PR Build Preview| Builds MSR preview prior to publication | PR Creation | <https://stevellamb.github.io/mediastandards-registry/pr/###/> |
+| PR Build Preview| Builds MSR preview prior to publication | PR Creation (Extract/MSI/MRI/Site PRs) | <https://stevellamb.github.io/mediastandards-registry/pr/###/> |
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'linear'}}}%%
 graph LR
-  A[Extract] --> B[MSI]
-  B --> C[MRI]
-  C --> D[MSR]
-  D --> E[URL Validate]
+  subgraph Pipeline
+    direction LR
+    A[Extract] --> B[MSI] --> C[MRI] --> D[MSR] --> E[URL Validate]
+  end
 
-  %% PR preview paths (dotted lines indicate PR-triggered previews)
-  A -. "PR Created (documents.json)" .-> P[PR Build Preview]
+  A -.-> P[PR Build Preview]
+  B -.-> P
+  C -.-> P
   S[Site/Template PR] -.-> P
 ```
-_Dotted lines indicate PR-triggered preview builds._
+_Dotted lines indicate PR-triggered preview builds. Extract, MSI, MRI, and site/template PRs all generate a preview._
 
 ### Development
 Requires Node 20 + npm.  
