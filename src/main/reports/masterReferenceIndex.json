@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "generatedAt": "2025-10-09T22:10:44.280Z",
+  "generatedAt": "2025-10-11T17:15:28.705Z",
   "stats": {
-    "uniqueRefIds": 1049
+    "uniqueRefIds": 1050
   },
   "refs": {
     "40290752": {
@@ -16164,6 +16164,14 @@
           "title": "Uniform Resource Identifier (URI): Generic Syntax."
         },
         {
+          "docId": "SMPTE.ST429-18.2023-09",
+          "type": "normative",
+          "cite": "IETF RFC 3986",
+          "href": "https://www.rfc-editor.org/info/rfc3986",
+          "rawRef": "IETF RFC 3986, Uniform Resource Identifier (URI): Generic Syntax. url: https://www.rfc-editor.org/info/rfc3986",
+          "title": "Uniform Resource Identifier (URI): Generic Syntax."
+        },
+        {
           "docId": "SMPTE.ST429-9.2014",
           "type": "normative",
           "cite": "",
@@ -25038,6 +25046,14 @@
       },
       "rawVariants": [
         {
+          "docId": "SMPTE.ST429-18.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 2029",
+          "href": "",
+          "rawRef": "SMPTE ST 2029, Uniform Resource Names for SMPTE Resources.",
+          "title": "Uniform Resource Names for SMPTE Resources."
+        },
+        {
           "docId": "SMPTE.ST429-2.2023-09",
           "type": "normative",
           "cite": "SMPTE ST 2029",
@@ -27798,10 +27814,12 @@
       "provenance": {
         "firstSeen": "2025-10-07T22:56:58.709Z",
         "mapSource": [
+          "regex",
           "replay"
         ],
         "mapDetails": [
-          "from-documents.json"
+          "from-documents.json",
+          "smpte-designator"
         ]
       },
       "rawVariants": [
@@ -27812,6 +27830,22 @@
           "href": "",
           "rawRef": "",
           "title": null
+        },
+        {
+          "docId": "SMPTE.ST429-18.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 2098-2",
+          "href": "",
+          "rawRef": "SMPTE ST 2098-2, Immersive Audio Bitstream Specification.",
+          "title": "Immersive Audio Bitstream Specification."
+        },
+        {
+          "docId": "SMPTE.ST429-19.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 2098-2",
+          "href": "",
+          "rawRef": "SMPTE ST 2098-2, Immersive Audio Bitstream Specification.",
+          "title": "Immersive Audio Bitstream Specification."
         }
       ]
     },
@@ -31786,6 +31820,14 @@
           "title": "Material Exchange Format (MXF) — File Format Specification."
         },
         {
+          "docId": "SMPTE.ST429-18.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 377-1",
+          "href": "",
+          "rawRef": "SMPTE ST 377-1, Material Exchange Format (MXF) — File Format Specification.",
+          "title": "Material Exchange Format (MXF) — File Format Specification."
+        },
+        {
           "docId": "SMPTE.ST429-2.2023-09",
           "type": "normative",
           "cite": "SMPTE ST 377-1",
@@ -32332,6 +32374,14 @@
       },
       "rawVariants": [
         {
+          "docId": "SMPTE.ST429-19.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 377-4",
+          "href": "",
+          "rawRef": "SMPTE ST 377-4, MXF Multichannel Audio Labeling Framework.",
+          "title": "MXF Multichannel Audio Labeling Framework."
+        },
+        {
           "docId": "SMPTE.ST429-2.2023-09",
           "type": "normative",
           "cite": "SMPTE ST 377-4",
@@ -32801,6 +32851,14 @@
         ]
       },
       "rawVariants": [
+        {
+          "docId": "SMPTE.ST429-18.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 379-1",
+          "href": "",
+          "rawRef": "SMPTE ST 379-1, Material Exchange Format (MXF) — MXF Generic Container.",
+          "title": "Material Exchange Format (MXF) — MXF Generic Container."
+        },
         {
           "docId": "SMPTE.ST429-3.2023-09",
           "type": "normative",
@@ -36166,6 +36224,14 @@
       },
       "rawVariants": [
         {
+          "docId": "SMPTE.ST429-19.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 429-16",
+          "href": "",
+          "rawRef": "SMPTE ST 429-16, D-Cinema Packaging — Additional Composition Metadata and Guidelines.",
+          "title": "D-Cinema Packaging — Additional Composition Metadata and Guidelines."
+        },
+        {
           "docId": "SMPTE.ST429-2.2023-09",
           "type": "normative",
           "cite": "SMPTE ST 429-16",
@@ -36346,16 +36412,18 @@
       "normalized": null,
       "resolution": {
         "sourcePresent": true,
-        "sourceDocId": "SMPTE.ST429-18.2019",
+        "sourceDocId": "SMPTE.ST429-18.2023-09",
         "firstConfirmedSourceAt": "2025-10-07T22:56:58.834Z"
       },
       "provenance": {
         "firstSeen": "2025-10-07T22:56:58.709Z",
         "mapSource": [
+          "regex",
           "replay"
         ],
         "mapDetails": [
-          "from-documents.json"
+          "from-documents.json",
+          "smpte-designator"
         ]
       },
       "rawVariants": [
@@ -36366,6 +36434,14 @@
           "href": "",
           "rawRef": "",
           "title": null
+        },
+        {
+          "docId": "SMPTE.ST429-19.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 429-18",
+          "href": "",
+          "rawRef": "SMPTE ST 429-18, D-Cinema Packaging — Immersive Audio Track File.",
+          "title": "D-Cinema Packaging — Immersive Audio Track File."
         }
       ]
     },
@@ -36442,7 +36518,7 @@
       "normalized": null,
       "resolution": {
         "sourcePresent": true,
-        "sourceDocId": "SMPTE.ST429-19.2019",
+        "sourceDocId": "SMPTE.ST429-19.2023-09",
         "firstConfirmedSourceAt": "2025-10-07T22:56:58.834Z"
       },
       "provenance": {
@@ -36544,6 +36620,14 @@
           "href": "",
           "rawRef": "",
           "title": null
+        },
+        {
+          "docId": "SMPTE.ST429-19.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 429-2",
+          "href": "",
+          "rawRef": "SMPTE ST 429-2, D-Cinema Packaging — DCP Operational Constraints.",
+          "title": "D-Cinema Packaging — DCP Operational Constraints."
         },
         {
           "docId": "SMPTE.ST429-20.2023-07",
@@ -36847,6 +36931,14 @@
         },
         {
           "docId": "SMPTE.ST429-10.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 429-3",
+          "href": "",
+          "rawRef": "SMPTE ST 429-3, D-Cinema Packaging — Sound and Picture Track File.",
+          "title": "D-Cinema Packaging — Sound and Picture Track File."
+        },
+        {
+          "docId": "SMPTE.ST429-18.2023-09",
           "type": "normative",
           "cite": "SMPTE ST 429-3",
           "href": "",
@@ -37384,6 +37476,14 @@
           "title": null
         },
         {
+          "docId": "SMPTE.ST429-18.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 429-6",
+          "href": "",
+          "rawRef": "SMPTE ST 429-6, D-Cinema Packaging — MXF Track File Encryption.",
+          "title": "D-Cinema Packaging — MXF Track File Encryption."
+        },
+        {
           "docId": "SMPTE.ST429-2.2023-09",
           "type": "normative",
           "cite": "SMPTE ST 429-6",
@@ -37612,6 +37712,22 @@
           "href": "",
           "rawRef": "SMPTE ST 429-7, D-Cinema Packaging — Composition Playlist.",
           "title": "D-Cinema Packaging — Composition Playlist."
+        },
+        {
+          "docId": "SMPTE.ST429-18.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 429-7",
+          "href": "",
+          "rawRef": "SMPTE ST 429-7, D-Cinema Packaging — Composition Play List.",
+          "title": "D-Cinema Packaging — Composition Play List."
+        },
+        {
+          "docId": "SMPTE.ST429-19.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 429-7",
+          "href": "",
+          "rawRef": "SMPTE ST 429-7, D-Cinema Packaging — Composition Play List.",
+          "title": "D-Cinema Packaging — Composition Play List."
         },
         {
           "docId": "SMPTE.ST429-2.2023-09",
@@ -38412,6 +38528,34 @@
           "href": "",
           "rawRef": "",
           "title": null
+        }
+      ]
+    },
+    "SMPTE.ST430-12": {
+      "refId": "SMPTE.ST430-12",
+      "normalized": null,
+      "resolution": {
+        "sourcePresent": true,
+        "sourceDocId": "SMPTE.ST430-12.2014",
+        "firstConfirmedSourceAt": "2025-10-11T17:15:28.694Z"
+      },
+      "provenance": {
+        "firstSeen": "2025-10-11T17:12:52.556Z",
+        "mapSource": [
+          "regex"
+        ],
+        "mapDetails": [
+          "smpte-designator"
+        ]
+      },
+      "rawVariants": [
+        {
+          "docId": "SMPTE.ST429-19.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 430-12",
+          "href": "",
+          "rawRef": "SMPTE ST 430-12, D-Cinema Operations — FSK Synchronization Signal.",
+          "title": "D-Cinema Operations — FSK Synchronization Signal."
         }
       ]
     },
@@ -41048,6 +41192,14 @@
           "title": "(latest edition)."
         },
         {
+          "docId": "SMPTE.ST429-18.2023-09",
+          "type": "normative",
+          "cite": "W3C XML 1.0",
+          "href": "https://www.w3.org/TR/xml/",
+          "rawRef": "W3C XML 1.0 (latest edition), Extensible Markup Language (XML) 1.0 Recommendation url: https://www.w3.org/TR/xml/",
+          "title": "(latest edition), Extensible Markup Language (XML) 1.0 Recommendation"
+        },
+        {
           "docId": "SMPTE.ST429-2.2023-09",
           "type": "normative",
           "cite": "W3C XML 1.0",
@@ -41964,6 +42116,14 @@
           "title": ": Structures (latest edition)."
         },
         {
+          "docId": "SMPTE.ST429-18.2023-09",
+          "type": "normative",
+          "cite": "W3C XML Schema Part 1: Structures",
+          "href": "https://www.w3.org/TR/xmlschema-1/",
+          "rawRef": "W3C XML Schema Part 1: Structures (latest edition). url: https://www.w3.org/TR/xmlschema-1/",
+          "title": "(latest edition)."
+        },
+        {
           "docId": "SMPTE.ST430-1.2023-09",
           "type": "normative",
           "cite": "W3C XML Schema Part 1:\n          Structures",
@@ -42458,6 +42618,14 @@
           "href": "https://www.w3.org/TR/xmlschema-2/",
           "rawRef": "W3C XML Schema Part 2: Datatypes (latest edition). url: https://www.w3.org/TR/xmlschema-2/.",
           "title": ": Datatypes (latest edition)."
+        },
+        {
+          "docId": "SMPTE.ST429-18.2023-09",
+          "type": "normative",
+          "cite": "W3C XML Schema Part 2: Datatypes",
+          "href": "https://www.w3.org/TR/xmlschema-2/",
+          "rawRef": "W3C XML Schema Part 2: Datatypes (latest edition). url: https://www.w3.org/TR/xmlschema-2/",
+          "title": "(latest edition)."
         }
       ]
     },
