@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generatedAt": "2025-10-11T17:15:28.705Z",
+  "generatedAt": "2025-10-11T17:44:54.173Z",
   "stats": {
     "uniqueRefIds": 1050
   },
@@ -36412,7 +36412,7 @@
       "normalized": null,
       "resolution": {
         "sourcePresent": true,
-        "sourceDocId": "SMPTE.ST429-18.2019",
+        "sourceDocId": "SMPTE.ST429-18.2023-09",
         "firstConfirmedSourceAt": "2025-10-07T22:56:58.834Z"
       },
       "provenance": {
@@ -38542,10 +38542,12 @@
       "provenance": {
         "firstSeen": "2025-10-11T17:12:52.556Z",
         "mapSource": [
-          "regex"
+          "regex",
+          "replay"
         ],
         "mapDetails": [
-          "smpte-designator"
+          "smpte-designator",
+          "from-documents.json"
         ]
       },
       "rawVariants": [
