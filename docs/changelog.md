@@ -12,27 +12,44 @@ This document consolidates the MSR worklog into a single, category‑organized t
 - `index.html` missing → treated as likely PDF‑only; `inferMetadataFromPath()` derives `docId`, `releaseTag`, `publicationDate`, `doi`, `href`, `docType`, `docNumber`, `docPart`, `publisher`. Inferred fields are merged without overwriting existing data.
 - Amendment suffix handling corrected end‑to‑end: `docId`, `doi`, and `href` are derived from the final ID including amendment suffixes (e.g., `.2011Am1.2013`).
 - Added `revisionOf` extraction from HTML via `<meta itemprop="pubRevisionOf">`; value stored as array.
+- Added explicit detection for **missing `index.html`** cases — now treated as likely PDF-only releases.  
+  Metadata is inferred and merged with any existing record without overwriting richer data.  
+- **Amendment DOI/href inference** fully corrected — `docId`, `doi`, and `href` now derive from the final identifier including amendment suffixes (e.g., `.2011Am1.2013`).
+
 
 ### 1.2 Status Wiring & Normalization
 - Only one document per lineage can have `status.latestVersion: true`; that document is also `status.active: true` and `status.superseded: false`. All others: `latestVersion: false`, `active: false`, `superseded: true`.
 - Deterministic mapping for ambiguous cases: unknown → `superseded: false`.
 - Base releases without amendments receive explicit defaults: `status.amended = false`, `status.amendedBy = []`.
 - `status.supersededBy` wiring: each base points to the next base in sequence; amendments inherit the base’s pointer. `status.supersededDate` injected from the next base’s `releaseTag`. `$meta` injected for both fields on create/update.
+- **Publisher status derivation:** `status.active` and `status.superseded` automatically computed from `status.latestVersion`.  
+  Guarantees lineage consistency and prevents conflicting “active” flags.
 
 ### 1.3 Reference Parsing & Resilience
 - Reference arrays are always present and normalized: defaults for `references.normative` and `references.bibliographic`.
 - `$meta` injected consistently for new docs and updates; avoids emission for undefined or empty arrays.
 - Latest‑version determination aligned with wrapper `releaseTag` ordering.
+- Clarified that **latest-version logic** aligns `releaseTag` and lineage order to ensure reference arrays always resolve to the most recent valid publication.
+
 
 ### 1.4 Folder & Publisher Parsing
 - Version‑folder regex upgraded to handle amendments and publication stages; accepts `*-dp`.
 - Publisher parsed from `<span itemprop="publisher">` (defaults to SMPTE only if missing). Guards prevent `-undefined` in `docId`/`docLabel`/`doi`.
 - `docLabel` formatting for amendments standardized (space before `Am`, e.g., `SMPTE ST 429-2:2011 Am1:2013`).
+- **Publisher taxonomy refinement:** standardized publisher metadata and document group classification across SMPTE, ISO/IEC, ITU, AES, and related families.  
+  Prevents mismatched publisher aliases during extraction and validation.  
+- **Normalized OM/AG handling:** standardized organizational markers  
+  (e.g., `AG10b → AG10B`; removed “SMPTE ” prefix in OM titles).
+- **Automated publisher detection:** extraction automatically maps publisher metadata using `url.rules.js` expectations, selecting the correct organization context during parsing.
+
 
 ### 1.5 Master Suite Index (MSI) & Lineage
 - `buildMasterSuiteIndex.js` produces a lineage view with `publisher`, `suite`, `number`, `part`, history, and latest flags.
 - Diagnostics and flags: `MISSING_BASE_FOR_AMENDMENT`, `MULTIPLE_LATEST_FLAGS`, draft filtering (`status.draft: true`), versionless handling via `inferVersionless()` and `statusVersionless`.
 - Output is stably sorted with counts, latest IDs, and consolidated publisher normalization across SMPTE, ISO/IEC, NIST, W3C, IETF, DCI, ATSC, ITU, AMWA, AES, AMPAS, AIM, ARIB, NFPA, etc.
+- Documents now explicitly annotated with lineage keys:  
+  `msiLatestBase`, `msiLatestAny`, `latestDoc`, `docBase`, and `docBaseLabel` for stable linkage between MSI and MSR datasets.  
+  These fields are injected with `$meta` provenance during index build.
 
 ### 1.6 Reference Mapping, MSI Integration, and MRI Foundations
 - `src/main/lib/keying.js` centralizes keying logic; MSI loaded once to build `latestByLineage` and `baseIndex` maps used across extraction and site build.
@@ -40,11 +57,17 @@ This document consolidates the MSR worklog into a single, category‑organized t
 - Missed hits upgraded cleanly; template shows undated labels while links resolve to latest. Optional hover tip supported.
 - Structural refactor initiated: move reference parsing/building into a single `referencing.js` library for both extraction and build.
 - **Master Reference Index (MRI)**: new artifact planned under `src/main/reports/`, logging all seen refs, parsed IDs, source doc, raw forms, and titles; serves as the first point of truth for orphans and future PDF parsing.
+- Added detailed **reference-upgrader diagnostics** — logs now trace probe → key → HIT → upgrade sequence for transparency when resolving undated citations.  
+- Confirmed upgrade coverage explicitly documented for *ISO 15444-1*, *ISO 10646*, and *IEC 61966-2-1* families.
+- **Manual namespace backfill:** temporary process remains in use until full automated extraction of `targetNamespace` and `import` structures is implemented.
+
 
 ## 2 Metadata & Provenance System
 - `$meta` injection logic overhauled to write only when a field value actually changes; eliminates false‑positive diffs and redundant metadata writes.
 - Inferred vs. parsed provenance tracked. Default `confidence: "medium"` applied to inferred fields; `source` annotated per field path.
 - Namespace metadata extended: `xmlNamespace` objects include `deprecated: boolean` (foundation for structured namespace tracking with `uri`, `targetNamespace`, `imported`, `sourceDocId`, `schemaLocation`).
+- **`$meta.note` definition mapping:** centralized through `metaConfig` for provenance consistency; future extensions may enrich note templates with field-specific context.
+
 
 ## 3 Validation & URL Resolution
 
@@ -82,6 +105,8 @@ This document consolidates the MSR worklog into a single, category‑organized t
 - Real content changes open PRs. Branch management corrected with `base: ${{ github.event.repository.default_branch }}`.
 - Commits both `masterReferenceIndex.json` and `mri_presence_audit.json` directly to `main` when in metadata‑only mode; no hard reset to avoid file loss.
 - Issue creation rebuilt: proper Markdown newlines, readable bullets for `cite`, `title`, `href`, `rawRef`. Missing‑ref issues auto‑close when resolved. `onlyMeta=true` suppresses PR creation.
+- **PR base parameter fix:** all MRI workflow PRs now set `base: ${{ github.event.repository.default_branch }}` explicitly to ensure correct merge targeting.  
+  Prevents orphaned branches from detached workflows.
 
 ### 4.3 Weekly MSI Workflow Hardening
 - UNKEYED issues: one per `docKey`, idempotent, closed only from default‑branch runs.
@@ -113,6 +138,7 @@ This document consolidates the MSR worklog into a single, category‑organized t
   - On create: `$meta.note` combines base note + suffix (deduplicated). On update: `$meta.note` updated only if URL changes. Regex normalizer strips duplicate suffixes.
 - Repo URL validation: HEAD checks before writing `repo` prevent invalid links.
 - Discovery output cleanup: suite/child formatting improved; merge/update phase uses `logSmart`.
+- **Withdrawn and stabilized flag extraction:** extraction recognizes and populates `status.withdrawn` and `status.stabilized` fields directly from document metadata for registry completeness.
 
 ## 6 Frontend & Site Publishing
 - PR previews deployed for each open PR with a durable URL. Checks include write permission and attach to the PR’s head SHA.
@@ -128,6 +154,8 @@ This document consolidates the MSR worklog into a single, category‑organized t
   - Duplicate‑skip reporting simplified: PR shows only a count; detailed list in workflow logs.
   - Diff linking: PR body includes a `__PR_DETAILS_DIFF_LINK__` token replaced with a link to the PR Files tab anchored to the details file blob SHA.
 - PR creation skip: legacy `skip-pr-flag.log` removed; PR body text check governs skipping.
+- **Heartbeat + Tripwire logging:** `logSmart` now emits periodic heartbeats during long extraction runs and tripwire alerts when log volume approaches budget.  
+  Ensures visibility in CI logs without exceeding console limits.
 
 ## 8 URL Validation & Normalization Suite — Summary (Operational)
 - URL Validator reports: good URL totals, unreachable and redirect mismatches split by cause. Audit logged to `src/main/reports/url_validate_audit.json`.
