@@ -20,11 +20,13 @@ What started as a personal tool to make sense of tangled reference trees has gro
 
 ### Live Stats
 
-![Documents](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmediastandardsregistry.org%2Fapi%2Fstats.json&query=%24.documents.total&label=Documents&color=blue&style=flat&cacheSeconds=3600)
-![Active](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmediastandardsregistry.org%2Fapi%2Fstats.json&query=%24.documents.active&label=Active%20docs&color=brightgreen&style=flat&cacheSeconds=3600)
-![Doc types](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmediastandardsregistry.org%2Fapi%2Fstats.json&query=%24.documents.docTypes&label=Doc%20types&color=informational&style=flat&cacheSeconds=3600)
-![References](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmediastandardsregistry.org%2Fapi%2Fstats.json&query=%24.documents.references&label=References&color=orange&style=flat&cacheSeconds=3600)
-![Publishers](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmediastandardsregistry.org%2Fapi%2Fstats.json&query=%24.documents.publishers&label=Publishers&color=brightgreen&style=flat&cacheSeconds=3600)
+[![Documents](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmediastandardsregistry.org%2Fapi%2Fstats.json&query=%24.documents.total&label=Documents&color=blue&style=flat&cacheSeconds=3600)](https://mediastandardsregistry.org/api/viewer.html?path=documents.total)
+[![Active](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmediastandardsregistry.org%2Fapi%2Fstats.json&query=%24.documents.active&label=Active%20docs&color=brightgreen&style=flat&cacheSeconds=3600)](https://mediastandardsregistry.org/api/viewer.html?path=documents.active)
+[![Doc types](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmediastandardsregistry.org%2Fapi%2Fstats.json&query=%24.documents.docTypes&label=Doc%20types&color=informational&style=flat&cacheSeconds=3600)](https://mediastandardsregistry.org/api/viewer.html?path=documents.docTypes)
+[![References](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmediastandardsregistry.org%2Fapi%2Fstats.json&query=%24.documents.references&label=References&color=orange&style=flat&cacheSeconds=3600)](https://mediastandardsregistry.org/api/viewer.html?path=documents.references)
+[![Publishers](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmediastandardsregistry.org%2Fapi%2Fstats.json&query=%24.documents.publishers&label=Publishers&color=brightgreen&style=flat&cacheSeconds=3600)](https://mediastandardsregistry.org/api/viewer.html?path=documents.publishers)
+
+> _All badges are generated from live JSON at [api/stats.json](https://mediastandardsregistry.org/api/stats.json)._
 
 #### Details
 - **Historical range:** 1896 → present  
