@@ -23,7 +23,7 @@ _Crawls defined URL maps to parse and populate data (currently only SMPTE). Crea
 **Reports (as needed):**  
 - [`src/main/reports/masterReferenceIndex.json`](https://github.com/SteveLLamb/mediastandards-registry/blob/main/src/main/reports/masterReferenceIndex.json)
 
-**Sample PR:** [Update documents.json (20251009-221046) (#506)](https://github.com/SteveLLamb/mediastandards-registry/pull/506)  
+**Sample PR:** - [Update documents.json (20251010-193337) (#520)](https://github.com/SteveLLamb/mediastandards-registry/pull/520)  
 
 >  **Trigger:** weekly schedule or manual dispatch
 
@@ -111,7 +111,7 @@ _Build preview of MSR site during PR creation, prior to publication to manually 
 
 **Sample PRs:** 
 - [Fix 404 - ITUR (#514)](https://github.com/SteveLLamb/mediastandards-registry/pull/514)  
-
+- [Update documents.json (20251010-193337) (#520)](https://github.com/SteveLLamb/mediastandards-registry/pull/520)  
 
 > **Trigger:** creation of PR with changes to `src/main/data/documents.json` or site rendering. 
 

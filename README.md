@@ -1,5 +1,6 @@
 # Media Standards Registry (MSR)
-_Automated cross-publisher standards index built and maintained by [Steve LLamb](https://github.com/SteveLLamb)_
+Automated cross-publisher standards index 
+_built and maintained by [Steve LLamb](https://github.com/SteveLLamb)_
 
 [![Extract SMPTE Documents](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/extract-docs.yml/badge.svg)](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/extract-docs.yml)
 [![Build MasterReference Index](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/build-master-reference-index.yml/badge.svg)](https://github.com/SteveLLamb/mediastandards-registry/actions/workflows/build-master-reference-index.yml)
@@ -17,19 +18,31 @@ Critical documents from SMPTE, ISO, ITU, AES, and others have always been interc
 
 What started as a personal tool to make sense of tangled reference trees has grown into a self-maintaining system that reveals the lineage, dependencies, and context of the world’s media technology standards.
 
-### Quick Stats
-- **Documents indexed:** ~1,566  
-- **Publishers covered:** SMPTE, NIST, ISO, ITU, AES, and more  
+> See [docs/changelog.md](docs/changelog.md) for details on updates since Q2 2025.
+
+### Live Stats
+
+[![Documents](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmediastandardsregistry.org%2Fapi%2Fstats.json&query=%24.documents.total&label=Documents&color=blue&style=flat&cacheSeconds=3600)](https://mediastandardsregistry.org/api/viewer.html?path=documents.total)
+[![Active](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmediastandardsregistry.org%2Fapi%2Fstats.json&query=%24.documents.active&label=Active%20docs&color=brightgreen&style=flat&cacheSeconds=3600)](https://mediastandardsregistry.org/api/viewer.html?path=documents.active)
+[![Doc types](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmediastandardsregistry.org%2Fapi%2Fstats.json&query=%24.documents.docTypes&label=Doc%20types&color=informational&style=flat&cacheSeconds=3600)](https://mediastandardsregistry.org/api/viewer.html?path=documents.docTypes)
+[![References](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmediastandardsregistry.org%2Fapi%2Fstats.json&query=%24.documents.references&label=References&color=orange&style=flat&cacheSeconds=3600)](https://mediastandardsregistry.org/api/viewer.html?path=documents.references)
+[![Publishers](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmediastandardsregistry.org%2Fapi%2Fstats.json&query=%24.documents.publishers&label=Publishers&color=brightgreen&style=flat&cacheSeconds=3600)](https://mediastandardsregistry.org/api/viewer.html?path=documents.publishers)
+
+> _All badges are generated from live JSON at [api/stats.json](https://mediastandardsregistry.org/api/stats.json)._
+
+#### Details
 - **Historical range:** 1896 → present  
 - **Automation uptime:** 100% since August 2025 (SMPTE)
+- **Publishers covered:** SMPTE, NIST, ISO, ITU, AES, and more
 
 ### Key Artifacts
-- 📘 Stored as JSON at [`src/main/data`](src/main/data/)
-- 📗 Schema for contribution to the list at [`src/main/schemas`](src/main/schemas/)
-- [📘 Dataset (`documents.json`)](src/main/data/documents.json)
-- [📗 Master Suite Index (MSI)](src/main/reports/masterSuiteIndex.json)
-- [📙 Master Reference Index (MRI)](src/main/reports/masterReferenceIndex.json)
-- 🌐 Public Site generated from `main` at <https://mediastandardsregistry.org>
+- Core data stored as JSON: [`src/main/data`](src/main/data/)
+- Schema for data: [`src/main/schemas`](src/main/schemas/)
+- Main document Dataset: [`documents.json`](src/main/data/documents.json)
+- Document lineages: [Master Suite Index (MSI)](src/main/reports/masterSuiteIndex.json)
+- Document reference maps: [Master Reference Index (MRI)](src/main/reports/masterReferenceIndex.json)
+- Live API Stats [api/stats.json](https://mediastandardsregistry.org/api/stats.json)
+- Public Site generated from `main` at <https://mediastandardsregistry.org>
 
 ## Automation Overview
 The Media Standards Registry (MSR) updates itself through a chain of automated GitHub Actions. When appropriate, PRs generate MSR Build Preview review links. 
@@ -56,9 +69,7 @@ graph LR
   A -. "PR Created (documents.json)" .-> P[PR Build Preview]
   S[Site/Template PR] -.-> P
 ```
-
 _Dotted lines indicate PR-triggered preview builds._
----
 
 ### Development
 Requires Node 20 + npm.  

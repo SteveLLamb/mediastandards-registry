@@ -57,6 +57,12 @@ jobs:
           GH_PAGES_BUILD: true
         run: npm run build
 
+      - name: Generate API stats
+        run: |
+          mkdir -p build/api
+          node src/main/scripts/utils/buildStats.js
+          cp tools/apiViewer.html build/api/viewer.html
+
       - name: Add CNAME for custom domain
         run: echo 'mediastandardsregistry.org' > ./build/CNAME
 
