@@ -1,6 +1,6 @@
 # Media Standards Registry (MSR) — Consolidated Technical Chronicle
 
-**Status:** Gold-copy consolidation for Technical Submission 
+**Status:** Gold-copy consolidation  
 **Consolidation Date:** 2025-10-10
 
 This document consolidates the MSR worklog into a single, category‑organized technical chronicle. Dates are de‑emphasized in favor of system architecture and implementation detail. All filenames, scripts, fields, and JSON keys are shown in monospace.
