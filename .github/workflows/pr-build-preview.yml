@@ -11,6 +11,8 @@ on:
       - "package-lock.json"
       # Extract PRs (bot): include because they change the dataset used by the site
       - "src/main/data/**"
+      # MSI/MRI PRs: include to trigger previews for report changes
+      - "src/main/reports/**"
   workflow_run:
     workflows:
       - "Extract SMPTE Documents"
@@ -25,7 +27,7 @@ permissions:
   checks: write
 
 concurrency:
-  group: pages-pr-${{ github.event.pull_request.number }}
+  group: pages-pr-${{ github.event.pull_request.number || github.run_id }}
   cancel-in-progress: true
 
 jobs:
