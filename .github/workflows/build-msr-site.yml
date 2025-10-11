@@ -52,17 +52,15 @@ jobs:
             git push
           fi
 
-      - name: Generate API stats
-        run: node src/main/scripts/utils/buildStats.js
-
       - name: Build site
         env:
           GH_PAGES_BUILD: true
         run: npm run build
 
-      - name: Copy API stats into site
+      - name: Generate API stats
         run: |
           mkdir -p build/api
+          node src/main/scripts/utils/buildStats.js
           cp tools/apiViewer.html build/api/viewer.html
 
       - name: Add CNAME for custom domain
