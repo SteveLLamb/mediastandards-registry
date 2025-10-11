@@ -53,7 +53,7 @@ jobs:
           fi
 
       - name: Generate API stats
-        run: node src/main/scripts/utils/buildstats.js
+        run: node src/main/scripts/utils/buildStats.js
 
       - name: Build site
         env:
