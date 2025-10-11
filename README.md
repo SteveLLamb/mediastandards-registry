@@ -66,9 +66,9 @@ graph LR
   D --> E[URL Validate]
 
   %% PR preview paths (dotted lines indicate PR-triggered previews)
-  A -. [PR Created] .-> P[PR Build Preview]
-  B -. "PR Created" .-> P
-  C -. "PR Created" .-> P
+  A -. p[PR Created] .-> P[PR Build Preview]
+  B -. p[PR Created] .-> P
+  C -. p[PR Created] .-> P
   S[Site/Template PR] -.-> P
 ```
 _Dotted lines indicate PR-triggered preview builds. Extract, MSI, MRI, and site/template PRs all generate a preview._
