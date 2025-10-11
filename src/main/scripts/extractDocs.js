@@ -100,6 +100,7 @@ const filterList = require('../input/filterList.smpte.json');
 const suiteMap = new Map();
 
 // --- Seed URL helpers ---
+
 function normalizeSeedUrl(u) {
   try {
     // Force https and strip query/hash
@@ -113,6 +114,19 @@ function normalizeSeedUrl(u) {
     return s;
   } catch (_) {
     return u; // leave untouched if not a valid URL string
+  }
+}
+
+// --- Cache busting helper for CDN/proxy refresh ---
+const NO_CACHE_HEADERS = { 'Cache-Control': 'no-cache', 'Pragma': 'no-cache' };
+function withNoCache(u) {
+  try {
+    const url = new URL(u);
+    const q = url.search ? '&' : '';
+    url.search += `${q}nocache=${Date.now()}`;
+    return url.toString();
+  } catch (_) {
+    return u + (u.includes('?') ? '&' : '?') + `nocache=${Date.now()}`;
   }
 }
 
@@ -229,7 +243,7 @@ async function discoverFromRootDocPage() {
   const rootUrl = 'https://pub.smpte.org/doc/';
   console.log(`\n🔍 Fetching SMPTE root doc list: ${rootUrl}`);
 
-  const res = await axios.get(rootUrl);
+  const res = await axios.get(withNoCache(rootUrl), { headers: NO_CACHE_HEADERS });
   const $ = cheerio.load(res.data);
 
   let allDocs = [];
@@ -525,7 +539,7 @@ const extractFromSeedDoc = async (seedRootUrl) => {
   const rootUrl = seedRootUrl.endsWith('/') ? seedRootUrl : seedRootUrl + '/';
   const indexUrl = rootUrl + 'index.html';
   try {
-    const indexRes = await axios.get(indexUrl);
+    const indexRes = await axios.get(withNoCache(indexUrl), { headers: NO_CACHE_HEADERS });
     const $index = cheerio.load(indexRes.data);
 
     const pubType = $index('[itemprop="pubType"]').attr('content');
