@@ -1,26 +1,25 @@
 {
-  "generatedAt": "2025-10-11T01:40:56.594Z",
+  "generatedAt": "2025-10-11T02:03:56.124Z",
   "target": "documents.json",
-  "good": 1306,
+  "good": 1308,
   "skippedByDomain": 0,
   "skippedByPublisher": 0,
   "index": {
-    "error": 201,
+    "error": 200,
     "errorBreakdown": {
       "Unreachable (403)": 46,
       "Unreachable (404)": 62,
       "Unreachable (429)": 71,
-      "Unreachable (ECONNABORTED)": 1,
       "Unreachable (ENOTFOUND)": 2,
       "Unreachable (ERR_BAD_REQUEST)": 1,
       "Unreachable (ERR_FR_TOO_MANY_REDIRECTS)": 1,
       "Unreachable (HPE_INVALID_CONSTANT)": 16,
       "Unreachable (UNABLE_TO_VERIFY_LEAF_SIGNATURE)": 1
     },
-    "redirectMismatch": 2,
+    "redirectMismatch": 1,
     "redirectBreakdown": {
       "undefined": 0,
-      "other": 2
+      "other": 1
     },
     "expectationMismatch": 35,
     "expectationBreakdown": {
@@ -2025,18 +2024,6 @@
           "riskLevel": "Medium"
         }
       ],
-      "ECONNABORTED": [
-        {
-          "docId": "R-REC-BT.2390-10.202111",
-          "publisher": "ITU-R",
-          "field": "href",
-          "url": "https://www.itu.int/pub/R-REP-BT.2390-10-2021",
-          "message": "Unreachable (ECONNABORTED)",
-          "explanation": "Connection timed out.",
-          "recommendedAction": "Retry later or check the server’s responsiveness.",
-          "riskLevel": "Medium-High"
-        }
-      ],
       "ENOTFOUND": [
         {
           "docId": "W3C.rddl.2002",
@@ -2068,19 +2055,9 @@
           "publisher": "Scientific Instruments",
           "field": "href",
           "url": "https://doi.org/10.1088/0950-7671/1/3/302",
-          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=b9b35281-b77e-4a7e-8dea-b02711dfbefc&ssb=48670224324&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=efee0a22-cnvj-4311-8e96-aa21d7c012ef&ssk=botmanager_support@radware.com&ssm=80447929371485499100017032692181&ssn=896b2aee9d44e576d171a24f88d623afe7248ab55d43-39f6-41fa-b261fc&sso=919fcefa-90bc8741b1699e670fe8a7c587f339b4dc69f26394a1e238&ssp=28207377641760176668176018152906929&ssq=79053184639957216757146399725698392394972&ssr=MTMuODMuMjE2LjEwMA==&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2Y5MDAwNTljMDlkMTAtZTJmMS00Yzc4LTg2ZDItMjYxZDBiMzc4NTJkMS0xNzYwMTQ2Mzk5NjI2MC01NmVhMDlmYWE2NjIyNDRmMTAiLCJfX3V6bWYiOiI3ZjkwMDA4YWI1NWQ0My0zOWY2LTQxZmEtYmVmYS05MGJjODc0MWIxNjkxLTE3NjAxNDYzOTk2MjYwLTAwMTBmN2EyNDUwMWJkNDgyYWQxMCIsInJkIjoiaW9wLm9yZyJ9",
+          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=e449bf2b-64e7-49a1-a4e4-092a312a4bbf&ssb=96571216104&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=48b96c2a-cnvj-486c-a3ec-6a8df838d96a&ssk=botmanager_support@radware.com&ssm=10976124317123733104338902150460&ssn=64e5a8901e03583682be0832f207b80cb19af4d524d4-59f4-460c-a3b8f1&sso=ec19a824-a9125d5eb6db36fc56dabfec826a9432a6123fad5cd7e97c&ssp=79099675931760173422176012376892484&ssq=42440584789705892992747897109449776810209&ssr=MjAuMTA5LjM4LjE2Mw==&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJyZCI6ImlvcC5vcmciLCJfX3V6bWYiOiI3ZjkwMDBmNGQ1MjRkNC01OWY0LTQ2MGMtYTgyNC1hOTEyNWQ1ZWI2ZGIxLTE3NjAxNDc4OTc4NjMwLTAwMWIxODdiN2NkMmI5Zjk2OGIxMCIsInV6bXgiOiI3ZjkwMDAzMTZhYWJmZi0zOGQzLTQ3ODktODQ5Mi0yZjBhYTJjZTBkZWMxLTE3NjAxNDc4OTc4NjMwLTZjYTJiYzQxYjg1Mjc1ZTAxMCJ9",
           "resolvedField": "resolvedHref",
           "expectedResolved": "https://iopscience.iop.org/article/10.1088/0950-7671/1/3/302",
-          "message": "resolved url mismatch"
-        },
-        {
-          "docId": "ML3807.M56.1916",
-          "publisher": "MacMillan Co.",
-          "field": "href",
-          "url": "https://ia800204.us.archive.org/19/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
-          "resolvedUrl": "https://ia801303.us.archive.org/1/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
-          "resolvedField": "resolvedHref",
-          "expectedResolved": "https://ia601303.us.archive.org/1/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
           "message": "resolved url mismatch"
         }
       ]
