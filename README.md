@@ -63,7 +63,7 @@ The Media Standards Registry (MSR) updates itself through a chain of automated G
 graph LR
   subgraph Pipeline
     direction LR
-    A[Extract] --> B[MSI] --> C[MRI] --> D[MSR] --> E[URL Validate]
+    A[Extract] --> B[MSI] --> C[MRI] --> D[Build MSR] --> E[URL Validate]
   end
 
   A -.-> P[PR Build Preview]
