@@ -83,11 +83,11 @@ This document consolidates the MSR worklog into a single, category‑organized t
 - Commits both `masterReferenceIndex.json` and `mri_presence_audit.json` directly to `main` when in metadata‑only mode; no hard reset to avoid file loss.
 - Issue creation rebuilt: proper Markdown newlines, readable bullets for `cite`, `title`, `href`, `rawRef`. Missing‑ref issues auto‑close when resolved. `onlyMeta=true` suppresses PR creation.
 
-### 4.3 Nightly MSI Workflow Hardening
+### 4.3 Weekly MSI Workflow Hardening
 - UNKEYED issues: one per `docKey`, idempotent, closed only from default‑branch runs.
 - PR policy: lineage/inventory deltas → PR; flags/UNKEYED/metadata → auto‑commit to `main`.
 - Diff classifier (`inventoryChanged`) routes outputs appropriately. PR bodies include flags and UNKEYED counts.
-- Triggers: nightly cron (04:15 UTC), `push` to `main`, and manual dispatch.
+- Triggers: weekly cron (04:15 UTC), `push` to `main`, and manual dispatch.
 
 ### 4.4 PR Preview & Build Chain (`pr-build-preview.yml`)
 - Automatic PR previews deployed to `gh-pages/pr/<PR#>/` with a comment posting the live link.
@@ -136,7 +136,7 @@ This document consolidates the MSR worklog into a single, category‑organized t
 - Repository hygiene and scheduling configured for weekly runs, manual dispatch, and PR‑merge triggers; runs auto‑cancel when superseded.
 
 ## 9 Net Results / System Readiness
-- End‑to‑end nightly chain hardened. MSI → MRI → MSR runs reliably and in order.
+- End‑to‑end weekly chain hardened. MSI → MRI → MSR runs reliably and in order.
 - PR previews deploy deterministically and self‑report via PR checks.
 - URL validator, normalizer, and branch sweeper operate on schedules with clean, uniform reports.
 - All major CI workflows are concurrency‑protected and idempotent.
