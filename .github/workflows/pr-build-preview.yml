@@ -51,7 +51,23 @@ jobs:
         with:
           script: |
             const { owner, repo } = context.repo;
-            const runName = context.payload.workflow_run && context.payload.workflow_run.name || '';
+
+            // 1) Prefer the PR(s) attached to the upstream workflow_run payload
+            const wr = context.payload.workflow_run || {};
+            const attachedPRs = Array.isArray(wr.pull_requests) ? wr.pull_requests : [];
+            if (attachedPRs.length > 0) {
+              // Use the first attached PR (typical case: one PR triggered the run)
+              const prNum = attachedPRs[0].number;
+              core.info(`Found attached PR #${prNum} from workflow_run payload.`);
+              const { data: pr } = await github.rest.pulls.get({ owner, repo, pull_number: prNum });
+              core.setOutput('number', String(pr.number));
+              core.setOutput('sha', pr.head.sha);
+              core.setOutput('branch', pr.head.ref);
+              return;
+            }
+
+            // 2) Fallback: map workflow name -> expected head branch and look up open PRs
+            const runName = wr.name || '';
             const branchMap = {
               'Extract SMPTE Documents': 'chore/extract-docs',
               'Build Master Suite Index': 'chore/build-master-suite-index',
@@ -63,21 +79,37 @@ jobs:
               core.setOutput('number', '');
               core.setOutput('sha', '');
               core.setOutput('branch', '');
-            } else {
-              const { data: prs } = await github.rest.pulls.list({
-                owner, repo, state: 'open', head: `${owner}:${headBranch}`, per_page: 10
-              });
-              const pr = prs[0];
-              core.setOutput('number', pr ? pr.number : '');
-              core.setOutput('sha', pr ? pr.head.sha : '');
-              core.setOutput('branch', pr ? pr.head.ref : headBranch);
-              core.info(`Resolved head branch: ${headBranch}; PR #: ${pr ? pr.number : '(none)'}`);
+              return;
             }
+
+            const prs = await github.paginate(github.rest.pulls.list, {
+              owner, repo, state: 'open', head: `${owner}:${headBranch}`, per_page: 50
+            });
+            const pr = prs[0];
+            if (!pr) {
+              core.info(`No open PR found for head ${owner}:${headBranch}.`);
+              core.setOutput('number', '');
+              core.setOutput('sha', '');
+              core.setOutput('branch', headBranch);
+              return;
+            }
+            core.info(`Resolved head branch: ${headBranch}; PR #${pr.number}`);
+            core.setOutput('number', String(pr.number));
+            core.setOutput('sha', pr.head.sha);
+            core.setOutput('branch', pr.head.ref);
+
       - name: Stop if no open PR for current workflow_run
         if: ${{ github.event_name == 'workflow_run' && steps.findpr.outputs.number == '' }}
         run: |
           echo "No open PR found for this workflow_run — nothing to preview."
           exit 0
+
+      - name: Debug resolved PR context
+        if: ${{ github.event_name == 'workflow_run' && steps.findpr.outputs.number != '' }}
+        run: |
+          echo "Resolved PR #: ${{ steps.findpr.outputs.number }}"
+          echo "Resolved head ref: ${{ steps.findpr.outputs.branch }}"
+          echo "Resolved head sha: ${{ steps.findpr.outputs.sha }}"
 
       - uses: actions/checkout@v4
         with:
