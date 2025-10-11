@@ -47,5 +47,6 @@ const stats = {
 };
 
 // Write to the API stats file (consumed by site as /api/stats.json)
-const outPath = 'src/main/reports/api_stats.json';
+const outPath = 'build/api/stats.json';
+fs.mkdirSync('build/api', { recursive: true });
 fs.writeFileSync(outPath, JSON.stringify(stats, null, 2));
