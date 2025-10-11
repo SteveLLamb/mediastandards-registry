@@ -1,12 +1,11 @@
 # Media Standards Registry (MSR) — Consolidated Technical Chronicle
-**Status:** Gold-copy consolidation for Technical Submission
+
+**Status:** Gold-copy consolidation for Technical Submission 
 **Consolidation Date:** 2025-10-10
 
 This document consolidates the MSR worklog into a single, category‑organized technical chronicle. Dates are de‑emphasized in favor of system architecture and implementation detail. All filenames, scripts, fields, and JSON keys are shown in monospace.
 
----
-
-## 1) Extraction & Automation Pipeline
+## 1 Extraction & Automation Pipeline
 
 ### 1.1 HTML + PDF Fallback Extraction (SMPTE milestone)
 - End‑to‑end ingestion for SMPTE documents with HTML primary parsing and safe PDF‑only fallback.
@@ -42,16 +41,12 @@ This document consolidates the MSR worklog into a single, category‑organized t
 - Structural refactor initiated: move reference parsing/building into a single `referencing.js` library for both extraction and build.
 - **Master Reference Index (MRI)**: new artifact planned under `src/main/reports/`, logging all seen refs, parsed IDs, source doc, raw forms, and titles; serves as the first point of truth for orphans and future PDF parsing.
 
----
-
-## 2) Metadata & Provenance System
+## 2 Metadata & Provenance System
 - `$meta` injection logic overhauled to write only when a field value actually changes; eliminates false‑positive diffs and redundant metadata writes.
 - Inferred vs. parsed provenance tracked. Default `confidence: "medium"` applied to inferred fields; `source` annotated per field path.
 - Namespace metadata extended: `xmlNamespace` objects include `deprecated: boolean` (foundation for structured namespace tracking with `uri`, `targetNamespace`, `imported`, `sourceDocId`, `schemaLocation`).
 
----
-
-## 3) Validation & URL Resolution
+## 3 Validation & URL Resolution
 
 ### 3.1 URL Validation (`url.validate.js`)
 - Added “good URL” count alongside unreachable and redirect totals.
@@ -72,9 +67,7 @@ This document consolidates the MSR worklog into a single, category‑organized t
 - Modular `resolveUrlAndInject()` shared across extraction and validation; injects `resolvedHref` when missing or changed.
 - All URL‑related reports written under `src/main/reports/` with consistent JSON headers.
 
----
-
-## 4) Workflow & CI/CD
+## 4 Workflow & CI/CD
 
 ### 4.1 Chain Orchestration (MSI → MRI → MSR)
 - Workflows run in strict sequence using `workflow_run` triggers. Any upstream change triggers the full chain rebuild.
@@ -112,9 +105,7 @@ This document consolidates the MSR worklog into a single, category‑organized t
 - Post‑audit sync‑to‑main prevents base/head conflicts. Normalization PRs use a rolling branch `chore/url-normalize` and auto‑delete on merge; guards prevent self‑trigger.
 - README documentation expanded with an “Automated Workflow Chain (with Samples)” section: triggers, datasets, expected outputs, and sample links to runs, reports, PRs, and issues.
 
----
-
-## 5) Registry Architecture & Data Model Evolution
+## 5 Registry Architecture & Data Model Evolution
 - Consolidated `metaConfig` governs notes for `status.stabilized`, `status.withdrawn`, and `status.withdrawnNotice`.
 - Withdrawn notice handling:
   - Reachability check performed once per URL.
@@ -123,16 +114,12 @@ This document consolidates the MSR worklog into a single, category‑organized t
 - Repo URL validation: HEAD checks before writing `repo` prevent invalid links.
 - Discovery output cleanup: suite/child formatting improved; merge/update phase uses `logSmart`.
 
----
-
-## 6) Frontend & Site Publishing
+## 6 Frontend & Site Publishing
 - PR previews deployed for each open PR with a durable URL. Checks include write permission and attach to the PR’s head SHA.
 - Links are stable under both `github.io` and the CNAME (`mediastandardsregistry.org`).
 - Plan: staging subdomain (e.g., `test.mediastandardsregistry.org`) for broader pre‑prod validation.
 
----
-
-## 7) Logging, Diffing, and PR Output
+## 7 Logging, Diffing, and PR Output
 - `logSmart.js` centralizes logging with a console budget (~3.5 MiB). Excess console chatter is tripwired while full logs are persisted to file.
 - Heartbeats and tripwires: periodic progress messages (`[HB pid:####] ... still processing — X/Y (Z%)`) with a start‑of‑run settings banner.
 - Full extract log artifacts (`extract-full.log`) uploaded for every run, including early exits or skipped PRs.
@@ -142,17 +129,13 @@ This document consolidates the MSR worklog into a single, category‑organized t
   - Diff linking: PR body includes a `__PR_DETAILS_DIFF_LINK__` token replaced with a link to the PR Files tab anchored to the details file blob SHA.
 - PR creation skip: legacy `skip-pr-flag.log` removed; PR body text check governs skipping.
 
----
-
-## 8) URL Validation & Normalization Suite — Summary (Operational)
+## 8 URL Validation & Normalization Suite — Summary (Operational)
 - URL Validator reports: good URL totals, unreachable and redirect mismatches split by cause. Audit logged to `src/main/reports/url_validate_audit.json`.
 - URL Normalizer operates in validate‑only by default; writes only in apply mode. Summary emitted to `src/main/reports/url_validate_normalize.json`.
 - URL Rules provide publisher‑specific checks and expected patterns (informational baseline for future enforcement).
 - Repository hygiene and scheduling configured for weekly runs, manual dispatch, and PR‑merge triggers; runs auto‑cancel when superseded.
 
----
-
-## 9) Net Results / System Readiness
+## 9 Net Results / System Readiness
 - End‑to‑end nightly chain hardened. MSI → MRI → MSR runs reliably and in order.
 - PR previews deploy deterministically and self‑report via PR checks.
 - URL validator, normalizer, and branch sweeper operate on schedules with clean, uniform reports.
@@ -160,8 +143,6 @@ This document consolidates the MSR worklog into a single, category‑organized t
 - Project emits core JSON reports under `src/main/reports/` with uniform headers.
 - Clean metadata‑only commit flow (no empty PRs); auto‑closing issues for missing references.
 - Cite‑first resolution logic with `refMap` overrides; undated references upgraded via lineage when appropriate.
-
----
 
 ## Appendix: Implementation Notes (selected specifics retained)
 - MSI lineage logic refined across publishers; draft and versionless handling normalized; ICC errata regex fixed; console logs simplified (Found vs Added vs Skipped) with reduced UNKNOWN noise via early publisher normalization.
@@ -172,7 +153,5 @@ This document consolidates the MSR worklog into a single, category‑organized t
 
 **Gold‑Copy Guidance**
 This file is the current gold‑copy consolidation. If corruption or lock‑up occurs in downstream artifacts, restore from this document and only re‑apply changes made after the consolidation date above.
-
-End of consolidated chronicle.
 
 > _Maintained by [Steve LLamb](https://github.com/SteveLLamb) — Media Standards Registry (MSR)_ 
