@@ -172,7 +172,7 @@ This document consolidates the MSR worklog into a single, category‑organized t
 - Clean metadata‑only commit flow (no empty PRs); auto‑closing issues for missing references.
 - Cite‑first resolution logic with `refMap` overrides; undated references upgraded via lineage when appropriate.
 
-## Appendix: Implementation Notes (selected specifics retained)
+## Appendix A: Implementation Notes (selected specifics retained)
 - MSI lineage logic refined across publishers; draft and versionless handling normalized; ICC errata regex fixed; console logs simplified (Found vs Added vs Skipped) with reduced UNKNOWN noise via early publisher normalization.
 - Safety guard on references: skip MSI probing if `docId` already exists in `documents.json` to reduce unnecessary lookups and false gaps.
 - README expanded: automated chain diagram, sample outputs, triggers, and dataset descriptions.
@@ -183,3 +183,60 @@ This document consolidates the MSR worklog into a single, category‑organized t
 This file is the current gold‑copy consolidation. If corruption or lock‑up occurs in downstream artifacts, restore from this document and only re‑apply changes made after the consolidation date above.
 
 > _Maintained by [Steve LLamb](https://github.com/SteveLLamb) — Media Standards Registry (MSR)_ 
+
+## Appendix B: Daily Done List Protocol
+
+To simplify ongoing updates, each day’s accomplishments can be logged in a structured “Done List” that is parsed and merged into this changelog. Use the format below for clarity and automation compatibility.
+
+### Template
+
+```
+# Done List — YYYY‑MM‑DD
+
+## 1 Extraction & Automation Pipeline
+- [summary of task or fix; include filename or script if relevant]
+
+## 2 Metadata & Provenance System
+- [$meta or status logic updates]
+
+## 3 Validation & URL Resolution
+- [url.validate.js or url.normalize.js changes]
+
+## 4 Workflow & CI/CD
+- [workflow name or YAML file update]
+
+## 5 Registry Architecture & Data Model
+- [structural schema or field changes]
+
+## 6 Frontend & Site Publishing
+- [public site or preview deployment details]
+
+## 7 Logging, Diffing, PR Output
+- [logging or PR formatting changes]
+
+## 8 Misc / Notes
+- [anything cross‑cutting or prep for next session]
+```
+
+### Usage Rules
+- Keep bullets short, declarative, and in past tense (one per atomic change).  
+- Include filenames or JSON keys for traceability.  
+- No dates or emojis inside bullets; they are stripped on import.  
+- Omit empty sections — they collapse automatically.  
+- Duplicate items are flagged as Merged/Implicit instead of duplicated.
+
+### Processing Workflow
+1. Drop the formatted Done List into chat.  
+2. The assistant parses, normalizes, and compares entries against the current gold‑copy changelog.  
+3. A Markdown patch block is generated for commit.  
+4. Each item is classified as ✅ New addition, ⚙️ Merged, or ✏️ Reworded/clarified.  
+5. Paste the block into the appropriate sections and commit the update.
+
+### Optional Short Form
+```
+Done List — YYYY‑MM‑DD
+- Extraction: added DOI fix for PDF fallback.
+- Metadata: tuned $meta.note for status.superseded.
+- Workflow: fixed YAML boolean coercion.
+```
+Short form lines are auto‑routed to their matching sections.
