@@ -60,10 +60,10 @@ The Media Standards Registry (MSR) updates itself through a chain of automated G
 
 ```mermaid
 graph LR
-  %% Core pipeline
-  A[Extract] --- B[MSI] --- C[MRI] --- D[MSR] --- E[URL Validate]
+  A[Extract] --> B[MSI] --> C[MRI] --> D[MSR] --> E[URL Validate]
+  {rank=same; A B C D E}
 
-  %% PR preview paths (dotted)
+  %% PR preview paths
   A -.-> P[PR Build Preview]
   B -.-> P
   C -.-> P
