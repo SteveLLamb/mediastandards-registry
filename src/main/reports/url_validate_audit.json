@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2025-10-10T17:03:09.860Z",
+  "generatedAt": "2025-10-11T00:32:08.256Z",
   "target": "documents.json",
-  "good": 1377,
+  "good": 1378,
   "skippedByDomain": 0,
   "skippedByPublisher": 0,
   "index": {
-    "error": 130,
+    "error": 129,
     "errorBreakdown": {
       "Unreachable (403)": 46,
-      "Unreachable (404)": 63,
+      "Unreachable (404)": 62,
       "Unreachable (ENOTFOUND)": 2,
       "Unreachable (ERR_BAD_REQUEST)": 1,
       "Unreachable (ERR_FR_TOO_MANY_REDIRECTS)": 1,
@@ -923,16 +923,6 @@
           "riskLevel": "High"
         },
         {
-          "docId": "NIST.SP.800-57p2",
-          "publisher": "NIST",
-          "field": "href",
-          "url": "https://doi.org/10.6028/NIST.SP.800-57p2",
-          "message": "Unreachable (404)",
-          "explanation": "The URL points to a resource that was not found (dead link).",
-          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
-          "riskLevel": "High"
-        },
-        {
           "docId": "SMPTE.AG16.2020",
           "publisher": "SMPTE",
           "field": "href",
@@ -1352,7 +1342,7 @@
           "publisher": "Scientific Instruments",
           "field": "href",
           "url": "https://doi.org/10.1088/0950-7671/1/3/302",
-          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=b22b5a26-3510-4a2a-abd0-560a9b93aca5&ssb=88836237600&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=197a892c-cnvj-4f59-8e47-6be565d9c688&ssk=botmanager_support@radware.com&ssm=55544271274225532100937487382341&ssn=122502ce95c679cb6543f1efd0088b8a332fe6720a6b-3802-46c3-9c4a26&sso=de06d5e2-149beea8301a2b9b06f836844f3c062b9821282d70626779&ssp=71805498311760155409176013458607310&ssq=87007011536599668456015365486144189302911&ssr=NTIuMTc2LjM3LjY0&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDBlNjcyMGE2Yi0zODAyLTQ2YzMtOTVlMi0xNDliZWVhODMwMWExLTE3NjAxMTUzNjUzMjMwLTAwMTc4NjFhNGM0ZDRkZGYxYzUxMCIsInJkIjoiaW9wLm9yZyIsInV6bXgiOiI3ZjkwMDA0OWM4ZTJlMi1iOGQ2LTQ5OTItOWI1NS05MjcyNjRkNWZlNDkxLTE3NjAxMTUzNjUzMjMwLThhZTY1YmIzNmQ2M2Q4YjcxMCJ9",
+          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=53484cb8-ae1d-43c2-ac3f-281c234212fb&ssb=21357223429&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=5a35ca4e-cnvj-42e3-bc17-9afbcb636bc6&ssk=botmanager_support@radware.com&ssm=62652896713269889109957416866728&ssn=a2adbd2ab12696342f429b0286432e9c97637a0d01e1-d56d-42fe-918343&sso=9e7b99c7-71aa8c2d45e26e5ca18639a14ae369b91f731456d4101b40&ssp=95755078761760157947176015251119060&ssq=57641634222150013999242221739046654634475&ssr=MTQ1LjEzMi4xMDAuODE=&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2Y5MDAwNjBjYzc1YWItNjU5My00ZWFjLWIyZWEtNTAzYmExNDY3YjAxMS0xNzYwMTQyMjIxNTAzMC1kMWUwMDMyMzE1Y2JiNGNlMTAiLCJfX3V6bWYiOiI3ZjkwMDA3YTBkMDFlMS1kNTZkLTQyZmUtOTljNy03MWFhOGMyZDQ1ZTIxLTE3NjAxNDIyMjE1MDMwLTAwMTNlOGNlZTEzMjMyZTNhZWExMCIsInJkIjoiaW9wLm9yZyJ9",
           "resolvedField": "resolvedHref",
           "expectedResolved": "https://iopscience.iop.org/article/10.1088/0950-7671/1/3/302",
           "message": "resolved url mismatch"
