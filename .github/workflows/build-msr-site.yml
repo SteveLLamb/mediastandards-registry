@@ -52,10 +52,18 @@ jobs:
             git push
           fi
 
+      - name: Generate API stats
+        run: node src/main/scripts/utils/buildstats.js
+
       - name: Build site
         env:
           GH_PAGES_BUILD: true
         run: npm run build
+
+      - name: Copy API stats into site
+        run: |
+          mkdir -p build/api
+          cp src/main/reports/api_stats.json build/api/stats.json
 
       - name: Add CNAME for custom domain
         run: echo 'mediastandardsregistry.org' > ./build/CNAME
