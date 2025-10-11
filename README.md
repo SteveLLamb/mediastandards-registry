@@ -24,7 +24,7 @@ What started as a personal tool to make sense of tangled reference trees has gro
 ![Active](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmediastandardsregistry.org%2Fapi%2Fstats.json&query=%24.documents.active&label=Active%20docs&color=brightgreen&style=flat&cacheSeconds=3600)
 ![Doc types](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmediastandardsregistry.org%2Fapi%2Fstats.json&query=%24.documents.docTypes&label=Doc%20types&color=informational&style=flat&cacheSeconds=3600)
 ![References](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmediastandardsregistry.org%2Fapi%2Fstats.json&query=%24.documents.references&label=References&color=orange&style=flat&cacheSeconds=3600)
-![Publishers](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmediastandardsregistry.org%2Fapi%2Fstats.json&query=%24.publishers&label=Publishers&color=brightgreen&style=flat&cacheSeconds=3600)
+![Publishers](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fmediastandardsregistry.org%2Fapi%2Fstats.json&query=%24.documents.publishers&label=Publishers&color=brightgreen&style=flat&cacheSeconds=3600)
 
 #### Details
 - **Historical range:** 1896 → present  
