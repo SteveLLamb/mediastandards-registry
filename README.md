@@ -59,11 +59,13 @@ The Media Standards Registry (MSR) updates itself through a chain of automated G
 | PR Build Preview| Builds MSR preview prior to publication | PR Creation (Extract/MSI/MRI/Site PRs) | <https://stevellamb.github.io/mediastandards-registry/pr/###/> |
 
 ```mermaid
+%%{init: {'flowchart': {'curve': 'linear'}}}%%
 graph LR
-  %% Core pipeline
-  A[Extract] --- B[MSI] --- C[MRI] --- D[MSR] --- E[URL Validate]
+  subgraph Pipeline
+    direction LR
+    A[Extract] --> B[MSI] --> C[MRI] --> D[MSR] --> E[URL Validate]
+  end
 
-  %% PR preview paths (dotted)
   A -.-> P[PR Build Preview]
   B -.-> P
   C -.-> P
