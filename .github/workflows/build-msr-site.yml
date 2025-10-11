@@ -64,6 +64,7 @@ jobs:
         run: |
           mkdir -p build/api
           cp src/main/reports/api_stats.json build/api/stats.json
+          cp tools/apiViewer.html build/api/viewer.html
 
       - name: Add CNAME for custom domain
         run: echo 'mediastandardsregistry.org' > ./build/CNAME
