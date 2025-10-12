@@ -48,6 +48,20 @@ jobs:
         run: |
           echo "⏭️  Skipping MSR site build because upstream workflow opened PR #${{ steps.guard.outputs.pr }}."
 
+      - name: Write downstream skip marker
+        if: steps.guard.outputs.skip == 'true'
+        run: |
+          mkdir -p .emit
+          echo "MSR site build skipped due to upstream PR #${{ steps.guard.outputs.pr }} (run ${{ github.run_id }})" > .emit/skip-site-build.txt
+
+      - name: Upload skip marker artifact for downstream
+        if: steps.guard.outputs.skip == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: skip-site-build-pr-${{ steps.guard.outputs.pr }}
+          path: .emit/skip-site-build.txt
+          retention-days: 3
+
       - uses: actions/checkout@v4
         if: steps.guard.outputs.skip != 'true'
         with:
