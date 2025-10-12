@@ -134,25 +134,32 @@ jobs:
           echo "Resolved head sha: ${{ steps.findpr.outputs.sha }}"
 
       - uses: actions/checkout@v4
+        if: ${{ github.event_name == 'pull_request' || steps.findpr.outputs.number != '' }}
         with:
           ref: ${{ github.event_name == 'pull_request' && github.head_ref || steps.findpr.outputs.branch || 'main' }}
 
       - uses: actions/setup-node@v4
+        if: ${{ github.event_name == 'pull_request' || steps.findpr.outputs.number != '' }}
         with:
           node-version: "lts/*"
           cache: "npm"
 
       - run: npm ci
+        if: ${{ github.event_name == 'pull_request' || steps.findpr.outputs.number != '' }}
 
       - name: Canonicalize data (sanity)
+        if: ${{ github.event_name == 'pull_request' || steps.findpr.outputs.number != '' }}
         run: npm run canonicalize
 
       - name: Validate dataset
+        if: ${{ github.event_name == 'pull_request' || steps.findpr.outputs.number != '' }}
         run: npm run validate
 
       - run: npm run build   # produces ./build
+        if: ${{ github.event_name == 'pull_request' || steps.findpr.outputs.number != '' }}
 
       - name: Verify build output exists
+        if: ${{ github.event_name == 'pull_request' || steps.findpr.outputs.number != '' }}
         run: |
           if [ ! -d build ]; then
             echo "::error::No build/ output directory found after 'npm run build'.";
@@ -164,6 +171,7 @@ jobs:
           fi
 
       - name: Deploy PR preview to gh-pages/pr/<PR#>
+        if: ${{ github.event_name == 'pull_request' || steps.findpr.outputs.number != '' }}
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -172,6 +180,7 @@ jobs:
           keep_files: true
 
       - name: Comment preview URL on PR
+        if: ${{ github.event_name == 'pull_request' || steps.findpr.outputs.number != '' }}
         uses: marocchino/sticky-pull-request-comment@v2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -183,6 +192,7 @@ jobs:
             _This link updates on new commits to this PR._ 
 
       - name: Publish PR Check (Preview link)
+        if: ${{ github.event_name == 'pull_request' || steps.findpr.outputs.number != '' }}
         uses: actions/github-script@v7
         with:
           script: |
