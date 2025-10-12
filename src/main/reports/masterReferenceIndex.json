@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "generatedAt": "2025-10-12T00:08:59.373Z",
+  "generatedAt": "2025-10-12T20:58:11.380Z",
   "stats": {
-    "uniqueRefIds": 1050
+    "uniqueRefIds": 1052
   },
   "refs": {
     "40290752": {
@@ -20995,12 +20995,30 @@
       "refId": "SMPTE.RP210.10.2007",
       "normalized": null,
       "resolution": {
-        "sourcePresent": true,
-        "sourceDocId": "SMPTE.RP210.10.2007",
+        "sourcePresent": false,
+        "sourceDocId": null,
         "firstConfirmedSourceAt": "2025-10-07T22:56:58.830Z"
       },
       "provenance": {
         "firstSeen": "2025-10-07T22:56:58.710Z",
+        "mapSource": [
+          "replay"
+        ],
+        "mapDetails": [
+          "from-documents.json"
+        ]
+      }
+    },
+    "SMPTE.RP210.2007": {
+      "refId": "SMPTE.RP210.2007",
+      "normalized": null,
+      "resolution": {
+        "sourcePresent": true,
+        "sourceDocId": "SMPTE.RP210.2007",
+        "firstConfirmedSourceAt": "2025-10-12T20:58:11.368Z"
+      },
+      "provenance": {
+        "firstSeen": "2025-10-12T20:58:11.185Z",
         "mapSource": [
           "replay"
         ],
@@ -21083,16 +21101,16 @@
         }
       ]
     },
-    "SMPTE.RP224v12.2012": {
-      "refId": "SMPTE.RP224v12.2012",
+    "SMPTE.RP224.2012": {
+      "refId": "SMPTE.RP224.2012",
       "normalized": null,
       "resolution": {
         "sourcePresent": true,
-        "sourceDocId": "SMPTE.RP224v12.2012",
-        "firstConfirmedSourceAt": "2025-10-07T22:56:58.830Z"
+        "sourceDocId": "SMPTE.RP224.2012",
+        "firstConfirmedSourceAt": "2025-10-12T20:58:11.368Z"
       },
       "provenance": {
-        "firstSeen": "2025-10-07T22:56:58.710Z",
+        "firstSeen": "2025-10-12T20:58:11.186Z",
         "mapSource": [
           "replay"
         ],
@@ -21238,6 +21256,24 @@
           "title": null
         }
       ]
+    },
+    "SMPTE.RP224v12.2012": {
+      "refId": "SMPTE.RP224v12.2012",
+      "normalized": null,
+      "resolution": {
+        "sourcePresent": false,
+        "sourceDocId": null,
+        "firstConfirmedSourceAt": "2025-10-07T22:56:58.830Z"
+      },
+      "provenance": {
+        "firstSeen": "2025-10-07T22:56:58.710Z",
+        "mapSource": [
+          "replay"
+        ],
+        "mapDetails": [
+          "from-documents.json"
+        ]
+      }
     },
     "SMPTE.RP25.1995": {
       "refId": "SMPTE.RP25.1995",
