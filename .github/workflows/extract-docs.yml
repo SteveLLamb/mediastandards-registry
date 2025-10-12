@@ -102,19 +102,20 @@ jobs:
         id: prlog
         run: |
           LOG="${{ runner.temp }}/pr-log.log"
+          DELIM="PR_BODY_$(date +%s%N)"
           if [ -f "$LOG" ]; then
             {
-              echo 'body<<__PR_BODY__'
+              printf 'body<<%s\n' "$DELIM"
               cat "$LOG"
-              echo '__PR_BODY__'
-            } >> $GITHUB_OUTPUT
+              printf '\n%s\n' "$DELIM"
+            } >> "$GITHUB_OUTPUT"
           else
             echo "PR log not found at $LOG; using fallback body."
             {
-              echo 'body<<__PR_BODY__'
+              printf 'body<<%s\n' "$DELIM"
               echo 'Automated extract: changes detected (details log not available).'
-              echo '__PR_BODY__'
-            } >> $GITHUB_OUTPUT
+              printf '%s\n' "$DELIM"
+            } >> "$GITHUB_OUTPUT"
           fi
 
       - name: Set timestamp env var
