@@ -31,17 +31,51 @@ jobs:
         with:
           script: |
             const run = context.payload.workflow_run;
-            if (!run) { core.setOutput('skip', 'false'); return; }
             const { owner, repo } = context.repo;
-            const artifacts = await github.paginate(github.rest.actions.listWorkflowRunArtifacts, {
-              owner, repo, run_id: run.id, per_page: 100
-            });
+
+            // Helper to set outputs and log
+            function set(skip, prNum, reason) {
+              core.info(`skip-site-build artifact present: ${skip && prNum ? `true (PR #${prNum})` : 'false'}`);
+              if (reason) core.info(`Skip reason: ${reason}${prNum ? ` (PR #${prNum})` : ''}`);
+              core.setOutput('skip', skip ? 'true' : 'false');
+              core.setOutput('pr', prNum || '');
+            }
+
+            // 1) If not a workflow_run, never skip here
+            if (!run) { set(false, '', 'not a workflow_run'); return; }
+
+            // 2) First try: upstream run artifact marker from MRI
+            const artifacts = await github.paginate(
+              github.rest.actions.listWorkflowRunArtifacts,
+              { owner, repo, run_id: run.id, per_page: 100 }
+            );
             const marker = artifacts.find(a => a.name && a.name.startsWith('skip-site-build-pr-'));
-            const prMatch = marker && /^skip-site-build-pr-(\d+)$/.test(marker.name) ? marker.name.match(/^skip-site-build-pr-(\d+)$/)[1] : '';
-            const prNum = prMatch || '';
-            core.info(`skip-site-build artifact present: ${!!marker}${prNum ? ` (PR #${prNum})` : ''}`);
-            core.setOutput('skip', marker ? 'true' : 'false');
-            core.setOutput('pr', prNum);
+            const prMatch = marker && /^skip-site-build-pr-(\d+)$/.test(marker.name)
+              ? marker.name.match(/^skip-site-build-pr-(\d+)$/)[1]
+              : '';
+
+            if (marker && prMatch) { set(true, prMatch, 'upstream MRI provided skip marker'); return; }
+
+            // 3) Edge case coverage: MSI created a PR but MRI did not.
+            // Look for ANY open PR with label 'msi' or 'mri'. If found, skip.
+            async function findOpenLabeledPR(label) {
+              const q = `repo:${owner}/${repo} is:pr is:open label:${label}`;
+              const res = await github.rest.search.issuesAndPullRequests({ q, per_page: 10, sort: 'updated', order: 'desc' });
+              const item = (res.data.items || [])[0];
+              if (!item) return null;
+              // Ensure it's a PR by fetching it
+              const pr = await github.rest.pulls.get({ owner, repo, pull_number: item.number }).catch(() => null);
+              return pr?.data || null;
+            }
+
+            const msiPR = await findOpenLabeledPR('msi');
+            if (msiPR) { set(true, String(msiPR.number), 'open MSI PR detected'); return; }
+
+            const mriPR = await findOpenLabeledPR('mri');
+            if (mriPR) { set(true, String(mriPR.number), 'open MRI PR detected'); return; }
+
+            // 4) Nothing to skip
+            set(false, '', 'no marker and no open MSI/MRI PRs');
 
       - name: Skipping site build (upstream PR open)
         if: steps.guard.outputs.skip == 'true'
