@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2025-10-12T00:10:48.815Z",
+  "generatedAt": "2025-10-12T18:09:18.061Z",
   "sourcePath": "src/main/data/documents.json",
-  "sourceHash": "sha256:a6bc059b9d71b6b10c775cee3a2d3e0912f1347815f9281ce4f50eb890800ac8",
+  "sourceHash": "sha256:02d4e2efe7e525329350c8dbad143fa64c6b0128d13ad59c04a39e964f28d2ec",
   "publisherCounts": {
-    "total": 1646,
+    "total": 1689,
     "counts": {
-      "SMPTE": 930,
+      "SMPTE": 973,
       "IETF": 109,
       "ISO": 105,
       "ISO/IEC": 87,
@@ -2081,10 +2081,10 @@
     }
   },
   "flagSummary": {
-    "totalFlags": 160,
+    "totalFlags": 158,
     "byType": {
       "DOCID_PUBDATE_MISMATCH": {
-        "count": 52,
+        "count": 50,
         "examples": [
           {
             "lineage": "AES||3|",
@@ -2187,16 +2187,8 @@
             "flag": "DOCID_PUBDATE_MISMATCH:SMPTE.OV379-0.2015:docIdYear=2015,pubYear=2017"
           },
           {
-            "lineage": "SMPTE|RP|106|",
-            "flag": "DOCID_PUBDATE_MISMATCH:SMPTE.RP106.1994:docIdYear=1994,pubYear=1995"
-          },
-          {
             "lineage": "SMPTE|ST|145|",
             "flag": "DOCID_PUBDATE_MISMATCH:SMPTE.ST145.1999:docIdYear=1999,pubYear=2004"
-          },
-          {
-            "lineage": "SMPTE|ST|161|",
-            "flag": "DOCID_PUBDATE_MISMATCH:SMPTE.ST161.1998:docIdYear=1998,pubYear=2002"
           },
           {
             "lineage": "SMPTE|ST|223|",
@@ -26229,6 +26221,76 @@
       }
     },
     {
+      "key": "SMPTE|RP|96|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "96",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP96.1993",
+          "publicationDate": "1993-03-05",
+          "releaseTag": "19930305-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP96.1993",
+      "latestAnyId": "SMPTE.RP96.1993",
+      "latestDateKey": "19930305",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP96.1993",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|RP|97|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "97",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP97.2002",
+          "publicationDate": "2002-07-26",
+          "releaseTag": "20020726-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP97.2002",
+      "latestAnyId": "SMPTE.RP97.2002",
+      "latestDateKey": "20020726",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP97.2002",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
       "key": "SMPTE|RP|98|",
       "publisher": "SMPTE",
       "suite": "RP",
@@ -26237,23 +26299,58 @@
       "docs": [
         {
           "docId": "SMPTE.RP98.1995",
-          "publicationDate": "1995-01-01",
-          "releaseTag": null,
+          "publicationDate": "1995-06-01",
+          "releaseTag": "19950601-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
-          "statusStabilized": false,
+          "statusStabilized": true,
           "statusAmended": false,
           "statusVersionless": false
         }
       ],
       "latestBaseId": "SMPTE.RP98.1995",
       "latestAnyId": "SMPTE.RP98.1995",
-      "latestDateKey": "19950101",
+      "latestDateKey": "19950601",
       "hasActiveBase": true,
       "hasWithdrawn": false,
-      "hasStabilized": false,
+      "hasStabilized": true,
       "latestActiveBaseId": "SMPTE.RP98.1995",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|RP|103|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "103",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP103.1994",
+          "publicationDate": "1994-12-07",
+          "releaseTag": "19941207-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP103.1994",
+      "latestAnyId": "SMPTE.RP103.1994",
+      "latestDateKey": "19941207",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP103.1994",
       "latestSupersededBaseId": null,
       "prevBaseId": null,
       "flagInconsistencies": [],
@@ -26273,7 +26370,7 @@
         {
           "docId": "SMPTE.RP104.2005",
           "publicationDate": "2005-12-16",
-          "releaseTag": null,
+          "releaseTag": "20051216-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -26329,8 +26426,8 @@
         },
         {
           "docId": "SMPTE.RP105.2003",
-          "publicationDate": "2003-01-01",
-          "releaseTag": null,
+          "publicationDate": "2003-10-20",
+          "releaseTag": "20031020-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -26341,7 +26438,7 @@
       ],
       "latestBaseId": "SMPTE.RP105.2003",
       "latestAnyId": "SMPTE.RP105.2003",
-      "latestDateKey": "20030101",
+      "latestDateKey": "20031020",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": true,
@@ -26364,8 +26461,8 @@
       "docs": [
         {
           "docId": "SMPTE.RP106.1994",
-          "publicationDate": "1995-01-01",
-          "releaseTag": null,
+          "publicationDate": "1994-02-08",
+          "releaseTag": "19940208-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -26376,16 +26473,49 @@
       ],
       "latestBaseId": "SMPTE.RP106.1994",
       "latestAnyId": "SMPTE.RP106.1994",
-      "latestDateKey": "19950101",
+      "latestDateKey": "19940208",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": true,
       "latestActiveBaseId": "SMPTE.RP106.1994",
       "latestSupersededBaseId": null,
       "prevBaseId": null,
-      "flagInconsistencies": [
-        "DOCID_PUBDATE_MISMATCH:SMPTE.RP106.1994:docIdYear=1994,pubYear=1995"
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|RP|107|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "107",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP107.1993",
+          "publicationDate": "1993-03-05",
+          "releaseTag": "19930305-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
       ],
+      "latestBaseId": "SMPTE.RP107.1993",
+      "latestAnyId": "SMPTE.RP107.1993",
+      "latestDateKey": "19930305",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP107.1993",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
       "counts": {
         "bases": 1,
         "amendments": 0,
@@ -26402,7 +26532,7 @@
         {
           "docId": "SMPTE.RP109.1994",
           "publicationDate": "1994-02-08",
-          "releaseTag": null,
+          "releaseTag": "19940208-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -26437,7 +26567,7 @@
         {
           "docId": "SMPTE.RP110.1992",
           "publicationDate": "1992-11-06",
-          "releaseTag": null,
+          "releaseTag": "19921106-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -26472,7 +26602,7 @@
         {
           "docId": "SMPTE.RP111.1999",
           "publicationDate": "1999-04-22",
-          "releaseTag": null,
+          "releaseTag": "19990422-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -26498,6 +26628,41 @@
       }
     },
     {
+      "key": "SMPTE|RP|113|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "113",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP113.1996",
+          "publicationDate": "1996-12-10",
+          "releaseTag": "19961210-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP113.1996",
+      "latestAnyId": "SMPTE.RP113.1996",
+      "latestDateKey": "19961210",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP113.1996",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
       "key": "SMPTE|RP|114|",
       "publisher": "SMPTE",
       "suite": "RP",
@@ -26507,7 +26672,7 @@
         {
           "docId": "SMPTE.RP114.1994",
           "publicationDate": "1994-02-08",
-          "releaseTag": null,
+          "releaseTag": "19940208-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -26542,7 +26707,7 @@
         {
           "docId": "SMPTE.RP115.1997",
           "publicationDate": "1997-01-22",
-          "releaseTag": null,
+          "releaseTag": "19970122-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -26577,7 +26742,7 @@
         {
           "docId": "SMPTE.RP116.2000",
           "publicationDate": "2000-05-30",
-          "releaseTag": null,
+          "releaseTag": "20000530-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -26612,7 +26777,7 @@
         {
           "docId": "SMPTE.RP120.2005",
           "publicationDate": "2005-04-06",
-          "releaseTag": null,
+          "releaseTag": "20050406-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -26638,6 +26803,41 @@
       }
     },
     {
+      "key": "SMPTE|RP|121|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "121",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP121.1997",
+          "publicationDate": "1997-12-07",
+          "releaseTag": "19971207-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP121.1997",
+      "latestAnyId": "SMPTE.RP121.1997",
+      "latestDateKey": "19971207",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP121.1997",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
       "key": "SMPTE|RP|122|",
       "publisher": "SMPTE",
       "suite": "RP",
@@ -26647,7 +26847,7 @@
         {
           "docId": "SMPTE.RP122.1993",
           "publicationDate": "1993-03-05",
-          "releaseTag": null,
+          "releaseTag": "19930305-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -26682,7 +26882,7 @@
         {
           "docId": "SMPTE.RP123.2004",
           "publicationDate": "2004-02-27",
-          "releaseTag": null,
+          "releaseTag": "20040227-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -26716,8 +26916,8 @@
       "docs": [
         {
           "docId": "SMPTE.RP124.1998",
-          "publicationDate": "1998-01-01",
-          "releaseTag": null,
+          "publicationDate": "1998-06-01",
+          "releaseTag": "19980601-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -26728,7 +26928,7 @@
       ],
       "latestBaseId": "SMPTE.RP124.1998",
       "latestAnyId": "SMPTE.RP124.1998",
-      "latestDateKey": "19980101",
+      "latestDateKey": "19980601",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": true,
@@ -26751,8 +26951,8 @@
       "docs": [
         {
           "docId": "SMPTE.RP127.2004",
-          "publicationDate": "2004-01-01",
-          "releaseTag": null,
+          "publicationDate": "2004-11-08",
+          "releaseTag": "20041108-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -26763,7 +26963,7 @@
       ],
       "latestBaseId": "SMPTE.RP127.2004",
       "latestAnyId": "SMPTE.RP127.2004",
-      "latestDateKey": "20040101",
+      "latestDateKey": "20041108",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": true,
@@ -26787,7 +26987,7 @@
         {
           "docId": "SMPTE.RP128.2002",
           "publicationDate": "2002-07-26",
-          "releaseTag": null,
+          "releaseTag": "20020726-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -26822,7 +27022,7 @@
         {
           "docId": "SMPTE.RP129.1995",
           "publicationDate": "1995-08-01",
-          "releaseTag": null,
+          "releaseTag": "19950801-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -26857,7 +27057,7 @@
         {
           "docId": "SMPTE.RP130.2004",
           "publicationDate": "2004-11-08",
-          "releaseTag": null,
+          "releaseTag": "20041108-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -26891,8 +27091,8 @@
       "docs": [
         {
           "docId": "SMPTE.RP131.2002",
-          "publicationDate": "2002-07-05",
-          "releaseTag": null,
+          "publicationDate": "2002-07-15",
+          "releaseTag": "20020715-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -26903,11 +27103,81 @@
       ],
       "latestBaseId": "SMPTE.RP131.2002",
       "latestAnyId": "SMPTE.RP131.2002",
-      "latestDateKey": "20020705",
+      "latestDateKey": "20020715",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": true,
       "latestActiveBaseId": "SMPTE.RP131.2002",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|RP|132|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "132",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP132.1994",
+          "publicationDate": "1994-02-28",
+          "releaseTag": "19940228-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP132.1994",
+      "latestAnyId": "SMPTE.RP132.1994",
+      "latestDateKey": "19940228",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP132.1994",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|RP|133|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "133",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP133.1991",
+          "publicationDate": "1991-03-01",
+          "releaseTag": "19910301-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP133.1991",
+      "latestAnyId": "SMPTE.RP133.1991",
+      "latestDateKey": "19910301",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP133.1991",
       "latestSupersededBaseId": null,
       "prevBaseId": null,
       "flagInconsistencies": [],
@@ -26927,7 +27197,7 @@
         {
           "docId": "SMPTE.RP134.1994",
           "publicationDate": "1994-01-12",
-          "releaseTag": null,
+          "releaseTag": "19940112-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -26962,7 +27232,7 @@
         {
           "docId": "SMPTE.RP135.2004",
           "publicationDate": "2004-11-08",
-          "releaseTag": null,
+          "releaseTag": "20041108-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -26997,7 +27267,7 @@
         {
           "docId": "SMPTE.RP136.2004",
           "publicationDate": "2004-11-08",
-          "releaseTag": null,
+          "releaseTag": "20041108-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -27023,6 +27293,76 @@
       }
     },
     {
+      "key": "SMPTE|RP|138|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "138",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP138.1996",
+          "publicationDate": "1996-12-10",
+          "releaseTag": "19961210-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP138.1996",
+      "latestAnyId": "SMPTE.RP138.1996",
+      "latestDateKey": "19961210",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP138.1996",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|RP|139|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "139",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP139.1997",
+          "publicationDate": "1997-08-12",
+          "releaseTag": "19970812-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP139.1997",
+      "latestAnyId": "SMPTE.RP139.1997",
+      "latestDateKey": "19970812",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP139.1997",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
       "key": "SMPTE|RP|140|",
       "publisher": "SMPTE",
       "suite": "RP",
@@ -27031,8 +27371,8 @@
       "docs": [
         {
           "docId": "SMPTE.RP140.2005",
-          "publicationDate": "2005-01-01",
-          "releaseTag": null,
+          "publicationDate": "2005-12-16",
+          "releaseTag": "20051216-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -27043,7 +27383,7 @@
       ],
       "latestBaseId": "SMPTE.RP140.2005",
       "latestAnyId": "SMPTE.RP140.2005",
-      "latestDateKey": "20050101",
+      "latestDateKey": "20051216",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": true,
@@ -27088,8 +27428,8 @@
         },
         {
           "docId": "SMPTE.RP141.2005",
-          "publicationDate": "2005-01-01",
-          "releaseTag": null,
+          "publicationDate": "2005-12-16",
+          "releaseTag": "20051216-pub",
           "statusActive": false,
           "statusSuperseded": true,
           "statusWithdrawn": false,
@@ -27099,8 +27439,8 @@
         },
         {
           "docId": "SMPTE.RP141.2020",
-          "publicationDate": "2020-10-02",
-          "releaseTag": null,
+          "publicationDate": "2020-05-28",
+          "releaseTag": "20200528-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -27111,7 +27451,7 @@
       ],
       "latestBaseId": "SMPTE.RP141.2020",
       "latestAnyId": "SMPTE.RP141.2020",
-      "latestDateKey": "20201002",
+      "latestDateKey": "20200528",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": false,
@@ -27126,6 +27466,41 @@
       }
     },
     {
+      "key": "SMPTE|RP|142|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "142",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP142.2004",
+          "publicationDate": "2004-11-30",
+          "releaseTag": "20041130-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP142.2004",
+      "latestAnyId": "SMPTE.RP142.2004",
+      "latestDateKey": "20041130",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP142.2004",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
       "key": "SMPTE|RP|143|",
       "publisher": "SMPTE",
       "suite": "RP",
@@ -27135,7 +27510,7 @@
         {
           "docId": "SMPTE.RP143.2004",
           "publicationDate": "2004-11-08",
-          "releaseTag": null,
+          "releaseTag": "20041108-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -27161,6 +27536,111 @@
       }
     },
     {
+      "key": "SMPTE|RP|144|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "144",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP144.1999",
+          "publicationDate": "1999-11-05",
+          "releaseTag": "19991105-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP144.1999",
+      "latestAnyId": "SMPTE.RP144.1999",
+      "latestDateKey": "19991105",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP144.1999",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|RP|145|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "145",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP145.2004",
+          "publicationDate": "2004-11-08",
+          "releaseTag": "20041108-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP145.2004",
+      "latestAnyId": "SMPTE.RP145.2004",
+      "latestDateKey": "20041108",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP145.2004",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|RP|148|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "148",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP148.1987",
+          "publicationDate": "1987-07-27",
+          "releaseTag": "19870727-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP148.1987",
+      "latestAnyId": "SMPTE.RP148.1987",
+      "latestDateKey": "19870727",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP148.1987",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
       "key": "SMPTE|RP|149|",
       "publisher": "SMPTE",
       "suite": "RP",
@@ -27170,7 +27650,7 @@
         {
           "docId": "SMPTE.RP149.1992",
           "publicationDate": "1992-09-18",
-          "releaseTag": null,
+          "releaseTag": "19920918-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -27205,7 +27685,7 @@
         {
           "docId": "SMPTE.RP150.2000",
           "publicationDate": "2000-03-30",
-          "releaseTag": null,
+          "releaseTag": "20000330-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -27240,7 +27720,7 @@
         {
           "docId": "SMPTE.RP151.1999",
           "publicationDate": "1999-04-23",
-          "releaseTag": null,
+          "releaseTag": "19990423-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -27275,7 +27755,7 @@
         {
           "docId": "SMPTE.RP152.1994",
           "publicationDate": "1994-02-28",
-          "releaseTag": null,
+          "releaseTag": "19940228-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -27309,8 +27789,8 @@
       "docs": [
         {
           "docId": "SMPTE.RP153.1999",
-          "publicationDate": "1999-01-01",
-          "releaseTag": null,
+          "publicationDate": "1999-11-05",
+          "releaseTag": "19991105-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -27321,7 +27801,7 @@
       ],
       "latestBaseId": "SMPTE.RP153.1999",
       "latestAnyId": "SMPTE.RP153.1999",
-      "latestDateKey": "19990101",
+      "latestDateKey": "19991105",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": true,
@@ -27344,19 +27824,170 @@
       "docs": [
         {
           "docId": "SMPTE.RP155.2004",
-          "publicationDate": "2004-01-01",
-          "releaseTag": null,
+          "publicationDate": "2004-08-10",
+          "releaseTag": "20040810-pub",
           "statusActive": false,
           "statusSuperseded": true,
           "statusWithdrawn": false,
-          "statusStabilized": false,
+          "statusStabilized": true,
           "statusAmended": false,
           "statusVersionless": false
         },
         {
           "docId": "SMPTE.RP155.2014",
-          "publicationDate": "2014-12-29",
-          "releaseTag": null,
+          "publicationDate": "2014-11-13",
+          "releaseTag": "20141113-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP155.2014",
+      "latestAnyId": "SMPTE.RP155.2014",
+      "latestDateKey": "20141113",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP155.2014",
+      "latestSupersededBaseId": "SMPTE.RP155.2004",
+      "prevBaseId": "SMPTE.RP155.2004",
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 2,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|RP|156|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "156",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP156.1999",
+          "publicationDate": "1999-11-05",
+          "releaseTag": "19991105-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP156.1999",
+      "latestAnyId": "SMPTE.RP156.1999",
+      "latestDateKey": "19991105",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP156.1999",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|RP|157|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "157",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP157.1995",
+          "publicationDate": "1995-01-01",
+          "releaseTag": "19950101-pub",
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        },
+        {
+          "docId": "SMPTE.RP157.2012",
+          "publicationDate": "2012-11-01",
+          "releaseTag": "20121101-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP157.2012",
+      "latestAnyId": "SMPTE.RP157.2012",
+      "latestDateKey": "20121101",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP157.2012",
+      "latestSupersededBaseId": "SMPTE.RP157.1995",
+      "prevBaseId": "SMPTE.RP157.1995",
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 2,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|RP|158|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "158",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP158.1999",
+          "publicationDate": "1999-11-05",
+          "releaseTag": "19991105-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP158.1999",
+      "latestAnyId": "SMPTE.RP158.1999",
+      "latestDateKey": "19991105",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP158.1999",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|RP|160|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "160",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP160.1997",
+          "publicationDate": "1997-06-01",
+          "releaseTag": "19970601-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -27365,18 +27996,53 @@
           "statusVersionless": false
         }
       ],
-      "latestBaseId": "SMPTE.RP155.2014",
-      "latestAnyId": "SMPTE.RP155.2014",
-      "latestDateKey": "20141229",
+      "latestBaseId": "SMPTE.RP160.1997",
+      "latestAnyId": "SMPTE.RP160.1997",
+      "latestDateKey": "19970601",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": false,
-      "latestActiveBaseId": "SMPTE.RP155.2014",
-      "latestSupersededBaseId": "SMPTE.RP155.2004",
-      "prevBaseId": "SMPTE.RP155.2004",
+      "latestActiveBaseId": "SMPTE.RP160.1997",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
       "flagInconsistencies": [],
       "counts": {
-        "bases": 2,
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|RP|161|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "161",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP161.1999",
+          "publicationDate": "1999-11-05",
+          "releaseTag": "19991105-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP161.1999",
+      "latestAnyId": "SMPTE.RP161.1999",
+      "latestDateKey": "19991105",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP161.1999",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
         "amendments": 0,
         "supplements": 0
       }
@@ -27391,7 +28057,7 @@
         {
           "docId": "SMPTE.RP162.1993",
           "publicationDate": "1993-07-01",
-          "releaseTag": null,
+          "releaseTag": "19930701-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -27407,6 +28073,146 @@
       "hasWithdrawn": false,
       "hasStabilized": true,
       "latestActiveBaseId": "SMPTE.RP162.1993",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|RP|163|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "163",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP163.1992",
+          "publicationDate": "1992-09-01",
+          "releaseTag": "19920901-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP163.1992",
+      "latestAnyId": "SMPTE.RP163.1992",
+      "latestDateKey": "19920901",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP163.1992",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|RP|165|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "165",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP165.1994",
+          "publicationDate": "1994-09-01",
+          "releaseTag": "19940901-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP165.1994",
+      "latestAnyId": "SMPTE.RP165.1994",
+      "latestDateKey": "19940901",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP165.1994",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|RP|166|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "166",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP166.1995",
+          "publicationDate": "1995-05-11",
+          "releaseTag": "19950511-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP166.1995",
+      "latestAnyId": "SMPTE.RP166.1995",
+      "latestDateKey": "19950511",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP166.1995",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|RP|167|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "167",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP167.1995",
+          "publicationDate": "1995-02-11",
+          "releaseTag": "19950211-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP167.1995",
+      "latestAnyId": "SMPTE.RP167.1995",
+      "latestDateKey": "19950211",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP167.1995",
       "latestSupersededBaseId": null,
       "prevBaseId": null,
       "flagInconsistencies": [],
@@ -27452,6 +28258,146 @@
       }
     },
     {
+      "key": "SMPTE|RP|169|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "169",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP169.1995",
+          "publicationDate": "1995-06-01",
+          "releaseTag": "19950601-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP169.1995",
+      "latestAnyId": "SMPTE.RP169.1995",
+      "latestDateKey": "19950601",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP169.1995",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|RP|170|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "170",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP170.1993",
+          "publicationDate": "1993-07-01",
+          "releaseTag": "19930701-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP170.1993",
+      "latestAnyId": "SMPTE.RP170.1993",
+      "latestDateKey": "19930701",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP170.1993",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|RP|171|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "171",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP171.1993",
+          "publicationDate": "1993-07-01",
+          "releaseTag": "19930701-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP171.1993",
+      "latestAnyId": "SMPTE.RP171.1993",
+      "latestDateKey": "19930701",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP171.1993",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|RP|172|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "172",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP172.1993",
+          "publicationDate": "1993-07-01",
+          "releaseTag": "19930701-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP172.1993",
+      "latestAnyId": "SMPTE.RP172.1993",
+      "latestDateKey": "19930701",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.RP172.1993",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
       "key": "SMPTE|RP|173|",
       "publisher": "SMPTE",
       "suite": "RP",
@@ -27460,8 +28406,8 @@
       "docs": [
         {
           "docId": "SMPTE.RP173.2002",
-          "publicationDate": "2002-01-01",
-          "releaseTag": null,
+          "publicationDate": "2002-03-12",
+          "releaseTag": "20020312-pub",
           "statusActive": false,
           "statusSuperseded": false,
           "statusWithdrawn": true,
@@ -27472,11 +28418,46 @@
       ],
       "latestBaseId": "SMPTE.RP173.2002",
       "latestAnyId": "SMPTE.RP173.2002",
-      "latestDateKey": "20020101",
+      "latestDateKey": "20020312",
       "hasActiveBase": false,
       "hasWithdrawn": true,
       "hasStabilized": false,
       "latestActiveBaseId": null,
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|RP|174|",
+      "publisher": "SMPTE",
+      "suite": "RP",
+      "number": "174",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.RP174.1993",
+          "publicationDate": "1993-09-01",
+          "releaseTag": "19930901-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.RP174.1993",
+      "latestAnyId": "SMPTE.RP174.1993",
+      "latestDateKey": "19930901",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": false,
+      "latestActiveBaseId": "SMPTE.RP174.1993",
       "latestSupersededBaseId": null,
       "prevBaseId": null,
       "flagInconsistencies": [],
@@ -30365,7 +31346,7 @@
         {
           "docId": "SMPTE.ST96.2004",
           "publicationDate": "2004-11-30",
-          "releaseTag": null,
+          "releaseTag": "20041130-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -30391,6 +31372,76 @@
       }
     },
     {
+      "key": "SMPTE|ST|97|",
+      "publisher": "SMPTE",
+      "suite": "ST",
+      "number": "97",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.ST97.2004",
+          "publicationDate": "2004-11-08",
+          "releaseTag": "20041108-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.ST97.2004",
+      "latestAnyId": "SMPTE.ST97.2004",
+      "latestDateKey": "20041108",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.ST97.2004",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|ST|101|",
+      "publisher": "SMPTE",
+      "suite": "ST",
+      "number": "101",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.ST101.2003",
+          "publicationDate": "2003-12-14",
+          "releaseTag": "20031214-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.ST101.2003",
+      "latestAnyId": "SMPTE.ST101.2003",
+      "latestDateKey": "20031214",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.ST101.2003",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
       "key": "SMPTE|ST|102|",
       "publisher": "SMPTE",
       "suite": "ST",
@@ -30411,7 +31462,7 @@
         {
           "docId": "SMPTE.ST102.2002",
           "publicationDate": "2002-07-26",
-          "releaseTag": null,
+          "releaseTag": "20020726-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -30468,11 +31519,11 @@
         {
           "docId": "SMPTE.ST109.2003",
           "publicationDate": "2003-11-12",
-          "releaseTag": null,
+          "releaseTag": "20031112-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
-          "statusStabilized": false,
+          "statusStabilized": true,
           "statusAmended": false,
           "statusVersionless": false
         }
@@ -30482,7 +31533,7 @@
       "latestDateKey": "20031112",
       "hasActiveBase": true,
       "hasWithdrawn": false,
-      "hasStabilized": false,
+      "hasStabilized": true,
       "latestActiveBaseId": "SMPTE.ST109.2003",
       "latestSupersededBaseId": "SMPTE.ST109.1998",
       "prevBaseId": "SMPTE.ST109.1998",
@@ -30514,7 +31565,7 @@
         {
           "docId": "SMPTE.ST111.2001",
           "publicationDate": "2001-06-06",
-          "releaseTag": null,
+          "releaseTag": "20010606-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -30571,7 +31622,7 @@
         {
           "docId": "SMPTE.ST112.2004",
           "publicationDate": "2004-11-08",
-          "releaseTag": null,
+          "releaseTag": "20041108-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -30597,6 +31648,41 @@
       }
     },
     {
+      "key": "SMPTE|ST|117|",
+      "publisher": "SMPTE",
+      "suite": "ST",
+      "number": "117",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.ST117.2001",
+          "publicationDate": "2001-06-06",
+          "releaseTag": "20010606-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.ST117.2001",
+      "latestAnyId": "SMPTE.ST117.2001",
+      "latestDateKey": "20010606",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.ST117.2001",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
       "key": "SMPTE|ST|119|",
       "publisher": "SMPTE",
       "suite": "ST",
@@ -30617,18 +31703,18 @@
         {
           "docId": "SMPTE.ST119.2004",
           "publicationDate": "2004-11-08",
-          "releaseTag": null,
+          "releaseTag": "20041108-pub",
           "statusActive": false,
           "statusSuperseded": true,
           "statusWithdrawn": false,
-          "statusStabilized": false,
+          "statusStabilized": true,
           "statusAmended": false,
           "statusVersionless": false
         },
         {
           "docId": "SMPTE.ST119.2011",
           "publicationDate": "2011-10-03",
-          "releaseTag": null,
+          "releaseTag": "20111003-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -30698,38 +31784,73 @@
         {
           "docId": "SMPTE.ST125.1995",
           "publicationDate": "1995-09-12",
-          "releaseTag": null,
+          "releaseTag": "19950912-pub",
           "statusActive": false,
           "statusSuperseded": true,
           "statusWithdrawn": false,
-          "statusStabilized": false,
+          "statusStabilized": true,
           "statusAmended": false,
           "statusVersionless": false
         },
         {
           "docId": "SMPTE.ST125.2013",
-          "publicationDate": "2013-12-30",
-          "releaseTag": null,
+          "publicationDate": "2013-09-25",
+          "releaseTag": "20130925-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
-          "statusStabilized": false,
+          "statusStabilized": true,
           "statusAmended": false,
           "statusVersionless": false
         }
       ],
       "latestBaseId": "SMPTE.ST125.2013",
       "latestAnyId": "SMPTE.ST125.2013",
-      "latestDateKey": "20131230",
+      "latestDateKey": "20130925",
       "hasActiveBase": true,
       "hasWithdrawn": false,
-      "hasStabilized": false,
+      "hasStabilized": true,
       "latestActiveBaseId": "SMPTE.ST125.2013",
       "latestSupersededBaseId": "SMPTE.ST125.1995",
       "prevBaseId": "SMPTE.ST125.1995",
       "flagInconsistencies": [],
       "counts": {
         "bases": 2,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|ST|127|",
+      "publisher": "SMPTE",
+      "suite": "ST",
+      "number": "127",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.ST127.2003",
+          "publicationDate": "2003-12-14",
+          "releaseTag": "20031214-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.ST127.2003",
+      "latestAnyId": "SMPTE.ST127.2003",
+      "latestDateKey": "20031214",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.ST127.2003",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
         "amendments": 0,
         "supplements": 0
       }
@@ -30755,7 +31876,7 @@
         {
           "docId": "SMPTE.ST137.2000",
           "publicationDate": "2000-05-30",
-          "releaseTag": null,
+          "releaseTag": "20000530-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -30812,11 +31933,11 @@
         {
           "docId": "SMPTE.ST139.2003",
           "publicationDate": "2003-11-12",
-          "releaseTag": null,
+          "releaseTag": "20031112-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
-          "statusStabilized": false,
+          "statusStabilized": true,
           "statusAmended": false,
           "statusVersionless": false
         }
@@ -30826,13 +31947,48 @@
       "latestDateKey": "20031112",
       "hasActiveBase": true,
       "hasWithdrawn": false,
-      "hasStabilized": false,
+      "hasStabilized": true,
       "latestActiveBaseId": "SMPTE.ST139.2003",
       "latestSupersededBaseId": "SMPTE.ST139.1996",
       "prevBaseId": "SMPTE.ST139.1996",
       "flagInconsistencies": [],
       "counts": {
         "bases": 3,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|ST|143|",
+      "publisher": "SMPTE",
+      "suite": "ST",
+      "number": "143",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.ST143.1994",
+          "publicationDate": "1994-10-06",
+          "releaseTag": "19941006-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.ST143.1994",
+      "latestAnyId": "SMPTE.ST143.1994",
+      "latestDateKey": "19941006",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.ST143.1994",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
         "amendments": 0,
         "supplements": 0
       }
@@ -30858,7 +32014,7 @@
         {
           "docId": "SMPTE.ST145.2004",
           "publicationDate": "2004-11-08",
-          "releaseTag": null,
+          "releaseTag": "20041108-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -30895,7 +32051,7 @@
         {
           "docId": "SMPTE.ST146.2001",
           "publicationDate": "2001-06-06",
-          "releaseTag": null,
+          "releaseTag": "20010606-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -30911,6 +32067,41 @@
       "hasWithdrawn": false,
       "hasStabilized": true,
       "latestActiveBaseId": "SMPTE.ST146.2001",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|ST|148|",
+      "publisher": "SMPTE",
+      "suite": "ST",
+      "number": "148",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.ST148.2002",
+          "publicationDate": "2002-07-26",
+          "releaseTag": "20020726-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.ST148.2002",
+      "latestAnyId": "SMPTE.ST148.2002",
+      "latestDateKey": "20020726",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.ST148.2002",
       "latestSupersededBaseId": null,
       "prevBaseId": null,
       "flagInconsistencies": [],
@@ -30952,7 +32143,7 @@
         {
           "docId": "SMPTE.ST149.2004",
           "publicationDate": "2004-11-08",
-          "releaseTag": null,
+          "releaseTag": "20041108-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -30978,6 +32169,41 @@
       }
     },
     {
+      "key": "SMPTE|ST|151|",
+      "publisher": "SMPTE",
+      "suite": "ST",
+      "number": "151",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.ST151.2004",
+          "publicationDate": "2004-11-08",
+          "releaseTag": "20041108-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.ST151.2004",
+      "latestAnyId": "SMPTE.ST151.2004",
+      "latestDateKey": "20041108",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.ST151.2004",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
       "key": "SMPTE|ST|152|",
       "publisher": "SMPTE",
       "suite": "ST",
@@ -30998,7 +32224,7 @@
         {
           "docId": "SMPTE.ST152.2003",
           "publicationDate": "2003-10-20",
-          "releaseTag": null,
+          "releaseTag": "20031020-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -31033,7 +32259,7 @@
         {
           "docId": "SMPTE.ST153.2001",
           "publicationDate": "2001-06-06",
-          "releaseTag": null,
+          "releaseTag": "20010606-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -31090,7 +32316,7 @@
         {
           "docId": "SMPTE.ST154.2003",
           "publicationDate": "2003-10-20",
-          "releaseTag": null,
+          "releaseTag": "20031020-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -31136,7 +32362,7 @@
         {
           "docId": "SMPTE.ST157.1999",
           "publicationDate": "1999-04-20",
-          "releaseTag": null,
+          "releaseTag": "19990420-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -31171,7 +32397,7 @@
         {
           "docId": "SMPTE.ST159-1.2001",
           "publicationDate": "2001-06-06",
-          "releaseTag": null,
+          "releaseTag": "20010606-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -31206,7 +32432,7 @@
         {
           "docId": "SMPTE.ST159-2.2001",
           "publicationDate": "2001-06-06",
-          "releaseTag": null,
+          "releaseTag": "20010606-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -31252,7 +32478,7 @@
         {
           "docId": "SMPTE.ST160.1995",
           "publicationDate": "1995-09-12",
-          "releaseTag": null,
+          "releaseTag": "19950912-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -31286,8 +32512,8 @@
       "docs": [
         {
           "docId": "SMPTE.ST161.1998",
-          "publicationDate": "2002-07-06",
-          "releaseTag": null,
+          "publicationDate": "1998-09-01",
+          "releaseTag": "19980901-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -31298,16 +32524,84 @@
       ],
       "latestBaseId": "SMPTE.ST161.1998",
       "latestAnyId": "SMPTE.ST161.1998",
-      "latestDateKey": "20020706",
+      "latestDateKey": "19980901",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": true,
       "latestActiveBaseId": "SMPTE.ST161.1998",
       "latestSupersededBaseId": null,
       "prevBaseId": null,
-      "flagInconsistencies": [
-        "DOCID_PUBDATE_MISMATCH:SMPTE.ST161.1998:docIdYear=1998,pubYear=2002"
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|ST|162|",
+      "publisher": "SMPTE",
+      "suite": "ST",
+      "number": "162",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.ST162.1998",
+          "publicationDate": "1998-09-01",
+          "releaseTag": "19980901-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
       ],
+      "latestBaseId": "SMPTE.ST162.1998",
+      "latestAnyId": "SMPTE.ST162.1998",
+      "latestDateKey": "19980901",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.ST162.1998",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|ST|163|",
+      "publisher": "SMPTE",
+      "suite": "ST",
+      "number": "163",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.ST163.1998",
+          "publicationDate": "1998-09-01",
+          "releaseTag": "19980901-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.ST163.1998",
+      "latestAnyId": "SMPTE.ST163.1998",
+      "latestDateKey": "19980901",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.ST163.1998",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
       "counts": {
         "bases": 1,
         "amendments": 0,
@@ -31334,8 +32628,8 @@
         },
         {
           "docId": "SMPTE.ST164.2002",
-          "publicationDate": "2002-07-06",
-          "releaseTag": null,
+          "publicationDate": "2002-07-26",
+          "releaseTag": "20020726-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -31346,7 +32640,7 @@
       ],
       "latestBaseId": "SMPTE.ST164.2002",
       "latestAnyId": "SMPTE.ST164.2002",
-      "latestDateKey": "20020706",
+      "latestDateKey": "20020726",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": true,
@@ -31356,6 +32650,41 @@
       "flagInconsistencies": [],
       "counts": {
         "bases": 2,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|ST|165|",
+      "publisher": "SMPTE",
+      "suite": "ST",
+      "number": "165",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.ST165.1994",
+          "publicationDate": "1994-01-31",
+          "releaseTag": "19940131-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.ST165.1994",
+      "latestAnyId": "SMPTE.ST165.1994",
+      "latestDateKey": "19940131",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.ST165.1994",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
         "amendments": 0,
         "supplements": 0
       }
@@ -31381,7 +32710,7 @@
         {
           "docId": "SMPTE.ST166.2004",
           "publicationDate": "2004-11-08",
-          "releaseTag": null,
+          "releaseTag": "20041108-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -31438,7 +32767,7 @@
         {
           "docId": "SMPTE.ST168.2001",
           "publicationDate": "2001-06-06",
-          "releaseTag": null,
+          "releaseTag": "20010606-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -31464,6 +32793,146 @@
       }
     },
     {
+      "key": "SMPTE|ST|169|",
+      "publisher": "SMPTE",
+      "suite": "ST",
+      "number": "169",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.ST169.2002",
+          "publicationDate": "2002-07-26",
+          "releaseTag": "20020726-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.ST169.2002",
+      "latestAnyId": "SMPTE.ST169.2002",
+      "latestDateKey": "20020726",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.ST169.2002",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|ST|170|",
+      "publisher": "SMPTE",
+      "suite": "ST",
+      "number": "170",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.ST170.2004",
+          "publicationDate": "2004-11-30",
+          "releaseTag": "20041130-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.ST170.2004",
+      "latestAnyId": "SMPTE.ST170.2004",
+      "latestDateKey": "20041130",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.ST170.2004",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|ST|171|",
+      "publisher": "SMPTE",
+      "suite": "ST",
+      "number": "171",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.ST171.2001",
+          "publicationDate": "2001-06-06",
+          "releaseTag": "20010606-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.ST171.2001",
+      "latestAnyId": "SMPTE.ST171.2001",
+      "latestDateKey": "20010606",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.ST171.2001",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|ST|173|",
+      "publisher": "SMPTE",
+      "suite": "ST",
+      "number": "173",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.ST173.2004",
+          "publicationDate": "2004-11-08",
+          "releaseTag": "20041108-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.ST173.2004",
+      "latestAnyId": "SMPTE.ST173.2004",
+      "latestDateKey": "20041108",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.ST173.2004",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
       "key": "SMPTE|ST|174|",
       "publisher": "SMPTE",
       "suite": "ST",
@@ -31473,7 +32942,7 @@
         {
           "docId": "SMPTE.ST174.1994",
           "publicationDate": "1994-04-13",
-          "releaseTag": null,
+          "releaseTag": "19940413-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
