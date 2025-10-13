@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2025-10-13T05:04:23.241Z",
+  "generatedAt": "2025-10-13T05:20:55.139Z",
   "sourcePath": "src/main/data/documents.json",
-  "sourceHash": "sha256:11ae2242cfec1edbdf5480fd49b185d16a976658b9a1c0816679c28d58421c12",
+  "sourceHash": "sha256:18e07ca2196c2912c51bcaff4403a9027f2f892a9629605e03637f9540d0edbc",
   "publisherCounts": {
-    "total": 1839,
+    "total": 1840,
     "counts": {
-      "SMPTE": 1123,
+      "SMPTE": 1124,
       "IETF": 109,
       "ISO": 105,
       "ISO/IEC": 87,
@@ -41057,6 +41057,41 @@
       "hasWithdrawn": false,
       "hasStabilized": true,
       "latestActiveBaseId": "SMPTE.ST359.2001",
+      "latestSupersededBaseId": null,
+      "prevBaseId": null,
+      "flagInconsistencies": [],
+      "counts": {
+        "bases": 1,
+        "amendments": 0,
+        "supplements": 0
+      }
+    },
+    {
+      "key": "SMPTE|ST|360|",
+      "publisher": "SMPTE",
+      "suite": "ST",
+      "number": "360",
+      "part": null,
+      "docs": [
+        {
+          "docId": "SMPTE.ST360.2009",
+          "publicationDate": "2009-02-11",
+          "releaseTag": "20090211-pub",
+          "statusActive": true,
+          "statusSuperseded": false,
+          "statusWithdrawn": false,
+          "statusStabilized": true,
+          "statusAmended": false,
+          "statusVersionless": false
+        }
+      ],
+      "latestBaseId": "SMPTE.ST360.2009",
+      "latestAnyId": "SMPTE.ST360.2009",
+      "latestDateKey": "20090211",
+      "hasActiveBase": true,
+      "hasWithdrawn": false,
+      "hasStabilized": true,
+      "latestActiveBaseId": "SMPTE.ST360.2009",
       "latestSupersededBaseId": null,
       "prevBaseId": null,
       "flagInconsistencies": [],
