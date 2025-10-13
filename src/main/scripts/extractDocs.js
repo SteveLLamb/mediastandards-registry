@@ -163,8 +163,9 @@ function shouldFilterUrl(url) {
     }
     if (suiteMap.has(fNorm)) {
       const children = suiteMap.get(fNorm) || [];
-      if (children.some(child => normalizeForCompare(child) === uNorm || isSegmentPrefix(child, uNorm))) {
-        console.log(`[filter] Matched by filter suite child: ${f}`);
+      // Only match if the URL is exactly one of the suite’s known children
+      if (children.some(child => normalizeForCompare(child) === uNorm)) {
+        console.log(`[filter] Matched by suite child: ${f}`);
         return true;
       }
     }
