@@ -16,8 +16,8 @@ on:
   workflow_run:
     workflows:
       - "Extract SMPTE Documents"
-      - "Build Master Suite Index"
-      - "Build Master Reference Index"
+      - "Build MasterSuite Index"
+      - "Build MasterReference Index"
     types: [completed]
 
 permissions:
@@ -69,8 +69,8 @@ jobs:
             const runName = wr.name || '';
             const branchMap = {
               'Extract SMPTE Documents': 'chore/extract-docs',
-              'Build Master Suite Index': 'chore/build-mastersuite',           // actual branch used by MSI workflow
-              'Build Master Reference Index': 'chore/build-masterreference'    // actual branch used by MRI workflow
+              'Build MasterSuite Index': 'chore/build-mastersuite',           // actual branch used by MSI workflow
+              'Build MasterReference Index': 'chore/build-masterreference'    // actual branch used by MRI workflow
             };
             const headBranch = branchMap[runName];
             if (headBranch) {
@@ -93,8 +93,8 @@ jobs:
 
             // Fallback 2: search by label (MSI/MRI PRs have stable labels)
             const labelMap = {
-              'Build Master Suite Index': 'msi',
-              'Build Master Reference Index': 'mri',
+              'Build MasterSuite Index': 'msi',
+              'Build MasterReference Index': 'mri',
               'Extract SMPTE Documents': 'extract'
             };
             const label = labelMap[runName];
