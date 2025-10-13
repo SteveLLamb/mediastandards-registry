@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2025-10-13T05:23:58.536Z",
+  "generatedAt": "2025-10-13T18:44:25.760Z",
   "sourcePath": "src/main/data/documents.json",
-  "sourceHash": "sha256:18e07ca2196c2912c51bcaff4403a9027f2f892a9629605e03637f9540d0edbc",
+  "sourceHash": "sha256:0875941ff0f803de7acecaa1b034a2db77aa904b35c6cdffa81fff86b5a846c1",
   "publisherCounts": {
-    "total": 1840,
+    "total": 1841,
     "counts": {
-      "SMPTE": 1124,
+      "SMPTE": 1125,
       "IETF": 109,
       "ISO": 105,
       "ISO/IEC": 87,
@@ -42996,7 +42996,7 @@
         {
           "docId": "SMPTE.ST429-5.2009",
           "publicationDate": "2009-03-09",
-          "releaseTag": null,
+          "releaseTag": "20090309-pub",
           "statusActive": false,
           "statusSuperseded": true,
           "statusWithdrawn": false,
@@ -43007,7 +43007,18 @@
         {
           "docId": "SMPTE.ST429-5.2017",
           "publicationDate": "2017-12-27",
-          "releaseTag": null,
+          "releaseTag": "20171227-pub",
+          "statusActive": false,
+          "statusSuperseded": true,
+          "statusWithdrawn": false,
+          "statusStabilized": false,
+          "statusAmended": false,
+          "statusVersionless": false
+        },
+        {
+          "docId": "SMPTE.ST429-5.2023-09",
+          "publicationDate": "2023-09-12",
+          "releaseTag": "20230912-pub",
           "statusActive": true,
           "statusSuperseded": false,
           "statusWithdrawn": false,
@@ -43016,18 +43027,18 @@
           "statusVersionless": false
         }
       ],
-      "latestBaseId": "SMPTE.ST429-5.2017",
-      "latestAnyId": "SMPTE.ST429-5.2017",
-      "latestDateKey": "20171227",
+      "latestBaseId": "SMPTE.ST429-5.2023-09",
+      "latestAnyId": "SMPTE.ST429-5.2023-09",
+      "latestDateKey": "20230912",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": false,
-      "latestActiveBaseId": "SMPTE.ST429-5.2017",
-      "latestSupersededBaseId": "SMPTE.ST429-5.2009",
-      "prevBaseId": "SMPTE.ST429-5.2009",
+      "latestActiveBaseId": "SMPTE.ST429-5.2023-09",
+      "latestSupersededBaseId": "SMPTE.ST429-5.2017",
+      "prevBaseId": "SMPTE.ST429-5.2017",
       "flagInconsistencies": [],
       "counts": {
-        "bases": 2,
+        "bases": 3,
         "amendments": 0,
         "supplements": 0
       }
