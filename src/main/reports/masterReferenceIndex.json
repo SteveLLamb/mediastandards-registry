@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
-  "generatedAt": "2025-10-12T21:00:33.506Z",
+  "generatedAt": "2025-10-13T19:24:55.952Z",
   "stats": {
-    "uniqueRefIds": 1050
+    "uniqueRefIds": 1052
   },
   "refs": {
     "40290752": {
@@ -4876,6 +4876,14 @@
           "href": "",
           "rawRef": "ISO/IEC 10646, Information Technology — Universal Multiple-Octet Coded Character Set (UCS).",
           "title": "Information Technology — Universal Multiple-Octet Coded Character Set (UCS)."
+        },
+        {
+          "docId": "SMPTE.ST429-5.2023-09",
+          "type": "normative",
+          "cite": "ISO/IEC 10646",
+          "href": "",
+          "rawRef": "ISO/IEC 10646 (latest edition), Information Technology — Universal multiple-octet coded character set (UCS)",
+          "title": "(latest edition), Information Technology — Universal multiple-octet coded character set (UCS)"
         }
       ]
     },
@@ -14514,6 +14522,14 @@
           "title": null
         },
         {
+          "docId": "SMPTE.ST429-5.2023-09",
+          "type": "normative",
+          "cite": "IETF RFC 2046",
+          "href": "https://www.rfc-editor.org/info/rfc2046",
+          "rawRef": "IETF RFC 2046, Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types. url: https://www.rfc-editor.org/info/rfc2046",
+          "title": "Multipurpose Internet Mail Extensions (MIME) Part Two: Media Types."
+        },
+        {
           "docId": "SMPTE.ST429-7.2006",
           "type": "normative",
           "cite": "",
@@ -16172,6 +16188,14 @@
           "title": "Uniform Resource Identifier (URI): Generic Syntax."
         },
         {
+          "docId": "SMPTE.ST429-5.2023-09",
+          "type": "normative",
+          "cite": "IETF RFC 3986",
+          "href": "https://www.rfc-editor.org/info/rfc3986",
+          "rawRef": "IETF RFC 3986, Uniform Resource Identifier (URI): Generic Syntax. url: https://www.rfc-editor.org/info/rfc3986",
+          "title": "Uniform Resource Identifier (URI): Generic Syntax."
+        },
+        {
           "docId": "SMPTE.ST429-9.2014",
           "type": "normative",
           "cite": "",
@@ -16552,6 +16576,14 @@
           "href": "",
           "rawRef": "",
           "title": null
+        },
+        {
+          "docId": "SMPTE.ST429-5.2023-09",
+          "type": "normative",
+          "cite": "IETF RFC 4122",
+          "href": "https://www.rfc-editor.org/info/rfc4122",
+          "rawRef": "IETF RFC 4122, A Universally Unique Identifier (UUID) URN Namespace. url: https://www.rfc-editor.org/info/rfc4122",
+          "title": "A Universally Unique Identifier (UUID) URN Namespace."
         },
         {
           "docId": "SMPTE.ST429-7.2006",
@@ -31852,6 +31884,14 @@
           "title": "Material Exchange Format (MXF) — File Format Specification"
         },
         {
+          "docId": "SMPTE.ST429-5.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 377-1",
+          "href": "",
+          "rawRef": "SMPTE ST 377-1, Material Exchange Format (MXF) — File Format Specification",
+          "title": "Material Exchange Format (MXF) — File Format Specification"
+        },
+        {
           "docId": "SMPTE.ST429-6.2023-05",
           "type": "normative",
           "cite": "SMPTE ST 377-1",
@@ -32868,6 +32908,14 @@
           "title": "Material Exchange Format (MXF) — MXF Generic Container"
         },
         {
+          "docId": "SMPTE.ST429-5.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 379-1",
+          "href": "",
+          "rawRef": "SMPTE ST 379-1, Material Exchange Format (MXF) — MXF Generic Container",
+          "title": "Material Exchange Format (MXF) — MXF Generic Container"
+        },
+        {
           "docId": "SMPTE.ST429-6.2023-05",
           "type": "bibliographic",
           "cite": "SMPTE ST 379-1",
@@ -32998,6 +33046,34 @@
           "href": "",
           "rawRef": "",
           "title": null
+        }
+      ]
+    },
+    "SMPTE.ST379-2": {
+      "refId": "SMPTE.ST379-2",
+      "normalized": null,
+      "resolution": {
+        "sourcePresent": true,
+        "sourceDocId": "SMPTE.ST379-2.2010",
+        "firstConfirmedSourceAt": "2025-10-13T19:24:55.940Z"
+      },
+      "provenance": {
+        "firstSeen": "2025-10-13T19:19:20.793Z",
+        "mapSource": [
+          "regex"
+        ],
+        "mapDetails": [
+          "smpte-designator"
+        ]
+      },
+      "rawVariants": [
+        {
+          "docId": "SMPTE.ST429-5.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 379-2",
+          "href": "",
+          "rawRef": "SMPTE ST 379-2, Material Exchange Format (MXF) — MXF Constrained Generic Container",
+          "title": "Material Exchange Format (MXF) — MXF Constrained Generic Container"
         }
       ]
     },
@@ -34296,6 +34372,34 @@
           "href": "",
           "rawRef": "",
           "title": null
+        }
+      ]
+    },
+    "SMPTE.ST410": {
+      "refId": "SMPTE.ST410",
+      "normalized": null,
+      "resolution": {
+        "sourcePresent": true,
+        "sourceDocId": "SMPTE.ST410.2008",
+        "firstConfirmedSourceAt": "2025-10-13T19:24:55.940Z"
+      },
+      "provenance": {
+        "firstSeen": "2025-10-13T19:19:20.793Z",
+        "mapSource": [
+          "regex"
+        ],
+        "mapDetails": [
+          "smpte-designator"
+        ]
+      },
+      "rawVariants": [
+        {
+          "docId": "SMPTE.ST429-5.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 410",
+          "href": "",
+          "rawRef": "SMPTE ST 410, Material Exchange Format — Generic Stream Partition",
+          "title": "Material Exchange Format — Generic Stream Partition"
         }
       ]
     },
@@ -35668,6 +35772,14 @@
           "href": "",
           "rawRef": "SMPTE ST 428-7, D-Cinema Distribution Master — Subtitle.",
           "title": "D-Cinema Distribution Master — Subtitle."
+        },
+        {
+          "docId": "SMPTE.ST429-5.2023-09",
+          "type": "bibliographic",
+          "cite": "SMPTE ST 428-7",
+          "href": "",
+          "rawRef": "SMPTE ST 428-7, Digital Cinema Distribution Master — Subtitle",
+          "title": "Digital Cinema Distribution Master — Subtitle"
         }
       ]
     },
@@ -36962,6 +37074,14 @@
           "title": "D-Cinema Packaging — Sound and Picture Track File"
         },
         {
+          "docId": "SMPTE.ST429-5.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 429-3",
+          "href": "",
+          "rawRef": "SMPTE ST 429-3, D-Cinema Packaging — Sound and Picture Track File",
+          "title": "D-Cinema Packaging — Sound and Picture Track File"
+        },
+        {
           "docId": "SMPTE.ST429-6.2023-05",
           "type": "bibliographic",
           "cite": "SMPTE ST 429-3",
@@ -37310,7 +37430,7 @@
       "normalized": null,
       "resolution": {
         "sourcePresent": true,
-        "sourceDocId": "SMPTE.ST429-5.2017",
+        "sourceDocId": "SMPTE.ST429-5.2023-09",
         "firstConfirmedSourceAt": "2025-10-07T22:56:58.834Z"
       },
       "provenance": {
@@ -37490,6 +37610,14 @@
           "href": "",
           "rawRef": "SMPTE ST 429-6, D-Cinema Packaging — MXF Track File Essence Encryption.",
           "title": "D-Cinema Packaging — MXF Track File Essence Encryption."
+        },
+        {
+          "docId": "SMPTE.ST429-5.2023-09",
+          "type": "normative",
+          "cite": "SMPTE ST 429-6",
+          "href": "",
+          "rawRef": "SMPTE ST 429-6, D-Cinema Packaging — Track File Encryption",
+          "title": "D-Cinema Packaging — Track File Encryption"
         },
         {
           "docId": "SMPTE.ST430-1.2023-09",
@@ -41208,6 +41336,14 @@
           "href": "https://www.w3.org/TR/xml/",
           "rawRef": "W3C XML 1.0 (latest edition), Extensible Markup Language (XML) 1.0 Recommendation. url: https://www.w3.org/TR/xml/",
           "title": "(latest edition), Extensible Markup Language (XML) 1.0 Recommendation."
+        },
+        {
+          "docId": "SMPTE.ST429-5.2023-09",
+          "type": "normative",
+          "cite": "W3C XML 1.0",
+          "href": "https://www.w3.org/TR/xml/",
+          "rawRef": "W3C XML 1.0 (latest edition), Extensible Markup Language (XML) 1.0 Recommendation url: https://www.w3.org/TR/xml/",
+          "title": "(latest edition), Extensible Markup Language (XML) 1.0 Recommendation"
         },
         {
           "docId": "SMPTE.ST430-1.2023-09",
