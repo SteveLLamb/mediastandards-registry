@@ -117,6 +117,27 @@ function normalizeSeedUrl(u) {
   }
 }
 
+// --- Normalizers used for filtering comparisons ---
+function normalizeForCompare(u) {
+  try {
+    const url = new URL(u);
+    // normalize to: origin + pathname with exactly one trailing slash, no query/hash
+    let p = url.pathname || '/';
+    if (!p.endsWith('/')) p += '/';
+    return `${url.origin}${p}`;
+  } catch {
+    // fallback: force a single trailing slash
+    return u.endsWith('/') ? u : `${u}/`;
+  }
+}
+
+// True if 'url' is under 'prefix' on a PATH SEGMENT boundary (no accidental 42→429 bleed)
+function isSegmentPrefix(prefix, url) {
+  const p = normalizeForCompare(prefix);
+  const u = normalizeForCompare(url);
+  return u === p || u.startsWith(p);
+}
+
 // --- Cache busting helper for CDN/proxy refresh ---
 const NO_CACHE_HEADERS = { 'Cache-Control': 'no-cache', 'Pragma': 'no-cache' };
 function withNoCache(u) {
@@ -132,20 +153,26 @@ function withNoCache(u) {
 
 function shouldFilterUrl(url) {
   if (!FILTER_ENABLED) return false;
-  // Reuse filterList semantics: exact match or prefix match
+  // Use segment-accurate filtering
+  const uNorm = normalizeForCompare(url);
   for (const f of filterList) {
-    if (f === url) return true;
-    if (url.startsWith(f)) return true;
-    // If a suite URL is present in filterList and we know its children, treat as filtered
-    if (suiteMap.has(f)) {
-      const children = suiteMap.get(f) || [];
-      if (children.some(child => child === url || url.startsWith(child))) return true;
+    const fNorm = normalizeForCompare(f);
+    if (uNorm === fNorm || isSegmentPrefix(fNorm, uNorm)) {
+      console.log(`[filter] Matched by filter entry: ${f}`);
+      return true;
+    }
+    if (suiteMap.has(fNorm)) {
+      const children = suiteMap.get(fNorm) || [];
+      if (children.some(child => normalizeForCompare(child) === uNorm || isSegmentPrefix(child, uNorm))) {
+        console.log(`[filter] Matched by filter suite child: ${f}`);
+        return true;
+      }
     }
   }
   return false;
 }
 
-function printUrlsSuiteWithChildren(label, urls) {
+function printUrlsSuiteWithChildren(label, urls, matchBy = new Map()) {
   if (!urls.length) return;
 
   console.groupCollapsed(`${label}: ${urls.length}  (Suites: ${urls.filter(u => suiteMap.has(u)).length}, Docs: ${urls.filter(u => !suiteMap.has(u)).length})`);
@@ -157,11 +184,13 @@ function printUrlsSuiteWithChildren(label, urls) {
     let reason = '';
     for (const [suiteUrl, children] of suiteMap.entries()) {
       if (children.includes(url)) {
-        reason = ` (Doc within ${label.toLowerCase().includes('queued') ? 'queued' : 'filtered'} suite: ${suiteUrl})`;
+        reason = ` (in suite: ${suiteUrl})`;
         break;
       }
     }
-    console.log(`    - ${url}${isSuite ? ' [SUITE]' : ''}${reason}`);
+    const matched = matchBy.get(url);
+    const mTxt = matched ? ` [matched filter: ${matched}]` : '';
+    console.log(`    - ${url}${isSuite ? ' [SUITE]' : ''}${reason}${mTxt}`);
     printed.add(url);
   };
 
@@ -194,8 +223,9 @@ function printUrlsSuiteWithChildren(label, urls) {
 }
 
 function filterDiscoveredDocs(allDocs) {
-  const queued = []; 
+  const queued = [];
   const filtered = [];
+  const matchBy = new Map(); // url -> matched filter string
 
   for (const { url: docUrl, suite } of allDocs) {
     if (!FILTER_ENABLED) {
@@ -203,19 +233,28 @@ function filterDiscoveredDocs(allDocs) {
       continue;
     }
 
-    const inList = filterList.some(f => {
-      if (f === docUrl) return true;
-      if (suite && f === suite) return true;
-      if (docUrl.startsWith(f)) return true;
-      return false;
-    });
+    let inList = false;
+    let matched = null;
+    const docNorm = normalizeForCompare(docUrl);
+    const suiteNorm = suite ? normalizeForCompare(suite) : null;
+    for (const f of filterList) {
+      const fNorm = normalizeForCompare(f);
+      if (docNorm === fNorm || isSegmentPrefix(fNorm, docNorm) || (suiteNorm && (suiteNorm === fNorm))) {
+        inList = true;
+        matched = f;
+        break;
+      }
+    }
+    if (inList && matched) matchBy.set(docUrl, matched);
 
     if (inList) filtered.push(docUrl);
     else queued.push(docUrl);
   }
 
   if (FILTER_ENABLED) {
-    const filteredSuites = filterList.filter(f => suiteMap.has(f));
+    const filteredSuites = filterList
+      .map(f => normalizeForCompare(f))
+      .filter(f => suiteMap.has(f));
     for (const suiteUrl of filteredSuites) {
       const children = suiteMap.get(suiteUrl) || [];
       for (const childUrl of children) {
@@ -232,8 +271,8 @@ function filterDiscoveredDocs(allDocs) {
   const docCount = allDocs.length - suiteCount;
   console.log(`\n\n📊 Discovery Filtering Stats (URLs):`);
   console.log(`  Total found: ${allDocs.length}  (Suites: ${suiteCount}, Docs: ${docCount})`);
-  printUrlsSuiteWithChildren('  Queued', queued);
-  printUrlsSuiteWithChildren('  Filtered', filtered);
+  printUrlsSuiteWithChildren('  Queued', queued, matchBy);
+  printUrlsSuiteWithChildren('  Filtered', filtered, matchBy);
 
   return queued;
 }
@@ -278,8 +317,8 @@ async function discoverFromRootDocPage() {
             allDocs.push({ url: childUrl, suite: url });
           }
         });
-        suiteMap.set(url, children);
-        allDocs.push({ url, suite: null });
+        suiteMap.set(normalizeForCompare(url), children);
+        allDocs.push({ url: normalizeForCompare(url), suite: null });
       } else {
         console.log(`❓ UNKNOWN TYPE: ${url}`);
       }
