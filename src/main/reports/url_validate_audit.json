@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2025-10-13T19:50:57.029Z",
+  "generatedAt": "2025-10-15T04:39:06.370Z",
   "target": "documents.json",
-  "good": 1615,
+  "good": 1616,
   "skippedByDomain": 0,
   "skippedByPublisher": 0,
   "index": {
@@ -15,10 +15,10 @@
       "Unreachable (HPE_INVALID_CONSTANT)": 16,
       "Unreachable (UNABLE_TO_VERIFY_LEAF_SIGNATURE)": 1
     },
-    "redirectMismatch": 2,
+    "redirectMismatch": 1,
     "redirectBreakdown": {
       "undefined": 0,
-      "other": 2
+      "other": 1
     },
     "expectationMismatch": 35,
     "expectationBreakdown": {
@@ -1627,16 +1627,6 @@
     "redirect": {
       "undefined": [],
       "other": [
-        {
-          "docId": "0950-7671.1.3.302",
-          "publisher": "Scientific Instruments",
-          "field": "href",
-          "url": "https://doi.org/10.1088/0950-7671/1/3/302",
-          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=bed74806-b414-4a35-8093-f9e24d592bd8&ssb=58452260544&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=4b011613-cnvj-4558-9df7-dfb86dc8228c&ssk=botmanager_support@radware.com&ssm=78029828620301459107164806348892&ssn=80609a1d575f05972409a0249049e440b2209a046700-5598-4490-bc1c0b&sso=b4b00d5c-a11fe353e6ba3a285b9de62abefbd411997c6fb3bd8cad7e&ssp=47895466831760343221176034466328372&ssq=57086108453056836946584530253347285338967&ssr=NC4yMzYuMTU4LjU0&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDA5YTA0NjcwMC01NTk4LTQ0OTAtYmQ1Yy1hMTFmZTM1M2U2YmExLTE3NjAzODQ1MzAxMzAwLTAwMWEzYmYwYmFjMjdhZTg0ODIxMCIsInV6bXgiOiI3ZjkwMDBiMTBiZTZhOC05ZmFiLTQ5ZTMtYjBmNi1jNWU0ZjU4MDg5ZDYxLTE3NjAzODQ1MzAxMzAwLTQzYmEyOTkwNTJjZDc1NjcxMCIsInJkIjoiaW9wLm9yZyJ9",
-          "resolvedField": "resolvedHref",
-          "expectedResolved": "https://iopscience.iop.org/article/10.1088/0950-7671/1/3/302",
-          "message": "resolved url mismatch"
-        },
         {
           "docId": "ML3807.M56.1916",
           "publisher": "MacMillan Co.",
