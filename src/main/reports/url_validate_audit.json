@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2025-10-15T04:39:06.370Z",
+  "generatedAt": "2025-10-22T04:37:50.025Z",
   "target": "documents.json",
   "good": 1616,
   "skippedByDomain": 0,
   "skippedByPublisher": 0,
   "index": {
-    "error": 158,
+    "error": 157,
     "errorBreakdown": {
-      "Unreachable (403)": 46,
+      "Unreachable (403)": 45,
       "Unreachable (404)": 91,
       "Unreachable (ENOTFOUND)": 2,
       "Unreachable (ERR_BAD_REQUEST)": 1,
@@ -15,9 +15,9 @@
       "Unreachable (HPE_INVALID_CONSTANT)": 16,
       "Unreachable (UNABLE_TO_VERIFY_LEAF_SIGNATURE)": 1
     },
-    "redirectMismatch": 1,
+    "redirectMismatch": 2,
     "redirectBreakdown": {
-      "undefined": 0,
+      "undefined": 1,
       "other": 1
     },
     "expectationMismatch": 35,
@@ -55,16 +55,6 @@
           "publisher": "Acoustical Society of America",
           "field": "href",
           "url": "https://doi.org/10.1121/1.1916111",
-          "message": "Unreachable (403)",
-          "explanation": "The server refused access to the URL.",
-          "recommendedAction": "Check if the resource requires authentication or is private.",
-          "riskLevel": "High"
-        },
-        {
-          "docId": "1.3061757",
-          "publisher": "Physics Today",
-          "field": "href",
-          "url": "https://doi.org/10.1063/1.3061757",
           "message": "Unreachable (403)",
           "explanation": "The server refused access to the URL.",
           "recommendedAction": "Check if the resource requires authentication or is private.",
@@ -1625,16 +1615,27 @@
       ]
     },
     "redirect": {
-      "undefined": [],
+      "undefined": [
+        {
+          "docId": "1.3061757",
+          "publisher": "Physics Today",
+          "field": "href",
+          "url": "https://doi.org/10.1063/1.3061757",
+          "resolvedUrl": "https://physicstoday.aip.org/reviews/principles-of-color-photography",
+          "resolvedField": "resolvedHref",
+          "expectedResolved": "undefined",
+          "message": "resolved url mismatch"
+        }
+      ],
       "other": [
         {
-          "docId": "ML3807.M56.1916",
-          "publisher": "MacMillan Co.",
+          "docId": "0950-7671.1.3.302",
+          "publisher": "Scientific Instruments",
           "field": "href",
-          "url": "https://ia800204.us.archive.org/19/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
-          "resolvedUrl": "https://ia801303.us.archive.org/1/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
+          "url": "https://doi.org/10.1088/0950-7671/1/3/302",
+          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=fba935e0-7661-44de-9472-7fb5b0f593e2&ssb=44401270990&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=d351601a-cnvj-4b2a-8695-72e5ac719d36&ssk=botmanager_support@radware.com&ssm=12019777108045567100141928630023&ssn=b89a74b2f600a6fc9cc50cd911d95d851d5f62bdfa24-4ce7-42be-8591cd&sso=dda9039b-f590906ff014fa5b89bcf02ef73c236151c0c1a6d4a4fc9c&ssp=03002045271761180668176117522374501&ssq=97093470716931835673707169135146965901576&ssr=MTMuODMuMjE2LjEwMQ==&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDA2MmJkZmEyNC00Y2U3LTQyYmUtODM5Yi1mNTkwOTA2ZmYwMTQxLTE3NjExMDcxNjk1NzQwLTAwMTM0YmZlZDA2ZTg4YjcwNWMxMCIsInV6bXgiOiI3ZjkwMDA3N2NjOTVlYy05M2YyLTQ4N2MtYmU5Yy1kYjkxNjM1YmI2MGIxLTE3NjExMDcxNjk1NzQwLTRkYzljNGZjYmMzMTc2OTIxMCIsInJkIjoiaW9wLm9yZyJ9",
           "resolvedField": "resolvedHref",
-          "expectedResolved": "https://ia601303.us.archive.org/1/items/scienceofmusical00mill/scienceofmusical00mill.pdf",
+          "expectedResolved": "https://iopscience.iop.org/article/10.1088/0950-7671/1/3/302",
           "message": "resolved url mismatch"
         }
       ]
