@@ -1,24 +1,25 @@
 {
-  "generatedAt": "2025-10-22T17:39:34.658Z",
+  "generatedAt": "2025-10-24T19:42:26.023Z",
   "target": "documents.json",
-  "good": 1616,
+  "good": 1686,
   "skippedByDomain": 0,
   "skippedByPublisher": 0,
   "index": {
-    "error": 158,
+    "error": 176,
     "errorBreakdown": {
       "Unreachable (403)": 45,
-      "Unreachable (404)": 92,
+      "Unreachable (404)": 107,
+      "Unreachable (ECONNABORTED)": 3,
       "Unreachable (ENOTFOUND)": 2,
       "Unreachable (ERR_BAD_REQUEST)": 1,
       "Unreachable (ERR_FR_TOO_MANY_REDIRECTS)": 1,
       "Unreachable (HPE_INVALID_CONSTANT)": 16,
       "Unreachable (UNABLE_TO_VERIFY_LEAF_SIGNATURE)": 1
     },
-    "redirectMismatch": 1,
+    "redirectMismatch": 3,
     "redirectBreakdown": {
-      "undefined": 0,
-      "other": 1
+      "undefined": 1,
+      "other": 2
     },
     "expectationMismatch": 35,
     "expectationBreakdown": {
@@ -913,10 +914,50 @@
           "riskLevel": "High"
         },
         {
+          "docId": "NIST.FIPS.140-2",
+          "publisher": "NIST",
+          "field": "href",
+          "url": "https://doi.org/10.6028/NIST.FIPS.140-2",
+          "message": "Unreachable (404)",
+          "explanation": "The URL points to a resource that was not found (dead link).",
+          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
+          "riskLevel": "High"
+        },
+        {
+          "docId": "NIST.SP.800-38A-Add",
+          "publisher": "NIST",
+          "field": "href",
+          "url": "https://doi.org/10.6028/NIST.SP.800-38A-Add",
+          "message": "Unreachable (404)",
+          "explanation": "The URL points to a resource that was not found (dead link).",
+          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
+          "riskLevel": "High"
+        },
+        {
           "docId": "NIST.SP.800-57p1r2007",
           "publisher": "NIST",
           "field": "href",
           "url": "https://doi.org/10.6028/NIST.SP.800-57p1r2007",
+          "message": "Unreachable (404)",
+          "explanation": "The URL points to a resource that was not found (dead link).",
+          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
+          "riskLevel": "High"
+        },
+        {
+          "docId": "NIST.SP.800-57p2",
+          "publisher": "NIST",
+          "field": "href",
+          "url": "https://doi.org/10.6028/NIST.SP.800-57p2",
+          "message": "Unreachable (404)",
+          "explanation": "The URL points to a resource that was not found (dead link).",
+          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
+          "riskLevel": "High"
+        },
+        {
+          "docId": "NIST.SP.800-57pt2r1",
+          "publisher": "NIST",
+          "field": "href",
+          "url": "https://doi.org/10.6028/NIST.SP.800-57pt2r1",
           "message": "Unreachable (404)",
           "explanation": "The URL points to a resource that was not found (dead link).",
           "recommendedAction": "Double-check the URL or remove it if no longer valid.",
@@ -1313,16 +1354,6 @@
           "riskLevel": "High"
         },
         {
-          "docId": "SMPTE.ST292-1.2019",
-          "publisher": "SMPTE",
-          "field": "href",
-          "url": "https://doi.org/10.5594/SMPTE.ST292-1.2019",
-          "message": "Unreachable (404)",
-          "explanation": "The URL points to a resource that was not found (dead link).",
-          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
-          "riskLevel": "High"
-        },
-        {
           "docId": "SMPTE.ST331.2011Am1.2023",
           "publisher": "SMPTE",
           "field": "href",
@@ -1343,6 +1374,16 @@
           "riskLevel": "High"
         },
         {
+          "docId": "SMPTE.ST370.2006Am1.2009",
+          "publisher": "SMPTE",
+          "field": "href",
+          "url": "https://doi.org/10.5594/SMPTE.ST370.2006Am1.2009",
+          "message": "Unreachable (404)",
+          "explanation": "The URL points to a resource that was not found (dead link).",
+          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
+          "riskLevel": "High"
+        },
+        {
           "docId": "SMPTE.ST377-1.2011Am2.2012",
           "publisher": "SMPTE",
           "field": "href",
@@ -1353,10 +1394,110 @@
           "riskLevel": "High"
         },
         {
+          "docId": "SMPTE.ST377-41.2023-04",
+          "publisher": "SMPTE",
+          "field": "href",
+          "url": "https://doi.org/10.5594/SMPTE.ST377-41.2023-04",
+          "message": "Unreachable (404)",
+          "explanation": "The URL points to a resource that was not found (dead link).",
+          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
+          "riskLevel": "High"
+        },
+        {
           "docId": "SMPTE.ST377-42.2021",
           "publisher": "SMPTE",
           "field": "href",
           "url": "https://doi.org/10.5594/SMPTE.ST377-42.2021",
+          "message": "Unreachable (404)",
+          "explanation": "The URL points to a resource that was not found (dead link).",
+          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
+          "riskLevel": "High"
+        },
+        {
+          "docId": "SMPTE.ST379.2004",
+          "publisher": "SMPTE",
+          "field": "href",
+          "url": "https://doi.org/10.5594/SMPTE.ST379.2004",
+          "message": "Unreachable (404)",
+          "explanation": "The URL points to a resource that was not found (dead link).",
+          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
+          "riskLevel": "High"
+        },
+        {
+          "docId": "SMPTE.ST381-3.2025-01",
+          "publisher": "SMPTE",
+          "field": "href",
+          "url": "https://doi.org/10.5594/SMPTE.ST381-3.2025-01",
+          "message": "Unreachable (404)",
+          "explanation": "The URL points to a resource that was not found (dead link).",
+          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
+          "riskLevel": "High"
+        },
+        {
+          "docId": "SMPTE.ST381-5.2023-02",
+          "publisher": "SMPTE",
+          "field": "href",
+          "url": "https://doi.org/10.5594/SMPTE.ST381-5.2023-02",
+          "message": "Unreachable (404)",
+          "explanation": "The URL points to a resource that was not found (dead link).",
+          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
+          "riskLevel": "High"
+        },
+        {
+          "docId": "SMPTE.ST382.2022",
+          "publisher": "SMPTE",
+          "field": "href",
+          "url": "https://doi.org/10.5594/SMPTE.ST382.2022",
+          "message": "Unreachable (404)",
+          "explanation": "The URL points to a resource that was not found (dead link).",
+          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
+          "riskLevel": "High"
+        },
+        {
+          "docId": "SMPTE.ST385.2012Am1.2022",
+          "publisher": "SMPTE",
+          "field": "href",
+          "url": "https://doi.org/10.5594/SMPTE.ST385.2012Am1.2022",
+          "message": "Unreachable (404)",
+          "explanation": "The URL points to a resource that was not found (dead link).",
+          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
+          "riskLevel": "High"
+        },
+        {
+          "docId": "SMPTE.ST421.2006Am1.2007",
+          "publisher": "SMPTE",
+          "field": "href",
+          "url": "https://doi.org/10.5594/SMPTE.ST421.2006Am1.2007",
+          "message": "Unreachable (404)",
+          "explanation": "The URL points to a resource that was not found (dead link).",
+          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
+          "riskLevel": "High"
+        },
+        {
+          "docId": "SMPTE.ST421.2006Am2.2011",
+          "publisher": "SMPTE",
+          "field": "href",
+          "url": "https://doi.org/10.5594/SMPTE.ST421.2006Am2.2011",
+          "message": "Unreachable (404)",
+          "explanation": "The URL points to a resource that was not found (dead link).",
+          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
+          "riskLevel": "High"
+        },
+        {
+          "docId": "SMPTE.ST425-1.2017",
+          "publisher": "SMPTE",
+          "field": "href",
+          "url": "https://doi.org/10.5594/SMPTE.ST425-1.2017",
+          "message": "Unreachable (404)",
+          "explanation": "The URL points to a resource that was not found (dead link).",
+          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
+          "riskLevel": "High"
+        },
+        {
+          "docId": "SMPTE.ST429-20.2022",
+          "publisher": "SMPTE",
+          "field": "href",
+          "url": "https://doi.org/10.5594/SMPTE.ST429-20.2022",
           "message": "Unreachable (404)",
           "explanation": "The URL points to a resource that was not found (dead link).",
           "recommendedAction": "Double-check the URL or remove it if no longer valid.",
@@ -1383,20 +1524,30 @@
           "riskLevel": "High"
         },
         {
-          "docId": "SMPTE.ST430-3.2008Am2.2012",
+          "docId": "SMPTE.ST430-14.2021",
           "publisher": "SMPTE",
           "field": "href",
-          "url": "https://doi.org/10.5594/SMPTE.ST430-3.2008Am2.2012",
+          "url": "https://doi.org/10.5594/SMPTE.ST430-14.2021",
           "message": "Unreachable (404)",
           "explanation": "The URL points to a resource that was not found (dead link).",
           "recommendedAction": "Double-check the URL or remove it if no longer valid.",
           "riskLevel": "High"
         },
         {
-          "docId": "SMPTE.ST55.2010",
+          "docId": "SMPTE.ST430-17.2021",
           "publisher": "SMPTE",
           "field": "href",
-          "url": "https://doi.org/10.5594/SMPTE.ST55.2010",
+          "url": "https://doi.org/10.5594/SMPTE.ST430-17.2021",
+          "message": "Unreachable (404)",
+          "explanation": "The URL points to a resource that was not found (dead link).",
+          "recommendedAction": "Double-check the URL or remove it if no longer valid.",
+          "riskLevel": "High"
+        },
+        {
+          "docId": "SMPTE.ST430-3.2008Am2.2012",
+          "publisher": "SMPTE",
+          "field": "href",
+          "url": "https://doi.org/10.5594/SMPTE.ST430-3.2008Am2.2012",
           "message": "Unreachable (404)",
           "explanation": "The URL points to a resource that was not found (dead link).",
           "recommendedAction": "Double-check the URL or remove it if no longer valid.",
@@ -1601,6 +1752,38 @@
           "riskLevel": "Medium"
         }
       ],
+      "ECONNABORTED": [
+        {
+          "docId": "R-REC-BT.2390-10.202111",
+          "publisher": "ITU-R",
+          "field": "href",
+          "url": "https://www.itu.int/pub/R-REP-BT.2390-10-2021",
+          "message": "Unreachable (ECONNABORTED)",
+          "explanation": "Connection timed out.",
+          "recommendedAction": "Retry later or check the server’s responsiveness.",
+          "riskLevel": "Medium-High"
+        },
+        {
+          "docId": "R-REC-BT.2390-4.201804",
+          "publisher": "ITU-R",
+          "field": "href",
+          "url": "https://www.itu.int/pub/R-REP-BT.2390-4-2018",
+          "message": "Unreachable (ECONNABORTED)",
+          "explanation": "Connection timed out.",
+          "recommendedAction": "Retry later or check the server’s responsiveness.",
+          "riskLevel": "Medium-High"
+        },
+        {
+          "docId": "R-REC-BT.2390-8.202002",
+          "publisher": "ITU-R",
+          "field": "href",
+          "url": "https://www.itu.int/pub/R-REP-BT.2390-8-2020",
+          "message": "Unreachable (ECONNABORTED)",
+          "explanation": "Connection timed out.",
+          "recommendedAction": "Retry later or check the server’s responsiveness.",
+          "riskLevel": "Medium-High"
+        }
+      ],
       "ENOTFOUND": [
         {
           "docId": "W3C.rddl.2002",
@@ -1625,8 +1808,29 @@
       ]
     },
     "redirect": {
-      "undefined": [],
+      "undefined": [
+        {
+          "docId": "SMPTE.ST55.2010",
+          "publisher": "SMPTE",
+          "field": "href",
+          "url": "https://doi.org/10.5594/SMPTE.ST55.2011",
+          "resolvedUrl": "https://my.smpte.org/s/product-details?id=a1BVR0000007Ngo",
+          "resolvedField": "resolvedHref",
+          "expectedResolved": "undefined",
+          "message": "resolved url mismatch"
+        }
+      ],
       "other": [
+        {
+          "docId": "0950-7671.1.3.302",
+          "publisher": "Scientific Instruments",
+          "field": "href",
+          "url": "https://doi.org/10.1088/0950-7671/1/3/302",
+          "resolvedUrl": "https://validate.perfdrive.com/fb803c746e9148689b3984a31fccd902/?ssa=228728a2-7c0f-43c7-b9d9-1623564cadc7&ssb=72867252625&ssc=https%3A%2F%2Fiopscience.iop.org%2Farticle%2F10.1088%2F0950-7671%2F1%2F3%2F302&ssi=76e550fe-cnvj-4bc8-ab5e-d5595a6bd468&ssk=botmanager_support@radware.com&ssm=36749311021550986109945033688778&ssn=8a725cfc0f6599a47a063b0f723724b32d792cb62e7c-45e5-4324-92de5e&sso=43cb90d5-b7148fd0eced47ae3060719800f29ea180719e3ca3f9ff3d&ssp=12308631851761318202176134021470511&ssq=23580753419049925971234190706014171537478&ssr=MTM1LjExOS4zOC4zNQ==&sst=axios/1.12.0&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2Y5MDAwNjI2MjBlZjMtOTViNi00NmU5LWE1N2QtODVkNzk4YzA1Y2JjMS0xNzYxMzM0MTkwNjc0MC03MzE2NjVlYjk1MTg0MDRhMTAiLCJfX3V6bWYiOiI3ZjkwMDAyY2I2MmU3Yy00NWU1LTQzMjQtOTBkNS1iNzE0OGZkMGVjZWQxLTE3NjEzMzQxOTA2NzQwLTAwMTBhZjVlN2I0YzFhODczMmQxMCIsInJkIjoiaW9wLm9yZyJ9",
+          "resolvedField": "resolvedHref",
+          "expectedResolved": "https://iopscience.iop.org/article/10.1088/0950-7671/1/3/302",
+          "message": "resolved url mismatch"
+        },
         {
           "docId": "ML3807.M56.1916",
           "publisher": "MacMillan Co.",
