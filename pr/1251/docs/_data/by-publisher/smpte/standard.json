@@ -68973,6 +68973,7 @@
       "SMPTE.ST2094-20.2016",
       "SMPTE.ST2094-30.2016",
       "SMPTE.ST2094-40.2016",
+      "SMPTE.ST2094-50.2026-08",
       "SMPTE.TSP2121-1.2018",
       "SMPTE.TSP2121-4.2019"
     ],
@@ -71130,6 +71131,144 @@
     ],
     "docDependancy": true,
     "currentStatus": "Active, Stabilized"
+  },
+  {
+    "abstract": "This standard specifies the metadata for the Color Volume Transform Application #5. It is a specialization of the content-dependent transform metadata entries and processing blocks of the generalized color volume transform model defined in SMPTE ST 2094-1:2016.\nIt includes parameters for conversion of an input image essence to a common relative linear color space, parameters for a headroom-adaptive tone mapping algorithm, and the mathematical definition of that headroom-adaptive tone mapping algorithm.",
+    "docId": "SMPTE.ST2094-50.2026-08",
+    "docLabel": "SMPTE ST 2094-50:2026-08",
+    "docNumber": "2094",
+    "docPart": "50",
+    "docSuiteTitle": "Dynamic Metadata for Color Volume Transform",
+    "docTitle": "Application #5",
+    "docType": "Standard",
+    "doi": "10.5594/SMPTE.ST2094-50.2026",
+    "group": "smpte-10e-tc",
+    "href": "https://doi.org/10.5594/SMPTE.ST2094-50.2026",
+    "publicationDate": "2026-08-24",
+    "publisher": "SMPTE",
+    "references": {
+      "bibliographic": [
+        "10.1137-0905021",
+        "IEC.61966-2-1",
+        "R-REC-BT.1886",
+        "R-REC-BT.2408-8",
+        "orphan/SMPTE.ST2094-50.2026-08/h:158060dd",
+        "orphan/SMPTE.ST2094-50.2026-08/h:222d9e19"
+      ],
+      "normative": [
+        "ISO.11664-1.2019",
+        "ISO.14496-12.2022",
+        "ISO.21496-1.2025",
+        "R-REC-BT.2020-2",
+        "R-REC-BT.2100-3",
+        "R-REC-BT.709-6",
+        "SMPTE.ST2094-1.2016",
+        "SMPTE.ST2113.2018",
+        "T-REC-T.35"
+      ]
+    },
+    "releaseTag": "20260824-pub",
+    "repo": "https://github.com/SMPTE/st2094-50/",
+    "status": {
+      "active": true,
+      "amended": false,
+      "latestVersion": true,
+      "stage": "PUB",
+      "state": "pub",
+      "superseded": false
+    },
+    "docTypeAbr": "ST",
+    "referencesResolved": {
+      "normative": [
+        {
+          "id": "ISO.11664-1.2019"
+        },
+        {
+          "id": "ISO.14496-12.2022",
+          "undated": true
+        },
+        {
+          "id": "ISO.21496-1.2025",
+          "undated": true
+        },
+        {
+          "id": "R-REC-BT.2020-2.201510",
+          "undated": true
+        },
+        {
+          "id": "R-REC-BT.2100-3",
+          "undated": true
+        },
+        {
+          "id": "R-REC-BT.709-6.201506",
+          "undated": true
+        },
+        {
+          "id": "SMPTE.ST2094-1.2016"
+        },
+        {
+          "id": "SMPTE.ST2113.2018"
+        },
+        {
+          "id": "T-REC-T.35",
+          "undated": true
+        }
+      ],
+      "bibliographic": [
+        {
+          "id": "10.1137-0905021",
+          "undated": true
+        },
+        {
+          "id": "IEC.61966-2-1.1999",
+          "undated": true
+        },
+        {
+          "id": "R-REC-BT.1886",
+          "undated": true
+        },
+        {
+          "id": "R-REC-BT.2408-8",
+          "undated": true
+        },
+        {
+          "id": "orphan/SMPTE.ST2094-50.2026-08/h:158060dd",
+          "undated": true
+        },
+        {
+          "id": "orphan/SMPTE.ST2094-50.2026-08/h:222d9e19",
+          "undated": true
+        }
+      ]
+    },
+    "referenceTree": [
+      "10.1137-0905021",
+      "10.5594-j18290",
+      "IEC.61966-2-1.1999",
+      "ISO.11664-1.2019",
+      "ISO.11664-3.2012",
+      "ISO.14496-12.2022",
+      "ISO.21496-1.2025",
+      "R-REC-BT.1886",
+      "R-REC-BT.1886-0",
+      "R-REC-BT.2020-2.201510",
+      "R-REC-BT.2035-0",
+      "R-REC-BT.2035.201307",
+      "R-REC-BT.2100-3",
+      "R-REC-BT.2408-8",
+      "R-REC-BT.709-6.201506",
+      "SMPTE.RP431-2.2011",
+      "SMPTE.ST2084.2014",
+      "SMPTE.ST2094-1.2016",
+      "SMPTE.ST2113.2018",
+      "SMPTE.ST292-1.2012",
+      "T-REC-T.35",
+      "orphan/SMPTE.ST2084.2014/ref-bib-5",
+      "orphan/SMPTE.ST2094-50.2026-08/h:158060dd",
+      "orphan/SMPTE.ST2094-50.2026-08/h:222d9e19"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
   },
   {
     "approvalDate": "2025-12-09",
@@ -75422,7 +75561,8 @@
       "SMPTE.ST2067-21.2020Am1.2020",
       "SMPTE.ST2067-21.2022",
       "SMPTE.ST2067-21.2023-02",
-      "SMPTE.ST2067-40.2021"
+      "SMPTE.ST2067-40.2021",
+      "SMPTE.ST2094-50.2026-08"
     ],
     "docDependancy": true,
     "currentStatus": "Active, Stabilized"

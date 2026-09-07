@@ -1,9 +1,9 @@
 {
   "$schema": "/api/schemas/documents.schema.json",
   "apiVersion": "2.0.0",
-  "generatedAt": "2026-08-31T11:14:46.134Z",
+  "generatedAt": "2026-09-07T09:38:20.127Z",
   "sourcePath": "src/main/data/docs",
-  "total": 26790,
+  "total": 26791,
   "note": "Index only. Fetch /api/doc/{docId}.json for the full record with $meta provenance.",
   "documents": [
     {
@@ -234094,6 +234094,14 @@
       "docLabel": "SMPTE ST 2094-40:2020",
       "docTitle": "Application #4",
       "path": "/api/doc/SMPTE.ST2094-40.2020.json"
+    },
+    {
+      "docId": "SMPTE.ST2094-50.2026-08",
+      "publisher": "SMPTE",
+      "docType": "Standard",
+      "docLabel": "SMPTE ST 2094-50:2026-08",
+      "docTitle": "Application #5",
+      "path": "/api/doc/SMPTE.ST2094-50.2026-08.json"
     },
     {
       "docId": "SMPTE.ST2094-60.2025-12",
