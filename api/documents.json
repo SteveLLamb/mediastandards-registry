@@ -1,9 +1,9 @@
 {
   "$schema": "/api/schemas/documents.schema.json",
   "apiVersion": "2.0.0",
-  "generatedAt": "2026-09-08T16:54:34.061Z",
+  "generatedAt": "2026-09-08T17:30:50.966Z",
   "sourcePath": "src/main/data/docs",
-  "total": 26789,
+  "total": 26791,
   "note": "Index only. Fetch /api/doc/{docId}.json for the full record with $meta provenance.",
   "documents": [
     {
@@ -234096,6 +234096,14 @@
       "path": "/api/doc/SMPTE.ST2094-40.2020.json"
     },
     {
+      "docId": "SMPTE.ST2094-50.2026-08",
+      "publisher": "SMPTE",
+      "docType": "Standard",
+      "docLabel": "SMPTE ST 2094-50:2026-08",
+      "docTitle": "Application #5",
+      "path": "/api/doc/SMPTE.ST2094-50.2026-08.json"
+    },
+    {
       "docId": "SMPTE.ST2094-60.2025-12",
       "publisher": "SMPTE",
       "docType": "Standard",
@@ -234582,6 +234590,14 @@
       "docLabel": "SMPTE ST 2127-2:2024-03",
       "docTitle": "Mapping MGA Audio Metadata to ST 2110-41",
       "path": "/api/doc/SMPTE.ST2127-2.2024-03.json"
+    },
+    {
+      "docId": "SMPTE.ST2128.2026-07",
+      "publisher": "SMPTE",
+      "docType": "Standard",
+      "docLabel": "SMPTE ST 2128:2026-07",
+      "docTitle": "BT.2100 RGB Conversion to IPT-PQ-C2 Color Space for High Dynamic Range and Wide Color Gamut Images",
+      "path": "/api/doc/SMPTE.ST2128.2026-07.json"
     },
     {
       "docId": "SMPTE.ST2131.2026-05",
