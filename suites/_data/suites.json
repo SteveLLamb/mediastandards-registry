@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-20T19:47:12.433Z",
+  "generatedAt": "2026-09-08T17:36:33.802Z",
   "sourcePath": "src/main/data/docs",
-  "sourceHash": "sha256:e821295f97a0691161be42a89503eb5460a9ae55a28c72e1a2b8b4f3ca9920a9",
+  "sourceHash": "sha256:48bc3fe16c032fbc6ecffac5485a6c0450876780a2cc9e69926a7212ec8fa085",
   "suites": [
     {
       "key": "AES|3",
@@ -7251,6 +7251,7 @@
         "20",
         "30",
         "40",
+        "50",
         "60"
       ],
       "lineages": [
@@ -7261,12 +7262,13 @@
         "SMPTE|ST|2094|20",
         "SMPTE|ST|2094|30",
         "SMPTE|ST|2094|40",
+        "SMPTE|ST|2094|50",
         "SMPTE|ST|2094|60"
       ],
       "suiteTitle": "Dynamic Metadata for Color Volume Transform",
-      "latestAnyId": "SMPTE.ST2094-60.2025-12",
-      "latestAnyLineageKey": "SMPTE|ST|2094|60",
-      "latestDateKey": "20251209",
+      "latestAnyId": "SMPTE.ST2094-50.2026-08",
+      "latestAnyLineageKey": "SMPTE|ST|2094|50",
+      "latestDateKey": "20260824",
       "hasActiveBase": true,
       "hasWithdrawn": false,
       "hasStabilized": true,
@@ -7316,6 +7318,12 @@
           "dateKey": "20200409",
           "withdrawn": false
         },
+        "50": {
+          "docId": "SMPTE.ST2094-50.2026-08",
+          "lineageKey": "SMPTE|ST|2094|50",
+          "dateKey": "20260824",
+          "withdrawn": false
+        },
         "60": {
           "docId": "SMPTE.ST2094-60.2025-12",
           "lineageKey": "SMPTE|ST|2094|60",
@@ -7331,13 +7339,14 @@
         "SMPTE.ST2094-20.2016",
         "SMPTE.ST2094-30.2016",
         "SMPTE.ST2094-40.2020",
+        "SMPTE.ST2094-50.2026-08",
         "SMPTE.ST2094-60.2025-12"
       ],
       "counts": {
-        "lineages": 8,
-        "parts": 8,
-        "docs": 12,
-        "bases": 12,
+        "lineages": 9,
+        "parts": 9,
+        "docs": 13,
+        "bases": 13,
         "amendments": 0,
         "supplements": 0
       },
