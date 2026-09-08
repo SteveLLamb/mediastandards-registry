@@ -1,6 +1,6 @@
 # FTXML reference apply — backfill onto the 491 ingested docs
 
-> DRY-RUN · 2026-07-20T17:25:52.998Z
+> APPLY · 2026-08-10T17:55:35.307Z
 
 ## Totals
 - FTXML files with refs      : 168
@@ -9,7 +9,7 @@
 - → canonical refId (direct link) : **40** (40 resolve to a registry doc)
 - → orphan slug (MRI, EXTERNAL badge) : **2955**
 - unmapped FTXML files       : 0
-- docs written               : 0
+- docs written               : 167
 
 ## By resolution path
 | path | refs |
