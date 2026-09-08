@@ -1,0 +1,220 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-M00414",
+  "document": {
+    "abstract": "Producers of news, sports and on-location drama television programs strive to make their shows more interesting and immediate. A technique that is becoming increasingly popular is to use a mobile television camera and microwave links to convey the picture and sound back to the control point. The limited number of microwave channels available for this purpose can be supplemented with optical links over unobstructed paths of a kilometer or less. FCC authorization is not required but the light beams must be safe in the environment.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Backfilled from SMPTE canonical repository (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "CBS Technology Center, Stamford, Connecticut",
+        "bio": "Abraham Albert Goldberg is Associate Director, Television Research, at the CBS Technology Center in Stamford, Conn. He has been developing color television systems for 34 years, starting with the field sequential system and extending to digital television today. He holds 26 patents in these fields. Mr. Goldberg serves on the followingcommittees: U.S. delegate of CMTTto set standards for the international transmission oftelevision signals, the European Broadcasting Union Working Party Cl, a member ofthe SMPTE Television Technology Committee, and Chairman ofthe Digital Technology Subcommittee ofthe IEEE Broadcasting Group. He is a seniormemberofthe IEEE, a fellow ofthe SMPTE, and a registered professional engineer.",
+        "name": "A. A. Goldberg"
+      },
+      {
+        "affiliation": "CBS Technology Center, Stamford, Connecticut",
+        "bio": "Stefan Juchnowycz is a Senior Project Engineer with the CBS Technology Center in Stamford, Connecticut. He was born in 1924 and received his M.Sc. in Physics from the University of Connecticut in 1972. From 1956 to 1957, he was Process Engineer in the Semiconductor Division, Mullard Corp., in London, England. From 1957 to 1963, he was Research Physicist with International Philips in Toronto, Canada. He joined CBS Laboratories in Stamford, Conn. in 1963 as Project Engineer in the Electron Physics Department. He was Group Leader on projects affiliated with the “Lunar Orbiter Program” and the first “Mariner” flight to Mars. His present activities are in microwaves, electromagnetic propagation, antennas and lasers and their application to ENG.",
+        "name": "S. Juchnowycz"
+      },
+      {
+        "affiliation": "CBS Technology Center, Stamford, Connecticut",
+        "bio": "John Rossi has been active since 1968 in the design and development of TV circuitsin the Special TV Projects Branch at CBS Laboratories, now CBS Technology Center. In 1972, he joined the digital television study program which, under the sponsorship of CBS Inc. and the CBS Television Network, hasbeen involvedin a long-range development of digital techniques in television. This includes digital color decoding and image enhancement, adaptive comb filtering, sub-Nyquist encoding of NTSC color TV signals, digital-to-digital conversion, noise reduction, and special effects generation. Presently, he is a Senior Project Engineer in the Advanced Television Technology Department of the CBS Technology Center.",
+        "name": "J. Rossi"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Canonical-confirmed full paper (summary-abstract set is orig-research in the SMPTE canonical repos); HIGHWIRE-era abstract label was a delivery artifact",
+      "originalValue": "summary-abstract",
+      "source": "resolved",
+      "updated": "2026-07-09T19:12:47.628Z",
+      "version": "contenttype-fixes@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00414.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      },
+      "year": "1978",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00414.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00414.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docId": "10.5594-M00414",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/M00414",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docLabel": "SMPTE Meetings and Conferences ( November 1978)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docTitle": "Optical Television Link Employing a Digitally Modulated Laser",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00414.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docType": "Conference Paper",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE conference paper",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "doi": "10.5594/M00414",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00414.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/M00414",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/M00414",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "number": "20",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00414.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "pages": "15–33",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00414.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publicationDate": "1978-11-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00414.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00414.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "10.5594-J10567",
+        "10.5594-J13463",
+        "10.5594-J06851",
+        "orphan/10.5594-J06660/bibr7-10.5594_J06660",
+        "10.5594-J08121",
+        "orphan/10.5594-M00414/bibr1-10.5594_M00414",
+        "orphan/10.5594-M00414/bibr2-10.5594_M00414",
+        "orphan/10.5594-M00414/bibr6-10.5594_M00414",
+        "orphan/10.5594-M00414/bibr8-10.5594_M00414",
+        "orphan/10.5594-M00414/bibr9-10.5594_M00414",
+        "orphan/10.5594-M00414/bibr11-10.5594_M00414"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteConferenceRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T20:02:43.384Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/conferences/Digital%20Video%20Volume%202:%20120th%20SMPTE%20Technical%20Conference/3/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.439Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — conference papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "volume": "1978",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00414.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    }
+  }
+}

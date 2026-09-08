@@ -1,0 +1,318 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-J17642",
+  "document": {
+    "abbrevTitle": "SMPTE J",
+    "abbrevTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17642.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "abstract": "This paper intends to give a thorough overview of the technical activities carried out within the DVBird project (digital video broadcasting integrated receiver decoder), in the framework of the European Programme ACTS (Advanced Communications Technologies and Services), sponsored by the European Commission. The project results achieved in the design of the digital front-end stage of a receiver conforming to the new “DVB-T” European standard for over-the-air TV broadcasting are highlighted. This DVB-T standard is based on the COFDM (coded orthogonal frequency division multiplexing) technique and is the result of the technical efforts dedicated to the definition of a digital terrestrial television system in past years in Europe. An optimized channel decoder architecture, taking advantage of the most recent VLSI technologies in order to achieve a cost-effective solution for the receiver (or set-top box), is proposed. This work is carried out to encourage early introduction of a digital terrestrial television service in Europe, expected by the beginning of 1998, while the demonstrator is planned for extensive field trials in the second half of 1997. The four-chip prototype is based on state-of-the-art complementary metal oxide semiconductor (CMOS) 0.5-pm, 3.3-V, 3-metal-layer very large scale integration",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17642.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "SGS-Thomson Microelectronics, Agrate, Italy",
+        "bio": "Fabio Scalise receivcd a degree in electronics in 1990 from the Politecnico Milano. In the same year he joined the Corporate Advanced System Architectures of SGS-Thomson Microeletronics. In the past he has been involved in HD-MAC decoders and motion compensation IC's design. From 1992 until 1995 he participated in the RACE dTTb project, dealing with complexity estimation of terrestrial digital TV decoders. Since January 1996 he has been the coordinator of the European ACTS DVBird project. He is author of several papers and holds one patent.",
+        "name": "F. Scalise"
+      },
+      {
+        "affiliation": "Seleco Multimedia, Italy",
+        "bio": "Marino Balanza received a full degree as a systems engineer from the University of Padova in 1988. For the past six years he has been involved in the design of hardware architectures for high-definition video systems, in the research of motion analysis as an ASIC designer, and as a digital systems engineer. From 1990–1996 he was active in the European cooperative projects EU-95 HD-MAC, RACE 2055, Transit and JESSI AE45B IQTV, RACE 2082 dTTb, AC010 MUSISAT, and ACT108 DVBird, as a senior engineer and project manager. Mario was also involved in the standardization activities of ISO/IECJTC1/SC29 (MPEG-2) Italian National Committee and EACEM. Presently he is product manager for digital decoders (STB) and multimedia applications at Seleco Italtel Multimedia.",
+        "name": "M. Balanza"
+      },
+      {
+        "affiliation": "Laboratoires d'Electronique Philips, France",
+        "bio": "Nicolas Chauve received a degree in electrical engineering from Ecole Superieur d'lngenieurs en Electronique et Electrotechnique in 1994, specializing in computer sciences and micro-electronics. He worked for two years at Laboratoires d'Electronique Philips as a research engineer on IC architecture for digital communications, where he was involved in the algorithms and IC architecture definition for the DVB-T system. Chauve joined Texas Instruments in October 1996 to work on wireless IC design. His main interests are digital communications, system architecture for digital signal processing, and IC design.",
+        "name": "N. Chauve"
+      },
+      {
+        "affiliation": "The Centre Commun d'Etudes de Telecommunications et Telediffusion, France",
+        "bio": "Pierre Combelles graduated from the Ecole Polytechnique (Palaiseau, France) in 1989 and from the Ecole Nationale Superieure des Telecommunications (Paris) in 1991. Since then he has been with the CCETT (France Telecom-CNET), working on digital terrestrial broadcasting, with an emphasis on channel coding and modulation. He was involved in the RACE project dTTb on digital television terrestrial broadcasting. Since 1996, he has been involved in the ACTS DVBird project, in charge of the WPI group, for the specification of the VLSI implementing a DVB-T receiver.",
+        "name": "P. Combelles"
+      },
+      {
+        "affiliation": "The Centre Commun d'Etudes de Telecommunications et Telediffusion, France",
+        "bio": "Pierre Penard joined the IC design team of the Centre Commun d'Etudes de Telediffusion et Telecommunications (CCETT), Cesson Sevigne, France, in 1982, and was involved in the design of smart-memory-based circuits for video and ISDN applications. Since that time he has designed several digital circuits in the field of image coding and signal processing, especially for HDTV applications. He is currently working on the design of VLSIs for channel coding and signal processing, specifically for HDTV applications and on the design of BLSIs for channel coding in digital broadcasting systems. Penard is a member of the ACTS DVBird WP2 group.",
+        "name": "P. Penard"
+      },
+      {
+        "affiliation": "France Telecom-CNET, France",
+        "bio": "Christophe Del Toso received an electrical engineering degree from the Institut National Polytechnique, Grenoble, France, in 1992. In 1993, he joined the Centre National d'Etudes et Telecommunications (France Telecom-CNET) to work on a Ph.D. degree in VLSI architecture for TV systems. Since 1996, Del Toso has been the CNET's representative in the European project ACTS108/DVBird. He is currently in charge of the specifications and the design of chip C1 (digital IQ and OFDM demodulation) and participates, with the CCETT, in the design of the back-end of chip C2 (channel estimation and correction). His research interests include digital TB broadcasting techniques, channel coding, and VLSI architectures.",
+        "name": "C. Del Toso"
+      },
+      {
+        "affiliation": "Deutsche Thomson Brandt, Germany",
+        "bio": "Dietmar Hepper is senior development engineer in the corporate business development, innovation, and research department of Thomson Multimedia, Hannover, Germany, acting as a project leader in the field of multimedia and digital broadcasting. His experience includes source coding techniques for applications from videophone to HDTV, and digital transmission of audiovisual information. He has contributed to MPEG and DVB-T standardization. He holds a Dipl.-Ing. degree in electrical engineering from the University of Hannover.",
+        "name": "D. Hepper"
+      },
+      {
+        "affiliation": "The Politecnico di Torino, Italy",
+        "bio": "Guido Masera received the Dr. Ing. degree (summa cum laude) in 1986, and the Ph.D. degree in electronic engineering from Politecnico di Torino, Italy, in 1992. From 1986 to 1988 he was with CSELT (Centro Studi e Laboratori in Telecommunicazioni, Torino) where he was involved in the standardization of GSM European radio mobile systems. Since 1988 he has been with the electronics department of Politecnico di Torino, first as a Ph.D. student then as a staff engineer and researcher. He has been involved in national and European research projects, and is the co-designer of several VLSI devices in the fields of artificial intelligence, communications networks, digital signal processing, and digital transmission on noisy channels. His current research interests are in the areas of VLSI digital circuit design for telecommunication, algorithms and models for the speed optimization of digital circuits implemented with standard CMOS process technologies, and design of very high speed standard CMOS circuits.",
+        "name": "G. Masera"
+      },
+      {
+        "affiliation": "Matra Communication, France",
+        "bio": "Charles Hernandez is the associate director of image activity of Matra Communication in charge of the advanced research projects department. His current concerns are access control module development for MEPG-2 DVB set-top boxes and TV sets and knowledge of COFMD technology. He joined the Compagnie Continentale de Signalisation in 1978, where he was in charge of setting up the videographic activity of the company, thus enhancing his knowledge in the fields of teletext, data broadcast, and access control systems for headend equipment and receivers. He joined the technical staff of Matra Communication in 1987. There he dealt with D-2, MAC, and data broadcast activities; then he ensured the development of MPEG-2-DVB equipment.",
+        "name": "C. Hernandez"
+      },
+      {
+        "affiliation": "Comatlas, France",
+        "bio": "Frederic Nicolas graduated from the Ecole Nationale Superieure des Telecommunications, Brest, France, in 1991 and joined the telecommunication division of SOREP, as ASIC conceptor. He participated in the creation of ComAtlas in 1994, now a subsidiary of VLSI Technology. His work focuses on system simulations and VLSI implementations for digital communications, essentially for DVB standard products, mainly in the field of forward error-correction, and OFDM demodulation.",
+        "name": "F. Nicolas"
+      },
+      {
+        "affiliation": "Comatlas, France",
+        "bio": "David Le Goff received an engineering degree in computer science and communication from the IFSIC (Rennes University I) in 1994. Since 1994 he has been working at ComAtlas on simulations and VLSI implementations for digital communications, after first working on DVB-C QAM equalization. Since 1996 his work has focused on the DVB-T COFDM standard.",
+        "name": "D. Le Goff"
+      },
+      {
+        "affiliation": "The German Aerospace Establishment, Germany",
+        "bio": "Patrick Robertson received the Dipl.-Ing. degree in electrical engineering from the Technical University of Munich, in 1989, and a Ph.D. from the University of the Federal Armed Forces, Munich, in 1995. Since 1990 he has been working at the Institute for Communications Technology of the German Aerospace Research Establishment (DLR) in Oberpfaffenhofen, Germany. His research interests include synchronization and channel coding in radio communications.",
+        "name": "P. Robertson"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from SMPTE canonical repository import (smpte-canonical-audit/canonicalLibrary.*.json); previous value was a placeholder",
+      "originalValue": "other",
+      "source": "parsed",
+      "updated": "2026-07-07T23:39:31.295Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17642.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "year": "1997",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17642.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17642.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docId": "10.5594-J17642",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/J17642",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docLabel": "SMPTE Journal ( Volume: 106, Issue: 11, November 1997)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docTitle": "A Prototype VLSI Solution for Digital Terrestrial TV Receivers Conforming to the DVB-T Standard",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17642.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "doi": "10.5594/J17642",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17642.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/J17642",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/J17642",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "issn": {
+      "print": "0036-1682",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17642.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17642.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/07132015 BACKFILE FOR JOURNAL/smptej_106_11/MIJR15Vol106No11.xml)",
+      "source": "parsed",
+      "updated": "2026-06-17T00:17:09.425Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "SMPTE Journal",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "11",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17642.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "pages": "768–776",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17642.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publicationDate": "1997-11-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17642.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/07132015 BACKFILE FOR JOURNAL/smptej_106_11/MIJR15Vol106No11.xml)",
+        "source": "parsed",
+        "updated": "2026-06-17T00:17:09.425Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17642.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-J17642/bibr1-10.5594_J17642",
+        "orphan/10.5594-J17642/bibr2-10.5594_J17642",
+        "orphan/10.5594-J17642/bibr3-10.5594_J17642",
+        "orphan/10.5594-J17642/bibr4-10.5594_J17642",
+        "orphan/10.5594-J17642/bibr5-10.5594_J17642",
+        "orphan/10.5594-J17642/bibr6-10.5594_J17642",
+        "orphan/10.5594-J17642/bibr7-10.5594_J17642",
+        "orphan/10.5594-J17642/bibr8-10.5594_J17642",
+        "orphan/10.5594-J17642/bibr9-10.5594_J17642",
+        "orphan/10.5594-J17642/bibr10-10.5594_J17642",
+        "orphan/10.5594-J17642/bibr11-10.5594_J17642",
+        "orphan/10.5594-J17642/bibr12-10.5594_J17642",
+        "orphan/10.5594-J17642/bibr13-10.5594_J17642",
+        "orphan/10.5594-J17642/bibr14-10.5594_J17642",
+        "orphan/10.5594-J17642/bibr15-10.5594_J17642"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteJournalRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T18:21:02.558Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/SMPTE%20Journal/106/11/7/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.436Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — journal papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "volume": "106",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17642.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    }
+  }
+}

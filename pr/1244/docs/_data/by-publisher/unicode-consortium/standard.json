@@ -1,0 +1,115 @@
+[
+  {
+    "docId": "UNICODE.STD.13.0.0",
+    "docLabel": "Unicode 13.0.0",
+    "docTitle": "The Unicode Standard",
+    "docType": "Standard",
+    "href": "http://www.unicode.org/versions/Unicode13.0.0/",
+    "publicationDate": "2010-03-10",
+    "publisher": "Unicode Consortium",
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "UNICODE.STD.13.0.0",
+    "msiLatestBase": "UNICODE.STD.13.0.0",
+    "isLatestAny": true,
+    "docBase": "UNICODE CONSORTIUM|STD||",
+    "docBaseLabel": "UNICODE CONSORTIUM STD",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "UNICODE.STD.5.1.0",
+        "docLabel": "Unicode 5.1.0",
+        "href": "http://www.unicode.org/versions/Unicode5.1.0/",
+        "publicationDate": "2008-04-04",
+        "status": {
+          "active": false,
+          "superseded": true,
+          "supersededBy": [
+            "UNICODE.STD.13.0.0"
+          ],
+          "latestVersion": false
+        },
+        "isLatestBase": false,
+        "__isNewestInBase": false
+      },
+      {
+        "docId": "UNICODE.STD.13.0.0",
+        "docLabel": "Unicode 13.0.0",
+        "href": "http://www.unicode.org/versions/Unicode13.0.0/",
+        "publicationDate": "2010-03-10",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "docDependancy": false,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "UNICODE.STD.5.1.0",
+    "docLabel": "Unicode 5.1.0",
+    "docTitle": "The Unicode Standard",
+    "docType": "Standard",
+    "href": "http://www.unicode.org/versions/Unicode5.1.0/",
+    "publicationDate": "2008-04-04",
+    "publisher": "Unicode Consortium",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "UNICODE.STD.13.0.0"
+      ],
+      "latestVersion": false
+    },
+    "msiLatestAny": "UNICODE.STD.13.0.0",
+    "msiLatestBase": "UNICODE.STD.13.0.0",
+    "isLatestAny": false,
+    "docBase": "UNICODE CONSORTIUM|STD||",
+    "docBaseLabel": "UNICODE CONSORTIUM STD",
+    "isLatestBase": false,
+    "docVersion": [
+      {
+        "docId": "UNICODE.STD.5.1.0",
+        "docLabel": "Unicode 5.1.0",
+        "href": "http://www.unicode.org/versions/Unicode5.1.0/",
+        "publicationDate": "2008-04-04",
+        "status": {
+          "active": false,
+          "superseded": true,
+          "supersededBy": [
+            "UNICODE.STD.13.0.0"
+          ],
+          "latestVersion": false
+        },
+        "isLatestBase": false,
+        "__isNewestInBase": false
+      },
+      {
+        "docId": "UNICODE.STD.13.0.0",
+        "docLabel": "Unicode 13.0.0",
+        "href": "http://www.unicode.org/versions/Unicode13.0.0/",
+        "publicationDate": "2010-03-10",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "SMPTE.RDD18.2010",
+      "SMPTE.RDD18.2012",
+      "SMPTE.ST2003.2012",
+      "SMPTE.ST335.2012"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Superseded"
+  }
+]

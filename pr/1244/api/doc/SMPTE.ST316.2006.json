@@ -1,0 +1,348 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST316.2006",
+  "document": {
+    "abstract": "This standard specifies the content, format, and recording method of the data blocks containing video, audio, and associated data that form the helical records on 12.65-mm tape in cassettes. In addition, it specifies the content, format, and recording method of the longitudinal record containing tracking information for the scanning head associated with the helical records, cue audio, and control tracks. — One video channel and four independent audio channels are recorded in the digital format. Each of these channels is capable of independent editing. — The video channel records and reproduces a component television signal in the 525-line system with a frame frequency of 29.97 Hz (hereafter referred to as the 525/60 system) and the 625-line system with a frame frequency of 25 Hz (hereafter referred to as the 625/50 system). — Intraframe bit-rate reduction is applied to video data prior to recording.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-316-2006_1/st0316-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.851Z"
+    },
+    "approvalDate": "2006-06-23",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-316-2006_1/st0316-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.851Z"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-316-2006_1/st0316-2006.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.851Z"
+      },
+      "year": "2006",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-316-2006_1/st0316-2006.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.851Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-316-2006_1/st0316-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.851Z"
+    },
+    "docId": "SMPTE.ST316.2006",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st316/20060623-pub/",
+      "updated": "2025-10-12T23:29:04.520Z"
+    },
+    "docLabel": "SMPTE ST 316:2006",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st316/20060623-pub/",
+      "updated": "2025-10-12T23:29:04.520Z"
+    },
+    "docNumber": "316",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st316/20060623-pub/",
+      "updated": "2025-10-12T23:29:04.520Z"
+    },
+    "docSuiteTitle": "Television Digital Recording",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-12-12T21:24:38.867Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docTitle": "12.65-mm Type D-9 Component Format - Video Compression - 525/60 and 625/50",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": "Television Digital Recording - 12.65-mm Type D-9 Component Format - Video Compression - 525/60 and 625/50",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-12-12T21:24:38.867Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st316/20060623-pub/",
+      "updated": "2025-10-12T23:29:04.520Z"
+    },
+    "doi": "10.5594/SMPTE.ST316.2006",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st316/20060623-pub/",
+      "updated": "2025-10-12T23:29:04.520Z"
+    },
+    "familyId": "316",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-316-2006_1/st0316-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.851Z"
+    },
+    "group": "smpte-24tb-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-316-2006_1/st0316-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.851Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST316.2006",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st316/20060623-pub/",
+      "updated": "2025-10-12T23:29:04.520Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.160.99",
+        "description": "Other audio, video and audiovisual equipment"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-316-2006_1/st0316-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.851Z"
+    },
+    "isbn": "978-1-61482-456-5",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-316-2006_1/st0316-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.851Z"
+    },
+    "keywords": [
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Recording",
+      "Television",
+      "Tape"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-316-2006_1/st0316-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.851Z"
+    },
+    "numberOfPages": "96",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–96",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-316-2006_1/st0316-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.851Z"
+    },
+    "productNumber": "SSD001457",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-316-2006_1/st0316-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.851Z"
+    },
+    "publicationDate": "2006-06-23",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st316/20060623-pub/",
+      "updated": "2025-10-12T23:29:04.520Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st316/20060623-pub/",
+      "updated": "2025-10-12T23:29:04.520Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-316-2006_1/st0316-2006.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.851Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-316-2006_1/st0316-2006.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.851Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-316-2006_1/st0316-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.851Z"
+    },
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST125.1995",
+        "SMPTE.ST317.1999",
+        "SMPTE.RP155.2004",
+        "T-REC-J.17",
+        "IEC.60735",
+        "ISO.2110.1989",
+        "SMPTE.ST259.2006",
+        "R-REC-BS.647-2"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-18T23:48:48.871Z"
+      },
+      "normative": [
+        "SMPTE.ST12.1999",
+        "R-REC-BT.470-7",
+        "R-REC-BT.471-1",
+        "R-REC-BT.601-5"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-18T23:48:48.871Z"
+      }
+    },
+    "releaseTag": "20060623-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st316/20060623-pub/",
+      "updated": "2025-10-12T23:29:04.520Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/st316/20060623-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000008kbv",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-30T22:51:39.263Z",
+      "version": "extractDocs.js@commit:ee2844fb1cf2"
+    },
+    "standardId": "20711",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-316-2006_1/st0316-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.851Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T23:29:04.520Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-12T23:29:04.520Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T23:29:04.520Z"
+      },
+      "reaffirmDate": "2019-06-19",
+      "reaffirmDate$meta": {
+        "confidence": "high",
+        "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+        "source": "parsed",
+        "updated": "2026-06-15T20:13:55.508Z",
+        "version": "smpte-zoho-standards@v1"
+      },
+      "stabilized": true,
+      "stabilized$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #state",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-12T23:29:04.520Z"
+      },
+      "stabilizedDate": "2019-06-19",
+      "stabilizedDate$meta": {
+        "confidence": "high",
+        "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+        "source": "parsed",
+        "updated": "2026-06-15T20:17:48.985Z",
+        "version": "smpte-zoho-standards@v1"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T23:29:04.520Z"
+      }
+    }
+  }
+}

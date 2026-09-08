@@ -1,0 +1,267 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "RFC2048",
+  "document": {
+    "abstract": "This set of documents, collectively called the Multipurpose Internet Mail Extensions, or MIME, redefines the format of messages. This fourth document, RFC 2048, specifies various IANA registration procedures for some MIME facilities. This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML abstract",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2048/",
+      "updated": "2026-03-03T05:38:21.138Z",
+      "version": "extractDocs.js@commit:9fd18c141c50"
+    },
+    "authors": [
+      {
+        "name": "Dr. Jon Postel"
+      },
+      {
+        "name": "Dr. John C. Klensin"
+      },
+      {
+        "name": "Ned Freed"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2048/",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "docId": "RFC2048",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from RFC number or Datatracker identifier",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2048/",
+      "updated": "2026-03-03T05:38:21.138Z",
+      "version": "extractDocs.js@commit:9fd18c141c50"
+    },
+    "docLabel": "IETF RFC 2048",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from provider and document identifier",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2048/",
+      "updated": "2026-03-03T05:38:21.138Z",
+      "version": "extractDocs.js@commit:9fd18c141c50"
+    },
+    "docNumber": "2048",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML technical report metadata",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2048/",
+      "updated": "2026-03-03T05:38:21.138Z",
+      "version": "extractDocs.js@commit:9fd18c141c50"
+    },
+    "docTitle": "Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2048/",
+      "updated": "2026-03-03T05:38:21.138Z",
+      "version": "extractDocs.js@commit:9fd18c141c50"
+    },
+    "docType": "Best Practice",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Mapped from Datatracker std_level or RFC status text",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2048/",
+      "updated": "2026-03-03T05:38:21.138Z",
+      "version": "extractDocs.js@commit:9fd18c141c50"
+    },
+    "doi": "10.17487/RFC2048",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML doi",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2048/",
+      "updated": "2026-03-03T05:38:21.138Z",
+      "version": "extractDocs.js@commit:9fd18c141c50"
+    },
+    "href": "https://doi.org/10.17487/RFC2048",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI (https://doi.org/<doi>)",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2048/",
+      "updated": "2026-03-03T05:38:21.138Z",
+      "version": "extractDocs.js@commit:9fd18c141c50"
+    },
+    "issn": "2070-1721",
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML citation_issn",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2048/",
+      "updated": "2026-03-03T05:38:21.138Z",
+      "version": "extractDocs.js@commit:9fd18c141c50"
+    },
+    "keywords": [
+      "Media",
+      "Types",
+      "External",
+      "Body",
+      "Access",
+      "Content-transfer-encodings"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML keywords",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2048/",
+      "updated": "2026-03-03T05:38:21.138Z",
+      "version": "extractDocs.js@commit:9fd18c141c50"
+    },
+    "pages": "21",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML page-count",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2048/",
+      "updated": "2026-03-03T05:38:21.138Z",
+      "version": "extractDocs.js@commit:9fd18c141c50"
+    },
+    "publicationDate": "1996-11-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML date",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2048/",
+      "updated": "2026-03-03T05:38:21.138Z",
+      "version": "extractDocs.js@commit:9fd18c141c50"
+    },
+    "publisher": "IETF",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Static: provider",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2048/",
+      "updated": "2026-03-03T05:38:21.138Z",
+      "version": "extractDocs.js@commit:9fd18c141c50"
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc2048",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2048/",
+      "updated": "2026-03-03T05:38:21.138Z",
+      "version": "extractDocs.js@commit:9fd18c141c50"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc2048/",
+        "updated": "2026-03-03T05:38:21.138Z",
+        "version": "extractDocs.js@commit:9fd18c141c50"
+      },
+      "amendedBy": [
+        "RFC3023"
+      ],
+      "amendedBy$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC index XML and RFC info relation <dl>",
+        "originalValue": [],
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc2048/",
+        "updated": "2026-03-03T05:38:21.138Z",
+        "version": "extractDocs.js@commit:9fd18c141c50"
+      },
+      "errataExist": false,
+      "errataExist$meta": {
+        "confidence": "high",
+        "note": "Derived from presence of errata links on RFC/Datatracker pages",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc2048/",
+        "updated": "2026-03-03T05:38:21.138Z",
+        "version": "extractDocs.js@commit:9fd18c141c50"
+      },
+      "latestVersion": false,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc2048/",
+        "updated": "2026-03-03T05:38:21.138Z",
+        "version": "extractDocs.js@commit:9fd18c141c50"
+      },
+      "statusNote": "Best Current Practice",
+      "statusNote$meta": {
+        "confidence": "high",
+        "note": "Mapped from Datatracker doc.json std_level",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc2048/",
+        "updated": "2026-03-03T05:38:21.138Z",
+        "version": "extractDocs.js@commit:9fd18c141c50"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc2048/",
+        "updated": "2026-03-03T05:38:21.138Z",
+        "version": "extractDocs.js@commit:9fd18c141c50"
+      },
+      "supersededBy": [
+        "RFC4288",
+        "RFC4289"
+      ],
+      "supersededBy$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC index XML and RFC info relation <dl>",
+        "originalValue": [],
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc2048/",
+        "updated": "2026-03-03T05:38:21.138Z",
+        "version": "extractDocs.js@commit:9fd18c141c50"
+      },
+      "supersedes": [
+        "RFC1521",
+        "RFC1522",
+        "RFC1590"
+      ],
+      "supersedes$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC index XML and RFC info relation <dl>",
+        "originalValue": [],
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc2048/",
+        "updated": "2026-03-03T05:38:21.138Z",
+        "version": "extractDocs.js@commit:9fd18c141c50"
+      }
+    }
+  }
+}

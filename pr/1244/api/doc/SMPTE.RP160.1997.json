@@ -1,0 +1,320 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.RP160.1997",
+  "document": {
+    "abstract": "(1.1) This practice defines the physical characteristics of an interface using three parallel channels for the interconnection of equipment operating with analog component HDTV signals. For ANSI/SMPTE 240M, the signals carried across this interface have a scanning structure of 1125 lines, 60.00 fields per second, 16:9 aspect ratio, and 2:1 interlace. This interface is also appropriate for HDTV signals having other scanning structures. (1.2) The intended uses of this interface are: – to interconnect the elements of parallel analog HDTV video subsystems which use the same component sets within larger component islands or plants. Component HDTV editing and post-production suites are examples of such subsystems; – to interconnect equipment into complete, self-contained HDTV analog component systems of relatively small size. (1.3) This practice applies to signals carried on the connectors described in 7.1 and may not apply to component signals carried on other types of connectors. The practice also defines the preferred component video signals across the interface, including their waveform structure and levels.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-160-1997_1/rp0160-1997.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.838Z"
+    },
+    "approvalDate": "1997-06-01",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-160-1997_1/rp0160-1997.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.838Z"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-160-1997_1/rp0160-1997.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.838Z"
+      },
+      "year": "1997",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-160-1997_1/rp0160-1997.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.838Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-160-1997_1/rp0160-1997.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.838Z"
+    },
+    "docId": "SMPTE.RP160.1997",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rp160/19970601-pub/",
+      "updated": "2025-10-12T05:19:45.180Z"
+    },
+    "docLabel": "SMPTE RP 160:1997",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rp160/19970601-pub/",
+      "updated": "2025-10-12T05:19:45.180Z"
+    },
+    "docNumber": "160",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp160/19970601-pub/",
+      "updated": "2025-10-12T05:19:45.180Z"
+    },
+    "docTitle": "Three-Channel Parallel Analog Component High-Definition Video Interface",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp160/19970601-pub/",
+      "updated": "2025-10-12T05:19:45.180Z"
+    },
+    "docType": "Recommended Practice",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp160/19970601-pub/",
+      "updated": "2025-10-12T05:19:45.180Z"
+    },
+    "doi": "10.5594/SMPTE.RP160.1997",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rp160/19970601-pub/",
+      "updated": "2025-10-12T05:19:45.180Z"
+    },
+    "familyId": "160",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-160-1997_1/rp0160-1997.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.838Z"
+    },
+    "group": "smpte-32nf-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-160-1997_1/rp0160-1997.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.838Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.RP160.1997",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rp160/19970601-pub/",
+      "updated": "2025-10-12T05:19:45.180Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-160-1997_1/rp0160-1997.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.838Z"
+    },
+    "isbn": "978-1-61482-175-5",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-160-1997_1/rp0160-1997.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.838Z"
+    },
+    "keywords": [
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Interfaces",
+      "Television",
+      "HDTV"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Scrubbed against src/main/config/site.json controlledKeywords (auto-fix renames + drop noise)",
+      "originalValue": [
+        "Communication",
+        "Networking and Broadcast Technologies",
+        "Interfaces",
+        "Television",
+        "Interface",
+        "HDTV"
+      ],
+      "source": "parsed",
+      "updated": "2026-06-17T17:24:10.972Z",
+      "version": "kw-scrub@v1"
+    },
+    "numberOfPages": "6",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–6",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-160-1997_1/rp0160-1997.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.838Z"
+    },
+    "productNumber": "SSD001176",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-160-1997_1/rp0160-1997.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.838Z"
+    },
+    "publicationDate": "1997-06-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp160/19970601-pub/",
+      "updated": "2025-10-12T05:19:45.180Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp160/19970601-pub/",
+      "updated": "2025-10-12T05:19:45.180Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-160-1997_1/rp0160-1997.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.838Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-160-1997_1/rp0160-1997.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.838Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-160-1997_1/rp0160-1997.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.838Z"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/SMPTE.RP160.1997/ref-bib-1",
+        "orphan/SMPTE.RP160.1997/ref-bib-2"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Resolved from sibling -ref.xml via resolveSmpteSourceRefs.v2.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-06-22T23:05:50.315Z"
+      },
+      "normative": [
+        "SMPTE.ST240.1995"
+      ],
+      "normative$meta": {
+        "confidence": "medium",
+        "note": "Resolved from sibling -ref.xml via resolveSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-18T23:48:48.871Z"
+      }
+    },
+    "releaseTag": "19970601-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp160/19970601-pub/",
+      "updated": "2025-10-12T05:19:45.180Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/rp160/19970601-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000007NaX",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-30T22:50:29.992Z",
+      "version": "extractDocs.js@commit:ee2844fb1cf2"
+    },
+    "standardId": "20307",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-160-1997_1/rp0160-1997.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.838Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T05:19:45.180Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-12T05:19:45.180Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T05:19:45.180Z"
+      },
+      "stabilized": true,
+      "stabilized$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #state",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://pub.smpte.org/doc/rp160/19970601-pub/",
+        "updated": "2026-06-29T06:06:33.492Z",
+        "version": "extractDocs.js@commit:d070e710ccaa"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T05:19:45.180Z"
+      }
+    }
+  }
+}

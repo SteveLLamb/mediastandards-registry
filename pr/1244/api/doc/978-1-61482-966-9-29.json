@@ -1,0 +1,242 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "978-1-61482-966-9-29",
+  "document": {
+    "abstract": "With over 80% of global internet traffic attributed to video content, and tentpole movies averaging 2,840 tonnes of CO2 emissions, the media industry faces urgent sustainability challenges that will intensify with the increased adoption of AI in production workflows. The industry is embracing techniques such as Virtual Production (VP), and its wider adoption is expected to reduce the energy demands and carbon footprint. However, there are no existing standards or tools available to developers of visual processing algorithms, techniques and systems to assess the energy footprint of existing workflows in post-production and VP, or to guide the development of new algorithms and tools that are optimised for energy consumption. The main contribution of this work is to outline frameworks for monitoring the energy consumption of existing video processing pipelines using a set of software and hardware tools, and thus establish a standardised method to perform energy consumption measurements/profiling at runtime. Two different approaches for energy monitoring are presented to understand the current power requirements of standard VP hardware. The first approach uses deployable out-of-band monitoring interfaces for real-time monitoring and capacity planning. The second approach builds on profiling techniques to characterise the accuracy of on-device and on-chip power measurements, developing an invasive scheme to characterise the energy costs of mapping existing VP tasks to specific resources (CPU or GPU). Together, they enable runtime monitoring and granular characterisation to aid with energy-aware development and deployment of post-production and VP workflows.",
+    "abstract$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "authors": [
+      {
+        "name": "Hareesh Veekanchery"
+      },
+      {
+        "name": "Helios Lyons"
+      },
+      {
+        "name": "Philip Coulam-Jones"
+      },
+      {
+        "name": "Shreejith Shanker"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "copyright": {
+      "holder": "SMPTE",
+      "holder$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      },
+      "year": "2025",
+      "year$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docId": "978-1-61482-966-9-29",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docLabel": "MTS 2025, Article 29 (pp. 1 to 24)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docTitle": "Towards Energy Monitoring in Visual Processing Pipelines",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docType": "Conference Paper",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "isbn": {
+      "electronic": "978-1-61482-966-9",
+      "electronic$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "isbn$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "journalAcronym": "MTS",
+    "journalAcronym$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "journalTitle": "SMPTE 2025 Media Technology Summit",
+    "journalTitle$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "keywords": [
+      "Energy Efficiency",
+      "Virtual Production",
+      "Energy Monitoring"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Keywords conformed via keywordConformIngest.js — vocab/fold mapping (keywordVocabDecisions.json) + casing normalize; long-tail retained pending later triage.",
+      "source": "resolved",
+      "updated": "2026-07-10T22:58:01.636Z"
+    },
+    "pages": "1–24",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publicationDate": "2025-10-13",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publisherLocation": {
+      "city": "Pasadena, CA",
+      "city$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/978-1-61482-966-9-29/ref1",
+        "orphan/978-1-61482-966-9-29/ref2",
+        "orphan/978-1-61482-966-9-29/ref3",
+        "orphan/978-1-61482-966-9-29/ref4",
+        "orphan/978-1-61482-966-9-29/ref5",
+        "orphan/978-1-61482-966-9-29/ref6",
+        "orphan/978-1-61482-966-9-29/ref7",
+        "orphan/978-1-61482-966-9-29/ref8",
+        "orphan/978-1-61482-966-9-29/ref9",
+        "orphan/978-1-61482-966-9-29/ref10",
+        "orphan/978-1-61482-966-9-29/ref11",
+        "orphan/978-1-61482-966-9-29/ref12",
+        "orphan/978-1-61482-966-9-29/ref13",
+        "orphan/978-1-61482-966-9-29/ref14",
+        "orphan/978-1-61482-966-9-29/ref15",
+        "orphan/978-1-61482-966-9-29/ref16",
+        "orphan/978-1-61482-966-9-29/ref17",
+        "orphan/978-1-61482-966-9-29/ref18",
+        "orphan/978-1-61482-966-9-29/ref19",
+        "orphan/978-1-61482-966-9-29/ref20",
+        "orphan/978-1-61482-966-9-29/ref21",
+        "orphan/978-1-61482-966-9-29/ref22",
+        "orphan/978-1-61482-966-9-29/ref23",
+        "orphan/978-1-61482-966-9-29/ref24",
+        "orphan/978-1-61482-966-9-29/ref25",
+        "orphan/978-1-61482-966-9-29/ref26",
+        "orphan/978-1-61482-966-9-29/ref27",
+        "orphan/978-1-61482-966-9-29/ref28",
+        "orphan/978-1-61482-966-9-29/ref29",
+        "orphan/978-1-61482-966-9-29/ref30",
+        "orphan/978-1-61482-966-9-29/ref31",
+        "orphan/978-1-61482-966-9-29/ref32",
+        "orphan/978-1-61482-966-9-29/ref33",
+        "orphan/978-1-61482-966-9-29/ref34",
+        "orphan/978-1-61482-966-9-29/ref35",
+        "orphan/978-1-61482-966-9-29/ref36",
+        "orphan/978-1-61482-966-9-29/ref37",
+        "orphan/978-1-61482-966-9-29/ref38",
+        "orphan/978-1-61482-966-9-29/ref39",
+        "orphan/978-1-61482-966-9-29/ref40",
+        "orphan/978-1-61482-966-9-29/ref41",
+        "orphan/978-1-61482-966-9-29/ref42",
+        "orphan/978-1-61482-966-9-29/ref43",
+        "orphan/978-1-61482-966-9-29/ref44",
+        "orphan/978-1-61482-966-9-29/ref45",
+        "orphan/978-1-61482-966-9-29/ref46",
+        "orphan/978-1-61482-966-9-29/ref47"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from the FTXML NLM <back><ref-list> via extractFtxmlRefs.js (source doc mapped through its content_batch sibling).",
+        "source": "parsed",
+        "updated": "2026-08-10T17:55:35.307Z"
+      }
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "volume": "00",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    }
+  }
+}

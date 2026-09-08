@@ -1,0 +1,274 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-JMI.2025-FOOS6445",
+  "document": {
+    "abbrevTitle": "SMPTE Motion Imaging Jour.",
+    "abbrevTitle$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "abstract": "The ability to capture a volumetric representation of performers in a production environment would enable a multitude of novel on-set and post-production workflows. Current methods are impractical due to their reliance on large numbers of cameras and consistent lighting conditions. We propose a framework for creating 2.5D assets from a single monocular video, allowing digitized performers to be viewed from a range of angles with the appearance of depth. An application processes the video offline, using depth and segmentation AI models to create a packaged 2.5D asset. This is then loaded into Disguise Designer for pre-visualisation of the performers within the virtual stage. Analysis of state-of-the-art depth inference models, using videos captured to represent the challenges of production environments, shows that it is possible to obtain coherent video depth maps in these conditions. However, metric models do not always accurately identify absolute depth values, and it is necessary to use models tailored specifically for video to ensure temporal consistency in the results. This work aims to serve as a foundation for more comprehensive 3D volumetric capture of performers in real-world production environments.",
+    "abstract$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "authors": [
+      {
+        "name": "Chris Nash"
+      },
+      {
+        "name": "Nathan Butt"
+      },
+      {
+        "name": "Andrea Loriedo"
+      },
+      {
+        "name": "Robin Spooner"
+      },
+      {
+        "name": "Taegyun Ha"
+      },
+      {
+        "name": "Philip Coulam-Jones"
+      },
+      {
+        "name": "James Bentley"
+      },
+      {
+        "name": "Aljosa Smolic"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "copyright": {
+      "holder": "SMPTE",
+      "holder$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      },
+      "year": "2025",
+      "year$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docId": "10.5594-JMI.2025-FOOS6445",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docLabel": "MIJ 2025, Volume 134, Number 6 (pp. 50 to 58)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docTitle": "Integration of Depth and Volumetric Capture Workflows for 2.5D Virtual Production",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "doi": "10.5594/JMI.2025/FOOS6445",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "href": "https://doi.org/10.5594/JMI.2025/FOOS6445",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "issn": {
+      "electronic": "2160-2492",
+      "electronic$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      },
+      "print": "1545-0279",
+      "print$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "issn$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "journalAcronym": "MIJ",
+    "journalAcronym$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "journalTitle": "SMPTE Motion Imaging Journal",
+    "journalTitle$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "keywords": [
+      "Volumetric Capture",
+      "Depth Estimation",
+      "Computer Vision",
+      "Virtual Production"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Keywords conformed via keywordConformIngest.js — vocab/fold mapping (keywordVocabDecisions.json) + casing normalize; long-tail retained pending later triage.",
+      "source": "resolved",
+      "updated": "2026-07-10T22:58:01.636Z"
+    },
+    "number": "6",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "pages": "50–58",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publicationDate": "2025-10-01",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-JMI.2025-FOOS6445/ref1",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref2",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref3",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref4",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref5",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref6",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref7",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref8",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref9",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref10",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref11",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref12",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref13",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref14",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref15",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref16",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref17",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref18",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref19",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref20",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref21",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref22",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref23",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref24",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref25",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref26",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref27",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref28",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref29",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref30",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref31",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref32",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref33",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref34",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref35",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref36",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref37",
+        "orphan/10.5594-JMI.2025-FOOS6445/ref38"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from the FTXML NLM <back><ref-list> via extractFtxmlRefs.js (source doc mapped through its content_batch sibling).",
+        "source": "parsed",
+        "updated": "2026-08-10T17:55:35.307Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/SMPTE%20Motion%20Imaging%20Journal/134/6/17/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-09-01T10:14:13.066Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "volume": "134",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    }
+  }
+}

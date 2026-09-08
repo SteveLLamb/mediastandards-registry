@@ -1,0 +1,331 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST318.2015",
+  "document": {
+    "abstract": "This standard specifies the use of a derivative of a color black signal as a reference for the synchronization of all forms of composite or component, digital or analog equipment using a system standard related to 60/1.001 (nominal 59.94) or 50 Hz. It also provides the option for the reference signal to carry VITC. This will allow the reference to distribute local or UTC time data. — In the case of the reference for 60/1.001 Hz related signals, the signal may carry optionally a ten-field sequence identification signal. This facilitates interworking with equipment operating at related rates (e.g. 24/1.001 (nominal 23.98) Hz or 48 kHz). — Note: SMPTE ST 12-1 Annex B gives guidance on conversion of 24/1.001 (23.98) frames-per-second video to 30/1.001 (29.97) frames-per-second video using the ten-field sequence.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st0318-2015/st0318-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.864Z"
+    },
+    "approvalDate": "2015-06-05",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st0318-2015/st0318-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.864Z"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st0318-2015/st0318-2015.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.864Z"
+      },
+      "year": "2015",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st0318-2015/st0318-2015.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.864Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st0318-2015/st0318-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.864Z"
+    },
+    "depositDate": "2015-06-21",
+    "depositDate$meta": {
+      "confidence": "high",
+      "note": "Source XML <publication_date> — appears to be SMPTE/IEEE Xplore deposit date, distinct from actual publicationDate (from _source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st0318-2015/st0318-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-13T21:13:37.613Z"
+    },
+    "docId": "SMPTE.ST318.2015",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st318/20150605-pub/",
+      "updated": "2025-10-12T23:29:06.043Z"
+    },
+    "docLabel": "SMPTE ST 318:2015",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st318/20150605-pub/",
+      "updated": "2025-10-12T23:29:06.043Z"
+    },
+    "docNumber": "318",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st318/20150605-pub/",
+      "updated": "2025-10-12T23:29:06.043Z"
+    },
+    "docSuiteTitle": "Synchronization of 59.94- or 50-Hz Related Video and Audio Systems in Analog and Digital Areas",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-12-12T21:24:46.066Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docTitle": "Reference Signals",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": "Synchronization of 59.94- or 50-Hz Related Video and Audio Systems in Analog and Digital Areas — Reference Signals",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-12-12T21:24:46.066Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st318/20150605-pub/",
+      "updated": "2025-10-12T23:29:06.043Z"
+    },
+    "doi": "10.5594/SMPTE.ST318.2015",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st318/20150605-pub/",
+      "updated": "2025-10-12T23:29:06.043Z"
+    },
+    "familyId": "318",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st0318-2015/st0318-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.864Z"
+    },
+    "group": "smpte-32nf-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st0318-2015/st0318-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.864Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST318.2015",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st318/20150605-pub/",
+      "updated": "2025-10-12T23:29:06.043Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st0318-2015/st0318-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.864Z"
+    },
+    "isbn": "978-1-61482-873-0",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st0318-2015/st0318-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.864Z"
+    },
+    "keywords": [
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Television",
+      "Time & Sync"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st0318-2015/st0318-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.864Z"
+    },
+    "numberOfPages": "8",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–8",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st0318-2015/st0318-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.864Z"
+    },
+    "productNumber": "SSD001854",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st0318-2015/st0318-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.864Z"
+    },
+    "publicationDate": "2015-06-05",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "excludeChanges": true,
+      "note": "Parsed from HTML pubDateTime meta tag | TRIAGE: Registry matches releaseTag (gospel); source XML date appears to be SMPTE-IEEE Xplore deposit date, not publication",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st318/20150605-pub/",
+      "updated": "2026-05-13T21:13:37.613Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st318/20150605-pub/",
+      "updated": "2025-10-12T23:29:06.043Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st0318-2015/st0318-2015.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.864Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st0318-2015/st0318-2015.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.864Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st0318-2015/st0318-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.864Z"
+    },
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST125.2013",
+        "SMPTE.ST244.2003",
+        "SMPTE.ST259.2008",
+        "SMPTE.ST274.2008",
+        "SMPTE.ST293.2003",
+        "SMPTE.ST294.2001",
+        "SMPTE.ST295.1997",
+        "SMPTE.ST296.2012",
+        "SMPTE.ST2059-1.2015",
+        "SMPTE.RP168.2009",
+        "AES3.2009",
+        "AES11.2009"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-19T00:07:42.123Z"
+      },
+      "normative": [
+        "SMPTE.ST12-1.2014",
+        "SMPTE.ST170.2004",
+        "IEC.61169-8",
+        "R-REC-BT.1700"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-18T23:48:48.871Z"
+      }
+    },
+    "releaseTag": "20150605-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st318/20150605-pub/",
+      "updated": "2025-10-12T23:29:06.043Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/st318/20150605-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000008kbx",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-30T22:51:40.400Z",
+      "version": "extractDocs.js@commit:ee2844fb1cf2"
+    },
+    "standardId": "20899",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st0318-2015/st0318-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.864Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T23:29:06.043Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-12T23:29:06.043Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T23:29:06.043Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T23:29:06.043Z"
+      }
+    }
+  }
+}

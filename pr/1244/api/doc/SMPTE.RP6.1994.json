@@ -1,0 +1,267 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.RP6.1994",
+  "document": {
+    "abstract": "(1.1) This practice specifies parameters of the recorded information essential to the interchange of 2-in quadruplex video magnetic tape recording of monochrome and NTSC color signals for 525-line/60-field television systems. The parameters include video preemphasis characteristics and recorded carrier frequencies for all recording practices and video pilot specifications for practice SHBP. (1.2) Practices defined are: (1.2.1) Practice SHBP: This practice is suitable for color and monochrome signals. A video pilot signal is added to the recorded information to be used as a playback reference. (1.2.2) Practice HB: This practice is suitable for color and monochrome signals. (1.2.3) Practice LBM: This practice is suitable only for monochrome signals. (It is considered to be obsolescent and is included for reference purposes only.) (1.2.4) Practice LBC: This practice is suitable for color and monochrome signals. (It is considered to be obsolescent and is included for reference purposes only.)",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rp-6-1994_1/smptes_rp-6-1994_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.653Z"
+    },
+    "approvalDate": "1994-02-28",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json); Zoho is canonical for SMPTE standards metadata, registry value overwritten",
+      "originalValue": "1994",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2026-06-15T20:27:42.872Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "holder": "SMPTE",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rp-6-1994_1/smptes_rp-6-1994_1.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.653Z"
+      },
+      "year": "1994",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rp-6-1994_1/smptes_rp-6-1994_1.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.653Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rp-6-1994_1/smptes_rp-6-1994_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.653Z"
+    },
+    "docId": "SMPTE.RP6.1994",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "manual",
+      "sourceUrl": "https://pub.smpte.org/doc/rp6/19940228-pub/",
+      "updated": "2025-10-30T00:00:00Z"
+    },
+    "docLabel": "SMPTE RP 6:1994",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docNumber": "6",
+    "docNumber$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "Recorded Carrier Frequencies and Preemphasis Characteristics for 2-in Quadruplex Video Magnetic Tape Recording for 525-Line/60-Field Television Systems",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommended Practice",
+    "docType$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "doi": "10.5594/SMPTE.RP6.1994",
+    "doi$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "group": "smpte-24tb-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rp-6-1994_1/smptes_rp-6-1994_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.653Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.RP6.1994",
+    "href$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rp-6-1994_1/smptes_rp-6-1994_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.653Z"
+    },
+    "isbn": "978-1-61482-063-5",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rp-6-1994_1/smptes_rp-6-1994_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.653Z"
+    },
+    "keywords": [
+      "Recording",
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Television",
+      "Quad"
+    ],
+    "keywords$meta": {
+      "confidence": "medium",
+      "note": "Union of curated keywords + source XML keywords (re-normalized via splitAndNormalizeKeywords)",
+      "source": "manual",
+      "updated": "2026-05-13T21:38:55.397Z"
+    },
+    "numberOfPages": "3",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–3",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rp-6-1994_1/smptes_rp-6-1994_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.653Z"
+    },
+    "productNumber": "SSD001064",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rp-6-1994_1/smptes_rp-6-1994_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.653Z"
+    },
+    "publicationDate": "1994-02-28",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rp-6-1994_1/smptes_rp-6-1994_1.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.653Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rp-6-1994_1/smptes_rp-6-1994_1.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.653Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rp-6-1994_1/smptes_rp-6-1994_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.653Z"
+    },
+    "releaseTag": "19940228-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-10-08T05:50:15.827Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/rp6/19940228-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000008kZC",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-30T22:48:59.967Z",
+      "version": "extractDocs.js@commit:ee2844fb1cf2"
+    },
+    "standardId": "20069",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rp-6-1994_1/smptes_rp-6-1994_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.653Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-08T05:50:15.827Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-08T05:50:15.827Z"
+      },
+      "reaffirmed": true,
+      "reaffirmed$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "stabilized": true,
+      "stabilized$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "stabilizedDate": "2004-10-08",
+      "stabilizedDate$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-08T05:50:15.827Z"
+      }
+    }
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-J09570",
+  "document": {
+    "abstract": "Telecommunication fixed networks were originally constructed entirely from metallic transmission media. In developed countries, the core, or backbone, of the network that interconnects the switching centers is now mainly optical fiber. The access portion of the network that connects switches to customers (the so-called “last mile”) is, however, still dominated by twisted copper pairs. There are over 560 million twisted copper pair connections worldwide. Optical access network technologies have been developed and proven; however, the sheer inertia of the installed copper base means that it could take many years to migrate the access networks from copper to fiber. This paper describes the technologies available to telcos to deliver broadband services such as television and video-on-demand over the access network as it evolves from copper to fiber.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J09570.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "Networks and Systems Department at BT Laboratories, Martlesham Heath, England IP5 7RE.",
+        "bio": "Gavin Young is a technical area leader and project manager in the Networks and Systems Department at BT Laboratories, Ipswich, U.K. In 1986 he worked on the design of ISDN basic access transceivers and was subsequently involved in research and development for high-rate digital subscriber loop (HDSL) transceivers. In 1992 he was involved in leading feasibility work on the use of asymmetric digital subscriber loop (ADSL) technology for interactive television service. He is currently involved in progressing work on ADSL and its higher speed variants within ANSI and is a director of the ADSL Forum. He received a B. Sc. degree in electrical and electronic engineering from the University College of Swansea, Wales, in 1985, and an M. Sc. degree in communications engineering from the Imperial College of Science and Technology, London University, in 1986. He is a member of the IEEE and an associate member of the IEE of the U.K.",
+        "name": "Gavin Young"
+      },
+      {
+        "affiliation": "Networks and Systems Department at BT Laboratories, Martlesham Heath, England IP5 7RE.",
+        "bio": "Don Clarke is a project manager in the Networks and Systems Department at BT Laboratories, Ipswich, U. K. He has been involved in fiber research since 1986 and was chief designer of the passive optical network (PON) transmission system for the BT optical access trials at Bishops Stortford, England, in 1990. Currently, he leads development activities for high-speed copper transmission and contributes to the ongoing technical analysis of scenarios for broadband access. He received a B. Sc. degree in computer systems from the University of Essex, England, in 1981, and holds several patents relating to PON technology. He is a member of the IEE of the U. K. and the IEEE.",
+        "name": "Don Clarke"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from SMPTE canonical repository import (smpte-canonical-audit/canonicalLibrary.*.json); previous value was a placeholder",
+      "originalValue": "other",
+      "source": "parsed",
+      "updated": "2026-07-07T23:39:31.295Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J09570.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "year": "1996",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J09570.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J09570.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docId": "10.5594-J09570",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/J09570",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docLabel": "SMPTE Journal ( Volume: 105, Issue: 6, June 1996)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from journal title, volume, issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docTitle": "Video Delivery over Copper Pair and its Role Relative to Fiber",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J09570.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "doi": "10.5594/J09570",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J09570.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/J09570",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/J09570",
+      "source": "inferred",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "issn": {
+      "print": "0036-1682",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J09570.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J09570.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08182015 BACKFILE JOURNAL FRESH/smptej_105_6/MIJR15Vol105No6.xml)",
+      "source": "parsed",
+      "updated": "2026-06-16T18:14:32.753Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "SMPTE Journal",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "6",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J09570.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "pages": "351–356",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J09570.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publicationDate": "1996-06-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J09570.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08182015 BACKFILE JOURNAL FRESH/smptej_105_6/MIJR15Vol105No6.xml)",
+        "source": "parsed",
+        "updated": "2026-06-16T18:14:32.753Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J09570.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-J09570/bibr1-10.5594_J09570",
+        "orphan/10.5594-J09570/bibr2-10.5594_J09570",
+        "orphan/10.5594-J09570/bibr3-10.5594_J09570",
+        "orphan/10.5594-J09570/bibr4-10.5594_J09570",
+        "orphan/10.5594-J09570/bibr5-10.5594_J09570",
+        "orphan/10.5594-J09570/bibr6-10.5594_J09570",
+        "orphan/10.5594-J09570/bibr7-10.5594_J09570",
+        "orphan/10.5594-J09570/bibr8-10.5594_J09570",
+        "orphan/10.5594-J09570/bibr9-10.5594_J09570",
+        "orphan/10.5594-J09570/bibr10-10.5594_J09570",
+        "orphan/10.5594-J09570/bibr11-10.5594_J09570",
+        "orphan/10.5594-J09570/bibr12-10.5594_J09570",
+        "orphan/10.5594-J09570/bibr13-10.5594_J09570"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteJournalRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T18:21:02.558Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/SMPTE%20Journal/105/6/7/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.418Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — journal articles default active",
+        "source": "inferred",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "volume": "105",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J09570.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    }
+  }
+}

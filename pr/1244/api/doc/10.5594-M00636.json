@@ -1,0 +1,216 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-M00636",
+  "document": {
+    "abstract": "The current interest in High Definition Television (HDTV) is perhaps somewhat surprising since during the last 20 years there have been no significant changes in display technology which herald the availability of consumer products giving a large area hiqh-resolution bright display, and which are capable of doing justice to a picture scanned with more than 625 lines. However, the interest in new TV standards must be seen in the light of the fact that, displays apart, durinq this same 20 years there have been fundamental changes in most other aspects of television technology. Solid state devices have led to the introduction of digital techniques in the studio as well as for recording and distribution. The use of satellites and optical fibre cable have both been established as a means of transmitting video directly to the home viewer. New technology for storing video on tape or disc has appeared in the consumer area.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Backfilled from SMPTE canonical repository (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "BBC Research Department Tadworth, Surrey, England",
+        "bio": "Charles Sandbank obtained a Physics degree from London University in 1953 and joined the Brimar Valve Division of Standard Telephones and Cables Ltd. (STC) as a production engineer. In 1955 he obtained a post-graduate fellowship at Imperial College, which he spent under the supervision of Professor Denis Gabor (the inventor of holography and flat CRT's). After further work on vacuum devices, he joined the Transistor Division of STC in 1959 and soon afterwards led the team which developed the first silicon chip integrated circuits in Europe. In 1964 he joined Standard Telecommunication Laboratories (STL) initially as Head of Electron Devices Department and later Manager of the Communications Systems Division. Among the activities for which he had responsibility at STL were: solid-state microwave generation, display technology, microwave navigational aids, integrated local area systems, and fiber optics (whose application to communication was first proposed at STL). In 1978 he joined the BBC as Head of Research Department at Kingswood Warren. He was Chairman of the IEE Electronics Division in 1979/80 and is currently Chairman of an EBU Committee on High Definition Television.",
+        "name": "C. P. Sandbank"
+      },
+      {
+        "affiliation": "BBC Research Department Tadworth, Surrey, England",
+        "bio": "Bruce Moffat graduated in engineering science at Oxford University in 1959. He remained at Oxford to carry out research in microwave electronics, for which he received a D. Phil, degree. He joined the BBC in 1962 and worked in the Acoustics Section of Research Department, where he was chiefly concerned with the application of computer techniques to studio acoustics. In 1966, he transferred to Television Section in Research Department and investigated the problem of head-clogging in videotape recorders and possibilities for digital video recording. After two years as R. & D. Manager with a magnetic recording media manufacturer, he returned to the BBC in 1970 to Electronics Group of Research Department and was engaged in the development of the PCM system now used for the distribution of high-quality sound signals. In 1971 he was appointed Head of Storage and Recording Section in Studio Group, and was appointed Head of Studio Group in 1981. He has served on several CCIR, CCITT, and EBU Committees.",
+        "name": "M. E. B. Moffat"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Canonical-confirmed full paper (summary-abstract set is orig-research in the SMPTE canonical repos); HIGHWIRE-era abstract label was a delivery artifact",
+      "originalValue": "summary-abstract",
+      "source": "resolved",
+      "updated": "2026-07-09T19:12:47.628Z",
+      "version": "contenttype-fixes@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00636.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      },
+      "year": "1982",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00636.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00636.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docId": "10.5594-M00636",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/M00636",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docLabel": "SMPTE Meetings and Conferences ( February 1982)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docTitle": "High-Definition Television and Compatibility with Existing Standards",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00636.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docType": "Conference Paper",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE conference paper",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "doi": "10.5594/M00636",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00636.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/M00636",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/M00636",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "number": "21",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00636.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "pages": "170–185",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00636.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publicationDate": "1982-02-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00636.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00636.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-J00138/bibr1-10.5594_J00138",
+        "orphan/10.5594-M00636/bibr2-10.5594_M00636",
+        "orphan/10.5594-M00636/bibr3-10.5594_M00636",
+        "orphan/10.5594-M00636/bibr4-10.5594_M00636",
+        "orphan/10.5594-M00636/bibr5-10.5594_M00636",
+        "orphan/10.5594-M00636/bibr6-10.5594_M00636",
+        "orphan/10.5594-M00636/bibr7-10.5594_M00636",
+        "orphan/10.5594-M00636/bibr8-10.5594_M00636",
+        "orphan/10.5594-M00636/bibr9-10.5594_M00636",
+        "orphan/10.5594-M00636/bibr10-10.5594_M00636",
+        "orphan/10.5594-M00636/bibr11-10.5594_M00636",
+        "orphan/10.5594-M00636/bibr12-10.5594_M00636"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteConferenceRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T20:02:43.384Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/conferences/Tomorrow's%20Television:%2016th%20Annual%20SMPTE%20Television%20Conference/21/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.439Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — conference papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "volume": "1982",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00636.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    }
+  }
+}

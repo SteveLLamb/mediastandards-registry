@@ -1,0 +1,441 @@
+{
+  "portals": [
+    {
+      "filter": [
+        {
+          "docId": "ISDCF.D15.2020"
+        },
+        {
+          "docId": "EBU.Tech3380.2018"
+        },
+        {
+          "docId": "W3C.ttaf1.dfxp.20181108"
+        },
+        {
+          "docId": "RFC4187"
+        },
+        {
+          "docId": "SMPTE.ST2053.2011"
+        },
+        {
+          "docId": "SMPTE.ST2112-20.2020"
+        },
+        {
+          "docId": "SMPTE.ST2112-20.2020"
+        },
+        {
+          "match": {
+            "suiteTitle": "Academy"
+          }
+        },
+        {
+          "match": {
+            "suiteTitle": "Interoperable Master Format (IMF)"
+          }
+        },
+        {
+          "match": {
+            "publisher": "ISO",
+            "suiteTitle": "Digital cinema (D-cinema) distribution master"
+          }
+        },
+        {
+          "match": {
+            "publisher": "ISO",
+            "suiteTitle": "Digital cinema (D-cinema) quality"
+          }
+        },
+        {
+          "match": {
+            "publisher": "ISO",
+            "suiteTitle": "Digital cinema (D-cinema) packaging"
+          }
+        },
+        {
+          "match": {
+            "publisher": "ISO",
+            "suiteTitle": "Digital cinema (D-cinema) operations"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "keyword": "HTJ2K"
+          }
+        }
+      ],
+      "items": [
+        {
+          "docId": "ISO.5926.2023"
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "publisher": "SMPTE",
+            "suiteTitle": "D-Cinema Distribution Master"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "publisher": "SMPTE",
+            "suiteTitle": "Cinema Sound Calibration"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "publisher": "SMPTE",
+            "suiteTitle": "Cinema Sound"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "publisher": "SMPTE",
+            "suiteTitle": "Immersive Audio"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "publisher": "SMPTE",
+            "suiteTitle": "D-Cinema Packaging"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "publisher": "SMPTE",
+            "suiteTitle": "D-Cinema Operations"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "publisher": "SMPTE",
+            "suiteTitle": "D-Cinema Quality"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "publisher": "SMPTE",
+            "suiteTitle": "D-Cinema Signal Processing"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "keyword": "DCinema"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "keyword": "DCDM"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "keyword": "DCP Application"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "keyword": "DCP Core"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "keyword": "DCP"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "keyword": "KDM"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "keyword": "Distribution"
+          }
+        }
+      ],
+      "portalSlug": "dcinema",
+      "portalTitle": "Digital Cinema (D-Cinema)",
+      "resources": [
+        {
+          "description": "As an internationally recognized standards organization, SMPTE provides a vital technical framework to the industry with over 800 standards, recommended practices, and engineering guidelines that touch nearly every piece of motion-imaging content.",
+          "href": "https://www.smpte.org/",
+          "kind": "organization",
+          "title": "SMPTE"
+        },
+        {
+          "description": "ISDCF – Intersociety Digital Cinema Forum meets about once a month to discuss technical and deployment issues for Theatrical Digital Cinema deployment.",
+          "href": "https://www.isdcf.com/",
+          "kind": "organization",
+          "title": "ISDCF"
+        },
+        {
+          "description": "DCI's primary purpose is to establish and document voluntary specifications for an open architecture for digital cinema that ensures: A uniform and high level of technical performance, Interoperability, Quality control, and Content Security",
+          "href": "https://www.dcimovies.com",
+          "kind": "organization",
+          "title": "DCI"
+        },
+        {
+          "description": "The asdcplib library is an API and command-line tool set that offers access to files conforming to the sound and picture track file formats developed by SMPTE.",
+          "href": "https://github.com/cinecert/asdcplib",
+          "kind": "tool",
+          "title": "ASDCP"
+        },
+        {
+          "description": "This site is designed to help everyone involved in Digital Cinema exhibition understand how to use the Digital Cinema Naming Convention when naming (or locating) Digital Cinema Packages.",
+          "href": "https://registry-page.isdcf.com/",
+          "kind": "reference",
+          "title": "ISDCF Digital Cinema Naming Convention and Metadata/Terminology Registries"
+        }
+      ],
+      "sections": [
+        {
+          "body": "Digital Cinema (D-Cinema) is a standardized ecosystem for packaging, securing, distributing, and exhibiting motion-imaging content in theatrical environments. It defines interoperable building blocks such as composition metadata, MXF track files for picture and sound, subtitles/captions, packaging and asset identifiers, and a security model for protected content and keys. In practice, D-Cinema workflows connect mastering and distribution deliverables (e.g., DCDM and DCP) with operational requirements in cinemas, enabling consistent playback behavior across equipment vendors and venues.",
+          "title": "Background"
+        },
+        {
+          "body": "This portal provides a curated, non-exhaustive selection of documents and resources assembled to the best of current knowledge for informational and reference purposes only. The information presented here reflects the most accurate understanding available at the time of publication but may be incomplete, superseded, or subject to interpretation. All materials are provided strictly on a voluntary, “as-is” basis, without warranty of any kind, express or implied. No responsibility or liability are assumed for errors, omissions, or outcomes arising from its use, and users are responsible for consulting authoritative sources and original publishers for definitive, current, and licensed specifications.",
+          "title": "Disclaimer"
+        }
+      ],
+      "summary": "Standards, specifications, and resources related to the creation, packaging, distribution, and exhibition of Digital Cinema content and implementations"
+    },
+    {
+      "items": [
+        {
+          "latestOnly": true,
+          "match": {
+            "keyword": "IMF"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "keyword": "IMF Application"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "keyword": "IMF Plug-in"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "keyword": "HTJ2K"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "keyword": "Immersive Audio"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "suiteTitle": "Interoperable Master Format (IMF)"
+          }
+        }
+      ],
+      "portalSlug": "imf",
+      "portalTitle": "Interoperable Master Format (IMF)",
+      "resources": [
+        {
+          "description": "As an internationally recognized standards organization, SMPTE provides a vital technical framework to the industry with over 800 standards, recommended practices, and engineering guidelines that touch nearly every piece of motion-imaging content.",
+          "href": "https://www.smpte.org/",
+          "kind": "organization",
+          "title": "SMPTE"
+        },
+        {
+          "description": "A forum for users and implementers of the Interoperable Master Format (IMF) standards.",
+          "href": "https://www.imfug.com/",
+          "kind": "organization",
+          "title": "IMF User Group"
+        },
+        {
+          "description": "DPP brings hundreds of member companies from across the whole content supply chain.",
+          "href": "https://www.thedpp.com/imf/imf-overview",
+          "kind": "organization",
+          "title": "DPP"
+        },
+        {
+          "description": "Helped Members to evaluate and better understand the advantages and challenges of IMF.",
+          "href": "https://tech.ebu.ch/imf",
+          "kind": "organization",
+          "title": "EBU"
+        },
+        {
+          "description": "IMF Package validation",
+          "href": "https://github.com/Netflix/photon",
+          "kind": "tool",
+          "title": "Photon"
+        },
+        {
+          "description": "IMF Track File creation and parsing",
+          "href": "http://www.cinecert.com/asdcplib/",
+          "kind": "tool",
+          "title": "ASDCPlib"
+        },
+        {
+          "description": "IMSC1 subtitle and caption rendering",
+          "href": "https://github.com/sandflow/imscJS",
+          "kind": "tool",
+          "title": "imscJS"
+        },
+        {
+          "description": "Converts IMF to DPP and iTunes deliverables",
+          "href": "https://github.com/DSRCorporation/imf-conversion",
+          "kind": "tool",
+          "title": "IMF Conversion"
+        },
+        {
+          "description": "Open Source Tool for browsing and editing of IMF App #2/#2E packages. Binary installers available for macOS and Windows.",
+          "href": "https://github.com/IMFTool/IMFTool",
+          "kind": "tool",
+          "title": "IMF Tool"
+        },
+        {
+          "description": "Converts MXF Essence Descriptors to the XML representation specified in SMPTE ST 2001-1",
+          "href": "https://github.com/sandflow/regxmllib",
+          "kind": "tool",
+          "title": "regxmllib"
+        },
+        {
+          "description": "IMSC1 document validation",
+          "href": "https://github.com/skynav/ttt",
+          "kind": "tool",
+          "title": "Timed Text Toolkit"
+        },
+        {
+          "description": "Validates IA bitstreams against SMPTE ST 2098-2, ST 2098-2 and ST 2067-201 as well as other specifications.",
+          "href": "https://github.com/DTSProAudio/iab-validator",
+          "kind": "tool",
+          "title": "DTS IAB Validator"
+        },
+        {
+          "description": "JPEG 2000 encoder and decoder",
+          "href": "https://github.com/uclouvain/openjpeg",
+          "kind": "tool",
+          "title": "OpenJPEG"
+        },
+        {
+          "description": "A complete, cross-platform solution torecord, convert and stream audio and video.",
+          "href": "https://ffmpeg.org/",
+          "kind": "tool",
+          "title": "FFmpeg"
+        }
+      ],
+      "sections": [
+        {
+          "body": "IMF is a file-based media format that simplifies the delivery and storage of audio-visual masters intended for multiple territories and platforms. It is particularly well-adapted for delivery to today’s global content platforms. IMF works with any finished audio-visual masters, including long-form movies, episodic content, advertisements, short-form content, etc. It is extensible, uses proven technologies and benefits from many open source and commercial implementations.",
+          "title": "Background"
+        },
+        {
+          "body": "This portal provides a curated, non-exhaustive selection of documents and resources assembled to the best of current knowledge for informational and reference purposes only. The information presented here reflects the most accurate understanding available at the time of publication but may be incomplete, superseded, or subject to interpretation. All materials are provided strictly on a voluntary, “as-is” basis, without warranty of any kind, express or implied. No responsibility or liability are assumed for errors, omissions, or outcomes arising from its use, and users are responsible for consulting authoritative sources and original publishers for definitive, current, and licensed specifications.",
+          "title": "Disclaimer"
+        }
+      ],
+      "summary": "Standards, specifications, and tools related to the creation, packaging, and interchange of Interoperable Master Format (IMF) content and implementations"
+    },
+    {
+      "items": [
+        {
+          "latestOnly": true,
+          "match": {
+            "keyword": "Accessibility"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "keyword": "Captions"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "keyword": "Sign Language"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "keyword": "Subtitles"
+          }
+        },
+        {
+          "latestOnly": true,
+          "match": {
+            "keyword": "Timed Text"
+          }
+        }
+      ],
+      "portalSlug": "accessibility",
+      "portalTitle": "Captions, Subtitles, and Accessibility",
+      "resources": [
+        {
+          "description": "ttconv is a library and command line application written in pure Python for converting between timed text formats used in the presentations of captions, subtitles, karaoke, etc.",
+          "href": "https://github.com/sandflow/ttconv",
+          "kind": "tool",
+          "title": "ttconv (Timed Text Conversion)"
+        },
+        {
+          "description": "imscJS is a JavaScript library for rendering IMSC 1.0.1 and IMSC 1.1 documents to HTML5. IMSC is a profile of TTML 2 designed for subtitle and caption delivery worldwide.",
+          "href": "https://github.com/sandflow/imscJS",
+          "kind": "tool",
+          "title": "imscJS"
+        },
+        {
+          "description": "imscJS is a JavaScript library for rendering IMSC 1.0.1 and IMSC 1.1 documents to HTML5. IMSC is a profile of TTML 2 designed for subtitle and caption delivery worldwide.",
+          "href": "https://github.com/sandflow/imscJS",
+          "kind": "tool",
+          "title": "imscJS"
+        },
+        {
+          "description": "SubRip is a free software program for Microsoft Windows which extracts subtitles and their timings from various video formats to a text file. ",
+          "href": "https://en.wikipedia.org/wiki/SubRip",
+          "kind": "tool",
+          "title": "SubRip"
+        },
+        {
+          "description": "SSTG1Pro is a software application for creating and editing subtitle data including text, timing and effect.　It is used widely from freelance translators to major Productions.",
+          "href": "https://canvass.co.jp/en/sstg1pro/",
+          "kind": "tool",
+          "title": "SSTG1Pro"
+        },
+        {
+          "description": "CCSUBS brings together technical stakeholders from the video streaming ecosystem (pre-recorded and live) to facilitate great end-to-end captions and subtitles experiences worldwide based on existing industry standards.",
+          "href": "https://ccsubs.org/",
+          "kind": "organization",
+          "title": "CCSubs"
+        }
+      ],
+      "sections": [
+        {
+          "body": "Captions, subtitles, and accessibility technologies enable the representation of spoken dialogue, non-speech information, and alternative language or sensory experiences for audiences with diverse needs. Across theatrical, broadcast, and online workflows, these systems encompass timed text formats, rendering and styling models, signaling mechanisms, and interchange practices designed to support comprehension, localization, and accessibility compliance. In practice, accessibility solutions span authoring, packaging, distribution, and playback, integrating with media formats and delivery ecosystems to ensure consistent, interoperable presentation across platforms and devices.",
+          "title": "Background"
+        },
+        {
+          "body": "This portal provides a curated, non-exhaustive selection of documents and resources assembled to the best of current knowledge for informational and reference purposes only. The information presented here reflects the most accurate understanding available at the time of publication but may be incomplete, superseded, or subject to interpretation. All materials are provided strictly on a voluntary, “as-is” basis, without warranty of any kind, express or implied. No responsibility or liability are assumed for errors, omissions, or outcomes arising from its use, and users are responsible for consulting authoritative sources and original publishers for definitive, current, and licensed specifications.",
+          "title": "Disclaimer"
+        }
+      ],
+      "summary": "Standards and practices related to captions, subtitles, timed text, and accessibility features across media workflows"
+    }
+  ]
+}

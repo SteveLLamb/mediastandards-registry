@@ -1,0 +1,348 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST279.2001",
+  "document": {
+    "abstract": "This standard specifies the content, format, and recording method of the data blocks containing video, audio, and associated data which form the helical records on 12.65-mm (0.5-in) tape in cassettes as specified in ANSI/SMPTE 263M. — In addition, this standard specifies the content, format, and recording method of the longitudinal record containing tracking information for the scanning head associated with the helical records, and also the longitudinal cue audio, and time and control code. — One video channel and four independent audio channels are recorded in the digital format. Each of these channels is designed to be capable of independent editing.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-279-2001_1/st0279-2001_stable2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.831Z"
+    },
+    "approvalDate": "2001-10-18",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json); Zoho is canonical for SMPTE standards metadata, registry value overwritten",
+      "originalValue": "2001",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2026-06-15T20:27:42.872Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-279-2001_1/st0279-2001_stable2006.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.832Z"
+      },
+      "year": "2001",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-279-2001_1/st0279-2001_stable2006.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.832Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-279-2001_1/st0279-2001_stable2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.832Z"
+    },
+    "docId": "SMPTE.ST279.2001",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st279/20011018-pub/",
+      "updated": "2025-10-12T23:28:48.894Z"
+    },
+    "docLabel": "SMPTE ST 279:2001",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st279/20011018-pub/",
+      "updated": "2025-10-12T23:28:48.894Z"
+    },
+    "docNumber": "279",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st279/20011018-pub/",
+      "updated": "2025-10-12T23:28:48.894Z"
+    },
+    "docSuiteTitle": "Digital Video Recording",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-12-12T21:24:03.922Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docTitle": "1/2-in Type D-5 Standard-Definition Component Video and Type HD-D5 High-Definition Video Compressed Data",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": "Digital Video Recording - 1/2-in Type D-5 Standard-Definition Component Video and Type HD-D5 High-Definition Video Compressed Data",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-12-12T21:24:03.922Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st279/20011018-pub/",
+      "updated": "2025-10-12T23:28:48.894Z"
+    },
+    "doi": "10.5594/SMPTE.ST279.2001",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st279/20011018-pub/",
+      "updated": "2025-10-12T23:28:48.894Z"
+    },
+    "familyId": "279",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-279-2001_1/st0279-2001_stable2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.832Z"
+    },
+    "group": "smpte-24tb-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-279-2001_1/st0279-2001_stable2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.832Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST279.2001",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st279/20011018-pub/",
+      "updated": "2025-10-12T23:28:48.894Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-279-2001_1/st0279-2001_stable2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.832Z"
+    },
+    "isbn": "978-1-61482-426-8",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-279-2001_1/st0279-2001_stable2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.831Z"
+    },
+    "keywords": [
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Recording",
+      "Television",
+      "Tape"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-279-2001_1/st0279-2001_stable2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.832Z"
+    },
+    "numberOfPages": "52",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–88",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-279-2001_1/st0279-2001_stable2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.832Z"
+    },
+    "productNumber": "SSD001427",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-279-2001_1/st0279-2001_stable2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.832Z"
+    },
+    "publicationDate": "2001-10-18",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st279/20011018-pub/",
+      "updated": "2025-10-12T23:28:48.894Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st279/20011018-pub/",
+      "updated": "2025-10-12T23:28:48.894Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-279-2001_1/st0279-2001_stable2006.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.832Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-279-2001_1/st0279-2001_stable2006.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.832Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-279-2001_1/st0279-2001_stable2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.832Z"
+    },
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST264.1998",
+        "SMPTE.ST265.1998",
+        "SMPTE.EG21.1997",
+        "T-REC-J.17",
+        "IEC.60735",
+        "IEC.61179",
+        "ISO.2110.1989",
+        "SMPTE.ST263.1996",
+        "R-REC-BT.656-4"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-18T23:48:48.871Z"
+      },
+      "normative": [
+        "SMPTE.ST125.1995",
+        "SMPTE.ST267.1995",
+        "SMPTE.RP155.1997",
+        "SMPTE.RP209.2000",
+        "IEC.60461",
+        "IEC.60958",
+        "R-REC-BT.470-6",
+        "R-REC-BT.601-5",
+        "R-REC-BS.647-2",
+        "SMPTE.ST259.1997",
+        "SMPTE.ST342.2000",
+        "AES3.1992"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-19T00:07:42.123Z"
+      }
+    },
+    "releaseTag": "20011018-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st279/20011018-pub/",
+      "updated": "2025-10-12T23:28:48.894Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/st279/20011018-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000008kbd",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-30T22:51:26.986Z",
+      "version": "extractDocs.js@commit:ee2844fb1cf2"
+    },
+    "standardId": "20677",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-279-2001_1/st0279-2001_stable2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.832Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T23:28:48.894Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-12T23:28:48.894Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T23:28:48.894Z"
+      },
+      "stabilized": true,
+      "stabilized$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #state",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-12T23:28:48.894Z"
+      },
+      "stabilizedDate": "2006-10-10",
+      "stabilizedDate$meta": {
+        "confidence": "high",
+        "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+        "source": "parsed",
+        "updated": "2026-06-15T20:17:48.985Z",
+        "version": "smpte-zoho-standards@v1"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T23:28:48.894Z"
+      }
+    }
+  }
+}

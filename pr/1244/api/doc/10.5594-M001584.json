@@ -1,0 +1,224 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-M001584",
+  "document": {
+    "abstract": "Display technology has been improving rapidly, in some areas faster than others. Televisions, tablets, and smart phones bring images to life through a combination of a brighter maximum luminance, a deeper black level, and/or a wider color gamut. Preference studies in this area also confirm that viewers are looking for these increased capabilities in their displays. One such study performed on a TV-sized display at Dolby Laboratories [4] found that to satisfy 90% of viewers a luminance dynamic range of 0.005 to 20,000 cd/m2 would be required. Translating results from small displays to the larger screens of the cinema is not always straightforward because of the conjecture that large screens will influence a viewer's preferences differently. For example, it is assumed that, in comparison to a smaller display (i.e. television), the brightness preference for the cinema is dimmer. This generalized assumption, however, includes multiple aspects such as contrast increased flickering with higher luminance, and different fields of view. To investigate those aspects, we have conducted a study on viewer preferences for the cinema environment isolating the maximum diffuse luminance, the minimum luminance, and highlight luminance from these other factors. We used a 6 kW cinema projector and 13 foot, 2.8-gain screen, producing a luminance dynamic range of 0.002 to 2100 cd/m2, and concluded that the most demanding viewers prefer 22 stops of cinema dynamic range — double the number of stops of the existing dynamic range of the cinema.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001584.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "Dolby Labs, Sunnyvale, CA, sfarr@dolby.com",
+        "name": "Suzanne Farrell"
+      },
+      {
+        "affiliation": "Dolby Labs, Sunnyvale, CA, tkunk@dolby.com",
+        "name": "Timo Kunkel"
+      },
+      {
+        "affiliation": "Dolby Labs, Sunnyvale, CA, sdaly@dolby.com",
+        "name": "Scott Daly"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Canonical-confirmed full paper (summary-abstract set is orig-research in the SMPTE canonical repos); HIGHWIRE-era abstract label was a delivery artifact",
+      "originalValue": "summary-abstract",
+      "source": "resolved",
+      "updated": "2026-07-09T19:12:47.628Z",
+      "version": "contenttype-fixes@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001584.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      },
+      "year": "2014",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001584.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001584.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docId": "10.5594-M001584",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/M001584",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docLabel": "SMPTE Meetings and Conferences ( October 2014)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docTitle": "A Cinema Luminance Range by the People, for the People: Viewer Preferences on Luminance Limits for a Large Screen Environment",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001584.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docType": "Conference Paper",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE conference paper",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "doi": "10.5594/M001584",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001584.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/M001584",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/M001584",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "keywords": [
+      "Luminance",
+      "Display"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Backfilled from SMPTE canonical repository index_terms, mapped through controlledKeywords + curated synonym folds (keywordVocabDecisions.json) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T23:52:57.741Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "10",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001584.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "pages": "1–9",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001584.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publicationDate": "2014-10-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001584.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001584.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "SMPTE.RP98.1995",
+        "orphan/10.5594-M001584/bibr1-J-SMSE0011-0001",
+        "orphan/10.5594-M001584/bibr2-J-SMSE0011-0001",
+        "orphan/10.5594-M001584/bibr4-J-SMSE0011-0001",
+        "orphan/10.5594-M001584/bibr5-J-SMSE0011-0001",
+        "orphan/10.5594-M001584/bibr6-J-SMSE0011-0001",
+        "orphan/10.5594-M001584/bibr7-J-SMSE0011-0001"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteConferenceRefs.js (precheck-reuse)",
+        "source": "parsed",
+        "updated": "2026-07-06T20:02:43.384Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/conferences/SMPTE%202014%20Annual%20Technical%20Conference%20&%20Exhibition/50/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.438Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — conference papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "volume": "2014",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001584.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    }
+  }
+}

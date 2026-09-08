@@ -1,0 +1,334 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "RFC9048",
+  "document": {
+    "abstract": "The 3GPP mobile network Authentication and Key Agreement (AKA) is an authentication mechanism for devices wishing to access mobile networks. RFC 4187 (EAP-AKA) made the use of this mechanism possible within the Extensible Authentication Protocol (EAP) framework. RFC 5448 (EAP-AKA') was an improved version of EAP-AKA. This document is the most recent specification of EAP-AKA', including, for instance, details about and references related to operating EAP-AKA' in 5G networks. EAP-AKA' differs from EAP-AKA by providing a key derivation function that binds the keys derived within the method to the name of the access network. The key derivation function has been defined in the 3rd Generation Partnership Project (3GPP). EAP-AKA' allows its use in EAP in an interoperable manner. EAP-AKA' also updates the algorithm used in hash functions, as it employs SHA-256 / HMAC-SHA-256 instead of SHA-1 / HMAC-SHA-1, which is used in EAP-AKA. This version of the EAP-AKA' specification defines the protocol behavior for both 4G and 5G deployments, whereas the previous version defined protocol behavior for 4G deployments only. While EAP-AKA' as defined in RFC 5448 is not obsolete, this document defines the most recent and fully backwards-compatible specification of EAP-AKA'. This document updates both RFCs 4187 and 5448.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML abstract",
+      "originalValue": "The 3GPP mobile network Authentication and Key Agreement (AKA) is an authentication mechanism for devices wishing to access mobile networks. RFC 4187 (EAP-AKA) made the use of this mechanism possible within the Extensible Authentication Protocol (EAP) framework. RFC 5448 (EAP-AKA') was an improved version of EAP-AKA.\n This document is the most recent specification of EAP-AKA', including, for instance, details about and references related to operating EAP-AKA' in 5G networks.\n EAP-AKA' differs from EAP-AKA by providing a key derivation function that binds the keys derived within the method to the name of the access network. The key derivation function has been defined in the 3rd Generation Partnership Project (3GPP). EAP-AKA' allows its use in EAP in an interoperable manner. EAP-AKA' also updates the algorithm used in hash functions, as it employs SHA-256 / HMAC-SHA-256 instead of SHA-1 / HMAC-SHA-1, which is used in EAP-AKA.\n This version of the EAP-AKA' specification defines the protocol behavior for both 4G and 5G deployments, whereas the previous version defined protocol behavior for 4G deployments only. While EAP-AKA' as defined in RFC 5448 is not obsolete, this document defines the most recent and fully backwards-compatible specification of EAP-AKA'. This document updates both RFCs 4187 and 5448.",
+      "overridden": true,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc9048/",
+      "updated": "2026-03-09T21:56:17.766Z",
+      "version": "extractDocs.js@commit:17e11f3de1ab"
+    },
+    "authors": [
+      {
+        "name": "Jari Arkko"
+      },
+      {
+        "name": "Vesa Lehtovirta"
+      },
+      {
+        "name": "Vesa Torvinen"
+      },
+      {
+        "name": "Pasi Eronen"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
+      "originalValue": [
+        "J. Arkko",
+        "V. Lehtovirta",
+        "V. Torvinen",
+        "P. Eronen"
+      ],
+      "overridden": true,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc9048/",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "docId": "RFC9048",
+    "docId$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-04T17:31:20.463Z"
+    },
+    "docLabel": "IETF RFC 9048",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-04T17:31:20.463Z"
+    },
+    "docNumber": "9048",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC citation meta and/or URL identifier",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc9048/",
+      "updated": "2026-03-09T21:56:17.766Z",
+      "version": "extractDocs.js@commit:17e11f3de1ab"
+    },
+    "docTitle": "Improved Extensible Authentication Protocol Method for 3GPP Mobile Network Authentication and Key Agreement (EAP-AKA')",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-04T17:31:20.463Z"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-04T17:31:20.463Z"
+    },
+    "doi": "10.17487/RFC9048",
+    "doi$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-04T17:31:20.463Z"
+    },
+    "href": "https://doi.org/10.17487/RFC9048",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI (https://doi.org/<doi>)",
+      "originalValue": "https://www.rfc-editor.org/info/rfc9048",
+      "overridden": true,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc9048/",
+      "updated": "2026-03-09T21:56:17.766Z",
+      "version": "extractDocs.js@commit:17e11f3de1ab"
+    },
+    "keywords": [
+      "EAP",
+      "AKA",
+      "AKA'",
+      "3GPP"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML keywords",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc9048/",
+      "updated": "2026-03-09T21:56:17.766Z",
+      "version": "extractDocs.js@commit:17e11f3de1ab"
+    },
+    "pages": "40",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML page-count",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc9048/",
+      "updated": "2026-03-09T21:56:17.766Z",
+      "version": "extractDocs.js@commit:17e11f3de1ab"
+    },
+    "publicationDate": "2021-10-01",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-04T17:31:20.463Z"
+    },
+    "publisher": "IETF",
+    "publisher$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-04T17:31:20.463Z"
+    },
+    "references": {
+      "bibliographic": [
+        "10.1145-2382196.2382221",
+        "10.1145-3243734.3243846",
+        "10.2478-popets-2019-0039",
+        "10.5555-2534748.2534755",
+        "IETF.draft-ietf-emu-aka-pfs-05",
+        "NIST.FIPS.180-1",
+        "NIST.FIPS.180-2",
+        "INTERCEPT.great-sim-heist.2015-02",
+        "10.14722-ndss.2019.23442",
+        "ISOC.NDSS.GSM.201202",
+        "10.1007-978-3-642-33704-8_6",
+        "RFC3310",
+        "RFC4086",
+        "RFC4169",
+        "RFC4186",
+        "RFC4284",
+        "RFC4306",
+        "RFC5113",
+        "RFC5247",
+        "RFC5281",
+        "RFC5448",
+        "RFC6194",
+        "RFC6973",
+        "RFC7170",
+        "RFC7258",
+        "RFC7296",
+        "10.14722-ndss.2016.23236",
+        "3GPP.TS-35.208.202007",
+        "10.1109-TWC.2004.842941"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC HTML references/informative sections",
+        "originalValue": [
+          "10.1145-2382196.2382221",
+          "10.1145-3243734.3243846",
+          "10.2478-popets-2019-0039",
+          "10.5555-2534748.2534755",
+          "IETF.draft-ietf-emu-aka-pfs-05",
+          "NIST.FIPS.180-1",
+          "NIST.FIPS.180-2",
+          "INTERCEPT.great-sim-heist.2015-02",
+          "10.1007-978-3-642-33704-8_6",
+          "RFC3310",
+          "RFC4086",
+          "RFC4169",
+          "RFC4186",
+          "RFC4284",
+          "RFC4306",
+          "RFC5113",
+          "RFC5247",
+          "RFC5281",
+          "RFC5448",
+          "RFC6194",
+          "RFC6973",
+          "RFC7170",
+          "RFC7258",
+          "RFC7296",
+          "3GPP.TS-35.208.202007",
+          "10.1109-TWC.2004.842941"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9048/",
+        "updated": "2026-03-09T23:36:04.885Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      },
+      "normative": [
+        "NIST.FIPS.180-4",
+        "RFC2104",
+        "RFC2119",
+        "RFC3748",
+        "RFC4187",
+        "RFC7542",
+        "RFC8126",
+        "RFC8174",
+        "3GPP.TS-23.003.202106",
+        "3GPP.TS-23.501.202106",
+        "3GPP.TS-24.302.202007",
+        "3GPP.TS-24.501.202106",
+        "3GPP.TS-33.102.202007",
+        "3GPP.TS-33.402.202007",
+        "3GPP.TS-33.501.202107"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC HTML normative references sections",
+        "originalValue": [
+          "NIST.FIPS.180-4",
+          "RFC2104",
+          "RFC2119",
+          "RFC3748",
+          "RFC4187",
+          "RFC7542",
+          "RFC8126",
+          "RFC8174"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9048/",
+        "updated": "2026-03-09T22:08:25.649Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      }
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc9048",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc9048/",
+      "updated": "2026-03-09T21:56:17.767Z",
+      "version": "extractDocs.js@commit:17e11f3de1ab"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": false,
+        "overridden": true,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9048/",
+        "updated": "2026-03-09T21:56:17.766Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      },
+      "amendedBy": [
+        "RFC9678"
+      ],
+      "amendedBy$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC index XML and RFC info relation <dl>",
+        "originalValue": [],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9048/",
+        "updated": "2026-03-09T21:56:17.767Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      },
+      "amends": [
+        "RFC5448",
+        "RFC4187"
+      ],
+      "amends$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC index XML and RFC info relation <dl>",
+        "originalValue": [],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9048/",
+        "updated": "2026-03-09T21:56:17.767Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      },
+      "errataExist": false,
+      "errataExist$meta": {
+        "confidence": "high",
+        "note": "Derived from presence of errata links on RFC/Datatracker pages",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9048/",
+        "updated": "2026-03-09T21:56:17.767Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9048/",
+        "updated": "2026-03-09T21:56:17.767Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      },
+      "statusNote": "Proposed Standard",
+      "statusNote$meta": {
+        "confidence": "high",
+        "note": "Mapped from Datatracker doc.json std_level",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9048/",
+        "updated": "2026-03-09T21:56:17.767Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": true,
+        "overridden": true,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9048/",
+        "updated": "2026-03-09T21:56:17.767Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      }
+    }
+  }
+}

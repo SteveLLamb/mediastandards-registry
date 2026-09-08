@@ -1,0 +1,220 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-M00605",
+  "document": {
+    "abstract": "Channel coding is generally employed in digital magnetic recording to match certain properties of the coded sequence to the channel characteristics of the recorder. Since magnetic recorders are incapable of reproducing very low frequencies or dc content, dc-free channel codings have been primarily employed in the digital VTR's, for example 8–10 block code [1], M<sup>2</sup> [2], interleaved NRZI* [3,4], tri-level code [5] and so on. This paper describes the dc-free 8–9 block coding. The coding strategy is discussed in detail with examples of three practical methods. The properties of the 8–9 block code have been investigated both by hardware experiments and by computer simulation. The performance of this channel code is found to be better than that of the 8–10 block code when it is applied to an experimental digital VTR without any major modification to the recording and playback circuits.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Backfilled from SMPTE canonical repository (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "Sony Corporation, Atsugi Plant",
+        "bio": "Hirofumi Yoshida is General Manager of the Communication Systems Research and Development Division, Sony Corp. He was born in 1930 in Iwate, Japan. He received the B.S. degree in Electrical Engineering in 1953 from the University of Iwate. He joined Sony Corp., Tokyo, in 1960 as Senior Electronic Engineer, where he was involved in the development of analog audio tape recorder. From 1968 to 1978, he was Head of the Systems Research Laboratory at the Sony Research Center, Yokohama, and was involved in the research work on digital techniques in signal processing, recording and solid state imaging.",
+        "name": "H. Yoshida"
+      },
+      {
+        "affiliation": "Sony Corporation, Atsugi Plant",
+        "bio": "Yoshilaka Hashimoto is Assistant Genera! Manager of the Communication Systems Research and Development Division, Sony Corp. He was born in 1940 in Kyoto, Japan. He received the B.S. degree in Electronic Engineering from the University of Electro-Communications, Tokyo in 1964, and joined Sony Corp. Research Division in the same year. In 1968 he received the M.S. degree in Electrical Engineering from Stanford University, California after one year study with the Scholarship from Sony Corp. From 1972 to 1978 he was involved in the research work on digital signal processing of audio and video signals at the Sony Research Center. Since 1978 he has been involved in the development of digital video processing and recording technology at Atsugi Plant.",
+        "name": "Y. Hashimoto"
+      },
+      {
+        "affiliation": "Sony Corporation, Atsugi Plant",
+        "bio": "Toshiyuki Shimada was born in 1954 in Osaka, Japan. He received the B.S. degree in Electronics and Communication Engineering in 1976, and the M.S. degree in Electrical Engineering in 1978 from Waseda University, Japan. He joined The Sony Research Center in 1978. Since 1979 he has been involved in the development of digital video recording technology at the Communication Systems Research and Development Division, Atsugi Plant.",
+        "name": "T. Shimada"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Canonical-confirmed full paper (summary-abstract set is orig-research in the SMPTE canonical repos); HIGHWIRE-era abstract label was a delivery artifact",
+      "originalValue": "summary-abstract",
+      "source": "resolved",
+      "updated": "2026-07-09T19:12:47.628Z",
+      "version": "contenttype-fixes@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00605.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      },
+      "year": "1983",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00605.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00605.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docId": "10.5594-M00605",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/M00605",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docLabel": "SMPTE Meetings and Conferences ( February 1983)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docTitle": "8–9 Block Code: A DC-Free Channel Code for Digital Magnetic Recording",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00605.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docType": "Conference Paper",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE conference paper",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "doi": "10.5594/M00605",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00605.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/M00605",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/M00605",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "number": "20",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00605.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "pages": "184–195",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00605.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publicationDate": "1983-02-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00605.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00605.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-M00605/bibr1-10.5594_M00605",
+        "orphan/10.5594-M00605/bibr2-10.5594_M00605",
+        "orphan/10.5594-M00605/bibr3-10.5594_M00605",
+        "orphan/10.5594-M00605/bibr4-10.5594_M00605",
+        "orphan/10.5594-M00605/bibr5-10.5594_M00605",
+        "orphan/10.5594-M00605/bibr6-10.5594_M00605",
+        "orphan/10.5594-M00605/bibr7-10.5594_M00605",
+        "orphan/10.5594-M00605/bibr8-10.5594_M00605",
+        "orphan/10.5594-M00605/bibr9-10.5594_M00605",
+        "orphan/10.5594-M00605/bibr10-10.5594_M00605",
+        "orphan/10.5594-M00605/bibr11-10.5594_M00605"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteConferenceRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T20:02:43.384Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/conferences/Video%20Pictures%20of%20the%20Future:%2017th%20Annual%20SMPTE%20Television%20Conference/20/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.439Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — conference papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "volume": "1983",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00605.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    }
+  }
+}

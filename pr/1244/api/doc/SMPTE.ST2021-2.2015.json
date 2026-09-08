@@ -1,0 +1,344 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST2021-2.2015",
+  "document": {
+    "abstract": "Generally, the Broadcast eXchange Format (BXF) defines the format and content of XML Messages for the interchange of data and metadata among professional systems, as follows: 1. Broadcast schedules, including playout and record schedules 2. As run information 3. Content metadata, such as Content ID, Title, Duration, etc. 4. Content management requests such as dub and purge requests 5. Requests for transfer of content some of which will result in the transfer of Content essence between professional systems. 6. Ports as used by TCP/IP for the exchange of messages — The primary systems envisioned as users of this standard are: — Program Management Systems — Broadcast Traffic Systems — Master Control Automation Systems — Content Distribution Systems — This particular document is focused on Protocol-related topics as they relate to BXF. The main BXF document (SMPTE ST 2021-1) should be read first, and this part (SMPTE ST 2021-2) should be considered as a companion to SMPTE ST 2021-1 for those interested in all things Protocol.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st2021-2-2015/st2021-2-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.865Z"
+    },
+    "approvalDate": "2015-10-09",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json); Zoho is canonical for SMPTE standards metadata, registry value overwritten",
+      "originalValue": "2015",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2026-06-15T20:27:42.872Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st2021-2-2015/st2021-2-2015.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.865Z"
+      },
+      "year": "2015",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st2021-2-2015/st2021-2-2015.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.865Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st2021-2-2015/st2021-2-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.865Z"
+    },
+    "docId": "SMPTE.ST2021-2.2015",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2021-2/20151009-pub/",
+      "updated": "2025-10-26T17:01:40.116Z"
+    },
+    "docLabel": "SMPTE ST 2021-2:2015",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2021-2/20151009-pub/",
+      "updated": "2025-10-26T17:01:40.116Z"
+    },
+    "docNumber": "2021",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2021-2/20151009-pub/",
+      "updated": "2025-10-26T17:01:40.116Z"
+    },
+    "docPart": "2",
+    "docPart$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubPart meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2021-2/20151009-pub/",
+      "updated": "2025-10-26T17:01:40.116Z"
+    },
+    "docSuiteTitle": "Broadcast Exchange Format (BXF)",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-12-12T21:29:24.754Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docTitle": "Protocol",
+    "docTitle$meta": {
+      "confidence": "high",
+      "excludeChanges": true,
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": "Broadcast Exchange Format (BXF) — Broadcast Exchange Format (BXF) -Protocol",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-12-12T21:29:24.754Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2021-2/20151009-pub/",
+      "updated": "2025-10-26T17:01:40.116Z"
+    },
+    "doi": "10.5594/SMPTE.ST2021-2.2015",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2021-2/20151009-pub/",
+      "updated": "2025-10-26T17:01:40.116Z"
+    },
+    "familyId": "2021-2",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st2021-2-2015/st2021-2-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.865Z"
+    },
+    "group": "smpte-34cs-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st2021-2-2015/st2021-2-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.865Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST2021-2.2015",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2021-2/20151009-pub/",
+      "updated": "2025-10-26T17:01:40.116Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      },
+      {
+        "code": "33.200",
+        "description": "Telecontrol. Telemetering"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st2021-2-2015/st2021-2-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.865Z"
+    },
+    "isbn": "978-1-68303-005-8",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st2021-2-2015/st2021-2-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.865Z"
+    },
+    "keywords": [
+      "Television",
+      "Control",
+      "BXF",
+      "Traffic"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st2021-2-2015/st2021-2-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.865Z"
+    },
+    "numberOfPages": "9",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–9",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st2021-2-2015/st2021-2-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.865Z"
+    },
+    "productNumber": "SSD001886",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st2021-2-2015/st2021-2-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.865Z"
+    },
+    "publicationDate": "2015-10-09",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2021-2/20151009-pub/",
+      "updated": "2025-10-26T17:01:40.116Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2021-2/20151009-pub/",
+      "updated": "2025-10-26T17:01:40.116Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st2021-2-2015/st2021-2-2015.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.865Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st2021-2-2015/st2021-2-2015.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.865Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st2021-2-2015/st2021-2-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.865Z"
+    },
+    "references": {
+      "normative": [
+        "SMPTE.ST2021-1.2015",
+        "orphan/SMPTE.ST2021-2.2015/ref-norm-2"
+      ],
+      "normative$meta": {
+        "confidence": "medium",
+        "note": "Resolved from sibling -ref.xml via resolveSmpteSourceRefs.v2.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-06-22T23:05:50.315Z"
+      }
+    },
+    "releaseTag": "20151009-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2021-2/20151009-pub/",
+      "updated": "2025-10-26T17:01:40.116Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/st2021-2/20151009-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000007Nch",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-11-11T04:50:45.366Z",
+      "version": "extractDocs.js@commit:dea962f9e9d7"
+    },
+    "standardId": "20906",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/st2021-2-2015/st2021-2-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.865Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:40.116Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-26T17:01:40.116Z"
+      },
+      "latestVersion": false,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:40.116Z"
+      },
+      "stabilized": true,
+      "stabilized$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #state",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-26T17:01:40.116Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:40.116Z"
+      },
+      "supersededBy": [
+        "SMPTE.ST2021-2.2017"
+      ],
+      "supersededBy$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": [],
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:40.116Z"
+      },
+      "supersededDate": "2017-07-12",
+      "supersededDate$meta": {
+        "confidence": "high",
+        "note": "Calculated as the publication date of the next base release (from releaseTag)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:40.116Z"
+      }
+    }
+  }
+}

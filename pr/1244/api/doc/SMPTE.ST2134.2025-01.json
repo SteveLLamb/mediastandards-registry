@@ -1,0 +1,224 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST2134.2025-01",
+  "document": {
+    "approvalDate": "2025-01-29",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:06:26.674Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "year": "2025",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+        "source": "parsed",
+        "updated": "2026-06-16T00:07:06.330Z",
+        "version": "smpte-zoho-standards@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:07:06.330Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "docId": "SMPTE.ST2134.2025-01",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2134/20250129-pub/",
+      "updated": "2025-10-26T21:41:58.246Z"
+    },
+    "docLabel": "SMPTE ST 2134:2025-01",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2134/20250129-pub/",
+      "updated": "2025-10-26T21:41:58.246Z"
+    },
+    "docNumber": "2134",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2134/20250129-pub/",
+      "updated": "2025-10-26T21:41:58.246Z"
+    },
+    "docTitle": "MXF Descriptive Metadata Scheme for Compatible Time Labels (DMS-TLC)",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2134/20250129-pub/",
+      "updated": "2025-10-26T21:41:58.246Z"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2134/20250129-pub/",
+      "updated": "2025-10-26T21:41:58.246Z"
+    },
+    "doi": "10.5594/SMPTE.ST2134.2025",
+    "doi$meta": {
+      "confidence": "high",
+      "excludeChanges": true,
+      "note": "Corrected to the actually-registered (malformed) DOI form from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json). The DOI registrar received this DOI with a duplicated SMPTE. prefix and that's the only form that resolves at doi.org — the SMPTE-canonical form (matching this doc's docId) does NOT resolve. UPSTREAM ACTION NEEDED: SMPTE should re-register this DOI in the canonical form to match the docId; once that lands, this field can be flipped back and the excludeChanges lock removed. Field locked via excludeChanges so future cross-fills can't \"fix\" it back to the unresolvable canonical form before the upstream re-registration happens.",
+      "originalValue": "10.5594/SMPTE.ST2134.2025-01",
+      "overridden": true,
+      "source": "manual",
+      "updated": "2026-06-15T22:07:58.089Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST2134.2025",
+    "href$meta": {
+      "confidence": "high",
+      "excludeChanges": true,
+      "note": "Corrected to the actually-registered (malformed) DOI form from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json). The DOI registrar received this DOI with a duplicated SMPTE. prefix and that's the only form that resolves at doi.org — the SMPTE-canonical form (matching this doc's docId) does NOT resolve. UPSTREAM ACTION NEEDED: SMPTE should re-register this DOI in the canonical form to match the docId; once that lands, this field can be flipped back and the excludeChanges lock removed. Field locked via excludeChanges so future cross-fills can't \"fix\" it back to the unresolvable canonical form before the upstream re-registration happens.",
+      "originalValue": "https://doi.org/10.5594/SMPTE.ST2134.2025-01",
+      "overridden": true,
+      "source": "manual",
+      "updated": "2026-06-15T22:07:58.089Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:07:53.961Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "isbn": "978-1-68303-344-8",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:05:43.143Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "keywords": [
+      "MXF",
+      "File Formats",
+      "Time & Sync",
+      "Label"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Scrubbed against src/main/config/site.json controlledKeywords (auto-fix renames + drop noise)",
+      "originalValue": [
+        "MXF",
+        "File Format",
+        "Time & Sync",
+        "Label"
+      ],
+      "source": "parsed",
+      "updated": "2026-06-17T17:18:30.093Z",
+      "version": "kw-scrub@v1"
+    },
+    "numberOfPages": "113",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:08:15.443Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "productNumber": "SSD002223",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:08:38.925Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "publicationDate": "2025-01-29",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2134/20250129-pub/",
+      "updated": "2025-10-26T21:41:58.246Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2134/20250129-pub/",
+      "updated": "2025-10-26T21:41:58.246Z"
+    },
+    "releaseTag": "20250129-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2134/20250129-pub/",
+      "updated": "2025-10-26T21:41:58.246Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/st2134/20250129-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.441Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T21:41:58.246Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-26T21:41:58.246Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T21:41:58.246Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T21:41:58.246Z"
+      }
+    }
+  }
+}

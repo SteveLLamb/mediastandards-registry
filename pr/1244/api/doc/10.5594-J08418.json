@@ -1,0 +1,237 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-J08418",
+  "document": {
+    "abbrevTitle": "J SMPE",
+    "abbrevTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08418.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "abstract": "It may be a surprise to many of today's SMPE members that standardization was probably the most important reason for the founding of the Society. A reading of the early issues of the Transactions of the Society, following its founding in 1916, shows a preponderance of articles (now called by the more dignified title of papers) on the subject of standardization. To cite just a few instances at random, in the second issue of the Transactions there is an article on the importance of precision in the manufacture of cine machinery and film, and another article setting forth suggested standard dimensions for slitting and perforating 35-mm film which are substantially the dimensions in use today.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/07302015 IBP DEPOSITS/Journal-256-Issues/smptej_43_1/MIJR15Vol43No1.xml)",
+      "source": "parsed",
+      "updated": "2026-06-16T16:11:59.617Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "ASA War Committee on Photography and Cinematography-Z52",
+        "name": "J. W. McNair"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Vocabulary conformance to SMPTE ContentTypeEnum (2026-07-09): 'research-article' renamed to 'orig-research'. Registry vocab = SMPTE enum + 9 retained MSRBot values.",
+      "originalValue": "research-article",
+      "source": "resolved",
+      "updated": "2026-07-09T17:56:30.992Z",
+      "version": "articletype-conform@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08418.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "year": "1944",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08418.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08418.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docId": "10.5594-J08418",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/J08418",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docLabel": "Journal of the Society of Motion Picture Engineers ( Volume: 43, Issue: 1, July 1944)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from journal title, volume, issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docTitle": "The Role of the American Standards Association in War Standardization",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08418.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "doi": "10.5594/J08418",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08418.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/J08418",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/J08418",
+      "source": "inferred",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "issn": {
+      "print": "0097-5834",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08418.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08418.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/07302015 IBP DEPOSITS/Journal-256-Issues/smptej_43_1/MIJR15Vol43No1.xml)",
+      "source": "parsed",
+      "updated": "2026-06-16T16:11:59.617Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "Journal of the Society of Motion Picture Engineers",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "1",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08418.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "pages": "5–9",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08418.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publicationDate": "1944-07-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08418.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/07302015 IBP DEPOSITS/Journal-256-Issues/smptej_43_1/MIJR15Vol43No1.xml)",
+        "source": "parsed",
+        "updated": "2026-06-16T16:11:59.617Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08418.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/Journal%20of%20the%20Society%20of%20Motion%20Picture%20Engineers/43/1/5/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.416Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — journal articles default active",
+        "source": "inferred",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "volume": "43",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08418.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    }
+  }
+}

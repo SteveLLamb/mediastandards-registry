@@ -1,0 +1,341 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.RDD9.2009",
+  "document": {
+    "abstract": "This document specifies the mapping of MPEG-2 Picture (ES) compatible with MPEG stream and AES3 audio into the MXF Generic Container. The MXF files created according to the details of this specification comply with the MXF specifications defined in the normative references. In conjunction with the referenced Standards, this RDD is intended to provide sufficient information to enable a developer to construct MXF files that will be compatible with Sony MPEG Long GOP products.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08242015 STANDARDS REVISED DEPOSIT/smptes_rdd-9-2009_1/rdd09-2009.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.813Z"
+    },
+    "approvalDate": "2009-06-22",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08242015 STANDARDS REVISED DEPOSIT/smptes_rdd-9-2009_1/rdd09-2009.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.813Z"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08242015 STANDARDS REVISED DEPOSIT/smptes_rdd-9-2009_1/rdd09-2009.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.813Z"
+      },
+      "year": "2009",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08242015 STANDARDS REVISED DEPOSIT/smptes_rdd-9-2009_1/rdd09-2009.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.813Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08242015 STANDARDS REVISED DEPOSIT/smptes_rdd-9-2009_1/rdd09-2009.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.813Z"
+    },
+    "docId": "SMPTE.RDD9.2009",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd9/20090622-pub/",
+      "updated": "2025-10-08T05:50:21.183Z"
+    },
+    "docLabel": "SMPTE RDD 9:2009",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd9/20090622-pub/",
+      "updated": "2025-10-08T05:50:21.183Z"
+    },
+    "docNumber": "9",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd9/20090622-pub/",
+      "updated": "2025-10-08T05:50:21.183Z"
+    },
+    "docTitle": "MXF Interoperability Specification of Sony MPEG Long GOP Products",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd9/20090622-pub/",
+      "updated": "2025-10-08T05:50:21.183Z"
+    },
+    "docType": "Registered Disclosure Document",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd9/20090622-pub/",
+      "updated": "2025-10-08T05:50:21.183Z"
+    },
+    "doi": "10.5594/SMPTE.RDD9.2009",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd9/20090622-pub/",
+      "updated": "2025-10-08T05:50:21.183Z"
+    },
+    "familyId": "9",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08242015 STANDARDS REVISED DEPOSIT/smptes_rdd-9-2009_1/rdd09-2009.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.813Z"
+    },
+    "group": "smpte-31fs-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08242015 STANDARDS REVISED DEPOSIT/smptes_rdd-9-2009_1/rdd09-2009.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.813Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.RDD9.2009",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd9/20090622-pub/",
+      "updated": "2025-10-08T05:50:21.183Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08242015 STANDARDS REVISED DEPOSIT/smptes_rdd-9-2009_1/rdd09-2009.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.813Z"
+    },
+    "isbn": "978-1-61482-718-4",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08242015 STANDARDS REVISED DEPOSIT/smptes_rdd-9-2009_1/rdd09-2009.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.813Z"
+    },
+    "keywords": [
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Television",
+      "File Formats",
+      "Compression",
+      "MXF",
+      "MPEG"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Scrubbed against src/main/config/site.json controlledKeywords (auto-fix renames + drop noise)",
+      "originalValue": [
+        "Communication",
+        "Networking and Broadcast Technologies",
+        "Television",
+        "File Formats",
+        "Compression",
+        "MXF",
+        "File Format",
+        "MPEG"
+      ],
+      "source": "parsed",
+      "updated": "2026-06-17T17:18:30.093Z",
+      "version": "kw-scrub@v1"
+    },
+    "numberOfPages": "33",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–24",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08242015 STANDARDS REVISED DEPOSIT/smptes_rdd-9-2009_1/rdd09-2009.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.813Z"
+    },
+    "productNumber": "SSD001850",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08242015 STANDARDS REVISED DEPOSIT/smptes_rdd-9-2009_1/rdd09-2009.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.813Z"
+    },
+    "publicationDate": "2009-06-22",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd9/20090622-pub/",
+      "updated": "2025-10-08T05:50:21.183Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd9/20090622-pub/",
+      "updated": "2025-10-08T05:50:21.183Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08242015 STANDARDS REVISED DEPOSIT/smptes_rdd-9-2009_1/rdd09-2009.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.813Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08242015 STANDARDS REVISED DEPOSIT/smptes_rdd-9-2009_1/rdd09-2009.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.813Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08242015 STANDARDS REVISED DEPOSIT/smptes_rdd-9-2009_1/rdd09-2009.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.813Z"
+    },
+    "references": {
+      "bibliographic": [
+        "SMPTE.EG41.2004",
+        "SMPTE.RP210",
+        "SMPTE.RP224"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-18T22:11:52.542Z"
+      },
+      "normative": [
+        "SMPTE.ST326.2000",
+        "SMPTE.ST331.2004",
+        "SMPTE.ST377-1.2009",
+        "SMPTE.ST378.2004",
+        "SMPTE.ST379.2004",
+        "SMPTE.ST381.2005",
+        "SMPTE.ST382.2007",
+        "SMPTE.ST385.2004",
+        "SMPTE.ST400.2004"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-18T22:11:52.542Z"
+      }
+    },
+    "releaseTag": "20090622-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd9/20090622-pub/",
+      "updated": "2025-10-08T05:50:21.183Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/rdd9/20090622-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000007NaC",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-11-11T04:45:20.177Z",
+      "version": "extractDocs.js@commit:dea962f9e9d7"
+    },
+    "standardId": "20257",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08242015 STANDARDS REVISED DEPOSIT/smptes_rdd-9-2009_1/rdd09-2009.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.813Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-08T05:50:21.183Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-08T05:50:21.183Z"
+      },
+      "latestVersion": false,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-08T05:50:21.183Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-08T05:50:21.183Z"
+      },
+      "supersededBy": [
+        "SMPTE.RDD9.2013"
+      ],
+      "supersededBy$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": [],
+        "source": "resolved",
+        "updated": "2025-10-08T05:50:21.183Z"
+      },
+      "supersededDate": "2013-02-06",
+      "supersededDate$meta": {
+        "confidence": "high",
+        "note": "Calculated as the publication date of the next base release (from releaseTag)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-08T05:50:21.183Z"
+      }
+    }
+  }
+}

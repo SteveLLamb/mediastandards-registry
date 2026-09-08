@@ -1,0 +1,302 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST401.2005",
+  "document": {
+    "abstract": "This document defines content protection and content management (CPCM) information in the form of an extended content control information (ExCCI) data packet, including the packet's syntax, semantics, and structure. The packet is intended to convey redistribution control information for use as content is exported into the consumer space. Not all consumer distribution channels are expected to utilize all of the ExCCI information. (See annex B.)",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-401-2005_1/st0401-2005.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.859Z"
+    },
+    "approvalDate": "2005-02-23",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json); Zoho is canonical for SMPTE standards metadata, registry value overwritten",
+      "originalValue": "2005",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2026-06-15T20:27:42.872Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-401-2005_1/st0401-2005.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.859Z"
+      },
+      "year": "2005",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-401-2005_1/st0401-2005.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.859Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-401-2005_1/st0401-2005.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.859Z"
+    },
+    "docId": "SMPTE.ST401.2005",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st401/20050223-pub/",
+      "updated": "2025-10-21T04:40:44.330Z"
+    },
+    "docLabel": "SMPTE ST 401:2005",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st401/20050223-pub/",
+      "updated": "2025-10-21T04:40:44.330Z"
+    },
+    "docNumber": "401",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st401/20050223-pub/",
+      "updated": "2025-10-21T04:40:44.330Z"
+    },
+    "docTitle": "Extended Content ControlInformation (ExCCI) Data Packet",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st401/20050223-pub/",
+      "updated": "2025-10-21T04:40:44.330Z"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st401/20050223-pub/",
+      "updated": "2025-10-21T04:40:44.330Z"
+    },
+    "doi": "10.5594/SMPTE.ST401.2005",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st401/20050223-pub/",
+      "updated": "2025-10-21T04:40:44.330Z"
+    },
+    "familyId": "401",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-401-2005_1/st0401-2005.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.859Z"
+    },
+    "group": "smpte-30mr-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-401-2005_1/st0401-2005.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.859Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST401.2005",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st401/20050223-pub/",
+      "updated": "2025-10-21T04:40:44.330Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-401-2005_1/st0401-2005.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.859Z"
+    },
+    "isbn": "978-1-61482-543-2",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-401-2005_1/st0401-2005.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.859Z"
+    },
+    "keywords": [
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Metadata",
+      "Security",
+      "Television"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-401-2005_1/st0401-2005.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.859Z"
+    },
+    "numberOfPages": "5",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–5",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-401-2005_1/st0401-2005.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.859Z"
+    },
+    "productNumber": "SSD001544",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-401-2005_1/st0401-2005.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.859Z"
+    },
+    "publicationDate": "2005-02-23",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st401/20050223-pub/",
+      "updated": "2025-10-21T04:40:44.330Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st401/20050223-pub/",
+      "updated": "2025-10-21T04:40:44.330Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-401-2005_1/st0401-2005.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.859Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-401-2005_1/st0401-2005.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.859Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-401-2005_1/st0401-2005.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.859Z"
+    },
+    "references": {
+      "bibliographic": [
+        "ATSC.A65B.2003"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Resolved from sibling -ref.xml via resolveSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-19T17:05:10.539Z"
+      }
+    },
+    "releaseTag": "20050223-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st401/20050223-pub/",
+      "updated": "2025-10-21T04:40:44.330Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/st401/20050223-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000007Nfs",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-30T22:52:27.542Z",
+      "version": "extractDocs.js@commit:ee2844fb1cf2"
+    },
+    "standardId": "20813",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-401-2005_1/st0401-2005.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.859Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-21T04:40:44.330Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-21T04:40:44.330Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-21T04:40:44.330Z"
+      },
+      "stabilized": true,
+      "stabilized$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #state",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-21T04:40:44.330Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-21T04:40:44.330Z"
+      }
+    }
+  }
+}

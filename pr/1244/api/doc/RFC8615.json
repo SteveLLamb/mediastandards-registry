@@ -1,0 +1,270 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "RFC8615",
+  "document": {
+    "abstract": "This memo defines a path prefix for \"well-known locations\", \"/.well-known/\", in selected Uniform Resource Identifier (URI) schemes. In doing so, it obsoletes RFC 5785 and updates the URI schemes defined in RFC 7230 to reserve that space. It also updates RFC 7595 to track URI schemes that support well-known URIs in their registry.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML abstract",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc8615/",
+      "updated": "2026-03-09T23:59:26.110Z",
+      "version": "extractDocs.js@commit:17e11f3de1ab"
+    },
+    "authors": [
+      {
+        "name": "Mark Nottingham"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc8615/",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "docId": "RFC8615",
+    "docId$meta": {
+      "confidence": "high",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "IETF RFC 8615",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docNumber": "8615",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML technical report metadata",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc8615/",
+      "updated": "2026-03-09T23:59:26.110Z",
+      "version": "extractDocs.js@commit:17e11f3de1ab"
+    },
+    "docTitle": "Well-Known Uniform Resource Identifiers (URIs)",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "doi": "10.17487/RFC8615",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML doi",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc8615/",
+      "updated": "2026-03-09T23:59:26.111Z",
+      "version": "extractDocs.js@commit:17e11f3de1ab"
+    },
+    "href": "https://doi.org/10.17487/RFC8615",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI (https://doi.org/<doi>)",
+      "originalValue": "https://www.rfc-editor.org/info/rfc8615",
+      "overridden": true,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc8615/",
+      "updated": "2026-03-09T23:59:26.110Z",
+      "version": "extractDocs.js@commit:17e11f3de1ab"
+    },
+    "issn": "2070-1721",
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML citation_issn",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc8615/",
+      "updated": "2026-03-09T23:59:26.111Z",
+      "version": "extractDocs.js@commit:17e11f3de1ab"
+    },
+    "pages": "12",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML page-count",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc8615/",
+      "updated": "2026-03-09T23:59:26.110Z",
+      "version": "extractDocs.js@commit:17e11f3de1ab"
+    },
+    "publicationDate": "2019-05-01",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "IETF",
+    "publisher$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "references": {
+      "bibliographic": [
+        "W3C.WD-csp3.20160913",
+        "WHATWG.FETCH",
+        "WHATWG.HTML",
+        "W3C.p3p.20020416",
+        "W3C.CR-referrer-policy.20170126",
+        "RFC2026",
+        "RFC3552",
+        "RFC4918",
+        "RFC5785",
+        "RFC6265",
+        "RFC7231",
+        "RFC7252",
+        "RFC7320",
+        "RFC8307",
+        "RFC8323",
+        "W3C.webstorage.20160419"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Parsed from RFC HTML references/informative sections | Manual review completed 2026-03-10",
+        "originalValue": [
+          "W3C.WD-csp3.20160913",
+          "W3C.p3p.20020416",
+          "W3C.CR-referrer-policy.20170126",
+          "RFC2026",
+          "RFC3552",
+          "RFC4918",
+          "RFC5785",
+          "RFC6265",
+          "RFC7231",
+          "RFC7252",
+          "RFC7320",
+          "RFC8307",
+          "RFC8323",
+          "W3C.webstorage.20160419"
+        ],
+        "overridden": true,
+        "reviewRequired": false,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc8615/",
+        "updated": "2026-03-10T00:10:50.028Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      },
+      "normative": [
+        "RFC2119",
+        "RFC3986",
+        "RFC6454",
+        "RFC7230",
+        "RFC8126",
+        "RFC8174"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC HTML normative references sections | Manual review completed 2026-03-10",
+        "originalValue": [],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc8615/",
+        "updated": "2026-03-10T00:10:50.028Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      }
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc8615",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://datatracker.ietf.org/doc/html/rfc8615",
+      "overridden": true,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc8615/",
+      "updated": "2026-03-09T23:59:26.112Z",
+      "version": "extractDocs.js@commit:17e11f3de1ab"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "amends": [
+        "RFC7230",
+        "RFC7595"
+      ],
+      "amends$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC index XML and RFC info relation <dl>",
+        "originalValue": [],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc8615/",
+        "updated": "2026-03-09T23:59:26.112Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      },
+      "errataExist": false,
+      "errataExist$meta": {
+        "confidence": "high",
+        "note": "Derived from presence of errata links on RFC/Datatracker pages",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc8615/",
+        "updated": "2026-03-09T23:59:26.112Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc8615/",
+        "updated": "2026-03-09T23:59:26.111Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      },
+      "statusNote": "Proposed Standard",
+      "statusNote$meta": {
+        "confidence": "high",
+        "note": "Mapped from Datatracker doc.json std_level",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc8615/",
+        "updated": "2026-03-09T23:59:26.112Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc8615/",
+        "updated": "2026-03-09T23:59:26.111Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      },
+      "supersedes": [
+        "RFC5785"
+      ],
+      "supersedes$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC index XML and RFC info relation <dl>",
+        "originalValue": [],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc8615/",
+        "updated": "2026-03-09T23:59:26.112Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      }
+    }
+  }
+}

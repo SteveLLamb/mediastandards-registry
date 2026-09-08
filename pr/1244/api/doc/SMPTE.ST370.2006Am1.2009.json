@@ -1,0 +1,229 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST370.2006Am1.2009",
+  "document": {
+    "approvalDate": "2009-06-15",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:27:42.872Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "year": "2009",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+        "source": "parsed",
+        "updated": "2026-06-15T20:08:45.039Z",
+        "version": "smpte-zoho-standards@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:08:45.039Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "docId": "SMPTE.ST370.2006Am1.2009",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st370/20090615-am1-pub/",
+      "updated": "2025-10-21T04:40:14.606Z"
+    },
+    "docLabel": "SMPTE ST 370:2006 Am1:2009",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st370/20090615-am1-pub/",
+      "updated": "2025-10-21T04:40:14.606Z"
+    },
+    "docNumber": "370",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st370/20090615-am1-pub/",
+      "updated": "2025-10-21T04:40:14.606Z"
+    },
+    "docTitle": "Data Structure for DV-Based Audio, Data and Compressed Video at 100 Mb/s 1080/60i, 1080/50i, 720/60p, 720/50p",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st370/20090615-am1-pub/",
+      "updated": "2025-10-21T04:40:14.606Z"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st370/20090615-am1-pub/",
+      "updated": "2025-10-21T04:40:14.606Z"
+    },
+    "doi": "10.5594/SMPTE.ST370.2006Am1.2009",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st370/20090615-am1-pub/",
+      "updated": "2025-10-21T04:40:14.606Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST370.2006Am1.2009",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st370/20090615-am1-pub/",
+      "updated": "2025-10-21T04:40:14.606Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:44:42.037Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "isbn": "978-1-61482-511-1",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:04:58.507Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "keywords": [
+      "Compression",
+      "DV",
+      "Television"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-17T16:55:09.355Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "numberOfPages": "3",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "productNumber": "SSD001512",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:11:00.505Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "publicationDate": "2009-06-15",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st370/20090615-am1-pub/",
+      "updated": "2025-10-21T04:40:14.606Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st370/20090615-am1-pub/",
+      "updated": "2025-10-21T04:40:14.606Z"
+    },
+    "releaseTag": "20090615-am1-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st370/20090615-am1-pub/",
+      "updated": "2025-10-21T04:40:14.606Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-21T04:40:14.606Z"
+      },
+      "latestVersion": false,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-21T04:40:14.606Z"
+      },
+      "stabilized": true,
+      "stabilized$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #state",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-21T04:40:14.606Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-21T04:40:14.606Z"
+      },
+      "supersededBy": [
+        "SMPTE.ST370.2013"
+      ],
+      "supersededBy$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": [],
+        "source": "resolved",
+        "updated": "2025-10-21T04:40:14.606Z"
+      },
+      "supersededDate": "2013-09-02",
+      "supersededDate$meta": {
+        "confidence": "high",
+        "note": "Calculated as the publication date of the next base release (from releaseTag)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-21T04:40:14.606Z"
+      }
+    }
+  }
+}

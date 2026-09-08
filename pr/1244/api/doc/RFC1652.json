@@ -1,0 +1,283 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "RFC1652",
+  "document": {
+    "abstract": "This memo defines an extension to the SMTP service whereby an SMTP content body consisting of text containing octets outside of the US- ASCII octet range (hex 00-7F) may be relayed using SMTP. [STANDARDS-TRACK]",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML abstract",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1652/",
+      "updated": "2026-03-02T23:41:38.450Z",
+      "version": "extractDocs.js@commit:113e03180d7b"
+    },
+    "authors": [
+      {
+        "name": "Ned Freed"
+      },
+      {
+        "name": "Dr. John C. Klensin"
+      },
+      {
+        "name": "Dr. Marshall T. Rose"
+      },
+      {
+        "name": "Dave Crocker"
+      },
+      {
+        "name": "Einar A. Stefferud"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1652/",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "docId": "RFC1652",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from RFC number or Datatracker identifier",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1652/",
+      "updated": "2026-03-02T23:41:38.450Z",
+      "version": "extractDocs.js@commit:113e03180d7b"
+    },
+    "docLabel": "IETF RFC 1652",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from provider and document identifier",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1652/",
+      "updated": "2026-03-02T23:41:38.450Z",
+      "version": "extractDocs.js@commit:113e03180d7b"
+    },
+    "docNumber": "1652",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML technical report metadata",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1652/",
+      "updated": "2026-03-02T23:41:38.450Z",
+      "version": "extractDocs.js@commit:113e03180d7b"
+    },
+    "docTitle": "SMTP Service Extension for 8bit-MIMEtransport",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1652/",
+      "updated": "2026-03-02T23:41:38.450Z",
+      "version": "extractDocs.js@commit:113e03180d7b"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Mapped from Datatracker std_level or RFC status text",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1652/",
+      "updated": "2026-03-02T23:41:38.450Z",
+      "version": "extractDocs.js@commit:113e03180d7b"
+    },
+    "doi": "10.17487/RFC1652",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML doi",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1652/",
+      "updated": "2026-03-02T23:41:38.450Z",
+      "version": "extractDocs.js@commit:113e03180d7b"
+    },
+    "href": "https://doi.org/10.17487/RFC1652",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI (https://doi.org/<doi>)",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1652/",
+      "updated": "2026-03-02T23:41:38.450Z",
+      "version": "extractDocs.js@commit:113e03180d7b"
+    },
+    "issn": "2070-1721",
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML citation_issn",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1652/",
+      "updated": "2026-03-02T23:41:38.450Z",
+      "version": "extractDocs.js@commit:113e03180d7b"
+    },
+    "keywords": [
+      "SMTP",
+      "Mail",
+      "Simple",
+      "Transfer"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML keywords",
+      "originalValue": [
+        "Smtp",
+        "Mail",
+        "Simple",
+        "Transfer"
+      ],
+      "overridden": true,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1652/",
+      "updated": "2026-03-03T00:01:10.197Z",
+      "version": "extractDocs.js@commit:cc78fcb946a0"
+    },
+    "pages": "6",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML page-count",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1652/",
+      "updated": "2026-03-02T23:41:38.450Z",
+      "version": "extractDocs.js@commit:113e03180d7b"
+    },
+    "publicationDate": "1994-07-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML date",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1652/",
+      "updated": "2026-03-02T23:41:38.450Z",
+      "version": "extractDocs.js@commit:113e03180d7b"
+    },
+    "publisher": "IETF",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Static: provider",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1652/",
+      "updated": "2026-03-02T23:41:38.450Z",
+      "version": "extractDocs.js@commit:113e03180d7b"
+    },
+    "references": {
+      "bibliographic": [
+        "RFC821",
+        "RFC822",
+        "RFC1521",
+        "RFC1522",
+        "RFC1651",
+        "RFC974"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Parsed from RFC HTML references/informative sections | Manual review completed 2026-03-05",
+        "originalValue": [],
+        "overridden": true,
+        "reviewRequired": false,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1652/",
+        "updated": "2026-03-05T16:51:29.742Z",
+        "version": "extractDocs.js@commit:b8c6349eeb50"
+      }
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc1652",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1652/",
+      "updated": "2026-03-02T23:41:38.450Z",
+      "version": "extractDocs.js@commit:113e03180d7b"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1652/",
+        "updated": "2026-03-02T23:41:38.450Z",
+        "version": "extractDocs.js@commit:113e03180d7b"
+      },
+      "errataExist": false,
+      "errataExist$meta": {
+        "confidence": "high",
+        "note": "Derived from presence of errata links on RFC/Datatracker pages",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1652/",
+        "updated": "2026-03-02T23:41:38.450Z",
+        "version": "extractDocs.js@commit:113e03180d7b"
+      },
+      "latestVersion": false,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1652/",
+        "updated": "2026-03-02T23:41:38.450Z",
+        "version": "extractDocs.js@commit:113e03180d7b"
+      },
+      "statusNote": "Draft Standard",
+      "statusNote$meta": {
+        "confidence": "high",
+        "note": "Mapped from Datatracker doc.json std_level",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1652/",
+        "updated": "2026-03-02T23:41:38.450Z",
+        "version": "extractDocs.js@commit:113e03180d7b"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1652/",
+        "updated": "2026-03-02T23:41:38.450Z",
+        "version": "extractDocs.js@commit:113e03180d7b"
+      },
+      "supersededBy": [
+        "RFC6152"
+      ],
+      "supersededBy$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC index XML and RFC info relation <dl>",
+        "originalValue": [],
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1652/",
+        "updated": "2026-03-02T23:41:38.451Z",
+        "version": "extractDocs.js@commit:113e03180d7b"
+      },
+      "supersedes": [
+        "RFC1426"
+      ],
+      "supersedes$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC index XML and RFC info relation <dl>",
+        "originalValue": [],
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1652/",
+        "updated": "2026-03-02T23:41:38.451Z",
+        "version": "extractDocs.js@commit:113e03180d7b"
+      }
+    }
+  }
+}

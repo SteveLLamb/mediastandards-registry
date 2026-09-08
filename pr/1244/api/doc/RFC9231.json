@@ -1,0 +1,381 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "RFC9231",
+  "document": {
+    "abstract": "This document updates and corrects the IANA \"XML Security URIs\" registry that lists URIs intended for use with XML digital signatures, encryption, canonicalization, and key management. These URIs identify algorithms and types of information. This document also obsoletes and corrects three errata against RFC 6931.",
+    "abstract$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-03T18:15:38.271Z"
+    },
+    "authors": [
+      {
+        "name": "Donald E. Eastlake 3rd"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
+      "source": "manual",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "docId": "RFC9231",
+    "docId$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-03T18:15:38.271Z"
+    },
+    "docLabel": "IETF RFC 9231",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-03T18:15:38.271Z"
+    },
+    "docNumber": "9231",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC citation meta and/or URL identifier",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc9231/",
+      "updated": "2026-03-06T23:00:20.924Z",
+      "version": "extractDocs.js@commit:fbfea8b4c330"
+    },
+    "docTitle": "Additional XML Security Uniform Resource Identifiers (URIs)",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-03T18:15:38.271Z"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-03T18:15:38.271Z"
+    },
+    "doi": "10.17487/RFC9231",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML doi",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc9231/",
+      "updated": "2026-03-06T23:00:20.924Z",
+      "version": "extractDocs.js@commit:fbfea8b4c330"
+    },
+    "href": "https://doi.org/10.17487/RFC9231",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI (https://doi.org/<doi>)",
+      "originalValue": "https://www.rfc-editor.org/info/rfc9231/",
+      "overridden": true,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc9231/",
+      "updated": "2026-03-06T23:00:20.924Z",
+      "version": "extractDocs.js@commit:fbfea8b4c330"
+    },
+    "issn": "2070-1721",
+    "issn$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-03T18:15:38.271Z"
+    },
+    "keywords": [
+      "XMLSEC",
+      "XMLDSIG",
+      "XMLENC",
+      "DigestMethod",
+      "SignatureMethod",
+      "EncryptionMethod",
+      "AgreementMethod",
+      "KeyDerivationMethod",
+      "KeyInfo"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML keywords",
+      "originalValue": [
+        "Xmlsec",
+        "Xmldsig",
+        "Xmlenc",
+        "Digestmethod",
+        "Signturemethod",
+        "Encryptionmethod",
+        "Agreementmethod",
+        "Keyderivationmethod",
+        "Keyinfo"
+      ],
+      "overridden": true,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc9231/",
+      "updated": "2026-03-07T00:35:04.452Z",
+      "version": "extractDocs.js@commit:fbfea8b4c330"
+    },
+    "pages": "47",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML page-count",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc9231/",
+      "updated": "2026-03-06T23:00:20.924Z",
+      "version": "extractDocs.js@commit:fbfea8b4c330"
+    },
+    "publicationDate": "2022-07-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML date",
+      "originalValue": "2022-07-05",
+      "overridden": true,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc9231/",
+      "updated": "2026-03-06T23:00:20.924Z",
+      "version": "extractDocs.js@commit:fbfea8b4c330"
+    },
+    "publisher": "IETF",
+    "publisher$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-03T18:15:38.271Z"
+    },
+    "references": {
+      "bibliographic": [
+        "ISLNTT.SAC2000.2000-08",
+        "W3C.xml-c14n.20010315",
+        "W3C.xml-c14n11.20080502",
+        "UIC.chacha.20080128",
+        "W3C.xmlenc-decrypt.20021210",
+        "RFC6931",
+        "W3C.xmlsec-generic-hybrid",
+        "T-REC-X.660.2011",
+        "T-REC-X.680.2021",
+        "KECCAK.2-1.201006",
+        "10.1007-11502760_3",
+        "RFC3075",
+        "RFC3076",
+        "RFC3092",
+        "RFC3741",
+        "RFC4010",
+        "RFC6090",
+        "RFC6151",
+        "RFC6194",
+        "RFC7465",
+        "RFC7696",
+        "W3C.xmlschema-1.20041028",
+        "W3C.ORG",
+        "W3C.xml-exc-c14n.20020718",
+        "W3C.xmldsig-properties",
+        "W3C.xmldsig-core.20080610",
+        "W3C.xmldsig-core1",
+        "ISBN.0201756056",
+        "W3C.xmlsec-algorithms",
+        "IANA.XMSS",
+        "W3C.xmldsig-filter2.20021108",
+        "W3C.xslt20"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC HTML references/informative sections",
+        "originalValue": [
+          "ISLNTT.SAC2000.2000-08",
+          "UIC.chacha.20080128",
+          "RFC6931",
+          "T-REC-X.660.2011",
+          "T-REC-X.680.2021",
+          "KECCAK.2-1.201006",
+          "10.1007-11502760_3",
+          "RFC3075",
+          "RFC3076",
+          "RFC3092",
+          "RFC3741",
+          "RFC4010",
+          "RFC6090",
+          "RFC6151",
+          "RFC6194",
+          "RFC7465",
+          "RFC7696",
+          "W3C.xmlschema-1.20041028",
+          "ISBN.0201756056",
+          "IANA.XMSS",
+          "W3C.xmldsig-filter2.20021108"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9231/",
+        "updated": "2026-03-07T00:22:40.935Z",
+        "version": "extractDocs.js@commit:fbfea8b4c330"
+      },
+      "normative": [
+        "NIST.FIPS.180-4",
+        "NIST.FIPS.186-4",
+        "NIST.FIPS.202",
+        "IEEE.STD1363A.2004",
+        "ISO.10118-3.2004",
+        "ISO.18033-2.2010",
+        "NIST.SP.800-208",
+        "ISBN.9780471117094",
+        "RFC1321",
+        "RFC2104",
+        "RFC2119",
+        "RFC2315",
+        "RFC3275",
+        "RFC3394",
+        "RFC3713",
+        "RFC3986",
+        "RFC4050",
+        "RFC4055",
+        "RFC4269",
+        "RFC4648",
+        "RFC5869",
+        "RFC6234",
+        "RFC7748",
+        "RFC8017",
+        "RFC8032",
+        "RFC8126",
+        "RFC8174",
+        "RFC8391",
+        "RFC8439",
+        "10.1007-978-3-642-34931-7_28",
+        "ANSI.X9.52.1998",
+        "W3C.xmlenc-core.20021210",
+        "W3C.xmlenc-core1",
+        "W3C.xptr-framework.20030325"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC HTML normative references sections",
+        "originalValue": [
+          "NIST.FIPS.180-4",
+          "NIST.FIPS.186-4",
+          "NIST.FIPS.202",
+          "IEEE.STD1363A.2004",
+          "ISO.10118-3.2004",
+          "ISO.18033-2.2010",
+          "NIST.SP.800-208",
+          "ISBN.9781119183471",
+          "RFC1321",
+          "RFC2104",
+          "RFC2119",
+          "RFC2315",
+          "RFC3275",
+          "RFC3394",
+          "RFC3713",
+          "RFC3986",
+          "RFC4050",
+          "RFC4055",
+          "RFC4269",
+          "RFC4648",
+          "RFC5869",
+          "RFC6234",
+          "RFC7748",
+          "RFC8017",
+          "RFC8032",
+          "RFC8126",
+          "RFC8174",
+          "RFC8391",
+          "RFC8439",
+          "10.1007-978-3-642-34931-7_28",
+          "ANSI.X9.52.1998",
+          "W3C.xmlenc-core.20021210",
+          "W3C.xmlenc-core1",
+          "W3C.xptr-framework.20030325"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9231/",
+        "updated": "2026-05-19T21:23:10.733Z",
+        "version": "extractDocs.js@commit:4a7306cb350b"
+      }
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc9231",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc9231/",
+      "updated": "2026-03-06T23:00:20.925Z",
+      "version": "extractDocs.js@commit:fbfea8b4c330"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-12-03T18:15:38.271Z"
+      },
+      "errataExist": true,
+      "errataExist$meta": {
+        "confidence": "high",
+        "note": "Derived from presence of errata links on RFC/Datatracker pages",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9231/",
+        "updated": "2026-03-06T23:00:20.925Z",
+        "version": "extractDocs.js@commit:fbfea8b4c330"
+      },
+      "errataUrl": [
+        "https://www.rfc-editor.org/errata/eid3597",
+        "https://www.rfc-editor.org/errata/eid3965",
+        "https://www.rfc-editor.org/errata/eid4004"
+      ],
+      "errataUrl$meta": {
+        "confidence": "high",
+        "note": "Parsed from errata links on RFC/Datatracker pages",
+        "originalValue": [],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9231/",
+        "updated": "2026-03-06T23:00:20.925Z",
+        "version": "extractDocs.js@commit:fbfea8b4c330"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9231/",
+        "updated": "2026-03-06T23:00:20.924Z",
+        "version": "extractDocs.js@commit:fbfea8b4c330"
+      },
+      "statusNote": "Proposed Standard",
+      "statusNote$meta": {
+        "confidence": "high",
+        "note": "Mapped from Datatracker doc.json std_level",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9231/",
+        "updated": "2026-03-06T23:00:20.925Z",
+        "version": "extractDocs.js@commit:fbfea8b4c330"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9231/",
+        "updated": "2026-03-06T23:00:20.925Z",
+        "version": "extractDocs.js@commit:fbfea8b4c330"
+      },
+      "supersedes": [
+        "RFC6931"
+      ],
+      "supersedes$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC index XML and RFC info relation <dl>",
+        "originalValue": [],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9231/",
+        "updated": "2026-03-06T23:00:20.925Z",
+        "version": "extractDocs.js@commit:fbfea8b4c330"
+      }
+    }
+  }
+}

@@ -1,0 +1,357 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST421.2006",
+  "document": {
+    "abstract": "This document defines the bitstream syntax and semantics for compressed video data in VC-1 format, and specifies constraints that are required for conformant bitstreams. It also describes the complete process required to decode the bitstream. The compression algorithm is not specified in this standard. The video formats supported by VC-1 include progressive and interlaced video sampled in the form of Y luma samples and Cb, Cr color-difference in 8-bit per component sample values resulting from a 4:2:0 sampling grid. The decoding process outputs 8-bit per component video samples corresponding to the original 4:2:0 sampling grid. The display rendering process by which decoded Y, Cb, Cr samples are converted to a visible image or to a video output signal in a complete decoding system or device are not specified in VC-1. A VC-1 bitstream may convey additional metadata and user data which shall be accounted for in the buffer model. Metadata included in VC-1 streams is not used by the decoding process, but is passed to the display rendering process for the identification and reconstruction of the sampled video format, sample aspect ratio, color space, etc.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2006_1/st0421-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.860Z"
+    },
+    "approvalDate": "2006-02-24",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json); Zoho is canonical for SMPTE standards metadata, registry value overwritten",
+      "originalValue": "2006",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2026-06-15T20:27:42.872Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2006_1/st0421-2006.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.860Z"
+      },
+      "year": "2006",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2006_1/st0421-2006.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.860Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2006_1/st0421-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.860Z"
+    },
+    "docId": "SMPTE.ST421.2006",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st421/20060224-pub/",
+      "updated": "2025-10-21T04:40:50.476Z"
+    },
+    "docLabel": "SMPTE ST 421:2006",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st421/20060224-pub/",
+      "updated": "2025-10-21T04:40:50.476Z"
+    },
+    "docNumber": "421",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st421/20060224-pub/",
+      "updated": "2025-10-21T04:40:50.476Z"
+    },
+    "docTitle": "VC-1 Compressed Video Bitstream Format and Decoding Process",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st421/20060224-pub/",
+      "updated": "2025-10-21T04:40:50.476Z"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st421/20060224-pub/",
+      "updated": "2025-10-21T04:40:50.476Z"
+    },
+    "doi": "10.5594/SMPTE.ST421.2006",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st421/20060224-pub/",
+      "updated": "2025-10-21T04:40:50.476Z"
+    },
+    "familyId": "421",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2006_1/st0421-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.860Z"
+    },
+    "group": "smpte-10e-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2006_1/st0421-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.860Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST421.2006",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st421/20060224-pub/",
+      "updated": "2025-10-21T04:40:50.476Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2006_1/st0421-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.860Z"
+    },
+    "isbn": "978-1-61482-555-5",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2006_1/st0421-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.860Z"
+    },
+    "keywords": [
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Television",
+      "Compression"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2006_1/st0421-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.860Z"
+    },
+    "numberOfPages": "493",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "i–473",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2006_1/st0421-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.860Z"
+    },
+    "productNumber": "SSD001556",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2006_1/st0421-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.860Z"
+    },
+    "publicationDate": "2006-02-24",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st421/20060224-pub/",
+      "updated": "2025-10-21T04:40:50.476Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st421/20060224-pub/",
+      "updated": "2025-10-21T04:40:50.476Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2006_1/st0421-2006.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.860Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2006_1/st0421-2006.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.860Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2006_1/st0421-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.860Z"
+    },
+    "references": {
+      "bibliographic": [
+        "ISO.13818-2.2000",
+        "SMPTE.RP227",
+        "SMPTE.RP186.1995",
+        "SMPTE.ST328.2000",
+        "ISO.14496-10",
+        "R-REC-BT.1358",
+        "T-REC-H.320",
+        "T-REC-H.263",
+        "orphan/SMPTE.ST421.2006/ref-bib-1",
+        "orphan/SMPTE.ST421.2006/ref-bib-3",
+        "orphan/SMPTE.ST421.2006/ref-bib-8",
+        "orphan/SMPTE.ST421.2006/ref-bib-9"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Resolved from sibling -ref.xml via resolveSmpteSourceRefs.v2.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-06-22T23:05:50.315Z"
+      },
+      "normative": [
+        "ISO.13818-1.2000",
+        "SMPTE.ST274.2005",
+        "SMPTE.ST293.2003",
+        "SMPTE.ST296.2001",
+        "R-REC-BT.17001",
+        "R-REC-BT.601-5",
+        "R-REC-BT.709-5",
+        "R-REC-BT.1361"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-18T23:48:48.871Z"
+      }
+    },
+    "releaseTag": "20060224-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st421/20060224-pub/",
+      "updated": "2025-10-21T04:40:50.476Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/st421/20060224-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000007Nfz",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-11-11T04:49:25.704Z",
+      "version": "extractDocs.js@commit:dea962f9e9d7"
+    },
+    "standardId": "20828",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2006_1/st0421-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.860Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-21T04:40:50.476Z"
+      },
+      "amended": true,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-21T04:40:50.476Z"
+      },
+      "amendedBy": [
+        "SMPTE.ST421.2006Am1.2007",
+        "SMPTE.ST421.2006Am2.2011"
+      ],
+      "amendedBy$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendment",
+        "originalValue": [],
+        "source": "parsed",
+        "updated": "2025-10-21T04:40:50.476Z"
+      },
+      "latestVersion": false,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-21T04:40:50.476Z"
+      },
+      "stabilized": true,
+      "stabilized$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #state",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-21T04:40:50.476Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-21T04:40:50.476Z"
+      },
+      "supersededBy": [
+        "SMPTE.ST421.2013"
+      ],
+      "supersededBy$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": [],
+        "source": "resolved",
+        "updated": "2025-10-21T04:40:50.476Z"
+      },
+      "supersededDate": "2013-10-08",
+      "supersededDate$meta": {
+        "confidence": "high",
+        "note": "Calculated as the publication date of the next base release (from releaseTag)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-21T04:40:50.476Z"
+      }
+    }
+  }
+}

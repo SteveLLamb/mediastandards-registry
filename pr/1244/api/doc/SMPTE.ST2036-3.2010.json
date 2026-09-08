@@ -1,0 +1,359 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST2036-3.2010",
+  "document": {
+    "abstract": "This document defines UHDTV video payload mapping into Single-link, Dual-link, Quad-link or Octa-link 10G-SDI Mode D defined in SMPTE 435-2. This document also defines mapping of ANC/Audio Data, payload ID and other ancillary data formatted as defined in SMPTE 291M. The “basic stream” complies with the interleaved data stream defined in SMPTE 292 and is utilized as the input source streams for the 10G-SDI.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-3-2010_1/st2036-3-2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.847Z"
+    },
+    "approvalDate": "2010-08-01",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json); Zoho is canonical for SMPTE standards metadata, registry value overwritten",
+      "originalValue": "2010",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2026-06-15T20:27:42.872Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-3-2010_1/st2036-3-2010.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.847Z"
+      },
+      "year": "2010",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-3-2010_1/st2036-3-2010.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.847Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-3-2010_1/st2036-3-2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.847Z"
+    },
+    "docId": "SMPTE.ST2036-3.2010",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2036-3/20100801-pub/",
+      "updated": "2025-10-26T17:01:56.078Z"
+    },
+    "docLabel": "SMPTE ST 2036-3:2010",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2036-3/20100801-pub/",
+      "updated": "2025-10-26T17:01:56.078Z"
+    },
+    "docNumber": "2036",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2036-3/20100801-pub/",
+      "updated": "2025-10-26T17:01:56.078Z"
+    },
+    "docPart": "3",
+    "docPart$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubPart meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2036-3/20100801-pub/",
+      "updated": "2025-10-26T17:01:56.078Z"
+    },
+    "docSuiteTitle": "Ultra High Definition Television",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-12-12T21:30:00.445Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docTitle": "Mapping into Single-link or Multi-link 10 Gb/s Serial Signal/Data Interface",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": "Ultra High Definition Television — Mapping into Single-link or Multi-link 10 Gb/s Serial Signal/Data Interface",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-12-12T21:30:00.445Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2036-3/20100801-pub/",
+      "updated": "2025-10-26T17:01:56.078Z"
+    },
+    "doi": "10.5594/SMPTE.ST2036-3.2010",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2036-3/20100801-pub/",
+      "updated": "2025-10-26T17:01:56.078Z"
+    },
+    "familyId": "2036",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-3-2010_1/st2036-3-2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.847Z"
+    },
+    "group": "smpte-10e-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-3-2010_1/st2036-3-2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.847Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST2036-3.2010",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2036-3/20100801-pub/",
+      "updated": "2025-10-26T17:01:56.078Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-3-2010_1/st2036-3-2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.847Z"
+    },
+    "isbn": "978-1-61482-627-9",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-3-2010_1/st2036-3-2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.847Z"
+    },
+    "keywords": [
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Interfaces",
+      "Television",
+      "UHDTV"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Scrubbed against src/main/config/site.json controlledKeywords (auto-fix renames + drop noise)",
+      "originalValue": [
+        "Communication",
+        "Networking and Broadcast Technologies",
+        "Interfaces",
+        "Television",
+        "UHDTV",
+        "Interface"
+      ],
+      "source": "parsed",
+      "updated": "2026-06-17T17:24:10.972Z",
+      "version": "kw-scrub@v1"
+    },
+    "numberOfPages": "22",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–22",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-3-2010_1/st2036-3-2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.847Z"
+    },
+    "productNumber": "SSD001628",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-3-2010_1/st2036-3-2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.847Z"
+    },
+    "publicationDate": "2010-08-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2036-3/20100801-pub/",
+      "updated": "2025-10-26T17:01:56.078Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2036-3/20100801-pub/",
+      "updated": "2025-10-26T17:01:56.078Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-3-2010_1/st2036-3-2010.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.847Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-3-2010_1/st2036-3-2010.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.847Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-3-2010_1/st2036-3-2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.847Z"
+    },
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST274.2008",
+        "SMPTE.ST2036-2.2008",
+        "R-REC-BT.1201-1",
+        "R-REC-BT.1769"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-18T23:48:48.871Z"
+      },
+      "normative": [
+        "SMPTE.ST291.2006",
+        "SMPTE.ST292.2008",
+        "SMPTE.ST352.2010",
+        "SMPTE.ST372.2009",
+        "SMPTE.ST435-1.2009",
+        "10.5594-S9781614825975",
+        "SMPTE.ST2036-1.2009",
+        "SMPTE.ST299-1.2010"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-19T00:07:42.123Z"
+      }
+    },
+    "releaseTag": "20100801-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2036-3/20100801-pub/",
+      "updated": "2025-10-26T17:01:56.078Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/st2036-3/20100801-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000008kaQ",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-11-11T04:50:58.810Z",
+      "version": "extractDocs.js@commit:dea962f9e9d7"
+    },
+    "standardId": "20543",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-3-2010_1/st2036-3-2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.847Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:56.078Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-26T17:01:56.078Z"
+      },
+      "latestVersion": false,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:56.078Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:56.078Z"
+      },
+      "supersededBy": [
+        "SMPTE.ST2036-3.2012"
+      ],
+      "supersededBy$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": [],
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:56.078Z"
+      },
+      "supersededDate": "2012-08-01",
+      "supersededDate$meta": {
+        "confidence": "high",
+        "note": "Calculated as the publication date of the next base release (from releaseTag)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:56.078Z"
+      }
+    }
+  }
+}

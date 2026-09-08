@@ -1,0 +1,355 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "RFC2130",
+  "document": {
+    "abstract": "This report details the conclusions of an IAB-sponsored invitational workshop held 29 February - 1 March, 1996, to discuss the use of character sets on the Internet. It motivates the need to have character set handling in Internet protocols which transmit text, provides a conceptual framework for specifying character sets, recommends the use of MIME tagging for transmitted text, recommends a default character set *without* stating that there is no need for other character sets, and makes a series of recommendations to the IAB, IANA, and the IESG for furthering the integration of the character set framework into text transmission protocols. This memo provides information for the Internet community. This memo does not specify an Internet standard of any kind.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML abstract",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
+      "updated": "2026-02-26T22:24:31.423Z",
+      "version": "extractDocs.js@commit:e762d69493e5"
+    },
+    "authors": [
+      {
+        "name": "Ran Atkinson"
+      },
+      {
+        "name": "Peter Svanberg"
+      },
+      {
+        "name": "Cecilia M. Preston"
+      },
+      {
+        "name": "Harald T. Alvestrand"
+      },
+      {
+        "name": "Mark Crispin"
+      },
+      {
+        "name": "Keld Simonsen"
+      },
+      {
+        "name": "Chris Weider"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "docId": "RFC2130",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from RFC number or Datatracker identifier",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
+      "updated": "2026-02-26T22:24:31.423Z",
+      "version": "extractDocs.js@commit:e762d69493e5"
+    },
+    "docLabel": "IETF RFC 2130",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from provider and document identifier",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
+      "updated": "2026-02-26T22:24:31.423Z",
+      "version": "extractDocs.js@commit:e762d69493e5"
+    },
+    "docNumber": "2130",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML technical report metadata",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
+      "updated": "2026-02-26T22:24:31.423Z",
+      "version": "extractDocs.js@commit:e762d69493e5"
+    },
+    "docTitle": "The Report of the IAB Character Set Workshop held 29 February - 1 March, 1996",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
+      "updated": "2026-02-26T22:24:31.423Z",
+      "version": "extractDocs.js@commit:e762d69493e5"
+    },
+    "docType": "Informational",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Mapped from Datatracker std_level or RFC status text",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
+      "updated": "2026-02-26T22:24:31.423Z",
+      "version": "extractDocs.js@commit:e762d69493e5"
+    },
+    "doi": "10.17487/RFC2130",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML doi",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
+      "updated": "2026-02-26T22:24:31.423Z",
+      "version": "extractDocs.js@commit:e762d69493e5"
+    },
+    "href": "https://doi.org/10.17487/RFC2130",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI (https://doi.org/<doi>)",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
+      "updated": "2026-02-26T22:24:31.423Z",
+      "version": "extractDocs.js@commit:e762d69493e5"
+    },
+    "issn": "2070-1721",
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML citation_issn",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
+      "updated": "2026-02-26T22:24:31.423Z",
+      "version": "extractDocs.js@commit:e762d69493e5"
+    },
+    "keywords": [
+      "Internet",
+      "Architecture",
+      "Board",
+      "Interoperability"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML keywords",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
+      "updated": "2026-02-26T22:24:31.423Z",
+      "version": "extractDocs.js@commit:e762d69493e5"
+    },
+    "pages": "31",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML page-count",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
+      "updated": "2026-02-26T22:24:31.423Z",
+      "version": "extractDocs.js@commit:e762d69493e5"
+    },
+    "publicationDate": "1997-04-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML date",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
+      "updated": "2026-02-26T22:24:31.423Z",
+      "version": "extractDocs.js@commit:e762d69493e5"
+    },
+    "publisher": "IETF",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Static: provider",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
+      "updated": "2026-02-26T22:24:31.423Z",
+      "version": "extractDocs.js@commit:e762d69493e5"
+    },
+    "references": {
+      "bibliographic": [
+        "INCITS.X3.4.1986",
+        "RFC2045",
+        "CEN.ENV.12005.1996",
+        "RFC1866",
+        "RFC1945",
+        "RFC2070",
+        "RFC1700",
+        "ISO.2022.1994",
+        "ISO.7498-1.1994",
+        "ISO.8859-1.1987",
+        "ISO.10646-1.1993",
+        "IEEE.STD1003.1.1992",
+        "RFC1345",
+        "RFC1554",
+        "RFC1766",
+        "RFC1958",
+        "ISO.8879.1986",
+        "RFC821",
+        "UNICODE.STD.2.0",
+        "RFC1642",
+        "RFC1502",
+        "RFC1344",
+        "RFC1489",
+        "RFC1557",
+        "RFC2046",
+        "RFC1641",
+        "ISBN.9780750615594",
+        "10.1016-0169-7552_94_90117-1",
+        "LISA.FN5-p12-21.1996",
+        "RFC1843",
+        "RFC373",
+        "RFC1522",
+        "RFC2047",
+        "RFC1468",
+        "RFC1556",
+        "RFC1555",
+        "RFC1815",
+        "RFC959",
+        "RFC854",
+        "10.5555-138404",
+        "RFC1842",
+        "RFC2044",
+        "RFC1922",
+        "RFC1340"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Parsed from RFC HTML references/informative sections | Manual review completed 2026-03-07",
+        "originalValue": [
+          "INCITS.X3.4.1986",
+          "RFC2045",
+          "CEN.ENV.12005.1996",
+          "RFC1866",
+          "RFC1945",
+          "RFC2070",
+          "RFC1700",
+          "ISO.2022.1994",
+          "ISO.7498-1.1994",
+          "ISO.8859-1.1987",
+          "ISO.10646-1.1993",
+          "IEEE.STD1003.1.1992",
+          "RFC1345",
+          "RFC1554",
+          "RFC1766",
+          "RFC1958",
+          "ISO.8879.1986",
+          "RFC821",
+          "UNICODE.STD.2.0",
+          "RFC1642",
+          "RFC1502",
+          "RFC1344",
+          "RFC1489",
+          "RFC1557",
+          "RFC2046",
+          "RFC1641",
+          "ISBN.9780750615594",
+          "10.1016-0169-7552_94_90117-1",
+          "LISA.FN5-p12-21.1996",
+          "RFC1843",
+          "RFC373",
+          "RFC1522",
+          "RFC2047",
+          "RFC1468",
+          "RFC1556",
+          "RFC1555",
+          "RFC1815",
+          "RFC959",
+          "RFC854",
+          "10.5555-138404",
+          "RFC1842",
+          "RFC2044",
+          "RFC1922",
+          "W3C.ORG",
+          "RFC1340"
+        ],
+        "overridden": true,
+        "reviewRequired": false,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
+        "updated": "2026-03-07T00:25:42.768Z",
+        "version": "extractDocs.js@commit:fbfea8b4c330"
+      }
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc2130",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
+      "updated": "2026-02-26T22:24:31.423Z",
+      "version": "extractDocs.js@commit:e762d69493e5"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
+        "updated": "2026-02-26T22:24:31.423Z",
+        "version": "extractDocs.js@commit:e762d69493e5"
+      },
+      "amendedBy": [
+        "RFC6055"
+      ],
+      "amendedBy$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC index XML and RFC info relation <dl>",
+        "originalValue": [],
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
+        "updated": "2026-02-26T22:24:31.423Z",
+        "version": "extractDocs.js@commit:e762d69493e5"
+      },
+      "errataExist": false,
+      "errataExist$meta": {
+        "confidence": "high",
+        "note": "Derived from presence of errata links on RFC/Datatracker pages",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
+        "updated": "2026-02-26T22:24:31.423Z",
+        "version": "extractDocs.js@commit:e762d69493e5"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
+        "updated": "2026-02-26T22:24:31.423Z",
+        "version": "extractDocs.js@commit:e762d69493e5"
+      },
+      "statusNote": "Informational",
+      "statusNote$meta": {
+        "confidence": "high",
+        "note": "Mapped from Datatracker doc.json std_level",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
+        "updated": "2026-02-26T22:24:31.423Z",
+        "version": "extractDocs.js@commit:e762d69493e5"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
+        "updated": "2026-02-26T22:24:31.423Z",
+        "version": "extractDocs.js@commit:e762d69493e5"
+      }
+    }
+  }
+}

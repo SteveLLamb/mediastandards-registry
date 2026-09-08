@@ -1,0 +1,262 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-j18500",
+  "document": {
+    "abbrevTitle": "SMPTE Mot. Imag J.",
+    "abbrevTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/ALLEN PRESS/DELIVERED TO IEEEE/Allen Press source from FTP/12401-mijr-2015/MIJR124Vol124No1-issue-metadata.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "abstract": "The new SMPTE video compression standard, ST 2073 “VC-5 Mezzanine Level Compression,” is a variable-bit-rate codec originally developed for video acquisition and post-production, applicable to a diverse range of image and video formats. The term “mezzanine level compression” refers to a lightly compressed video format, usually compressed from one half to one twentieth the uncompressed format. Mezzanine compression is used for workflows where the image sequence will need to be decompressed and recompressed multiple times, while still minimizing the accumulated compression artifacts. There are several different video compression standards used for mezzanine-compressed workflows. Each one offers a specific set of trade-offs (compression ratio, fidelity, speed, power consumption, image formats, etc.) that makes it suitable for specific situations. This paper introduces the new VC-5 standard and describes its advantages for certain acquisition and post-production workflows.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/ALLEN PRESS/DELIVERED TO IEEEE/Allen Press source from FTP/12401-mijr-2015/MIJR124Vol124No1-issue-metadata.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "authors": [
+      {
+        "name": "Edward Reuss"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/ALLEN PRESS/DELIVERED TO IEEEE/Allen Press source from FTP/12401-mijr-2015/MIJR124Vol124No1-issue-metadata.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/ALLEN PRESS/DELIVERED TO IEEEE/Allen Press source from FTP/12401-mijr-2015/MIJR124Vol124No1-issue-metadata.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T23:54:08.922Z",
+        "version": "smpte-journal-issue-xml@v1"
+      },
+      "year": "2015",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/ALLEN PRESS/DELIVERED TO IEEEE/Allen Press source from FTP/12401-mijr-2015/MIJR124Vol124No1-issue-metadata.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T23:54:08.922Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/ALLEN PRESS/DELIVERED TO IEEEE/Allen Press source from FTP/12401-mijr-2015/MIJR124Vol124No1-issue-metadata.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "docId": "10.5594-j18500",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/j18500",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "docLabel": "SMPTE Motion Imaging Journal ( Volume: 124, Issue: 1, January 2015)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from journal title, volume, issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "docTitle": "VC-5 Video Compression for Mezzanine Compression Workflows",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/ALLEN PRESS/DELIVERED TO IEEEE/Allen Press source from FTP/12401-mijr-2015/MIJR124Vol124No1-issue-metadata.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "journal_metadata XML — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "doi": "10.5594/j18500",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/ALLEN PRESS/DELIVERED TO IEEEE/Allen Press source from FTP/12401-mijr-2015/MIJR124Vol124No1-issue-metadata.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "href": "https://doi.org/10.5594/j18500",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/j18500",
+      "source": "inferred",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "issn": {
+      "electronic": "2160-2492",
+      "electronic$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/ALLEN PRESS/DELIVERED TO IEEEE/Allen Press source from FTP/12401-mijr-2015/MIJR124Vol124No1-issue-metadata.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T23:54:08.922Z",
+        "version": "smpte-journal-issue-xml@v1"
+      },
+      "print": "1545-0279",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/ALLEN PRESS/DELIVERED TO IEEEE/Allen Press source from FTP/12401-mijr-2015/MIJR124Vol124No1-issue-metadata.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T23:54:08.922Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/ALLEN PRESS/DELIVERED TO IEEEE/Allen Press source from FTP/12401-mijr-2015/MIJR124Vol124No1-issue-metadata.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/ALLEN PRESS/DELIVERED TO IEEEE/Allen Press source from FTP/12401-mijr-2015/MIJR124Vol124No1-issue-metadata.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "SMPTE Motion Imaging Journal",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "1",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/ALLEN PRESS/DELIVERED TO IEEEE/Allen Press source from FTP/12401-mijr-2015/MIJR124Vol124No1-issue-metadata.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "pages": "55–61",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/ALLEN PRESS/DELIVERED TO IEEEE/Allen Press source from FTP/12401-mijr-2015/MIJR124Vol124No1-issue-metadata.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "publicationDate": "2015-01-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from publisher-name (SMPTE)",
+      "source": "inferred",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/ALLEN PRESS/DELIVERED TO IEEEE/Allen Press source from FTP/12401-mijr-2015/MIJR124Vol124No1-issue-metadata.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T23:54:08.922Z",
+        "version": "smpte-journal-issue-xml@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/ALLEN PRESS/DELIVERED TO IEEEE/Allen Press source from FTP/12401-mijr-2015/MIJR124Vol124No1-issue-metadata.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T23:54:08.922Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/ALLEN PRESS/DELIVERED TO IEEEE/Allen Press source from FTP/12401-mijr-2015/MIJR124Vol124No1-issue-metadata.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "10.5594-J15133",
+        "orphan/10.5594-j18500/i1545-0279-124-1-55-b1",
+        "orphan/10.5594-j18500/i1545-0279-124-1-55-b2",
+        "orphan/10.5594-j18500/i1545-0279-124-1-55-b3",
+        "orphan/10.5594-j18500/i1545-0279-124-1-55-b5",
+        "orphan/10.5594-j18500/i1545-0279-124-1-55-b6",
+        "orphan/10.5594-j18500/i1545-0279-124-1-55-b7",
+        "orphan/10.5594-j18500/i1545-0279-124-1-55-b8",
+        "orphan/10.5594-j18500/i1545-0279-124-1-55-b9"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteJournalRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T18:21:02.558Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/SMPTE%20Motion%20Imaging%20Journal/124/1/17/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.441Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Mapped from article_status=\"active\"",
+        "source": "parsed",
+        "updated": "2026-05-22T23:54:08.922Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "volume": "124",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/ALLEN PRESS/DELIVERED TO IEEEE/Allen Press source from FTP/12401-mijr-2015/MIJR124Vol124No1-issue-metadata.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    }
+  }
+}

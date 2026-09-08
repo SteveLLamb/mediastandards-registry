@@ -1,0 +1,289 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.RDD8.2008",
+  "document": {
+    "abstract": "Free TV Operational Practice OP-47 describes the technical/operational practices associated with the storage and distribution of closed caption/subtitling data in the vertical ancillary space of the 10-bit serial HD-SDI signal complying with ITU-R BT.1120-7. — NOTE – This document does not deal with the technical specifications of the actual closed captions/subtitles. It is intended to ensure that closed captioned/subtitled high-definition program material, in accordance with the appropriate Australian and international standards, will be successfully delivered to end users via the broadcasters' storage and distribution processes. — Additional to storage and distribution of subtitles, this operational practice describes the use of other ancillary data such as wide screen signaling (WSS) information via a multi-packet solution.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-8-2008_1/smptes_rdd-8-2008_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.659Z"
+    },
+    "approvalDate": "2008-09-17",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json); Zoho is canonical for SMPTE standards metadata, registry value overwritten",
+      "originalValue": "2008",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2026-06-15T20:27:42.872Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "holder": "SMPTE",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-8-2008_1/smptes_rdd-8-2008_1.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.659Z"
+      },
+      "year": "2008",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-8-2008_1/smptes_rdd-8-2008_1.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.659Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-8-2008_1/smptes_rdd-8-2008_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.659Z"
+    },
+    "docId": "SMPTE.RDD8.2008",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd8/20080917-pub/",
+      "updated": "2025-10-08T05:50:18.945Z"
+    },
+    "docLabel": "SMPTE RDD 8:2008",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd8/20080917-pub/",
+      "updated": "2025-10-08T05:50:18.945Z"
+    },
+    "docNumber": "8",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd8/20080917-pub/",
+      "updated": "2025-10-08T05:50:18.945Z"
+    },
+    "docTitle": "Storage and Distribution of Teletext Subtitles and VBI Data for High-Definition Television",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd8/20080917-pub/",
+      "updated": "2025-10-08T05:50:18.945Z"
+    },
+    "docType": "Registered Disclosure Document",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd8/20080917-pub/",
+      "updated": "2025-10-08T05:50:18.945Z"
+    },
+    "doi": "10.5594/SMPTE.RDD8.2008",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd8/20080917-pub/",
+      "updated": "2025-10-08T05:50:18.945Z"
+    },
+    "group": "smpte-24tb-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-8-2008_1/smptes_rdd-8-2008_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.659Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.RDD8.2008",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd8/20080917-pub/",
+      "updated": "2025-10-08T05:50:18.945Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.99",
+        "description": "Other audio, video and audiovisual equipment"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-8-2008_1/smptes_rdd-8-2008_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.659Z"
+    },
+    "isbn": "978-1-61482-052-9",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-8-2008_1/smptes_rdd-8-2008_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.659Z"
+    },
+    "keywords": [
+      "Subtitles",
+      "Captions",
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Interfaces",
+      "Television",
+      "Ancillary Data"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Scrubbed against src/main/config/site.json controlledKeywords (auto-fix renames + drop noise)",
+      "originalValue": [
+        "Subtitles",
+        "Captions",
+        "Communication",
+        "Networking and Broadcast Technologies",
+        "Interfaces",
+        "Television",
+        "Ancillary Data",
+        "Interface"
+      ],
+      "source": "parsed",
+      "updated": "2026-06-17T17:24:10.972Z",
+      "version": "kw-scrub@v1"
+    },
+    "numberOfPages": "11",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–11",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-8-2008_1/smptes_rdd-8-2008_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.659Z"
+    },
+    "productNumber": "SSD001053",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-8-2008_1/smptes_rdd-8-2008_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.659Z"
+    },
+    "publicationDate": "2008-09-17",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd8/20080917-pub/",
+      "updated": "2025-10-08T05:50:18.945Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd8/20080917-pub/",
+      "updated": "2025-10-08T05:50:18.945Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-8-2008_1/smptes_rdd-8-2008_1.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.659Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-8-2008_1/smptes_rdd-8-2008_1.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.659Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-8-2008_1/smptes_rdd-8-2008_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.659Z"
+    },
+    "releaseTag": "20080917-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd8/20080917-pub/",
+      "updated": "2025-10-08T05:50:18.945Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/rdd8/20080917-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000008kXl",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-30T22:49:01.003Z",
+      "version": "extractDocs.js@commit:ee2844fb1cf2"
+    },
+    "standardId": "200195",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-8-2008_1/smptes_rdd-8-2008_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.659Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-08T05:50:18.945Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-08T05:50:18.945Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-08T05:50:18.945Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-08T05:50:18.945Z"
+      }
+    }
+  }
+}

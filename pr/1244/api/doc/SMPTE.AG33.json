@@ -1,0 +1,209 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.AG33",
+  "document": {
+    "abstract": "This document describes the process and workflow for the development and publication of SMPTE Engineering Documents using the GitHub-based authoring tooling defined in SMPTE AG 26.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML sec-scope section",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-33/main/",
+      "updated": "2026-05-12T02:16:02.286Z",
+      "version": "extractDocs.js@commit:71eae93cf01a"
+    },
+    "docId": "SMPTE.AG33",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-33/main/",
+      "updated": "2026-05-12T02:16:02.286Z",
+      "version": "extractDocs.js@commit:71eae93cf01a"
+    },
+    "docLabel": "SMPTE AG 33",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-33/main/",
+      "updated": "2026-05-12T02:16:02.286Z",
+      "version": "extractDocs.js@commit:71eae93cf01a"
+    },
+    "docNumber": "33",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-33/main/",
+      "updated": "2026-05-12T02:16:02.286Z",
+      "version": "extractDocs.js@commit:71eae93cf01a"
+    },
+    "docTitle": "Document Process and Workflow",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-33/main/",
+      "updated": "2026-05-12T02:16:02.286Z",
+      "version": "extractDocs.js@commit:71eae93cf01a"
+    },
+    "docType": "Administrative Guideline",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-33/main/",
+      "updated": "2026-05-12T02:16:02.286Z",
+      "version": "extractDocs.js@commit:71eae93cf01a"
+    },
+    "group": "smpte-st-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-33/main/",
+      "updated": "2026-05-12T02:16:02.286Z",
+      "version": "extractDocs.js@commit:71eae93cf01a"
+    },
+    "href": "https://doc.smpte-doc.org/ag-33/main/",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-33/main/",
+      "updated": "2026-05-12T02:16:02.286Z",
+      "version": "extractDocs.js@commit:71eae93cf01a"
+    },
+    "publicationDate": "2026-06-12",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": "2026-05-26",
+      "overridden": true,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-33/main/",
+      "updated": "2026-06-15T06:17:14.152Z",
+      "version": "extractDocs.js@commit:71b2f2000dbc"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-33/main/",
+      "updated": "2026-05-12T02:16:02.286Z",
+      "version": "extractDocs.js@commit:71eae93cf01a"
+    },
+    "references": {
+      "normative": [
+        "SMPTE.OM.Std",
+        "SMPTE.AG02",
+        "SMPTE.AG07",
+        "SMPTE.AG26",
+        "SMPTE.AG31",
+        "SMPTE.DOC-LIB"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+          "SMPTE.OM.Std",
+          "SMPTE.AG02",
+          "SMPTE.AG07",
+          "SMPTE.AG26",
+          "SMPTE.AG31"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://doc.smpte-doc.org/ag-33/main/",
+        "updated": "2026-05-18T18:20:44.469Z",
+        "version": "extractDocs.js@commit:2961e982bb45"
+      }
+    },
+    "releaseTag": "20260612-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": "20260526-pub",
+      "overridden": true,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-33/main/",
+      "updated": "2026-06-15T06:17:14.152Z",
+      "version": "extractDocs.js@commit:71b2f2000dbc"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://doc.smpte-doc.org/ag-33/main/",
+        "updated": "2026-05-12T02:16:02.286Z",
+        "version": "extractDocs.js@commit:71eae93cf01a"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://doc.smpte-doc.org/ag-33/main/",
+        "updated": "2026-05-12T02:16:02.286Z",
+        "version": "extractDocs.js@commit:71eae93cf01a"
+      },
+      "stage": "PUB",
+      "stage$meta": {
+        "confidence": "high",
+        "note": "Stage parsed from HTML pubStage meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://doc.smpte-doc.org/ag-33/main/",
+        "updated": "2026-05-12T02:16:02.286Z",
+        "version": "extractDocs.js@commit:71eae93cf01a"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://doc.smpte-doc.org/ag-33/main/",
+        "updated": "2026-05-12T02:16:02.287Z",
+        "version": "extractDocs.js@commit:71eae93cf01a"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://doc.smpte-doc.org/ag-33/main/",
+        "updated": "2026-05-12T02:16:02.287Z",
+        "version": "extractDocs.js@commit:71eae93cf01a"
+      },
+      "versionless": true,
+      "versionless$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://doc.smpte-doc.org/ag-33/main/",
+        "updated": "2026-05-12T02:16:02.287Z",
+        "version": "extractDocs.js@commit:71eae93cf01a"
+      }
+    }
+  }
+}

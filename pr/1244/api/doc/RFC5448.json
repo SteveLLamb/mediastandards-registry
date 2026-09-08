@@ -1,0 +1,111 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "RFC5448",
+  "document": {
+    "abstract": "This specification defines a new EAP method, EAP-AKA', which is a small revision of the EAP-AKA (Extensible Authentication Protocol Method for 3rd Generation Authentication and Key Agreement) method. The change is a new key derivation function that binds the keys derived within the method to the name of the access network. The new key derivation mechanism has been defined in the 3rd Generation Partnership Project (3GPP). This specification allows its use in EAP in an interoperable manner. In addition, EAP-AKA' employs SHA-256 instead of SHA-1.\n This specification also updates RFC 4187, EAP-AKA, to prevent bidding down attacks from EAP-AKA'. This memo provides information for the Internet community.",
+    "abstract$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-04T17:31:20.463Z"
+    },
+    "authors": [
+      {
+        "name": "J. Arkko"
+      },
+      {
+        "name": "V. Lehtovirta"
+      },
+      {
+        "name": "P. Eronen"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
+      "source": "manual",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "docId": "RFC5448",
+    "docId$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-04T17:31:20.463Z"
+    },
+    "docLabel": "IETF RFC 5448",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-04T17:31:20.463Z"
+    },
+    "docTitle": "Improved Extensible Authentication Protocol Method for 3rd Generation Authentication and Key Agreement (EAP-AKA')",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-04T17:31:20.463Z"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-04T17:31:20.463Z"
+    },
+    "doi": "10.17487/RFC5448",
+    "doi$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-04T17:31:20.463Z"
+    },
+    "href": "https://www.rfc-editor.org/info/rfc5448",
+    "href$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-04T17:31:20.463Z"
+    },
+    "publicationDate": "2009-05-01",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-04T17:31:20.463Z"
+    },
+    "publisher": "IETF",
+    "publisher$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-04T17:31:20.463Z"
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc5448/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-05-23T06:59:11.748Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-12-04T17:31:20.463Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-12-04T17:31:20.463Z"
+      },
+      "supersededBy": [
+        "RFC9048"
+      ],
+      "supersededBy$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-12-04T17:31:20.463Z"
+      }
+    }
+  }
+}

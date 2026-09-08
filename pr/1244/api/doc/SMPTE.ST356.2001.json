@@ -1,0 +1,342 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:46:26.286Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST356.2001",
+  "document": {
+    "abstract": "This standard specifies the compression constraints and bit-stream characteristics of an MPEG-2 video elementary stream operating at bit rates up to 50 Mb/s. One of the intended applications is to provide a bit stream compatible with the type D-10 format digital recorder. The video compression format defined and constrained by this standard is fully compliant with the MPEG-2 video standard (ISO/IEC 13818–2 [4:2:2P @ ML]).",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-356-2001_1/st0356-2001_stable2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.855Z"
+    },
+    "approvalDate": "2001-08-23",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json); Zoho is canonical for SMPTE standards metadata, registry value overwritten",
+      "originalValue": "2001",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2026-06-15T20:27:42.872Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-356-2001_1/st0356-2001_stable2006.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.855Z"
+      },
+      "year": "2001",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-356-2001_1/st0356-2001_stable2006.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.855Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-356-2001_1/st0356-2001_stable2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.855Z"
+    },
+    "docId": "SMPTE.ST356.2001",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st356/20010823-pub/",
+      "updated": "2025-10-12T23:29:23.689Z"
+    },
+    "docLabel": "SMPTE ST 356:2001",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st356/20010823-pub/",
+      "updated": "2025-10-12T23:29:23.689Z"
+    },
+    "docNumber": "356",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st356/20010823-pub/",
+      "updated": "2025-10-12T23:29:23.689Z"
+    },
+    "docSuiteTitle": "Television",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-12-12T21:25:26.728Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docTitle": "Type D-10 Stream Specifica-tions - MPEG-2 4:2:2P @ ML for 525/60 and 625/50",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": "Television - Type D-10 Stream Specifica-tions - MPEG-2 4:2:2P @ ML for 525/60 and 625/50",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-12-12T21:25:26.728Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st356/20010823-pub/",
+      "updated": "2025-10-12T23:29:23.689Z"
+    },
+    "doi": "10.5594/SMPTE.ST356.2001",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st356/20010823-pub/",
+      "updated": "2025-10-12T23:29:23.689Z"
+    },
+    "familyId": "356",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-356-2001_1/st0356-2001_stable2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.855Z"
+    },
+    "group": "smpte-10e-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-356-2001_1/st0356-2001_stable2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.855Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST356.2001",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st356/20010823-pub/",
+      "updated": "2025-10-12T23:29:23.689Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-356-2001_1/st0356-2001_stable2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.855Z"
+    },
+    "isbn": "978-1-61482-496-1",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-356-2001_1/st0356-2001_stable2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.855Z"
+    },
+    "keywords": [
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Television",
+      "Compression",
+      "MPEG"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-356-2001_1/st0356-2001_stable2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.855Z"
+    },
+    "numberOfPages": "7",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–7",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-356-2001_1/st0356-2001_stable2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.855Z"
+    },
+    "productNumber": "SSD001497",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-356-2001_1/st0356-2001_stable2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.855Z"
+    },
+    "publicationDate": "2001-08-23",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st356/20010823-pub/",
+      "updated": "2025-10-12T23:29:23.689Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st356/20010823-pub/",
+      "updated": "2025-10-12T23:29:23.689Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-356-2001_1/st0356-2001_stable2006.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.855Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-356-2001_1/st0356-2001_stable2006.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.855Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-356-2001_1/st0356-2001_stable2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.855Z"
+    },
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST125.1995",
+        "SMPTE.ST365.2001",
+        "SMPTE.RP204.2000",
+        "ISO.11172",
+        "ISO.13818",
+        "R-REC-BT.656",
+        "SMPTE.ST259.1997",
+        "SMPTE.ST331.2000",
+        "AES3.1992",
+        "EBU.D84.1999",
+        "EBU.D85.1999"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-19T00:07:42.123Z"
+      },
+      "normative": [
+        "SMPTE.ST326.2000",
+        "SMPTE.ST328.2000",
+        "ISO.13818",
+        "SMPTE.ST305-2.2000"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-19T00:07:42.123Z"
+      }
+    },
+    "releaseTag": "20010823-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st356/20010823-pub/",
+      "updated": "2025-10-12T23:29:23.689Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/st356/20010823-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000008kcE",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-30T22:52:01.495Z",
+      "version": "extractDocs.js@commit:ee2844fb1cf2"
+    },
+    "standardId": "20759",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-356-2001_1/st0356-2001_stable2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.855Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T23:29:23.689Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-12T23:29:23.689Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T23:29:23.689Z"
+      },
+      "stabilized": true,
+      "stabilized$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #state",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-12T23:29:23.689Z"
+      },
+      "stabilizedDate": "2006-10-09",
+      "stabilizedDate$meta": {
+        "confidence": "high",
+        "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+        "source": "parsed",
+        "updated": "2026-06-15T20:17:48.985Z",
+        "version": "smpte-zoho-standards@v1"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T23:29:23.689Z"
+      }
+    }
+  }
+}
