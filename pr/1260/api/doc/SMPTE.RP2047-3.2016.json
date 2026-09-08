@@ -1,0 +1,356 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.RP2047-3.2016",
+  "document": {
+    "abstract": "This Recommended Practice defines constraints on the VC-2 video compression specification such that 10-bit high definition video signals can be compressed to only occupy the bit rate of 8-bit standard definition signals. Specifically, it defines constraints for compressing interlaced source video having 1920 or 1440 pixels/line by 1080 lines/frame at 25 or 30/1.001 frames/s, or progressive source video having 1280 pixels/line by 720 lines/frame at 50 or 60/1.001 frames/s, using 4:2:2 sampling in all cases. This document defines a VC-2 bit-stream for video compressed according to this Recommended Practice. It also defines an application specific level for VC-2 compression.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rp2047-3-2016/rp2047-3-2016.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.867Z"
+    },
+    "approvalDate": "2016-08-10",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json); Zoho is canonical for SMPTE standards metadata, registry value overwritten",
+      "originalValue": "2016",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2026-06-15T20:27:42.872Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rp2047-3-2016/rp2047-3-2016.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.867Z"
+      },
+      "year": "2016",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rp2047-3-2016/rp2047-3-2016.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.867Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rp2047-3-2016/rp2047-3-2016.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.867Z"
+    },
+    "docId": "SMPTE.RP2047-3.2016",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rp2047-3/20160810-pub/",
+      "updated": "2025-10-26T17:02:05.974Z"
+    },
+    "docLabel": "SMPTE RP 2047-3:2016",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rp2047-3/20160810-pub/",
+      "updated": "2025-10-26T17:02:05.974Z"
+    },
+    "docNumber": "2047",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp2047-3/20160810-pub/",
+      "updated": "2025-10-26T17:02:05.974Z"
+    },
+    "docPart": "3",
+    "docPart$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubPart meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp2047-3/20160810-pub/",
+      "updated": "2025-10-26T17:02:05.974Z"
+    },
+    "docSuiteTitle": "Carriage of VC-2 Compressed Video",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-12-12T21:30:24.131Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docTitle": "VC-2 Level 65 Compression of High Definition Video Sources for Use with a Standard Definition Infrastructure",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": "Carriage of VC-2 Compressed Video — VC-2 Level 65 Compression of High Definition Video Sources for Use with a Standard Definition Infrastructure",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-12-12T21:30:24.131Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docType": "Recommended Practice",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp2047-3/20160810-pub/",
+      "updated": "2025-10-26T17:02:05.974Z"
+    },
+    "doi": "10.5594/SMPTE.RP2047-3.2016",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rp2047-3/20160810-pub/",
+      "updated": "2025-10-26T17:02:05.974Z"
+    },
+    "familyId": "2047-3",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rp2047-3-2016/rp2047-3-2016.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.867Z"
+    },
+    "group": "smpte-10e-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rp2047-3-2016/rp2047-3-2016.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.867Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.RP2047-3.2016",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rp2047-3/20160810-pub/",
+      "updated": "2025-10-26T17:02:05.974Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rp2047-3-2016/rp2047-3-2016.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.867Z"
+    },
+    "isbn": "978-1-68303-050-8",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rp2047-3-2016/rp2047-3-2016.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.867Z"
+    },
+    "keywords": [
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Image Formats",
+      "Interfaces",
+      "Compression",
+      "VC-2"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Scrubbed against src/main/config/site.json controlledKeywords (auto-fix renames + drop noise)",
+      "originalValue": [
+        "Communication",
+        "Networking and Broadcast Technologies",
+        "Image Formats",
+        "Interfaces",
+        "Compression",
+        "Image Format",
+        "VC-2"
+      ],
+      "source": "parsed",
+      "updated": "2026-06-17T17:18:30.093Z",
+      "version": "kw-scrub@v1"
+    },
+    "numberOfPages": "23",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–23",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rp2047-3-2016/rp2047-3-2016.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.867Z"
+    },
+    "productNumber": "SSD001931",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rp2047-3-2016/rp2047-3-2016.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.867Z"
+    },
+    "publicationDate": "2016-08-10",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp2047-3/20160810-pub/",
+      "updated": "2025-10-26T17:02:05.974Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp2047-3/20160810-pub/",
+      "updated": "2025-10-26T17:02:05.974Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rp2047-3-2016/rp2047-3-2016.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.867Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rp2047-3-2016/rp2047-3-2016.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.867Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rp2047-3-2016/rp2047-3-2016.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.867Z"
+    },
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST2042-2.2009",
+        "SMPTE.ST2047-4.2011",
+        "R-REC-BT.656-5",
+        "R-REC-BT.709-6"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-18T23:48:48.871Z"
+      },
+      "normative": [
+        "SMPTE.ST274.2008",
+        "SMPTE.ST296.2012",
+        "SMPTE.ST2042-1.2012"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-18T22:53:40.390Z"
+      }
+    },
+    "releaseTag": "20160810-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp2047-3/20160810-pub/",
+      "updated": "2025-10-26T17:02:05.974Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/rp2047-3/20160810-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000008kYd",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-11-11T04:51:07.833Z",
+      "version": "extractDocs.js@commit:dea962f9e9d7"
+    },
+    "standardId": "20950",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rp2047-3-2016/rp2047-3-2016.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.867Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:02:05.974Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-26T17:02:05.974Z"
+      },
+      "latestVersion": false,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:02:05.974Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:02:05.974Z"
+      },
+      "supersededBy": [
+        "SMPTE.RP2047-3.2022"
+      ],
+      "supersededBy$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": [],
+        "source": "resolved",
+        "updated": "2025-10-26T17:02:05.974Z"
+      },
+      "supersededDate": "2022-11-29",
+      "supersededDate$meta": {
+        "confidence": "high",
+        "note": "Calculated as the publication date of the next base release (from releaseTag)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:02:05.974Z"
+      }
+    }
+  }
+}

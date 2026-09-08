@@ -1,0 +1,247 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-j18438",
+  "document": {
+    "abbrevTitle": "SMPTE Mot. Imag. J.",
+    "abbrevTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/04092015 CONVERTED SAMPLES/JOURNAL/smptej_123_6/i1545-0279-123-6-4.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "abstract": "Welcome to the annual Progress Report issue of the SMPTE Motion Imaging Journal. As in previous years, this issue will provide the latest developments of Standards, not only from SMPTE, but also from other standards-development bodies around the world. Setting standards is an international affair, thus it becomes critical that SMPTE also provide the developments of “sister” organizations that work within the media ecosystem.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Backfilled from SMPTE canonical repository (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "authors": [
+      {
+        "name": "Barbara H. Lange"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "info-society",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Officer-message rule 2026-07-09: all 'Message from the …' titles are society information",
+      "originalValue": "toc",
+      "source": "resolved",
+      "updated": "2026-07-09T19:46:15.258Z",
+      "version": "contenttype-fixes@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/04092015 CONVERTED SAMPLES/JOURNAL/smptej_123_6/i1545-0279-123-6-4.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T23:54:08.922Z",
+        "version": "smpte-journal-issue-xml@v1"
+      },
+      "year": "2014",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/04092015 CONVERTED SAMPLES/JOURNAL/smptej_123_6/i1545-0279-123-6-4.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T23:54:08.922Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/04092015 CONVERTED SAMPLES/JOURNAL/smptej_123_6/i1545-0279-123-6-4.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "docId": "10.5594-j18438",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/j18438",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "docLabel": "SMPTE Motion Imaging Journal ( Volume: 123, Issue: 6, 2014)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from journal title, volume, issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "docTitle": "Making Progress through Standards [Message from the Executive Director]",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Title updated from SMPTE canonical repository (2026-07-09 drift review: canonical richer/cleaner; TeX/sup/inf converted to Unicode) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": "Message from the Executive Director",
+      "source": "parsed",
+      "updated": "2026-07-09T15:05:12.415Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "journal_metadata XML — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "doi": "10.5594/j18438",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/04092015 CONVERTED SAMPLES/JOURNAL/smptej_123_6/i1545-0279-123-6-4.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "href": "https://doi.org/10.5594/j18438",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/j18438",
+      "source": "inferred",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "issn": {
+      "electronic": "2160-2492",
+      "electronic$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/04092015 CONVERTED SAMPLES/JOURNAL/smptej_123_6/i1545-0279-123-6-4.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T23:54:08.922Z",
+        "version": "smpte-journal-issue-xml@v1"
+      },
+      "print": "1545-0279",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/04092015 CONVERTED SAMPLES/JOURNAL/smptej_123_6/i1545-0279-123-6-4.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T23:54:08.922Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/04092015 CONVERTED SAMPLES/JOURNAL/smptej_123_6/i1545-0279-123-6-4.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/04092015 CONVERTED SAMPLES/JOURNAL/smptej_123_6/i1545-0279-123-6-4.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "SMPTE Motion Imaging Journal",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "6",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/04092015 CONVERTED SAMPLES/JOURNAL/smptej_123_6/i1545-0279-123-6-4.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "pages": "4–4",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/04092015 CONVERTED SAMPLES/JOURNAL/smptej_123_6/i1545-0279-123-6-4.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "publicationDate": "2014-09-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Month corrected from SMPTE canonical repository (registry had Jan-1 placeholder) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": "2014-01-01",
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from publisher-name (Society of Motion Picture and Television Engineers, Inc.)",
+      "source": "inferred",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/04092015 CONVERTED SAMPLES/JOURNAL/smptej_123_6/i1545-0279-123-6-4.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T23:54:08.922Z",
+        "version": "smpte-journal-issue-xml@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/04092015 CONVERTED SAMPLES/JOURNAL/smptej_123_6/i1545-0279-123-6-4.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T23:54:08.922Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/04092015 CONVERTED SAMPLES/JOURNAL/smptej_123_6/i1545-0279-123-6-4.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/SMPTE%20Motion%20Imaging%20Journal/123/6/4/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.441Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Mapped from article_status=\"active\"",
+        "source": "parsed",
+        "updated": "2026-05-22T23:54:08.922Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "volume": "123",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/04092015 CONVERTED SAMPLES/JOURNAL/smptej_123_6/i1545-0279-123-6-4.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T23:54:08.922Z",
+      "version": "smpte-journal-issue-xml@v1"
+    }
+  }
+}

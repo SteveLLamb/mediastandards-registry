@@ -1,0 +1,336 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST436.2006",
+  "document": {
+    "abstract": "This standard describes the carriage of VBI data and all ANC packets (HANC and VANC) in an MXF file. This standard supports standard definition television and high-definition television for 8-bit and 10-bit digital component systems. This standard also defines the encoding of additional information so an MXF decoder can place the VBI data and ANC packets at the specified location in a reconstructed television signal. This standard does not describe the content of the MXF VBI data and MXF ANC packet payloads, or their conversion to and from networks and systems other than MXF.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-436-2006_1/st0436-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.862Z"
+    },
+    "approvalDate": "2006-09-18",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json); Zoho is canonical for SMPTE standards metadata, registry value overwritten",
+      "originalValue": "2006",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2026-06-15T20:27:42.872Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-436-2006_1/st0436-2006.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.862Z"
+      },
+      "year": "2006",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-436-2006_1/st0436-2006.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.862Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-436-2006_1/st0436-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.862Z"
+    },
+    "docId": "SMPTE.ST436.2006",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st436/20060918-pub/",
+      "updated": "2025-10-26T17:01:18.690Z"
+    },
+    "docLabel": "SMPTE ST 436:2006",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st436/20060918-pub/",
+      "updated": "2025-10-26T17:01:18.690Z"
+    },
+    "docNumber": "436",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st436/20060918-pub/",
+      "updated": "2025-10-26T17:01:18.690Z"
+    },
+    "docSuiteTitle": "Television",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Extracted from source XML <title> as the prefix before \" — MXF Mappings for VBI Lines and Ancillary Data Packets\", with leading \"For \" stripped per SMPTE convention (from _source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-436-2006_1/st0436-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-14T21:34:03.214Z"
+    },
+    "docTitle": "MXF Mappings for VBI Lines and Ancillary Data Packets",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st436/20060918-pub/",
+      "updated": "2025-10-26T17:01:18.690Z"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st436/20060918-pub/",
+      "updated": "2025-10-26T17:01:18.690Z"
+    },
+    "doi": "10.5594/SMPTE.ST436.2006",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st436/20060918-pub/",
+      "updated": "2025-10-26T17:01:18.690Z"
+    },
+    "familyId": "436",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-436-2006_1/st0436-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.862Z"
+    },
+    "group": "smpte-31fs-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-436-2006_1/st0436-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.862Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST436.2006",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st436/20060918-pub/",
+      "updated": "2025-10-26T17:01:18.690Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-436-2006_1/st0436-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.862Z"
+    },
+    "isbn": "978-1-61482-599-9",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-436-2006_1/st0436-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.862Z"
+    },
+    "keywords": [
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Television",
+      "File Formats",
+      "Ancillary Data",
+      "MXF"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Scrubbed against src/main/config/site.json controlledKeywords (auto-fix renames + drop noise)",
+      "originalValue": [
+        "Communication",
+        "Networking and Broadcast Technologies",
+        "Television",
+        "File Formats",
+        "Ancillary Data",
+        "MXF",
+        "File Format"
+      ],
+      "source": "parsed",
+      "updated": "2026-06-17T17:18:30.093Z",
+      "version": "kw-scrub@v1"
+    },
+    "numberOfPages": "16",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–16",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-436-2006_1/st0436-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.862Z"
+    },
+    "productNumber": "SSD001600",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-436-2006_1/st0436-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.862Z"
+    },
+    "publicationDate": "2006-09-18",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st436/20060918-pub/",
+      "updated": "2025-10-26T17:01:18.690Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st436/20060918-pub/",
+      "updated": "2025-10-26T17:01:18.690Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-436-2006_1/st0436-2006.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.862Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-436-2006_1/st0436-2006.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.862Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-436-2006_1/st0436-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.862Z"
+    },
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST272.2004",
+        "SMPTE.ST331.2004",
+        "SMPTE.ST381.2005",
+        "SMPTE.ST385.2004",
+        "SMPTE.ST386.2004",
+        "SMPTE.ST387.2004",
+        "SMPTE.ST390.2004",
+        "SMPTE.RP208.2002",
+        "SMPTE.EG41.2004",
+        "SMPTE.ST299.2004"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-18T23:48:48.871Z"
+      },
+      "normative": [
+        "SMPTE.ST291.2006",
+        "SMPTE.ST377.2004",
+        "SMPTE.ST379.2004",
+        "SMPTE.ST424.2006",
+        "SMPTE.RP168.2002",
+        "SMPTE.ST259.2006",
+        "SMPTE.ST292.1998"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-18T23:48:48.871Z"
+      }
+    },
+    "releaseTag": "20060918-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st436/20060918-pub/",
+      "updated": "2025-10-26T17:01:18.690Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/st436/20060918-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000007Ngl",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-30T22:53:54.621Z",
+      "version": "extractDocs.js@commit:ee2844fb1cf2"
+    },
+    "standardId": "20863",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-436-2006_1/st0436-2006.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.862Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:18.690Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-26T17:01:18.690Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:18.690Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:18.690Z"
+      }
+    }
+  }
+}

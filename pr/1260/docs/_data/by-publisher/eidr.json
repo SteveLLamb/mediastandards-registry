@@ -1,0 +1,283 @@
+[
+  {
+    "docId": "EIDR.BP",
+    "docLabel": "EIDR Technology",
+    "docTitle": "EIDR Best Practices, Technical Documentation, Standards and Interoperability",
+    "docType": "Registry",
+    "href": "https://eidr.org/technology/",
+    "publisher": "EIDR",
+    "resolvedHref": "https://www.eidr.org/technology/",
+    "status": {
+      "active": true
+    },
+    "docDependancy": false,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "EIDR.ID.201201",
+    "docLabel": "EIDR ID:201201",
+    "docTitle": "EIDR ID Format Ver. 1.02",
+    "docType": "Best Practice",
+    "href": "http://eidr.org/documents/EIDR_ID_Format_v1.02_Jan2012.pdf",
+    "publicationDate": "2012-01-30",
+    "publisher": "EIDR",
+    "resolvedHref": "https://eidr.org/documents/EIDR_ID_Format_v1.02_Jan2012.pdf",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "EIDR.ID.201702"
+      ],
+      "supersededDate": "2017-02-14",
+      "latestVersion": false
+    },
+    "msiLatestAny": "EIDR.ID.201710",
+    "msiLatestBase": "EIDR.ID.201710",
+    "isLatestAny": false,
+    "docBase": "EIDR||ID|",
+    "docBaseLabel": "EIDR ID",
+    "isLatestBase": false,
+    "docVersion": [
+      {
+        "docId": "EIDR.ID.201201",
+        "docLabel": "EIDR ID:201201",
+        "href": "http://eidr.org/documents/EIDR_ID_Format_v1.02_Jan2012.pdf",
+        "publicationDate": "2012-01-30",
+        "status": {
+          "active": false,
+          "superseded": true,
+          "supersededBy": [
+            "EIDR.ID.201702"
+          ],
+          "supersededDate": "2017-02-14",
+          "latestVersion": false
+        },
+        "isLatestBase": false,
+        "__isNewestInBase": false
+      },
+      {
+        "docId": "EIDR.ID.201702",
+        "docLabel": "EIDR ID:201702",
+        "href": "http://eidr.org/documents/EIDR_ID_Format.pdf",
+        "publicationDate": "2017-02-14",
+        "status": {
+          "active": false,
+          "superseded": true,
+          "supersededBy": [
+            "EIDR.ID.201710"
+          ],
+          "supersededDate": "2017-10-05",
+          "latestVersion": false
+        },
+        "isLatestBase": false,
+        "__isNewestInBase": false
+      },
+      {
+        "docId": "EIDR.ID.201710",
+        "docLabel": "EIDR ID:201710",
+        "href": "http://eidr.org/documents/EIDR_ID_Format.pdf",
+        "publicationDate": "2017-10-05",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "docDependancy": false,
+    "currentStatus": "Superseded"
+  },
+  {
+    "docId": "EIDR.ID.201702",
+    "docLabel": "EIDR ID:201702",
+    "docTitle": "EIDR ID Format Ver. 1.5",
+    "docType": "Best Practice",
+    "href": "http://eidr.org/documents/EIDR_ID_Format.pdf",
+    "publicationDate": "2017-02-14",
+    "publisher": "EIDR",
+    "resolvedHref": "https://eidr.org/documents/EIDR_ID_Format.pdf",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "EIDR.ID.201710"
+      ],
+      "supersededDate": "2017-10-05",
+      "latestVersion": false
+    },
+    "msiLatestAny": "EIDR.ID.201710",
+    "msiLatestBase": "EIDR.ID.201710",
+    "isLatestAny": false,
+    "docBase": "EIDR||ID|",
+    "docBaseLabel": "EIDR ID",
+    "isLatestBase": false,
+    "docVersion": [
+      {
+        "docId": "EIDR.ID.201201",
+        "docLabel": "EIDR ID:201201",
+        "href": "http://eidr.org/documents/EIDR_ID_Format_v1.02_Jan2012.pdf",
+        "publicationDate": "2012-01-30",
+        "status": {
+          "active": false,
+          "superseded": true,
+          "supersededBy": [
+            "EIDR.ID.201702"
+          ],
+          "supersededDate": "2017-02-14",
+          "latestVersion": false
+        },
+        "isLatestBase": false,
+        "__isNewestInBase": false
+      },
+      {
+        "docId": "EIDR.ID.201702",
+        "docLabel": "EIDR ID:201702",
+        "href": "http://eidr.org/documents/EIDR_ID_Format.pdf",
+        "publicationDate": "2017-02-14",
+        "status": {
+          "active": false,
+          "superseded": true,
+          "supersededBy": [
+            "EIDR.ID.201710"
+          ],
+          "supersededDate": "2017-10-05",
+          "latestVersion": false
+        },
+        "isLatestBase": false,
+        "__isNewestInBase": false
+      },
+      {
+        "docId": "EIDR.ID.201710",
+        "docLabel": "EIDR ID:201710",
+        "href": "http://eidr.org/documents/EIDR_ID_Format.pdf",
+        "publicationDate": "2017-10-05",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "SMPTE.RP2079.2013",
+      "SMPTE.RP2079.2017"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Superseded"
+  },
+  {
+    "docId": "EIDR.ID.201710",
+    "docLabel": "EIDR ID:201710",
+    "docTitle": "EIDR ID Format Ver. 1.51",
+    "docType": "Best Practice",
+    "href": "http://eidr.org/documents/EIDR_ID_Format.pdf",
+    "publicationDate": "2017-10-05",
+    "publisher": "EIDR",
+    "resolvedHref": "https://eidr.org/documents/EIDR_ID_Format.pdf",
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "EIDR.ID.201710",
+    "msiLatestBase": "EIDR.ID.201710",
+    "isLatestAny": true,
+    "docBase": "EIDR||ID|",
+    "docBaseLabel": "EIDR ID",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "EIDR.ID.201201",
+        "docLabel": "EIDR ID:201201",
+        "href": "http://eidr.org/documents/EIDR_ID_Format_v1.02_Jan2012.pdf",
+        "publicationDate": "2012-01-30",
+        "status": {
+          "active": false,
+          "superseded": true,
+          "supersededBy": [
+            "EIDR.ID.201702"
+          ],
+          "supersededDate": "2017-02-14",
+          "latestVersion": false
+        },
+        "isLatestBase": false,
+        "__isNewestInBase": false
+      },
+      {
+        "docId": "EIDR.ID.201702",
+        "docLabel": "EIDR ID:201702",
+        "href": "http://eidr.org/documents/EIDR_ID_Format.pdf",
+        "publicationDate": "2017-02-14",
+        "status": {
+          "active": false,
+          "superseded": true,
+          "supersededBy": [
+            "EIDR.ID.201710"
+          ],
+          "supersededDate": "2017-10-05",
+          "latestVersion": false
+        },
+        "isLatestBase": false,
+        "__isNewestInBase": false
+      },
+      {
+        "docId": "EIDR.ID.201710",
+        "docLabel": "EIDR ID:201710",
+        "href": "http://eidr.org/documents/EIDR_ID_Format.pdf",
+        "publicationDate": "2017-10-05",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "SMPTE.RP2079.2018"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "EIDR.SV-DFR.201512",
+    "docLabel": "EIDR SV DFR:2015",
+    "docTitle": "EIDR SYSTEM VERSION 2.0.9 DATA FIELDS REFERENCE",
+    "docType": "Informational",
+    "href": "https://eidr.org/documents/EIDR_2.0_Data_Fields.pdf",
+    "publicationDate": "2015-12-27",
+    "publisher": "EIDR",
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "EIDR.SV-DFR.201512",
+    "msiLatestBase": "EIDR.SV-DFR.201512",
+    "isLatestAny": true,
+    "docBase": "EIDR||SV-DFR|",
+    "docBaseLabel": "EIDR SV-DFR",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "EIDR.SV-DFR.201512",
+        "docLabel": "EIDR SV DFR:2015",
+        "href": "https://eidr.org/documents/EIDR_2.0_Data_Fields.pdf",
+        "publicationDate": "2015-12-27",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "SMPTE.ST2067-3.2020"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  }
+]

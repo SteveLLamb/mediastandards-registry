@@ -1,0 +1,338 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.RP189.1996",
+  "document": {
+    "abstract": "(1.1) This practice describes a method (TAR) by which DPX files are organized on tape storage devices (and any other type of sequential block-oriented device.) (1.2) This practice describes the tape file format basic concept, physical and logical layout, the directory file format, file naming conventions, and examples of usage. (1.3) This practice describes a recommended method for tape labels that are attached to the tape shell or reel. (1.4) This practice is intended for interchange only. It has not been optimized for other uses.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-189-1996_1/rp0189-1996_withdrawn2011.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.839Z"
+    },
+    "approvalDate": "1996-04-01",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-189-1996_1/rp0189-1996_withdrawn2011.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.839Z"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-189-1996_1/rp0189-1996_withdrawn2011.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.839Z"
+      },
+      "year": "1996",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-189-1996_1/rp0189-1996_withdrawn2011.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.839Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-189-1996_1/rp0189-1996_withdrawn2011.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.839Z"
+    },
+    "docId": "SMPTE.RP189.1996",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rp189/19960401-pub/",
+      "updated": "2025-10-12T20:05:26.349Z"
+    },
+    "docLabel": "SMPTE RP 189:1996",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rp189/19960401-pub/",
+      "updated": "2025-10-12T20:05:26.349Z"
+    },
+    "docNumber": "189",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp189/19960401-pub/",
+      "updated": "2025-10-12T20:05:26.349Z"
+    },
+    "docTitle": "Organization of DPX Files on TAR Tapes",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp189/19960401-pub/",
+      "updated": "2025-10-12T20:05:26.349Z"
+    },
+    "docType": "Recommended Practice",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp189/19960401-pub/",
+      "updated": "2025-10-12T20:05:26.349Z"
+    },
+    "doi": "10.5594/SMPTE.RP189.1996",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rp189/19960401-pub/",
+      "updated": "2025-10-12T20:05:26.349Z"
+    },
+    "familyId": "189",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-189-1996_1/rp0189-1996_withdrawn2011.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.839Z"
+    },
+    "group": "smpte-31fs-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-189-1996_1/rp0189-1996_withdrawn2011.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.839Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.RP189.1996",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rp189/19960401-pub/",
+      "updated": "2025-10-12T20:05:26.349Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      },
+      {
+        "code": "37.060.99",
+        "description": "Other standards related to cinematography"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-189-1996_1/rp0189-1996_withdrawn2011.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.839Z"
+    },
+    "isbn": "978-1-61482-202-8",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-189-1996_1/rp0189-1996_withdrawn2011.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.839Z"
+    },
+    "keywords": [
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Television",
+      "File Formats",
+      "DCinema"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Scrubbed against src/main/config/site.json controlledKeywords (auto-fix renames + drop noise)",
+      "originalValue": [
+        "Communication",
+        "Networking and Broadcast Technologies",
+        "Television",
+        "File Formats",
+        "DCinema",
+        "File Format"
+      ],
+      "source": "parsed",
+      "updated": "2026-06-17T17:18:30.093Z",
+      "version": "kw-scrub@v1"
+    },
+    "numberOfPages": "8",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–8",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-189-1996_1/rp0189-1996_withdrawn2011.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.839Z"
+    },
+    "productNumber": "SSD001203",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-189-1996_1/rp0189-1996_withdrawn2011.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.839Z"
+    },
+    "publicationDate": "1996-04-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp189/19960401-pub/",
+      "updated": "2025-10-12T20:05:26.349Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp189/19960401-pub/",
+      "updated": "2025-10-12T20:05:26.349Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-189-1996_1/rp0189-1996_withdrawn2011.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.839Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-189-1996_1/rp0189-1996_withdrawn2011.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.839Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-189-1996_1/rp0189-1996_withdrawn2011.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.839Z"
+    },
+    "references": {
+      "normative": [
+        "INCITS.X3.4.1986",
+        "IEEE.STD1003.1.1990",
+        "SMPTE.ST268.1994"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-18T23:48:48.871Z"
+      }
+    },
+    "releaseTag": "19960401-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp189/19960401-pub/",
+      "updated": "2025-10-12T20:05:26.349Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/rp189/19960401-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000007Nam",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-30T22:50:54.429Z",
+      "version": "extractDocs.js@commit:ee2844fb1cf2"
+    },
+    "standardId": "20335",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_rp-189-1996_1/rp0189-1996_withdrawn2011.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.839Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T20:05:26.349Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-12T20:05:26.349Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T20:05:26.349Z"
+      },
+      "statusNote": "This document has been withdrawn.",
+      "statusNote$meta": {
+        "confidence": "high",
+        "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+        "source": "parsed",
+        "updated": "2026-07-06T21:05:35.316Z",
+        "version": "smpte-zoho-standards@v1"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T20:05:26.349Z"
+      },
+      "withdrawn": true,
+      "withdrawn$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #state",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-12T20:05:26.349Z"
+      },
+      "withdrawnDate": "2011-07-21",
+      "withdrawnDate$meta": {
+        "confidence": "high",
+        "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+        "source": "parsed",
+        "updated": "2026-07-06T20:59:39.845Z",
+        "version": "smpte-zoho-standards@v1"
+      },
+      "withdrawnNotice": "https://pub.smpte.org/doc/rp189/rp0189-Withdrawal-Statement-2011-07-21.pdf",
+      "withdrawnNotice$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #withdrawal-statement — verified reachable",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-12T20:05:26.349Z"
+      }
+    }
+  }
+}

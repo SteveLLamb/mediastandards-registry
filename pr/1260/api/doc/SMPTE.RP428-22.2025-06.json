@@ -1,0 +1,312 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.RP428-22.2025-06",
+  "document": {
+    "abstract": "This recommended practice specifies a minimal, compliant, and functionally empty SMPTE ST 428-7 Subtitle file, providing no visible effect upon playout.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML sec-scope section",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-01-07T23:12:09.395Z",
+      "version": "extractDocs.js@commit:499baa451f70"
+    },
+    "approvalDate": "2025-06-27",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:06:26.674Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "year": "2025",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+        "source": "parsed",
+        "updated": "2026-06-16T00:07:06.330Z",
+        "version": "smpte-zoho-standards@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:07:06.330Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "docId": "SMPTE.RP428-22.2025-06",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T15:50:42.438Z"
+    },
+    "docLabel": "SMPTE RP 428-22:2025-06",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T15:50:42.438Z"
+    },
+    "docNumber": "428",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T15:50:42.438Z"
+    },
+    "docPart": "22",
+    "docPart$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubPart meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T15:50:42.438Z"
+    },
+    "docSuiteTitle": "D-Cinema Distribution Master",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-12-12T21:26:59.006Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docTitle": "Minimal Timed Text XML Requirements",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": "D-Cinema Distribution Master Minimal Timed Text XML Requirements",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-12-12T21:26:59.006Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docType": "Recommended Practice",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T15:50:42.438Z"
+    },
+    "doi": "10.5594/SMPTE.RP428-22.2025",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T15:50:42.438Z"
+    },
+    "group": "smpte-27c-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T15:50:42.438Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.RP428-22.2025",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T15:50:42.438Z"
+    },
+    "icsCodes": [
+      {
+        "code": "37.060.99",
+        "description": "Other standards related to cinematography"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:07:53.961Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "isbn": "978-1-68303-347-9",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:05:43.143Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "keywords": [
+      "DCinema",
+      "DCDM",
+      "Subtitles",
+      "File Formats",
+      "Time & Sync",
+      "Metadata",
+      "XML"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Scrubbed against src/main/config/site.json controlledKeywords (auto-fix renames + drop noise)",
+      "originalValue": [
+        "DCinema",
+        "DCDM",
+        "Subtitles"
+      ],
+      "source": "parsed",
+      "updated": "2026-06-17T17:18:30.093Z",
+      "version": "kw-scrub@v1"
+    },
+    "numberOfPages": "7",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:08:15.443Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "productNumber": "SSD002226",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:08:38.925Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "publicationDate": "2025-06-27",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T15:50:42.438Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T15:50:42.438Z"
+    },
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST429-2",
+        "SMPTE.RDD52",
+        "ISO.14496-22.2015"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [],
+        "source": "parsed",
+        "updated": "2025-09-30T15:50:42.438Z"
+      },
+      "normative": [
+        "SMPTE.ST428-7"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [],
+        "source": "parsed",
+        "updated": "2025-09-30T15:50:42.438Z"
+      }
+    },
+    "releaseTag": "20250627-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T15:50:42.438Z"
+    },
+    "repo": "https://github.com/SMPTE/rp428-22/",
+    "repo$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed or inferred publication type/number/part and verified to exist",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+      "updated": "2025-09-30T15:50:42.438Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/rp428-22/20250627-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR000003VZB42AO",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-30T22:52:44.597Z",
+      "version": "extractDocs.js@commit:ee2844fb1cf2"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T15:50:42.438Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T15:50:42.438Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T15:50:42.438Z"
+      },
+      "stage": "PUB",
+      "stage$meta": {
+        "confidence": "high",
+        "note": "Stage parsed from HTML pubStage meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T15:50:42.438Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T15:50:42.438Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T15:50:42.438Z"
+      }
+    }
+  }
+}

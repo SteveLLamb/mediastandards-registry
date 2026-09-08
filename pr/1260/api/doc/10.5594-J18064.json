@@ -1,0 +1,263 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-J18064",
+  "document": {
+    "abbrevTitle": "J SMPTE",
+    "abbrevTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18064.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "abstract": "Studies were made of flashtubes with a limited discharge column (capillary tubes); and with an unlimited discharge (lamps with spherical bulbs), in a minimum inductance circuit. The investigations included extreme cases of the construction and supply parameters. Discharge characteristics in capillaries are similar to those in wide-diameter tubes, though corresponding values of specific resistance occur at electric fields some 5 to 10 times higher. The specific resistance of plasma becomes almost constant (equalling ∼ 0.02 ohm cm) at E ≳ 120 v/cm. The discharge extinction voltage is approximately inversely proportional to the inner diameter of the tube. The increase of the light efficiency stops at E ≅ 400 v/cm (reaching very high values of about 40 lm/w). The dependence of the flash duration τ on construction data and on supply parameters was determined, over a wide range of conditions. Within narrow limits of parameter modifications the following expression may be used: τ = AU0-0.6 (Cl)pd-q. Here A is the proportionality coefficient; U0, the initial voltage on the supply condenser; C, the condenser capacity; l and d, the length and the inner diameter of the tube; p and q, approximately constant exponents, which change respectively from 0.5 to 1 and from 0.5 to 2, for wide variation of the parameters. The influence of the inherent discharge circuit inductance on the luminous characteristics of tubular lamps is almost insignificant. The working temperatures of quartz and glass tubular lamps, which are on long-duration stroboscopic duty (750C and 250C respectively) are attained at mean powers of about 10 and 1.8 w/cm of tube length, respectively. The tubes perform for a few seconds (without forced cooling) at powers of 40 and 4 w/cm, respectively. The load factor, (CU4) max, which determines load limits in single-flash operation conditions, does not depend on the diameter, d, for glass tubes in the range from 0.5 to 11 mm, and for quartz tubes in the range from 0.5 to 2 mm. The time necessary for the deionization of the gas gap in capillary quartz tubes, dissipating ∼2 w/cm increases from 80 to 270 μsec for an increase of the initial electric field from 140 to 280 v/cm. At higher power the deionization period drops from 500 to 300 μsec. Accordingly, the critical flash frequencies of such tubes (without any additional commutation element in the discharge circuit) are equal to 12 kc/sec at low wattages, and about 3 kc/sec at higher wattages. To investigate extreme discharge performances in tubes with spherical bulbs, various low-inductance condensers and tube designs were tried. These included disc-shaped, pot, and cylindrical ceramic condensers; cylindrical and spherical quartz condensers; cylindrical film condensers; disc-shaped and coaxial lead-ins, connections and electrodes. As a result data were obtained for discharge circuits of the minimum possible inductance. Investigations were made of discharge column expansion velocities, and of discharge characteristics for various supply parameters. Construction data and supply parameters for tubes with a flash duration of 0.1 μsec, a flash frequency of 3 kc/sec, and a power of 1 kw were established.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18064.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "Laboratory of Flashlight Sources at the Electric Lamp Works, Radiotechnical Industry Ministry, Moscow, USSR",
+        "name": "I. S. Marshak"
+      },
+      {
+        "affiliation": "Laboratory of Flashlight Sources at the Electric Lamp Works, Radiotechnical Industry Ministry, Moscow, USSR",
+        "name": "L. I. Shchoukin"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from SMPTE canonical repository import (smpte-canonical-audit/canonicalLibrary.*.json); previous value was a placeholder",
+      "originalValue": "other",
+      "source": "parsed",
+      "updated": "2026-07-07T23:39:31.295Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18064.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "year": "1962",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18064.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18064.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docId": "10.5594-J18064",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/J18064",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docLabel": "Journal of the SMPTE ( Volume: 71, Issue: 1A, 1962)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docTitle": "Paper A–7: Physical and Technical Parameters of Flashtubes",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18064.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "doi": "10.5594/J18064",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18064.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/J18064",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/J18064",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "issn": {
+      "print": "0361-4573",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18064.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18064.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/07132015 BACKFILE FOR JOURNAL/smptej_120_5/MIJR15Vol120No5.xml)",
+      "source": "parsed",
+      "updated": "2026-06-17T00:17:09.425Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "Journal of the SMPTE",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "1A",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18064.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "pages": "33–40",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18064.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publicationDate": "1962-01-01",
+    "publicationDate$meta": {
+      "confidence": "low",
+      "note": "Month/day absent in NLM source — padded to 01-01",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18064.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/07132015 BACKFILE FOR JOURNAL/smptej_120_5/MIJR15Vol120No5.xml)",
+        "source": "parsed",
+        "updated": "2026-06-17T00:17:09.425Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18064.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-J18064/bibr1-10.5594_J18064",
+        "orphan/10.5594-J18064/bibr2-10.5594_J18064",
+        "orphan/10.5594-J18064/bibr3-10.5594_J18064",
+        "orphan/10.5594-J18064/bibr4-10.5594_J18064",
+        "orphan/10.5594-J18064/bibr5-10.5594_J18064",
+        "orphan/10.5594-J18064/bibr6-10.5594_J18064",
+        "orphan/10.5594-J18064/bibr7-10.5594_J18064",
+        "orphan/10.5594-J18064/bibr8-10.5594_J18064",
+        "orphan/10.5594-J18064/bibr9-10.5594_J18064",
+        "orphan/10.5594-J18064/bibr10-10.5594_J18064",
+        "orphan/10.5594-J18064/bibr11-10.5594_J18064",
+        "orphan/10.5594-J18064/bibr12-10.5594_J18064"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteJournalRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T18:21:02.558Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/Journal%20of%20the%20SMPTE/71/1A/22/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.437Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — journal papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "volume": "71",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18064.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    }
+  }
+}

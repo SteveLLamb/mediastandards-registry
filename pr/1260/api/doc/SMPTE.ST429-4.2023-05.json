@@ -1,0 +1,294 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST429-4.2023-05",
+  "document": {
+    "abstract": "SMPTE ST 422 defines the mapping of any compliant JPEG 2000 codestream into MXF and provides Keys, ULs and essence descriptor definitions. This standard further defines the MXF mapping details and constraints for application within D-Cinema.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML sec-scope section",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-01-07T23:12:55.069Z",
+      "version": "extractDocs.js@commit:499baa451f70"
+    },
+    "approvalDate": "2023-05-04",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:06:26.674Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "year": "2024",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+        "source": "parsed",
+        "updated": "2026-06-16T00:07:06.330Z",
+        "version": "smpte-zoho-standards@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:07:06.330Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "docId": "SMPTE.ST429-4.2023-05",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "manual",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-4/20230504-pub/",
+      "updated": "2025-10-30T00:00:00Z"
+    },
+    "docLabel": "SMPTE ST 429-4:2023-05",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docNumber": "429",
+    "docNumber$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docPart": "4",
+    "docPart$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docSuiteTitle": "D-Cinema Packaging",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-12-12T21:27:40.856Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docTitle": "MXF JPEG 2000 Application",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": "D-Cinema Packaging MXF JPEG 2000 Application",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-12-12T21:27:40.856Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": "Recommended Practice",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-10-07T21:45:21.776Z"
+    },
+    "doi": "10.5594/SMPTE.ST429-4.2023",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2025-10-07T21:45:21.776Z"
+    },
+    "group": "smpte-27c-tc",
+    "group$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST429-4.2023",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": "https://doi.org/10.5594/SMPTE.ST429-4.2022",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-07T21:45:21.776Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:07:53.961Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "isbn": "978-1-68303-316-5",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:05:43.143Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "keywords": [
+      "DCinema",
+      "Identification"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-17T16:55:09.355Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "numberOfPages": "9",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:08:15.443Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "productNumber": "SSD002196",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:08:38.925Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "publicationDate": "2023-05-04",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "references": {
+      "bibliographic": [
+        "ISO.646"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-10-07T21:45:53.790Z"
+      },
+      "normative": [
+        "SMPTE.ST377-1",
+        "SMPTE.ST422",
+        "SMPTE.ST428-1",
+        "SMPTE.ST429-3",
+        "ISO.15444-1"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [
+          "SMPTE.ST429-3",
+          "ISO.15444-1"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "updated": "2025-10-07T21:45:21.776Z"
+      }
+    },
+    "releaseTag": "20230504-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-10-07T21:45:21.776Z"
+    },
+    "repo": "https://github.com/SMPTE/st429-4/",
+    "repo$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed or inferred publication type/number/part and verified to exist",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2025-10-07T21:45:21.776Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/st429-4/20230504-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000007NgL",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-11-11T04:49:57.845Z",
+      "version": "extractDocs.js@commit:dea962f9e9d7"
+    },
+    "revisionOf": [
+      "SMPTE.ST429-4.2020"
+    ],
+    "revisionOf$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubRevisionOf meta tag",
+      "originalValue": [],
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-10-07T21:45:21.777Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-07T21:45:21.776Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-07T21:45:21.776Z"
+      },
+      "stage": "PUB",
+      "stage$meta": {
+        "confidence": "high",
+        "note": "Stage parsed from HTML pubStage meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-07T21:45:21.776Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-07T21:45:21.776Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-07T21:45:21.776Z"
+      }
+    }
+  }
+}

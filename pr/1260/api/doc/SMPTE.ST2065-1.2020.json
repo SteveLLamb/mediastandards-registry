@@ -1,0 +1,170 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST2065-1.2020",
+  "document": {
+    "docId": "SMPTE.ST2065-1.2020",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2065-1/20200909-pub/",
+      "updated": "2025-10-26T17:02:23.186Z"
+    },
+    "docLabel": "SMPTE ST 2065-1:2020",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2065-1/20200909-pub/",
+      "updated": "2025-10-26T17:02:23.186Z"
+    },
+    "docNumber": "2065",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2065-1/20200909-pub/",
+      "updated": "2025-10-26T17:02:23.186Z"
+    },
+    "docPart": "1",
+    "docPart$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubPart meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2065-1/20200909-pub/",
+      "updated": "2025-10-26T17:02:23.186Z"
+    },
+    "docSuiteTitle": "Academy",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-12-12T21:31:02.183Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docTitle": "Academy Color Encoding Specification (ACES)",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": "Academy — Academy Color Encoding Specification (ACES)",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-12-12T21:31:02.183Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2065-1/20200909-pub/",
+      "updated": "2025-10-26T17:02:23.186Z"
+    },
+    "doi": "10.5594/SMPTE.ST2065-1.2020",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2065-1/20200909-pub/",
+      "updated": "2025-10-26T17:02:23.186Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST2065-1.2020",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2065-1/20200909-pub/",
+      "updated": "2025-10-26T17:02:23.186Z"
+    },
+    "keywords": [
+      "ACES"
+    ],
+    "keywords$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-10-26T20:25:25.647Z"
+    },
+    "publicationDate": "2020-09-09",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2065-1/20200909-pub/",
+      "updated": "2025-10-26T17:02:23.186Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2065-1/20200909-pub/",
+      "updated": "2025-10-26T17:02:23.186Z"
+    },
+    "releaseTag": "20200909-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2065-1/20200909-pub/",
+      "updated": "2025-10-26T17:02:23.186Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:02:23.186Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-26T17:02:23.186Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:02:23.186Z"
+      },
+      "stabilized": true,
+      "stabilized$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #state",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://pub.smpte.org/doc/st2065-1/20200909-pub/",
+        "updated": "2026-06-29T06:10:37.136Z",
+        "version": "extractDocs.js@commit:d070e710ccaa"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:02:23.186Z"
+      }
+    }
+  }
+}

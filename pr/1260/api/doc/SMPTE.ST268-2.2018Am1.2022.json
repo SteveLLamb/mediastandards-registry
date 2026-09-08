@@ -1,0 +1,246 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST268-2.2018Am1.2022",
+  "document": {
+    "approvalDate": "2022-02-24",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "excludeChanges": true,
+      "note": "Library cascade: per Zoho, approval date is 2022-02-24 (was previously stored as publicationDate).",
+      "originalValue": null,
+      "overridden": true,
+      "source": "manual",
+      "updated": "2026-06-15T23:29:36.023Z"
+    },
+    "copyright": {
+      "year": "2022",
+      "year$meta": {
+        "confidence": "high",
+        "excludeChanges": true,
+        "note": "Library cascade: copyright year is 2022 per Zoho.",
+        "originalValue": null,
+        "overridden": true,
+        "source": "manual",
+        "updated": "2026-06-15T23:29:36.023Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "excludeChanges": true,
+      "note": "Library cascade: copyright year is 2022 per Zoho.",
+      "originalValue": null,
+      "overridden": true,
+      "source": "manual",
+      "updated": "2026-06-15T23:29:36.023Z"
+    },
+    "docId": "SMPTE.ST268-2.2018Am1.2022",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st268-2/20220224-am1-pub/",
+      "updated": "2025-10-12T23:28:44.046Z"
+    },
+    "docLabel": "SMPTE ST 268-2:2018 Am1:2022",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st268-2/20220224-am1-pub/",
+      "updated": "2025-10-12T23:28:44.046Z"
+    },
+    "docNumber": "268",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st268-2/20220224-am1-pub/",
+      "updated": "2025-10-12T23:28:44.046Z"
+    },
+    "docPart": "2",
+    "docPart$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubPart meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st268-2/20220224-am1-pub/",
+      "updated": "2025-10-12T23:28:44.046Z"
+    },
+    "docSuiteTitle": "Digital Moving-Picture Exchange (DPX)",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-12-12T21:23:52.367Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docTitle": "Format Extensions for High Dynamic Range and Wide Color Gamut",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": "Digital Moving-Picture Exchange (DPX) — Format Extensions for High Dynamic Range and Wide Color Gamut",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-12-12T21:23:52.367Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st268-2/20220224-am1-pub/",
+      "updated": "2025-10-12T23:28:44.046Z"
+    },
+    "doi": "10.5594/SMPTE.ST268-2.2018Amd1.2022",
+    "doi$meta": {
+      "confidence": "high",
+      "excludeChanges": true,
+      "note": "Amendment notation drift: registry uses \"Am1\" in the docId while the actually-registered DOI per Zoho uses \"Amd1\" (10.5594/SMPTE.ST268-2.2018Amd1.2022). Both notations are valid for \"Amendment 1\" — UPSTREAM ACTION NEEDED: SMPTE should register both DOI forms so they're interchangeable. Field locked via excludeChanges so future cross-fills can't toggle this back.",
+      "originalValue": "10.5594/SMPTE.ST268-2.2018Am1.2022",
+      "overridden": true,
+      "source": "manual",
+      "updated": "2026-06-15T23:29:36.023Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST268-2.2018Amd1.2022",
+    "href$meta": {
+      "confidence": "high",
+      "excludeChanges": true,
+      "note": "Amendment notation drift: registry uses \"Am1\" in the docId while the actually-registered DOI per Zoho uses \"Amd1\" (10.5594/SMPTE.ST268-2.2018Amd1.2022). Both notations are valid for \"Amendment 1\" — UPSTREAM ACTION NEEDED: SMPTE should register both DOI forms so they're interchangeable. Field locked via excludeChanges so future cross-fills can't toggle this back.",
+      "originalValue": "https://doi.org/10.5594/SMPTE.ST268-2.2018Am1.2022",
+      "overridden": true,
+      "source": "manual",
+      "updated": "2026-06-15T23:29:36.023Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:07:53.961Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "isbn": "978-1-68303-259-5",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:05:43.143Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "keywords": [
+      "Image Formats",
+      "Metadata",
+      "File Formats",
+      "Compression"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-17T16:55:09.355Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "numberOfPages": "6",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:08:15.443Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "productNumber": "SSD002139",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:08:38.925Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "publicationDate": "2022-05-04",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "excludeChanges": true,
+      "note": "Library cascade: per Zoho's record at the canonical DOI, Publication_Date is 2022-05-04. The prior 2022-02-24 stored here is the approval date — moved to approvalDate.",
+      "originalValue": "2022-02-24",
+      "overridden": true,
+      "source": "manual",
+      "updated": "2026-06-15T23:29:36.023Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st268-2/20220224-am1-pub/",
+      "updated": "2025-10-12T23:28:44.046Z"
+    },
+    "releaseTag": "20220224-am1-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st268-2/20220224-am1-pub/",
+      "updated": "2025-10-12T23:28:44.046Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T23:28:44.046Z"
+      },
+      "latestVersion": false,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T23:28:44.046Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T23:28:44.046Z"
+      },
+      "supersededBy": [
+        "SMPTE.ST268-2.2023-06"
+      ],
+      "supersededBy$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": [],
+        "source": "resolved",
+        "updated": "2025-10-12T23:28:44.046Z"
+      },
+      "supersededDate": "2023-06-29",
+      "supersededDate$meta": {
+        "confidence": "high",
+        "note": "Calculated as the publication date of the next base release (from releaseTag)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T23:28:44.046Z"
+      }
+    }
+  }
+}

@@ -1,0 +1,333 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST2034-1.2014",
+  "document": {
+    "abstract": "This standard is Part 1 of a series of documents that specify a general-purpose format for the storage and/or communication of information in bulk form. The format is named the Archive eXchange Format (AXF). The format described is intended both for interchange between systems and to serve as a native format within systems. — This standard identifies two major categories of data storage media and specifies the basic structures of data stored on those Storage Media Types. It specifies a number of structural elements for use in constructing the appropriate structures for use on each of the Storage Media Types. It defines the semantics of data contained within fields specified for use in the structural elements. The structural elements themselves are documents coded in the eXtensible Markup Language (XML), and this document defines an XML Schema Description (XSD) file for use in formulating the XML documents to be used for the structural elements of AXF Objects.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2034-1-2014_1/st2034-1-2014.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.846Z"
+    },
+    "approvalDate": "2014-08-15",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json); Zoho is canonical for SMPTE standards metadata, registry value overwritten",
+      "originalValue": "2014",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2026-06-15T20:27:42.872Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2034-1-2014_1/st2034-1-2014.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.846Z"
+      },
+      "year": "2014",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2034-1-2014_1/st2034-1-2014.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.846Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2034-1-2014_1/st2034-1-2014.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.846Z"
+    },
+    "docId": "SMPTE.ST2034-1.2014",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "manual",
+      "sourceUrl": "https://pub.smpte.org/doc/st2034-1/20140815-pub/",
+      "updated": "2025-10-30T00:00:00Z"
+    },
+    "docLabel": "SMPTE ST 2034-1:2014",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docNumber": "2034",
+    "docNumber$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docPart": "1",
+    "docPart$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docSuiteTitle": "Archive eXchange Format (AXF)",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-12-12T21:29:48.000Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docTitle": "Part 1: Structure & Semantics",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": "Archive eXchange Format (AXF) — Part 1: Structure & Semantics",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-12-12T21:29:48.000Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "doi": "10.5594/SMPTE.ST2034-1.2014",
+    "doi$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "familyId": "2034-1",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2034-1-2014_1/st2034-1-2014.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.846Z"
+    },
+    "group": "smpte-31fs-tc",
+    "group$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST2034-1.2014",
+    "href$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      },
+      {
+        "code": "37.060.99",
+        "description": "Other standards related to cinematography"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2034-1-2014_1/st2034-1-2014.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.846Z"
+    },
+    "isbn": "978-1-61482-828-0",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2034-1-2014_1/st2034-1-2014.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.846Z"
+    },
+    "keywords": [
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Recording",
+      "Television",
+      "Wrappers",
+      "File Formats",
+      "Archive",
+      "AXF"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2034-1-2014_1/st2034-1-2014.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.846Z"
+    },
+    "numberOfPages": "96",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–96",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2034-1-2014_1/st2034-1-2014.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.846Z"
+    },
+    "productNumber": "SSD001803",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2034-1-2014_1/st2034-1-2014.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.846Z"
+    },
+    "publicationDate": "2014-08-15",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": "2014-08-29",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-10-26T17:01:52.321Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2034-1-2014_1/st2034-1-2014.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.846Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2034-1-2014_1/st2034-1-2014.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.846Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2034-1-2014_1/st2034-1-2014.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.846Z"
+    },
+    "references": {
+      "normative": [
+        "ISO.10646.2012",
+        "ISO.19505-1.2012",
+        "ISO.19505-2.2012",
+        "RFC1494",
+        "RFC2231",
+        "ISO.10646",
+        "RFC4122",
+        "RFC6838",
+        "ISO.1001.2012",
+        "ISO.13239.2012",
+        "NIST.FIPS.180-4",
+        "R-REC-TF.460-6",
+        "orphan/SMPTE.ST2034-1.2014/ref-norm-1",
+        "orphan/SMPTE.ST2034-1.2014/ref-norm-12",
+        "orphan/SMPTE.ST2034-1.2014/ref-norm-2",
+        "orphan/SMPTE.ST2034-1.2014/ref-norm-3",
+        "orphan/SMPTE.ST2034-1.2014/ref-norm-4"
+      ],
+      "normative$meta": {
+        "confidence": "medium",
+        "note": "Resolved from sibling -ref.xml via resolveSmpteSourceRefs.v2.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-06-22T23:05:50.315Z"
+      }
+    },
+    "releaseTag": "20140815-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-10-26T17:01:52.321Z"
+    },
+    "repo": "https://github.com/SMPTE/st2034-1/",
+    "repo$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed or inferred publication type/number/part and verified to exist",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2025-10-26T17:01:52.321Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/st2034-1/20140815-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000007Ncq",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-11-11T04:50:55.451Z",
+      "version": "extractDocs.js@commit:dea962f9e9d7"
+    },
+    "standardId": "20535",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2034-1-2014_1/st2034-1-2014.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.846Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-26T17:01:52.321Z"
+      },
+      "latestVersion": false,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:52.321Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededBy": [
+        "SMPTE.ST2034-1.2017"
+      ],
+      "supersededBy$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededDate": "2017-02-27",
+      "supersededDate$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-26T17:01:52.321Z"
+      }
+    }
+  }
+}

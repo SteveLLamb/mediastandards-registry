@@ -1,0 +1,314 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST2066.2012",
+  "document": {
+    "abstract": "This document provides a standard for data representation of disparity maps for use in exchanges between stereoscopic 3D video production and mastering systems, and is particularly suited to live events. These disparity maps represent only horizontal disparity and thus presume that the corresponding stereoscopic image pairs have no Vertical Misalignment.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2066-2012_1/st2066-2012.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.849Z"
+    },
+    "approvalDate": "2012-08-02",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json); Zoho is canonical for SMPTE standards metadata, registry value overwritten",
+      "originalValue": "2012",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2026-06-15T20:27:42.872Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2066-2012_1/st2066-2012.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.849Z"
+      },
+      "year": "2012",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2066-2012_1/st2066-2012.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.849Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2066-2012_1/st2066-2012.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.849Z"
+    },
+    "docId": "SMPTE.ST2066.2012",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2066/20120802-pub/",
+      "updated": "2025-10-26T17:02:25.786Z"
+    },
+    "docLabel": "SMPTE ST 2066:2012",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2066/20120802-pub/",
+      "updated": "2025-10-26T17:02:25.786Z"
+    },
+    "docNumber": "2066",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2066/20120802-pub/",
+      "updated": "2025-10-26T17:02:25.786Z"
+    },
+    "docTitle": "Disparity Map Representation for Stereoscopic 3D",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2066/20120802-pub/",
+      "updated": "2025-10-26T17:02:25.786Z"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2066/20120802-pub/",
+      "updated": "2025-10-26T17:02:25.786Z"
+    },
+    "doi": "10.5594/SMPTE.ST2066.2012",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2066/20120802-pub/",
+      "updated": "2025-10-26T17:02:25.786Z"
+    },
+    "familyId": "2066",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2066-2012_1/st2066-2012.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.849Z"
+    },
+    "group": "smpte-10e-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2066-2012_1/st2066-2012.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.849Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST2066.2012",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2066/20120802-pub/",
+      "updated": "2025-10-26T17:02:25.786Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2066-2012_1/st2066-2012.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.849Z"
+    },
+    "isbn": "978-1-61482-748-1",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2066-2012_1/st2066-2012.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.849Z"
+    },
+    "keywords": [
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Stereoscopic",
+      "Television"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2066-2012_1/st2066-2012.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.849Z"
+    },
+    "numberOfPages": "6",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–6",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2066-2012_1/st2066-2012.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.849Z"
+    },
+    "productNumber": "SSD001728",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2066-2012_1/st2066-2012.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.849Z"
+    },
+    "publicationDate": "2012-08-02",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2066/20120802-pub/",
+      "updated": "2025-10-26T17:02:25.786Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2066/20120802-pub/",
+      "updated": "2025-10-26T17:02:25.786Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2066-2012_1/st2066-2012.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.849Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2066-2012_1/st2066-2012.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.849Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2066-2012_1/st2066-2012.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.849Z"
+    },
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST274.2008",
+        "SMPTE.ST296.2012",
+        "SMPTE.ST2036-1.2009",
+        "SMPTE.ST2048-1.2011",
+        "orphan/SMPTE.ST2066.2012/ref-bib-1",
+        "orphan/SMPTE.ST2066.2012/ref-bib-2"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Resolved from sibling -ref.xml via resolveSmpteSourceRefs.v2.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-06-22T23:05:50.315Z"
+      }
+    },
+    "releaseTag": "20120802-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2066/20120802-pub/",
+      "updated": "2025-10-26T17:02:25.786Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/st2066/20120802-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000007NdI",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-30T22:55:31.607Z",
+      "version": "extractDocs.js@commit:ee2844fb1cf2"
+    },
+    "standardId": "20581",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2066-2012_1/st2066-2012.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.849Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:02:25.786Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-26T17:02:25.786Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:02:25.786Z"
+      },
+      "reaffirmDate": "2016-08-19",
+      "reaffirmDate$meta": {
+        "confidence": "high",
+        "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+        "source": "parsed",
+        "updated": "2026-06-15T20:13:55.508Z",
+        "version": "smpte-zoho-standards@v1"
+      },
+      "stabilized": true,
+      "stabilized$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #state",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-26T17:02:25.786Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:02:25.786Z"
+      }
+    }
+  }
+}

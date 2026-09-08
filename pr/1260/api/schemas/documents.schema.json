@@ -1,0 +1,1037 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://github.com/PrZ3r/MSRBot.io/documents/2.4.0",
+  "$comment": "Copyright (c) 2025-26 PrZ3 LLC (d/b/a [PrZ3](https://github.com/PrZ3r))",
+  "docTitle": "Schema for MSRBot.io - Documents",
+  "items": {
+    "anyOf": [
+      {
+        "$id": "#/items/anyOf/0",
+        "type": "object",
+        "required": [
+          "docId",
+          "docLabel",
+          "docTitle",
+          "docType",
+          "publisher",
+          "status"
+        ],
+        "additionalProperties": true,
+        "properties": {
+          "authors": {
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                },
+                {
+                  "type": "object",
+                  "required": ["name"],
+                  "properties": {
+                    "name":        { "type": "string", "minLength": 1 },
+                    "bio":         { "type": "string" },
+                    "affiliation": { "type": "string" },
+                    "email":       { "type": "string", "format": "email" },
+                    "orcid":       { "type": "string", "pattern": "^\\d{4}-\\d{4}-\\d{4}-\\d{3}[0-9X]$" }
+                  },
+                  "additionalProperties": false
+                }
+              ]
+            }
+          },
+          "details": {
+            "type": "string"
+          },
+          "abstract": {
+            "type": "string"
+          },
+          "docElement": {
+            "type": "string"
+          },
+          "docId": {
+            "type": "string",
+            "uniqueItems": true
+          },
+          "docLabel": {
+            "type": "string"
+          },
+          "docNumber": {
+            "type": "string"
+          },
+          "docPart": {
+            "type": "string"
+          },
+          "volume": {
+            "type": "string"
+          },
+          "number": {
+            "type": "string"
+          },
+          "pages": {
+            "type": "string"
+          },
+          "chapter": {
+            "type": "string"
+          },
+          "edition": {
+            "type": "string"
+          },
+          "docSuiteTitle": {
+            "type": "string"
+          },
+          "docTitle": {
+            "type": "string"
+          },
+          "docType": {
+            "type": "string",
+            "enum": [
+              "Best Practice",
+              "Book",
+              "Conference Paper",
+              "Directive",
+              "Dissertation",
+              "Draft Standard",
+              "Experimental",
+              "FAQ",
+              "Guideline",
+              "Informational",
+              "Journal Article",
+              "Manual",
+              "Magazine Article",
+              "Memo",
+              "Notation",
+              "Note",
+              "Patent",
+              "Procedure",
+              "Recommendation",
+              "Registry",
+              "Report",
+              "Specification",
+              "Statement",
+              "Style Guide",
+              "Technical Bulletin",
+              "Technical Doc",
+              "Technical Journal",
+              "Technical Note",
+              "Technical Report",
+              "Template",
+              "Administrative Guideline",
+              "Advisory Note",
+              "Engineering Guideline",
+              "Engineering Report",
+              "Operations Manual",
+              "Overview Document",
+              "Recommended Practice",
+              "Registered Disclosure Document",
+              "Standard",
+              "Study Group Report",
+              "Technical Specification",
+              "White Paper"
+            ]
+          },
+          "doi": {
+            "type": "string"
+          },
+          "isbn": {
+            "oneOf": [
+              { "type": "string" },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "print":      { "type": "string" },
+                  "electronic": { "type": "string" }
+                },
+                "patternProperties": {
+                  "^[a-zA-Z0-9]+\\$meta$": {
+                    "type": "object",
+                    "properties": {
+                      "source":         { "type": "string", "enum": ["parsed","inferred","manual","resolved","unknown"] },
+                      "confidence":     { "type": "string", "enum": ["low","medium","high","unknown"] },
+                      "note":           { "type": "string" },
+                      "updated":        { "type": "string", "format": "date-time" },
+                      "originalValue":  {},
+                      "sourceUrl":      { "type": "string", "format": "uri" },
+                      "overridden":     { "type": "boolean" },
+                      "excludeChanges": { "type": "boolean" },
+                      "reviewRequired": { "type": "boolean" },
+                      "flag":           { "type": "string" },
+                      "version":        { "type": "string" }
+                    },
+                    "additionalProperties": false
+                  }
+                }
+              }
+            ]
+          },
+          "issn": {
+            "oneOf": [
+              { "type": "string" },
+              {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                  "print":      { "type": "string" },
+                  "electronic": { "type": "string" }
+                },
+                "patternProperties": {
+                  "^[a-zA-Z0-9]+\\$meta$": {
+                    "type": "object",
+                    "properties": {
+                      "source":         { "type": "string", "enum": ["parsed","inferred","manual","resolved","unknown"] },
+                      "confidence":     { "type": "string", "enum": ["low","medium","high","unknown"] },
+                      "note":           { "type": "string" },
+                      "updated":        { "type": "string", "format": "date-time" },
+                      "originalValue":  {},
+                      "sourceUrl":      { "type": "string", "format": "uri" },
+                      "overridden":     { "type": "boolean" },
+                      "excludeChanges": { "type": "boolean" },
+                      "reviewRequired": { "type": "boolean" },
+                      "flag":           { "type": "string" },
+                      "version":        { "type": "string" }
+                    },
+                    "additionalProperties": false
+                  }
+                }
+              }
+            ]
+          },
+          "standardId": {
+            "type": "string"
+          },
+          "productNumber": {
+            "type": "string"
+          },
+          "familyId": {
+            "type": "string"
+          },
+          "approvalDate": {
+            "type": "string",
+            "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$"
+          },
+          "depositDate": {
+            "type": "string",
+            "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$"
+          },
+          "abbrevTitle": {
+            "type": "string"
+          },
+          "journalTitle": {
+            "type": "string"
+          },
+          "journalAcronym": {
+            "type": "string"
+          },
+          "contentType": {
+            "type": "string"
+          },
+          "conferenceLocation": {
+            "type": "string"
+          },
+          "conferenceDate": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "start": { "type": "string", "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$" },
+              "end":   { "type": "string", "pattern": "^\\d{4}(-\\d{2}(-\\d{2})?)?$" }
+            },
+            "patternProperties": {
+              "^[a-zA-Z0-9]+\\$meta$": {
+                "type": "object",
+                "properties": {
+                  "source":         { "type": "string", "enum": ["parsed","inferred","manual","resolved","unknown"] },
+                  "confidence":     { "type": "string", "enum": ["low","medium","high","unknown"] },
+                  "note":           { "type": "string" },
+                  "updated":        { "type": "string", "format": "date-time" },
+                  "originalValue":  {},
+                  "sourceUrl":      { "type": "string", "format": "uri" },
+                  "overridden":     { "type": "boolean" },
+                  "excludeChanges": { "type": "boolean" },
+                  "reviewRequired": { "type": "boolean" },
+                  "flag":           { "type": "string" },
+                  "version":        { "type": "string" }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "copyright": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "holder": { "type": "string" },
+              "year":   { "type": "string" }
+            },
+            "patternProperties": {
+              "^[a-zA-Z0-9]+\\$meta$": {
+                "type": "object",
+                "properties": {
+                  "source":         { "type": "string", "enum": ["parsed","inferred","manual","resolved","unknown"] },
+                  "confidence":     { "type": "string", "enum": ["low","medium","high","unknown"] },
+                  "note":           { "type": "string" },
+                  "updated":        { "type": "string", "format": "date-time" },
+                  "originalValue":  {},
+                  "sourceUrl":      { "type": "string", "format": "uri" },
+                  "overridden":     { "type": "boolean" },
+                  "excludeChanges": { "type": "boolean" },
+                  "reviewRequired": { "type": "boolean" },
+                  "flag":           { "type": "string" },
+                  "version":        { "type": "string" }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "publisherLocation": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "city":    { "type": "string" },
+              "country": { "type": "string" }
+            },
+            "patternProperties": {
+              "^[a-zA-Z0-9]+\\$meta$": {
+                "type": "object",
+                "properties": {
+                  "source":         { "type": "string", "enum": ["parsed","inferred","manual","resolved","unknown"] },
+                  "confidence":     { "type": "string", "enum": ["low","medium","high","unknown"] },
+                  "note":           { "type": "string" },
+                  "updated":        { "type": "string", "format": "date-time" },
+                  "originalValue":  {},
+                  "sourceUrl":      { "type": "string", "format": "uri" },
+                  "overridden":     { "type": "boolean" },
+                  "excludeChanges": { "type": "boolean" },
+                  "reviewRequired": { "type": "boolean" },
+                  "flag":           { "type": "string" },
+                  "version":        { "type": "string" }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "icsCodes": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["code"],
+              "additionalProperties": false,
+              "properties": {
+                "code":        { "type": "string" },
+                "description": { "type": "string" }
+              }
+            }
+          },
+          "doiAliases": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 }
+          },
+          "group": {
+            "type": "string"
+          },
+          "releaseTag": {
+            "type": "string",
+            "pattern": "^\\d{8}(-am\\d+)?-(wd|cd|fcd|dp|pub)$"
+          },
+          "revisionOf": {
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                }
+              ]
+            }
+          },
+          "href": {
+            "type": "string",
+            "format": "uri"
+          },
+          "resolvedHref": {
+            "type": "string",
+            "format": "uri"
+          },
+          "keywords": {
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                }
+              ]
+            }
+          },
+          "publicationDate": {
+            "type": "string",
+            "format": "date"
+          },
+          "publisher": {
+            "type": "string"
+          },
+          "references": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "normative": {
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "bibliographic": {
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              }
+            },
+            "patternProperties": {
+              "^[a-zA-Z0-9]+\\$meta$": {
+                "type": "object",
+                "properties": {
+                  "source": {
+                    "type": "string",
+                    "enum": [
+                      "parsed",
+                      "inferred",
+                      "manual",
+                      "resolved",
+                      "unknown"
+                    ]
+                  },
+                  "confidence": {
+                    "type": "string",
+                    "enum": [
+                      "low",
+                      "medium",
+                      "high",
+                      "unknown"
+                    ]
+                  },
+                  "note": {
+                    "type": "string"
+                  },
+                  "updated": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "originalValue": {},
+                  "sourceUrl": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "overridden": {
+                    "type": "boolean"
+                  },
+                  "excludeChanges": {
+                    "type": "boolean"
+                  },
+                  "reviewRequired": {
+                    "type": "boolean"
+                  },
+                  "flag": {
+                    "type": "string"
+                  },
+                  "version": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "relatedDocs": {
+            "type": "array",
+            "additionalItems": true,
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string",
+                  "minLength": 1
+                }
+              ]
+            }
+          },
+          "repo": {
+            "type": "string",
+            "format": "uri"
+          },
+          "status": {
+            "type": "object",
+            "properties": {
+              "stage": {
+                "type": "string",
+                "enum": [
+                  "PUB",
+                  "FCD",
+                  "CD",
+                  "DP",
+                  "WD"
+                ]
+              },
+              "state": {
+                "type": "string",
+                "enum": [
+                  "draft",
+                  "pub"
+                ]
+              },
+              "latestVersion": {
+                "type": "boolean"
+              },
+              "active": {
+                "type": "boolean"
+              },
+              "versionless": {
+                "type": "boolean"
+              },
+              "amended": {
+                "type": "boolean"
+              },
+              "amendedBy": {
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  ]
+                }
+              },
+              "amends": {
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  ]
+                }
+              },
+              "amendedDate": {
+                "type": "string",
+                "format": "date"
+              },
+              "draft": {
+                "type": "boolean"
+              },
+              "publicCd": {
+                "type": "boolean"
+              },
+              "reaffirmed": {
+                "type": "boolean"
+              },
+              "reaffirmDate": {
+                "type": "string",
+                "format": "date"
+              },
+              "stabilized": {
+                "type": "boolean"
+              },
+              "stabilizedDate": {
+                "type": "string",
+                "format": "date"
+              },
+              "statusNote": {
+                "type": "string"
+              },
+              "superseded": {
+                "type": "boolean"
+              },
+              "supersededBy": {
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  ]
+                }
+              },
+              "supersedes": {
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  ]
+                }
+              },
+              "supersededDate": {
+                "type": "string",
+                "format": "date"
+              },
+              "unknown": {
+                "type": "boolean"
+              },
+              "withdrawn": {
+                "type": "boolean"
+              },
+              "withdrawnNotice": {
+                "type": "string",
+                "format": "uri"
+              },
+              "withdrawnDate": {
+                "type": "string",
+                "format": "date"
+              },
+              "errataExist": {
+                "type": "boolean"
+              },
+              "errataUrl": {
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                  "anyOf": [
+                    {
+                      "type": "string",
+                      "format": "uri",
+                      "minLength": 1
+                    }
+                  ]
+                }
+              }
+            },
+            "patternProperties": {
+              "^[a-zA-Z0-9]+\\$meta$": {
+                "type": "object",
+                "properties": {
+                  "source": {
+                    "type": "string",
+                    "enum": [
+                      "parsed",
+                      "inferred",
+                      "manual",
+                      "resolved",
+                      "unknown"
+                    ]
+                  },
+                  "confidence": {
+                    "type": "string",
+                    "enum": [
+                      "low",
+                      "medium",
+                      "high",
+                      "unknown"
+                    ]
+                  },
+                  "note": {
+                    "type": "string"
+                  },
+                  "updated": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "originalValue": {},
+                  "sourceUrl": {
+                    "type": "string",
+                    "format": "uri"
+                  },
+                  "overridden": {
+                    "type": "boolean"
+                  },
+                  "excludeChanges": {
+                    "type": "boolean"
+                  },
+                  "reviewRequired": {
+                    "type": "boolean"
+                  },
+                  "flag": {
+                    "type": "string"
+                  },
+                  "version": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "versions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "versionNum": {
+                  "type": "string"
+                },
+                "versionHref": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              },
+              "patternProperties": {
+                "^[a-zA-Z0-9]+\\$meta$": {
+                  "type": "object",
+                  "properties": {
+                    "source": {
+                      "type": "string",
+                      "enum": [
+                        "parsed",
+                        "inferred",
+                        "manual",
+                        "resolved",
+                        "unknown"
+                      ]
+                    },
+                    "confidence": {
+                      "type": "string",
+                      "enum": [
+                        "low",
+                        "medium",
+                        "high",
+                        "unknown"
+                      ]
+                    },
+                    "note": {
+                      "type": "string"
+                    },
+                    "updated": {
+                      "type": "string",
+                      "format": "date-time"
+                    },
+                    "originalValue": {},
+                    "sourceUrl": {
+                      "type": "string",
+                      "format": "uri"
+                    },
+                    "overridden": {
+                      "type": "boolean"
+                    },
+                    "excludeChanges": {
+                      "type": "boolean"
+                    },
+                    "reviewRequired": {
+                      "type": "boolean"
+                    },
+                    "flag": {
+                      "type": "string"
+                    },
+                    "version": {
+                      "type": "string"
+                    }
+                  },
+                  "additionalProperties": false
+                }
+              }
+            }
+          },
+          "workInfo": {
+            "type": "object",
+            "additionalProperties": true,
+            "properties": {
+              "review": {
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": true,
+                  "required": [
+                    "reviewPeriod"
+                  ],
+                  "properties": {
+                    "assignedGroup": {
+                      "type": "string"
+                    },
+                    "recApproved": {
+                      "type": "boolean"
+                    },
+                    "reviewDate": {
+                      "type": "string",
+                      "format": "date"
+                    },
+                    "reviewNeeded": {
+                      "type": "boolean"
+                    },
+                    "reviewNotes": {
+                      "type": "string"
+                    },
+                    "reviewPeriod": {
+                      "type": "string",
+                      "enum": [
+                        "1 Year",
+                        "5 Year",
+                        "Systematic"
+                      ]
+                    },
+                    "reviewRec": {
+                      "type": "string",
+                      "enum": [
+                        "Amend",
+                        "Reaffirm",
+                        "Stabilize",
+                        "Revise",
+                        "Withdraw",
+                        "Reassign",
+                        "No Recommendation"
+                      ]
+                    }
+                  },
+                  "patternProperties": {
+                    "^[a-zA-Z0-9]+\\$meta$": {
+                      "type": "object",
+                      "properties": {
+                        "source": {
+                          "type": "string",
+                          "enum": [
+                            "parsed",
+                            "inferred",
+                            "manual",
+                            "resolved",
+                            "unknown"
+                          ]
+                        },
+                        "confidence": {
+                          "type": "string",
+                          "enum": [
+                            "low",
+                            "medium",
+                            "high",
+                            "unknown"
+                          ]
+                        },
+                        "note": {
+                          "type": "string"
+                        },
+                        "updated": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "originalValue": {},
+                        "sourceUrl": {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        "overridden": {
+                          "type": "boolean"
+                        },
+                        "excludeChanges": {
+                          "type": "boolean"
+                        },
+                        "reviewRequired": {
+                          "type": "boolean"
+                        },
+                        "flag": {
+                          "type": "string"
+                        },
+                        "version": {
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  }
+                }
+              },
+              "project": {
+                "type": "array",
+                "additionalItems": true,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "required": [
+                    "projectId"
+                  ],
+                  "properties": {
+                    "projectId": {
+                      "type": "string"
+                    }
+                  },
+                  "patternProperties": {
+                    "^[a-zA-Z0-9]+\\$meta$": {
+                      "type": "object",
+                      "properties": {
+                        "source": {
+                          "type": "string",
+                          "enum": [
+                            "parsed",
+                            "inferred",
+                            "manual",
+                            "resolved",
+                            "unknown"
+                          ]
+                        },
+                        "confidence": {
+                          "type": "string",
+                          "enum": [
+                            "low",
+                            "medium",
+                            "high",
+                            "unknown"
+                          ]
+                        },
+                        "note": {
+                          "type": "string"
+                        },
+                        "updated": {
+                          "type": "string",
+                          "format": "date-time"
+                        },
+                        "originalValue": {},
+                        "sourceUrl": {
+                          "type": "string",
+                          "format": "uri"
+                        },
+                        "overridden": {
+                          "type": "boolean"
+                        },
+                        "excludeChanges": {
+                          "type": "boolean"
+                        },
+                        "reviewRequired": {
+                          "type": "boolean"
+                        },
+                        "flag": {
+                          "type": "string"
+                        },
+                        "version": {
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "xmlNamespace": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "uri",
+                "uriPublished",
+                "targetNamespace",
+                "imported",
+                "schemaIncluded"
+              ],
+              "properties": {
+                "uri": {
+                  "type": "string",
+                  "format": "uri",
+                  "minLength": 1
+                },
+                "uriPublished": {
+                  "type": "boolean"
+                },
+                "uriResolved": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "targetNamespace": {
+                  "type": "boolean"
+                },
+                "imported": {
+                  "type": "boolean"
+                },
+                "supplemental": {
+                  "type": "boolean"
+                },
+                "optional": {
+                  "type": "boolean"
+                },
+                "deprecated": {
+                  "type": "boolean"
+                },
+                "schemaInline": {
+                  "type": "boolean"
+                },
+                "schemaIncluded": {
+                  "type": "boolean"
+                },
+                "schemaLocation": {
+                  "type": "string",
+                  "format": "uri"
+                },
+                "note": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "patternProperties": {
+          "^[a-zA-Z0-9]+\\$meta$": {
+            "type": "object",
+            "properties": {
+              "source": {
+                "type": "string",
+                "enum": [
+                  "parsed",
+                  "inferred",
+                  "manual",
+                  "resolved",
+                  "unknown"
+                ]
+              },
+              "confidence": {
+                "type": "string",
+                "enum": [
+                  "low",
+                  "medium",
+                  "high",
+                  "unknown"
+                ]
+              },
+              "note": {
+                "type": "string"
+              },
+              "updated": {
+                "type": "string",
+                "format": "date-time"
+              },
+              "originalValue": {},
+              "sourceUrl": {
+                "type": "string",
+                "format": "uri"
+              },
+              "overridden": {
+                "type": "boolean"
+              },
+              "excludeChanges": {
+                "type": "boolean"
+              },
+              "reviewRequired": {
+                "type": "boolean"
+              },
+              "flag": {
+                "type": "string"
+              },
+              "version": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      }
+    ]
+  }
+}

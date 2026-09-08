@@ -1,0 +1,167 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.AG04",
+  "document": {
+    "abstract": "This Administrative Guideline provides templates for Engineering Documents.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML sec-scope section",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-01-07T23:19:06.977Z",
+      "version": "extractDocs.js@commit:499baa451f70"
+    },
+    "docId": "SMPTE.AG04",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-04/main/",
+      "updated": "2025-09-30T15:50:52.740Z"
+    },
+    "docLabel": "SMPTE AG 04",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-04/main/",
+      "updated": "2025-09-30T15:50:52.740Z"
+    },
+    "docNumber": "04",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-04/main/",
+      "updated": "2025-09-30T15:50:52.740Z"
+    },
+    "docTitle": "Engineering Document Templates",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-04/main/",
+      "updated": "2025-09-30T15:50:52.741Z"
+    },
+    "docType": "Administrative Guideline",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-04/main/",
+      "updated": "2025-09-30T15:50:52.741Z"
+    },
+    "group": "smpte-02c-st",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-04/main/",
+      "updated": "2025-09-30T15:50:52.741Z"
+    },
+    "href": "https://doc.smpte-doc.org/ag-04/main/",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-04/main/",
+      "updated": "2025-09-30T15:50:52.741Z"
+    },
+    "publicationDate": "2026-01-21",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": "2025-03-25",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2026-01-27T05:07:58.533Z",
+      "version": "extractDocs.js@commit:bbc2aa20bcff"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/ag-04/main/",
+      "updated": "2025-09-30T15:50:52.741Z"
+    },
+    "references": {
+      "normative": [
+        "SMPTE.OM.Std",
+        "SMPTE.AG02",
+        "SMPTE.AG26",
+        "SMPTE.AG27"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [],
+        "source": "parsed",
+        "updated": "2025-09-30T15:50:52.741Z"
+      }
+    },
+    "releaseTag": "20260121-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": "20250325-pub",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2026-01-27T05:07:58.533Z",
+      "version": "extractDocs.js@commit:bbc2aa20bcff"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T15:50:52.741Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T15:50:52.741Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T15:50:52.741Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T15:50:52.741Z"
+      },
+      "versionless": true,
+      "versionless$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-08T05:51:12.402Z"
+      }
+    }
+  }
+}

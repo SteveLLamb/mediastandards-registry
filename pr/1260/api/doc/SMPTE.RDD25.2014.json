@@ -1,0 +1,262 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.RDD25.2014",
+  "document": {
+    "approvalDate": "2014-04-01",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:27:42.872Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "year": "2014",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+        "source": "parsed",
+        "updated": "2026-06-15T20:08:45.039Z",
+        "version": "smpte-zoho-standards@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:08:45.039Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "docId": "SMPTE.RDD25.2014",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd25/20140401-pub/",
+      "updated": "2025-10-08T18:56:17.568Z"
+    },
+    "docLabel": "SMPTE RDD 25:2014",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd25/20140401-pub/",
+      "updated": "2025-10-08T18:56:17.568Z"
+    },
+    "docNumber": "25",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd25/20140401-pub/",
+      "updated": "2025-10-08T18:56:17.568Z"
+    },
+    "docTitle": "AVC MXF Proxies",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd25/20140401-pub/",
+      "updated": "2025-10-08T18:56:17.568Z"
+    },
+    "docType": "Registered Disclosure Document",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd25/20140401-pub/",
+      "updated": "2025-10-08T18:56:17.568Z"
+    },
+    "doi": "10.5594/SMPTE.RDD25.2014",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd25/20140401-pub/",
+      "updated": "2025-10-08T18:56:17.568Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.RDD25.2014",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd25/20140401-pub/",
+      "updated": "2025-10-08T18:56:17.568Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.99",
+        "description": "Other audio, video and audiovisual equipment"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:44:42.037Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "isbn": "978-1-61482-796-2",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:04:58.507Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "keywords": [
+      "MPEG",
+      "AVC",
+      "Proxy",
+      "File Formats",
+      "Compression"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-17T16:55:09.355Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "numberOfPages": "15",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "productNumber": "SSD001771",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:11:00.505Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "publicationDate": "2014-04-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd25/20140401-pub/",
+      "updated": "2025-10-08T18:56:17.568Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd25/20140401-pub/",
+      "updated": "2025-10-08T18:56:17.568Z"
+    },
+    "references": {
+      "bibliographic": [
+        "ISO.13818-1.2007",
+        "ISO.14496-3.2009",
+        "ISO.14496-15.2010",
+        "SMPTE.ST382.2007",
+        "SMPTE.ST2041-2.2010",
+        "SMPTE.ST2041-3.2010"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-18T22:49:51.525Z"
+      },
+      "normative": [
+        "ISO.13818-7.2006",
+        "ISO.14496-10.2012",
+        "SMPTE.ST12-1.2014",
+        "SMPTE.ST378.2004",
+        "SMPTE.ST379-2.2010",
+        "SMPTE.ST381-2.2011",
+        "SMPTE.ST381-3.2013",
+        "SMPTE.ST394.2006",
+        "SMPTE.ST405.2006",
+        "SMPTE.ST436-1.2013",
+        "SMPTE.RP224",
+        "T-REC-T.35",
+        "R-REC-BT.601-7",
+        "orphan/SMPTE.RDD25.2014/ref-norm-14",
+        "orphan/SMPTE.RDD25.2014/ref-norm-15"
+      ],
+      "normative$meta": {
+        "confidence": "medium",
+        "note": "Resolved from sibling -ref.xml via resolveSmpteSourceRefs.v2.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-06-22T23:05:50.315Z"
+      }
+    },
+    "releaseTag": "20140401-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd25/20140401-pub/",
+      "updated": "2025-10-08T18:56:17.568Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/rdd25/20140401-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000007NZk",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-30T22:49:21.295Z",
+      "version": "extractDocs.js@commit:ee2844fb1cf2"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-08T18:56:17.568Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-08T18:56:17.568Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-08T18:56:17.568Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-08T18:56:17.568Z"
+      }
+    }
+  }
+}

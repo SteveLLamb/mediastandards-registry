@@ -1,0 +1,275 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "RFC9141",
+  "document": {
+    "abstract": "The IETF FTP service running at ftp.ietf.org, ops.ietf.org, and ietf.org will be retired. A number of published RFCs in the IETF and IAB streams include URIs that reference this FTP service. To ensure that the materials referenced using the IETF FTP service can still be found, this document updates the FTP-based references in these affected documents with HTTPS URIs.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML abstract",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc9141/",
+      "updated": "2026-03-06T23:00:20.689Z",
+      "version": "extractDocs.js@commit:fbfea8b4c330"
+    },
+    "authors": [
+      {
+        "name": "Roman Danyliw"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc9141/",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "docId": "RFC9141",
+    "docId$meta": {
+      "confidence": "high",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "IETF RFC 9141",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docNumber": "9141",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC citation meta and/or URL identifier",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc9141/",
+      "updated": "2026-03-06T23:00:20.689Z",
+      "version": "extractDocs.js@commit:fbfea8b4c330"
+    },
+    "docTitle": "Updating References to the IETF FTP Service",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "doi": "10.17487/RFC9141",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML doi",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc9141/",
+      "updated": "2026-03-06T23:00:20.689Z",
+      "version": "extractDocs.js@commit:fbfea8b4c330"
+    },
+    "href": "https://doi.org/10.17487/RFC9141",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI (https://doi.org/<doi>)",
+      "originalValue": "https://www.rfc-editor.org/info/rfc9141",
+      "overridden": true,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc9141/",
+      "updated": "2026-03-06T23:00:20.689Z",
+      "version": "extractDocs.js@commit:fbfea8b4c330"
+    },
+    "pages": "18",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML page-count",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc9141/",
+      "updated": "2026-03-06T23:00:20.689Z",
+      "version": "extractDocs.js@commit:fbfea8b4c330"
+    },
+    "publicationDate": "2021-11-01",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "IETF",
+    "publisher$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "references": {
+      "bibliographic": [
+        "IETF.mailarchive.ietf.vi-8bFqlgBFjB2jJ1SIAGHiNRdg.2021-03",
+        "IETF.media.Revised-Retiring-IETF-FTP-Service.2021-03"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC HTML references/informative sections",
+        "originalValue": [],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9141/",
+        "updated": "2026-03-06T23:19:31.978Z",
+        "version": "extractDocs.js@commit:fbfea8b4c330"
+      },
+      "normative": [
+        "RFC2077",
+        "RFC2119",
+        "RFC2418",
+        "RFC2648",
+        "RFC2954",
+        "RFC2955",
+        "RFC3020",
+        "RFC3083",
+        "RFC3201",
+        "RFC3202",
+        "RFC3295",
+        "RFC3684",
+        "RFC3962",
+        "RFC3970",
+        "RFC4036",
+        "RFC4131",
+        "RFC4251",
+        "RFC4323",
+        "RFC4546",
+        "RFC4547",
+        "RFC4639",
+        "RFC4682",
+        "RFC5098",
+        "RFC5428",
+        "RFC6756",
+        "RFC7241",
+        "RFC8174"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC HTML normative references sections",
+        "originalValue": [],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9141/",
+        "updated": "2026-03-06T23:00:20.689Z",
+        "version": "extractDocs.js@commit:fbfea8b4c330"
+      }
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc9141",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc9141/",
+      "updated": "2026-03-06T23:00:20.690Z",
+      "version": "extractDocs.js@commit:fbfea8b4c330"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "amends": [
+        "RFC2077",
+        "RFC2418",
+        "RFC2648",
+        "RFC2954",
+        "RFC2955",
+        "RFC3020",
+        "RFC3083",
+        "RFC3201",
+        "RFC3202",
+        "RFC3295",
+        "RFC3684",
+        "RFC3962",
+        "RFC3970",
+        "RFC4036",
+        "RFC4131",
+        "RFC4251",
+        "RFC4323",
+        "RFC4546",
+        "RFC4547",
+        "RFC4639",
+        "RFC4682",
+        "RFC5098",
+        "RFC5428",
+        "RFC6756",
+        "RFC7241"
+      ],
+      "amends$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC index XML and RFC info relation <dl>",
+        "originalValue": [],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9141/",
+        "updated": "2026-03-06T23:00:20.690Z",
+        "version": "extractDocs.js@commit:fbfea8b4c330"
+      },
+      "errataExist": true,
+      "errataExist$meta": {
+        "confidence": "high",
+        "note": "Derived from presence of errata links on RFC/Datatracker pages",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9141/",
+        "updated": "2026-03-06T23:00:20.690Z",
+        "version": "extractDocs.js@commit:fbfea8b4c330"
+      },
+      "errataUrl": [
+        "https://www.rfc-editor.org/errata/rfc9141",
+        "https://www.rfc-editor.org/errata_search.php?rfc=9141",
+        "https://www.rfc-editor.org/rfc/inline-errata/rfc9141.html"
+      ],
+      "errataUrl$meta": {
+        "confidence": "high",
+        "note": "Parsed from errata links on RFC/Datatracker pages",
+        "originalValue": [],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9141/",
+        "updated": "2026-03-06T23:00:20.690Z",
+        "version": "extractDocs.js@commit:fbfea8b4c330"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9141/",
+        "updated": "2026-03-06T23:00:20.690Z",
+        "version": "extractDocs.js@commit:fbfea8b4c330"
+      },
+      "statusNote": "Proposed Standard",
+      "statusNote$meta": {
+        "confidence": "high",
+        "note": "Mapped from Datatracker doc.json std_level",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9141/",
+        "updated": "2026-03-06T23:00:20.690Z",
+        "version": "extractDocs.js@commit:fbfea8b4c330"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc9141/",
+        "updated": "2026-03-06T23:00:20.690Z",
+        "version": "extractDocs.js@commit:fbfea8b4c330"
+      }
+    }
+  }
+}

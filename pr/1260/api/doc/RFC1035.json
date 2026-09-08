@@ -1,0 +1,347 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "RFC1035",
+  "document": {
+    "abstract": "This RFC is the revised specification of the protocol and format used in the implementation of the Domain Name System. It obsoletes RFC-883. This memo documents the details of the domain name client - server communication.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML abstract",
+      "originalValue": "This RFC is the revised specification of the protocol and format used in the implementation of the Domain Name System.  It obsoletes RFC-883.  This memo documents the details of the domain name client - server communication.",
+      "overridden": true,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
+      "updated": "2026-02-25T23:54:38.889Z",
+      "version": "extractDocs.js@commit:7e5f596609c6"
+    },
+    "authors": [
+      {
+        "name": "P. Mockapetris"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "details": "need to add amendedBy docs",
+    "details$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docId": "RFC1035",
+    "docId$meta": {
+      "confidence": "high",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "IETF RFC 1035",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docNumber": "1035",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML technical report metadata",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
+      "updated": "2026-02-25T18:56:54.090Z",
+      "version": "extractDocs.js@commit:8ba57d0bab1a"
+    },
+    "docTitle": "Domain names - implementation and specification",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from Datatracker doc.json title",
+      "originalValue": "DOMAIN NAMES - IMPLEMENTATION AND SPECIFICATION",
+      "overridden": true,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
+      "updated": "2026-02-25T18:56:54.090Z",
+      "version": "extractDocs.js@commit:8ba57d0bab1a"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Mapped from Datatracker std_level or RFC status text",
+      "originalValue": "Informational",
+      "overridden": true,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
+      "updated": "2026-02-25T18:56:54.090Z",
+      "version": "extractDocs.js@commit:8ba57d0bab1a"
+    },
+    "doi": "10.17487/RFC1035",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML citation_doi",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
+      "updated": "2026-02-25T18:56:54.090Z",
+      "version": "extractDocs.js@commit:8ba57d0bab1a"
+    },
+    "href": "https://doi.org/10.17487/RFC1035",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI (https://doi.org/<doi>)",
+      "originalValue": "https://www.rfc-editor.org/info/rfc1035",
+      "overridden": true,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
+      "updated": "2026-02-25T18:56:54.090Z",
+      "version": "extractDocs.js@commit:8ba57d0bab1a"
+    },
+    "issn": "2070-1721",
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML citation_issn",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
+      "updated": "2026-02-25T18:56:54.090Z",
+      "version": "extractDocs.js@commit:8ba57d0bab1a"
+    },
+    "keywords": [
+      "Domain",
+      "DNS"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML keywords",
+      "originalValue": [
+        "Domain",
+        "Dns"
+      ],
+      "overridden": true,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
+      "updated": "2026-02-26T00:29:25.970Z",
+      "version": "extractDocs.js@commit:614c8a16cf08"
+    },
+    "pages": "55",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from Datatracker doc.json pages",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
+      "updated": "2026-02-25T18:56:54.090Z",
+      "version": "extractDocs.js@commit:8ba57d0bab1a"
+    },
+    "publicationDate": "1987-11-01",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "IETF",
+    "publisher$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "references": {
+      "bibliographic": [
+        "ISI.IEN116",
+        "RFC742",
+        "RFC768",
+        "RFC793",
+        "RFC799",
+        "RFC805",
+        "RFC810",
+        "RFC811",
+        "RFC812",
+        "RFC819",
+        "RFC821",
+        "RFC830",
+        "RFC882",
+        "RFC883",
+        "RFC920",
+        "RFC952",
+        "RFC953",
+        "RFC973",
+        "RFC974",
+        "RFC1001",
+        "RFC1002",
+        "RFC1010",
+        "RFC1031",
+        "RFC1032",
+        "RFC1033",
+        "MIT.PATP.sE23.1987",
+        "10.1145-6617.6618",
+        "10.1145-1024840.1035268"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Parsed from RFC HTML references/informative sections | Manual review completed 2026-03-05",
+        "originalValue": [],
+        "overridden": true,
+        "reviewRequired": false,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
+        "updated": "2026-03-05T16:33:34.295Z",
+        "version": "extractDocs.js@commit:b8c6349eeb50"
+      }
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc1035",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
+      "updated": "2026-02-25T18:56:54.090Z",
+      "version": "extractDocs.js@commit:8ba57d0bab1a"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": false,
+        "overridden": true,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
+        "updated": "2026-02-25T18:56:54.090Z",
+        "version": "extractDocs.js@commit:8ba57d0bab1a"
+      },
+      "amended": true,
+      "amended$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "amendedBy": [
+        "RFC1101",
+        "RFC1183",
+        "RFC1348",
+        "RFC1876",
+        "RFC1982",
+        "RFC1995",
+        "RFC1996",
+        "RFC2065",
+        "RFC2136",
+        "RFC2181",
+        "RFC2137",
+        "RFC2308",
+        "RFC2535",
+        "RFC2673",
+        "RFC2845",
+        "RFC3425",
+        "RFC3658",
+        "RFC4033",
+        "RFC4034",
+        "RFC4035",
+        "RFC4343",
+        "RFC5936",
+        "RFC5966",
+        "RFC6604",
+        "RFC7766",
+        "RFC8482",
+        "RFC8490",
+        "RFC8767",
+        "RFC9619"
+      ],
+      "amendedBy$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC info page relation <dl>",
+        "originalValue": [],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
+        "updated": "2026-02-25T18:56:54.090Z",
+        "version": "extractDocs.js@commit:8ba57d0bab1a"
+      },
+      "errataExist": true,
+      "errataExist$meta": {
+        "confidence": "high",
+        "note": "Derived from presence of errata links on RFC/Datatracker pages",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
+        "updated": "2026-02-25T18:56:54.090Z",
+        "version": "extractDocs.js@commit:8ba57d0bab1a"
+      },
+      "errataUrl": [
+        "https://www.rfc-editor.org/errata/rfc1035",
+        "https://www.rfc-editor.org/errata_search.php?rfc=1035",
+        "https://www.rfc-editor.org/rfc/inline-errata/rfc1035.html"
+      ],
+      "errataUrl$meta": {
+        "confidence": "high",
+        "note": "Parsed from errata links on RFC/Datatracker pages",
+        "originalValue": [
+          "https://www.rfc-editor.org/errata_search.php?rfc=1035",
+          "https://www.rfc-editor.org/rfc/inline-errata/rfc1035.html"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
+        "updated": "2026-02-25T23:54:38.890Z",
+        "version": "extractDocs.js@commit:7e5f596609c6"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
+        "updated": "2026-02-25T18:56:54.090Z",
+        "version": "extractDocs.js@commit:8ba57d0bab1a"
+      },
+      "statusNote": "Internet Standard",
+      "statusNote$meta": {
+        "confidence": "high",
+        "note": "Mapped from Datatracker doc.json std_level",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
+        "updated": "2026-02-25T18:56:54.090Z",
+        "version": "extractDocs.js@commit:8ba57d0bab1a"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
+        "updated": "2026-02-25T18:56:54.090Z",
+        "version": "extractDocs.js@commit:8ba57d0bab1a"
+      },
+      "supersedes": [
+        "RFC0973",
+        "RFC0882",
+        "RFC0883",
+        "RFC973",
+        "RFC882",
+        "RFC883"
+      ],
+      "supersedes$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC index XML and RFC info relation <dl>",
+        "originalValue": [
+          "RFC973",
+          "RFC882",
+          "RFC883"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
+        "updated": "2026-02-25T23:54:38.890Z",
+        "version": "extractDocs.js@commit:7e5f596609c6"
+      }
+    }
+  }
+}

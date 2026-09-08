@@ -1,0 +1,219 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.RDD48.2018Am1.2022",
+  "document": {
+    "approvalDate": "2022-02-22",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "excludeChanges": true,
+      "note": "Library cascade: per Zoho, approval date is 2022-02-22 (was previously stored as publicationDate).",
+      "originalValue": null,
+      "overridden": true,
+      "source": "manual",
+      "updated": "2026-06-15T23:29:36.023Z"
+    },
+    "copyright": {
+      "year": "2022",
+      "year$meta": {
+        "confidence": "high",
+        "excludeChanges": true,
+        "note": "Library cascade: copyright year is 2022 per Zoho.",
+        "originalValue": null,
+        "overridden": true,
+        "source": "manual",
+        "updated": "2026-06-15T23:29:36.023Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "excludeChanges": true,
+      "note": "Library cascade: copyright year is 2022 per Zoho.",
+      "originalValue": null,
+      "overridden": true,
+      "source": "manual",
+      "updated": "2026-06-15T23:29:36.023Z"
+    },
+    "docId": "SMPTE.RDD48.2018Am1.2022",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd48/20220222-am1-pub/",
+      "updated": "2025-10-10T19:32:21.843Z"
+    },
+    "docLabel": "SMPTE RDD 48:2018 Am1:2022",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd48/20220222-am1-pub/",
+      "updated": "2025-10-10T19:32:21.843Z"
+    },
+    "docNumber": "48",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd48/20220222-am1-pub/",
+      "updated": "2025-10-10T19:32:21.843Z"
+    },
+    "docTitle": "MXF Archive and Preservation Format Registered Disclosure Document",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd48/20220222-am1-pub/",
+      "updated": "2025-10-10T19:32:21.843Z"
+    },
+    "docType": "Registered Disclosure Document",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd48/20220222-am1-pub/",
+      "updated": "2025-10-10T19:32:21.843Z"
+    },
+    "doi": "10.5594/SMPTE.RDD48.2018Amd1.2022",
+    "doi$meta": {
+      "confidence": "high",
+      "excludeChanges": true,
+      "note": "Amendment notation drift: registry uses \"Am1\" in the docId while the actually-registered DOI per Zoho uses \"Amd1\" (10.5594/SMPTE.RDD48.2018Amd1.2022). Both notations are valid for \"Amendment 1\" — UPSTREAM ACTION NEEDED: SMPTE should register both DOI forms so they're interchangeable. Field locked via excludeChanges so future cross-fills can't toggle this back.",
+      "originalValue": "10.5594/SMPTE.RDD48.2018Am1.2022",
+      "overridden": true,
+      "source": "manual",
+      "updated": "2026-06-15T23:29:36.023Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.RDD48.2018Amd1.2022",
+    "href$meta": {
+      "confidence": "high",
+      "excludeChanges": true,
+      "note": "Amendment notation drift: registry uses \"Am1\" in the docId while the actually-registered DOI per Zoho uses \"Amd1\" (10.5594/SMPTE.RDD48.2018Amd1.2022). Both notations are valid for \"Amendment 1\" — UPSTREAM ACTION NEEDED: SMPTE should register both DOI forms so they're interchangeable. Field locked via excludeChanges so future cross-fills can't toggle this back.",
+      "originalValue": "https://doi.org/10.5594/SMPTE.RDD48.2018Am1.2022",
+      "overridden": true,
+      "source": "manual",
+      "updated": "2026-06-15T23:29:36.023Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:07:53.961Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "isbn": "978-1-68303-260-1",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:05:43.143Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "keywords": [
+      "Metadata",
+      "File Formats",
+      "Ancillary Data"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-17T16:55:09.355Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "numberOfPages": "6",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:08:15.443Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "productNumber": "SSD002140",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:08:38.925Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "publicationDate": "2022-05-24",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "excludeChanges": true,
+      "note": "Library cascade: per Zoho's record at the canonical DOI, Publication_Date is 2022-05-24. The prior 2022-02-22 stored here is the approval date — moved to approvalDate.",
+      "originalValue": "2022-02-22",
+      "overridden": true,
+      "source": "manual",
+      "updated": "2026-06-15T23:29:36.023Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd48/20220222-am1-pub/",
+      "updated": "2025-10-10T19:32:21.843Z"
+    },
+    "releaseTag": "20220222-am1-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd48/20220222-am1-pub/",
+      "updated": "2025-10-10T19:32:21.843Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/rdd48/20220222-am1-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.441Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": false,
+        "overridden": true,
+        "source": "resolved",
+        "updated": "2025-10-25T23:00:14.317Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": false,
+        "overridden": true,
+        "source": "resolved",
+        "updated": "2025-10-25T23:00:14.317Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": true,
+        "overridden": true,
+        "source": "resolved",
+        "updated": "2025-10-25T23:00:14.317Z"
+      }
+    }
+  }
+}

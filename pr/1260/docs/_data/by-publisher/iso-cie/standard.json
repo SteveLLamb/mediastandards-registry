@@ -1,0 +1,338 @@
+[
+  {
+    "docId": "ISO.10527.1991",
+    "docLabel": "ISO/CIE 10527:1991",
+    "docNumber": "10527",
+    "docTitle": "CIE standard colorimetric observers",
+    "docType": "Standard",
+    "href": "https://www.iso.org/standard/18596.html",
+    "publicationDate": "1991-12-01",
+    "publisher": "ISO/CIE",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "ISO.10527.2007"
+      ],
+      "withdrawn": true,
+      "latestVersion": false
+    },
+    "msiLatestAny": "ISO.10527.2007cor1.2008",
+    "msiLatestBase": "ISO.10527.2007",
+    "isLatestAny": false,
+    "docBase": "ISO||10527|",
+    "docBaseLabel": "ISO 10527",
+    "isLatestBase": false,
+    "docVersion": [
+      {
+        "docId": "ISO.10527.1991",
+        "docLabel": "ISO/CIE 10527:1991",
+        "href": "https://www.iso.org/standard/18596.html",
+        "publicationDate": "1991-12-01",
+        "status": {
+          "active": false,
+          "superseded": true,
+          "supersededBy": [
+            "ISO.10527.2007"
+          ],
+          "withdrawn": true,
+          "latestVersion": false
+        },
+        "isLatestBase": false,
+        "__isNewestInBase": false
+      },
+      {
+        "docId": "ISO.10527.2007",
+        "docLabel": "ISO 10527:2007",
+        "href": "https://www.iso.org/standard/37408.html",
+        "publicationDate": "2007-10-01",
+        "status": {
+          "active": false,
+          "amended": true,
+          "amendedBy": [
+            "ISO.10527.2007cor1.2008"
+          ],
+          "superseded": true,
+          "supersededBy": [
+            "ISO.11664-1.2007"
+          ],
+          "withdrawn": true,
+          "latestVersion": false
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": false
+      },
+      {
+        "docId": "ISO.10527.2007cor1.2008",
+        "docLabel": "ISO 10527:2007/COR 1:2008",
+        "href": "https://www.iso.org/standard/52494.html",
+        "publicationDate": "2011-08-01",
+        "status": {
+          "active": false,
+          "superseded": true,
+          "supersededBy": [
+            "ISO.11664-1.2007"
+          ],
+          "withdrawn": true,
+          "latestVersion": true
+        },
+        "isLatestBase": false,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "SMPTE.EG432-1.2010",
+      "SMPTE.ST196.2003",
+      "SMPTE.ST293.2003",
+      "SMPTE.ST431-1.2006"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Withdrawn"
+  },
+  {
+    "abstract": "This document specifies colour-matching functions for use in colorimetry. Two sets of colour-matching functions are specified.\n— Colour-matching functions for the CIE 1931 standard colorimetric observer.\nThis set of colour-matching functions is representative of the colour-matching properties of observers with normal colour vision for visual field sizes of angular subtense from about 1° to about 4°, for vision at photopic levels of adaptation.\n— Colour-matching functions for the CIE 1964 standard colorimetric observer.\nThis set of colour-matching functions is representative of the colour-matching properties of observers with normal colour vision for visual field sizes of angular subtense greater than about 4°, for vision at sufficiently high photopic levels and with spectral power distributions such that no participation of the rod receptors of the retina is to be expected.",
+    "docId": "ISO.11664-1.2019",
+    "docLabel": "ISO/CIE 11664-1:2019",
+    "docNumber": "11664",
+    "docPart": "1",
+    "docSuiteTitle": "Colorimetry",
+    "docTitle": "Part 1: CIE standard colorimetric observers",
+    "docType": "Standard",
+    "group": "iso-tc-cie",
+    "href": "https://www.iso.org/standard/74164.html",
+    "publicationDate": "2019-06-01",
+    "publisher": "ISO/CIE",
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "ISO.11664-1.2019",
+    "msiLatestBase": "ISO.11664-1.2019",
+    "isLatestAny": true,
+    "docBase": "ISO||11664|1",
+    "docBaseLabel": "ISO 11664-1",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "ISO.11664-1.2007",
+        "docLabel": "ISO 11664-1:2007",
+        "href": "https://www.iso.org/standard/52495.html",
+        "publicationDate": "2010-07-01",
+        "status": {
+          "active": false,
+          "superseded": true,
+          "supersededBy": [
+            "ISO.11664-1.2019"
+          ],
+          "withdrawn": true,
+          "latestVersion": false
+        },
+        "isLatestBase": false,
+        "__isNewestInBase": false
+      },
+      {
+        "docId": "ISO.11664-1.2019",
+        "docLabel": "ISO/CIE 11664-1:2019",
+        "href": "https://www.iso.org/standard/74164.html",
+        "publicationDate": "2019-06-01",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "DCI.DCA-HDR.2024-0228",
+      "ISO.5926.2023",
+      "SMPTE.ST2080-3.2017"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "abstract": "This document defines three CIE standard illuminants for use in colorimetry: CIE standard illuminant A for the representation of typical tungsten-filament lighting, CIE standard illuminant D65 for the representation of average daylight having a correlated colour temperature of approximately 6 500 K and CIE standard illuminant D50 for the representation of daylight with a correlated colour temperature of approximately 5 000 K. Values of the relative spectral power distribution of the three illuminants are included in this document.",
+    "docId": "ISO.11664-2.2022",
+    "docLabel": "ISO/CIE 11664-2:2022",
+    "docNumber": "11664",
+    "docPart": "2",
+    "docSuiteTitle": "Colorimetry",
+    "docTitle": "Part 2: CIE standard illuminants",
+    "docType": "Standard",
+    "group": "iso-tc-cie",
+    "href": "http://iso.org/standard/77215.html",
+    "publicationDate": "2022-08-01",
+    "publisher": "ISO/CIE",
+    "resolvedHref": "https://www.iso.org/standard/77215.html",
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "ISO.11664-2.2022",
+    "msiLatestBase": "ISO.11664-2.2022",
+    "isLatestAny": true,
+    "docBase": "ISO||11664|2",
+    "docBaseLabel": "ISO 11664-2",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "ISO.11664-2.2022",
+        "docLabel": "ISO/CIE 11664-2:2022",
+        "href": "http://iso.org/standard/77215.html",
+        "publicationDate": "2022-08-01",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "SMPTE.ST2036-1.2009",
+      "SMPTE.ST2036-1.2013",
+      "SMPTE.ST2036-1.2014",
+      "SMPTE.ST2048-1.2011",
+      "SMPTE.ST2085.2015"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "abstract": "This document specifies a method of calculating the coordinates of the CIE 1976 L*a*b* colour space, including correlates of lightness, chroma and hue. It includes two methods for calculating Euclidean distances in this space to represent the perceived magnitude of colour differences.\n This document is applicable to tristimulus values calculated using colour-matching functions of the CIE 1931 standard colorimetric system or the CIE 1964 standard colorimetric system. This document can be used for the specification of colour stimuli perceived as belonging to a reflecting or transmitting object, where a three-dimensional space more uniform than tristimulus space is required.\n This document does not apply to colour stimuli perceived as belonging to an area that appears to be emitting light as a primary light source, or that appears to be specularly reflecting such light.\n This document is applicable to self-luminous displays, such as cathode ray tubes, if they are being used to simulate reflecting or transmitting objects and if the stimuli are appropriately normalized.\n Calculating the reverse transformation is shown in Annex A.",
+    "docId": "ISO.11664-4.2019",
+    "docLabel": "ISO/CIE 11664-4:2019",
+    "docNumber": "11664",
+    "docPart": "4",
+    "docSuiteTitle": "Colorimetry",
+    "docTitle": "Part 4: CIE 1976 L*a*b* colour space",
+    "docType": "Standard",
+    "group": "iso-tc-cie",
+    "href": "http://iso.org/standard/74166.html",
+    "publicationDate": "2024-06-01",
+    "publisher": "ISO/CIE",
+    "resolvedHref": "https://www.iso.org/standard/74166.html",
+    "status": {
+      "active": true,
+      "reaffirmed": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "ISO.11664-4.2019",
+    "msiLatestBase": "ISO.11664-4.2019",
+    "isLatestAny": true,
+    "docBase": "ISO||11664|4",
+    "docBaseLabel": "ISO 11664-4",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "ISO.11664-4.2019",
+        "docLabel": "ISO/CIE 11664-4:2019",
+        "href": "http://iso.org/standard/74166.html",
+        "publicationDate": "2024-06-01",
+        "status": {
+          "active": true,
+          "reaffirmed": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "docDependancy": false,
+    "currentStatus": "Active, Reaffirmed"
+  },
+  {
+    "abstract": "This document specifies the method of calculating the coordinates of the CIE 1976 L*u*v* colour space including correlates of lightness, chroma, saturation and hue. It includes two methods for calculating Euclidean distances in this space to represent the relative perceived magnitude of colour differences. It also specifies the method of calculating the coordinates of the u′,v′ uniform chromaticity scale diagram.\n This document is applicable to tristimulus values calculated using the colour-matching functions of the CIE 1931 standard colorimetric system or the CIE 1964 standard colorimetric system. This document is applicable for the specification of colour stimuli perceived as belonging to a reflecting or transmitting object, where a three-dimensional space more uniform than tristimulus space is required. This includes self-luminous displays, like computer, television and smart-phone displays, if they are being used to simulate reflecting or transmitting objects and if the stimuli are appropriately normalized.\nThis document, as a whole, does not apply to colour stimuli perceived as belonging to an area that appears to be emitting light as a primary light source or that appears to be specularly reflecting such light. Only the u′,v′ uniform chromaticity scale diagram defined in 4.1 and the correlates of hue and saturation defined in 4.3 apply to such colour stimuli.",
+    "docId": "ISO.11664-5.2024",
+    "docLabel": "ISO/CIE 11664-5:2024",
+    "docNumber": "11664",
+    "docPart": "5",
+    "docSuiteTitle": "Colorimetry",
+    "docTitle": "Part 5: CIE 1976 L*u*v* colour space and u', v' uniform chromaticity scale diagram",
+    "docType": "Standard",
+    "group": "iso-tc-cie",
+    "href": "http://iso.org/standard/86224.html",
+    "publicationDate": "2024-06-01",
+    "publisher": "ISO/CIE",
+    "resolvedHref": "https://www.iso.org/standard/86224.html",
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "ISO.11664-5.2024",
+    "msiLatestBase": "ISO.11664-5.2024",
+    "isLatestAny": true,
+    "docBase": "ISO||11664|5",
+    "docBaseLabel": "ISO 11664-5",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "ISO.11664-5.2024",
+        "docLabel": "ISO/CIE 11664-5:2024",
+        "href": "http://iso.org/standard/86224.html",
+        "publicationDate": "2024-06-01",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "DCI.DCA-HDR.2024-0228",
+      "SMPTE.ST2094-20.2016"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "abstract": "This document specifies the method of calculating colour differences according to the CIEDE2000 formula.\n This document is applicable to input values of CIELAB L*, a*, b* coordinates calculated according to ISO/CIE 11664-4. It can be used for the specification of the colour difference between two colour stimuli perceived as belonging to reflecting or transmitting objects. This includes displays if they are being used to simulate reflecting or transmitting objects and if the tristimulus values representing the stimuli are appropriately normalized.\n This document does not apply to colour stimuli perceived as belonging to areas that appear to be emitting light as primary light sources or that appear to be specularly reflecting such light.",
+    "docId": "ISO.11664-6.2022",
+    "docLabel": "ISO/CIE 11664-6:2022",
+    "docNumber": "11664",
+    "docPart": "6",
+    "docSuiteTitle": "Colorimetry",
+    "docTitle": "Part 6: CIEDE2000 colour-difference formula",
+    "docType": "Standard",
+    "group": "iso-tc-cie",
+    "href": "https://www.iso.org/standard/82662.html",
+    "publicationDate": "2024-06-01",
+    "publisher": "ISO/CIE",
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "ISO.11664-6.2022",
+    "msiLatestBase": "ISO.11664-6.2022",
+    "isLatestAny": true,
+    "docBase": "ISO||11664|6",
+    "docBaseLabel": "ISO 11664-6",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "ISO.11664-6.2022",
+        "docLabel": "ISO/CIE 11664-6:2022",
+        "href": "https://www.iso.org/standard/82662.html",
+        "publicationDate": "2024-06-01",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "DCI.DCA-HDR.2024-0228"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  }
+]

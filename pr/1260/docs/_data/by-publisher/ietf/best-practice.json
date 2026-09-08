@@ -1,0 +1,939 @@
+[
+  {
+    "abstract": "This set of documents, collectively called the Multipurpose Internet Mail Extensions, or MIME, redefines the format of messages. This fourth document, RFC 2048, specifies various IANA registration procedures for some MIME facilities. This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.",
+    "authors": [
+      {
+        "name": "Dr. Jon Postel"
+      },
+      {
+        "name": "Dr. John C. Klensin"
+      },
+      {
+        "name": "Ned Freed"
+      }
+    ],
+    "docId": "RFC2048",
+    "docLabel": "IETF RFC 2048",
+    "docNumber": "2048",
+    "docTitle": "Multipurpose Internet Mail Extensions (MIME) Part Four: Registration Procedures",
+    "docType": "Best Practice",
+    "doi": "10.17487/RFC2048",
+    "href": "https://doi.org/10.17487/RFC2048",
+    "issn": "2070-1721",
+    "keywords": [
+      "Media",
+      "Types",
+      "External",
+      "Body",
+      "Access",
+      "Content-transfer-encodings"
+    ],
+    "pages": "21",
+    "publicationDate": "1996-11-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc2048",
+    "status": {
+      "active": false,
+      "amendedBy": [
+        "RFC3023"
+      ],
+      "errataExist": false,
+      "latestVersion": true,
+      "statusNote": "Best Current Practice",
+      "superseded": true,
+      "supersededBy": [
+        "RFC4288",
+        "RFC4289"
+      ],
+      "supersedes": [
+        "RFC1521",
+        "RFC1522",
+        "RFC1590"
+      ]
+    },
+    "msiLatestAny": "RFC2048",
+    "msiLatestBase": "RFC2048",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|2048|",
+    "docBaseLabel": "IETF RFC 2048",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC2048",
+        "docLabel": "IETF RFC 2048",
+        "href": "https://doi.org/10.17487/RFC2048",
+        "publicationDate": "1996-11-01",
+        "status": {
+          "active": false,
+          "amendedBy": [
+            "RFC3023"
+          ],
+          "errataExist": false,
+          "latestVersion": true,
+          "statusNote": "Best Current Practice",
+          "superseded": true,
+          "supersededBy": [
+            "RFC4288",
+            "RFC4289"
+          ],
+          "supersedes": [
+            "RFC1521",
+            "RFC1522",
+            "RFC1590"
+          ]
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "RFC2047",
+      "RFC2049"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Superseded*"
+  },
+  {
+    "abstract": "In many standards track documents several words are used to signify the requirements in the specification. These words are often capitalized. This document defines these words as they should be interpreted in IETF documents. This document specifies an Internet Best Current Practices for the Internet Community, and requests discussion and suggestions for improvements.",
+    "authors": [
+      {
+        "name": "Scott O. Bradner"
+      }
+    ],
+    "docId": "RFC2119",
+    "docLabel": "IETF RFC 2119",
+    "docNumber": "2119",
+    "docTitle": "Key words for use in RFCs to Indicate Requirement Levels",
+    "docType": "Best Practice",
+    "doi": "10.17487/RFC2119",
+    "href": "https://doi.org/10.17487/RFC2119",
+    "issn": "2070-1721",
+    "keywords": [
+      "Standards",
+      "Track",
+      "Documents"
+    ],
+    "pages": "3",
+    "publicationDate": "1997-03-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc2119",
+    "status": {
+      "active": true,
+      "amendedBy": [
+        "RFC8174"
+      ],
+      "errataExist": true,
+      "errataUrl": [
+        "https://www.rfc-editor.org/errata/rfc2119",
+        "https://www.rfc-editor.org/errata_search.php?rfc=2119",
+        "https://www.rfc-editor.org/rfc/inline-errata/rfc2119.html"
+      ],
+      "latestVersion": true,
+      "statusNote": "Best Current Practice",
+      "superseded": false
+    },
+    "msiLatestAny": "RFC2119",
+    "msiLatestBase": "RFC2119",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|2119|",
+    "docBaseLabel": "IETF RFC 2119",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC2119",
+        "docLabel": "IETF RFC 2119",
+        "href": "https://doi.org/10.17487/RFC2119",
+        "publicationDate": "1997-03-01",
+        "status": {
+          "active": true,
+          "amendedBy": [
+            "RFC8174"
+          ],
+          "errataExist": true,
+          "errataUrl": [
+            "https://www.rfc-editor.org/errata/rfc2119",
+            "https://www.rfc-editor.org/errata_search.php?rfc=2119",
+            "https://www.rfc-editor.org/rfc/inline-errata/rfc2119.html"
+          ],
+          "latestVersion": true,
+          "statusNote": "Best Current Practice",
+          "superseded": false
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "IETF.draft-bhutton-json-schema-00",
+      "IETF.draft-bhutton-json-schema-01",
+      "IETF.draft-bhutton-json-schema-validation-01",
+      "RFC8323",
+      "RFC8341",
+      "RFC8391",
+      "RFC8439",
+      "RFC8525",
+      "RFC8526",
+      "RFC8615",
+      "RFC8820",
+      "RFC9048",
+      "RFC9141",
+      "RFC9190",
+      "RFC9231",
+      "RFC9678"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active*"
+  },
+  {
+    "docId": "RFC3061",
+    "docLabel": "IETF RFC 3061",
+    "docTitle": "A URN Namespace of Object Identifiers",
+    "docType": "Best Practice",
+    "href": "https://www.rfc-editor.org/rfc/inline-errata/rfc3061.html",
+    "publicationDate": "2001-02-01",
+    "publisher": "IETF",
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "RFC3061",
+    "msiLatestBase": "RFC3061",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|3061|",
+    "docBaseLabel": "IETF RFC 3061",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC3061",
+        "docLabel": "IETF RFC 3061",
+        "href": "https://www.rfc-editor.org/rfc/inline-errata/rfc3061.html",
+        "publicationDate": "2001-02-01",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "SMPTE.ST2001-1.2013",
+      "SMPTE.ST2001-1.2015",
+      "SMPTE.ST2045.2010",
+      "SMPTE.ST395.2014"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "RFC3066",
+    "docLabel": "IETF RFC 3066",
+    "docTitle": "Tags for the Identification of Languages",
+    "docType": "Best Practice",
+    "href": "https://www.rfc-editor.org/info/rfc3066",
+    "publicationDate": "2001-01-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://datatracker.ietf.org/doc/html/rfc3066",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "RFC4646",
+        "RFC4647"
+      ],
+      "latestVersion": true
+    },
+    "msiLatestAny": "RFC3066",
+    "msiLatestBase": "RFC3066",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|3066|",
+    "docBaseLabel": "IETF RFC 3066",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC3066",
+        "docLabel": "IETF RFC 3066",
+        "href": "https://www.rfc-editor.org/info/rfc3066",
+        "publicationDate": "2001-01-01",
+        "status": {
+          "active": false,
+          "superseded": true,
+          "supersededBy": [
+            "RFC4646",
+            "RFC4647"
+          ],
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "AMPAS.S.2014-006",
+      "ISO.26433.2009",
+      "SMPTE.ST2021-1.2015",
+      "SMPTE.ST2021.2008",
+      "SMPTE.ST430-1.2023-09",
+      "SMPTE.ST433.2008",
+      "SMPTE.ST433.2008Am1.2011"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Superseded"
+  },
+  {
+    "docId": "RFC3406",
+    "docLabel": "IETF RFC 3406",
+    "docTitle": "Uniform Resource Names (URN) Namespace Definition Mechanisms",
+    "docType": "Best Practice",
+    "href": "https://www.rfc-editor.org/info/rfc3406",
+    "publicationDate": "2002-10-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://datatracker.ietf.org/doc/html/rfc3406",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "RFC8141"
+      ],
+      "latestVersion": true
+    },
+    "msiLatestAny": "RFC3406",
+    "msiLatestBase": "RFC3406",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|3406|",
+    "docBaseLabel": "IETF RFC 3406",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC3406",
+        "docLabel": "IETF RFC 3406",
+        "href": "https://www.rfc-editor.org/info/rfc3406",
+        "publicationDate": "2002-10-01",
+        "status": {
+          "active": false,
+          "superseded": true,
+          "supersededBy": [
+            "RFC8141"
+          ],
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "SMPTE.ST2029.2009",
+      "SMPTE.ST2029.2022",
+      "SMPTE.ST2029.2023-10"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Superseded"
+  },
+  {
+    "docId": "RFC4288",
+    "docLabel": "IETF RFC 4288",
+    "docTitle": "Media Type Specifications and Registration Procedures",
+    "docType": "Best Practice",
+    "href": "https://www.rfc-editor.org/info/rfc4288",
+    "publicationDate": "2005-12-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://datatracker.ietf.org/doc/html/rfc4288",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "RFC6838"
+      ],
+      "latestVersion": true
+    },
+    "msiLatestAny": "RFC4288",
+    "msiLatestBase": "RFC4288",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|4288|",
+    "docBaseLabel": "IETF RFC 4288",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC4288",
+        "docLabel": "IETF RFC 4288",
+        "href": "https://www.rfc-editor.org/info/rfc4288",
+        "publicationDate": "2005-12-01",
+        "status": {
+          "active": false,
+          "superseded": true,
+          "supersededBy": [
+            "RFC6838"
+          ],
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "SMPTE.ST2067-100.2014"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Superseded"
+  },
+  {
+    "docId": "RFC4646",
+    "docLabel": "IETF RFC 4646",
+    "docTitle": "Tags for Identifying Languages",
+    "docType": "Best Practice",
+    "href": "https://www.rfc-editor.org/info/rfc4646",
+    "publicationDate": "2006-12-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://datatracker.ietf.org/doc/html/rfc4646",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "RFC5646"
+      ],
+      "latestVersion": true
+    },
+    "msiLatestAny": "RFC4646",
+    "msiLatestBase": "RFC4646",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|4646|",
+    "docBaseLabel": "IETF RFC 4646",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC4646",
+        "docLabel": "IETF RFC 4646",
+        "href": "https://www.rfc-editor.org/info/rfc4646",
+        "publicationDate": "2006-12-01",
+        "status": {
+          "active": false,
+          "superseded": true,
+          "supersededBy": [
+            "RFC5646"
+          ],
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "docDependancy": false,
+    "currentStatus": "Superseded"
+  },
+  {
+    "docId": "RFC4647",
+    "docLabel": "IETF RFC 4647",
+    "docTitle": "Matching of Language Tags",
+    "docType": "Best Practice",
+    "href": "https://www.rfc-editor.org/info/rfc4647",
+    "publicationDate": "2006-09-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://datatracker.ietf.org/doc/html/rfc4647",
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "RFC4647",
+    "msiLatestBase": "RFC4647",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|4647|",
+    "docBaseLabel": "IETF RFC 4647",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC4647",
+        "docLabel": "IETF RFC 4647",
+        "href": "https://www.rfc-editor.org/info/rfc4647",
+        "publicationDate": "2006-09-01",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "SMPTE.ST429-16.2014",
+      "SMPTE.ST429-16.2023-09"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "RFC5646",
+    "docLabel": "IETF RFC 5646",
+    "docTitle": "Tags for Identifying Languages",
+    "docType": "Best Practice",
+    "href": "https://www.rfc-editor.org/info/rfc5646",
+    "publicationDate": "2009-09-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://datatracker.ietf.org/doc/html/rfc5646",
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "RFC5646",
+    "msiLatestBase": "RFC5646",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|5646|",
+    "docBaseLabel": "IETF RFC 5646",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC5646",
+        "docLabel": "IETF RFC 5646",
+        "href": "https://www.rfc-editor.org/info/rfc5646",
+        "publicationDate": "2009-09-01",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "SMPTE.RDD52.2020",
+      "SMPTE.RP2057.2011",
+      "SMPTE.ST2067-2.2013",
+      "SMPTE.ST2067-2.2016",
+      "SMPTE.ST2067-2.2020",
+      "SMPTE.ST2067-3.2013",
+      "SMPTE.ST2067-3.2016",
+      "SMPTE.ST2067-3.2020",
+      "SMPTE.ST2075.2013",
+      "SMPTE.ST377-4.2012",
+      "SMPTE.ST377-4.2021",
+      "SMPTE.ST429-16.2014",
+      "SMPTE.ST429-16.2023-09",
+      "SMPTE.ST429-2.2023-09"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "RFC6838",
+    "docLabel": "IETF RFC 6838",
+    "docTitle": "Media Type Specifications and Registration Procedures",
+    "docType": "Best Practice",
+    "href": "https://www.rfc-editor.org/info/rfc6838",
+    "publicationDate": "2013-01-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://datatracker.ietf.org/doc/html/rfc6838",
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "RFC6838",
+    "msiLatestBase": "RFC6838",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|6838|",
+    "docBaseLabel": "IETF RFC 6838",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC6838",
+        "docLabel": "IETF RFC 6838",
+        "href": "https://www.rfc-editor.org/info/rfc6838",
+        "publicationDate": "2013-01-01",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "SMPTE.AG21",
+      "SMPTE.ST2034-1.2014",
+      "SMPTE.ST2034-1.2017",
+      "SMPTE.ST429-3.2023-09"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "RFC7320",
+    "docLabel": "IETF RFC 7320",
+    "docTitle": "URI Design and Ownership",
+    "docType": "Best Practice",
+    "href": "https://www.rfc-editor.org/info/rfc7320",
+    "publicationDate": "2014-07-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://datatracker.ietf.org/doc/html/rfc7320",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "RFC8820"
+      ],
+      "latestVersion": true
+    },
+    "msiLatestAny": "RFC7320",
+    "msiLatestBase": "RFC7320",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|7320|",
+    "docBaseLabel": "IETF RFC 7320",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC7320",
+        "docLabel": "IETF RFC 7320",
+        "href": "https://www.rfc-editor.org/info/rfc7320",
+        "publicationDate": "2014-07-01",
+        "status": {
+          "active": false,
+          "superseded": true,
+          "supersededBy": [
+            "RFC8820"
+          ],
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "RFC8615"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Superseded"
+  },
+  {
+    "abstract": "This document captures the current syntax used in YANG module tree diagrams. The purpose of this document is to provide a single location for this definition. This syntax may be updated from time to time based on the evolution of the YANG language.",
+    "authors": [
+      {
+        "name": "Martin Björklund"
+      },
+      {
+        "name": "Lou Berger"
+      }
+    ],
+    "docId": "RFC8340",
+    "docLabel": "IETF RFC 8340",
+    "docNumber": "8340",
+    "docTitle": "YANG Tree Diagrams",
+    "docType": "Best Practice",
+    "doi": "10.17487/RFC8340",
+    "href": "https://doi.org/10.17487/RFC8340",
+    "issn": "2070-1721",
+    "pages": "13",
+    "publicationDate": "2018-03-01",
+    "publisher": "IETF",
+    "references": {
+      "bibliographic": [
+        "GITHUB.mbj4668.pyang.201802",
+        "IETF.draft-ietf-netmod-rfc8022bis-11",
+        "IETF.draft-ietf-netmod-schema-mount-08",
+        "IETF.draft-ietf-ospf-yang-10",
+        "IETF.draft-ietf-rtgwg-ni-model-11",
+        "RFC7407",
+        "RFC7950",
+        "RFC8040",
+        "RFC8343"
+      ],
+      "normative": []
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc8340",
+    "status": {
+      "active": true,
+      "amendedBy": [
+        "RFC8791"
+      ],
+      "errataExist": false,
+      "latestVersion": true,
+      "statusNote": "Best Current Practice",
+      "superseded": false
+    },
+    "msiLatestAny": "RFC8340",
+    "msiLatestBase": "RFC8340",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|8340|",
+    "docBaseLabel": "IETF RFC 8340",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC8340",
+        "docLabel": "IETF RFC 8340",
+        "href": "https://doi.org/10.17487/RFC8340",
+        "publicationDate": "2018-03-01",
+        "status": {
+          "active": true,
+          "amendedBy": [
+            "RFC8791"
+          ],
+          "errataExist": false,
+          "latestVersion": true,
+          "statusNote": "Best Current Practice",
+          "superseded": false
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencesResolved": {
+      "bibliographic": [
+        {
+          "id": "GITHUB.mbj4668.pyang.201802",
+          "undated": true
+        },
+        {
+          "id": "IETF.draft-ietf-netmod-rfc8022bis-11",
+          "undated": true
+        },
+        {
+          "id": "IETF.draft-ietf-netmod-schema-mount-08",
+          "undated": true
+        },
+        {
+          "id": "IETF.draft-ietf-ospf-yang-10",
+          "undated": true
+        },
+        {
+          "id": "IETF.draft-ietf-rtgwg-ni-model-11",
+          "undated": true
+        },
+        {
+          "id": "RFC7407",
+          "undated": true
+        },
+        {
+          "id": "RFC7950"
+        },
+        {
+          "id": "RFC8040",
+          "undated": true
+        },
+        {
+          "id": "RFC8343",
+          "undated": true
+        }
+      ],
+      "normative": []
+    },
+    "referencedBy": [
+      "RFC8525",
+      "RFC8526"
+    ],
+    "referenceTree": [
+      "GITHUB.mbj4668.pyang.201802",
+      "IETF.draft-ietf-netmod-rfc8022bis-11",
+      "IETF.draft-ietf-netmod-schema-mount-08",
+      "IETF.draft-ietf-ospf-yang-10",
+      "IETF.draft-ietf-rtgwg-ni-model-11",
+      "RFC7407",
+      "RFC7950",
+      "RFC8040",
+      "RFC8343"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active*"
+  },
+  {
+    "abstract": "Section 1.1.1 of RFC 3986 defines URI syntax as \"a federated and extensible naming system wherein each scheme's specification may further restrict the syntax and semantics of identifiers using that scheme.\" In other words, the structure of a URI is defined by its scheme. While it is common for schemes to further delegate their substructure to the URI's owner, publishing independent standards that mandate particular forms of substructure in URIs is often problematic. This document provides guidance on the specification of URI substructure in standards. This document obsoletes RFC 7320 and updates RFC 3986.",
+    "authors": [
+      {
+        "name": "Mark Nottingham"
+      }
+    ],
+    "docId": "RFC8820",
+    "docLabel": "IETF RFC 8820",
+    "docNumber": "8820",
+    "docTitle": "URI Design and Ownership",
+    "docType": "Best Practice",
+    "doi": "10.17487/RFC8820",
+    "href": "https://doi.org/10.17487/RFC8820",
+    "keywords": [
+      "URI Structure"
+    ],
+    "pages": "8",
+    "publicationDate": "2020-06-01",
+    "publisher": "IETF",
+    "references": {
+      "bibliographic": [
+        "RFC1034",
+        "RFC6570",
+        "RFC6901",
+        "RFC6943",
+        "RFC7595",
+        "RFC8288",
+        "RFC8615",
+        "WHATWG.HTML"
+      ],
+      "normative": [
+        "RFC2119",
+        "RFC3986",
+        "RFC8174",
+        "W3C.webarch.20041215"
+      ]
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc8820",
+    "status": {
+      "active": true,
+      "amends": [
+        "RFC3986"
+      ],
+      "errataExist": false,
+      "latestVersion": true,
+      "statusNote": "Best Current Practice",
+      "superseded": false,
+      "supersedes": [
+        "RFC7320"
+      ]
+    },
+    "msiLatestAny": "RFC8820",
+    "msiLatestBase": "RFC8820",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|8820|",
+    "docBaseLabel": "IETF RFC 8820",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC8820",
+        "docLabel": "IETF RFC 8820",
+        "href": "https://doi.org/10.17487/RFC8820",
+        "publicationDate": "2020-06-01",
+        "status": {
+          "active": true,
+          "amends": [
+            "RFC3986"
+          ],
+          "errataExist": false,
+          "latestVersion": true,
+          "statusNote": "Best Current Practice",
+          "superseded": false,
+          "supersedes": [
+            "RFC7320"
+          ]
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencesResolved": {
+      "normative": [
+        {
+          "id": "RFC2119"
+        },
+        {
+          "id": "RFC3986"
+        },
+        {
+          "id": "RFC8174",
+          "undated": true
+        },
+        {
+          "id": "W3C.webarch.20041215",
+          "undated": false
+        }
+      ],
+      "bibliographic": [
+        {
+          "id": "RFC1034",
+          "undated": true
+        },
+        {
+          "id": "RFC6570",
+          "undated": true
+        },
+        {
+          "id": "RFC6901",
+          "undated": true
+        },
+        {
+          "id": "RFC6943",
+          "undated": true
+        },
+        {
+          "id": "RFC7595",
+          "undated": true
+        },
+        {
+          "id": "RFC8288",
+          "undated": true
+        },
+        {
+          "id": "RFC8615"
+        },
+        {
+          "id": "WHATWG.HTML"
+        }
+      ]
+    },
+    "referenceTree": [
+      "10.1145-1879141.1879174",
+      "10.48550-arXiv.1612.07816",
+      "IAB.IETF-SAD.20110214",
+      "IANA.URI",
+      "IETF.96P-QUIC.201607",
+      "IETF.draft-byrne-opsec-udp-advisory-00",
+      "IETF.draft-ietf-core-cocoa-02",
+      "IETF.draft-ietf-core-object-security-08",
+      "IETF.draft-ietf-lwig-tcp-constrained-node-networks-01",
+      "IETF.draft-silverajan-core-coap-alternative-transports-10",
+      "IETF.draft-thaler-appsawg-multi-transport-uris-01",
+      "OMA.TS-LightweightM2M.V1_0.20170208",
+      "RFC1034",
+      "RFC2026",
+      "RFC2119",
+      "RFC3552",
+      "RFC3986",
+      "RFC4918",
+      "RFC5234",
+      "RFC5246",
+      "RFC5785",
+      "RFC6066",
+      "RFC6265",
+      "RFC6335",
+      "RFC6347",
+      "RFC6454",
+      "RFC6455",
+      "RFC6570",
+      "RFC6901",
+      "RFC6943",
+      "RFC7230",
+      "RFC7231",
+      "RFC7252",
+      "RFC7301",
+      "RFC7320",
+      "RFC7525",
+      "RFC7540",
+      "RFC7595",
+      "RFC7641",
+      "RFC768",
+      "RFC7925",
+      "RFC793",
+      "RFC7959",
+      "RFC8126",
+      "RFC8174",
+      "RFC8288",
+      "RFC8307",
+      "RFC8323",
+      "RFC8615",
+      "W3C.CR-referrer-policy.20170126",
+      "W3C.WD-csp3.20160913",
+      "W3C.p3p.20020416",
+      "W3C.webarch.20041215",
+      "W3C.webstorage.20160419",
+      "WHATWG.FETCH",
+      "WHATWG.HTML"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active*"
+  }
+]

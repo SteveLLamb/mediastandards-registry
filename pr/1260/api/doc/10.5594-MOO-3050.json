@@ -1,0 +1,248 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-MOO-3050",
+  "document": {
+    "abstract": "Legacy methods for transporting metadata severely limit the type, bandwidth, and utility of the payloads they carry. Initial metadata standards and implementations of metadata transport in the ST 2110 family focused on time to market and backward compatibility and merely acted as wire replacements. This is especially true of ST 2110–40 Ancillary Data and ST 2110–31 AES3 Transparent audio. Using either standard for metadata, particularly for user-defined and novel applications, requires working with specialized encoding and constraints that are otherwise unnecessary. For asynchronous or independent metadata flows, coupling metadata transport to other essence characteristics adds complexity and significantly reduces the operability and monitorability of the system. ST 2110–41, the Fast Metadata Framework, is a departure from legacy workflows, allowing user-defined metadata flows that stand on their own, but are managed and operated in the same ways that video and audio work. SiriusXM has the opportunity to re-imagine our content workflows end-to-end, from contribution through production and origination up to distribution. We are using this combination of greenfield and retrofit build to take the best parts of existing standards and proprietary systems that continue to solve contemporary problems, but modernize aspects of the standards that are strongly tied to legacy transports or unnecessarily bound by media essence constraints. This paper reviews implementations of SCTE DPI triggers and proprietary program associated data within ST 2110–41 flows. The overall architecture of the professional media system is reviewed, as well. The problems identified in legacy systems are reviewed. Also, the limitations of the Fast Metadata Framework are addressed. In particular, the management of heterogeneous essence synchronization with diverse processing pipelines compounds the timing plane issues previously identified in ST 2110 systems. Constraints on the standards-setting process, as they impact the development and implementation of innovative, flexible systems, are also discussed. Areas for further research and development, including storage and replay of metadata, are identified.",
+    "abstract$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "authors": [
+      {
+        "name": "Michael S. Liebman"
+      },
+      {
+        "name": "Thomas Psipsikas"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "copyright": {
+      "holder": "SMPTE",
+      "holder$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      },
+      "year": "2024",
+      "year$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docId": "10.5594-MOO-3050",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docLabel": "MTS 2024, Article 40 (pp. 1 to 15)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docTitle": "Standing on Giants' Shoulders: Innovative Metadata Applications without Legacy Burdens",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docType": "Conference Paper",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "doi": "10.5594/MOO/3050",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "href": "https://doi.org/10.5594/MOO/3050",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "isbn": {
+      "electronic": "978-1-61482-965-2",
+      "electronic$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "isbn$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "journalAcronym": "MTS",
+    "journalAcronym$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "journalTitle": "SMPTE 2024 Media Technology Summit",
+    "journalTitle$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "keywords": [
+      "Metadata",
+      "SCTE",
+      "Digital Program Insertion",
+      "Fast Metadata Framework",
+      "Time & Sync"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Long-tail keyword cleanup (keywordLongTailApply.js): prose/contentless terms dropped, acronym casing + typos fixed, duplicate variants folded; all surviving terms indexed in controlledKeywords.",
+      "source": "resolved",
+      "updated": "2026-07-14T16:29:38.680Z"
+    },
+    "pages": "1–15",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publicationDate": "2024-10-21",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publisherLocation": {
+      "city": "Hollywood, CA",
+      "city$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-MOO-3050/ref1",
+        "orphan/10.5594-MOO-3050/ref2",
+        "orphan/10.5594-MOO-3050/ref3",
+        "orphan/10.5594-MOO-3050/ref4",
+        "orphan/10.5594-MOO-3050/ref5",
+        "SMPTE.ST335.2012",
+        "orphan/10.5594-MOO-3050/ref7",
+        "orphan/10.5594-MOO-3050/ref8",
+        "SMPTE.ST259.2008",
+        "orphan/10.5594-MOO-3050/ref10",
+        "SMPTE.ST291-1.2011",
+        "SMPTE.ST2010.2008",
+        "SMPTE.RP215.2009",
+        "orphan/10.5594-MOO-3050/ref14",
+        "orphan/10.5594-MOO-3050/ref15",
+        "orphan/10.5594-MOO-3050/ref16",
+        "SMPTE.ST2110-10.2022",
+        "SMPTE.ST2110-40.2023-12",
+        "SMPTE.ST2110-31.2022",
+        "SMPTE.ST2110-43.2021",
+        "orphan/10.5594-MOO-3050/ref21",
+        "orphan/10.5594-MOO-3050/ref22",
+        "orphan/10.5594-MOO-3050/ref23",
+        "SMPTE.ST2110-30.2017",
+        "orphan/10.5594-MOO-3050/ref25",
+        "orphan/10.5594-MOO-3050/ref26",
+        "orphan/10.5594-MOO-3050/ref27",
+        "orphan/10.5594-MOO-3050/ref28",
+        "orphan/10.5594-MOO-3050/ref29",
+        "orphan/10.5594-MOO-3050/ref30",
+        "orphan/10.5594-MOO-3050/ref31",
+        "orphan/10.5594-MOO-3050/ref32",
+        "orphan/10.5594-MOO-3050/ref33",
+        "orphan/10.5594-MOO-3050/ref34",
+        "orphan/10.5594-MOO-3050/ref35",
+        "orphan/10.5594-MOO-3050/ref36",
+        "IETF.draft-bhutton-json-schema-00",
+        "orphan/10.5594-MOO-3050/ref38",
+        "orphan/10.5594-MOO-3050/ref39",
+        "orphan/10.5594-MOO-3050/ref40",
+        "orphan/10.5594-MOO-3050/ref41",
+        "orphan/10.5594-MOO-3050/ref42",
+        "orphan/10.5594-MOO-3050/ref43"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from the FTXML NLM <back><ref-list> via extractFtxmlRefs.js (source doc mapped through its content_batch sibling).",
+        "source": "parsed",
+        "updated": "2026-08-10T17:55:35.307Z"
+      }
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "volume": "00",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    }
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "RFC1521",
+  "document": {
+    "abstract": "This document redefines the format of message bodies to allow multi-part textual and non-textual message bodies to be represented and exchanged without loss of information. This is based on earlier work documented in RFC 934 and STD 11, RFC 1049, but extends and revises that work. [STANDARDS-TRACK]",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML abstract",
+      "originalValue": "This document redefines the format of message bodies to allow multi-part textual and non-textual message bodies to be represented and exchanged without loss of information.  This is based on earlier work documented in RFC 934 and STD 11, RFC 1049, but extends and revises that work. [STANDARDS-TRACK]",
+      "overridden": true,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1521/",
+      "updated": "2026-02-25T23:54:39.560Z",
+      "version": "extractDocs.js@commit:7e5f596609c6"
+    },
+    "authors": [
+      {
+        "name": "Dr. Nathaniel S. Borenstein"
+      },
+      {
+        "name": "Ned Freed"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1521/",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "docId": "RFC1521",
+    "docId$meta": {
+      "confidence": "high",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "IETF RFC 1521",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docNumber": "1521",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML technical report metadata",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1521/",
+      "updated": "2026-02-25T18:56:54.736Z",
+      "version": "extractDocs.js@commit:8ba57d0bab1a"
+    },
+    "docTitle": "MIME (Multipurpose Internet Mail Extensions) Part One: Mechanisms for Specifying and Describing the Format of Internet Message Bodies",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "doi": "10.17487/RFC1521",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML citation_doi",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1521/",
+      "updated": "2026-02-25T18:56:54.736Z",
+      "version": "extractDocs.js@commit:8ba57d0bab1a"
+    },
+    "href": "https://doi.org/10.17487/RFC1521",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI (https://doi.org/<doi>)",
+      "originalValue": "https://www.rfc-editor.org/info/rfc1521",
+      "overridden": true,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1521/",
+      "updated": "2026-02-25T18:56:54.736Z",
+      "version": "extractDocs.js@commit:8ba57d0bab1a"
+    },
+    "issn": "2070-1721",
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML citation_issn",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1521/",
+      "updated": "2026-02-25T18:56:54.736Z",
+      "version": "extractDocs.js@commit:8ba57d0bab1a"
+    },
+    "keywords": [
+      "Email",
+      "Multimedia"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML keywords",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1521/",
+      "updated": "2026-02-25T23:54:39.560Z",
+      "version": "extractDocs.js@commit:7e5f596609c6"
+    },
+    "pages": "81",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from Datatracker doc.json pages",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1521/",
+      "updated": "2026-02-25T18:56:54.736Z",
+      "version": "extractDocs.js@commit:8ba57d0bab1a"
+    },
+    "publicationDate": "1993-09-01",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "IETF",
+    "publisher$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "references": {
+      "bibliographic": [
+        "INCITS.X3.4.1986",
+        "ISBN.9780130366337",
+        "LOC.GIF.89a",
+        "ISO.2022.1996",
+        "ISO.8859-1.1987",
+        "ISO.646.1983",
+        "ISO.11172",
+        "T-REC-G.711.1972",
+        "ADOBE.PostScript.1985",
+        "ADOBE.PostScript.2nd.1990",
+        "ISBN.0444873287",
+        "RFC783",
+        "RFC821",
+        "RFC822",
+        "RFC934",
+        "RFC959",
+        "RFC1049",
+        "RFC1421",
+        "RFC1154",
+        "RFC1341",
+        "RFC1342",
+        "RFC1343",
+        "RFC1344",
+        "RFC1345",
+        "RFC1426",
+        "RFC1522",
+        "RFC1340"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Parsed from RFC HTML references/informative sections | Manual review completed 2026-03-05",
+        "originalValue": [],
+        "overridden": true,
+        "reviewRequired": false,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1521/",
+        "updated": "2026-03-05T16:50:12.495Z",
+        "version": "extractDocs.js@commit:b8c6349eeb50"
+      }
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc1521",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://datatracker.ietf.org/doc/html/rfc1521",
+      "overridden": true,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1521/",
+      "updated": "2026-02-25T18:56:54.737Z",
+      "version": "extractDocs.js@commit:8ba57d0bab1a"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "amended": true,
+      "amended$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "amendedBy": [
+        "RFC1590"
+      ],
+      "amendedBy$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "errataExist": false,
+      "errataExist$meta": {
+        "confidence": "high",
+        "note": "Derived from presence of errata links on RFC/Datatracker pages",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1521/",
+        "updated": "2026-02-25T18:56:54.737Z",
+        "version": "extractDocs.js@commit:8ba57d0bab1a"
+      },
+      "latestVersion": false,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1521/",
+        "updated": "2026-02-25T18:56:54.737Z",
+        "version": "extractDocs.js@commit:8ba57d0bab1a"
+      },
+      "statusNote": "Draft Standard",
+      "statusNote$meta": {
+        "confidence": "high",
+        "note": "Mapped from Datatracker doc.json std_level",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1521/",
+        "updated": "2026-02-25T18:56:54.737Z",
+        "version": "extractDocs.js@commit:8ba57d0bab1a"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededBy": [
+        "RFC2045",
+        "RFC2046",
+        "RFC2047",
+        "RFC2048",
+        "RFC2049"
+      ],
+      "supersededBy$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC info page relation <dl>",
+        "originalValue": [
+          "RFC2045",
+          "RFC2046"
+        ],
+        "overridden": true,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1521/",
+        "updated": "2026-02-25T18:56:54.737Z",
+        "version": "extractDocs.js@commit:8ba57d0bab1a"
+      },
+      "supersedes": [
+        "RFC1341"
+      ],
+      "supersedes$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC info page relation <dl>",
+        "originalValue": [],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1521/",
+        "updated": "2026-02-25T18:56:54.737Z",
+        "version": "extractDocs.js@commit:8ba57d0bab1a"
+      }
+    }
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-M001550",
+  "document": {
+    "abstract": "This paper extends a previously published study of the differences between level normalization of programs using the two dominant methods: Loudness normalization and speech (“dialog”) normalization. Instead of adding to the continuing debate of the subjective merits of one method over the other, important technical aspects are examined empirically. The difference in normalization level between Loudness and speech measures was up to 14 dB. For all films, the Loudness method provided the greatest headroom. Half the films could be broadcast at a fixed target level of −24 LKFS (loudness, K-weighted, relative to full scale) without dynamics processing. When it was speech normalized, not a single film could be broadcast at the same target level without applying dynamics processing. The study furthermore found a systematic difference between manual speech measurement and automatic speech measurement. The measured movies were also compared to the 2013 season of a high profile TV drama production. The loudness properties of the drama were found to be comparable to the movies. In addition, different broadcast/playback paths were found to have markedly different effects on the Loudness Range of the drama series. Uncertainties in classification, definition, and measurement are summarized and compared to the requirements for precision in Advanced Television Systems Committee (ATSC) and the European Broadcasting Union (EBU) loudness-based standards. Finally, consequences of these findings are discussed relative to ITU-R BS.1864, the International Telecommunication Union's standard on broadcast program exchange.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001550.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "TC Electronic A/S, Risskov, Denmark. tl@tcgroup.tc",
+        "name": "Thomas Lund"
+      },
+      {
+        "affiliation": "TC Electronic A/S, Risskov, Denmark. esk@tcgroup.tc",
+        "name": "Esben Skovenborg"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Canonical-confirmed full paper (summary-abstract set is orig-research in the SMPTE canonical repos); HIGHWIRE-era abstract label was a delivery artifact",
+      "originalValue": "summary-abstract",
+      "source": "resolved",
+      "updated": "2026-07-09T19:12:47.628Z",
+      "version": "contenttype-fixes@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001550.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      },
+      "year": "2014",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001550.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001550.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docId": "10.5594-M001550",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/M001550",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docLabel": "SMPTE Meetings and Conferences ( October 2014)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docTitle": "Loudness vs. Speech Normalization in Film and Drama for Broadcast",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001550.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docType": "Conference Paper",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE conference paper",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "doi": "10.5594/M001550",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001550.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/M001550",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/M001550",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "keywords": [
+      "Metadata"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Backfilled from SMPTE canonical repository index_terms, mapped through controlledKeywords + curated synonym folds (keywordVocabDecisions.json) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T23:52:57.741Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "10",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001550.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "pages": "1–14",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001550.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publicationDate": "2014-10-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001550.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001550.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "R-REC-BS.1770-3",
+        "orphan/10.5594-M001550/bibr1-J-SMSE0011-0001",
+        "orphan/10.5594-M001550/bibr2-J-SMSE0011-0001",
+        "orphan/10.5594-M001550/bibr3-J-SMSE0011-0001",
+        "orphan/10.5594-M001550/bibr5-J-SMSE0011-0001",
+        "orphan/10.5594-M001550/bibr6-J-SMSE0011-0001",
+        "orphan/10.5594-M001550/bibr7-J-SMSE0011-0001",
+        "orphan/10.5594-M001550/bibr8-J-SMSE0011-0001",
+        "orphan/10.5594-M001550/bibr9-J-SMSE0011-0001",
+        "orphan/10.5594-M001550/bibr10-J-SMSE0011-0001",
+        "orphan/10.5594-M001550/bibr11-J-SMSE0011-0001",
+        "orphan/10.5594-M001550/bibr12-J-SMSE0011-0001",
+        "orphan/10.5594-M001550/bibr13-J-SMSE0011-0001",
+        "orphan/10.5594-M001550/bibr14-J-SMSE0011-0001",
+        "orphan/10.5594-M001550/bibr15-J-SMSE0011-0001",
+        "orphan/10.5594-M001550/bibr16-J-SMSE0011-0001",
+        "orphan/10.5594-M001550/bibr17-J-SMSE0011-0001"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteConferenceRefs.js (precheck-reuse)",
+        "source": "parsed",
+        "updated": "2026-07-06T20:02:43.384Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/conferences/SMPTE%202014%20Annual%20Technical%20Conference%20&%20Exhibition/16/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.438Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — conference papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "volume": "2014",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001550.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    }
+  }
+}

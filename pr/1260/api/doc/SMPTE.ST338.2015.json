@@ -1,0 +1,323 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST338.2015",
+  "document": {
+    "abstract": "This standard describes the data_type field defined in SMPTE ST 337. This field describes data types that may be carried in an AES3 digital audio interface according to SMPTE ST 337. This standard defines supported data types, but does not cover formatting that may be required for each data type. References are included for additional standards that describe data type specific formatting requirements.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/st-338-2015/st0338-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.862Z"
+    },
+    "approvalDate": "2015-03-27",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/st-338-2015/st0338-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.862Z"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/st-338-2015/st0338-2015.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.862Z"
+      },
+      "year": "2015",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/st-338-2015/st0338-2015.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.862Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/st-338-2015/st0338-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.862Z"
+    },
+    "depositDate": "2015-05-06",
+    "depositDate$meta": {
+      "confidence": "high",
+      "note": "Source XML <publication_date> — appears to be SMPTE/IEEE Xplore deposit date, distinct from actual publicationDate (from _source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/st-338-2015/st0338-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-13T21:13:37.613Z"
+    },
+    "docId": "SMPTE.ST338.2015",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "manual",
+      "sourceUrl": "https://pub.smpte.org/doc/st338/20150327-pub/",
+      "updated": "2025-10-30T00:00:00Z"
+    },
+    "docLabel": "SMPTE ST 338:2015",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docNumber": "338",
+    "docNumber$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docSuiteTitle": "Format for Non-PCM Audio and Data in AES3",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-12-12T21:25:09.118Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docTitle": "Data Types",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": "Format for Non-PCM Audio and Data in AES3 - Data Types",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-12-12T21:25:09.118Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "doi": "10.5594/SMPTE.ST338.2015",
+    "doi$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "familyId": "338",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/st-338-2015/st0338-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.862Z"
+    },
+    "group": "smpte-32nf-tc",
+    "group$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST338.2015",
+    "href$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.30",
+        "description": "Audio systems"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/st-338-2015/st0338-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.862Z"
+    },
+    "isbn": "978-1-61482-869-3",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/st-338-2015/st0338-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.862Z"
+    },
+    "keywords": [
+      "Sound",
+      "Interfaces",
+      "AES",
+      "SDI",
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Television",
+      "Audio"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Scrubbed against src/main/config/site.json controlledKeywords (auto-fix renames + drop noise)",
+      "originalValue": [
+        "Sound",
+        "Interface",
+        "AES",
+        "SDI",
+        "Communication",
+        "Networking and Broadcast Technologies",
+        "Interfaces",
+        "Television",
+        "Audio"
+      ],
+      "source": "parsed",
+      "updated": "2026-06-17T17:24:10.972Z",
+      "version": "kw-scrub@v1"
+    },
+    "numberOfPages": "6",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–6",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/st-338-2015/st0338-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.862Z"
+    },
+    "productNumber": "SSD001843",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/st-338-2015/st0338-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.862Z"
+    },
+    "publicationDate": "2015-03-27",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "excludeChanges": true,
+      "note": "Parsed from HTML pubDateTime meta tag | TRIAGE: Registry matches releaseTag (gospel); source XML date appears to be SMPTE-IEEE Xplore deposit date, not publication",
+      "originalValue": "2015-05-06",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2026-05-13T21:13:37.613Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/st-338-2015/st0338-2015.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.862Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/st-338-2015/st0338-2015.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.862Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/st-338-2015/st0338-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.862Z"
+    },
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST337.2015",
+        "SMPTE.ST339.2015",
+        "SMPTE.ST340.2015",
+        "SMPTE.ST341.2000",
+        "SMPTE.ST2041-1.2010",
+        "SMPTE.ST2041-2.2010",
+        "SMPTE.ST2041-3.2010",
+        "SMPTE.RDD33.2015",
+        "IEC.61937-2.2007"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    },
+    "releaseTag": "20150327-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-10-12T23:29:16.133Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/st338/20150327-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000007NfM",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-11-11T04:48:45.067Z",
+      "version": "extractDocs.js@commit:dea962f9e9d7"
+    },
+    "standardId": "20887",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/st-338-2015/st0338-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.862Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-12T23:29:16.133Z"
+      },
+      "latestVersion": false,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T23:29:16.133Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededBy": [
+        "SMPTE.ST338.2016"
+      ],
+      "supersededBy$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededDate": "2016-07-15",
+      "supersededDate$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-12T23:29:16.133Z"
+      }
+    }
+  }
+}

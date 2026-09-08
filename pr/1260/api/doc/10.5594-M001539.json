@@ -1,0 +1,232 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-M001539",
+  "document": {
+    "abstract": "HEVC provides a significant increase in compression efficiency over legacy standards, such as MPEG-2 and AVC. It is well known that an increase in compression efficiency typically results in decreased coding redundancy. This leads to subsequent vulnerability to error propagation resulting from transmission of stream(s) on a network under packet loss (PL) conditions. Here, incorporating/formulating a perceptual Video Quality (VQ) metric and analyzing VQ over a range of bit rates, PL profiles and a variety of content; would be of interest. Although a number of statistical/opinion models have been proposed and tested for H264 and earlier codecs in various packet loss environments, the parameters of such models have not been defined for HEVC. These statistical models have been designed on the basis of bit rates, packet loss rate, resolution and other parameters. It is assumed that the model parameters will remain same for the entire video sequence. These models do not take content specific properties into consideration, so these are not reliable; different profiles of spatial and temporal variations of content will affect the perceptual video quality differently. Even for the same content, effect of packet loss on perceptual video quality can be very much different depending upon the data lost with the packet. e.g. the effect of loss of a packet corresponding to an I frame can be higher than that of P or B frames because of temporal referencing. So, a new method has been devised and tested over the content with varying profiles of content, bit rate and other characteristics.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001539.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "Interra Systems India Pvt. Ltd., bkumar@interrasystems.com",
+        "name": "Bhupender Kumar"
+      },
+      {
+        "affiliation": "Interra Systems India Pvt. Ltd., shekhar@interrasystems.com",
+        "name": "Shekhar Madnani"
+      },
+      {
+        "affiliation": "Interra Systems Inc., advait@interrasystems.com",
+        "name": "Advait Mogre"
+      },
+      {
+        "affiliation": "Interra Systems India Pvt. Ltd., muneesh@interrasystems.com",
+        "name": "Muneesh Sharma"
+      },
+      {
+        "affiliation": "Interra Systems India Pvt. Ltd., shailesh@interrasystems.com",
+        "name": "Shailesh Kumar"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Canonical-confirmed full paper (summary-abstract set is orig-research in the SMPTE canonical repos); HIGHWIRE-era abstract label was a delivery artifact",
+      "originalValue": "summary-abstract",
+      "source": "resolved",
+      "updated": "2026-07-09T19:12:47.628Z",
+      "version": "contenttype-fixes@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001539.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      },
+      "year": "2014",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001539.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001539.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docId": "10.5594-M001539",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/M001539",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docLabel": "SMPTE Meetings and Conferences ( October 2014)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docTitle": "Perceptual Video Quality Analysis for HEVC in Packet Loss Environment",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001539.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docType": "Conference Paper",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE conference paper",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "doi": "10.5594/M001539",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001539.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/M001539",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/M001539",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "keywords": [
+      "HEVC"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Backfilled from SMPTE canonical repository index_terms, mapped through controlledKeywords + curated synonym folds (keywordVocabDecisions.json) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T23:52:57.741Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "10",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001539.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "pages": "1–16",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001539.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publicationDate": "2014-10-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001539.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001539.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-M001539/bibr1-J-SMSE0011-0001",
+        "orphan/10.5594-M001539/bibr2-J-SMSE0011-0001",
+        "orphan/10.5594-M001539/bibr3-J-SMSE0011-0001",
+        "orphan/10.5594-M001539/bibr4-J-SMSE0011-0001",
+        "orphan/10.5594-M001539/bibr5-J-SMSE0011-0001",
+        "orphan/10.5594-M001539/bibr6-J-SMSE0011-0001",
+        "orphan/10.5594-M001539/bibr7-J-SMSE0011-0001",
+        "orphan/10.5594-M001539/bibr8-J-SMSE0011-0001"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteConferenceRefs.js (precheck-reuse)",
+        "source": "parsed",
+        "updated": "2026-07-06T20:02:43.384Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/conferences/SMPTE%202014%20Annual%20Technical%20Conference%20&%20Exhibition/5/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.438Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — conference papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "volume": "2014",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2014_10/smptem_2014_10.xml/10.5594_M001539.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    }
+  }
+}

@@ -1,0 +1,360 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST2067-201.2026-03",
+  "document": {
+    "abstract": "This document specifies requirements for a plug-in mechanism to add Immersive Audio Bitstream (IAB) essence, as specified in SMPTE ST 2098-2:2022, to IMF compositions.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML sec-scope section",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+      "updated": "2026-05-11T08:09:45.947Z",
+      "version": "extractDocs.js@commit:8defd4546581"
+    },
+    "approvalDate": "2026-03-25",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:27:42.872Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "year": "2026",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+        "source": "parsed",
+        "updated": "2026-06-15T20:08:45.039Z",
+        "version": "smpte-zoho-standards@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:08:45.039Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "docId": "SMPTE.ST2067-201.2026-03",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+      "updated": "2026-05-11T08:09:45.947Z",
+      "version": "extractDocs.js@commit:8defd4546581"
+    },
+    "docLabel": "SMPTE ST 2067-201:2026-03",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+      "updated": "2026-05-11T08:09:45.947Z",
+      "version": "extractDocs.js@commit:8defd4546581"
+    },
+    "docNumber": "2067",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+      "updated": "2026-05-11T08:09:45.947Z",
+      "version": "extractDocs.js@commit:8defd4546581"
+    },
+    "docPart": "201",
+    "docPart$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubPart meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+      "updated": "2026-05-11T08:09:45.947Z",
+      "version": "extractDocs.js@commit:8defd4546581"
+    },
+    "docSuiteTitle": "Interoperable Master Format",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+      "updated": "2026-05-11T08:09:45.947Z",
+      "version": "extractDocs.js@commit:8defd4546581"
+    },
+    "docTitle": "Immersive Audio Bitstream Level 0 Plug-in",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+      "updated": "2026-05-11T08:09:45.947Z",
+      "version": "extractDocs.js@commit:8defd4546581"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+      "updated": "2026-05-11T08:09:45.947Z",
+      "version": "extractDocs.js@commit:8defd4546581"
+    },
+    "doi": "10.5594/SMPTE.ST2067-201.2026",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+      "updated": "2026-05-11T08:09:45.947Z",
+      "version": "extractDocs.js@commit:8defd4546581"
+    },
+    "group": "smpte-35pm-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+      "updated": "2026-05-11T08:09:45.947Z",
+      "version": "extractDocs.js@commit:8defd4546581"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST2067-201.2026",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+      "updated": "2026-05-11T08:09:45.947Z",
+      "version": "extractDocs.js@commit:8defd4546581"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:44:42.037Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "isbn": "978-1-68303-354-7",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:04:58.507Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "keywords": [
+      "IMF",
+      "Audio",
+      "Identification",
+      "File Formats",
+      "DCinema"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Scrubbed against src/main/config/site.json controlledKeywords (auto-fix renames + drop noise)",
+      "originalValue": [
+        "IMF",
+        "Audio",
+        "SMPTE",
+        "Identification",
+        "File Formats",
+        "DCinema"
+      ],
+      "source": "parsed",
+      "updated": "2026-06-17T17:18:30.093Z",
+      "version": "kw-scrub@v1"
+    },
+    "numberOfPages": "20",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "productNumber": "SSD002233",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:11:00.505Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "publicationDate": "2026-03-25",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+      "updated": "2026-05-11T08:09:45.947Z",
+      "version": "extractDocs.js@commit:8defd4546581"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+      "updated": "2026-05-11T08:09:45.947Z",
+      "version": "extractDocs.js@commit:8defd4546581"
+    },
+    "references": {
+      "bibliographic": [
+        "SMPTE.RP2057.2011",
+        "SMPTE.RP2057.2011Am1.2013",
+        "SMPTE.ST2067-5"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+        "updated": "2026-05-18T18:16:48.464Z",
+        "version": "extractDocs.js@commit:2961e982bb45"
+      },
+      "normative": [
+        "SMPTE.ST377-1.2019",
+        "SMPTE.ST377-4.2021",
+        "SMPTE.ST377-41.2023",
+        "SMPTE.ST429-18",
+        "SMPTE.ST2067-2.2020",
+        "SMPTE.ST2067-3.2020",
+        "SMPTE.ST2098-2.2022"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [],
+        "source": "parsed",
+        "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+        "updated": "2026-05-11T08:09:45.948Z",
+        "version": "extractDocs.js@commit:8defd4546581"
+      }
+    },
+    "releaseTag": "20260325-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+      "updated": "2026-05-11T08:09:45.947Z",
+      "version": "extractDocs.js@commit:8defd4546581"
+    },
+    "repo": "https://github.com/SMPTE/st2067-201/",
+    "repo$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed or inferred publication type/number/part and verified to exist",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+      "updated": "2026-05-25T08:48:17.155Z",
+      "version": "extractDocs.js@commit:68ff76bd8a7c"
+    },
+    "revisionOf": [
+      "SMPTE.ST2067-201.2021"
+    ],
+    "revisionOf$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubRevisionOf meta tag",
+      "originalValue": [],
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+      "updated": "2026-05-11T08:09:45.948Z",
+      "version": "extractDocs.js@commit:8defd4546581"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+        "updated": "2026-05-11T08:09:45.947Z",
+        "version": "extractDocs.js@commit:8defd4546581"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+        "updated": "2026-05-11T08:09:45.948Z",
+        "version": "extractDocs.js@commit:8defd4546581"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+        "updated": "2026-05-11T08:09:45.947Z",
+        "version": "extractDocs.js@commit:8defd4546581"
+      },
+      "stage": "PUB",
+      "stage$meta": {
+        "confidence": "high",
+        "note": "Stage parsed from HTML pubStage meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+        "updated": "2026-05-11T08:09:45.948Z",
+        "version": "extractDocs.js@commit:8defd4546581"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+        "updated": "2026-05-11T08:09:45.948Z",
+        "version": "extractDocs.js@commit:8defd4546581"
+      },
+      "statusNote": "Approval date in document is 2026-02-03, but date of ST Audit approval is 2026-03-25.",
+      "statusNote$meta": {
+        "confidence": "high",
+        "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+        "source": "parsed",
+        "updated": "2026-07-06T21:05:35.316Z",
+        "version": "smpte-zoho-standards@v1"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://pub.smpte.org/doc/st2067-201/20260325-pub/",
+        "updated": "2026-05-11T08:09:45.948Z",
+        "version": "extractDocs.js@commit:8defd4546581"
+      }
+    }
+  }
+}

@@ -1,0 +1,277 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-J18347",
+  "document": {
+    "abstract": "In this paper, three objective image quality metrics are introduced. These metrics are designed to quantify the severity of the three major types of artifacts associated with block-DCT-based imagehideo compression schemes, in a manner compatible with HVS. Experimental results from some commercially available encoding applications are reported in a vendor transparent manner, to illustrate the practical usefulness of the proposed metrics to assess compressed image quality aside from their theoretical significance.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18347.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "EMC Corp., Hopkinton, MA 01748",
+        "bio": "Seyfullah Halit Oguz joined the Media Solutions Group of EMC corporation in 1999, focusing primarily on the development and implementation of media compression technology-related product features. His interests are in image and video processing, data compression, and multimedia communication over wireline and wireless networks. He is currently a principal design engineer in the Network Storage Group of EMC Corporation. Oguz received a B.S. degree in electrical and electronics engineering from the Middle East Technical University, Ankara, Turkey, in 1987; an M.S. from Bilkent University, Ankara, Turkey, in 1990; and a Ph.D. degree in electrical and computer engineering from the University of Wisconsin-Madison in 1999. Oguz is a member of SMPTE, the IEEE, and ACM.",
+        "name": "S. H. Oguz"
+      },
+      {
+        "affiliation": "EMC Corp., Hopkinton, MA 01748",
+        "bio": "Avri Faibish is a high school senior and an early starter in the new internet-driven technology world. Fascinated from the very beginning by the possibilities offered by digital media, in his junior high school year, he was involved in testing image quality of digital video servers in the initial phases of MPEG-2. He used his skills in these areas during internships at EMC working with experts in the evaluation of different codec technologies and contributed to the performance of the EMC Video Server. Later he become involved in the low bandwidth video codecs using MPEG-4 technology. As a consultant for DivX Networks Faibish, applying his knowledge to video compression, contributed to the excellent quality of a new codec. He was also involved in the preparation of demonstrations of different codec technologies popular on the internet.",
+        "name": "A. Faibish"
+      },
+      {
+        "affiliation": "EMC Corp., Hopkinton, MA 01748",
+        "bio": "Sorin Faibish has been involved in the design of complex automation systems involving mechatronics, digital signal processing, image processing, and computer vision. In 1997, he joined the Media Solutions Group of EMC Corporation as a project manager and consultant for MPEG and video compression technologies. Presently he is with the Network Storage Group of EMC as a senior technologist focusing on media applications. His interests are in MPEG processing in the compressed domain, splicing of MPEG coded media assets, and NAS and SAN storage solutions for streaming and media applications. Faibish received an engineering degree in automatic control from Bucharest Polytechnic Institute of Romania and an M.S. degree in electrical engineering from Technion, Israel, in 1976 and 1980, respectively. A member of SMPTE and the IEEE, he is the author of numerous technical papers and holds 23 patents.",
+        "name": "S. Faibish"
+      },
+      {
+        "affiliation": "EMC Corp., Hopkinton, MA 01748",
+        "bio": "Gerald Cotter has held engineering and management positions at Digital Equipment, Intel, and EMC Corporation in a career in high technology spanning nearly 20 years. At Digital, he worked in a variety of capacities on projects that included digital control technology for large computer power systems, At Intel, he was the product manager for a StrongARM media processor product and program manager for a Next GenerationStrongARM processor. Currently, at EMC, Cotter is an advanced development engineering manager in the Network Storage Group. Previously he was the engineering manager of the Internet and Computer Systems Technology team in the Media Solutions Group.",
+        "name": "G. Cotter"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from SMPTE canonical repository import (smpte-canonical-audit/canonicalLibrary.*.json); previous value was a placeholder",
+      "originalValue": "other",
+      "source": "parsed",
+      "updated": "2026-07-07T23:39:31.295Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18347.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "year": "2002",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18347.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18347.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docId": "10.5594-J18347",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/J18347",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docLabel": "SMPTE Journal ( Volume: 111, Issue: 9, September 2002)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docTitle": "Objective Image Quality Metrics for DCT-Based Video Compression",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18347.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "doi": "10.5594/J18347",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18347.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/J18347",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/J18347",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "issn": {
+      "print": "0036-1682",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18347.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18347.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08182015 BACKFILE JOURNAL FRESH/smptej_111_9/MIJR15Vol111No9.xml)",
+      "source": "parsed",
+      "updated": "2026-06-17T00:17:09.425Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "SMPTE Journal",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "9",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18347.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "pages": "385–392",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18347.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publicationDate": "2002-09-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18347.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08182015 BACKFILE JOURNAL FRESH/smptej_111_9/MIJR15Vol111No9.xml)",
+        "source": "parsed",
+        "updated": "2026-06-17T00:17:09.425Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18347.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "10.5594-J06401",
+        "10.5594-J17594",
+        "orphan/10.5594-J18347/bibr1-10.5594_J18347",
+        "orphan/10.5594-J18347/bibr2-10.5594_J18347",
+        "orphan/10.5594-J18347/bibr4-10.5594_J18347",
+        "orphan/10.5594-J18347/bibr6-10.5594_J18347",
+        "orphan/10.5594-J18347/bibr7-10.5594_J18347",
+        "orphan/10.5594-J18347/bibr8-10.5594_J18347",
+        "orphan/10.5594-J18347/bibr9-10.5594_J18347",
+        "orphan/10.5594-J18347/bibr10-10.5594_J18347",
+        "orphan/10.5594-J18347/bibr11-10.5594_J18347",
+        "orphan/10.5594-J18347/bibr12-10.5594_J18347",
+        "orphan/10.5594-J18347/bibr13-10.5594_J18347",
+        "orphan/10.5594-J18347/bibr14-10.5594_J18347",
+        "orphan/10.5594-J18347/bibr15-10.5594_J18347",
+        "orphan/10.5594-J18347/bibr16-10.5594_J18347",
+        "orphan/10.5594-J18347/bibr17-10.5594_J18347",
+        "orphan/10.5594-J18347/bibr18-10.5594_J18347",
+        "orphan/10.5594-J18347/bibr19-10.5594_J18347",
+        "orphan/10.5594-J18347/bibr20-10.5594_J18347",
+        "orphan/10.5594-J18347/bibr21-10.5594_J18347",
+        "orphan/10.5594-J18347/bibr22-10.5594_J18347"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteJournalRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T18:21:02.558Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/SMPTE%20Journal/111/9/7/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.437Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — journal papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "volume": "111",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J18347.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    }
+  }
+}

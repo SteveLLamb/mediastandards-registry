@@ -1,0 +1,337 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST310.2010",
+  "document": {
+    "abstract": "This standard describes the physical interface and modulation characteristics for a synchronous serial interface to carry MPEG-2 transport bit streams at rates up to 40 Mb/s. It is a point-to-point interface intended for use in a low-noise environment. The low-noise environment is defined as a noise level that would corrupt no more than one MPEG-2 data packet per day at the transport clock rate. When other transmission systems (e.g., studio-to-transmitter microwave links, etc.) are interposed between devices employing this interface, higher noise levels may be encountered. In such cases, it is recommended that appropriate error correcting methods be used (see Figure 1).",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-310-2010_1/st0310-2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.851Z"
+    },
+    "approvalDate": "2010-11-12",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json); Zoho is canonical for SMPTE standards metadata, registry value overwritten",
+      "originalValue": "2010",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2026-06-15T20:27:42.872Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-310-2010_1/st0310-2010.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.851Z"
+      },
+      "year": "2010",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-310-2010_1/st0310-2010.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.851Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-310-2010_1/st0310-2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.851Z"
+    },
+    "docId": "SMPTE.ST310.2010",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st310/20101112-pub/",
+      "updated": "2025-10-12T23:29:02.332Z"
+    },
+    "docLabel": "SMPTE ST 310:2010",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st310/20101112-pub/",
+      "updated": "2025-10-12T23:29:02.332Z"
+    },
+    "docNumber": "310",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st310/20101112-pub/",
+      "updated": "2025-10-12T23:29:02.332Z"
+    },
+    "docSuiteTitle": "Television",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-12-12T21:24:33.992Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docTitle": "Synchronous Serial Interface for MPEG-2 Digital Transport Streams",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": "Television - Synchronous Serial Interface for MPEG-2 Digital Transport Streams",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-12-12T21:24:33.992Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st310/20101112-pub/",
+      "updated": "2025-10-12T23:29:02.332Z"
+    },
+    "doi": "10.5594/SMPTE.ST310.2010",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st310/20101112-pub/",
+      "updated": "2025-10-12T23:29:02.332Z"
+    },
+    "familyId": "310",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-310-2010_1/st0310-2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.851Z"
+    },
+    "group": "smpte-32nf-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-310-2010_1/st0310-2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.851Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST310.2010",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st310/20101112-pub/",
+      "updated": "2025-10-12T23:29:02.332Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-310-2010_1/st0310-2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.851Z"
+    },
+    "isbn": "978-1-61482-450-3",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-310-2010_1/st0310-2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.851Z"
+    },
+    "keywords": [
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Interfaces",
+      "Television",
+      "Compression",
+      "MPEG"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Scrubbed against src/main/config/site.json controlledKeywords (auto-fix renames + drop noise)",
+      "originalValue": [
+        "Communication",
+        "Networking and Broadcast Technologies",
+        "Interfaces",
+        "Television",
+        "Compression",
+        "Interface",
+        "MPEG"
+      ],
+      "source": "parsed",
+      "updated": "2026-06-17T17:24:10.972Z",
+      "version": "kw-scrub@v1"
+    },
+    "numberOfPages": "5",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–12",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-310-2010_1/st0310-2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.851Z"
+    },
+    "productNumber": "SSD001451",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-310-2010_1/st0310-2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.851Z"
+    },
+    "publicationDate": "2010-11-12",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st310/20101112-pub/",
+      "updated": "2025-10-12T23:29:02.332Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st310/20101112-pub/",
+      "updated": "2025-10-12T23:29:02.332Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-310-2010_1/st0310-2010.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.851Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-310-2010_1/st0310-2010.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.851Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-310-2010_1/st0310-2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.851Z"
+    },
+    "references": {
+      "bibliographic": [
+        "ISO.13818-1.2007",
+        "SMPTE.RP184.2004",
+        "ATSC.A53.2007",
+        "ATSC.A64B.2008"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-19T17:05:10.539Z"
+      },
+      "normative": [
+        "IEC.61169-8"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-19T17:05:10.539Z"
+      }
+    },
+    "releaseTag": "20101112-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st310/20101112-pub/",
+      "updated": "2025-10-12T23:29:02.332Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/st310/20101112-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000008kbr",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-30T22:51:37.996Z",
+      "version": "extractDocs.js@commit:ee2844fb1cf2"
+    },
+    "standardId": "20704",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-310-2010_1/st0310-2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.851Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T23:29:02.332Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-12T23:29:02.332Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T23:29:02.332Z"
+      },
+      "stabilized": true,
+      "stabilized$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #state",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://pub.smpte.org/doc/st310/20101112-pub/",
+        "updated": "2026-06-29T06:07:52.614Z",
+        "version": "extractDocs.js@commit:d070e710ccaa"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T23:29:02.332Z"
+      }
+    }
+  }
+}

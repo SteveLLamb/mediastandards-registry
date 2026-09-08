@@ -1,0 +1,330 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.OV2036-0.2012",
+  "document": {
+    "abstract": "SMPTE ST 2036 Ultra High Definition Television suite of documents is in multiple parts.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-0-2012_1/st2036-0-2012.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.847Z"
+    },
+    "approvalDate": "2012-09-26",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json); Zoho is canonical for SMPTE standards metadata, registry value overwritten",
+      "originalValue": "2012",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2026-06-15T20:27:42.872Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-0-2012_1/st2036-0-2012.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.847Z"
+      },
+      "year": "2012",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-0-2012_1/st2036-0-2012.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.847Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-0-2012_1/st2036-0-2012.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.847Z"
+    },
+    "docId": "SMPTE.OV2036-0.2012",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/ov2036-0/20120926-pub/",
+      "updated": "2025-10-26T17:01:53.885Z"
+    },
+    "docLabel": "SMPTE OV 2036-0:2012",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/ov2036-0/20120926-pub/",
+      "updated": "2025-10-26T17:01:53.885Z"
+    },
+    "docNumber": "2036",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/ov2036-0/20120926-pub/",
+      "updated": "2025-10-26T17:01:53.885Z"
+    },
+    "docPart": "0",
+    "docPart$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubPart meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/ov2036-0/20120926-pub/",
+      "updated": "2025-10-26T17:01:53.885Z"
+    },
+    "docSuiteTitle": "Ultra High Definition Television",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-12-12T21:29:55.605Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docTitle": "Ultra High Definition Television",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": "Ultra High Definition Television — Ultra High Definition Television",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-12-12T21:29:55.605Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docType": "Overview Document",
+    "docType$meta": {
+      "confidence": "high",
+      "excludeChanges": true,
+      "note": "Publication type parsed from HTML | TRIAGE: OV prefix → Overview Document; XML mapping too generic",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/ov2036-0/20120926-pub/",
+      "updated": "2026-05-13T21:00:11.996Z"
+    },
+    "doi": "10.5594/SMPTE.OV2036-0.2012",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/ov2036-0/20120926-pub/",
+      "updated": "2025-10-26T17:01:53.885Z"
+    },
+    "familyId": "2036-0",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-0-2012_1/st2036-0-2012.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.847Z"
+    },
+    "group": "smpte-10e-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-0-2012_1/st2036-0-2012.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.847Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.OV2036-0.2012",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/ov2036-0/20120926-pub/",
+      "updated": "2025-10-26T17:01:53.885Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-0-2012_1/st2036-0-2012.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.847Z"
+    },
+    "isbn": "978-1-61482-725-2",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-0-2012_1/st2036-0-2012.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.847Z"
+    },
+    "keywords": [
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Image Formats",
+      "Television",
+      "UHDTV"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Scrubbed against src/main/config/site.json controlledKeywords (auto-fix renames + drop noise)",
+      "originalValue": [
+        "Communication",
+        "Networking and Broadcast Technologies",
+        "Image Formats",
+        "Television",
+        "UHDTV",
+        "Image Format"
+      ],
+      "source": "parsed",
+      "updated": "2026-06-17T17:18:30.093Z",
+      "version": "kw-scrub@v1"
+    },
+    "numberOfPages": "2",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–2",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-0-2012_1/st2036-0-2012.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.847Z"
+    },
+    "productNumber": "SSD001710",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-0-2012_1/st2036-0-2012.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.847Z"
+    },
+    "publicationDate": "2012-09-26",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/ov2036-0/20120926-pub/",
+      "updated": "2025-10-26T17:01:53.885Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/ov2036-0/20120926-pub/",
+      "updated": "2025-10-26T17:01:53.885Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-0-2012_1/st2036-0-2012.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.847Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-0-2012_1/st2036-0-2012.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.847Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-0-2012_1/st2036-0-2012.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.847Z"
+    },
+    "releaseTag": "20120926-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/ov2036-0/20120926-pub/",
+      "updated": "2025-10-26T17:01:53.885Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/ov2036-0/20120926-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000007NZQ",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-11-11T04:50:56.967Z",
+      "version": "extractDocs.js@commit:dea962f9e9d7"
+    },
+    "standardId": "20537",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2036-0-2012_1/st2036-0-2012.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.847Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:53.885Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-26T17:01:53.885Z"
+      },
+      "latestVersion": false,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:53.885Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:53.885Z"
+      },
+      "supersededBy": [
+        "SMPTE.OV2036-0.2013"
+      ],
+      "supersededBy$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": [],
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:53.885Z"
+      },
+      "supersededDate": "2013-09-08",
+      "supersededDate$meta": {
+        "confidence": "high",
+        "note": "Calculated as the publication date of the next base release (from releaseTag)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:53.885Z"
+      }
+    }
+  }
+}

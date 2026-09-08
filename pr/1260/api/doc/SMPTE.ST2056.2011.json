@@ -1,0 +1,322 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST2056.2011",
+  "document": {
+    "abstract": "This Standard defines a standardized wrapper for the carriage of low bit rate MPEG-2 TS packets, in the 10-bit vertical ancillary data (VANC) space of a standard definition or high definition serial digital link in accordance with SMPTE ST 291. Examples of such low bitrate services are EBIF and DVB bitmapped subtitles. — Note: Low bit rate means typically 1-20 TS packets per video frame.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2056-2011_1/st2056-2011.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.849Z"
+    },
+    "approvalDate": "2011-06-29",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2056-2011_1/st2056-2011.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.849Z"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2056-2011_1/st2056-2011.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.849Z"
+      },
+      "year": "2011",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2056-2011_1/st2056-2011.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.849Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2056-2011_1/st2056-2011.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.849Z"
+    },
+    "docId": "SMPTE.ST2056.2011",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2056/20110629-pub/",
+      "updated": "2025-10-26T17:02:17.024Z"
+    },
+    "docLabel": "SMPTE ST 2056:2011",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2056/20110629-pub/",
+      "updated": "2025-10-26T17:02:17.024Z"
+    },
+    "docNumber": "2056",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2056/20110629-pub/",
+      "updated": "2025-10-26T17:02:17.024Z"
+    },
+    "docTitle": "MPEG TS Packets Carried in VANC",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2056/20110629-pub/",
+      "updated": "2025-10-26T17:02:17.024Z"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2056/20110629-pub/",
+      "updated": "2025-10-26T17:02:17.024Z"
+    },
+    "doi": "10.5594/SMPTE.ST2056.2011",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2056/20110629-pub/",
+      "updated": "2025-10-26T17:02:17.024Z"
+    },
+    "familyId": "2056",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2056-2011_1/st2056-2011.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.849Z"
+    },
+    "group": "smpte-32nf-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2056-2011_1/st2056-2011.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.849Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST2056.2011",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2056/20110629-pub/",
+      "updated": "2025-10-26T17:02:17.024Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2056-2011_1/st2056-2011.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.849Z"
+    },
+    "isbn": "978-1-61482-647-7",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2056-2011_1/st2056-2011.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.849Z"
+    },
+    "keywords": [
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Interfaces",
+      "Television",
+      "Ancillary Data",
+      "Compression",
+      "MPEG"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Scrubbed against src/main/config/site.json controlledKeywords (auto-fix renames + drop noise)",
+      "originalValue": [
+        "Communication",
+        "Networking and Broadcast Technologies",
+        "Interfaces",
+        "Television",
+        "Ancillary Data",
+        "Compression",
+        "Interface",
+        "MPEG"
+      ],
+      "source": "parsed",
+      "updated": "2026-06-17T17:24:10.972Z",
+      "version": "kw-scrub@v1"
+    },
+    "numberOfPages": "12",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–12",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2056-2011_1/st2056-2011.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.849Z"
+    },
+    "productNumber": "SSD001647",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2056-2011_1/st2056-2011.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.849Z"
+    },
+    "publicationDate": "2011-06-29",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2056/20110629-pub/",
+      "updated": "2025-10-26T17:02:17.024Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2056/20110629-pub/",
+      "updated": "2025-10-26T17:02:17.024Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2056-2011_1/st2056-2011.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.849Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2056-2011_1/st2056-2011.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.849Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2056-2011_1/st2056-2011.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.849Z"
+    },
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST2031.2007",
+        "ATSC.A90.2000",
+        "ETSI.TR-101-202.2003",
+        "ETSI.EN-300-743.2006",
+        "ETSI.EN-301-192.2008",
+        "SCTE.127.2007",
+        "orphan/SMPTE.ST2056.2011/ref-bib-4",
+        "orphan/SMPTE.ST2056.2011/ref-bib-5"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Resolved from sibling -ref.xml via resolveSmpteSourceRefs.v2.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-06-22T23:05:50.315Z"
+      },
+      "normative": [
+        "SMPTE.ST291.2010",
+        "ISO.13818-1.2007",
+        "ISO.13818-6.1998"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-19T17:05:10.539Z"
+      }
+    },
+    "releaseTag": "20110629-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2056/20110629-pub/",
+      "updated": "2025-10-26T17:02:17.024Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/st2056/20110629-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000007Nd8",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-30T22:55:19.519Z",
+      "version": "extractDocs.js@commit:ee2844fb1cf2"
+    },
+    "standardId": "20571",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2056-2011_1/st2056-2011.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.849Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:02:17.024Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-26T17:02:17.024Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:02:17.024Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:02:17.024Z"
+      }
+    }
+  }
+}

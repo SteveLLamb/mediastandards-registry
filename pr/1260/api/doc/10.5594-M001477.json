@@ -1,0 +1,267 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-M001477",
+  "document": {
+    "abstract": "NHK has been researching and developing SUPER Hi-VISION, with 33 megapixels (7,680-pixel by 4,320-line of resolution), as the next-generation ultra-high definition television (UHDTV) broadcast system. Last year, NHK reported that it had decided to double the frame rate of SUPER Hi-VISION video to 120 Hz to improve its motion portrayal quality. This UHDTV system has been standardized as Recommendation ITU-R BT.2020. We report on 120-Hz SUPER Hi-VISION devices that we have developed in this paper. One is a 120-Hz SUPER Hi-VISION image-capture device that uses three 120-Hz, 33-megapixel CMOS image sensors. The sensor uses 12-bit ADCs and operates at a data rate of 51.2 Gbit/s. We have also used three 8-megapixel LCOS chips and e-shift technology to develop a 120-Hz SUPER Hi-VISION projector. These 120-Hz SUPER Hi-VISION devices were exhibited at our open house in May 2012 and demonstrated superb picture quality with less motion blur.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2012_10/10.5594_M001477.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "NHK, 1-10-11, Kinuta, Setagaya-ku, Tokyo, 157-8510, Japan",
+        "name": "Hiroshi Shimamoto"
+      },
+      {
+        "affiliation": "NHK, 1-10-11, Kinuta, Setagaya-ku, Tokyo, 157-8510, Japan",
+        "name": "Kazuya Kitamura"
+      },
+      {
+        "affiliation": "NHK, 1-10-11, Kinuta, Setagaya-ku, Tokyo, 157-8510, Japan",
+        "name": "Toshihisa Watabe"
+      },
+      {
+        "affiliation": "NHK, 1-10-11, Kinuta, Setagaya-ku, Tokyo, 157-8510, Japan",
+        "name": "Hiroshi Ootake"
+      },
+      {
+        "affiliation": "NHK, 1-10-11, Kinuta, Setagaya-ku, Tokyo, 157-8510, Japan",
+        "name": "Norifumi Egami"
+      },
+      {
+        "affiliation": "NHK, 1-10-11, Kinuta, Setagaya-ku, Tokyo, 157-8510, Japan",
+        "name": "Yuichi Kusakabe"
+      },
+      {
+        "affiliation": "NHK, 1-10-11, Kinuta, Setagaya-ku, Tokyo, 157-8510, Japan",
+        "name": "Yukihiro Nishida"
+      },
+      {
+        "affiliation": "Shizuoka University, 3-5-1, Johoku, Naka-ku, Hamamatsu, 432-8011, Japan",
+        "name": "Shoji Kawahito"
+      },
+      {
+        "affiliation": "Brookman Technology, Inc., 3-1-7 Wajiyama, Naka-ku, Hamamatsu, 432-8003, Japan",
+        "name": "Tomohiko Kosugi"
+      },
+      {
+        "affiliation": "Brookman Technology, Inc., 3-1-7 Wajiyama, Naka-ku, Hamamatsu, 432-8003, Japan",
+        "name": "Takashi Watanabe"
+      },
+      {
+        "affiliation": "Hitachi Kokusai Electric Inc., 32 Miyuki-cho, Kodaira, Tokyo, Japan",
+        "name": "Tadaaki Yanagi"
+      },
+      {
+        "affiliation": "Hitachi Kokusai Electric Inc., 32 Miyuki-cho, Kodaira, Tokyo, Japan",
+        "name": "Tetsuo Yoshida"
+      },
+      {
+        "affiliation": "Link laboratory Inc., Kodaira, Tokyo, Japan",
+        "name": "Hideki Kikuchi"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Canonical-confirmed full paper (summary-abstract set is orig-research in the SMPTE canonical repos); HIGHWIRE-era abstract label was a delivery artifact",
+      "originalValue": "summary-abstract",
+      "source": "resolved",
+      "updated": "2026-07-09T19:12:47.628Z",
+      "version": "contenttype-fixes@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2012_10/10.5594_M001477.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      },
+      "year": "2012",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2012_10/10.5594_M001477.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2012_10/10.5594_M001477.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docId": "10.5594-M001477",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/M001477",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docLabel": "SMPTE Meetings and Conferences ( October 2012)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docTitle": "120 Hz-frame-rate SUPER Hi-VISION Capture and Display Devices",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2012_10/10.5594_M001477.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docType": "Conference Paper",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE conference paper",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "doi": "10.5594/M001477",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2012_10/10.5594_M001477.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/M001477",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/M001477",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "keywords": [
+      "Super Hi-Vision",
+      "UHDTV",
+      "BT.2020"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Backfilled from SMPTE canonical repository index_terms, mapped through controlledKeywords + curated synonym folds (keywordVocabDecisions.json) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T23:52:57.741Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "10",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2012_10/10.5594_M001477.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "pages": "1–11",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2012_10/10.5594_M001477.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publicationDate": "2012-10-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2012_10/10.5594_M001477.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2012_10/10.5594_M001477.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-M001477/bibr1-10.5594_M001477",
+        "orphan/10.5594-M001477/bibr2-10.5594_M001477",
+        "orphan/10.5594-M001477/bibr3-10.5594_M001477",
+        "orphan/10.5594-M001477/bibr4-10.5594_M001477",
+        "orphan/10.5594-M001477/bibr5-10.5594_M001477",
+        "orphan/10.5594-M001477/bibr6-10.5594_M001477",
+        "orphan/10.5594-M001477/bibr7-10.5594_M001477",
+        "orphan/10.5594-M001477/bibr8-10.5594_M001477",
+        "orphan/10.5594-M001477/bibr9-10.5594_M001477"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteConferenceRefs.js (precheck-reuse)",
+        "source": "parsed",
+        "updated": "2026-07-06T20:02:43.384Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/conferences/The%202012%20Annual%20Technical%20Conference%20&%20Exhibition/48/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.438Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — conference papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "volume": "2012",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/ORIGINAL SAMPLES/Conferences/smptem_2012_10/10.5594_M001477.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    }
+  }
+}

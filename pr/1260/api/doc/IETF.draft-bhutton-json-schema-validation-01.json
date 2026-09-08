@@ -1,0 +1,233 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "IETF.draft-bhutton-json-schema-validation-01",
+  "document": {
+    "abstract": "JSON Schema (application/schema+json) has several purposes, one of which is JSON instance validation. This document specifies a vocabulary for JSON Schema to describe the meaning of JSON documents, provide hints for user interfaces working with JSON data, and to make assertions about what a valid document must look like.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from archive XML front/abstract",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-validation-01/",
+      "updated": "2026-02-23T20:16:02.824Z",
+      "version": "extractDocs.js@commit:a0cd014d979d"
+    },
+    "authors": [
+      {
+        "name": "Austin Wright"
+      },
+      {
+        "name": "Henry Andrews"
+      },
+      {
+        "name": "Ben Hutton"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-validation-01/",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "docId": "IETF.draft-bhutton-json-schema-validation-01",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from RFC number or Datatracker identifier",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-validation-01/",
+      "updated": "2026-02-23T20:16:02.824Z",
+      "version": "extractDocs.js@commit:a0cd014d979d"
+    },
+    "docLabel": "IETF draft-bhutton-json-schema-validation-01",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from provider and document identifier",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-validation-01/",
+      "updated": "2026-02-23T20:16:02.824Z",
+      "version": "extractDocs.js@commit:a0cd014d979d"
+    },
+    "docTitle": "JSON Schema Validation: A Vocabulary for Structural Validation of JSON",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from archive XML front/title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-validation-01/",
+      "updated": "2026-02-23T20:16:02.824Z",
+      "version": "extractDocs.js@commit:a0cd014d979d"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Mapped from Datatracker std_level or RFC status text",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-validation-01/",
+      "updated": "2026-02-23T20:16:02.824Z",
+      "version": "extractDocs.js@commit:a0cd014d979d"
+    },
+    "href": "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-validation-01/",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL normalized and retained from seed/discovery input",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-validation-01/",
+      "updated": "2026-02-23T20:16:02.824Z",
+      "version": "extractDocs.js@commit:a0cd014d979d"
+    },
+    "keywords": [
+      "JSON",
+      "Schema",
+      "Validation"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Parsed from archive XML front/keyword",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-validation-01/",
+      "updated": "2026-02-24T22:12:38.226Z",
+      "version": "extractDocs.js@commit:ad663705eb41"
+    },
+    "publicationDate": "2022-06-10",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from seed HTML date metadata (citation/time datetime)",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-validation-01/",
+      "updated": "2026-02-23T20:16:02.824Z",
+      "version": "extractDocs.js@commit:a0cd014d979d"
+    },
+    "publisher": "IETF",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Static: provider",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-validation-01/",
+      "updated": "2026-02-23T20:16:02.824Z",
+      "version": "extractDocs.js@commit:a0cd014d979d"
+    },
+    "references": {
+      "bibliographic": [
+        "RFC4329"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Parsed from archive XML references (Informative/Bibliographic References)",
+        "originalValue": [],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-validation-01/",
+        "updated": "2026-02-24T22:12:38.226Z",
+        "version": "extractDocs.js@commit:ad663705eb41"
+      },
+      "normative": [
+        "RFC2119",
+        "RFC1123",
+        "RFC2045",
+        "RFC2046",
+        "RFC2673",
+        "RFC3339",
+        "RFC3986",
+        "RFC3987",
+        "RFC4122",
+        "RFC4291",
+        "RFC4648",
+        "RFC5321",
+        "RFC5890",
+        "RFC5891",
+        "RFC6570",
+        "RFC6531",
+        "RFC6901",
+        "RFC8259",
+        "ECMA.262.202006",
+        "IETF.draft-handrews-relative-json-pointer-01",
+        "IETF.draft-bhutton-json-schema-01"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Parsed from archive XML references (Normative References)",
+        "originalValue": [],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-validation-01/",
+        "updated": "2026-02-24T22:12:38.226Z",
+        "version": "extractDocs.js@commit:ad663705eb41"
+      }
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-validation-01/",
+        "updated": "2026-02-23T20:16:02.824Z",
+        "version": "extractDocs.js@commit:a0cd014d979d"
+      },
+      "draft": true,
+      "draft$meta": {
+        "confidence": "high",
+        "note": "Parsed from Datatracker/RFC sources",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-validation-01/",
+        "updated": "2026-02-23T20:16:02.824Z",
+        "version": "extractDocs.js@commit:a0cd014d979d"
+      },
+      "errataExist": false,
+      "errataExist$meta": {
+        "confidence": "high",
+        "note": "Derived from presence of errata links",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-validation-01/",
+        "updated": "2026-02-23T20:16:02.824Z",
+        "version": "extractDocs.js@commit:a0cd014d979d"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-validation-01/",
+        "updated": "2026-02-23T20:16:02.824Z",
+        "version": "extractDocs.js@commit:a0cd014d979d"
+      },
+      "statusNote": "Internet-Draft",
+      "statusNote$meta": {
+        "confidence": "high",
+        "note": "Mapped from Datatracker std_level or RFC status text",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-validation-01/",
+        "updated": "2026-02-23T20:16:02.824Z",
+        "version": "extractDocs.js@commit:a0cd014d979d"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://datatracker.ietf.org/doc/html/draft-bhutton-json-schema-validation-01/",
+        "updated": "2026-02-23T20:16:02.824Z",
+        "version": "extractDocs.js@commit:a0cd014d979d"
+      }
+    }
+  }
+}

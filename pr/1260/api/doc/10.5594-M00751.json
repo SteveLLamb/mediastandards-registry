@@ -1,0 +1,230 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-M00751",
+  "document": {
+    "abstract": "This paper describes the architecture and design considerations of a very high resolution HDTV Color Graphics System for operation with the Sony NEWS family of workstations. This graphics system uses the SMPTE-240M HDTV standard and supports also all the high resolution display formats commonly available (HDTV 1920 times 1035 interlaced, 2048 times 2048, 2048 times 1536, etc.) with a 16.7 million color architecture. It uses six graphics accelerators (100,000 short-vectors/sec), very high speed circuitry as well as a VME interface for communication with host computer. The introduction of this graphics system, along with the software environment provided by the NEWS Workstations will facilitate the use of the unique capabilities embedded in the SMPTE 240M HDTV standard in its applications to electronic printing and publishing, industrial design and the motion picture industry.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00751.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "Sony Corporation Teaneck, N.J.",
+        "bio": "Taka H. Fujimori received a B.E. degree in electrical engineering in 1981 and an M.E. degree in electronics in 1983, both from the University of Tokyo. He joined Sony Corporation and worked on a digital photo retouching system for newspapers and a videotex frame creation system. He also designed computer numerical controllers for a drilling/router machine. From 1986 to 1988, he participated in the Autonomous Land Vehicle project at Carnegie-Mellon University and developed a road scene interpretation expert system. After returning to Sony, he was involved in the design and development of a very high resolution graphics board. He is now working on a high-speed optical fiber network for workstations.",
+        "name": "T. Fujimori"
+      },
+      {
+        "affiliation": "Sony Corporation Teaneck, N.J.",
+        "bio": "Hugo P. Gaggioni is a manager of product planning with Sony Advanced Systems. Before joining Sony Advanced Systems, he was a member of the technical staff of the Visual Communications Research District at Bell Communications Research. The District was involved in research of new compression algorithms for the digital transmission of HDTV and standard video signals, as well as in high-resolution graphics and video terminals. He received his B.Sc. in telecommunications and an M.Sc. in electrical engineering from Essex University, Colchester, England, and an M.Sc. in systems engineering from the University of Pennsylvania, Philadelphia. He also holds a Professional Engineering degree from Columbia University, New York. He is a vice-chairman of the Working Party 4, System Standard of the Systems Subcommittee of the Advanced Television Advisory Group to the F.C.C. He is also Chairman of the SMPTE Ad Hoc Group Studying the Digital Representation of the 115/60 HDTV Standard.",
+        "name": "H. Gaggioni"
+      },
+      {
+        "affiliation": "Sony Corporation Teaneck, N.J.",
+        "bio": "Masatoshi Imai was born in Tokyo, Japan, on May 13, 1958. He received a B.E. degree in computer science from the University of Electro Communications, Japan, in 1981. From 1981 to 1987, he worked for the Hitachi Microcomputer Engineering Corporation, Tokyo, Japan, where he developed single-board computers. He moved in 1987 to the Sony Corporation. Since joining Sony, he has been engaged in the development of graphics display systems. He is a member of The Information Processing Society of Japan.",
+        "name": "M. Imai"
+      },
+      {
+        "affiliation": "Sony Corporation Teaneck, N.J.",
+        "bio": "Norihito Ichikawa was born in Tokyo, Japan, on April 14, 1959. He received a B.E. degree in electronic engineering from the University of Electro Communications, Japan, in 1983. Since joining the Sony Corporation, Tokyo, Japan, in 1983, where he has been engaged in the development of graphics display systems. He is a member of The Information Processing Society of Japan.",
+        "name": "N. Ichikawa"
+      },
+      {
+        "affiliation": "Sony Corporation Teaneck, N.J.",
+        "bio": "Hidehiro Hirase received his B.S. degree from Waseda University, Tokyo, Japan, in 1983. In 1987, he joined the Workstation Division, Sony Corporation, where he has been engaged in the development of computer graphic systems.",
+        "name": "H. Hirase"
+      },
+      {
+        "affiliation": "Sony Corporation Teaneck, N.J.",
+        "bio": "Terada Mitsutoshi was born in Shizuoka, Japan, in 1962. He received B.E. and M.E. degrees in computer science engineering from Yamanashi University in 1985 and 1987, respectively. Since joining Sony Corporation in 1987, he has been engaged in the development of computer graphics software. He is a member of The Information Processing Society of Japan.",
+        "name": "M. Terada"
+      },
+      {
+        "affiliation": "Sony Corporation Teaneck, N.J.",
+        "bio": "Katsushige Hata received a B.S. degree in electronic engineering from the Ibaraki University, Ibaraki, Japan, in 1977. He joined the Sony Corporation in 1977. Since then, he has mainly been engaged in the development of electronic DA/CAM systems. Currently, he is a manager of graphics product design in the Workstation Division, Sony Corporation. Mr. Hata is a member of The Institute of Electronics, Information and Communication Engineers in Japan.",
+        "name": "K. Hata"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Canonical-confirmed full paper (summary-abstract set is orig-research in the SMPTE canonical repos); HIGHWIRE-era abstract label was a delivery artifact",
+      "originalValue": "summary-abstract",
+      "source": "resolved",
+      "updated": "2026-07-09T19:12:47.628Z",
+      "version": "contenttype-fixes@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00751.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      },
+      "year": "1989",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00751.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00751.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docId": "10.5594-M00751",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/M00751",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docLabel": "SMPTE Meetings and Conferences ( February 1989)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docTitle": "A Very High Resolution, 16.7 Million-Color HDTV Graphic System",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00751.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docType": "Conference Paper",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE conference paper",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "doi": "10.5594/M00751",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00751.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/M00751",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/M00751",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "number": "26",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00751.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "pages": "217–239",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00751.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publicationDate": "1989-02-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00751.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00751.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-M00751/bibr1-10.5594_M00751",
+        "orphan/10.5594-M00751/bibr2-10.5594_M00751"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteConferenceRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T20:02:43.384Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/conferences/Better%20Video%20Images:%2023rd%20Annual%20SMPTE%20Television%20Conference/21/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.439Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — conference papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "volume": "1989",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00751.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    }
+  }
+}

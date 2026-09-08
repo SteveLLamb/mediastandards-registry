@@ -1,0 +1,325 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST2075.2013",
+  "document": {
+    "abstract": "This document provides the specification on how to carry binary EBU TECH 3264 (STL) files into the MXF Generic Stream Container using the MXF Generic Stream Partition defined in SMPTE ST 410. This document specifies the Generic Stream Partition Pack, Generic Stream Data Element KLV coding and Essence Descriptors for STL files. — The document also defines how to link to STL essence which is external to an MXF file.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2075-2013_1/st2075-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.850Z"
+    },
+    "approvalDate": "2013-06-06",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2075-2013_1/st2075-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.850Z"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2075-2013_1/st2075-2013.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.850Z"
+      },
+      "year": "2013",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2075-2013_1/st2075-2013.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.850Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2075-2013_1/st2075-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.850Z"
+    },
+    "docId": "SMPTE.ST2075.2013",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2075/20130606-pub/",
+      "updated": "2025-10-26T21:41:18.548Z"
+    },
+    "docLabel": "SMPTE ST 2075:2013",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2075/20130606-pub/",
+      "updated": "2025-10-26T21:41:18.548Z"
+    },
+    "docNumber": "2075",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2075/20130606-pub/",
+      "updated": "2025-10-26T21:41:18.548Z"
+    },
+    "docTitle": "Mapping EBU TECH 3264 (STL) into the MXF Generic Stream Container",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2075/20130606-pub/",
+      "updated": "2025-10-26T21:41:18.548Z"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2075/20130606-pub/",
+      "updated": "2025-10-26T21:41:18.548Z"
+    },
+    "doi": "10.5594/SMPTE.ST2075.2013",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2075/20130606-pub/",
+      "updated": "2025-10-26T21:41:18.548Z"
+    },
+    "familyId": "2075",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2075-2013_1/st2075-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.850Z"
+    },
+    "group": "smpte-31fs-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2075-2013_1/st2075-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.850Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST2075.2013",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2075/20130606-pub/",
+      "updated": "2025-10-26T21:41:18.548Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2075-2013_1/st2075-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.850Z"
+    },
+    "isbn": "978-1-61482-754-2",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2075-2013_1/st2075-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.850Z"
+    },
+    "keywords": [
+      "Subtitles",
+      "MXF",
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Television",
+      "File Formats"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Scrubbed against src/main/config/site.json controlledKeywords (auto-fix renames + drop noise)",
+      "originalValue": [
+        "Subtitles",
+        "MXF",
+        "Communication",
+        "Networking and Broadcast Technologies",
+        "Television",
+        "File Formats",
+        "File Format"
+      ],
+      "source": "parsed",
+      "updated": "2026-06-17T17:18:30.093Z",
+      "version": "kw-scrub@v1"
+    },
+    "numberOfPages": "14",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–14",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2075-2013_1/st2075-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.850Z"
+    },
+    "productNumber": "SSD001733",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2075-2013_1/st2075-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.850Z"
+    },
+    "publicationDate": "2013-06-06",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2075/20130606-pub/",
+      "updated": "2025-10-26T21:41:18.548Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2075/20130606-pub/",
+      "updated": "2025-10-26T21:41:18.548Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2075-2013_1/st2075-2013.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.850Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2075-2013_1/st2075-2013.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.850Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2075-2013_1/st2075-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.850Z"
+    },
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST298.2009",
+        "SMPTE.RP210",
+        "SMPTE.RP224",
+        "EBU.Tech3264"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-19T17:09:57.766Z"
+      },
+      "normative": [
+        "RFC5646",
+        "SMPTE.ST336.2007",
+        "SMPTE.ST377-1.2011",
+        "SMPTE.ST410.2008"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-18T22:27:13.218Z"
+      }
+    },
+    "releaseTag": "20130606-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2075/20130606-pub/",
+      "updated": "2025-10-26T21:41:18.548Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/st2075/20130606-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000007Ndp",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-30T22:56:07.509Z",
+      "version": "extractDocs.js@commit:ee2844fb1cf2"
+    },
+    "standardId": "20593",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2075-2013_1/st2075-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.850Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T21:41:18.548Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-26T21:41:18.548Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T21:41:18.548Z"
+      },
+      "reaffirmDate": "2016-10-05",
+      "reaffirmDate$meta": {
+        "confidence": "high",
+        "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+        "source": "parsed",
+        "updated": "2026-06-15T20:13:55.508Z",
+        "version": "smpte-zoho-standards@v1"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T21:41:18.548Z"
+      }
+    }
+  }
+}

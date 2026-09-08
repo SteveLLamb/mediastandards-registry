@@ -1,0 +1,357 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST2001-1.2013",
+  "document": {
+    "abstract": "This standard defines an XML representation for data that is registered in the SMPTE metadata registers (SMPTE ST 395, SMPTE ST 335, SMPTE ST 2003 and SMPTE ST 400). The standard is applicable for data that can be described by a Reg-XML data model. — The specification defines the items with which a Reg-XML data model is specified, namely classes, properties and types. — The specification defines data mapping rules for representing the data in XML. — The specification defines informative model mapping rules that describe how to map a Reg-XML data model onto W3C XML Schemas (XSDs) for validation. — This specification provides a normative XSD for the representation of Reg-XML data models as Meta Dictionary XML documents.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2001-1-2013_1/st2001-1-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.845Z"
+    },
+    "approvalDate": "2013-11-06",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json); Zoho is canonical for SMPTE standards metadata, registry value overwritten",
+      "originalValue": "2013",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2026-06-15T20:27:42.872Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2001-1-2013_1/st2001-1-2013.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.845Z"
+      },
+      "year": "2013",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2001-1-2013_1/st2001-1-2013.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.845Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2001-1-2013_1/st2001-1-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.845Z"
+    },
+    "docId": "SMPTE.ST2001-1.2013",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2001-1/20131106-pub/",
+      "updated": "2025-10-26T17:01:19.432Z"
+    },
+    "docLabel": "SMPTE ST 2001-1:2013",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2001-1/20131106-pub/",
+      "updated": "2025-10-26T17:01:19.432Z"
+    },
+    "docNumber": "2001",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2001-1/20131106-pub/",
+      "updated": "2025-10-26T17:01:19.432Z"
+    },
+    "docPart": "1",
+    "docPart$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubPart meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2001-1/20131106-pub/",
+      "updated": "2025-10-26T17:01:19.432Z"
+    },
+    "docSuiteTitle": "XML Representation of SMPTE Registered Data",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-12-12T21:28:35.963Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docTitle": "Mapping Rules",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": "XML Representation of SMPTE Registered Data — Mapping Rules",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-12-12T21:28:35.963Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2001-1/20131106-pub/",
+      "updated": "2025-10-26T17:01:19.432Z"
+    },
+    "doi": "10.5594/SMPTE.ST2001-1.2013",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2001-1/20131106-pub/",
+      "updated": "2025-10-26T17:01:19.432Z"
+    },
+    "familyId": "2001-1",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2001-1-2013_1/st2001-1-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.845Z"
+    },
+    "group": "smpte-31fs-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2001-1-2013_1/st2001-1-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.845Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST2001-1.2013",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2001-1/20131106-pub/",
+      "updated": "2025-10-26T17:01:19.432Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2001-1-2013_1/st2001-1-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.845Z"
+    },
+    "isbn": "978-1-61482-784-9",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2001-1-2013_1/st2001-1-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.845Z"
+    },
+    "keywords": [
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Metadata",
+      "Television",
+      "XML"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2001-1-2013_1/st2001-1-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.845Z"
+    },
+    "numberOfPages": "52",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–52",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2001-1-2013_1/st2001-1-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.845Z"
+    },
+    "productNumber": "SSD001759",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2001-1-2013_1/st2001-1-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.845Z"
+    },
+    "publicationDate": "2013-11-06",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2001-1/20131106-pub/",
+      "updated": "2025-10-26T17:01:19.432Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2001-1/20131106-pub/",
+      "updated": "2025-10-26T17:01:19.432Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2001-1-2013_1/st2001-1-2013.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.845Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2001-1-2013_1/st2001-1-2013.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.845Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2001-1-2013_1/st2001-1-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.845Z"
+    },
+    "references": {
+      "normative": [
+        "SMPTE.ST298.2009",
+        "SMPTE.ST330.2011",
+        "SMPTE.ST335.2012",
+        "SMPTE.ST395.2013",
+        "SMPTE.ST400.2012",
+        "SMPTE.ST2003.2012",
+        "SMPTE.ST2029.2009",
+        "RFC1738",
+        "RFC2141",
+        "RFC2396",
+        "RFC3061",
+        "RFC4122",
+        "W3C.xmlschema-1.20041028",
+        "W3C.xmlschema-2.20041028",
+        "W3C.xlink11",
+        "W3C.xpath",
+        "W3C.xml.20040204",
+        "W3C.xml-names"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-19T15:31:12.559Z"
+      }
+    },
+    "releaseTag": "20131106-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2001-1/20131106-pub/",
+      "updated": "2025-10-26T17:01:19.432Z"
+    },
+    "repo": "https://github.com/SMPTE/st2001-1/",
+    "repo$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed or inferred publication type/number/part and verified to exist",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2001-1/20131106-pub/",
+      "updated": "2025-10-26T17:01:19.432Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/st2001-1/20131106-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000007NcS2AU",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-11-11T04:50:25.578Z",
+      "version": "extractDocs.js@commit:dea962f9e9d7"
+    },
+    "standardId": "20507",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-2001-1-2013_1/st2001-1-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.845Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:19.432Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-26T17:01:19.432Z"
+      },
+      "latestVersion": false,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:19.432Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:19.432Z"
+      },
+      "supersededBy": [
+        "SMPTE.ST2001-1.2015"
+      ],
+      "supersededBy$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": [],
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:19.432Z"
+      },
+      "supersededDate": "2015-08-30",
+      "supersededDate$meta": {
+        "confidence": "high",
+        "note": "Calculated as the publication date of the next base release (from releaseTag)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:19.432Z"
+      }
+    }
+  }
+}

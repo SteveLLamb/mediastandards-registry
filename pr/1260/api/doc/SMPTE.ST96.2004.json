@@ -1,0 +1,322 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST96.2004",
+  "document": {
+    "abstract": "This standard specifies the size and location of that portion of 35- and 16-mm motion-picture film to be captured by a scanning device for 4:3 and 16:9 aspect ratio.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-96-2004_1/st0096-2004.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.837Z"
+    },
+    "approvalDate": "2004-11-30",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json); Zoho is canonical for SMPTE standards metadata, registry value overwritten",
+      "originalValue": "2004",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2026-06-15T20:27:42.872Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-96-2004_1/st0096-2004.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.837Z"
+      },
+      "year": "2004",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-96-2004_1/st0096-2004.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.837Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-96-2004_1/st0096-2004.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.837Z"
+    },
+    "docId": "SMPTE.ST96.2004",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "manual",
+      "sourceUrl": "https://pub.smpte.org/doc/st96/20041130-pub/",
+      "updated": "2025-10-30T00:00:00Z"
+    },
+    "docLabel": "SMPTE ST 96:2004",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docNumber": "96",
+    "docNumber$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docSuiteTitle": "Television",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-12-12T21:20:08.321Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docTitle": "35- and 16-mm Motion-Picture Film - Scanned Image Area",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": "Television - 35- and 16-mm Motion-Picture Film - Scanned Image Area",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-12-12T21:20:08.321Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "doi": "10.5594/SMPTE.ST96.2004",
+    "doi$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "familyId": "96",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-96-2004_1/st0096-2004.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.837Z"
+    },
+    "group": "smpte-27c-tc",
+    "group$meta": {
+      "confidence": "medium",
+      "excludeChanges": true,
+      "note": "TRIAGE: Committee history: 20f-tc absorbed into 27c-tc. Registry has the modern merged committee",
+      "source": "manual",
+      "updated": "2026-05-13T21:25:53.974Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST96.2004",
+    "href$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "icsCodes": [
+      {
+        "code": "37.060.01",
+        "description": "Cinematography in general"
+      },
+      {
+        "code": "37.060.20",
+        "description": "Motion picture films. Cartridges"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-96-2004_1/st0096-2004.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.837Z"
+    },
+    "isbn": "978-1-61482-301-8",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-96-2004_1/st0096-2004.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.837Z"
+    },
+    "keywords": [
+      "Film",
+      "Image Formats",
+      "35mm",
+      "16mm",
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Television"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Scrubbed against src/main/config/site.json controlledKeywords (auto-fix renames + drop noise)",
+      "originalValue": [
+        "Film",
+        "Image Formats",
+        "35mm",
+        "16mm",
+        "Communication",
+        "Networking and Broadcast Technologies",
+        "Television",
+        "Image Format"
+      ],
+      "source": "parsed",
+      "updated": "2026-06-17T17:18:30.093Z",
+      "version": "kw-scrub@v1"
+    },
+    "numberOfPages": "8",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–8",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-96-2004_1/st0096-2004.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.837Z"
+    },
+    "productNumber": "SSD001302",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-96-2004_1/st0096-2004.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.837Z"
+    },
+    "publicationDate": "2004-11-30",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-96-2004_1/st0096-2004.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.837Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-96-2004_1/st0096-2004.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.837Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-96-2004_1/st0096-2004.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.837Z"
+    },
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST195.2000",
+        "SMPTE.ST233.2003",
+        "SMPTE.RP187.1995",
+        "SMPTE.EG25.2003",
+        "ISO.1223.2003",
+        "ISO.2906.2002",
+        "ISO.2907.2002",
+        "ISO.5768.1998"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "normative": [
+        "SMPTE.ST201.1996",
+        "SMPTE.ST7.2004",
+        "SMPTE.ST59.1998"
+      ],
+      "normative$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    },
+    "releaseTag": "20041130-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-10-12T05:19:18.837Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/st96/20041130-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000007Ngy",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-30T22:50:11.737Z",
+      "version": "extractDocs.js@commit:ee2844fb1cf2"
+    },
+    "standardId": "20881",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_st-96-2004_1/st0096-2004.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.837Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-12T05:19:18.837Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T05:19:18.837Z"
+      },
+      "statusNote": "Moved from TC 20F to TC 24TB.",
+      "statusNote$meta": {
+        "confidence": "high",
+        "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+        "source": "parsed",
+        "updated": "2026-07-06T21:05:35.316Z",
+        "version": "smpte-zoho-standards@v1"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T05:19:18.837Z"
+      }
+    }
+  }
+}

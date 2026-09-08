@@ -1,0 +1,244 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "RFC1494",
+  "document": {
+    "abstract": "This document describes the content of the \"IANA MHS/MIME Equivalence table\", and defines the initial configuration of this table. Mappings for new MIME content-types and/or X.400 body part types should be registered with the IANA to minimize redundancy and promote interoperability. [STANDARDS-TRACK]",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML abstract",
+      "originalValue": "This document describes the content of the \"IANA MHS/MIME Equivalence table\", and defines the initial configuration of this table.  Mappings for new MIME content-types and/or X.400 body part types should be registered with the IANA to minimize redundancy and promote interoperability. [STANDARDS-TRACK]",
+      "overridden": true,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1494/",
+      "updated": "2026-02-25T23:54:39.369Z",
+      "version": "extractDocs.js@commit:7e5f596609c6"
+    },
+    "authors": [
+      {
+        "name": "Harald T. Alvestrand"
+      },
+      {
+        "name": "Steven J. Thompson"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1494/",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "docId": "RFC1494",
+    "docId$meta": {
+      "confidence": "high",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "IETF RFC 1494",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docNumber": "1494",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML technical report metadata",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1494/",
+      "updated": "2026-02-25T18:56:54.555Z",
+      "version": "extractDocs.js@commit:8ba57d0bab1a"
+    },
+    "docTitle": "Equivalences between 1988 X.400 and RFC-822 Message Bodies",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Specification",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Mapped from Datatracker std_level or RFC status text",
+      "originalValue": "Informational",
+      "overridden": true,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1494/",
+      "updated": "2026-02-25T18:56:54.555Z",
+      "version": "extractDocs.js@commit:8ba57d0bab1a"
+    },
+    "doi": "10.17487/RFC1494",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML citation_doi",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1494/",
+      "updated": "2026-02-25T18:56:54.556Z",
+      "version": "extractDocs.js@commit:8ba57d0bab1a"
+    },
+    "href": "https://doi.org/10.17487/RFC1494",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI (https://doi.org/<doi>)",
+      "originalValue": "https://www.rfc-editor.org/info/rfc1494",
+      "overridden": true,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1494/",
+      "updated": "2026-02-25T18:56:54.555Z",
+      "version": "extractDocs.js@commit:8ba57d0bab1a"
+    },
+    "issn": "2070-1721",
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML citation_issn",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1494/",
+      "updated": "2026-02-25T18:56:54.556Z",
+      "version": "extractDocs.js@commit:8ba57d0bab1a"
+    },
+    "keywords": [
+      "Equiv",
+      "Mail"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML keywords",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1494/",
+      "updated": "2026-02-25T23:54:39.369Z",
+      "version": "extractDocs.js@commit:7e5f596609c6"
+    },
+    "pages": "19",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from Datatracker doc.json pages",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1494/",
+      "updated": "2026-02-25T18:56:54.556Z",
+      "version": "extractDocs.js@commit:8ba57d0bab1a"
+    },
+    "publicationDate": "1993-08-01",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "IETF",
+    "publisher$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "references": {
+      "bibliographic": [
+        "RFC1495",
+        "T-REC-X.420.1988",
+        "RFC1341",
+        "ISO.8613",
+        "ISO.10021.ALLPARTS",
+        "T-REC-T.411.1988",
+        "RFC822",
+        "RFC1327",
+        "T-REC-T.4.1988",
+        "T-REC-T.30.1988",
+        "T-REC-X.400.1988",
+        "RFC1502"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Parsed from RFC HTML references/informative sections | Manual review completed 2026-03-05",
+        "originalValue": [
+          "RFC1495",
+          "T-REC-X.420.1988",
+          "RFC1341",
+          "ISO.8613",
+          "ISO.10021.ALLPARTS",
+          "T-REC-T.411.1988",
+          "RFC822",
+          "RFC1327",
+          "T-REC-T.4.1988",
+          "T-REC-T.30.1988",
+          "RFC1502"
+        ],
+        "overridden": true,
+        "reviewRequired": false,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1494/",
+        "updated": "2026-03-05T16:46:17.665Z",
+        "version": "extractDocs.js@commit:b8c6349eeb50"
+      }
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc1494",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1494/",
+      "updated": "2026-02-25T18:56:54.556Z",
+      "version": "extractDocs.js@commit:8ba57d0bab1a"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": false,
+        "overridden": true,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1494/",
+        "updated": "2026-02-25T18:56:54.556Z",
+        "version": "extractDocs.js@commit:8ba57d0bab1a"
+      },
+      "errataExist": false,
+      "errataExist$meta": {
+        "confidence": "high",
+        "note": "Derived from presence of errata links on RFC/Datatracker pages",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1494/",
+        "updated": "2026-02-25T18:56:54.556Z",
+        "version": "extractDocs.js@commit:8ba57d0bab1a"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1494/",
+        "updated": "2026-02-25T18:56:54.556Z",
+        "version": "extractDocs.js@commit:8ba57d0bab1a"
+      },
+      "statusNote": "Historic",
+      "statusNote$meta": {
+        "confidence": "high",
+        "note": "Mapped from Datatracker doc.json std_level",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1494/",
+        "updated": "2026-02-25T18:56:54.556Z",
+        "version": "extractDocs.js@commit:8ba57d0bab1a"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc1494/",
+        "updated": "2026-02-25T18:56:54.556Z",
+        "version": "extractDocs.js@commit:8ba57d0bab1a"
+      }
+    }
+  }
+}

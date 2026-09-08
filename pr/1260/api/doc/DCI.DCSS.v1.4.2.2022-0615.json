@@ -1,0 +1,163 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "DCI.DCSS.v1.4.2.2022-0615",
+  "document": {
+    "docId": "DCI.DCSS.v1.4.2.2022-0615",
+    "docId$meta": {
+      "confidence": "high",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "DCI DCSS v1.4.2",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "Digital Cinema System Specification Version 1.4.2",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Specification",
+    "docType$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://www.dcimovies.com/dci-specification?dcss-version=v1.4.2",
+    "href$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "keywords": [
+      "DCinema",
+      "Packaging",
+      "DCP Core",
+      "Distribution",
+      "Operations",
+      "Security",
+      "KDM"
+    ],
+    "keywords$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publicationDate": "2022-06-15",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "DCI",
+    "publisher$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "references": {
+      "bibliographic": [
+        "IANA.PN",
+        "NIST.FIPS.140-1",
+        "NIST.FIPS.197",
+        "NIST.FIPS.46-3",
+        "RFC3280",
+        "T-REC-X.509.199706"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "normative": [
+        "SMPTE.ST372",
+        "SMPTE.ST429-2",
+        "SMPTE.ST429-19",
+        "SMPTE.ST428-1",
+        "SMPTE.ST429-18",
+        "SMPTE.ST429-3",
+        "SMPTE.ST382",
+        "SMPTE.ST2098-2",
+        "SMPTE.ST2098-1",
+        "SMPTE.ST336",
+        "SMPTE.ST429-6",
+        "SMPTE.ST429-14",
+        "ISO.15706-1",
+        "ISO.19790.2012",
+        "ISO.10646.2003",
+        "ISO.15948.2004",
+        "ISO.14496-22.2007",
+        "ISO.15444-1",
+        "ISO.15444-1.2004amd1.2006",
+        "SMPTE.ST330",
+        "SMPTE.ST430-14",
+        "SMPTE.RP431-2",
+        "SMPTE.ST430-17",
+        "SMPTE.ST430-1",
+        "SMPTE.ST430-2",
+        "SMPTE.ST430-5",
+        "SMPTE.RDD20",
+        "SMPTE.ST430-6",
+        "SMPTE.ST430-4",
+        "SMPTE.ST433",
+        "SMPTE.ST429-5",
+        "SMPTE.ST430-3",
+        "NIST.FIPS.140-2",
+        "NIST.FIPS.140-3",
+        "NIST.FIPS.198-1",
+        "NIST.FIPS.186-4",
+        "RFC4122",
+        "RFC8446",
+        "RFC2246",
+        "RFC5246"
+      ],
+      "normative$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    },
+    "resolvedHref": "https://www.dcimovies.com/dci-specification/?dcss-version=v1.4.2",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2025-12-03T22:21:19.543Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "statusNote": "build 0c0cff3",
+      "statusNote$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-12-03T19:57:12.078Z"
+      },
+      "supersededBy": [
+        "DCI.DCSS.v1.4.5.2024-0529"
+      ],
+      "supersededBy$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-12-03T19:57:12.078Z"
+      }
+    }
+  }
+}

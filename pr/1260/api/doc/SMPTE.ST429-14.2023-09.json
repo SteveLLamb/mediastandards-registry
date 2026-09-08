@@ -1,0 +1,352 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:15:26.514Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST429-14.2023-09",
+  "document": {
+    "abstract": "This standard specifies the mapping of unspecified data into the Data Element of the MXF Generic Container for use within a Digital Cinema Package. The MXF Generic Container (GC) is described in SMPTE ST 379-1.\nThis standard specifies the Key, the Length and the Value fields of the Aux Data Element. This standard also defines the Essence Container and the Essence Descriptor.\nThis standard defines the Composition Playlist asset type extension required for inclusion of an Aux Data track.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML sec-scope section",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-01-07T23:12:34.868Z",
+      "version": "extractDocs.js@commit:499baa451f70"
+    },
+    "approvalDate": "2023-09-12",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:06:26.674Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "year": "2024",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+        "source": "parsed",
+        "updated": "2026-06-16T00:07:06.330Z",
+        "version": "smpte-zoho-standards@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:07:06.330Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "docId": "SMPTE.ST429-14.2023-09",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-14/20230912-pub/",
+      "updated": "2025-10-21T04:41:19.195Z"
+    },
+    "docLabel": "SMPTE ST 429-14:2023-09",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-14/20230912-pub/",
+      "updated": "2025-10-21T04:41:19.195Z"
+    },
+    "docNumber": "429",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-14/20230912-pub/",
+      "updated": "2025-10-21T04:41:19.195Z"
+    },
+    "docPart": "14",
+    "docPart$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubPart meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-14/20230912-pub/",
+      "updated": "2025-10-21T04:41:19.195Z"
+    },
+    "docSuiteTitle": "D-Cinema Packaging",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-12-12T21:27:22.842Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docTitle": "Aux Data Track File",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": "D-Cinema Packaging Aux Data Track File",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-12-12T21:27:22.842Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-14/20230912-pub/",
+      "updated": "2025-10-21T04:41:19.195Z"
+    },
+    "doi": "10.5594/SMPTE.ST429-14.2023",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-14/20230912-pub/",
+      "updated": "2025-10-21T04:41:19.195Z"
+    },
+    "group": "smpte-27c-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-14/20230912-pub/",
+      "updated": "2025-10-21T04:41:19.195Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST429-14.2023",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-14/20230912-pub/",
+      "updated": "2025-10-21T04:41:19.195Z"
+    },
+    "icsCodes": [
+      {
+        "code": "37.060.99",
+        "description": "Other standards related to cinematography"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:07:53.961Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "isbn": "978-1-68303-320-2",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:05:43.143Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "keywords": [
+      "DCinema",
+      "Packaging",
+      "DCP Core",
+      "Aux Data",
+      "MXF Application",
+      "DCP"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json); registry value merged with Zoho's set (union deduped)",
+      "originalValue": [
+        "DCinema",
+        "Packaging",
+        "DCP Core",
+        "Aux Data",
+        "MXF Application"
+      ],
+      "source": "parsed",
+      "updated": "2026-06-17T16:55:09.355Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "numberOfPages": "10",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:08:15.443Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "productNumber": "SSD002200",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:08:38.925Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "publicationDate": "2023-09-12",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-14/20230912-pub/",
+      "updated": "2025-10-21T04:41:19.195Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-14/20230912-pub/",
+      "updated": "2025-10-21T04:41:19.195Z"
+    },
+    "references": {
+      "normative": [
+        "SMPTE.ST377-1",
+        "SMPTE.ST379-1",
+        "SMPTE.ST429-3",
+        "SMPTE.ST429-7",
+        "SMPTE.ST2029",
+        "W3C.xml",
+        "W3C.xmlschema-1",
+        "W3C.xmlschema-2",
+        "RFC3986"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [],
+        "source": "parsed",
+        "updated": "2025-10-21T04:41:19.195Z"
+      }
+    },
+    "releaseTag": "20230912-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-14/20230912-pub/",
+      "updated": "2025-10-21T04:41:19.195Z"
+    },
+    "repo": "https://github.com/SMPTE/st429-14/",
+    "repo$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed or inferred publication type/number/part and verified to exist",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-14/20230912-pub/",
+      "updated": "2025-10-21T04:41:19.195Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/st429-14/20230912-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000007NgD",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-11-11T04:49:49.093Z",
+      "version": "extractDocs.js@commit:dea962f9e9d7"
+    },
+    "revisionOf": [
+      "SMPTE.ST429-14.2014"
+    ],
+    "revisionOf$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubRevisionOf meta tag",
+      "originalValue": [],
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st429-14/20230912-pub/",
+      "updated": "2025-10-21T04:41:19.195Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-21T04:41:19.195Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-21T04:41:19.195Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-21T04:41:19.195Z"
+      },
+      "stage": "PUB",
+      "stage$meta": {
+        "confidence": "high",
+        "note": "Stage parsed from HTML pubStage meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-21T04:41:19.195Z"
+      },
+      "state": "pub",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-21T04:41:19.195Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-21T04:41:19.195Z"
+      }
+    },
+    "xmlNamespace": [
+      {
+        "imported": true,
+        "schemaIncluded": false,
+        "targetNamespace": false,
+        "uri": "http://www.w3.org/2001/XMLSchema",
+        "uriPublished": true,
+        "uriResolved": "https://www.w3.org/2001/XMLSchema.xsd"
+      },
+      {
+        "imported": true,
+        "schemaIncluded": false,
+        "targetNamespace": false,
+        "uri": "http://www.smpte-ra.org/schemas/429-7/2006/CPL",
+        "uriPublished": true,
+        "uriResolved": "https://smpte-ra.org/file/49/download?token=lDJCd8aG/"
+      },
+      {
+        "imported": false,
+        "schemaIncluded": false,
+        "schemaInline": true,
+        "targetNamespace": true,
+        "uri": "http://www.smpte-ra.org/schemas/429-14/2014/Aux-Data",
+        "uriPublished": true,
+        "uriResolved": "https://www.smpte-ra.org/file/73/download?token=GISlkj8Y"
+      }
+    ],
+    "xmlNamespace$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-10-24T18:08:37.909Z"
+    }
+  }
+}
