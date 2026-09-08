@@ -11,17 +11,22 @@
   },
   "authors": [
     {
-      "name": "Roman Danyliw"
+      "name": "R. Danyliw"
     }
   ],
   "authors$meta": {
     "confidence": "high",
-    "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
-    "originalValue": null,
+    "note": "Parsed from Datatracker doc.json authors",
+    "originalValue": [
+      {
+        "name": "Roman Danyliw"
+      }
+    ],
+    "overridden": true,
     "source": "parsed",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc9141/",
-    "updated": "2026-06-23T00:04:25.562Z",
-    "version": "authors-migrate-object-form@v1"
+    "updated": "2026-09-08T09:07:54.252Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "docId": "RFC9141",
   "docId$meta": {
@@ -157,15 +162,16 @@
       "version": "extractDocs.js@commit:fbfea8b4c330"
     }
   },
-  "resolvedHref": "https://www.rfc-editor.org/info/rfc9141",
+  "resolvedHref": "https://www.rfc-editor.org/info/rfc9141/",
   "resolvedHref$meta": {
     "confidence": "high",
     "note": "Final URL resolved via URL redirect verification",
-    "originalValue": null,
+    "originalValue": "https://www.rfc-editor.org/info/rfc9141",
+    "overridden": true,
     "source": "resolved",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc9141/",
-    "updated": "2026-03-06T23:00:20.690Z",
-    "version": "extractDocs.js@commit:fbfea8b4c330"
+    "updated": "2026-09-08T09:07:54.252Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "status": {
     "active": true,

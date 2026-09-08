@@ -11,23 +11,34 @@
   },
   "authors": [
     {
-      "name": "Uhhyung Choi"
+      "name": "U. Choi"
     },
     {
-      "name": "Dr. Kilnam Chon"
+      "name": "K. Chon"
     },
     {
-      "name": "Hyun Je Park"
+      "name": "H. Park"
     }
   ],
   "authors$meta": {
     "confidence": "high",
-    "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
-    "originalValue": null,
+    "note": "Parsed from Datatracker doc.json authors",
+    "originalValue": [
+      {
+        "name": "Uhhyung Choi"
+      },
+      {
+        "name": "Dr. Kilnam Chon"
+      },
+      {
+        "name": "Hyun Je Park"
+      }
+    ],
+    "overridden": true,
     "source": "parsed",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc1557/",
-    "updated": "2026-06-23T00:04:25.562Z",
-    "version": "authors-migrate-object-form@v1"
+    "updated": "2026-09-08T09:07:50.929Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "docId": "RFC1557",
   "docId$meta": {
@@ -174,15 +185,16 @@
       "version": "extractDocs.js@commit:b8c6349eeb50"
     }
   },
-  "resolvedHref": "https://www.rfc-editor.org/info/rfc1557",
+  "resolvedHref": "https://www.rfc-editor.org/info/rfc1557/",
   "resolvedHref$meta": {
     "confidence": "high",
     "note": "Final URL resolved via URL redirect verification",
-    "originalValue": null,
+    "originalValue": "https://www.rfc-editor.org/info/rfc1557",
+    "overridden": true,
     "source": "resolved",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc1557/",
-    "updated": "2026-02-26T22:24:31.340Z",
-    "version": "extractDocs.js@commit:e762d69493e5"
+    "updated": "2026-09-08T09:07:50.929Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "status": {
     "active": true,

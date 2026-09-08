@@ -11,35 +11,58 @@
   },
   "authors": [
     {
-      "name": "Ran Atkinson"
+      "name": "C. Weider"
     },
     {
-      "name": "Peter Svanberg"
+      "name": "C. Preston"
     },
     {
-      "name": "Cecilia M. Preston"
+      "name": "K. Simonsen"
     },
     {
-      "name": "Harald T. Alvestrand"
+      "name": "H. Alvestrand"
     },
     {
-      "name": "Mark Crispin"
+      "name": "R. Atkinson"
     },
     {
-      "name": "Keld Simonsen"
+      "name": "M. Crispin"
     },
     {
-      "name": "Chris Weider"
+      "name": "P. Svanberg"
     }
   ],
   "authors$meta": {
     "confidence": "high",
-    "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
-    "originalValue": null,
+    "note": "Parsed from Datatracker doc.json authors",
+    "originalValue": [
+      {
+        "name": "Ran Atkinson"
+      },
+      {
+        "name": "Peter Svanberg"
+      },
+      {
+        "name": "Cecilia M. Preston"
+      },
+      {
+        "name": "Harald T. Alvestrand"
+      },
+      {
+        "name": "Mark Crispin"
+      },
+      {
+        "name": "Keld Simonsen"
+      },
+      {
+        "name": "Chris Weider"
+      }
+    ],
+    "overridden": true,
     "source": "parsed",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
-    "updated": "2026-06-23T00:04:25.562Z",
-    "version": "authors-migrate-object-form@v1"
+    "updated": "2026-09-08T09:07:52.944Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "docId": "RFC2130",
   "docId$meta": {
@@ -271,15 +294,16 @@
       "version": "extractDocs.js@commit:fbfea8b4c330"
     }
   },
-  "resolvedHref": "https://www.rfc-editor.org/info/rfc2130",
+  "resolvedHref": "https://www.rfc-editor.org/info/rfc2130/",
   "resolvedHref$meta": {
     "confidence": "high",
     "note": "Final URL resolved via URL redirect verification",
-    "originalValue": null,
+    "originalValue": "https://www.rfc-editor.org/info/rfc2130",
+    "overridden": true,
     "source": "resolved",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc2130/",
-    "updated": "2026-02-26T22:24:31.423Z",
-    "version": "extractDocs.js@commit:e762d69493e5"
+    "updated": "2026-09-08T09:07:52.944Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "status": {
     "active": true,

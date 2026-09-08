@@ -11,20 +11,28 @@
   },
   "authors": [
     {
-      "name": "Andy Bierman"
+      "name": "A. Bierman"
     },
     {
-      "name": "Martin Björklund"
+      "name": "M. Bjorklund"
     }
   ],
   "authors$meta": {
     "confidence": "high",
-    "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
-    "originalValue": null,
+    "note": "Parsed from Datatracker doc.json authors",
+    "originalValue": [
+      {
+        "name": "Andy Bierman"
+      },
+      {
+        "name": "Martin Björklund"
+      }
+    ],
+    "overridden": true,
     "source": "parsed",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc8341/",
-    "updated": "2026-06-23T00:04:25.562Z",
-    "version": "authors-migrate-object-form@v1"
+    "updated": "2026-09-08T09:07:53.358Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "docId": "RFC8341",
   "docId$meta": {
@@ -201,15 +209,16 @@
       "version": "extractDocs.js@commit:15b38bfb4cf7"
     }
   },
-  "resolvedHref": "https://www.rfc-editor.org/info/rfc8341",
+  "resolvedHref": "https://www.rfc-editor.org/info/rfc8341/",
   "resolvedHref$meta": {
     "confidence": "high",
     "note": "Final URL resolved via URL redirect verification",
-    "originalValue": null,
+    "originalValue": "https://www.rfc-editor.org/info/rfc8341",
+    "overridden": true,
     "source": "resolved",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc8341/",
-    "updated": "2026-03-10T19:48:26.973Z",
-    "version": "extractDocs.js@commit:15b38bfb4cf7"
+    "updated": "2026-09-08T09:07:53.358Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "status": {
     "active": true,

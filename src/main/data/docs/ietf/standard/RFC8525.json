@@ -11,29 +11,46 @@
   },
   "authors": [
     {
-      "name": "Andy Bierman"
+      "name": "A. Bierman"
     },
     {
-      "name": "Martin Björklund"
+      "name": "M. Bjorklund"
     },
     {
-      "name": "Jürgen Schönwälder"
+      "name": "J. Schoenwaelder"
     },
     {
-      "name": "Kent Watsen"
+      "name": "K. Watsen"
     },
     {
-      "name": "Robert Wilton"
+      "name": "R. Wilton"
     }
   ],
   "authors$meta": {
     "confidence": "high",
-    "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
-    "originalValue": null,
+    "note": "Parsed from Datatracker doc.json authors",
+    "originalValue": [
+      {
+        "name": "Andy Bierman"
+      },
+      {
+        "name": "Martin Björklund"
+      },
+      {
+        "name": "Jürgen Schönwälder"
+      },
+      {
+        "name": "Kent Watsen"
+      },
+      {
+        "name": "Robert Wilton"
+      }
+    ],
+    "overridden": true,
     "source": "parsed",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc8525/",
-    "updated": "2026-06-23T00:04:25.562Z",
-    "version": "authors-migrate-object-form@v1"
+    "updated": "2026-09-08T09:07:53.720Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "docId": "RFC8525",
   "docId$meta": {
@@ -207,15 +224,16 @@
       "version": "extractDocs.js@commit:15b38bfb4cf7"
     }
   },
-  "resolvedHref": "https://www.rfc-editor.org/info/rfc8525",
+  "resolvedHref": "https://www.rfc-editor.org/info/rfc8525/",
   "resolvedHref$meta": {
     "confidence": "high",
     "note": "Final URL resolved via URL redirect verification",
-    "originalValue": null,
+    "originalValue": "https://www.rfc-editor.org/info/rfc8525",
+    "overridden": true,
     "source": "resolved",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc8525/",
-    "updated": "2026-03-10T19:22:53.250Z",
-    "version": "extractDocs.js@commit:15b38bfb4cf7"
+    "updated": "2026-09-08T09:07:53.720Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "status": {
     "active": true,
@@ -227,6 +245,20 @@
       "sourceUrl": "https://www.rfc-editor.org/info/rfc8525/",
       "updated": "2026-03-10T19:22:53.250Z",
       "version": "extractDocs.js@commit:15b38bfb4cf7"
+    },
+    "amendedBy": [
+      "RFC10035"
+    ],
+    "amendedBy$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML and RFC info relation <dl>",
+      "originalValue": [
+      ],
+      "overridden": true,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc8525/",
+      "updated": "2026-09-08T09:07:53.720Z",
+      "version": "extractDocs.js@commit:dd00dae7080a"
     },
     "errataExist": true,
     "errataExist$meta": {

@@ -188,15 +188,16 @@
       "version": "extractDocs.js@commit:b8c6349eeb50"
     }
   },
-  "resolvedHref": "https://www.rfc-editor.org/info/rfc1035",
+  "resolvedHref": "https://www.rfc-editor.org/info/rfc1035/",
   "resolvedHref$meta": {
     "confidence": "high",
     "note": "Final URL resolved via URL redirect verification",
-    "originalValue": null,
+    "originalValue": "https://www.rfc-editor.org/info/rfc1035",
+    "overridden": true,
     "source": "resolved",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
-    "updated": "2026-02-25T18:56:54.090Z",
-    "version": "extractDocs.js@commit:8ba57d0bab1a"
+    "updated": "2026-09-08T09:07:50.225Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "status": {
     "active": true,
@@ -226,8 +227,8 @@
       "RFC1996",
       "RFC2065",
       "RFC2136",
-      "RFC2181",
       "RFC2137",
+      "RFC2181",
       "RFC2308",
       "RFC2535",
       "RFC2673",
@@ -249,14 +250,59 @@
     ],
     "amendedBy$meta": {
       "confidence": "high",
-      "note": "Parsed from RFC info page relation <dl>",
+      "note": "Parsed from RFC index XML and RFC info relation <dl>",
+      "originalValue": [
+        "RFC1101",
+        "RFC1183",
+        "RFC1348",
+        "RFC1876",
+        "RFC1982",
+        "RFC1995",
+        "RFC1996",
+        "RFC2065",
+        "RFC2136",
+        "RFC2181",
+        "RFC2137",
+        "RFC2308",
+        "RFC2535",
+        "RFC2673",
+        "RFC2845",
+        "RFC3425",
+        "RFC3658",
+        "RFC4033",
+        "RFC4034",
+        "RFC4035",
+        "RFC4343",
+        "RFC5936",
+        "RFC5966",
+        "RFC6604",
+        "RFC7766",
+        "RFC8482",
+        "RFC8490",
+        "RFC8767",
+        "RFC9619"
+      ],
+      "overridden": true,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
+      "updated": "2026-09-08T09:07:50.224Z",
+      "version": "extractDocs.js@commit:dd00dae7080a"
+    },
+    "amends": [
+      "RFC882",
+      "RFC883",
+      "RFC973"
+    ],
+    "amends$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML and RFC info relation <dl>",
       "originalValue": [
       ],
       "overridden": true,
       "source": "parsed",
       "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
-      "updated": "2026-02-25T18:56:54.090Z",
-      "version": "extractDocs.js@commit:8ba57d0bab1a"
+      "updated": "2026-09-08T09:07:50.225Z",
+      "version": "extractDocs.js@commit:dd00dae7080a"
     },
     "errataExist": true,
     "errataExist$meta": {
@@ -317,17 +363,17 @@
       "version": "extractDocs.js@commit:8ba57d0bab1a"
     },
     "supersedes": [
-      "RFC0973",
-      "RFC0882",
-      "RFC0883",
-      "RFC973",
       "RFC882",
-      "RFC883"
+      "RFC883",
+      "RFC973"
     ],
     "supersedes$meta": {
       "confidence": "high",
       "note": "Parsed from RFC index XML and RFC info relation <dl>",
       "originalValue": [
+        "RFC0973",
+        "RFC0882",
+        "RFC0883",
         "RFC973",
         "RFC882",
         "RFC883"
@@ -335,8 +381,8 @@
       "overridden": true,
       "source": "parsed",
       "sourceUrl": "https://www.rfc-editor.org/info/rfc1035/",
-      "updated": "2026-02-25T23:54:38.890Z",
-      "version": "extractDocs.js@commit:7e5f596609c6"
+      "updated": "2026-09-08T09:07:50.224Z",
+      "version": "extractDocs.js@commit:dd00dae7080a"
     }
   }
 }

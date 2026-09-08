@@ -7,28 +7,34 @@
   },
   "authors": [
     {
-      "name": "Jari Arkko"
+      "name": "J. Arkko"
     },
     {
-      "name": "Karl Norrman"
+      "name": "K. Norrman"
     },
     {
-      "name": "John Preuß Mattsson"
+      "name": "J. Preuß Mattsson"
     }
   ],
   "authors$meta": {
     "confidence": "high",
-    "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
+    "note": "Parsed from Datatracker doc.json authors",
     "originalValue": [
-      "J. Arkko",
-      "K. Norrman",
-      "J. Preuß Mattsson"
+      {
+        "name": "Jari Arkko"
+      },
+      {
+        "name": "Karl Norrman"
+      },
+      {
+        "name": "John Preuß Mattsson"
+      }
     ],
     "overridden": true,
     "source": "parsed",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc9678/",
-    "updated": "2026-06-23T00:04:25.562Z",
-    "version": "authors-migrate-object-form@v1"
+    "updated": "2026-09-08T09:07:54.668Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "docId": "RFC9678",
   "docId$meta": {
@@ -202,15 +208,16 @@
       "version": "extractDocs.js@commit:fbfea8b4c330"
     }
   },
-  "resolvedHref": "https://www.rfc-editor.org/info/rfc9678",
+  "resolvedHref": "https://www.rfc-editor.org/info/rfc9678/",
   "resolvedHref$meta": {
     "confidence": "high",
     "note": "Final URL resolved via URL redirect verification",
-    "originalValue": null,
+    "originalValue": "https://www.rfc-editor.org/info/rfc9678",
+    "overridden": true,
     "source": "resolved",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc9678/",
-    "updated": "2026-03-06T23:00:21.175Z",
-    "version": "extractDocs.js@commit:fbfea8b4c330"
+    "updated": "2026-09-08T09:07:54.668Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "status": {
     "active": true,

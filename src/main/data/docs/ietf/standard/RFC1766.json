@@ -11,17 +11,22 @@
   },
   "authors": [
     {
-      "name": "Harald T. Alvestrand"
+      "name": "H. Alvestrand"
     }
   ],
   "authors$meta": {
     "confidence": "high",
-    "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
-    "originalValue": null,
+    "note": "Parsed from Datatracker doc.json authors",
+    "originalValue": [
+      {
+        "name": "Harald T. Alvestrand"
+      }
+    ],
+    "overridden": true,
     "source": "parsed",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc1766/",
-    "updated": "2026-06-23T00:04:25.562Z",
-    "version": "authors-migrate-object-form@v1"
+    "updated": "2026-09-08T09:07:51.734Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "docId": "RFC1766",
   "docId$meta": {
@@ -166,15 +171,16 @@
       "version": "extractDocs.js@commit:b8c6349eeb50"
     }
   },
-  "resolvedHref": "https://www.rfc-editor.org/info/rfc1766",
+  "resolvedHref": "https://www.rfc-editor.org/info/rfc1766/",
   "resolvedHref$meta": {
     "confidence": "high",
     "note": "Final URL resolved via URL redirect verification",
-    "originalValue": null,
+    "originalValue": "https://www.rfc-editor.org/info/rfc1766",
+    "overridden": true,
     "source": "resolved",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc1766/",
-    "updated": "2026-03-02T23:41:38.733Z",
-    "version": "extractDocs.js@commit:113e03180d7b"
+    "updated": "2026-09-08T09:07:51.734Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "status": {
     "active": false,

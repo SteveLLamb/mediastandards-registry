@@ -12,17 +12,22 @@
   },
   "authors": [
     {
-      "name": "Ronald L. Rivest"
+      "name": "R. Rivest"
     }
   ],
   "authors$meta": {
     "confidence": "high",
-    "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
-    "originalValue": null,
+    "note": "Parsed from Datatracker doc.json authors",
+    "originalValue": [
+      {
+        "name": "Ronald L. Rivest"
+      }
+    ],
+    "overridden": true,
     "source": "parsed",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc1321/",
-    "updated": "2026-06-23T00:04:25.562Z",
-    "version": "authors-migrate-object-form@v1"
+    "updated": "2026-09-08T09:07:50.541Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "docId": "RFC1321",
   "docId$meta": {
@@ -92,19 +97,21 @@
   "keywords": [
     "Security",
     "Signature",
-    "Encryption"
+    "Eneryption"
   ],
   "keywords$meta": {
     "confidence": "high",
-    "note": "Scrubbed against src/main/config/site.json controlledKeywords (auto-fix renames + drop noise)",
+    "note": "Parsed from RFC index XML keywords",
     "originalValue": [
       "Security",
       "Signature",
-      "Eneryption"
+      "Encryption"
     ],
+    "overridden": true,
     "source": "parsed",
-    "updated": "2026-06-17T17:24:52.533Z",
-    "version": "kw-scrub@v1"
+    "sourceUrl": "https://www.rfc-editor.org/info/rfc1321/",
+    "updated": "2026-09-08T09:07:50.541Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "pages": "21",
   "pages$meta": {
@@ -147,15 +154,16 @@
       "version": "extractDocs.js@commit:b8c6349eeb50"
     }
   },
-  "resolvedHref": "https://www.rfc-editor.org/info/rfc1321",
+  "resolvedHref": "https://www.rfc-editor.org/info/rfc1321/",
   "resolvedHref$meta": {
     "confidence": "high",
     "note": "Final URL resolved via URL redirect verification",
-    "originalValue": null,
+    "originalValue": "https://www.rfc-editor.org/info/rfc1321",
+    "overridden": true,
     "source": "resolved",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc1321/",
-    "updated": "2026-02-25T18:56:54.269Z",
-    "version": "extractDocs.js@commit:8ba57d0bab1a"
+    "updated": "2026-09-08T09:07:50.541Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "status": {
     "active": true,

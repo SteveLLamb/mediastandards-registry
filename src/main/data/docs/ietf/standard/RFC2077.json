@@ -11,23 +11,34 @@
   },
   "authors": [
     {
-      "name": "Mitra Ardron"
-    },
-    {
-      "name": "Scott D. Nelson"
+      "name": "S. Nelson"
     },
     {
       "name": "C. Parks"
+    },
+    {
+      "name": "Mitra"
     }
   ],
   "authors$meta": {
     "confidence": "high",
-    "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
-    "originalValue": null,
+    "note": "Parsed from Datatracker doc.json authors",
+    "originalValue": [
+      {
+        "name": "Mitra Ardron"
+      },
+      {
+        "name": "Scott D. Nelson"
+      },
+      {
+        "name": "C. Parks"
+      }
+    ],
+    "overridden": true,
     "source": "parsed",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc2077/",
-    "updated": "2026-06-23T00:04:25.562Z",
-    "version": "authors-migrate-object-form@v1"
+    "updated": "2026-09-08T09:07:52.595Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "docId": "RFC2077",
   "docId$meta": {
@@ -103,22 +114,24 @@
     "MIME-MODEL",
     "MIME",
     "Media",
-    "Types",
+    "Type",
     "Content"
   ],
   "keywords$meta": {
     "confidence": "high",
-    "note": "Scrubbed against src/main/config/site.json controlledKeywords (auto-fix renames + drop noise)",
+    "note": "Parsed from RFC index XML keywords",
     "originalValue": [
       "MIME-MODEL",
       "MIME",
       "Media",
-      "Type",
+      "Types",
       "Content"
     ],
+    "overridden": true,
     "source": "parsed",
-    "updated": "2026-06-17T17:24:10.972Z",
-    "version": "kw-scrub@v1"
+    "sourceUrl": "https://www.rfc-editor.org/info/rfc2077/",
+    "updated": "2026-09-08T09:07:52.595Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "pages": "13",
   "pages$meta": {
@@ -184,15 +197,16 @@
       "version": "extractDocs.js@commit:b8c6349eeb50"
     }
   },
-  "resolvedHref": "https://www.rfc-editor.org/info/rfc2077",
+  "resolvedHref": "https://www.rfc-editor.org/info/rfc2077/",
   "resolvedHref$meta": {
     "confidence": "high",
     "note": "Final URL resolved via URL redirect verification",
-    "originalValue": null,
+    "originalValue": "https://www.rfc-editor.org/info/rfc2077",
+    "overridden": true,
     "source": "resolved",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc2077/",
-    "updated": "2026-02-27T00:39:04.987Z",
-    "version": "extractDocs.js@commit:71cb27673d32"
+    "updated": "2026-09-08T09:07:52.595Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "status": {
     "active": true,

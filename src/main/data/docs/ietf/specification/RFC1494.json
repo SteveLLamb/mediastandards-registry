@@ -12,20 +12,28 @@
   },
   "authors": [
     {
-      "name": "Harald T. Alvestrand"
+      "name": "H. Alvestrand"
     },
     {
-      "name": "Steven J. Thompson"
+      "name": "S. Thompson"
     }
   ],
   "authors$meta": {
     "confidence": "high",
-    "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
-    "originalValue": null,
+    "note": "Parsed from Datatracker doc.json authors",
+    "originalValue": [
+      {
+        "name": "Harald T. Alvestrand"
+      },
+      {
+        "name": "Steven J. Thompson"
+      }
+    ],
+    "overridden": true,
     "source": "parsed",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc1494/",
-    "updated": "2026-06-23T00:04:25.562Z",
-    "version": "authors-migrate-object-form@v1"
+    "updated": "2026-09-08T09:07:50.638Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "docId": "RFC1494",
   "docId$meta": {
@@ -171,15 +179,16 @@
       "version": "extractDocs.js@commit:b8c6349eeb50"
     }
   },
-  "resolvedHref": "https://www.rfc-editor.org/info/rfc1494",
+  "resolvedHref": "https://www.rfc-editor.org/info/rfc1494/",
   "resolvedHref$meta": {
     "confidence": "high",
     "note": "Final URL resolved via URL redirect verification",
-    "originalValue": null,
+    "originalValue": "https://www.rfc-editor.org/info/rfc1494",
+    "overridden": true,
     "source": "resolved",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc1494/",
-    "updated": "2026-02-25T18:56:54.556Z",
-    "version": "extractDocs.js@commit:8ba57d0bab1a"
+    "updated": "2026-09-08T09:07:50.638Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "status": {
     "active": true,

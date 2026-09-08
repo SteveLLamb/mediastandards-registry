@@ -11,23 +11,34 @@
   },
   "authors": [
     {
-      "name": "Tim Berners-Lee"
+      "name": "T. Berners-Lee"
     },
     {
-      "name": "Larry M Masinter"
+      "name": "L. Masinter"
     },
     {
-      "name": "Mark P. McCahill"
+      "name": "M. McCahill"
     }
   ],
   "authors$meta": {
     "confidence": "high",
-    "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
-    "originalValue": null,
+    "note": "Parsed from Datatracker doc.json authors",
+    "originalValue": [
+      {
+        "name": "Tim Berners-Lee"
+      },
+      {
+        "name": "Larry M Masinter"
+      },
+      {
+        "name": "Mark P. McCahill"
+      }
+    ],
+    "overridden": true,
     "source": "parsed",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc1738/",
-    "updated": "2026-06-23T00:04:25.562Z",
-    "version": "authors-migrate-object-form@v1"
+    "updated": "2026-09-08T09:07:51.514Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "docId": "RFC1738",
   "docId$meta": {
@@ -184,15 +195,16 @@
       "version": "extractDocs.js@commit:0621de96b5e3"
     }
   },
-  "resolvedHref": "https://www.rfc-editor.org/info/rfc1738",
+  "resolvedHref": "https://www.rfc-editor.org/info/rfc1738/",
   "resolvedHref$meta": {
     "confidence": "high",
     "note": "Final URL resolved via URL redirect verification",
-    "originalValue": null,
+    "originalValue": "https://www.rfc-editor.org/info/rfc1738",
+    "overridden": true,
     "source": "resolved",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc1738/",
-    "updated": "2026-02-25T18:56:53.493Z",
-    "version": "extractDocs.js@commit:8ba57d0bab1a"
+    "updated": "2026-09-08T09:07:51.514Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "status": {
     "active": false,

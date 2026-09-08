@@ -11,20 +11,28 @@
   },
   "authors": [
     {
-      "name": "Yoav Nir"
+      "name": "Y. Nir"
     },
     {
-      "name": "Adam Langley"
+      "name": "A. Langley"
     }
   ],
   "authors$meta": {
     "confidence": "high",
-    "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
-    "originalValue": null,
+    "note": "Parsed from Datatracker doc.json authors",
+    "originalValue": [
+      {
+        "name": "Yoav Nir"
+      },
+      {
+        "name": "Adam Langley"
+      }
+    ],
+    "overridden": true,
     "source": "parsed",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc8439/",
-    "updated": "2026-06-23T00:04:25.562Z",
-    "version": "authors-migrate-object-form@v1"
+    "updated": "2026-09-08T09:07:53.568Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "docId": "RFC8439",
   "docId$meta": {
@@ -172,7 +180,8 @@
       "RFC7539",
       "NIST.SP.800-67r2",
       "IETF.draft-mcgrew-standby-cipher-00",
-      "10.1007-978-3-642-37682-5_24"
+      "10.1007-978-3-642-37682-5_24",
+      "orphan/RFC8439/h:0484840e"
     ],
     "bibliographic$meta": {
       "confidence": "medium",
@@ -216,15 +225,16 @@
       "version": "extractDocs.js@commit:15b38bfb4cf7"
     }
   },
-  "resolvedHref": "https://www.rfc-editor.org/info/rfc8439",
+  "resolvedHref": "https://www.rfc-editor.org/info/rfc8439/",
   "resolvedHref$meta": {
     "confidence": "high",
     "note": "Final URL resolved via URL redirect verification",
-    "originalValue": null,
+    "originalValue": "https://www.rfc-editor.org/info/rfc8439",
+    "overridden": true,
     "source": "resolved",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc8439/",
-    "updated": "2026-03-10T19:48:27.455Z",
-    "version": "extractDocs.js@commit:15b38bfb4cf7"
+    "updated": "2026-09-08T09:07:53.568Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "status": {
     "active": true,

@@ -7,15 +7,22 @@
   },
   "authors": [
     {
-      "name": "Donald E. Eastlake 3rd"
+      "name": "D. Eastlake 3rd"
     }
   ],
   "authors$meta": {
     "confidence": "high",
-    "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
-    "source": "manual",
-    "updated": "2026-06-23T00:04:25.562Z",
-    "version": "authors-migrate-object-form@v1"
+    "note": "Parsed from Datatracker doc.json authors",
+    "originalValue": [
+      {
+        "name": "Donald E. Eastlake 3rd"
+      }
+    ],
+    "overridden": true,
+    "source": "parsed",
+    "sourceUrl": "https://www.rfc-editor.org/info/rfc9231/",
+    "updated": "2026-09-08T09:07:54.511Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "docId": "RFC9231",
   "docId$meta": {
@@ -285,15 +292,16 @@
       "version": "extractDocs.js@commit:4a7306cb350b"
     }
   },
-  "resolvedHref": "https://www.rfc-editor.org/info/rfc9231",
+  "resolvedHref": "https://www.rfc-editor.org/info/rfc9231/",
   "resolvedHref$meta": {
     "confidence": "high",
     "note": "Final URL resolved via URL redirect verification",
-    "originalValue": null,
+    "originalValue": "https://www.rfc-editor.org/info/rfc9231",
+    "overridden": true,
     "source": "resolved",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc9231/",
-    "updated": "2026-03-06T23:00:20.925Z",
-    "version": "extractDocs.js@commit:fbfea8b4c330"
+    "updated": "2026-09-08T09:07:54.511Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "status": {
     "active": true,

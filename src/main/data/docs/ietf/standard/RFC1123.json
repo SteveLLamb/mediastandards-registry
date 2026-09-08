@@ -11,17 +11,22 @@
   },
   "authors": [
     {
-      "name": "Robert T. Braden"
+      "name": "R. Braden"
     }
   ],
   "authors$meta": {
     "confidence": "high",
-    "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
-    "originalValue": null,
+    "note": "Parsed from Datatracker doc.json authors",
+    "originalValue": [
+      {
+        "name": "Robert T. Braden"
+      }
+    ],
+    "overridden": true,
     "source": "parsed",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc1123/",
-    "updated": "2026-06-23T00:04:25.562Z",
-    "version": "authors-migrate-object-form@v1"
+    "updated": "2026-09-08T09:07:50.370Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "docId": "RFC1123",
   "docId$meta": {
@@ -215,15 +220,16 @@
       "version": "extractDocs.js@commit:b8c6349eeb50"
     }
   },
-  "resolvedHref": "https://www.rfc-editor.org/info/rfc1123",
+  "resolvedHref": "https://www.rfc-editor.org/info/rfc1123/",
   "resolvedHref$meta": {
     "confidence": "high",
     "note": "Final URL resolved via URL redirect verification",
-    "originalValue": null,
+    "originalValue": "https://www.rfc-editor.org/info/rfc1123",
+    "overridden": true,
     "source": "resolved",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc1123/",
-    "updated": "2026-02-26T22:24:30.850Z",
-    "version": "extractDocs.js@commit:e762d69493e5"
+    "updated": "2026-09-08T09:07:50.370Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "status": {
     "active": true,
@@ -255,8 +261,6 @@
       "version": "extractDocs.js@commit:e762d69493e5"
     },
     "amends": [
-      "RFC0822",
-      "RFC0952",
       "RFC822",
       "RFC952"
     ],
@@ -264,11 +268,16 @@
       "confidence": "high",
       "note": "Parsed from RFC index XML and RFC info relation <dl>",
       "originalValue": [
+        "RFC0822",
+        "RFC0952",
+        "RFC822",
+        "RFC952"
       ],
+      "overridden": true,
       "source": "parsed",
       "sourceUrl": "https://www.rfc-editor.org/info/rfc1123/",
-      "updated": "2026-02-26T22:24:30.850Z",
-      "version": "extractDocs.js@commit:e762d69493e5"
+      "updated": "2026-09-08T09:07:50.370Z",
+      "version": "extractDocs.js@commit:dd00dae7080a"
     },
     "errataExist": true,
     "errataExist$meta": {

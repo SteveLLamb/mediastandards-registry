@@ -11,29 +11,46 @@
   },
   "authors": [
     {
-      "name": "Martin Björklund"
+      "name": "M. Bjorklund"
     },
     {
-      "name": "Jürgen Schönwälder"
+      "name": "J. Schoenwaelder"
     },
     {
-      "name": "Phil Shafer"
+      "name": "P. Shafer"
     },
     {
-      "name": "Kent Watsen"
+      "name": "K. Watsen"
     },
     {
-      "name": "Robert Wilton"
+      "name": "R. Wilton"
     }
   ],
   "authors$meta": {
     "confidence": "high",
-    "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
-    "originalValue": null,
+    "note": "Parsed from Datatracker doc.json authors",
+    "originalValue": [
+      {
+        "name": "Martin Björklund"
+      },
+      {
+        "name": "Jürgen Schönwälder"
+      },
+      {
+        "name": "Phil Shafer"
+      },
+      {
+        "name": "Kent Watsen"
+      },
+      {
+        "name": "Robert Wilton"
+      }
+    ],
+    "overridden": true,
     "source": "parsed",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc8526/",
-    "updated": "2026-06-23T00:04:25.562Z",
-    "version": "authors-migrate-object-form@v1"
+    "updated": "2026-09-08T09:07:53.870Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "docId": "RFC8526",
   "docId$meta": {
@@ -179,16 +196,16 @@
       "version": "extractDocs.js@commit:17e11f3de1ab"
     }
   },
-  "resolvedHref": "https://www.rfc-editor.org/info/rfc8526",
+  "resolvedHref": "https://www.rfc-editor.org/info/rfc8526/",
   "resolvedHref$meta": {
     "confidence": "high",
     "note": "Final URL resolved via URL redirect verification",
-    "originalValue": "https://datatracker.ietf.org/doc/html/rfc8526",
+    "originalValue": "https://www.rfc-editor.org/info/rfc8526",
     "overridden": true,
     "source": "resolved",
     "sourceUrl": "https://www.rfc-editor.org/info/rfc8526/",
-    "updated": "2026-03-09T23:37:41.246Z",
-    "version": "extractDocs.js@commit:17e11f3de1ab"
+    "updated": "2026-09-08T09:07:53.870Z",
+    "version": "extractDocs.js@commit:dd00dae7080a"
   },
   "status": {
     "active": true,
