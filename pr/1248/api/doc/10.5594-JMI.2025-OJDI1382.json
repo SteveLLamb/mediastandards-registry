@@ -1,7 +1,7 @@
 {
   "$schema": "/api/schemas/documents.schema.json",
   "apiVersion": "1.0.0",
-  "generatedAt": "2026-07-20T17:50:33.897Z",
+  "generatedAt": "2026-09-08T16:35:32.768Z",
   "sourcePath": "src/main/data/docs",
   "docId": "10.5594-JMI.2025-OJDI1382",
   "document": {
@@ -185,6 +185,25 @@
       "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
       "source": "parsed",
       "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-JMI.2025-OJDI1382/ref1",
+        "orphan/10.5594-JMI.2025-OJDI1382/ref2",
+        "orphan/10.5594-JMI.2025-OJDI1382/ref3",
+        "orphan/10.5594-JMI.2025-OJDI1382/ref4",
+        "orphan/10.5594-JMI.2025-OJDI1382/ref5",
+        "orphan/10.5594-JMI.2025-OJDI1382/ref6",
+        "orphan/10.5594-JMI.2025-OJDI1382/ref7",
+        "orphan/10.5594-JMI.2025-OJDI1382/ref8",
+        "orphan/10.5594-JMI.2025-OJDI1382/ref9"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from the FTXML NLM <back><ref-list> via extractFtxmlRefs.js (source doc mapped through its content_batch sibling).",
+        "source": "parsed",
+        "updated": "2026-08-10T17:55:35.307Z"
+      }
     },
     "status": {
       "active": true,

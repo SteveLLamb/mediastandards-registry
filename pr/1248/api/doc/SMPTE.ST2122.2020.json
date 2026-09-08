@@ -1,7 +1,7 @@
 {
   "$schema": "/api/schemas/documents.schema.json",
   "apiVersion": "1.0.0",
-  "generatedAt": "2026-07-20T17:50:33.897Z",
+  "generatedAt": "2026-09-08T16:35:32.768Z",
   "sourcePath": "src/main/data/docs",
   "docId": "SMPTE.ST2122.2020",
   "document": {
@@ -201,6 +201,16 @@
         "originalValue": null,
         "source": "resolved",
         "updated": "2025-10-26T21:41:54.569Z"
+      },
+      "stabilized": true,
+      "stabilized$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #state",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://pub.smpte.org/doc/st2122/20200608-pub/",
+        "updated": "2026-07-20T07:38:55.929Z",
+        "version": "extractDocs.js@commit:c6083344b11e"
       },
       "superseded": false,
       "superseded$meta": {

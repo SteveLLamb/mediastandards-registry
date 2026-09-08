@@ -1,7 +1,7 @@
 {
   "$schema": "/api/schemas/documents.schema.json",
   "apiVersion": "1.0.0",
-  "generatedAt": "2026-07-20T17:50:33.897Z",
+  "generatedAt": "2026-09-08T16:35:32.768Z",
   "sourcePath": "src/main/data/docs",
   "docId": "10.5594-MOO-3035",
   "document": {
@@ -174,6 +174,50 @@
       "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
       "source": "parsed",
       "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-MOO-3035/ref1",
+        "orphan/10.5594-MOO-3035/ref2",
+        "orphan/10.5594-MOO-3035/ref3",
+        "orphan/10.5594-MOO-3035/ref4",
+        "orphan/10.5594-MOO-3035/ref5",
+        "orphan/10.5594-MOO-3035/ref6",
+        "orphan/10.5594-MOO-3035/ref7",
+        "orphan/10.5594-MOO-3035/ref8",
+        "orphan/10.5594-MOO-3035/ref9",
+        "orphan/10.5594-MOO-3035/ref10",
+        "orphan/10.5594-MOO-3035/ref11",
+        "orphan/10.5594-MOO-3035/ref12",
+        "orphan/10.5594-MOO-3035/ref13",
+        "orphan/10.5594-MOO-3035/ref14",
+        "orphan/10.5594-MOO-3035/ref15",
+        "orphan/10.5594-MOO-3035/ref16",
+        "orphan/10.5594-MOO-3035/ref17",
+        "orphan/10.5594-MOO-3035/ref18",
+        "orphan/10.5594-MOO-3035/ref19",
+        "orphan/10.5594-MOO-3035/ref20",
+        "orphan/10.5594-MOO-3035/ref21",
+        "orphan/10.5594-MOO-3035/ref22",
+        "orphan/10.5594-MOO-3035/ref23",
+        "orphan/10.5594-MOO-3035/ref24",
+        "orphan/10.5594-MOO-3035/ref25",
+        "orphan/10.5594-MOO-3035/ref26",
+        "orphan/10.5594-MOO-3035/ref27",
+        "orphan/10.5594-MOO-3035/ref28",
+        "orphan/10.5594-MOO-3035/ref29",
+        "orphan/10.5594-MOO-3035/ref30",
+        "orphan/10.5594-MOO-3035/ref31",
+        "orphan/10.5594-MOO-3035/ref32",
+        "orphan/10.5594-MOO-3035/ref33",
+        "orphan/10.5594-MOO-3035/ref34"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from the FTXML NLM <back><ref-list> via extractFtxmlRefs.js (source doc mapped through its content_batch sibling).",
+        "source": "parsed",
+        "updated": "2026-08-10T17:55:35.307Z"
+      }
     },
     "status": {
       "active": true,

@@ -13671,6 +13671,10 @@
         }
       ]
     },
+    "referencedBy": [
+      "10.5594-JMI.2025-RDCU7256",
+      "10.5594-MOO-3050"
+    ],
     "referenceTree": [
       "AES11.1997",
       "AES3.1992",
@@ -53162,6 +53166,7 @@
       ]
     },
     "referencedBy": [
+      "10.5594-JMI.2024-NMRU3069",
       "SMPTE.RDD59-1.2022",
       "SMPTE.ST2067-2.2020",
       "SMPTE.ST2067-201.2020",
@@ -73804,7 +73809,11 @@
       }
     ],
     "docTypeAbr": "ST",
-    "docDependancy": false,
+    "referencedBy": [
+      "10.5594-JMI.2025-RDCU7256",
+      "10.5594-MOO-3050"
+    ],
+    "docDependancy": true,
     "currentStatus": "Active"
   },
   {
@@ -73895,7 +73904,10 @@
       }
     ],
     "docTypeAbr": "ST",
-    "docDependancy": false,
+    "referencedBy": [
+      "10.5594-JMI.2024-LHXY3357"
+    ],
+    "docDependancy": true,
     "currentStatus": "Superseded"
   },
   {
@@ -73983,7 +73995,10 @@
       }
     ],
     "docTypeAbr": "ST",
-    "docDependancy": false,
+    "referencedBy": [
+      "10.5594-MOO-3004"
+    ],
+    "docDependancy": true,
     "currentStatus": "Active"
   },
   {
@@ -74074,7 +74089,10 @@
       }
     ],
     "docTypeAbr": "ST",
-    "docDependancy": false,
+    "referencedBy": [
+      "10.5594-JMI.2024-LHXY3357"
+    ],
+    "docDependancy": true,
     "currentStatus": "Superseded"
   },
   {
@@ -74329,7 +74347,10 @@
       }
     ],
     "docTypeAbr": "ST",
-    "docDependancy": false,
+    "referencedBy": [
+      "10.5594-JMI.2024-LHXY3357"
+    ],
+    "docDependancy": true,
     "currentStatus": "Active"
   },
   {
@@ -74421,7 +74442,12 @@
       }
     ],
     "docTypeAbr": "ST",
-    "docDependancy": false,
+    "referencedBy": [
+      "10.5594-JMI.2024-LHXY3357",
+      "10.5594-JMI.2025-RDCU7256",
+      "10.5594-MOO-3050"
+    ],
+    "docDependancy": true,
     "currentStatus": "Superseded"
   },
   {
@@ -74600,7 +74626,10 @@
       }
     ],
     "docTypeAbr": "ST",
-    "docDependancy": false,
+    "referencedBy": [
+      "10.5594-JMI.2024-LHXY3357"
+    ],
+    "docDependancy": true,
     "currentStatus": "Superseded"
   },
   {
@@ -74684,7 +74713,11 @@
       }
     ],
     "docTypeAbr": "ST",
-    "docDependancy": false,
+    "referencedBy": [
+      "10.5594-JMI.2025-RDCU7256",
+      "10.5594-MOO-3050"
+    ],
+    "docDependancy": true,
     "currentStatus": "Active"
   },
   {
@@ -74775,7 +74808,10 @@
       }
     ],
     "docTypeAbr": "ST",
-    "docDependancy": false,
+    "referencedBy": [
+      "10.5594-JMI.2024-LHXY3357"
+    ],
+    "docDependancy": true,
     "currentStatus": "Superseded"
   },
   {
@@ -74863,7 +74899,11 @@
       }
     ],
     "docTypeAbr": "ST",
-    "docDependancy": false,
+    "referencedBy": [
+      "10.5594-JMI.2025-RDCU7256",
+      "10.5594-MOO-3050"
+    ],
+    "docDependancy": true,
     "currentStatus": "Active"
   },
   {
@@ -75007,7 +75047,10 @@
       }
     ],
     "docTypeAbr": "ST",
-    "docDependancy": false,
+    "referencedBy": [
+      "10.5594-MOO-3050"
+    ],
+    "docDependancy": true,
     "currentStatus": "Active"
   },
   {
@@ -76207,6 +76250,7 @@
       "active": true,
       "amended": false,
       "latestVersion": true,
+      "stabilized": true,
       "superseded": false
     },
     "msiLatestAny": "SMPTE.ST2122.2020",
@@ -76226,6 +76270,7 @@
           "active": true,
           "amended": false,
           "latestVersion": true,
+          "stabilized": true,
           "superseded": false
         },
         "isLatestBase": true,
@@ -76234,7 +76279,7 @@
     ],
     "docTypeAbr": "ST",
     "docDependancy": false,
-    "currentStatus": "Active"
+    "currentStatus": "Active, Stabilized"
   },
   {
     "approvalDate": "2020-08-19",
@@ -86250,9 +86295,12 @@
       "10.5594-J09549",
       "10.5594-J15911",
       "10.5594-J17680",
+      "10.5594-JMI.2024-LHXY3357",
+      "10.5594-JMI.2025-RDCU7256",
       "10.5594-M001378",
       "10.5594-M00312",
       "10.5594-M00476",
+      "10.5594-MOO-3050",
       "10.5594-j18395XY",
       "SMPTE.EG2069.2012",
       "SMPTE.EG33.2004",
@@ -91742,6 +91790,8 @@
       "normative": []
     },
     "referencedBy": [
+      "10.5594-JMI.2025-RDCU7256",
+      "10.5594-MOO-3050",
       "SMPTE.RDD33.2015",
       "SMPTE.RDD35.2016",
       "SMPTE.RDD37.2016",
@@ -106943,6 +106993,8 @@
       ]
     },
     "referencedBy": [
+      "10.5594-JMI.2025-RDCU7256",
+      "10.5594-MOO-3050",
       "SMPTE.AG18",
       "SMPTE.RP2079.2013",
       "SMPTE.RP2079.2017",
