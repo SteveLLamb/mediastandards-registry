@@ -1,0 +1,2155 @@
+[
+  {
+    "abstract": "This document describes the MD5 message-digest algorithm. The algorithm takes as input a message of arbitrary length and produces as output a 128-bit \"fingerprint\" or \"message digest\" of the input. This memo provides information for the Internet community. It does not specify an Internet standard.",
+    "authors": [
+      {
+        "name": "Ronald L. Rivest"
+      }
+    ],
+    "docId": "RFC1321",
+    "docLabel": "IETF RFC 1321",
+    "docNumber": "1321",
+    "docTitle": "The MD5 Message-Digest Algorithm",
+    "docType": "Informational",
+    "doi": "10.17487/RFC1321",
+    "href": "https://doi.org/10.17487/RFC1321",
+    "issn": "2070-1721",
+    "keywords": [
+      "Security",
+      "Signature",
+      "Encryption"
+    ],
+    "pages": "21",
+    "publicationDate": "1992-04-01",
+    "publisher": "IETF",
+    "references": {
+      "bibliographic": [
+        "10.5555-646755.705223",
+        "RFC1320",
+        "T-REC-X.509.1988"
+      ],
+      "normative": []
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc1321",
+    "status": {
+      "active": true,
+      "amendedBy": [
+        "RFC6151"
+      ],
+      "errataExist": true,
+      "errataUrl": [
+        "https://www.rfc-editor.org/errata/rfc1321",
+        "https://www.rfc-editor.org/errata_search.php?rfc=1321",
+        "https://www.rfc-editor.org/rfc/inline-errata/rfc1321.html"
+      ],
+      "latestVersion": true,
+      "statusNote": "Informational",
+      "superseded": false
+    },
+    "msiLatestAny": "RFC1321",
+    "msiLatestBase": "RFC1321",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|1321|",
+    "docBaseLabel": "IETF RFC 1321",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC1321",
+        "docLabel": "IETF RFC 1321",
+        "href": "https://doi.org/10.17487/RFC1321",
+        "publicationDate": "1992-04-01",
+        "status": {
+          "active": true,
+          "amendedBy": [
+            "RFC6151"
+          ],
+          "errataExist": true,
+          "errataUrl": [
+            "https://www.rfc-editor.org/errata/rfc1321",
+            "https://www.rfc-editor.org/errata_search.php?rfc=1321",
+            "https://www.rfc-editor.org/rfc/inline-errata/rfc1321.html"
+          ],
+          "latestVersion": true,
+          "statusNote": "Informational",
+          "superseded": false
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencesResolved": {
+      "bibliographic": [
+        {
+          "id": "10.5555-646755.705223",
+          "undated": true
+        },
+        {
+          "id": "RFC1320",
+          "undated": true
+        },
+        {
+          "id": "T-REC-X.509.1988",
+          "undated": true
+        }
+      ],
+      "normative": []
+    },
+    "referencedBy": [
+      "RFC2104",
+      "RFC9231",
+      "SMPTE.ST2032-1.2007",
+      "SMPTE.ST2065-4.2013",
+      "SMPTE.ST330.2004",
+      "SMPTE.ST330.2011",
+      "SMPTE.ST330.2022"
+    ],
+    "referenceTree": [
+      "10.5555-646755.705223",
+      "RFC1320",
+      "T-REC-X.509.1988"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active*"
+  },
+  {
+    "abstract": "This document describes the encoding method being used to represent Korean characters in both header and body part of the Internet mail messages [RFC822]. This encoding method was specified in 1991, and has since then been used. It has now widely being used in Korean IP networks. This memo provides information for the Internet community. This memo does not specify an Internet standard of any kind.",
+    "authors": [
+      {
+        "name": "Uhhyung Choi"
+      },
+      {
+        "name": "Dr. Kilnam Chon"
+      },
+      {
+        "name": "Hyun Je Park"
+      }
+    ],
+    "docId": "RFC1557",
+    "docLabel": "IETF RFC 1557",
+    "docNumber": "1557",
+    "docTitle": "Korean Character Encoding for Internet Messages",
+    "docType": "Informational",
+    "doi": "10.17487/RFC1557",
+    "href": "https://doi.org/10.17487/RFC1557",
+    "issn": "2070-1721",
+    "keywords": [
+      "Character Set"
+    ],
+    "pages": "5",
+    "publicationDate": "1993-12-01",
+    "publisher": "IETF",
+    "references": {
+      "bibliographic": [
+        "INCITS.X3.4.1968",
+        "ISO.2022.1996",
+        "KS.C.5601.1987",
+        "KS.C.5861.1992",
+        "RFC1521",
+        "RFC1522",
+        "RFC822"
+      ],
+      "normative": []
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc1557",
+    "status": {
+      "active": true,
+      "errataExist": true,
+      "errataUrl": [
+        "https://www.rfc-editor.org/errata/rfc1557",
+        "https://www.rfc-editor.org/errata_search.php?rfc=1557"
+      ],
+      "latestVersion": true,
+      "statusNote": "Informational",
+      "superseded": false
+    },
+    "msiLatestAny": "RFC1557",
+    "msiLatestBase": "RFC1557",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|1557|",
+    "docBaseLabel": "IETF RFC 1557",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC1557",
+        "docLabel": "IETF RFC 1557",
+        "href": "https://doi.org/10.17487/RFC1557",
+        "publicationDate": "1993-12-01",
+        "status": {
+          "active": true,
+          "errataExist": true,
+          "errataUrl": [
+            "https://www.rfc-editor.org/errata/rfc1557",
+            "https://www.rfc-editor.org/errata_search.php?rfc=1557"
+          ],
+          "latestVersion": true,
+          "statusNote": "Informational",
+          "superseded": false
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencesResolved": {
+      "bibliographic": [
+        {
+          "id": "INCITS.X3.4.1968",
+          "undated": true
+        },
+        {
+          "id": "ISO.2022.1994",
+          "undated": true
+        },
+        {
+          "id": "KS.C.5601.1987",
+          "undated": true
+        },
+        {
+          "id": "KS.C.5861.1992",
+          "undated": true
+        },
+        {
+          "id": "RFC1521"
+        },
+        {
+          "id": "RFC1522",
+          "undated": true
+        },
+        {
+          "id": "RFC822",
+          "undated": true
+        }
+      ],
+      "normative": []
+    },
+    "referencedBy": [
+      "RFC2130"
+    ],
+    "referenceTree": [
+      "ADOBE.PostScript.1985",
+      "ADOBE.PostScript.2nd.1990",
+      "INCITS.X3.4.1968",
+      "INCITS.X3.4.1986",
+      "ISBN.0444873287",
+      "ISBN.9780130366337",
+      "ISO.11172",
+      "ISO.2022.1994",
+      "ISO.646.1991",
+      "ISO.8859-1.1998",
+      "KS.C.5601.1987",
+      "KS.C.5861.1992",
+      "LOC.GIF.89a",
+      "RFC1049",
+      "RFC1154",
+      "RFC1340",
+      "RFC1341",
+      "RFC1342",
+      "RFC1343",
+      "RFC1344",
+      "RFC1345",
+      "RFC1421",
+      "RFC1426",
+      "RFC1521",
+      "RFC1522",
+      "RFC783",
+      "RFC821",
+      "RFC822",
+      "RFC934",
+      "RFC959",
+      "T-REC-G.711.1972"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active*"
+  },
+  {
+    "abstract": "Several questions have been raised about the requirements and administrative procedure for registering MIME content-type and subtypes, and the use of these Media Types for other applications. This document addresses these issues and specifies a procedure for the registration of new Media Types (content-type/subtypes). It also generalizes the scope of use of these Media Types to make it appropriate to use the same registrations and specifications with other applications. This memo provides information for the Internet community. This memo does not specify an Internet standard of any kind.",
+    "authors": [
+      {
+        "name": "Dr. Jon Postel"
+      }
+    ],
+    "docId": "RFC1590",
+    "docLabel": "IETF RFC 1590",
+    "docNumber": "1590",
+    "docTitle": "Media Type Registration Procedure",
+    "docType": "Informational",
+    "doi": "10.17487/RFC1590",
+    "href": "https://doi.org/10.17487/RFC1590",
+    "issn": "2070-1721",
+    "keywords": [
+      "Email",
+      "Multimedia"
+    ],
+    "pages": "7",
+    "publicationDate": "1994-03-01",
+    "publisher": "IETF",
+    "references": {
+      "bibliographic": [
+        "RFC1340",
+        "RFC1521",
+        "RFC1543"
+      ],
+      "normative": []
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc1590",
+    "status": {
+      "active": false,
+      "amends": [
+        "RFC1521"
+      ],
+      "errataExist": false,
+      "latestVersion": true,
+      "statusNote": "Informational",
+      "superseded": true,
+      "supersededBy": [
+        "RFC2045",
+        "RFC2046",
+        "RFC2047",
+        "RFC2048",
+        "RFC2049"
+      ]
+    },
+    "msiLatestAny": "RFC1590",
+    "msiLatestBase": "RFC1590",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|1590|",
+    "docBaseLabel": "IETF RFC 1590",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC1590",
+        "docLabel": "IETF RFC 1590",
+        "href": "https://doi.org/10.17487/RFC1590",
+        "publicationDate": "1994-03-01",
+        "status": {
+          "active": false,
+          "amends": [
+            "RFC1521"
+          ],
+          "errataExist": false,
+          "latestVersion": true,
+          "statusNote": "Informational",
+          "superseded": true,
+          "supersededBy": [
+            "RFC2045",
+            "RFC2046",
+            "RFC2047",
+            "RFC2048",
+            "RFC2049"
+          ]
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencesResolved": {
+      "bibliographic": [
+        {
+          "id": "RFC1340",
+          "undated": true
+        },
+        {
+          "id": "RFC1521"
+        },
+        {
+          "id": "RFC1543",
+          "undated": true
+        }
+      ],
+      "normative": []
+    },
+    "referencedBy": [
+      "RFC1874",
+      "RFC2049"
+    ],
+    "referenceTree": [
+      "ADOBE.PostScript.1985",
+      "ADOBE.PostScript.2nd.1990",
+      "INCITS.X3.4.1986",
+      "ISBN.0444873287",
+      "ISBN.9780130366337",
+      "ISO.11172",
+      "ISO.2022.1994",
+      "ISO.646.1991",
+      "ISO.8859-1.1998",
+      "LOC.GIF.89a",
+      "RFC1049",
+      "RFC1154",
+      "RFC1340",
+      "RFC1341",
+      "RFC1342",
+      "RFC1343",
+      "RFC1344",
+      "RFC1345",
+      "RFC1421",
+      "RFC1426",
+      "RFC1521",
+      "RFC1522",
+      "RFC1543",
+      "RFC783",
+      "RFC821",
+      "RFC822",
+      "RFC934",
+      "RFC959",
+      "T-REC-G.711.1972"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Superseded*"
+  },
+  {
+    "abstract": "This document specifies a minimum set of requirements for a kind of Internet resource identifier known as Uniform Resource Names (URNs). This memo provides information for the Internet community. This memo does not specify an Internet standard of any kind.",
+    "authors": [
+      {
+        "name": "Larry M Masinter"
+      },
+      {
+        "name": "Dr. Karen R. Sollins"
+      }
+    ],
+    "docId": "RFC1737",
+    "docLabel": "IETF RFC 1737",
+    "docNumber": "1737",
+    "docTitle": "Functional Requirements for Uniform Resource Names",
+    "docType": "Informational",
+    "doi": "10.17487/RFC1737",
+    "href": "https://doi.org/10.17487/RFC1737",
+    "issn": "2070-1721",
+    "pages": "7",
+    "publicationDate": "1994-12-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc1737",
+    "status": {
+      "active": true,
+      "errataExist": false,
+      "latestVersion": true,
+      "statusNote": "Informational",
+      "superseded": false
+    },
+    "msiLatestAny": "RFC1737",
+    "msiLatestBase": "RFC1737",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|1737|",
+    "docBaseLabel": "IETF RFC 1737",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC1737",
+        "docLabel": "IETF RFC 1737",
+        "href": "https://doi.org/10.17487/RFC1737",
+        "publicationDate": "1994-12-01",
+        "status": {
+          "active": true,
+          "errataExist": false,
+          "latestVersion": true,
+          "statusNote": "Informational",
+          "superseded": false
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "RFC1738",
+      "RFC2141",
+      "SMPTE.ST2029.2009",
+      "SMPTE.ST2029.2022",
+      "SMPTE.ST2029.2023-10",
+      "SMPTE.ST2071-1.2012",
+      "SMPTE.ST2071-1.2014",
+      "SMPTE.ST2071-1.2016"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active*"
+  },
+  {
+    "abstract": "This document describes HMAC, a mechanism for message authentication using cryptographic hash functions. HMAC can be used with any iterative cryptographic hash function, e.g., MD5, SHA-1, in combination with a secret shared key. The cryptographic strength of HMAC depends on the properties of the underlying hash function. This memo provides information for the Internet community. This memo does not specify an Internet standard of any kind",
+    "authors": [
+      {
+        "name": "Hugo Krawczyk"
+      },
+      {
+        "name": "Mihir Bellare"
+      },
+      {
+        "name": "Ran Canetti"
+      }
+    ],
+    "docId": "RFC2104",
+    "docLabel": "IETF RFC 2104",
+    "docNumber": "2104",
+    "docTitle": "HMAC: Keyed-Hashing for Message Authentication",
+    "docType": "Informational",
+    "doi": "10.17487/RFC2104",
+    "href": "https://doi.org/10.17487/RFC2104",
+    "issn": "2070-1721",
+    "keywords": [
+      "IPSEC",
+      "Message",
+      "Digest",
+      "Internet",
+      "Protocol",
+      "Security",
+      "Encryption"
+    ],
+    "pages": "11",
+    "publicationDate": "1997-02-01",
+    "publisher": "IETF",
+    "references": {
+      "bibliographic": [
+        "10.1007-3-540-60865-6_44",
+        "10.1145-141809.141812",
+        "10.1145-191177.191231",
+        "10.5555-646760.705865",
+        "10.5555-646761.706031",
+        "10.5555-874062.875481",
+        "ANSI.X9.9.1986",
+        "ISBN.9780471048923",
+        "NIST.FIPS.180-1",
+        "RFC1321",
+        "RFC1826",
+        "RSA.crypto.v2n2.1996"
+      ],
+      "normative": []
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc2104",
+    "status": {
+      "active": true,
+      "amended": true,
+      "amendedBy": [
+        "RFC6151"
+      ],
+      "errataExist": true,
+      "errataUrl": [
+        "https://www.rfc-editor.org/errata/rfc2104",
+        "https://www.rfc-editor.org/errata_search.php?rfc=2104",
+        "https://www.rfc-editor.org/rfc/inline-errata/rfc2104.html"
+      ],
+      "latestVersion": true,
+      "statusNote": "Informational",
+      "superseded": false
+    },
+    "msiLatestAny": "RFC2104",
+    "msiLatestBase": "RFC2104",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|2104|",
+    "docBaseLabel": "IETF RFC 2104",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC2104",
+        "docLabel": "IETF RFC 2104",
+        "href": "https://doi.org/10.17487/RFC2104",
+        "publicationDate": "1997-02-01",
+        "status": {
+          "active": true,
+          "amended": true,
+          "amendedBy": [
+            "RFC6151"
+          ],
+          "errataExist": true,
+          "errataUrl": [
+            "https://www.rfc-editor.org/errata/rfc2104",
+            "https://www.rfc-editor.org/errata_search.php?rfc=2104",
+            "https://www.rfc-editor.org/rfc/inline-errata/rfc2104.html"
+          ],
+          "latestVersion": true,
+          "statusNote": "Informational",
+          "superseded": false
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencesResolved": {
+      "bibliographic": [
+        {
+          "id": "10.1007-3-540-60865-6_44",
+          "undated": true
+        },
+        {
+          "id": "10.1145-141809.141812",
+          "undated": true
+        },
+        {
+          "id": "10.1145-191177.191231",
+          "undated": true
+        },
+        {
+          "id": "10.5555-646760.705865",
+          "undated": true
+        },
+        {
+          "id": "10.5555-646761.706031",
+          "undated": true
+        },
+        {
+          "id": "10.5555-874062.875481",
+          "undated": true
+        },
+        {
+          "id": "ANSI.X9.9.1986",
+          "undated": true
+        },
+        {
+          "id": "ISBN.9780471048923",
+          "undated": true
+        },
+        {
+          "id": "NIST.FIPS.180-1"
+        },
+        {
+          "id": "RFC1321"
+        },
+        {
+          "id": "RFC1826",
+          "undated": true
+        },
+        {
+          "id": "RSA.crypto.v2n2.1996",
+          "undated": true
+        }
+      ],
+      "normative": []
+    },
+    "referencedBy": [
+      "ISO.26429-6.2008",
+      "RFC9048",
+      "RFC9231",
+      "SMPTE.ST429-6.2006",
+      "SMPTE.ST429-6.2006Am1.2017",
+      "SMPTE.ST429-6.2023-05"
+    ],
+    "referenceTree": [
+      "10.1007-3-540-60865-6_44",
+      "10.1145-141809.141812",
+      "10.1145-191177.191231",
+      "10.5555-646755.705223",
+      "10.5555-646760.705865",
+      "10.5555-646761.706031",
+      "10.5555-874062.875481",
+      "ANSI.X9.9.1986",
+      "ISBN.9780471048923",
+      "NIST.FIPS.180-1",
+      "RFC1320",
+      "RFC1321",
+      "RFC1826",
+      "RSA.crypto.v2n2.1996",
+      "T-REC-X.509.1988"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active, Amended*"
+  },
+  {
+    "abstract": "This report details the conclusions of an IAB-sponsored invitational workshop held 29 February - 1 March, 1996, to discuss the use of character sets on the Internet. It motivates the need to have character set handling in Internet protocols which transmit text, provides a conceptual framework for specifying character sets, recommends the use of MIME tagging for transmitted text, recommends a default character set *without* stating that there is no need for other character sets, and makes a series of recommendations to the IAB, IANA, and the IESG for furthering the integration of the character set framework into text transmission protocols. This memo provides information for the Internet community. This memo does not specify an Internet standard of any kind.",
+    "authors": [
+      {
+        "name": "Ran Atkinson"
+      },
+      {
+        "name": "Peter Svanberg"
+      },
+      {
+        "name": "Cecilia M. Preston"
+      },
+      {
+        "name": "Harald T. Alvestrand"
+      },
+      {
+        "name": "Mark Crispin"
+      },
+      {
+        "name": "Keld Simonsen"
+      },
+      {
+        "name": "Chris Weider"
+      }
+    ],
+    "docId": "RFC2130",
+    "docLabel": "IETF RFC 2130",
+    "docNumber": "2130",
+    "docTitle": "The Report of the IAB Character Set Workshop held 29 February - 1 March, 1996",
+    "docType": "Informational",
+    "doi": "10.17487/RFC2130",
+    "href": "https://doi.org/10.17487/RFC2130",
+    "issn": "2070-1721",
+    "keywords": [
+      "Internet",
+      "Architecture",
+      "Board",
+      "Interoperability"
+    ],
+    "pages": "31",
+    "publicationDate": "1997-04-01",
+    "publisher": "IETF",
+    "references": {
+      "bibliographic": [
+        "10.1016-0169-7552_94_90117-1",
+        "10.5555-138404",
+        "CEN.ENV.12005.1996",
+        "IEEE.STD1003.1.1992",
+        "INCITS.X3.4.1986",
+        "ISBN.9780750615594",
+        "ISO.10646-1.1993",
+        "ISO.2022.1994",
+        "ISO.7498-1.1994",
+        "ISO.8859-1.1987",
+        "ISO.8879.1986",
+        "LISA.FN5-p12-21.1996",
+        "RFC1340",
+        "RFC1344",
+        "RFC1345",
+        "RFC1468",
+        "RFC1489",
+        "RFC1502",
+        "RFC1522",
+        "RFC1554",
+        "RFC1555",
+        "RFC1556",
+        "RFC1557",
+        "RFC1641",
+        "RFC1642",
+        "RFC1700",
+        "RFC1766",
+        "RFC1815",
+        "RFC1842",
+        "RFC1843",
+        "RFC1866",
+        "RFC1922",
+        "RFC1945",
+        "RFC1958",
+        "RFC2044",
+        "RFC2045",
+        "RFC2046",
+        "RFC2047",
+        "RFC2070",
+        "RFC373",
+        "RFC821",
+        "RFC854",
+        "RFC959",
+        "UNICODE.STD.2.0"
+      ],
+      "normative": []
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc2130",
+    "status": {
+      "active": true,
+      "amendedBy": [
+        "RFC6055"
+      ],
+      "errataExist": false,
+      "latestVersion": true,
+      "statusNote": "Informational",
+      "superseded": false
+    },
+    "msiLatestAny": "RFC2130",
+    "msiLatestBase": "RFC2130",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|2130|",
+    "docBaseLabel": "IETF RFC 2130",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC2130",
+        "docLabel": "IETF RFC 2130",
+        "href": "https://doi.org/10.17487/RFC2130",
+        "publicationDate": "1997-04-01",
+        "status": {
+          "active": true,
+          "amendedBy": [
+            "RFC6055"
+          ],
+          "errataExist": false,
+          "latestVersion": true,
+          "statusNote": "Informational",
+          "superseded": false
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencesResolved": {
+      "bibliographic": [
+        {
+          "id": "10.1016-0169-7552_94_90117-1",
+          "undated": true
+        },
+        {
+          "id": "10.5555-138404",
+          "undated": true
+        },
+        {
+          "id": "CEN.ENV.12005.1996",
+          "undated": true
+        },
+        {
+          "id": "IEEE.STD1003.1.1992",
+          "undated": true
+        },
+        {
+          "id": "INCITS.X3.4.1986"
+        },
+        {
+          "id": "ISBN.9780750615594",
+          "undated": true
+        },
+        {
+          "id": "ISO.10646-1.2000",
+          "undated": true
+        },
+        {
+          "id": "ISO.2022.1994"
+        },
+        {
+          "id": "ISO.7498-1.1994",
+          "undated": true
+        },
+        {
+          "id": "ISO.8859-1.1998",
+          "undated": true
+        },
+        {
+          "id": "ISO.8879.1986",
+          "undated": true
+        },
+        {
+          "id": "LISA.FN5-p12-21.1996",
+          "undated": true
+        },
+        {
+          "id": "RFC1340",
+          "undated": true
+        },
+        {
+          "id": "RFC1344",
+          "undated": true
+        },
+        {
+          "id": "RFC1345",
+          "undated": true
+        },
+        {
+          "id": "RFC1468",
+          "undated": true
+        },
+        {
+          "id": "RFC1489",
+          "undated": true
+        },
+        {
+          "id": "RFC1502",
+          "undated": true
+        },
+        {
+          "id": "RFC1522",
+          "undated": true
+        },
+        {
+          "id": "RFC1554",
+          "undated": true
+        },
+        {
+          "id": "RFC1555",
+          "undated": true
+        },
+        {
+          "id": "RFC1556",
+          "undated": true
+        },
+        {
+          "id": "RFC1557"
+        },
+        {
+          "id": "RFC1641",
+          "undated": true
+        },
+        {
+          "id": "RFC1642",
+          "undated": true
+        },
+        {
+          "id": "RFC1700",
+          "undated": true
+        },
+        {
+          "id": "RFC1766"
+        },
+        {
+          "id": "RFC1815",
+          "undated": true
+        },
+        {
+          "id": "RFC1842",
+          "undated": true
+        },
+        {
+          "id": "RFC1843",
+          "undated": true
+        },
+        {
+          "id": "RFC1866",
+          "undated": true
+        },
+        {
+          "id": "RFC1922",
+          "undated": true
+        },
+        {
+          "id": "RFC1945",
+          "undated": true
+        },
+        {
+          "id": "RFC1958",
+          "undated": true
+        },
+        {
+          "id": "RFC2044",
+          "undated": true
+        },
+        {
+          "id": "RFC2045"
+        },
+        {
+          "id": "RFC2046"
+        },
+        {
+          "id": "RFC2047"
+        },
+        {
+          "id": "RFC2070",
+          "undated": true
+        },
+        {
+          "id": "RFC373",
+          "undated": true
+        },
+        {
+          "id": "RFC821",
+          "undated": true
+        },
+        {
+          "id": "RFC854",
+          "undated": true
+        },
+        {
+          "id": "RFC959",
+          "undated": true
+        },
+        {
+          "id": "UNICODE.STD.2.0",
+          "undated": true
+        }
+      ],
+      "normative": []
+    },
+    "referenceTree": [
+      "10.1016-0169-7552_94_90117-1",
+      "10.5555-138404",
+      "ADOBE.PostScript.1985",
+      "ADOBE.PostScript.2nd.1990",
+      "CEN.ENV.12005.1996",
+      "IEEE.STD1003.1.1992",
+      "INCITS.X3.4.1968",
+      "INCITS.X3.4.1986",
+      "ISBN.0444873287",
+      "ISBN.9780130366337",
+      "ISBN.9780750615594",
+      "ISO.10646-1.2000",
+      "ISO.10918-1",
+      "ISO.11172",
+      "ISO.2022.1994",
+      "ISO.3166.1993",
+      "ISO.639.1988",
+      "ISO.646.1991",
+      "ISO.7498-1.1994",
+      "ISO.8859-1.1998",
+      "ISO.8879.1986",
+      "KS.C.5601.1987",
+      "KS.C.5861.1992",
+      "LISA.FN5-p12-21.1996",
+      "RFC1049",
+      "RFC1154",
+      "RFC1327",
+      "RFC1340",
+      "RFC1341",
+      "RFC1342",
+      "RFC1344",
+      "RFC1345",
+      "RFC1421",
+      "RFC1422",
+      "RFC1423",
+      "RFC1424",
+      "RFC1468",
+      "RFC1489",
+      "RFC1502",
+      "RFC1521",
+      "RFC1522",
+      "RFC1524",
+      "RFC1543",
+      "RFC1554",
+      "RFC1555",
+      "RFC1556",
+      "RFC1557",
+      "RFC1590",
+      "RFC1602",
+      "RFC1641",
+      "RFC1642",
+      "RFC1652",
+      "RFC1700",
+      "RFC1741",
+      "RFC1766",
+      "RFC1815",
+      "RFC1842",
+      "RFC1843",
+      "RFC1866",
+      "RFC1896",
+      "RFC1922",
+      "RFC1945",
+      "RFC1958",
+      "RFC2044",
+      "RFC2045",
+      "RFC2046",
+      "RFC2047",
+      "RFC2048",
+      "RFC2049",
+      "RFC2070",
+      "RFC373",
+      "RFC783",
+      "RFC821",
+      "RFC822",
+      "RFC854",
+      "RFC934",
+      "RFC959",
+      "T-REC-G.711.1972",
+      "UNICODE.STD.2.0"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active*"
+  },
+  {
+    "docId": "RFC2437",
+    "docLabel": "IETF RFC 2437",
+    "docTitle": "PKCS #1: RSA Cryptography Specifications Version 2.0",
+    "docType": "Informational",
+    "href": "https://www.rfc-editor.org/info/rfc2437",
+    "publicationDate": "1998-10-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://datatracker.ietf.org/doc/html/rfc2437",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "RFC3447"
+      ],
+      "latestVersion": true
+    },
+    "msiLatestAny": "RFC2437",
+    "msiLatestBase": "RFC2437",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|2437|",
+    "docBaseLabel": "IETF RFC 2437",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC2437",
+        "docLabel": "IETF RFC 2437",
+        "href": "https://www.rfc-editor.org/info/rfc2437",
+        "publicationDate": "1998-10-01",
+        "status": {
+          "active": false,
+          "superseded": true,
+          "supersededBy": [
+            "RFC3447"
+          ],
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "SMPTE.ST427.2009"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Superseded"
+  },
+  {
+    "docId": "RFC2818",
+    "docLabel": "IETF RFC 2818",
+    "docTitle": "HTTP Over TLS",
+    "docType": "Informational",
+    "href": "https://www.rfc-editor.org/info/rfc2818",
+    "publicationDate": "2000-05-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://datatracker.ietf.org/doc/html/rfc2818",
+    "status": {
+      "active": true,
+      "amended": true,
+      "amendedBy": [
+        "RFC5785",
+        "RFC7230"
+      ],
+      "latestVersion": true
+    },
+    "msiLatestAny": "RFC2818",
+    "msiLatestBase": "RFC2818",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|2818|",
+    "docBaseLabel": "IETF RFC 2818",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC2818",
+        "docLabel": "IETF RFC 2818",
+        "href": "https://www.rfc-editor.org/info/rfc2818",
+        "publicationDate": "2000-05-01",
+        "status": {
+          "active": true,
+          "amended": true,
+          "amendedBy": [
+            "RFC5785",
+            "RFC7230"
+          ],
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "SMPTE.ST2032-1.2007",
+      "SMPTE.ST2032-2.2007",
+      "SMPTE.ST397.2003",
+      "SMPTE.ST430-14.2015",
+      "SMPTE.ST430-14.2021"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active, Amended"
+  },
+  {
+    "abstract": "This document provides recommendations for the implementation of password-based cryptography, covering key derivation functions, encryption schemes, message-authentication schemes, and ASN.1 syntax identifying the techniques. This memo provides information for the Internet community.",
+    "authors": [
+      {
+        "name": "Burt Kaliski"
+      }
+    ],
+    "docId": "RFC2898",
+    "docLabel": "IETF RFC 2898",
+    "docNumber": "2898",
+    "docTitle": "PKCS #5: Password-Based Cryptography Specification Version 2.0",
+    "docType": "Informational",
+    "doi": "10.17487/RFC2898",
+    "href": "https://doi.org/10.17487/RFC2898",
+    "issn": "2070-1721",
+    "keywords": [
+      "Public-key",
+      "Authentication",
+      "Encryption"
+    ],
+    "pages": "34",
+    "publicationDate": "2000-09-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc2898",
+    "status": {
+      "active": false,
+      "errataExist": true,
+      "errataUrl": [
+        "https://www.rfc-editor.org/errata/rfc2898",
+        "https://www.rfc-editor.org/errata_search.php?rfc=2898",
+        "https://www.rfc-editor.org/rfc/inline-errata/rfc2898.html"
+      ],
+      "latestVersion": true,
+      "statusNote": "Informational",
+      "superseded": true,
+      "supersededBy": [
+        "RFC8018"
+      ]
+    },
+    "msiLatestAny": "RFC2898",
+    "msiLatestBase": "RFC2898",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|2898|",
+    "docBaseLabel": "IETF RFC 2898",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC2898",
+        "docLabel": "IETF RFC 2898",
+        "href": "https://doi.org/10.17487/RFC2898",
+        "publicationDate": "2000-09-01",
+        "status": {
+          "active": false,
+          "errataExist": true,
+          "errataUrl": [
+            "https://www.rfc-editor.org/errata/rfc2898",
+            "https://www.rfc-editor.org/errata_search.php?rfc=2898",
+            "https://www.rfc-editor.org/rfc/inline-errata/rfc2898.html"
+          ],
+          "latestVersion": true,
+          "statusNote": "Informational",
+          "superseded": true,
+          "supersededBy": [
+            "RFC8018"
+          ]
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "ISO.26429-6.2008",
+      "SMPTE.ST429-6.2006",
+      "SMPTE.ST429-6.2006Am1.2017",
+      "SMPTE.ST429-6.2023-05"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Superseded*"
+  },
+  {
+    "docId": "RFC3174",
+    "docLabel": "IETF RFC 3174",
+    "docTitle": "US Secure Hash Algorithm 1 (SHA1)",
+    "docType": "Informational",
+    "href": "https://www.rfc-editor.org/info/rfc3174",
+    "keywords": [
+      "SHA-1"
+    ],
+    "publicationDate": "2001-09-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://datatracker.ietf.org/doc/html/rfc3174",
+    "status": {
+      "active": true,
+      "amended": true,
+      "amendedBy": [
+        "RFC4634",
+        "RFC6234"
+      ],
+      "latestVersion": true
+    },
+    "msiLatestAny": "RFC3174",
+    "msiLatestBase": "RFC3174",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|3174|",
+    "docBaseLabel": "IETF RFC 3174",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC3174",
+        "docLabel": "IETF RFC 3174",
+        "href": "https://www.rfc-editor.org/info/rfc3174",
+        "publicationDate": "2001-09-01",
+        "status": {
+          "active": true,
+          "amended": true,
+          "amendedBy": [
+            "RFC4634",
+            "RFC6234"
+          ],
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "ISO.26429-7.2008",
+      "ISO.26429-8.2009",
+      "SMPTE.ST429-6.2023-05",
+      "SMPTE.ST429-7.2006",
+      "SMPTE.ST429-8.2007"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active, Amended"
+  },
+  {
+    "docId": "RFC3447",
+    "docLabel": "IETF RFC 3447",
+    "docTitle": "Public-Key Cryptography Standards (PKCS) #1: RSA Cryptography Specifications Version 2.1",
+    "docType": "Informational",
+    "href": "https://www.rfc-editor.org/info/rfc3447",
+    "publicationDate": "2013-02-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://datatracker.ietf.org/doc/html/rfc3447",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "RFC8017"
+      ],
+      "latestVersion": true
+    },
+    "msiLatestAny": "RFC3447",
+    "msiLatestBase": "RFC3447",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|3447|",
+    "docBaseLabel": "IETF RFC 3447",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC3447",
+        "docLabel": "IETF RFC 3447",
+        "href": "https://www.rfc-editor.org/info/rfc3447",
+        "publicationDate": "2013-02-01",
+        "status": {
+          "active": false,
+          "superseded": true,
+          "supersededBy": [
+            "RFC8017"
+          ],
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "DCI.DCSS.v1.4.5.2024-0529",
+      "ISO.26430-2.2008",
+      "ISO.26430-3.2008",
+      "SMPTE.ST430-2.2006",
+      "SMPTE.ST430-2.2017",
+      "SMPTE.ST430-3.2008",
+      "SMPTE.ST430-3.2012",
+      "SMPTE.ST430-6.2010"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Superseded"
+  },
+  {
+    "abstract": "The International Standard Audiovisual Number (ISAN) is a standard numbering system for the unique and international identification of audiovisual works. This document is the definition of the formal Uniform Resource Name (URN) Namespace Identifier (NID) for ISAN. This memo provides information for the Internet community.",
+    "authors": [
+      {
+        "name": "Michael Dolan"
+      }
+    ],
+    "docId": "RFC4246",
+    "docLabel": "IETF RFC 4246",
+    "docNumber": "4246",
+    "docTitle": "International Standard Audiovisual Number (ISAN) URN Definition",
+    "docType": "Informational",
+    "doi": "10.17487/RFC4246",
+    "href": "https://doi.org/10.17487/RFC4246",
+    "issn": "2070-1721",
+    "keywords": [
+      "Numbering System",
+      "International Identification",
+      "Audiovisual",
+      "Uniform Resource Identifier"
+    ],
+    "pages": "6",
+    "publicationDate": "2006-02-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc4246",
+    "status": {
+      "active": true,
+      "errataExist": false,
+      "latestVersion": true,
+      "statusNote": "Informational",
+      "superseded": false
+    },
+    "msiLatestAny": "RFC4246",
+    "msiLatestBase": "RFC4246",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|4246|",
+    "docBaseLabel": "IETF RFC 4246",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC4246",
+        "docLabel": "IETF RFC 4246",
+        "href": "https://doi.org/10.17487/RFC4246",
+        "publicationDate": "2006-02-01",
+        "status": {
+          "active": true,
+          "errataExist": false,
+          "latestVersion": true,
+          "statusNote": "Informational",
+          "superseded": false
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "SMPTE.ST2067-2.2013",
+      "SMPTE.ST2067-2.2016",
+      "SMPTE.ST2067-2.2020",
+      "SMPTE.ST429-2.2009",
+      "SMPTE.ST429-2.2011",
+      "SMPTE.ST429-2.2013",
+      "SMPTE.ST429-2.2013Am1.2018",
+      "SMPTE.ST429-2.2019",
+      "SMPTE.ST429-2.2019Am1.2019",
+      "SMPTE.ST429-2.2020",
+      "SMPTE.ST429-2.2023-09"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active*"
+  },
+  {
+    "docId": "RFC4452",
+    "docLabel": "IETF RFC 4452",
+    "docTitle": "The 'info' URI Scheme for Information Assets with Identifiers in Public Namespaces",
+    "docType": "Informational",
+    "href": "https://www.rfc-editor.org/info/rfc4452",
+    "publicationDate": "2006-04-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc4452/",
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "RFC4452",
+    "msiLatestBase": "RFC4452",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|4452|",
+    "docBaseLabel": "IETF RFC 4452",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC4452",
+        "docLabel": "IETF RFC 4452",
+        "href": "https://www.rfc-editor.org/info/rfc4452",
+        "publicationDate": "2006-04-01",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "SMPTE.RP2079.2013",
+      "SMPTE.ST2067-2.2013",
+      "SMPTE.ST2067-2.2016",
+      "SMPTE.ST2067-2.2020"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "RFC4539",
+    "docLabel": "IETF RFC 4539",
+    "docTitle": "Media Type Registration for the Society of Motion Picture and Television Engineers (SMPTE) Material Exchange Format (MXF)",
+    "docType": "Informational",
+    "href": "https://www.rfc-editor.org/info/rfc4539",
+    "publicationDate": "2006-05-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://datatracker.ietf.org/doc/html/rfc4539",
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "RFC4539",
+    "msiLatestBase": "RFC4539",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|4539|",
+    "docBaseLabel": "IETF RFC 4539",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC4539",
+        "docLabel": "IETF RFC 4539",
+        "href": "https://www.rfc-editor.org/info/rfc4539",
+        "publicationDate": "2006-05-01",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "SMPTE.ST2032-1.2007",
+      "SMPTE.ST2067-2.2016",
+      "SMPTE.ST2067-2.2020",
+      "SMPTE.ST429-3.2007"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "RFC4634",
+    "docLabel": "IETF RFC 4634",
+    "docTitle": "US Secure Hash Algorithms (SHA and HMAC-SHA)",
+    "docType": "Informational",
+    "href": "https://www.rfc-editor.org/info/rfc4634",
+    "publicationDate": "2007-06-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://datatracker.ietf.org/doc/html/rfc4634",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "RFC6234"
+      ],
+      "latestVersion": true
+    },
+    "msiLatestAny": "RFC4634",
+    "msiLatestBase": "RFC4634",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|4634|",
+    "docBaseLabel": "IETF RFC 4634",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC4634",
+        "docLabel": "IETF RFC 4634",
+        "href": "https://www.rfc-editor.org/info/rfc4634",
+        "publicationDate": "2007-06-01",
+        "status": {
+          "active": false,
+          "superseded": true,
+          "supersededBy": [
+            "RFC6234"
+          ],
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "SMPTE.ST2067-3.2013",
+      "SMPTE.ST2067-3.2016"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Superseded"
+  },
+  {
+    "docId": "RFC6151",
+    "docLabel": "IETF RFC 6151",
+    "docTitle": "Updated Security Considerations for the MD5 Message-Digest and the HMAC-MD5 Algorithms",
+    "docType": "Informational",
+    "href": "https://www.rfc-editor.org/info/rfc6151",
+    "publicationDate": "2011-03-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://datatracker.ietf.org/doc/html/rfc6151",
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "RFC6151",
+    "msiLatestBase": "RFC6151",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|6151|",
+    "docBaseLabel": "IETF RFC 6151",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC6151",
+        "docLabel": "IETF RFC 6151",
+        "href": "https://www.rfc-editor.org/info/rfc6151",
+        "publicationDate": "2011-03-01",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "RFC9231"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "RFC6234",
+    "docLabel": "IETF RFC 6234",
+    "docTitle": "US Secure Hash Algorithms (SHA and SHA-based HMAC and HKDF)",
+    "docType": "Informational",
+    "href": "https://www.rfc-editor.org/info/rfc6234",
+    "publicationDate": "2011-05-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://datatracker.ietf.org/doc/html/rfc6234",
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "RFC6234",
+    "msiLatestBase": "RFC6234",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|6234|",
+    "docBaseLabel": "IETF RFC 6234",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC6234",
+        "docLabel": "IETF RFC 6234",
+        "href": "https://www.rfc-editor.org/info/rfc6234",
+        "publicationDate": "2011-05-01",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "RFC9231"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "RFC7302",
+    "docLabel": "IETF RFC 7302",
+    "docTitle": "Entertainment Identifier Registry (EIDR) URN Namespace Definition",
+    "docType": "Informational",
+    "href": "https://www.rfc-editor.org/info/rfc7302",
+    "publicationDate": "2014-07-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://datatracker.ietf.org/doc/html/rfc7302",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "RFC7972"
+      ],
+      "latestVersion": true
+    },
+    "msiLatestAny": "RFC7302",
+    "msiLatestBase": "RFC7302",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|7302|",
+    "docBaseLabel": "IETF RFC 7302",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC7302",
+        "docLabel": "IETF RFC 7302",
+        "href": "https://www.rfc-editor.org/info/rfc7302",
+        "publicationDate": "2014-07-01",
+        "status": {
+          "active": false,
+          "superseded": true,
+          "supersededBy": [
+            "RFC7972"
+          ],
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "SMPTE.ST429-2.2019"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Superseded"
+  },
+  {
+    "docId": "RFC7972",
+    "docLabel": "IETF RFC 7972",
+    "docTitle": "Entertainment Identifier Registry (EIDR) URN Namespace Definition",
+    "docType": "Informational",
+    "href": "https://www.rfc-editor.org/info/rfc7972",
+    "publicationDate": "2016-09-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://datatracker.ietf.org/doc/html/rfc7972",
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "RFC7972",
+    "msiLatestBase": "RFC7972",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|7972|",
+    "docBaseLabel": "IETF RFC 7972",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC7972",
+        "docLabel": "IETF RFC 7972",
+        "href": "https://www.rfc-editor.org/info/rfc7972",
+        "publicationDate": "2016-09-01",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "SMPTE.RP2079.2017",
+      "SMPTE.RP2079.2018",
+      "SMPTE.ST429-2.2019Am1.2019",
+      "SMPTE.ST429-2.2020",
+      "SMPTE.ST429-2.2023-09"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "RFC8017",
+    "docLabel": "IETF RFC 8017",
+    "docTitle": "PKCS #1: RSA Cryptography Specifications Version 2.2",
+    "docType": "Informational",
+    "href": "https://www.rfc-editor.org/info/rfc8017",
+    "publicationDate": "2016-11-01",
+    "publisher": "IETF",
+    "resolvedHref": "https://datatracker.ietf.org/doc/html/rfc8017",
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "RFC8017",
+    "msiLatestBase": "RFC8017",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|8017|",
+    "docBaseLabel": "IETF RFC 8017",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC8017",
+        "docLabel": "IETF RFC 8017",
+        "href": "https://www.rfc-editor.org/info/rfc8017",
+        "publicationDate": "2016-11-01",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "RFC9231",
+      "SMPTE.ST430-1.2023-09"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "abstract": "This note describes the eXtended Merkle Signature Scheme (XMSS), a hash-based digital signature system that is based on existing descriptions in scientific literature. This note specifies Winternitz One-Time Signature Plus (WOTS+), a one-time signature scheme; XMSS, a single-tree scheme; and XMSS^MT, a multi-tree variant of XMSS. Both XMSS and XMSS^MT use WOTS+ as a main building block. XMSS provides cryptographic digital signatures without relying on the conjectured hardness of mathematical problems. Instead, it is proven that it only relies on the properties of cryptographic hash functions. XMSS provides strong security guarantees and is even secure when the collision resistance of the underlying hash function is broken. It is suitable for compact implementations, is relatively simple to implement, and naturally resists side-channel attacks. Unlike most other signature systems, hash-based signatures can so far withstand known attacks using quantum computers.",
+    "authors": [
+      {
+        "name": "Andreas Huelsing"
+      },
+      {
+        "name": "Denis Butin"
+      },
+      {
+        "name": "Stefan-Lukas Gazdag"
+      },
+      {
+        "name": "Joost Rijneveld"
+      },
+      {
+        "name": "Aziz Mohaisen"
+      }
+    ],
+    "docId": "RFC8391",
+    "docLabel": "IETF RFC 8391",
+    "docNumber": "8391",
+    "docTitle": "XMSS: eXtended Merkle Signature Scheme",
+    "docType": "Informational",
+    "doi": "10.17487/RFC8391",
+    "href": "https://doi.org/10.17487/RFC8391",
+    "issn": "2070-1721",
+    "keywords": [
+      "Digital Signature",
+      "Cryptography",
+      "Post-quantum Cryptography",
+      "Hash-based Signatures",
+      "Merkle Signatures",
+      "Merkle Tree",
+      "Hash Function",
+      "Winternitz",
+      "Winternitz One-time Signature Scheme",
+      "W-OTS",
+      "W-OTS+",
+      "XMSS-MT",
+      "Multi-tree XMSS"
+    ],
+    "pages": "74",
+    "publicationDate": "2018-05-01",
+    "publisher": "IETF",
+    "references": {
+      "bibliographic": [
+        "10.1007-978-3-540-88403-3_5",
+        "10.1007-978-3-540-88702-7_3",
+        "10.1007-978-3-642-25405-5_8",
+        "10.1007-978-3-642-38553-7_10",
+        "10.1007-978-3-642-40588-4_14",
+        "10.1007-978-3-662-46800-5_15",
+        "10.1007-978-3-662-49384-7_15",
+        "10.26083-tuprints-00003651",
+        "10.48550-arXiv.1409.4081",
+        "IETF.draft-mcgrew-hash-sigs-11",
+        "ISBN.9780835713849"
+      ],
+      "normative": [
+        "NIST.FIPS.180-4",
+        "NIST.FIPS.202",
+        "RFC2119",
+        "RFC4506",
+        "RFC8126",
+        "RFC8174"
+      ]
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc8391",
+    "status": {
+      "active": true,
+      "errataExist": true,
+      "errataUrl": [
+        "https://www.rfc-editor.org/errata/rfc8391",
+        "https://www.rfc-editor.org/errata_search.php?rfc=8391",
+        "https://www.rfc-editor.org/rfc/inline-errata/rfc8391.html"
+      ],
+      "latestVersion": true,
+      "statusNote": "Informational",
+      "superseded": false
+    },
+    "msiLatestAny": "RFC8391",
+    "msiLatestBase": "RFC8391",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|8391|",
+    "docBaseLabel": "IETF RFC 8391",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC8391",
+        "docLabel": "IETF RFC 8391",
+        "href": "https://doi.org/10.17487/RFC8391",
+        "publicationDate": "2018-05-01",
+        "status": {
+          "active": true,
+          "errataExist": true,
+          "errataUrl": [
+            "https://www.rfc-editor.org/errata/rfc8391",
+            "https://www.rfc-editor.org/errata_search.php?rfc=8391",
+            "https://www.rfc-editor.org/rfc/inline-errata/rfc8391.html"
+          ],
+          "latestVersion": true,
+          "statusNote": "Informational",
+          "superseded": false
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencesResolved": {
+      "normative": [
+        {
+          "id": "NIST.FIPS.180-4"
+        },
+        {
+          "id": "NIST.FIPS.202",
+          "undated": true
+        },
+        {
+          "id": "RFC2119"
+        },
+        {
+          "id": "RFC4506",
+          "undated": true
+        },
+        {
+          "id": "RFC8126",
+          "undated": true
+        },
+        {
+          "id": "RFC8174",
+          "undated": true
+        }
+      ],
+      "bibliographic": [
+        {
+          "id": "10.1007-978-3-540-88403-3_5",
+          "undated": true
+        },
+        {
+          "id": "10.1007-978-3-540-88702-7_3",
+          "undated": true
+        },
+        {
+          "id": "10.1007-978-3-642-25405-5_8",
+          "undated": true
+        },
+        {
+          "id": "10.1007-978-3-642-38553-7_10",
+          "undated": true
+        },
+        {
+          "id": "10.1007-978-3-642-40588-4_14",
+          "undated": true
+        },
+        {
+          "id": "10.1007-978-3-662-46800-5_15",
+          "undated": true
+        },
+        {
+          "id": "10.1007-978-3-662-49384-7_15",
+          "undated": true
+        },
+        {
+          "id": "10.26083-tuprints-00003651",
+          "undated": true
+        },
+        {
+          "id": "10.48550-arXiv.1409.4081",
+          "undated": true
+        },
+        {
+          "id": "IETF.draft-mcgrew-hash-sigs-11",
+          "undated": true
+        },
+        {
+          "id": "ISBN.9780835713849",
+          "undated": true
+        }
+      ]
+    },
+    "referencedBy": [
+      "RFC9231"
+    ],
+    "referenceTree": [
+      "10.1007-978-3-540-88403-3_5",
+      "10.1007-978-3-540-88702-7_3",
+      "10.1007-978-3-642-25405-5_8",
+      "10.1007-978-3-642-38553-7_10",
+      "10.1007-978-3-642-40588-4_14",
+      "10.1007-978-3-662-46800-5_15",
+      "10.1007-978-3-662-49384-7_15",
+      "10.26083-tuprints-00003651",
+      "10.48550-arXiv.1409.4081",
+      "IETF.draft-mcgrew-hash-sigs-11",
+      "ISBN.9780835713849",
+      "NIST.FIPS.180-4",
+      "NIST.FIPS.202",
+      "RFC2119",
+      "RFC4506",
+      "RFC8126",
+      "RFC8174"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active*"
+  },
+  {
+    "abstract": "This document defines the ChaCha20 stream cipher as well as the use of the Poly1305 authenticator, both as stand-alone algorithms and as a \"combined mode\", or Authenticated Encryption with Associated Data (AEAD) algorithm. RFC 7539, the predecessor of this document, was meant to serve as a stable reference and an implementation guide. It was a product of the Crypto Forum Research Group (CFRG). This document merges the errata filed against RFC 7539 and adds a little text to the Security Considerations section.",
+    "authors": [
+      {
+        "name": "Yoav Nir"
+      },
+      {
+        "name": "Adam Langley"
+      }
+    ],
+    "docId": "RFC8439",
+    "docLabel": "IETF RFC 8439",
+    "docNumber": "8439",
+    "docTitle": "ChaCha20 and Poly1305 for IETF Protocols",
+    "docType": "Informational",
+    "doi": "10.17487/RFC8439",
+    "href": "https://doi.org/10.17487/RFC8439",
+    "issn": "2070-1721",
+    "keywords": [
+      "ChaCha",
+      "ChaCha20",
+      "POLY1305",
+      "AEAD"
+    ],
+    "pages": "46",
+    "publicationDate": "2018-06-01",
+    "publisher": "IETF",
+    "references": {
+      "bibliographic": [
+        "10.1007-11894063_1",
+        "10.1007-978-3-540-71039-4_30",
+        "10.1007-978-3-642-25243-3_21",
+        "10.1007-978-3-642-37682-5_24",
+        "10.1007-s00145-008-9026-x",
+        "CACE.NaCl.201207",
+        "GITHUB.floodyberry.poly1305-donna.e6ad6e0.201603",
+        "IETF.draft-mcgrew-standby-cipher-00",
+        "NIST.FIPS.197",
+        "NIST.SP.800-67r2",
+        "RFC5116",
+        "RFC7296",
+        "RFC7539",
+        "SSCID.12944277"
+      ],
+      "normative": [
+        "10.1007-11502760_3",
+        "RFC2119",
+        "RFC8174",
+        "UIC.chacha.20080128"
+      ]
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc8439",
+    "status": {
+      "active": true,
+      "errataExist": true,
+      "errataUrl": [
+        "https://www.rfc-editor.org/errata/rfc8439",
+        "https://www.rfc-editor.org/errata_search.php?rfc=8439",
+        "https://www.rfc-editor.org/rfc/inline-errata/rfc8439.html"
+      ],
+      "latestVersion": true,
+      "statusNote": "Informational",
+      "superseded": false,
+      "supersedes": [
+        "RFC7539"
+      ]
+    },
+    "msiLatestAny": "RFC8439",
+    "msiLatestBase": "RFC8439",
+    "isLatestAny": true,
+    "docBase": "IETF|RFC|8439|",
+    "docBaseLabel": "IETF RFC 8439",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "RFC8439",
+        "docLabel": "IETF RFC 8439",
+        "href": "https://doi.org/10.17487/RFC8439",
+        "publicationDate": "2018-06-01",
+        "status": {
+          "active": true,
+          "errataExist": true,
+          "errataUrl": [
+            "https://www.rfc-editor.org/errata/rfc8439",
+            "https://www.rfc-editor.org/errata_search.php?rfc=8439",
+            "https://www.rfc-editor.org/rfc/inline-errata/rfc8439.html"
+          ],
+          "latestVersion": true,
+          "statusNote": "Informational",
+          "superseded": false,
+          "supersedes": [
+            "RFC7539"
+          ]
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencesResolved": {
+      "normative": [
+        {
+          "id": "10.1007-11502760_3",
+          "undated": true
+        },
+        {
+          "id": "RFC2119"
+        },
+        {
+          "id": "RFC8174",
+          "undated": true
+        },
+        {
+          "id": "UIC.chacha.20080128",
+          "undated": false
+        }
+      ],
+      "bibliographic": [
+        {
+          "id": "10.1007-11894063_1",
+          "undated": true
+        },
+        {
+          "id": "10.1007-978-3-540-71039-4_30",
+          "undated": true
+        },
+        {
+          "id": "10.1007-978-3-642-25243-3_21",
+          "undated": true
+        },
+        {
+          "id": "10.1007-978-3-642-37682-5_24",
+          "undated": true
+        },
+        {
+          "id": "10.1007-s00145-008-9026-x",
+          "undated": true
+        },
+        {
+          "id": "CACE.NaCl.201207",
+          "undated": true
+        },
+        {
+          "id": "GITHUB.floodyberry.poly1305-donna.e6ad6e0.201603",
+          "undated": true
+        },
+        {
+          "id": "IETF.draft-mcgrew-standby-cipher-00",
+          "undated": true
+        },
+        {
+          "id": "NIST.FIPS.197"
+        },
+        {
+          "id": "NIST.SP.800-67r2",
+          "undated": true
+        },
+        {
+          "id": "RFC5116",
+          "undated": true
+        },
+        {
+          "id": "RFC7296",
+          "undated": true
+        },
+        {
+          "id": "RFC7539",
+          "undated": true
+        },
+        {
+          "id": "SSCID.12944277",
+          "undated": false
+        }
+      ]
+    },
+    "referencedBy": [
+      "RFC9231"
+    ],
+    "referenceTree": [
+      "10.1007-11502760_3",
+      "10.1007-11894063_1",
+      "10.1007-978-3-540-71039-4_30",
+      "10.1007-978-3-642-25243-3_21",
+      "10.1007-978-3-642-37682-5_24",
+      "10.1007-s00145-008-9026-x",
+      "CACE.NaCl.201207",
+      "GITHUB.floodyberry.poly1305-donna.e6ad6e0.201603",
+      "IETF.draft-mcgrew-standby-cipher-00",
+      "NIST.FIPS.197",
+      "NIST.SP.800-67r2",
+      "RFC2119",
+      "RFC5116",
+      "RFC7296",
+      "RFC7539",
+      "RFC8174",
+      "SSCID.12944277",
+      "UIC.chacha.20080128"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active*"
+  }
+]

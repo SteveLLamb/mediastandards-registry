@@ -1,0 +1,207 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-M00652",
+  "document": {
+    "abstract": "Transmission, storage and processing of PCM digital television signals in noisy channels subjects the digital signal to uncertainties, and causes bit errors. These appear as random bright and dark noise specks in the picture. The usual way of dealing with errors is by adding parity bits to identify and correct the errors. Many error correcting codes utilizing interlinked parity bits have been developed for this purpose and require overhead bits to carry redundant information. Whenever there is a statistical probability of excessive errors being generated, the television system has had to carry the burden of these overhead bits in order to insure satisfactory picture quality. The penalty is a higher total bit rate. There may be situations where bit errors have occurred in a prior section of the television chain outside our control. If the signal lacks parity coding, then there will be no way to reduce the bit error rate using parity techniques.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Backfilled from SMPTE canonical repository (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "CBS Technology Center Stamford, Connecticut",
+        "bio": "Abraham Albert Goldberg, P.E., is Associate Director, Television Research at the CBS Technology Center in Stamford, Connecticut. He has been developing color television systems for 34 years, starting with the field sequential system and extending to digital television today. He holds 26 patents in these fields. Mr. Goldberg serves on the CMTT of the International Telecommunications Union, the European Broadcasting Union Specialist Group Vl-VID, and is chairman of the Digital Technology Subcommittee of the IEEE Broadcasting Group. He is a senior member of the IEEE, and a fellow of the SMPTE.",
+        "name": "A. A. Goldberg"
+      },
+      {
+        "affiliation": "CBS Technology Center Stamford, Connecticut",
+        "bio": "John P. Rossi has been in the design and development of television circuits in the CBS Technology Center since 1968. In 1972, he joined the digital television study program which has been involved in a long-range development of digital techniques in television. He holds six patents in the area of digital television signal processing. Presently, Mr. Ross is Manager of Digital Television Development in the Advanced Television Technology Department of the CBS Technology Center.",
+        "name": "J. P. Rossi"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Canonical-confirmed full paper (summary-abstract set is orig-research in the SMPTE canonical repos); HIGHWIRE-era abstract label was a delivery artifact",
+      "originalValue": "summary-abstract",
+      "source": "resolved",
+      "updated": "2026-07-09T19:12:47.628Z",
+      "version": "contenttype-fixes@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00652.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      },
+      "year": "1981",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00652.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00652.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docId": "10.5594-M00652",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/M00652",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docLabel": "SMPTE Meetings and Conferences ( February 1981)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docTitle": "Digital Television Error Correction without Overhead Bits",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00652.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docType": "Conference Paper",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE conference paper",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "doi": "10.5594/M00652",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00652.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/M00652",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/M00652",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "number": "22",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00652.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "pages": "80–88",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00652.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publicationDate": "1981-02-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00652.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00652.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-M00652/bibr1-10.5594_M00652",
+        "orphan/10.5594-M00652/bibr2-10.5594_M00652",
+        "orphan/10.5594-M00652/bibr3-10.5594_M00652"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteConferenceRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T20:02:43.384Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/conferences/Television%20Technology%20in%20the%2080s:%2015th%20Annual%20SMPTE%20Television%20Conference/10/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.439Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — conference papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "volume": "1981",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00652.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    }
+  }
+}

@@ -1,0 +1,273 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-J08126",
+  "document": {
+    "abbrevTitle": "J SMPTE",
+    "abbrevTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08126.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "abstract": "This first part of a two-part article on the design and analysis of rotating prism compensators is theoretical and provides an overview on the nature of the image in simple compensators while explaining the principles upon which complex designs are based. Some new schemes, consistent with available optical materials and engineering techniques, are developed that offer significantly improved image quality. (The second part, in preparation by the authors, addresses the specification and computer analysis of optical design, with particular emphasis on predicting the effective modulation transfer function in a high-speed rotating prism camera. A new wide-angle lens, based on theoretical considerations, was designed for a conventional 70mm camera. Measurements with the finished lens are compared with prediction and existing lenses. The computer performance of a new compensation scheme is compared with a conventional rotating prism compensator.)",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08126.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "Optical Sciences Center, University of Arizona, Tucson, AZ 85721",
+        "name": "R. A. Buchroeder"
+      },
+      {
+        "affiliation": "Instrumentation Directorate, US Army White Sands Missile Range, White Sands Missile Range, NM 88002",
+        "name": "C. R. Hayslett"
+      },
+      {
+        "affiliation": "Instrumentation Directorate, US Army White Sands Missile Range, White Sands Missile Range, NM 88002",
+        "name": "W. H. Swantner"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Vocabulary conformance to SMPTE ContentTypeEnum (2026-07-09): 'research-article' renamed to 'orig-research'. Registry vocab = SMPTE enum + 9 retained MSRBot values.",
+      "originalValue": "research-article",
+      "source": "resolved",
+      "updated": "2026-07-09T17:56:30.992Z",
+      "version": "articletype-conform@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08126.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "year": "1977",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08126.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08126.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docId": "10.5594-J08126",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/J08126",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docLabel": "SMPTE Journal ( Volume: 86, Issue: 6, June 1977)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from journal title, volume, issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docTitle": "Rotating Prism Compensators, Part I: Theory",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08126.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "doi": "10.5594/J08126",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08126.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/J08126",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/J08126",
+      "source": "inferred",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "issn": {
+      "print": "0036-1682",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08126.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08126.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08182015 BACKFILE JOURNAL FRESH/smptej_86_6/MIJR15Vol86No6.xml)",
+      "source": "parsed",
+      "updated": "2026-06-16T16:11:59.617Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "SMPTE Journal",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "6",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08126.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "pages": "431–438",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08126.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publicationDate": "1977-06-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08126.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08182015 BACKFILE JOURNAL FRESH/smptej_86_6/MIJR15Vol86No6.xml)",
+        "source": "parsed",
+        "updated": "2026-06-16T16:11:59.617Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08126.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "10.5594-J14714",
+        "10.5594-J11912",
+        "10.5594-J12835",
+        "10.5594-J11850",
+        "10.5594-J11692",
+        "10.5594-J00967",
+        "10.5594-J07135",
+        "10.5594-J12765",
+        "10.5594-J07682",
+        "10.5594-J05008",
+        "10.5594-J17055",
+        "orphan/10.5594-J08126/bibr1-10.5594_J08126",
+        "orphan/10.5594-J08126/bibr9-10.5594_J08126",
+        "orphan/10.5594-J08126/bibr12-10.5594_J08126",
+        "orphan/10.5594-J08126/bibr13-10.5594_J08126",
+        "orphan/10.5594-J08126/bibr14-10.5594_J08126",
+        "orphan/10.5594-J08126/bibr15-10.5594_J08126",
+        "orphan/10.5594-J08126/bibr16-10.5594_J08126"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteJournalRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T18:21:02.558Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/SMPTE%20Journal/86/6/11/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.415Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — journal articles default active",
+        "source": "inferred",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "volume": "86",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J08126.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    }
+  }
+}

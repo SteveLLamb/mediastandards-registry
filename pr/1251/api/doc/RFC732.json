@@ -1,0 +1,280 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "RFC732",
+  "document": {
+    "abstract": "Telnet Data Entry Terminal option (RFC 732, September 1977)",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from Datatracker HTML abstract",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc732/",
+      "updated": "2026-03-04T00:29:53.258Z",
+      "version": "extractDocs.js@commit:b8c6349eeb50"
+    },
+    "authors": [
+      {
+        "name": "J.D. Day"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc732/",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "docId": "RFC732",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from RFC number or Datatracker identifier",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc732/",
+      "updated": "2026-03-04T00:29:53.258Z",
+      "version": "extractDocs.js@commit:b8c6349eeb50"
+    },
+    "docLabel": "IETF RFC 732",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from provider and document identifier",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc732/",
+      "updated": "2026-03-04T00:29:53.258Z",
+      "version": "extractDocs.js@commit:b8c6349eeb50"
+    },
+    "docNumber": "732",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML technical report metadata",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc732/",
+      "updated": "2026-03-04T00:29:53.258Z",
+      "version": "extractDocs.js@commit:b8c6349eeb50"
+    },
+    "docTitle": "Telnet Data Entry Terminal option",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from Datatracker doc.json title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc732/",
+      "updated": "2026-03-04T00:29:53.258Z",
+      "version": "extractDocs.js@commit:b8c6349eeb50"
+    },
+    "docType": "Specification",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Mapped from Datatracker std_level or RFC status text",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc732/",
+      "updated": "2026-03-04T00:29:53.258Z",
+      "version": "extractDocs.js@commit:b8c6349eeb50"
+    },
+    "doi": "10.17487/RFC0732",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML citation_doi",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc732/",
+      "updated": "2026-03-04T00:29:53.258Z",
+      "version": "extractDocs.js@commit:b8c6349eeb50"
+    },
+    "href": "https://doi.org/10.17487/RFC0732",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI (https://doi.org/<doi>)",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc732/",
+      "updated": "2026-03-04T00:29:53.258Z",
+      "version": "extractDocs.js@commit:b8c6349eeb50"
+    },
+    "issn": "2070-1721",
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML citation_issn",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc732/",
+      "updated": "2026-03-04T00:29:53.258Z",
+      "version": "extractDocs.js@commit:b8c6349eeb50"
+    },
+    "pages": "30",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from Datatracker doc.json pages",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc732/",
+      "updated": "2026-03-04T00:29:53.258Z",
+      "version": "extractDocs.js@commit:b8c6349eeb50"
+    },
+    "publicationDate": "1977-09-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML citation date",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc732/",
+      "updated": "2026-03-04T00:29:53.258Z",
+      "version": "extractDocs.js@commit:b8c6349eeb50"
+    },
+    "publisher": "IETF",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Static: provider",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc732/",
+      "updated": "2026-03-04T00:29:53.258Z",
+      "version": "extractDocs.js@commit:b8c6349eeb50"
+    },
+    "references": {
+      "bibliographic": [
+        "LSI.7410-31.1974",
+        "LSI.7411-11.1974",
+        "BC.1068699.1973-07",
+        "BC.1085685.1975-10",
+        "CCI.MI-1100.1974",
+        "RFC729",
+        "EEC.WGS-165.1977",
+        "RFC728",
+        "HI.IB-1866A.1970",
+        "ADDS.98-3000",
+        "ADDS.52-3000",
+        "VIP.7700-A129.1973",
+        "IBM.GA27-2739-4.1973",
+        "RC.TER536.1976",
+        "RFC726",
+        "EIN.INWG-32-2.1976",
+        "SU.UP-7807-r2.1975",
+        "SU.UP-8357.1976",
+        "ARPANET.NIC-20196.1973",
+        "ARPANET.NIC-20197.1973"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC HTML references/informative sections",
+        "originalValue": [
+          "LSI.7410-31.1974",
+          "LSI.7411-11.1974",
+          "BC.1068699.1973-07",
+          "BC.1085685.1975-10",
+          "CCI.MI-1100.1974",
+          "RFC729",
+          "EEC.WGS-165.1977",
+          "RFC728",
+          "HI.IB-1866A.1970",
+          "ADDS.98-3000",
+          "ADDS.52-3000",
+          "VIP.7700-A129.1973",
+          "IBM.GA27-2739-4.1973",
+          "RC.TER536.1976",
+          "RFC726"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc732/",
+        "updated": "2026-03-06T18:00:24.923Z",
+        "version": "extractDocs.js@commit:b8c6349eeb50"
+      }
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc732",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://www.rfc-editor.org/info/rfc0732",
+      "overridden": true,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc732/",
+      "updated": "2026-05-05T07:06:01.831Z",
+      "version": "extractDocs.js@commit:b12dc6fe0dc1"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc732/",
+        "updated": "2026-03-04T00:29:53.258Z",
+        "version": "extractDocs.js@commit:b8c6349eeb50"
+      },
+      "amendedBy": [
+        "RFC1043"
+      ],
+      "amendedBy$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC index XML and RFC info relation <dl>",
+        "originalValue": [],
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc732/",
+        "updated": "2026-03-04T00:29:53.259Z",
+        "version": "extractDocs.js@commit:b8c6349eeb50"
+      },
+      "errataExist": false,
+      "errataExist$meta": {
+        "confidence": "high",
+        "note": "Derived from presence of errata links on RFC/Datatracker pages",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc732/",
+        "updated": "2026-03-04T00:29:53.258Z",
+        "version": "extractDocs.js@commit:b8c6349eeb50"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc732/",
+        "updated": "2026-03-04T00:29:53.258Z",
+        "version": "extractDocs.js@commit:b8c6349eeb50"
+      },
+      "statusNote": "Unknown",
+      "statusNote$meta": {
+        "confidence": "high",
+        "note": "Mapped from Datatracker doc.json std_level",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc732/",
+        "updated": "2026-03-04T00:29:53.258Z",
+        "version": "extractDocs.js@commit:b8c6349eeb50"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc732/",
+        "updated": "2026-03-04T00:29:53.258Z",
+        "version": "extractDocs.js@commit:b8c6349eeb50"
+      },
+      "supersedes": [
+        "RFC731"
+      ],
+      "supersedes$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC index XML and RFC info relation <dl>",
+        "originalValue": [],
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc732/",
+        "updated": "2026-03-04T00:29:53.259Z",
+        "version": "extractDocs.js@commit:b8c6349eeb50"
+      }
+    }
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-J16230",
+  "document": {
+    "abbrevTitle": "SMPTE Mot. Imag. J",
+    "abbrevTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16230.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "abstract": "To encourage the development of interoperable solutions for professional video networks based on the Internet Protocol, the Pro-MPEG Forum has brought together manufacturers, end users, and service providers to develop the necessary codes of practice. This paper provides an introduction to the codes of practice and an explanation of a standards-based approach using Realtime Protocol. It covers protocol details, forward error correction, timing, and jitter considerations. It references evidence of manufacturer implementation within video devices and their use in professional video projects.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16230.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "authors": [
+      {
+        "bio": "Peter Elmer heads up the broadcast and video technology unit at BT Exact's research, technology, and IT operations division. The unit is responsible for making video technologies accessible to BT's broadcast and broadband service developments. The work of Elmer's unit was previously recognized with the award of the BT Gold Medal for R & D achievement for the delivery of key components of the world's first national digital terrestrial TV network (OnDigital, now FreeView). Elmer's earlier work was on advanced TV systems developing a HDTV system for Europe and a novel system to protect video services against network failures. Elmer is involved in international broadcasting activities including the Professional MPEG Forum where he chairs the wide area networking group. He is currently involved with the Video Services Forum and is a member of SMPTE. Elmer is also a chartered engineer and a member of the IEE.",
+        "name": "Peter Elmer"
+      },
+      {
+        "bio": "Henry Sariowan is vice-president, strategic technology planning, at Path 1 Network Technologies where he provides vision and leadership in Path 1's strategic technology direction. He has also held prior positions as director of systems engineering and systems architect. Prior to Path 1, Sariowan worked at Tiernan Communications designing networking protocols and multiplexing architecture for MPEG-2 high-definition television systems. He has worked at Linkabit Wireless (previously Titan Information Systems) in San Diego, CA, designing a control system for a very small aperture terminal network. Sariowan received a Ph.D. from the University of California at San Diego, a Masters of Science from Columbia University in New York, and a Bachelor of Science from the Sepuluh-Nopember Institute of Technology in Indonesia, all in electrical engineering. He is a senior member of the IEEE and an active contributor of the Pro-MPEG Forum and the Video Services Forum.",
+        "name": "Henry Sariowan"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Reclassified from info-society by title review (2026-07-09, infoSocietyReview.md): 'orig-research'",
+      "originalValue": "info-society",
+      "source": "resolved",
+      "updated": "2026-07-09T19:37:05.512Z",
+      "version": "contenttype-fixes@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16230.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "year": "2005",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16230.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16230.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docId": "10.5594-J16230",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/J16230",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docLabel": "SMPTE Motion Imaging Journal ( Volume: 114, Issue: 2-3, 2005)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docTitle": "Interoperability for Professional Video Streaming over IP Networks",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16230.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "doi": "10.5594/J16230",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16230.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/J16230",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/J16230",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "issn": {
+      "electronic": "2160-2492",
+      "electronic$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16230.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "print": "1545-0279",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16230.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16230.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08182015 BACKFILE JOURNAL FRESH/smptej_114_2-3/MIJR15Vol114No2-3.xml)",
+      "source": "parsed",
+      "updated": "2026-06-17T00:17:09.425Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "SMPTE Motion Imaging Journal",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "2-3",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16230.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "pages": "81–85",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16230.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publicationDate": "2005-02-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Month corrected from SMPTE canonical repository (registry had Jan-1 placeholder) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": "2005-01-01",
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16230.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08182015 BACKFILE JOURNAL FRESH/smptej_114_2-3/MIJR15Vol114No2-3.xml)",
+        "source": "parsed",
+        "updated": "2026-06-17T00:17:09.425Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16230.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/SMPTE%20Motion%20Imaging%20Journal/114/2-3/11/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.433Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — journal papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "volume": "114",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16230.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    }
+  }
+}

@@ -1,0 +1,209 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-M001094",
+  "document": {
+    "abstract": "While many Pulfrich 3-D movies have been produced, the movie and TV industries have correctly concluded that 3-D viewing with passive Pulfrich spectacles imposes such severe limitations that it is not a suitable 3-D technique. Active Pulfrich Spectacles (APS) is a new implementation of Pulfrich 3-D that addresses these limitations. APS allows every scene with motion in any 2-D movie to be viewed in 3-D. APS works on a different principle than other methods for 3-D. 3-D movies typically use the asymmetry of dual images to produce stereopsis. In contrast, APS is a single image system. All APS requires to view any 2-D movies in depth is an illumination asymmetry — a controlled difference in optical density between the lenses. APS uses microprocessor controlled optoelectronic lenses. APS only needs the motion vectors already calculated during digital image-processing of the video to calculate the correct adjustment to the lens optical density so that the viewing spectacles always produce realistic 3-D. APS is an intermittent 3-D enhancement to 2-D viewing. Only those scenes that can be converted are shown to the viewer in 3-D. All other scenes appear in 2-D. A viewer can put on APS for intermittent 3-D viewing, or remove them and continue viewing in 2-D. APS has substantial benefits to the motion picture and television industries. APS displays 2-D movies in 3-D without change to the video architecture and infrastructure. This is achieved without additional production or exhibition cost and no requirement for 3-D cameras, 3-D digital formats, or 3-D projectors.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001094.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "Binghamton University, Binghamton, NY.",
+        "name": "Kenneth Jacobs"
+      },
+      {
+        "affiliation": "ADDIS Incorporated, Corvallis, Oregon.",
+        "name": "Ronald Karpf"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Canonical-confirmed full paper (summary-abstract set is orig-research in the SMPTE canonical repos); HIGHWIRE-era abstract label was a delivery artifact",
+      "originalValue": "summary-abstract",
+      "source": "resolved",
+      "updated": "2026-07-09T19:12:47.628Z",
+      "version": "contenttype-fixes@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001094.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      },
+      "year": "2011",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001094.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001094.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docId": "10.5594-M001094",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/M001094",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docLabel": "SMPTE Meetings and Conferences ( October 2011)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docTitle": "Active Pulfrich Spectacles",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001094.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docType": "Conference Paper",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE conference paper",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "doi": "10.5594/M001094",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001094.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/M001094",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/M001094",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "number": "1",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001094.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "pages": "1–9",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001094.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publicationDate": "2011-10-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001094.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001094.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-M001094/bibr1-10.5594_M001094",
+        "orphan/10.5594-M001094/bibr2-10.5594_M001094",
+        "orphan/10.5594-M001094/bibr3-10.5594_M001094",
+        "orphan/10.5594-M001094/bibr4-10.5594_M001094",
+        "orphan/10.5594-M001094/bibr5-10.5594_M001094",
+        "orphan/10.5594-M001094/bibr6-10.5594_M001094",
+        "orphan/10.5594-M001094/bibr7-10.5594_M001094",
+        "orphan/10.5594-M001094/bibr8-10.5594_M001094"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteConferenceRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T20:02:43.384Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/conferences/The%202011%20Annual%20Technical%20Conference%20&%20Exhibition/43/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.438Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — conference papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "volume": "2011",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001094.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    }
+  }
+}

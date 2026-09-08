@@ -1,0 +1,313 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.EG42.2015",
+  "document": {
+    "abstract": "The MXF standard SMPTE ST 377-1 provides for descriptive metadata schemes as “plug-ins” to the MXF header metadata. This guideline is intended to provide guidance for the use of MXF descriptive metadata schemes. This guideline is a supplement to SMPTE EG 377-3. — This guideline explains the common structural metadata components by which all MXF descriptive metadata schemes can be related to the essence they describe. Additional constraints required for MXF descriptive metadata schemes are also described. — This guideline describes how MXF descriptive metadata is related to the essence using the structural metadata defined in SMPTE ST 377-1. It also describes how MXF descriptive metadata is coded as KLV data for use in MXF files and as XML for text-based metadata exchange. This guideline also provides guidance for implementing MXF descriptive metadata schemes. — Descriptive metadata is a complex topic and requires at least some basic understandings of the various attributes of descriptive metadata together with data modeling techniques. This guideline provides annexes that summarize these topics.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/eg0042-2015/eg0042-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.863Z"
+    },
+    "approvalDate": "2015-08-30",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json); Zoho is canonical for SMPTE standards metadata, registry value overwritten",
+      "originalValue": "2015",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2026-06-15T20:27:42.872Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/eg0042-2015/eg0042-2015.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.863Z"
+      },
+      "year": "2015",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/eg0042-2015/eg0042-2015.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.863Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/eg0042-2015/eg0042-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.863Z"
+    },
+    "docId": "SMPTE.EG42.2015",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "manual",
+      "sourceUrl": "https://pub.smpte.org/doc/eg42/20150830-pub/",
+      "updated": "2025-10-30T00:00:00Z"
+    },
+    "docLabel": "SMPTE EG 42:2015",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docNumber": "42",
+    "docNumber$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docSuiteTitle": "Material Exchange Format (MXF)",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-12-12T21:18:45.146Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docTitle": "MXF Descriptive Metadata",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": "Material Exchange Format (MXF) - MXF Descriptive Metadata",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-12-12T21:18:45.146Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docType": "Engineering Guideline",
+    "docType$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "doi": "10.5594/SMPTE.EG42.2015",
+    "doi$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "familyId": "42",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/eg0042-2015/eg0042-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.863Z"
+    },
+    "group": "smpte-31fs-tc",
+    "group$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.EG42.2015",
+    "href$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/eg0042-2015/eg0042-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.863Z"
+    },
+    "isbn": "978-1-61482-896-9",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/eg0042-2015/eg0042-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.863Z"
+    },
+    "keywords": [
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Metadata",
+      "Television",
+      "File Formats",
+      "MXF"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Scrubbed against src/main/config/site.json controlledKeywords (auto-fix renames + drop noise)",
+      "originalValue": [
+        "Communication",
+        "Networking and Broadcast Technologies",
+        "Metadata",
+        "Television",
+        "File Formats",
+        "MXF",
+        "File Format"
+      ],
+      "source": "parsed",
+      "updated": "2026-06-17T17:18:30.093Z",
+      "version": "kw-scrub@v1"
+    },
+    "numberOfPages": "26",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–26",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/eg0042-2015/eg0042-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.863Z"
+    },
+    "productNumber": "SSD001877",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/eg0042-2015/eg0042-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.863Z"
+    },
+    "publicationDate": "2015-08-30",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": "2015-11-18",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-10-10T19:32:14.845Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/eg0042-2015/eg0042-2015.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.863Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/eg0042-2015/eg0042-2015.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.863Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/eg0042-2015/eg0042-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.863Z"
+    },
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST326.2000",
+        "SMPTE.ST331.2011",
+        "SMPTE.ST380.2004",
+        "SMPTE.RP210.2007",
+        "SMPTE.RP224.2012",
+        "10.5594-J05297",
+        "ISBN.0201571684",
+        "ISBN.0201325632"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "normative": [
+        "SMPTE.ST298.2009",
+        "SMPTE.ST336.2007",
+        "SMPTE.ST377-1.2011",
+        "SMPTE.ST377-1.2011Am1.2012",
+        "SMPTE.ST377-1.2011Am2.2012",
+        "SMPTE.ST400.2012",
+        "SMPTE.EG377-3.2013"
+      ],
+      "normative$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      }
+    },
+    "releaseTag": "20150830-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-10-10T19:32:14.845Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/eg42/20150830-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000007NZL",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-30T22:49:47.636Z",
+      "version": "extractDocs.js@commit:ee2844fb1cf2"
+    },
+    "standardId": "20890",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/eg0042-2015/eg0042-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.863Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-10T19:32:14.845Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-10T19:32:14.845Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-10T19:32:14.845Z"
+      }
+    }
+  }
+}

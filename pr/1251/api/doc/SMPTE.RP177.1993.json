@@ -1,0 +1,314 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.RP177.1993",
+  "document": {
+    "abstract": "This practice is intended to define the numerical procedures for deriving basic color equations for color television and other systems using additive display devices. These equations are first, the normalized reference primary matrix which defines the relationship between RGB signals and CIE tristimulus values XYZ; then, the system luminance equation; and finally, the color primary transformation matrix for transforming signals from one set of reference primaries to another set of reference primaries or to a set of display primaries.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_rp-177-1993_1/rp0177-1993_stable2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.817Z"
+    },
+    "approvalDate": "1993-11-01",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json); Zoho is canonical for SMPTE standards metadata, registry value overwritten",
+      "originalValue": "1993",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2026-06-15T20:27:42.872Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_rp-177-1993_1/rp0177-1993_stable2010.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.817Z"
+      },
+      "year": "1993",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_rp-177-1993_1/rp0177-1993_stable2010.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.817Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_rp-177-1993_1/rp0177-1993_stable2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.817Z"
+    },
+    "docId": "SMPTE.RP177.1993",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "manual",
+      "sourceUrl": "https://pub.smpte.org/doc/rp177/19931101-pub/",
+      "updated": "2025-10-30T00:00:00Z"
+    },
+    "docLabel": "SMPTE RP 177:1993",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": "SMPTE RP 177.1993",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-12T20:05:20.776Z"
+    },
+    "docNumber": "177",
+    "docNumber$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docTitle": "Derivation of Basic Television Color Equations",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Recommended Practice",
+    "docType$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "doi": "10.5594/SMPTE.RP177.1993",
+    "doi$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "familyId": "177",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_rp-177-1993_1/rp0177-1993_stable2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.817Z"
+    },
+    "group": "smpte-10e-tc",
+    "group$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.RP177.1993",
+    "href$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_rp-177-1993_1/rp0177-1993_stable2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.817Z"
+    },
+    "isbn": "978-1-61482-191-5",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_rp-177-1993_1/rp0177-1993_stable2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.817Z"
+    },
+    "keywords": [
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Signal Processing and Analysis",
+      "Image Formats",
+      "Television",
+      "Processing"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Scrubbed against src/main/config/site.json controlledKeywords (auto-fix renames + drop noise)",
+      "originalValue": [
+        "Communication",
+        "Networking and Broadcast Technologies",
+        "Signal Processing and Analysis",
+        "Image Formats",
+        "Television",
+        "Image Format",
+        "Processing"
+      ],
+      "source": "parsed",
+      "updated": "2026-06-17T17:18:30.093Z",
+      "version": "kw-scrub@v1"
+    },
+    "numberOfPages": "4",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–4",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_rp-177-1993_1/rp0177-1993_stable2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.817Z"
+    },
+    "productNumber": "SSD001192",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_rp-177-1993_1/rp0177-1993_stable2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.817Z"
+    },
+    "publicationDate": "1993-11-01",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_rp-177-1993_1/rp0177-1993_stable2010.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.817Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_rp-177-1993_1/rp0177-1993_stable2010.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.817Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_rp-177-1993_1/rp0177-1993_stable2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.817Z"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/SMPTE.RP177.1993/ref-bib-1",
+        "orphan/SMPTE.RP177.1993/ref-bib-2"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Resolved from sibling -ref.xml via resolveSmpteSourceRefs.v2.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-06-22T23:05:50.315Z"
+      },
+      "normative": [
+        "CIE.015.1986"
+      ],
+      "normative$meta": {
+        "confidence": "medium",
+        "note": "Resolved from sibling -ref.xml via resolveSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-19T17:09:57.766Z"
+      }
+    },
+    "releaseTag": "19931101-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-10-12T20:05:20.776Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/rp177/19931101-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000007Naf",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-30T22:50:36.624Z",
+      "version": "extractDocs.js@commit:ee2844fb1cf2"
+    },
+    "standardId": "20324",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08252015 STANDARDS REVISED DEPOSIT/smptes_rp-177-1993_1/rp0177-1993_stable2010.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.817Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-12T20:05:20.776Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T20:05:20.776Z"
+      },
+      "reaffirmDate": "2002-07-01",
+      "reaffirmDate$meta": {
+        "confidence": "high",
+        "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+        "source": "parsed",
+        "updated": "2026-06-15T20:13:55.508Z",
+        "version": "smpte-zoho-standards@v1"
+      },
+      "stabilized": true,
+      "stabilized$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #state",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-12T20:05:20.776Z"
+      },
+      "stabilizedDate": "2010-07-01",
+      "stabilizedDate$meta": {
+        "confidence": "high",
+        "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+        "source": "parsed",
+        "updated": "2026-06-15T20:17:48.985Z",
+        "version": "smpte-zoho-standards@v1"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T20:05:20.776Z"
+      }
+    }
+  }
+}

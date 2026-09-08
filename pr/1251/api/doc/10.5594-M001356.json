@@ -1,0 +1,216 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-M001356",
+  "document": {
+    "abstract": "To some degree, all lenses used by the motion picture industry exhibit certain distortions which can detract from the ideal viewing experience. This paper presents a lens calibration and correction system which enables these problems to be resolved digitally in post production. For some time lenses such as the Cook 4i and now 5i provide the necessary metadata on focus and aperture settings to enable digital post corrections to be applied. Cameras such the Alexa and RED are capable of capturing this metadata. Many other lenses however may be adapted to provide the necessary metadata by means of a simple encoder. The paper presents how this is achieved followed by a presentation of the digital correction system for enhancing such scenarios as extreme focus pulls. Using digital high definition camera systems the calibration of each individual lens is presented along with the automatic derivation of the required lens database. The full post production work flow through to final image generation is presented.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001356.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "authors": [
+      {
+        "name": "Christopher C. Woollard"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Canonical-confirmed full paper (summary-abstract set is orig-research in the SMPTE canonical repos); HIGHWIRE-era abstract label was a delivery artifact",
+      "originalValue": "summary-abstract",
+      "source": "resolved",
+      "updated": "2026-07-09T19:12:47.628Z",
+      "version": "contenttype-fixes@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001356.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      },
+      "year": "2010",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001356.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001356.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docId": "10.5594-M001356",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/M001356",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docLabel": "SMPTE Meetings and Conferences ( October 2010)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docTitle": "Enhancing Motion Picture Lens Performance by Digital Calibration and Correction",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001356.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docType": "Conference Paper",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE conference paper",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "doi": "10.5594/M001356",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001356.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/M001356",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/M001356",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "keywords": [
+      "Metadata"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Backfilled from SMPTE canonical repository index_terms, mapped through controlledKeywords + curated synonym folds (keywordVocabDecisions.json) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T23:52:57.741Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "10",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001356.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "pages": "1–9",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001356.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publicationDate": "2010-10-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001356.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001356.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-M001356/bibr1-10.5594_M001356",
+        "orphan/10.5594-M001356/bibr2-10.5594_M001356",
+        "orphan/10.5594-M001356/bibr3-10.5594_M001356",
+        "orphan/10.5594-M001356/bibr4-10.5594_M001356",
+        "orphan/10.5594-M001356/bibr5-10.5594_M001356",
+        "orphan/10.5594-M001356/bibr6-10.5594_M001356",
+        "orphan/10.5594-M001356/bibr7-10.5594_M001356",
+        "orphan/10.5594-M001356/bibr8-10.5594_M001356",
+        "orphan/10.5594-M001356/bibr9-10.5594_M001356"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteConferenceRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T20:02:43.384Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/conferences/SMPTE%20Annual%20Tech%20Conference%20&%20Expo,%202010/6/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.438Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — conference papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "volume": "2010",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001356.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    }
+  }
+}

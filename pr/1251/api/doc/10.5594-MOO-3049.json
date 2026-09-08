@@ -1,0 +1,221 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-MOO-3049",
+  "document": {
+    "abstract": "Transfer Function measurements offer significant benefits over historical band spectrum measurements for calibrating loudspeakers by additionally calculating phase and coherence in the frequency domain and identifying the arrival time of reflections in the time domain. More and more loudspeakers are being offered with manufacturer provided signal processing, including phase correction. Using a transfer function measurement during calibration can help ensure that any processing used to achieve the target frequency response does not accidentally counteract the phase correction integral to the speaker. But Transfer Function measurements require 2 channels: both the reference signal input to the speaker and a microphone in the sound field. Often in cinema systems it is difficult to duplicate the reference signal to an analyzer: there may be no spare inputs or outputs, limited routing options, and/or digital connections may be used between devices which are not conducive to a Y-cable. The present paper describes a method called Virtual Reference which provides a reference signal to an analyzer simply by virtue of having a recording of the reference signal which is to be played. The analyzer then can operate in its normal fashion - it does not need to know that its reference signal is coming from Virtual Reference. Virtual Reference can also detect, measure, and compensate for sample rate differences between the playback device and the analyzer. This way the analyzer can show a stable phase trace of the device while Virtual Reference separately displays a measurement of the clocking differences such as jitter and wander.",
+    "abstract$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "authors": [
+      {
+        "name": "Juan Sierra"
+      },
+      {
+        "name": "Swapan Gandhi"
+      },
+      {
+        "name": "Jay Wyatt"
+      },
+      {
+        "name": "Roger Schwenke"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "copyright": {
+      "holder": "SMPTE",
+      "holder$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      },
+      "year": "2024",
+      "year$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docId": "10.5594-MOO-3049",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docLabel": "MTS 2024, Article 38 (pp. 1 to 7)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docTitle": "Transfer Function Measurements When the Reference Signal is Known but not Accessible",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docType": "Conference Paper",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "doi": "10.5594/MOO/3049",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "href": "https://doi.org/10.5594/MOO/3049",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "isbn": {
+      "electronic": "978-1-61482-965-2",
+      "electronic$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "isbn$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "journalAcronym": "MTS",
+    "journalAcronym$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "journalTitle": "SMPTE 2024 Media Technology Summit",
+    "journalTitle$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "keywords": [
+      "Transfer Function",
+      "Reference Signal",
+      "Virtual Reference",
+      "Band Spectrum",
+      "Loudspeaker Calibration",
+      "Phase Correction",
+      "Sample Rate"
+    ],
+    "keywords$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "pages": "1–7",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publicationDate": "2024-10-21",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publisherLocation": {
+      "city": "Hollywood, CA",
+      "city$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-MOO-3049/ref1",
+        "orphan/10.5594-MOO-3049/ref2",
+        "orphan/10.5594-MOO-3049/ref3",
+        "orphan/10.5594-MOO-3049/ref4",
+        "orphan/10.5594-MOO-3049/ref5",
+        "orphan/10.5594-MOO-3049/ref6",
+        "orphan/10.5594-MOO-3049/ref7",
+        "orphan/10.5594-MOO-3049/ref8"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from the FTXML NLM <back><ref-list> via extractFtxmlRefs.js (source doc mapped through its content_batch sibling).",
+        "source": "parsed",
+        "updated": "2026-08-10T17:55:35.307Z"
+      }
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "volume": "00",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    }
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "978-1-61482-966-9-19",
+  "document": {
+    "abstract": "Video Frame Interpolation (VFI) enhances temporal video quality for applications like slow-motion effects and broadcast frame-rate conversion. While modern VFI methods using optical flow and deep networks can handle complex motion and occlusions, evaluating interpolated content quality remains challenging. Traditional metrics like PSNR and SSIM ignore temporal information, while perceptual metrics like LPIPS focus only on spatial aspects, missing critical motion coherence that significantly affects perceived quality. Recent VFI-specific metrics like FloLPIPS incorporate optical flow errors to detect temporal inconsistencies but are computationally expensive (5.5× slower than LPIPS), limiting practical use in training or real-time assessment. Building on our previous work in motion picture restoration, we developed PSNR DIV , which uses vector field divergence to detect spatial irregularities in optical flow that indicate temporal inconsistencies. By weighting PSNR with this feature, we can identify problematic motion patterns, that most degrade perceptual quality in interpolated frames. PSNR DIV requires only one sequence's motion field, significantly reducing computational load. Evaluation on the BVI-VFI dataset (180 diverse sequences) shows statistically significant improvements over FloLPIPS: +0.09 Pearson Linear Correlation Coefficient, +0.05 Spearman Rank-Order Correlation Coefficient, and -1.38 Root Mean Squared Error improvement. It achieves these gains while being 2.5× faster and using 6× less memory, with consistent performance across content categories and robustness to different optical flow estimators.",
+    "abstract$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "authors": [
+      {
+        "name": "Conall Daly"
+      },
+      {
+        "name": "Darren Ramsook"
+      },
+      {
+        "name": "Anil Kokaram"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "copyright": {
+      "holder": "SMPTE",
+      "holder$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      },
+      "year": "2025",
+      "year$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docId": "978-1-61482-966-9-19",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docLabel": "MTS 2025, Article 19 (pp. 1 to 17)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docTitle": "An Efficient Quality Metric for Video Frame Interpolation",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docType": "Conference Paper",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "isbn": {
+      "electronic": "978-1-61482-966-9",
+      "electronic$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "isbn$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "journalAcronym": "MTS",
+    "journalAcronym$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "journalTitle": "SMPTE 2025 Media Technology Summit",
+    "journalTitle$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "keywords": [
+      "Video Frame Interpolation Quality",
+      "Temporal Consistency Metrics"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Keywords conformed via keywordConformIngest.js — vocab/fold mapping (keywordVocabDecisions.json) + casing normalize; long-tail retained pending later triage.",
+      "source": "resolved",
+      "updated": "2026-07-10T22:58:01.636Z"
+    },
+    "pages": "1–17",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publicationDate": "2025-10-13",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publisherLocation": {
+      "city": "Pasadena, CA",
+      "city$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/978-1-61482-966-9-19/ref1",
+        "orphan/978-1-61482-966-9-19/ref2",
+        "orphan/978-1-61482-966-9-19/ref3",
+        "orphan/978-1-61482-966-9-19/ref4",
+        "orphan/978-1-61482-966-9-19/ref5",
+        "orphan/978-1-61482-966-9-19/ref6",
+        "orphan/978-1-61482-966-9-19/ref7",
+        "orphan/978-1-61482-966-9-19/ref8",
+        "orphan/978-1-61482-966-9-19/ref9",
+        "orphan/978-1-61482-966-9-19/ref10",
+        "orphan/978-1-61482-966-9-19/ref11",
+        "orphan/978-1-61482-966-9-19/ref12",
+        "orphan/978-1-61482-966-9-19/ref13",
+        "orphan/978-1-61482-966-9-19/ref14",
+        "orphan/978-1-61482-966-9-19/ref15",
+        "orphan/978-1-61482-966-9-19/ref16",
+        "orphan/978-1-61482-966-9-19/ref17",
+        "orphan/978-1-61482-966-9-19/ref18",
+        "orphan/978-1-61482-966-9-19/ref19",
+        "orphan/978-1-61482-966-9-19/ref20",
+        "orphan/978-1-61482-966-9-19/ref21",
+        "orphan/978-1-61482-966-9-19/ref22",
+        "orphan/978-1-61482-966-9-19/ref23"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from the FTXML NLM <back><ref-list> via extractFtxmlRefs.js (source doc mapped through its content_batch sibling).",
+        "source": "parsed",
+        "updated": "2026-08-10T17:55:35.307Z"
+      }
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "volume": "00",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    }
+  }
+}

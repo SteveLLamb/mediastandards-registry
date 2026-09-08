@@ -1,0 +1,231 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-M001068",
+  "document": {
+    "abstract": "The media discovery service is an important element in managing and discovering media objects based on the metadata in Digital Object Architecture. However, types of metadata used today often lack some of the basic requirements for compatibility, such as standard definitions and unique identification. The media discovery service searches for media objects based on the metadata information. Therefore, it is not able to discover those media data with incomplete or missing metadata information. In this research we propose to the media discovery service for identifying images with missing or incomplete metadata information. The image identification technique by integrating the image identification technique into the service will find the information of identical images from databases when the service discovers any media object without complete metadata information. In the image identification technique the SURF (Speeded Up Robust Features) algorithm is used to extract the interest points and feature descriptions for image comparison and then produce the similarity. In this way the media discovery service may recognize an image without metadata information associated with it. In general, the media discovery service treats two identical images with different metadata as two distinct files. In the improved media discovery service we verify the metadata first before the system registers the homological data into the storage system. This improvement adds to the media discovery service the ability to search for unknown media objects and the advantage to save storage space from avoiding the homological media objects registered into it. Thus, it makes the media discovery service more powerful and more space efficient.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001068.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "Computer Science Department, California State Polytechnic University, Pomona 3801 West Temple Avenue Pomona, California 91768",
+        "name": "Yen Chieh Fu"
+      },
+      {
+        "affiliation": "Computer Science Department, California State Polytechnic University, Pomona / Apace Systems Corporation",
+        "name": "Lan Yang"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Canonical-confirmed full paper (summary-abstract set is orig-research in the SMPTE canonical repos); HIGHWIRE-era abstract label was a delivery artifact",
+      "originalValue": "summary-abstract",
+      "source": "resolved",
+      "updated": "2026-07-09T19:12:47.628Z",
+      "version": "contenttype-fixes@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001068.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      },
+      "year": "2011",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001068.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001068.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docId": "10.5594-M001068",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/M001068",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docLabel": "SMPTE Meetings and Conferences ( October 2011)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docTitle": "An Improvement to Media Discovery Service Using Image Identification Technique",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001068.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docType": "Conference Paper",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE conference paper",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "doi": "10.5594/M001068",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001068.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/M001068",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/M001068",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "keywords": [
+      "Image Processing"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Backfilled from SMPTE canonical repository index_terms, mapped through controlledKeywords + curated synonym folds (keywordVocabDecisions.json) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T23:52:57.741Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "1",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001068.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "pages": "1–9",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001068.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publicationDate": "2011-10-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001068.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001068.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-M001068/bibr1-10.5594_M001068",
+        "orphan/10.5594-M001068/bibr2-10.5594_M001068",
+        "orphan/10.5594-M001068/bibr3-10.5594_M001068",
+        "orphan/10.5594-M001068/bibr4-10.5594_M001068",
+        "orphan/10.5594-M001068/bibr5-10.5594_M001068",
+        "orphan/10.5594-M001068/bibr6-10.5594_M001068",
+        "orphan/10.5594-M001068/bibr7-10.5594_M001068",
+        "orphan/10.5594-M001068/bibr8-10.5594_M001068",
+        "orphan/10.5594-M001068/bibr9-10.5594_M001068",
+        "orphan/10.5594-M001068/bibr10-10.5594_M001068",
+        "orphan/10.5594-M001068/bibr11-10.5594_M001068",
+        "orphan/10.5594-M001068/bibr12-10.5594_M001068",
+        "orphan/10.5594-M001068/bibr13-10.5594_M001068",
+        "orphan/10.5594-M001068/bibr14-10.5594_M001068",
+        "orphan/10.5594-M001068/bibr15-10.5594_M001068",
+        "orphan/10.5594-M001068/bibr16-10.5594_M001068",
+        "orphan/10.5594-M001068/bibr17-10.5594_M001068",
+        "orphan/10.5594-M001068/bibr18-10.5594_M001068",
+        "orphan/10.5594-M001068/bibr19-10.5594_M001068"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteConferenceRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T20:02:43.384Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/conferences/The%202011%20Annual%20Technical%20Conference%20&%20Exhibition/17/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.438Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — conference papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "volume": "2011",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001068.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    }
+  }
+}

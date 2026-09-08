@@ -1,0 +1,221 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-M00105",
+  "document": {
+    "abstract": "This paper presents a video compression format for HDTV video to be used in studio applications. Digital HDTV signals need to be compressed in order to be routed or stored within a studio. The bitrates targeted support the use of viable networking technologies such as SMPTE-259 and OC-3. The requirements of a studio are considered in the choice of the format. These requirements include excellent picture quality, good quality even in the presence of cascaded coding, adequate sampling of the chroma signal, support for studio operations such as chroma-keying, and frame or field accurate editing. We will also examine techniques for switching between highly compressed video signals, a requirement in the studio, both for production purposes and for transitioning between programs or commercials.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00105.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "Philips Research, Briarcliff Manor, NY 10510",
+        "name": "Mahesh Balakrishnan"
+      },
+      {
+        "affiliation": "Philips Research, Briarcliff Manor, NY 10510",
+        "name": "Kiran Challapali"
+      },
+      {
+        "affiliation": "Philips Research, Briarcliff Manor, NY 10510",
+        "name": "Hayder Radha"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Canonical-confirmed full paper (summary-abstract set is orig-research in the SMPTE canonical repos); HIGHWIRE-era abstract label was a delivery artifact",
+      "originalValue": "summary-abstract",
+      "source": "resolved",
+      "updated": "2026-07-09T19:12:47.628Z",
+      "version": "contenttype-fixes@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00105.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      },
+      "year": "1996",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00105.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00105.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docId": "10.5594-M00105",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/M00105",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docLabel": "SMPTE Meetings and Conferences ( October 1996)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docTitle": "A Studio Compression Format for HDTV Applications",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00105.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docType": "Conference Paper",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE conference paper",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "doi": "10.5594/M00105",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00105.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/M00105",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/M00105",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "keywords": [
+      "HDTV",
+      "Compression",
+      "Edit",
+      "MPEG"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Backfilled from SMPTE canonical repository index_terms, mapped through controlledKeywords + curated synonym folds (keywordVocabDecisions.json) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T23:52:57.741Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "15",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00105.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "pages": "1–10",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00105.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publicationDate": "1996-10-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00105.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00105.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-M00105/bibr1-10.5594_M00105",
+        "orphan/10.5594-M00105/bibr2-10.5594_M00105"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteConferenceRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T20:02:43.384Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/conferences/138th%20SMPTE%20Technical%20Conference%20Technical%20Papers%20Program/13/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.437Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — conference papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "volume": "1996",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M00105.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    }
+  }
+}

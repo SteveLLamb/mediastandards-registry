@@ -1,0 +1,228 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-MOO-3016",
+  "document": {
+    "abstract": "Accurate assessment of image and video quality is essential to ensure that digital content remains true to the creator's intent. Current evaluation methods often overlook the unique properties of rendering systems or focus solely on display specifications, neglecting the viewer's perceptual experience. This study introduces a comprehensive framework designed to address these limitations by evaluating content quality holistically, considering both display characteristics and human perception. Our framework comprises two primary components: a transmission channel module and a human perception module. The transmission channel module simulates how visual content is processed and displayed, factoring in the rendering device's capabilities. The human perception module predicts how viewers perceive the rendered content. By integrating these modules, our framework evaluates the preservation of creative intent in real-world content, going beyond traditional metrics to assess how well displayed content aligns with the creator's vision on a reference monitor as perceived by viewers. This approach enables a more meaningful comparison of display technologies and rendering systems. We validated the effectiveness of our framework through extensive testing against a subject-rated database, where it outperformed existing objective image and video quality assessment models in predicting viewer satisfaction. This success highlights the potential of our framework to be a valuable tool for content creators, display manufacturers, and researchers, offering a deeper understanding of content quality that bridges the gap between technical capability and human perception.",
+    "abstract$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "authors": [
+      {
+        "name": "Wentao Liu"
+      },
+      {
+        "name": "Zhuoran Li"
+      },
+      {
+        "name": "Zhengfang Duanmu"
+      },
+      {
+        "name": "Hojatollah Yeganeh"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "copyright": {
+      "holder": "SMPTE",
+      "holder$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      },
+      "year": "2024",
+      "year$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docId": "10.5594-MOO-3016",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docLabel": "MTS 2024, Article 16 (pp. 1 to 12)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docTitle": "Towards an Objective Metric for Preserving Creative Intent Across Displays",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docType": "Conference Paper",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "doi": "10.5594/MOO/3016",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "href": "https://doi.org/10.5594/MOO/3016",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "isbn": {
+      "electronic": "978-1-61482-965-2",
+      "electronic$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "isbn$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "journalAcronym": "MTS",
+    "journalAcronym$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "journalTitle": "SMPTE 2024 Media Technology Summit",
+    "journalTitle$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "keywords": [
+      "Creative Intent Preservation",
+      "QoE",
+      "Subjective Study",
+      "Display Device",
+      "Video Quality Assessment",
+      "Video Monetization"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Long-tail keyword cleanup (keywordLongTailApply.js): prose/contentless terms dropped, acronym casing + typos fixed, duplicate variants folded; all surviving terms indexed in controlledKeywords.",
+      "source": "resolved",
+      "updated": "2026-07-14T16:29:38.680Z"
+    },
+    "pages": "1–12",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publicationDate": "2024-10-21",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publisherLocation": {
+      "city": "Hollywood, CA",
+      "city$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-MOO-3016/ref1",
+        "orphan/10.5594-MOO-3016/ref2",
+        "orphan/10.5594-MOO-3016/ref3",
+        "orphan/10.5594-MOO-3016/ref4",
+        "orphan/10.5594-MOO-3016/ref5",
+        "orphan/10.5594-MOO-3016/ref6",
+        "orphan/10.5594-MOO-3016/ref7",
+        "orphan/10.5594-MOO-3016/ref8",
+        "orphan/10.5594-MOO-3016/ref9",
+        "orphan/10.5594-MOO-3016/ref10",
+        "orphan/10.5594-MOO-3016/ref11",
+        "orphan/10.5594-MOO-3016/ref12",
+        "orphan/10.5594-MOO-3016/ref13",
+        "orphan/10.5594-MOO-3016/ref14",
+        "orphan/10.5594-MOO-3016/ref15",
+        "orphan/10.5594-MOO-3016/ref16"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from the FTXML NLM <back><ref-list> via extractFtxmlRefs.js (source doc mapped through its content_batch sibling).",
+        "source": "parsed",
+        "updated": "2026-08-10T17:55:35.307Z"
+      }
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "volume": "00",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    }
+  }
+}

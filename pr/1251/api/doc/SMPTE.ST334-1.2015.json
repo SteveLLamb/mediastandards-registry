@@ -1,0 +1,342 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST334-1.2015",
+  "document": {
+    "abstract": "This standard defines a method of mapping closed captioning and certain other related data services into the 10-bit vertical ancillary (“VANC”) data space. It specifies the structure of packets carrying CEA-708, as well as CEA-608 closed captioning data, time code data, and ATSC A/65 closed caption descriptor information, which may be carried in vertical ancillary data space, via serial data communications interfaces, or via other means. — The related data services include data broadcast services intended for the public as well as broadcaster internal control and communications.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-334-1-2015_1/st0334-1-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.853Z"
+    },
+    "approvalDate": "2015-01-02",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json); Zoho is canonical for SMPTE standards metadata, registry value overwritten",
+      "originalValue": "2015",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2026-06-15T20:27:42.872Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-334-1-2015_1/st0334-1-2015.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.853Z"
+      },
+      "year": "2015",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-334-1-2015_1/st0334-1-2015.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.853Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-334-1-2015_1/st0334-1-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.853Z"
+    },
+    "docId": "SMPTE.ST334-1.2015",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "manual",
+      "sourceUrl": "https://pub.smpte.org/doc/st334-1/20150102-pub/",
+      "updated": "2025-10-30T00:00:00Z"
+    },
+    "docLabel": "SMPTE ST 334-1:2015",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docNumber": "334",
+    "docNumber$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docPart": "1",
+    "docPart$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docSuiteTitle": "Caption",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-12-12T21:25:01.241Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docTitle": "Vertical Ancillary Data Mapping of Caption Data and Other Related Data",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": "Caption — Vertical Ancillary Data Mapping of Caption Data and Other Related Data",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-12-12T21:25:01.241Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "doi": "10.5594/SMPTE.ST334-1.2015",
+    "doi$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "familyId": "334-1",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-334-1-2015_1/st0334-1-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.853Z"
+    },
+    "group": "smpte-32nf-tc",
+    "group$meta": {
+      "confidence": "medium",
+      "excludeChanges": true,
+      "note": "TRIAGE: Committee history: 24tb-tc was split into 10e-tc + 32nf-tc. Registry has the post-split correct committee",
+      "source": "manual",
+      "updated": "2026-05-13T21:25:53.974Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST334-1.2015",
+    "href$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-334-1-2015_1/st0334-1-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.853Z"
+    },
+    "isbn": "978-1-61482-845-7",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-334-1-2015_1/st0334-1-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.853Z"
+    },
+    "keywords": [
+      "Captions",
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Subtitles",
+      "Television",
+      "Ancillary Data"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Scrubbed against src/main/config/site.json controlledKeywords (auto-fix renames + drop noise)",
+      "originalValue": [
+        "Captions",
+        "Communication",
+        "Networking and Broadcast Technologies",
+        "Subtitles",
+        "Television",
+        "Ancillary Data"
+      ],
+      "source": "parsed",
+      "updated": "2026-06-17T17:18:30.093Z",
+      "version": "kw-scrub@v1"
+    },
+    "numberOfPages": "8",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–8",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-334-1-2015_1/st0334-1-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.853Z"
+    },
+    "productNumber": "SSD001820",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-334-1-2015_1/st0334-1-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.853Z"
+    },
+    "publicationDate": "2015-01-02",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": "2015-01-30",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-10-12T23:29:12.811Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-334-1-2015_1/st0334-1-2015.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.853Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-334-1-2015_1/st0334-1-2015.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.853Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-334-1-2015_1/st0334-1-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.853Z"
+    },
+    "references": {
+      "bibliographic": [
+        "SMPTE.ST125.2013",
+        "SMPTE.ST170.2004",
+        "SMPTE.ST259.2008",
+        "SMPTE.ST292-1.2012",
+        "SMPTE.ST344.2000",
+        "SMPTE.ST425-1.2014",
+        "SMPTE.RP207.2005",
+        "SMPTE.RP208.2002",
+        "SMPTE.RP291-2.2013",
+        "SMPTE.EG43.2009",
+        "R-REC-BT.656-5",
+        "R-REC-BT.1700",
+        "ATSC.A53.2009",
+        "ATSC.A65.2013"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-19T17:05:10.539Z"
+      },
+      "normative": [
+        "SMPTE.ST291-1.2011",
+        "SMPTE.ST334-2.2015",
+        "SMPTE.RP168.2009",
+        "CEA.608.2008",
+        "CEA.708.2013"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-19T17:09:57.766Z"
+      }
+    },
+    "releaseTag": "20150102-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-10-12T23:29:12.811Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/st334-1/20150102-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000007NfI",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-30T22:51:46.577Z",
+      "version": "extractDocs.js@commit:ee2844fb1cf2"
+    },
+    "standardId": "20733",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-334-1-2015_1/st0334-1-2015.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.853Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-12T23:29:12.811Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T23:29:12.811Z"
+      },
+      "stabilized": true,
+      "stabilized$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #state",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-12T23:29:12.811Z"
+      },
+      "stabilizedDate": "2020-09-15",
+      "stabilizedDate$meta": {
+        "confidence": "high",
+        "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+        "source": "parsed",
+        "updated": "2026-06-15T20:17:48.985Z",
+        "version": "smpte-zoho-standards@v1"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-12T23:29:12.811Z"
+      }
+    }
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.RDD11.2007",
+  "document": {
+    "abstract": "This Registered Disclosure Document (RDD) describes a bitstream syntax and semantics used to transmit SMPTE 291 formatted ancillary data (both VANC and HVANC) from the input of an encoder, through an MPEG-2 Transport Stream, and to reconstruct the ancillary data accurately at the output of a decoder. This protocol is in current use within several fielded products<sup>i,ii</sup>. In addition, this data format has been in use by a major television network for HD contribution and distribution applications since mid 2003.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-11-2007_1/smptes_rdd-11-2007_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.659Z"
+    },
+    "approvalDate": "2007-07-10",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-11-2007_1/smptes_rdd-11-2007_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.659Z"
+    },
+    "copyright": {
+      "holder": "SMPTE",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-11-2007_1/smptes_rdd-11-2007_1.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.659Z"
+      },
+      "year": "2007",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-11-2007_1/smptes_rdd-11-2007_1.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.659Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-11-2007_1/smptes_rdd-11-2007_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.659Z"
+    },
+    "docId": "SMPTE.RDD11.2007",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd11/20070710-pub/",
+      "updated": "2025-10-08T05:50:24.298Z"
+    },
+    "docLabel": "SMPTE RDD 11:2007",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd11/20070710-pub/",
+      "updated": "2025-10-08T05:50:24.298Z"
+    },
+    "docNumber": "11",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd11/20070710-pub/",
+      "updated": "2025-10-08T05:50:24.298Z"
+    },
+    "docTitle": "Bitstream Syntax and Semantics for Carriage of HDSDI Ancillary Data in an MPEG-2 Transport System",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd11/20070710-pub/",
+      "updated": "2025-10-08T05:50:24.298Z"
+    },
+    "docType": "Registered Disclosure Document",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd11/20070710-pub/",
+      "updated": "2025-10-08T05:50:24.298Z"
+    },
+    "doi": "10.5594/SMPTE.RDD11.2007",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd11/20070710-pub/",
+      "updated": "2025-10-08T05:50:24.298Z"
+    },
+    "group": "smpte-32nf-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-11-2007_1/smptes_rdd-11-2007_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.659Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.RDD11.2007",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd11/20070710-pub/",
+      "updated": "2025-10-08T05:50:24.298Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.99",
+        "description": "Other audio, video and audiovisual equipment"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-11-2007_1/smptes_rdd-11-2007_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.659Z"
+    },
+    "isbn": "978-1-61482-055-0",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-11-2007_1/smptes_rdd-11-2007_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.659Z"
+    },
+    "keywords": [
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Interfaces",
+      "Ancillary Data",
+      "Compression",
+      "MPEG"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Scrubbed against src/main/config/site.json controlledKeywords (auto-fix renames + drop noise)",
+      "originalValue": [
+        "Communication",
+        "Networking and Broadcast Technologies",
+        "Interfaces",
+        "Ancillary Data",
+        "Compression",
+        "Interface",
+        "MPEG"
+      ],
+      "source": "parsed",
+      "updated": "2026-06-17T17:24:10.972Z",
+      "version": "kw-scrub@v1"
+    },
+    "numberOfPages": "6",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–6",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-11-2007_1/smptes_rdd-11-2007_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.659Z"
+    },
+    "productNumber": "SSD001056",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-11-2007_1/smptes_rdd-11-2007_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.659Z"
+    },
+    "publicationDate": "2007-07-10",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd11/20070710-pub/",
+      "updated": "2025-10-08T05:50:24.298Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd11/20070710-pub/",
+      "updated": "2025-10-08T05:50:24.298Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-11-2007_1/smptes_rdd-11-2007_1.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.659Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-11-2007_1/smptes_rdd-11-2007_1.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.659Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-11-2007_1/smptes_rdd-11-2007_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.659Z"
+    },
+    "releaseTag": "20070710-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd11/20070710-pub/",
+      "updated": "2025-10-08T05:50:24.298Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/rdd11/20070710-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000008kXY",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-30T22:49:04.976Z",
+      "version": "extractDocs.js@commit:ee2844fb1cf2"
+    },
+    "standardId": "200173",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/07092015 REVISED STANDARDS BACKFILE/smptes_rdd-11-2007_1/smptes_rdd-11-2007_1.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.659Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-08T05:50:24.298Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-08T05:50:24.298Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-08T05:50:24.298Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-08T05:50:24.298Z"
+      }
+    }
+  }
+}

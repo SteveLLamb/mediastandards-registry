@@ -1,0 +1,208 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "978-1-61482-966-9-4",
+  "document": {
+    "abstract": "We present an automated shot matching algorithm that considers perceptual effects and scene-specific context based on shot sequence. The algorithm focuses on viewer-centric elements, such as attention to faces or objects and the overall color mood across shots. Using publicly available deep learning models to detect salient image features, we employ a committee-based approach that matches these aspects independently before combining them into a single RGB balance and black level offset per shot. While fully automated, the system allows post hoc manual adjustments, including the strictness of face, object, and mood matching as well as temporal strictness. This transparent, parameterized approach avoids the black-box nature of many deep learning algorithms, providing intuitive, editable results that colorists can easily refine. We include visual examples to illustrate the algorithm's perceptual accuracy, and summarize a study with 5 professional colorists focused on assessing the quality of the match and potential time savings. Comparing manual grading from raw footage versus algorithm-assisted pre-matched footage, results indicate that a match comparable to that of a human colorist can be achieved in 20% less time. The algorithm achieved roughly 70% of the quality of the colorist match, as judged by the participants. The consistent demonstration of significant improvement underscores the value of future long-term studies that evaluate the impact on resource management and grading quality in real-world settings.",
+    "abstract$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "authors": [
+      {
+        "name": "Julius Tschannerl"
+      },
+      {
+        "name": "Daniele Siragusano"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "copyright": {
+      "holder": "SMPTE",
+      "holder$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      },
+      "year": "2025",
+      "year$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docId": "978-1-61482-966-9-4",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docLabel": "MTS 2025, Article 4 (pp. 1 to 19)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docTitle": "Towards Automated Perceptual Shot Matching in Motion Pictures",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docType": "Conference Paper",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "isbn": {
+      "electronic": "978-1-61482-966-9",
+      "electronic$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "isbn$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "journalAcronym": "MTS",
+    "journalAcronym$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "journalTitle": "SMPTE 2025 Media Technology Summit",
+    "journalTitle$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "keywords": [
+      "Color Matching",
+      "Color Grading",
+      "Perceptual Shot Matching",
+      "Machine Learning"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Keywords conformed via keywordConformIngest.js — vocab/fold mapping (keywordVocabDecisions.json) + casing normalize; long-tail retained pending later triage.",
+      "source": "resolved",
+      "updated": "2026-07-10T22:58:01.636Z"
+    },
+    "pages": "1–19",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publicationDate": "2025-10-13",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publisherLocation": {
+      "city": "Pasadena, CA",
+      "city$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/978-1-61482-966-9-4/ref1",
+        "orphan/978-1-61482-966-9-4/ref2",
+        "orphan/978-1-61482-966-9-4/ref3",
+        "orphan/978-1-61482-966-9-4/ref4",
+        "orphan/978-1-61482-966-9-4/ref5",
+        "orphan/978-1-61482-966-9-4/ref6",
+        "orphan/978-1-61482-966-9-4/ref7",
+        "orphan/978-1-61482-966-9-4/ref8",
+        "orphan/978-1-61482-966-9-4/ref9",
+        "orphan/978-1-61482-966-9-4/ref10",
+        "orphan/978-1-61482-966-9-4/ref11",
+        "orphan/978-1-61482-966-9-4/ref12",
+        "orphan/978-1-61482-966-9-4/ref13",
+        "orphan/978-1-61482-966-9-4/ref14",
+        "orphan/978-1-61482-966-9-4/ref15",
+        "orphan/978-1-61482-966-9-4/ref16",
+        "orphan/978-1-61482-966-9-4/ref17",
+        "orphan/978-1-61482-966-9-4/ref18"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from the FTXML NLM <back><ref-list> via extractFtxmlRefs.js (source doc mapped through its content_batch sibling).",
+        "source": "parsed",
+        "updated": "2026-08-10T17:55:35.307Z"
+      }
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "volume": "00",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    }
+  }
+}

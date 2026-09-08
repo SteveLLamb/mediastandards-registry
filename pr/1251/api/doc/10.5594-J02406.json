@@ -1,0 +1,256 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-J02406",
+  "document": {
+    "abbrevTitle": "SMPTE J",
+    "abbrevTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02406.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "abstract": "Encoding analog component video to a composite signal is an established practice. Improvements are constantly being made in encoding techniques, with the result that the quality of the encoded video is closer to that of the component source. Encoding digital components to digital composite signals involves an additional step besides coding: the sampling-rate conversion. The sampling rates of component video signals (CCIR Rec. 601) are 13.5 Msamples/sec and 6.75 Msamples/sec, for the luminance and the color-difference signals, respectively. The sampling rates for NTSC and PAL composite video signals are 14.3181818 Msamples/sec and 17.734475 Msamples/sec, respectively. Clearly, decoding digital composite signals into digital component signals (CCIR 601) will also involve the sampling-rate conversion. This task of sampling-rate conversion further complicates the issues related to the quality of the output video. It introduces a new class of distortions, called linear time varying distortions, in the output signal. This article explores the techniques necessary to convert between digital signals with different sampling rates and presents a qualitative comparison of the two approaches, analog and digital, to the sampling-rate conversion.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02406.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "Video & Electronic Systems Lab, Tektronix Inc., Beaverton, OR 97077.",
+        "name": "Ajay Luthra"
+      },
+      {
+        "affiliation": "Video & Electronic Systems Lab, Tektronix Inc., Beaverton, OR 97077.",
+        "name": "Ganesh Rajan"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Vocabulary conformance to SMPTE ContentTypeEnum (2026-07-09): 'research-article' renamed to 'orig-research'. Registry vocab = SMPTE enum + 9 retained MSRBot values.",
+      "originalValue": "research-article",
+      "source": "resolved",
+      "updated": "2026-07-09T17:56:30.992Z",
+      "version": "articletype-conform@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02406.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "year": "1991",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02406.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02406.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docId": "10.5594-J02406",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/J02406",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docLabel": "SMPTE Journal ( Volume: 100, Issue: 11, November 1991)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from journal title, volume, issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docTitle": "Sampling-Rate Conversion of Video Signals",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02406.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "doi": "10.5594/J02406",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02406.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/J02406",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/J02406",
+      "source": "inferred",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "issn": {
+      "print": "0036-1682",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02406.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02406.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08202015 BACKFILE JOURNAL FRESH/smptej_100_11/MIJR15Vol100No11.xml)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:32:03.060Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "SMPTE Journal",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "11",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02406.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "pages": "869–879",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02406.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publicationDate": "1991-11-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02406.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08202015 BACKFILE JOURNAL FRESH/smptej_100_11/MIJR15Vol100No11.xml)",
+        "source": "parsed",
+        "updated": "2026-06-16T00:32:03.060Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02406.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-J02406/bibr1-10.5594_J02406",
+        "orphan/10.5594-J02406/bibr2-10.5594_J02406",
+        "orphan/10.5594-J02406/bibr3-10.5594_J02406",
+        "orphan/10.5594-J02406/bibr4-10.5594_J02406",
+        "orphan/10.5594-J02406/bibr5-10.5594_J02406"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteJournalRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T18:21:02.558Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/SMPTE%20Journal/100/11/17/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.405Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — journal articles default active",
+        "source": "inferred",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "volume": "100",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02406.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    }
+  }
+}

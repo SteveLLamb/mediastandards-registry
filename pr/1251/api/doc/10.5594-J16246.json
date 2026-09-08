@@ -1,0 +1,266 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-J16246",
+  "document": {
+    "abbrevTitle": "SMPTE Mot. Imag. J",
+    "abbrevTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16246.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "abstract": "This paper considers video and audio compression techniques that have been developed since the ratification of the MPEG-2 standard and focuses on how the bit rate savings supplied by these techniques make them attractive for low bit rate broadcast applications. To allow a more in-depth review, two competitive technologies are used as examples: MPEG-4, representing the standards-based approach and Windows Media 9 Series representing the vendor-driven approach. They are compared with the benchmark of a state-of-the-art MPEG-2 hardware encoder At the lower bit rate range the new video techniques achieved a significant reduction in bit rate for the same quality as the MPEG-2 encoding and the rate of fall-off with quality as the bit rate reduced was less with the advanced coding The best quality for bit rate was achieved either by MPEG-4 AVC (Main Profile) or WMV9 depending on the material Percentage bit rate savings for audio is less important for the broadcaster as the audio represents less than 15% of the total bandwidth However the new technologies can allow reasonable operation in the region of 64 to 96 kbits/sec with similar quality to the original MPEG-1 Layer II at 256 kbits/sec allowing an increase in video bit rate and hence viewing quality.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16246.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "authors": [
+      {
+        "bio": "Jeremy Bennett is a principal engineer in the Advanced Coding Group at Tandberg Television. His main function is the project management of the development of the realtime Windows Media 9 and MPEG-4 encoding technologies for deployment with DTV broadcasters. Bennett's duties range from coordinating different activities in the group to liaising directly with the technical staff in the Windows Media division at Microsoft. This work has been recognized within the industry through the presentation of leading awards. Before concentrating on the technical management side of the project, Bennett was involved with the algorithm and software development of new audio codecs for the broadcast market. Bennett previously worked in the field of ultrasonic transducer design. He obtained his doctorate in electronic engineering from the University of Strathclyde, UK.",
+        "name": "J. Bennett"
+      },
+      {
+        "bio": "Alois Bock is a senior member of the technical staff at Tandberg Television and is working on MPEG-2, MPEG-4, and WMV9 encoding algorithms. He received his first degree from the Fachhochschule Konstanz in Germany in 1985 and a Ph.D. from Coventry Polytechnic in 1988. Since joining the research and development department of the Independent Broadcasting Authority, which is now part of Tandberg Television, Bock has worked on various aspects of video compression, in particular, the design of motion estimation circuits and pre-processing algorithms. He is a member of the Institution of Electrical Engineers.",
+        "name": "A. Bock"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from SMPTE canonical repository import (smpte-canonical-audit/canonicalLibrary.*.json); previous value was a placeholder",
+      "originalValue": "other",
+      "source": "parsed",
+      "updated": "2026-07-07T23:39:31.295Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16246.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "year": "2004",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16246.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16246.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docId": "10.5594-J16246",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/J16246",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docLabel": "SMPTE Motion Imaging Journal ( Volume: 113, Issue: 12, December 2004)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docTitle": "In-depth Review of Advanced Coding Technologies for Low Bit Rate Broadcast Applications",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16246.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "doi": "10.5594/J16246",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16246.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/J16246",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/J16246",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "issn": {
+      "electronic": "2160-2492",
+      "electronic$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16246.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "print": "1545-0279",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16246.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16246.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08202015 BACKFILE JOURNAL FRESH/smptej_113_12/MIJR15Vol113No12.xml)",
+      "source": "parsed",
+      "updated": "2026-06-17T00:17:09.425Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "SMPTE Motion Imaging Journal",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "12",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16246.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "pages": "413–418",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16246.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publicationDate": "2004-12-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16246.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08202015 BACKFILE JOURNAL FRESH/smptej_113_12/MIJR15Vol113No12.xml)",
+        "source": "parsed",
+        "updated": "2026-06-17T00:17:09.425Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16246.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-J16246/bibr1-10.5594_J16246",
+        "orphan/10.5594-J16246/bibr2-10.5594_J16246",
+        "orphan/10.5594-J16246/bibr3-10.5594_J16246",
+        "orphan/10.5594-J16246/bibr4-10.5594_J16246",
+        "orphan/10.5594-J16246/bibr5-10.5594_J16246",
+        "orphan/10.5594-J16246/bibr6-10.5594_J16246",
+        "orphan/10.5594-J16246/bibr7-10.5594_J16246"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteJournalRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T18:21:02.558Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/SMPTE%20Motion%20Imaging%20Journal/113/12/9/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.434Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — journal papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "volume": "113",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16246.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    }
+  }
+}

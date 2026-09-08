@@ -1,0 +1,213 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "978-1-61482-966-9-15",
+  "document": {
+    "abstract": "The Apple Vision Pro establishes a new benchmark for image fidelity in head-mounted displays, creating both opportunities and challenges for cinematic VR filmmaking. Producing content that fully leverages its display capabilities requires reconsideration of image acquisition, post-production, and delivery workflows. This paper presents a replicable 180° orthostereoscopic imaging pipeline designed to balance accessibility, reliability, and cinematic quality while meeting the demands of next-generation virtual and mixed reality displays. Using our experimental VR short film A Larger Living Space as a case study, we outline an end-to-end workflow that integrates structured capture techniques, AI-based image enhancement, and scalable visual effects methods. Our pipeline emphasizes preservation of fine detail, reduction of noise and artifacts, and seamless integration of practical and virtual lighting within wide fields of view offered by dual-fisheye lenses available to the market. By uniting prosumer-grade tools with scalable post-production methods, our approach demonstrates that high-fidelity immersive video can be achieved outside of large-scale studio contexts. This work contributes a consolidated framework for immersive cinematography and provides a foundation for future exploration into higher bit depth capture, high frame rate imaging, and real-time virtual set integration for VR film productions.",
+    "abstract$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "authors": [
+      {
+        "name": "Stanley Lin"
+      },
+      {
+        "name": "Nathan Fairchild"
+      },
+      {
+        "name": "Spencer Lin"
+      },
+      {
+        "name": "Akaash Tumuluri"
+      },
+      {
+        "name": "Jordan Halsey"
+      },
+      {
+        "name": "Scott Fisher"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "copyright": {
+      "holder": "SMPTE",
+      "holder$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      },
+      "year": "2025",
+      "year$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docId": "978-1-61482-966-9-15",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docLabel": "MTS 2025, Article 15 (pp. 1 to 17)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docTitle": "Optimizing 180° Stereoscopic Cinematography for the Apple Vision Pro",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docType": "Conference Paper",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "isbn": {
+      "electronic": "978-1-61482-966-9",
+      "electronic$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "isbn$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "journalAcronym": "MTS",
+    "journalAcronym$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "journalTitle": "SMPTE 2025 Media Technology Summit",
+    "journalTitle$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "keywords": [
+      "Virtual Reality",
+      "Orthostereoscopic Imaging",
+      "Virtual Reality Film Production Pipeline",
+      "Cinematography",
+      "AI-Assisted Film Production"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Keyword vocab dedup (keywordVocabDedup.js): case/punctuation duplicate forms merged; dimensional prefixes normalized (3d → 3D).",
+      "source": "resolved",
+      "updated": "2026-07-14T18:00:43.270Z"
+    },
+    "pages": "1–17",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publicationDate": "2025-10-13",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publisherLocation": {
+      "city": "Pasadena, CA",
+      "city$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/978-1-61482-966-9-15/ref1",
+        "orphan/978-1-61482-966-9-15/ref2",
+        "orphan/978-1-61482-966-9-15/ref3",
+        "orphan/978-1-61482-966-9-15/ref4",
+        "orphan/978-1-61482-966-9-15/ref5",
+        "orphan/978-1-61482-966-9-15/ref6",
+        "orphan/978-1-61482-966-9-15/ref7",
+        "orphan/978-1-61482-966-9-15/ref8",
+        "orphan/978-1-61482-966-9-15/ref9",
+        "orphan/978-1-61482-966-9-15/ref10"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from the FTXML NLM <back><ref-list> via extractFtxmlRefs.js (source doc mapped through its content_batch sibling).",
+        "source": "parsed",
+        "updated": "2026-08-10T17:55:35.307Z"
+      }
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "volume": "00",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    }
+  }
+}

@@ -1,0 +1,255 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-J17552",
+  "document": {
+    "abbrevTitle": "SMPTE J",
+    "abbrevTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17552.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "abstract": "The use of compression has allowed transmission systems to carry multiple digital audio and video channels, which has fostered complex systems for delivery of programs to the customer. These systems need to be monitored to ensure quality of service using simple control methods within the facility. This is achieved by using test equipment that is networked together to provide monitoring stations. A two-tier approach is used for the testing: First, determination of observable picture defects within the program needs to be calculated by the system to ensure picture quality. Second, protocol analysis is used to verify conformance of the syntax to the standard in order to ensure correct decoding of the picture. This paper discusses how such systems can be implemented within a digital television system.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17552.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "Tektronix, Inc., Beaverton, OR 97077",
+        "bio": "Michael Waidson received a B.S. in communications from the University of Kent at Canterbury, U.K. He began his career with an electronics manufacturer of consumer television sets, working on advanced television receiver design in the digital video department. For the past 11 years, he has worked in the broadcast industry both in Europe and the U.S. Waidson is currently an application engineer in the video business units at Tektronix, and provides support on video products within the western region.",
+        "name": "Michael H. Waidson"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from SMPTE canonical repository import (smpte-canonical-audit/canonicalLibrary.*.json); previous value was a placeholder",
+      "originalValue": "other",
+      "source": "parsed",
+      "updated": "2026-07-07T23:39:31.295Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17552.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "year": "2000",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17552.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17552.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docId": "10.5594-J17552",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/J17552",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docLabel": "SMPTE Journal ( Volume: 109, Issue: 11, November 2000)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docTitle": "Video Quality of Service Monitoring for Digital Television Systems",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Title updated from SMPTE canonical repository (2026-07-09 drift review: canonical richer/cleaner; TeX/sup/inf converted to Unicode) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": "Video Quality of Services Monitoring for Digital Television Systems",
+      "source": "parsed",
+      "updated": "2026-07-09T15:05:12.415Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "doi": "10.5594/J17552",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17552.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/J17552",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/J17552",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "issn": {
+      "print": "0036-1682",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17552.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17552.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08202015 BACKFILE JOURNAL FRESH/smptej_109_11/MIJR15Vol109No11.xml)",
+      "source": "parsed",
+      "updated": "2026-06-17T00:17:09.425Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "SMPTE Journal",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "11",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17552.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "pages": "870–875",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17552.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publicationDate": "2000-11-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17552.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08202015 BACKFILE JOURNAL FRESH/smptej_109_11/MIJR15Vol109No11.xml)",
+        "source": "parsed",
+        "updated": "2026-06-17T00:17:09.425Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17552.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-J17552/bibr1-10.5594_J17552",
+        "orphan/10.5594-J17552/bibr2-10.5594_J17552",
+        "orphan/10.5594-J17552/bibr3-10.5594_J17552",
+        "orphan/10.5594-J17552/bibr4-10.5594_J17552",
+        "orphan/10.5594-J17552/bibr5-10.5594_J17552",
+        "orphan/10.5594-J17552/bibr6-10.5594_J17552"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteJournalRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T18:21:02.558Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/SMPTE%20Journal/109/11/11/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.436Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — journal papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "volume": "109",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J17552.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    }
+  }
+}

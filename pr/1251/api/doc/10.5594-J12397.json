@@ -1,0 +1,249 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-J12397",
+  "document": {
+    "abbrevTitle": "SMPTE Mot. Imag. J",
+    "abbrevTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12397.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "abstract": "Terrestrial DTV transport stream management can be difficult at times. Broadcasters are now required to manage network-provided multiple-program standard-definition transport streams for multicast during part of the broadcast day, locally encoded content that can be added to the bouquet of MPTS services, and high-definition content. This paper explores the technical challenges of managing the complex bouquet of programs confronting the terrestrial DTV broadcaster, with a focus on how to switch programs in the ATSC transport stream.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12397.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "authors": [
+      {
+        "bio": "Jean Macher joined Thales Broadcast & Multimedia in 1998 and relocated from France in 2000, taking on the role of digital television product line manager for the U.S. In France, he was in charge of the company's service information (SI) processing product line, and supervised the specification and adaptation of remultiplexing and SI processing products to U.S. markets. Macher previously worked as a project engineer for the company's U.K. Digital Terrestrial TV Project (remultiplexing and SI management for the BBC, CTI, On Digital), developing technical proposals and SI architecture specifications. He holds a Diploma of Engineering from the Superior Institute of Electrical Engineering of Paris (ISEP), a major French computer and electronic school (equivalent to an MSEE).",
+        "name": "Jean Macher"
+      },
+      {
+        "bio": "George F. Anderson III , is sales manager of digital services for Thales Broadcast & Multimedia. He started at Thales in January 2000 as sales manager for Comark Digital Systems (CDS), where his responsibilities included the promotion and sales of all the digital services necessary to interface the station's existing NTSC master control to high definition, SD and HD encoding, and datacasting capability, as well as to the station transmitter link distribution system. Anderson has many years of experience in broadcast sales and media management, including the movement of media both inter- and intra-facility, and providing media management solutions for the emerging digital media market, previously known as broadcast television. He holds a degree in electrical engineering with a minor in marketing from the University of Alabama. Anderson is a past Chair of the Philadelphia Section of SMPTE, and also served as Eastern Region Governor in 1999.",
+        "name": "George F. Anderson"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "info-society",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from SMPTE canonical repository import (smpte-canonical-audit/canonicalLibrary.*.json); previous value was a placeholder",
+      "originalValue": "other",
+      "source": "parsed",
+      "updated": "2026-07-07T23:39:31.295Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12397.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "year": "2003",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12397.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12397.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docId": "10.5594-J12397",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/J12397",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docLabel": "SMPTE Motion Imaging Journal ( Volume: 112, Issue: 4, April 2003)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docTitle": "Multiprogram Transport Stream: Management and Switching Solutions",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12397.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "doi": "10.5594/J12397",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12397.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/J12397",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/J12397",
+      "source": "inferred",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "issn": {
+      "electronic": "2160-2492",
+      "electronic$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12397.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "print": "1545-0279",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12397.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12397.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08182015 BACKFILE JOURNAL FRESH/smptej_112_4/MIJR15Vol112No4.xml)",
+      "source": "parsed",
+      "updated": "2026-06-16T18:14:32.753Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "SMPTE Motion Imaging Journal",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "4",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12397.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "pages": "122–128",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12397.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publicationDate": "2003-04-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12397.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08182015 BACKFILE JOURNAL FRESH/smptej_112_4/MIJR15Vol112No4.xml)",
+        "source": "parsed",
+        "updated": "2026-06-16T18:14:32.753Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12397.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/SMPTE%20Motion%20Imaging%20Journal/112/4/10/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.422Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — journal papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "volume": "112",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12397.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    }
+  }
+}

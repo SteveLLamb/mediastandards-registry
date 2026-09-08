@@ -1,0 +1,268 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "RFC2104",
+  "document": {
+    "abstract": "This document describes HMAC, a mechanism for message authentication using cryptographic hash functions. HMAC can be used with any iterative cryptographic hash function, e.g., MD5, SHA-1, in combination with a secret shared key. The cryptographic strength of HMAC depends on the properties of the underlying hash function. This memo provides information for the Internet community. This memo does not specify an Internet standard of any kind",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML abstract",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2104/",
+      "updated": "2026-03-03T20:37:42.410Z",
+      "version": "extractDocs.js@commit:faf7c1cf3926"
+    },
+    "authors": [
+      {
+        "name": "Hugo Krawczyk"
+      },
+      {
+        "name": "Mihir Bellare"
+      },
+      {
+        "name": "Ran Canetti"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2104/",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "docId": "RFC2104",
+    "docId$meta": {
+      "confidence": "high",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "IETF RFC 2104",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docNumber": "2104",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML technical report metadata",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2104/",
+      "updated": "2026-03-03T20:37:42.410Z",
+      "version": "extractDocs.js@commit:faf7c1cf3926"
+    },
+    "docTitle": "HMAC: Keyed-Hashing for Message Authentication",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Informational",
+    "docType$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "doi": "10.17487/RFC2104",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML doi",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2104/",
+      "updated": "2026-03-03T20:37:42.410Z",
+      "version": "extractDocs.js@commit:faf7c1cf3926"
+    },
+    "href": "https://doi.org/10.17487/RFC2104",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI (https://doi.org/<doi>)",
+      "originalValue": "https://www.rfc-editor.org/info/rfc2104",
+      "overridden": true,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2104/",
+      "updated": "2026-03-03T20:37:42.410Z",
+      "version": "extractDocs.js@commit:faf7c1cf3926"
+    },
+    "issn": "2070-1721",
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML citation_issn",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2104/",
+      "updated": "2026-03-03T20:37:42.410Z",
+      "version": "extractDocs.js@commit:faf7c1cf3926"
+    },
+    "keywords": [
+      "IPSEC",
+      "Message",
+      "Digest",
+      "Internet",
+      "Protocol",
+      "Security",
+      "Encryption"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML keywords",
+      "originalValue": [
+        "Ipsec",
+        "Message",
+        "Digest",
+        "Internet",
+        "Protocol",
+        "Security",
+        "Encryption"
+      ],
+      "overridden": true,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2104/",
+      "updated": "2026-03-03T21:44:27.924Z",
+      "version": "extractDocs.js@commit:135bf6cb3d9a"
+    },
+    "pages": "11",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML page-count",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2104/",
+      "updated": "2026-03-03T20:37:42.410Z",
+      "version": "extractDocs.js@commit:faf7c1cf3926"
+    },
+    "publicationDate": "1997-02-01",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "IETF",
+    "publisher$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "references": {
+      "bibliographic": [
+        "ANSI.X9.9.1986",
+        "RFC1826",
+        "10.5555-646761.706031",
+        "10.5555-874062.875481",
+        "RSA.crypto.v2n2.1996",
+        "10.5555-646760.705865",
+        "RFC1321",
+        "ISBN.9780471048923",
+        "10.1007-3-540-60865-6_44",
+        "NIST.FIPS.180-1",
+        "10.1145-141809.141812",
+        "10.1145-191177.191231"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Parsed from RFC HTML references/informative sections | Manual review completed 2026-03-05",
+        "originalValue": [],
+        "overridden": true,
+        "reviewRequired": false,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc2104/",
+        "updated": "2026-03-05T19:07:29.310Z",
+        "version": "extractDocs.js@commit:b8c6349eeb50"
+      }
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc2104",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://datatracker.ietf.org/doc/html/rfc2104",
+      "overridden": true,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc2104/",
+      "updated": "2026-03-03T20:37:42.410Z",
+      "version": "extractDocs.js@commit:faf7c1cf3926"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "amended": true,
+      "amended$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "amendedBy": [
+        "RFC6151"
+      ],
+      "amendedBy$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "errataExist": true,
+      "errataExist$meta": {
+        "confidence": "high",
+        "note": "Derived from presence of errata links on RFC/Datatracker pages",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc2104/",
+        "updated": "2026-03-03T20:37:42.410Z",
+        "version": "extractDocs.js@commit:faf7c1cf3926"
+      },
+      "errataUrl": [
+        "https://www.rfc-editor.org/errata/rfc2104",
+        "https://www.rfc-editor.org/errata_search.php?rfc=2104",
+        "https://www.rfc-editor.org/rfc/inline-errata/rfc2104.html"
+      ],
+      "errataUrl$meta": {
+        "confidence": "high",
+        "note": "Parsed from errata links on RFC/Datatracker pages",
+        "originalValue": [],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc2104/",
+        "updated": "2026-03-03T20:37:42.410Z",
+        "version": "extractDocs.js@commit:faf7c1cf3926"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc2104/",
+        "updated": "2026-03-03T20:37:42.410Z",
+        "version": "extractDocs.js@commit:faf7c1cf3926"
+      },
+      "statusNote": "Informational",
+      "statusNote$meta": {
+        "confidence": "high",
+        "note": "Mapped from Datatracker doc.json std_level",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc2104/",
+        "updated": "2026-03-03T20:37:42.410Z",
+        "version": "extractDocs.js@commit:faf7c1cf3926"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc2104/",
+        "updated": "2026-03-03T20:37:42.410Z",
+        "version": "extractDocs.js@commit:faf7c1cf3926"
+      }
+    }
+  }
+}

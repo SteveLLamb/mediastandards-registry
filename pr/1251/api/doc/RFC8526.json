@@ -1,0 +1,260 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "RFC8526",
+  "document": {
+    "abstract": "This document extends the Network Configuration Protocol (NETCONF) defined in RFC 6241 in order to support the Network Management Datastore Architecture (NMDA) defined in RFC 8342. This document updates RFCs 6241 and 7950. The update to RFC 6241 adds new <get-data> and <edit-data> operations and augments existing <lock>, <unlock>, and <validate> operations. The update to RFC 7950 requires the usage of the YANG library (described in RFC 8525) by NETCONF servers implementing the NMDA.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML abstract",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc8526/",
+      "updated": "2026-03-09T23:37:41.244Z",
+      "version": "extractDocs.js@commit:17e11f3de1ab"
+    },
+    "authors": [
+      {
+        "name": "Martin Björklund"
+      },
+      {
+        "name": "Jürgen Schönwälder"
+      },
+      {
+        "name": "Phil Shafer"
+      },
+      {
+        "name": "Kent Watsen"
+      },
+      {
+        "name": "Robert Wilton"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc8526/",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "docId": "RFC8526",
+    "docId$meta": {
+      "confidence": "high",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "IETF RFC 8526",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docNumber": "8526",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML technical report metadata",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc8526/",
+      "updated": "2026-03-09T23:37:41.244Z",
+      "version": "extractDocs.js@commit:17e11f3de1ab"
+    },
+    "docTitle": "NETCONF Extensions to Support the Network Management Datastore Architecture",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "doi": "10.17487/RFC8526",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML doi",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc8526/",
+      "updated": "2026-03-09T23:37:41.245Z",
+      "version": "extractDocs.js@commit:17e11f3de1ab"
+    },
+    "href": "https://doi.org/10.17487/RFC8526",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI (https://doi.org/<doi>)",
+      "originalValue": "https://www.rfc-editor.org/info/rfc8526",
+      "overridden": true,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc8526/",
+      "updated": "2026-03-09T23:37:41.244Z",
+      "version": "extractDocs.js@commit:17e11f3de1ab"
+    },
+    "issn": "2070-1721",
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML citation_issn",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc8526/",
+      "updated": "2026-03-09T23:37:41.245Z",
+      "version": "extractDocs.js@commit:17e11f3de1ab"
+    },
+    "keywords": [
+      "NMDA"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML keywords",
+      "originalValue": [
+        "Nmda"
+      ],
+      "overridden": true,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc8526/",
+      "updated": "2026-03-10T00:14:59.606Z",
+      "version": "extractDocs.js@commit:17e11f3de1ab"
+    },
+    "pages": "23",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML page-count",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc8526/",
+      "updated": "2026-03-09T23:37:41.244Z",
+      "version": "extractDocs.js@commit:17e11f3de1ab"
+    },
+    "publicationDate": "2019-03-01",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisher": "IETF",
+    "publisher$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "references": {
+      "bibliographic": [
+        "RFC8340"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Parsed from RFC HTML references/informative sections | Manual review completed 2026-03-09",
+        "originalValue": [],
+        "overridden": true,
+        "reviewRequired": false,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc8526/",
+        "updated": "2026-03-09T23:43:28.607Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      },
+      "normative": [
+        "RFC2119",
+        "RFC3688",
+        "RFC6020",
+        "RFC6241",
+        "RFC6242",
+        "RFC6243",
+        "RFC6991",
+        "RFC7950",
+        "RFC8174",
+        "RFC8341",
+        "RFC8342",
+        "RFC8525"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC HTML normative references sections | Manual review completed 2026-03-09",
+        "originalValue": [],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc8526/",
+        "updated": "2026-03-09T23:43:28.607Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      }
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc8526",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://datatracker.ietf.org/doc/html/rfc8526",
+      "overridden": true,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc8526/",
+      "updated": "2026-03-09T23:37:41.246Z",
+      "version": "extractDocs.js@commit:17e11f3de1ab"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "amends": [
+        "RFC6241",
+        "RFC7950"
+      ],
+      "amends$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC index XML and RFC info relation <dl>",
+        "originalValue": [],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc8526/",
+        "updated": "2026-03-09T23:37:41.246Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      },
+      "errataExist": false,
+      "errataExist$meta": {
+        "confidence": "high",
+        "note": "Derived from presence of errata links on RFC/Datatracker pages",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc8526/",
+        "updated": "2026-03-09T23:37:41.246Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc8526/",
+        "updated": "2026-03-09T23:37:41.245Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      },
+      "statusNote": "Proposed Standard",
+      "statusNote$meta": {
+        "confidence": "high",
+        "note": "Mapped from Datatracker doc.json std_level",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc8526/",
+        "updated": "2026-03-09T23:37:41.246Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc8526/",
+        "updated": "2026-03-09T23:37:41.246Z",
+        "version": "extractDocs.js@commit:17e11f3de1ab"
+      }
+    }
+  }
+}

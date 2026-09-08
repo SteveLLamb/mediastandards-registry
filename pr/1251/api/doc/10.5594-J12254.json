@@ -1,0 +1,279 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-J12254",
+  "document": {
+    "abbrevTitle": "SMPTE Mot. Imag. J",
+    "abbrevTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12254.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "abstract": "A growing need for high-quality video frame rate conversion methods exists, such as those offered by motion-compensated frame interpolation (MCFI). However, with MCFI inaccurate motion trajectories may cause visible artifacts. An advanced MCFI-based frame rate converter has been developed that uses image segmentation, object-based motion field processing, and a method for measuring motion reliability. It is able to accurately estimate true motion trajectories and process motion occlusion well, producing high-quality frames with smooth motion. In this paper, the methods, algorithms, and techniques used in this advanced frame rate converter are first described. Then, objective and subjective performance comparisons are conducted between the proposed frame rate converter and four other frame rate converters.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12254.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "authors": [
+      {
+        "bio": "Phil Blanchfield received a diploma in electronics engineering technology from Algonquin College of Applied Arts and Technology in Ottawa, Canada, in 1981. He later earned two certificate diplomas in computing science also from Algonquin College. He has been working full time at the Communications Research Centre (CRC) in Ottawa since 1981 where he has held various positions including hardware research technologist, systems programmer, systems/network analyst, and video processing systems researcher.",
+        "name": "P. Blanchfield"
+      },
+      {
+        "bio": "Demin Wang received BS and MS degrees in electrical engineering from the Shandong University of Technology, China, in 1982 and 1985, respectively, and a PhD from the Institut National des Sciences Appliquees (INSA) de Rennes, France, in 1992. In 1985, he joined the Shandong University of Technology where he served as a professor of electrical and computer engineering from 1992 to 1993. He was a visiting researcher at the University of Sherbrooke, Canada, from 1993 to 1994, and a visiting professor at the IRISA Rennes, France, from 1994 to 1995. Since 1996, he has been with the Communications Research Centre, Canada, where he is currently a senior scientist and project leader of video coding and processing. Wang's research interests include image processing, video coding, digital TV, and broadcasting. He has published over 80 journal and conference papers and holds two U.S. patents. He is also an associate editor for IEEE Trans. on Broadcasting.",
+        "name": "D. Wang"
+      },
+      {
+        "bio": "André Vincent received a BS in electrical engineering from the École Polytechnique, Montréal, Canada, in 1975. From 1975 to 1977, he worked at the Department of National Defence, in the design of maritime communications systems. From 1977 to 1979, he worked at Canadian Marconi in the design and development of mobile radio communications systems. He joined the Communications Research Centre in Ottawa, Canada, in 1979, where he conducted research in the areas of Teletext, data transmission, television channel characterization, and digital mobile radio. Since 1986, he has been involved in research in HDTV, video processing, video compression, and 3-D video. Vincent has also been involved in several standardization bodies such as the ACATS, ATSC, MPEG, and ITU-R. He is currently manager of the Advanced Video Systems Group at the Communications Research Centre, Canada.",
+        "name": "A. Vincent"
+      },
+      {
+        "bio": "Filippo Speranza received a PhD in experimental psychology from the University of Toronto (Canada) in 1999. In 2001, he joined the Communications Research Centre where he serves as a research scientist in the Advanced Television Evaluation Laboratory (ATEL). His research interests are human visual perception, stereoscopic displays, and image-quality assessment.",
+        "name": "F. Speranza"
+      },
+      {
+        "bio": "Ron Renaud joined the Communications Research Centre in 1991 to assist in conducting formal subjective evaluations of proposed HDTV systems. Prior to that, he worked for many years at the Canadian Broadcasting Corp. He is currently senior technologist within the CRC's Advanced Video Systems group, which includes the Advanced Television Evaluation Laboratory (ATEL), a world-class video subjective assessment facility.",
+        "name": "R. Renaud"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from SMPTE canonical repository import (smpte-canonical-audit/canonicalLibrary.*.json); previous value was a placeholder",
+      "originalValue": "other",
+      "source": "parsed",
+      "updated": "2026-07-07T23:39:31.295Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12254.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "year": "2006",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12254.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12254.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docId": "10.5594-J12254",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/J12254",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docLabel": "SMPTE Motion Imaging Journal ( Volume: 115, Issue: 4, April 2006)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docTitle": "Advanced Frame Rate Conversion and Performance Evaluation",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12254.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "doi": "10.5594/J12254",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12254.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/J12254",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/J12254",
+      "source": "inferred",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "issn": {
+      "electronic": "2160-2492",
+      "electronic$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12254.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "print": "1545-0279",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12254.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12254.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08182015 BACKFILE JOURNAL FRESH/smptej_115_4/MIJR15Vol115No4.xml)",
+      "source": "parsed",
+      "updated": "2026-06-16T18:14:32.753Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "SMPTE Motion Imaging Journal",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "4",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12254.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "pages": "153–159",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12254.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publicationDate": "2006-04-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12254.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08182015 BACKFILE JOURNAL FRESH/smptej_115_4/MIJR15Vol115No4.xml)",
+        "source": "parsed",
+        "updated": "2026-06-16T18:14:32.753Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12254.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-J12254/bibr1-10.5594_J12254",
+        "orphan/10.5594-J12254/bibr2-10.5594_J12254",
+        "orphan/10.5594-J12254/bibr3-10.5594_J12254",
+        "orphan/10.5594-J12254/bibr4-10.5594_J12254",
+        "orphan/10.5594-J12254/bibr5-10.5594_J12254",
+        "orphan/10.5594-J12254/bibr6-10.5594_J12254",
+        "orphan/10.5594-J12254/bibr7-10.5594_J12254",
+        "orphan/10.5594-J12254/bibr8-10.5594_J12254"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteJournalRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T18:21:02.558Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/SMPTE%20Motion%20Imaging%20Journal/115/4/15/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.422Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — journal papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "volume": "115",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12254.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    }
+  }
+}

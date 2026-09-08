@@ -1,0 +1,223 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-M001203",
+  "document": {
+    "abstract": "At the SMPTE '97 Conference and Exhibition, the concept of representing motion picture film images in a universal data format was presented. Since then, the enabling technology has met with widespread acceptance, with over 80 units of the core product being installed worldwide. During this time also, several key building blocks have been added by the same supplier to extend the film-in-data concept, allowing the full power and flexibility of computer workstations, coupled with tremendous hardware acceleration, to be applied to the creative production and post-production processes. The successful data concept can even be ‘tunnelled’ through the high definition video domain, allowing the major benefits of the data process to be achieved in real time and using low cost video tape storage. The paper will examine these advances, both in a tutorial manner and with illustrations of some of the real world applications, such as complete feature film post-production and multi-format DTV production, to which users are successfully putting this new technology.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001203.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "Philips Digital Video Systems, UK",
+        "bio": "Dave Bancroft is Business & Technology Development Manager for the Film Imaging Group of Philips Digital Video Systems. Although his group is based in Weiterstadt, Germany, Dave operates out of the United Kingdom and contributes to long term projects, such as DTV production, in the United States. Dave began his career in broadcast engineering at the BBC in London, where he received his fundamental training and became an operations & maintenance engineer on outside broadcasts. He became particularly interested in video tape recording and related mechanical wonders and this led to an international odyssey which kept him away from the UK for twenty years. During this time, he worked for RCA in Germany, then began a seventeen-year stint with Ampex Corporation in Greece, the Middle East, Africa, New York and California. He joined Philips Digital Video Systems, or as it was formerly known, BTS, in 1992, with the assignment of HDTV marketing in Darmstadt, Germany. He moved his desk back to the UK in 1995 and took up his present position with Philips in 1997. Dave is a long-time member of SMPTE, where he represents Philips in several technology committees in SMPTE's standardisation efforts, and is also an International Member of SMPTE's executive Standards Committee. He is also a member of the Royal Television Society and the BKSTS in the UK.",
+        "name": "David Bancroft"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Canonical-confirmed full paper (summary-abstract set is orig-research in the SMPTE canonical repos); HIGHWIRE-era abstract label was a delivery artifact",
+      "originalValue": "summary-abstract",
+      "source": "resolved",
+      "updated": "2026-07-09T19:12:47.628Z",
+      "version": "contenttype-fixes@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001203.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      },
+      "year": "1999",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001203.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001203.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docId": "10.5594-M001203",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/M001203",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docLabel": "SMPTE Meetings and Conferences ( July 1999)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docTitle": "Recent Advances in Transfer and Manipulation of Film Images in the Data and HDTV Domains",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001203.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "docType": "Conference Paper",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE conference paper",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "doi": "10.5594/M001203",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001203.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/M001203",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/M001203",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "number": "7",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001203.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "pages": "241–258",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001203.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publicationDate": "1999-07-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001203.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001203.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-M001203/bibr1-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr2-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr3-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr4-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr5-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr6-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr7-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr8-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr9-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr10-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr11-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr12-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr13-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr14-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr15-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr16-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr17-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr18-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr19-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr20-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr21-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr22-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr23-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr24-10.5594_M001203",
+        "orphan/10.5594-M001203/bibr25-10.5594_M001203"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteConferenceRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T20:02:43.384Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/conferences/9th%20Conference%20and%20Exhibition%20of%20the%20SMPTE%20Australia%20Section/44/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.438Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — conference papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-conference-paper-nlm@v1"
+      }
+    },
+    "volume": "1999",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptem/10.5594_M001203.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-conference-paper-nlm@v1"
+    }
+  }
+}

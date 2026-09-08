@@ -1,0 +1,287 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-J04166",
+  "document": {
+    "abbrevTitle": "J SMPTE",
+    "abbrevTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04166.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "abstract": "A new TV distribution that uses receiver technology deemed practical in the near future and that is intended to achieve the highest possible image quality within a given channel capacity is proposed. This system is designed to be used immediately for controlled-access systems such as cable. It is also suitable for eventual broadcasting use in a two-stage strategy in which an intermediate backward-compatible system is the first stage. Applications to FM, recording, and digital transmission are described. The efficiency of analog channel utilization is improved over NTSC by the use of double sideband quadrature modulation of two 3-MHz signals on a single carrier in the center of the band and by elimination of the retrace intervals and sound carrier. Higher perceived quality for a given transmission rate is achieved by dividing the signal into components according to both spatial and temporal frequency and transmitting the appropriate combination of components according to the degree of motion in each scene. A “smart,” programmable, openarchitecture receiver is proposed capable of decoding a wide variety of signal formats and displaying the image at higher line and frame rates than transmitted. Such a receiver can also display the backward-compatible extended-definition television (EDTV) system described in a companion paper by A. B. Lippman et al. in this issue, and it can be upgraded over time by virtue of its programmability and by adding hardware and software modules.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04166.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "Massachusetts Institute of Technology, Cambridge, MA 02139.",
+        "name": "W. F. Schreiber"
+      },
+      {
+        "affiliation": "Massachusetts Institute of Technology, Cambridge, MA 02139.",
+        "name": "A. B. Lippman"
+      },
+      {
+        "affiliation": "Massachusetts Institute of Technology, Cambridge, MA 02139.",
+        "name": "A. N. Netravali"
+      },
+      {
+        "affiliation": "Massachusetts Institute of Technology, Cambridge, MA 02139.",
+        "name": "E. H. Adelson"
+      },
+      {
+        "affiliation": "Massachusetts Institute of Technology, Cambridge, MA 02139.",
+        "name": "D. H. Staelin"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Vocabulary conformance to SMPTE ContentTypeEnum (2026-07-09): 'research-article' renamed to 'orig-research'. Registry vocab = SMPTE enum + 9 retained MSRBot values.",
+      "originalValue": "research-article",
+      "source": "resolved",
+      "updated": "2026-07-09T17:56:30.992Z",
+      "version": "articletype-conform@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04166.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "year": "1989",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04166.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04166.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docId": "10.5594-J04166",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/J04166",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docLabel": "SMPTE Journal ( Volume: 98, Issue: 1, January 1989)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from journal title, volume, issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docTitle": "Channel-Compatible 6-MHz HDTV Distribution Systems",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04166.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "doi": "10.5594/J04166",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04166.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/J04166",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/J04166",
+      "source": "inferred",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "issn": {
+      "print": "0036-1682",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04166.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04166.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/07132015 BACKFILE FOR JOURNAL/smptej_98_1/MIJR15Vol98No1.xml)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:32:03.060Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "SMPTE Journal",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "1",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04166.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "pages": "5–13",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04166.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publicationDate": "1989-01-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04166.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/07132015 BACKFILE FOR JOURNAL/smptej_98_1/MIJR15Vol98No1.xml)",
+        "source": "parsed",
+        "updated": "2026-06-16T00:32:03.060Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04166.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "10.5594-J07847",
+        "10.5594-J02918",
+        "orphan/10.5594-J04166/bibr1-10.5594_J04166",
+        "orphan/10.5594-J04166/bibr2-10.5594_J04166",
+        "orphan/10.5594-J04166/bibr3-10.5594_J04166",
+        "orphan/10.5594-J04166/bibr4-10.5594_J04166",
+        "orphan/10.5594-J04166/bibr5-10.5594_J04166",
+        "orphan/10.5594-J04166/bibr6-10.5594_J04166",
+        "orphan/10.5594-J04166/bibr8-10.5594_J04166",
+        "orphan/10.5594-J04166/bibr9-10.5594_J04166",
+        "orphan/10.5594-J04166/bibr10-10.5594_J04166",
+        "orphan/10.5594-J04166/bibr11-10.5594_J04166",
+        "orphan/10.5594-J04166/bibr12-10.5594_J04166",
+        "orphan/10.5594-J04166/bibr14-10.5594_J04166",
+        "orphan/10.5594-J04166/bibr15-10.5594_J04166",
+        "orphan/10.5594-J04166/bibr16-10.5594_J04166",
+        "orphan/10.5594-J04166/bibr17-10.5594_J04166",
+        "orphan/10.5594-J04166/bibr18-10.5594_J04166",
+        "orphan/10.5594-J04166/bibr19-10.5594_J04166",
+        "orphan/10.5594-J04166/bibr20-10.5594_J04166",
+        "orphan/10.5594-J04166/bibr21-10.5594_J04166",
+        "orphan/10.5594-J04166/bibr22-10.5594_J04166",
+        "orphan/10.5594-J04166/bibr23-10.5594_J04166",
+        "orphan/10.5594-J04166/bibr24-10.5594_J04166"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteJournalRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T18:21:02.558Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/SMPTE%20Journal/98/1/18/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.409Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — journal articles default active",
+        "source": "inferred",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "volume": "98",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04166.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    }
+  }
+}

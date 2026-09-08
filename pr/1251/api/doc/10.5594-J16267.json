@@ -1,0 +1,289 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-J16267",
+  "document": {
+    "abbrevTitle": "SMPTE Mot. Imag. J",
+    "abbrevTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16267.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "abstract": "High-performance charge-coupled device imagers (CCD) with 2 million pixels in 1920 × 1080 format have been commercially available for more than ten years.1 Nevertheless, today's HDTV cameras still do not simultaneously provide sufficient resolution and electronic film speed at the minimum progressive frame rates needed for creative motion imaging production. Overcranking, for example, is only available at ∼1 million pixel (1280 × 720) resolution, and the maximum frame rate of today's 1920 × 1080 progressive cameras is 30 Hz. To truly offer a compelling alternative to motion imaging film, electronic HD cameras must provide a higher progressive frame rate along with additional bit depth to maximize production quality and creativity. In this paper, the technical background for the shift in technology from CCD imaging to CMOS imaging system-on-chip is discussed. Specifically, the sensor architectures are compared, and why CCD noise consistently increases with video frequency at about 3 dB/octave is explained. We conclude by briefly reporting the development status for a complimentary metal oxide semiconductor (CMOS) 1920 × 1080 image sensor for next-generation, affordable and compact HD cameras to support progressive frame rates at 60 Hz and beyond.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16267.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "authors": [
+      {
+        "bio": "Les Kozlowski is chief technology officer at AltaSens, Inc., a startup focused on producing highly-integrated, high-performance CMOS imaging systems-on-chip for next generation video products including HDTV. Kozlowski received B.S. and M.S. degrees in electrical engineering from the University of Illinois at Chicago in 1975 and 1977, respectively. AltaSens is a spinoff from Rockwell Scientific where Kozlowski was previously chief technologist and was honored as a Rockwell Engineer of the Year for 1995. He was principal investigator on many imaging sensor development programs that significantly advanced the state-of-the-art with respect to noise for megapixel sensors. One example is the infrared sensor in the Hubble Space Telescope, which has helped revolutionize astronomy and our understanding of the universe. Previously, as a principal scientist at Hughes Aircraft in Canoga Park, CA, he had similar responsibilities. Kozlowski's areas of expertise include compact, low-noise analog circuits, and high-density CCD and CMOS readouts for focal plane arrays. He has helped design over 100 imaging sensors, and has over 140 publications and 16 patents. He is a member of the IEEE Electron Devices Society, SMPTE, and SPIE.",
+        "name": "L. Kozlowski"
+      },
+      {
+        "bio": "Giuseppe Rossi is director of engineering at AltaSens, Inc. He received a degree in electronic engineering from Politecnico di Milano, Italy, and a Ph.D. in physics from Universite‘ Joseph Fourier, Grenoble, France. From 1994 to 1997, Rossi was also employed at ESRF, Grenoble, France, where he worked on X-ray detectors for position and energy resolution. He later worked as a research associate at Cornell University, NY, developing the X-ray CMOS imager for time-resolved protein diffraction. In 2002, he became a design manager for Micron Imaging Mobile Application Group, where he designed sensors for large-volume production. In 2003, Rossi joined Rockwell Scientific as a senior analog designer working on multiformat CMOS imaging system-on-chip sensors for HDTV. He holds several CMOS sensor patents.",
+        "name": "G. Rossi"
+      },
+      {
+        "bio": "Laurent Blanquart is the lead scientist at AltaSens, Inc., where he develops key analog circuit blocks. He received an M.Sc. degree in electrical engineering in 1989 from Institut Superieur d'Electronique du Nord (ISEN). He was employed at Centre de Physique des Particules de Marseille (CPPM), France, from 1991 to 2001, working in the field of ultra low power analog integrated circuits design, mainly for pixel detectors in high-energy physics experiments. Blanquart also worked as a principal sensor designer at the Lawrence Berkeley National Laboratory, where he was in charge of designing the pixel tracking detector electronics for the ATLAS experiment (CERN). Here he was honored with spot recognition awards for several IC design innovations. Blanquart's technical interests and expertise include very low-power analog design, CMOS imager design, and large charged-particle pixel array design. He has authored and co-authored more than 40 papers, holds 2 patents, and has contributed to numerous international conference presentations. He has also given lectures in advanced pixel IC analog design at several research institutes and at the IEEE/NSS symposium.",
+        "name": "L. Blanquart"
+      },
+      {
+        "bio": "Roberto Marchesini is the lead engineer in imaging system-on-chip integration at AltaSens Inc. He graduated with a Ph.D. in physics from the University of Ferrara, Italy, with an emphasis in medical imaging. Marchesini has worked for several years as a senior IC design engineer at Berkeley National Lab, developing ASICs for particle pixel detector used in high-energy physics experiments. After joining the semiconductor industry, he became lead engineer in system-on-chip development and integration for wireless communication application.",
+        "name": "R. Marchesini"
+      },
+      {
+        "bio": "Ying Huang received B.A.Sc and M.A.Sc degrees in electrical engineering from the University of Waterloo, Ontario, Canada, in 2000 and 2002, respectively. Since 2002, she has worked as a CMOS image sensor design er at AltaSens, Inc. (formerly Rockwell Scientific's CMOS Image Sensor Group). Her research interests include CMOS imager design and analog/mixed signal circuit design.",
+        "name": "Y. Huang"
+      },
+      {
+        "bio": "Gregory Chow is senior applications engineer at AltaSens Inc. He began his career designing CCD-based cameras for machine vision and medical imaging applications and now works solely with CMOS imaging sensors. Having diverse experience with both CCDs and CMOS imaging system-on-chip sensors, he is an expert at facilitating high-throughput computer interface via various frame grabbers. Chow graduated from the University of British Columbia, Canada, with a B.A.Sc in engineering physics, electrical option.",
+        "name": "G. Chow"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from SMPTE canonical repository import (smpte-canonical-audit/canonicalLibrary.*.json); previous value was a placeholder",
+      "originalValue": "other",
+      "source": "parsed",
+      "updated": "2026-07-07T23:39:31.295Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16267.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "year": "2004",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16267.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16267.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docId": "10.5594-J16267",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/J16267",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docLabel": "SMPTE Motion Imaging Journal ( Volume: 113, Issue: 10-11, 2004)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docTitle": "Development Status of CMOS 1920 × 1080 Imaging System-on-Chip for 60p and 72p HDTV",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16267.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "doi": "10.5594/J16267",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16267.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/J16267",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/J16267",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "issn": {
+      "electronic": "2160-2492",
+      "electronic$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16267.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "print": "1545-0279",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16267.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16267.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08182015 BACKFILE JOURNAL FRESH/smptej_113_10-11/MIJR15Vol113No10-11.xml)",
+      "source": "parsed",
+      "updated": "2026-06-17T00:17:09.425Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "SMPTE Motion Imaging Journal",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "10-11",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16267.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "pages": "359–368",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16267.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publicationDate": "2004-10-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Month corrected from SMPTE canonical repository (registry had Jan-1 placeholder) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": "2004-01-01",
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16267.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08182015 BACKFILE JOURNAL FRESH/smptej_113_10-11/MIJR15Vol113No10-11.xml)",
+        "source": "parsed",
+        "updated": "2026-06-17T00:17:09.425Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16267.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "10.5594-J11565",
+        "orphan/10.5594-J16267/bibr1-10.5594_J16267",
+        "orphan/10.5594-J16267/bibr2-10.5594_J16267",
+        "orphan/10.5594-J16267/bibr3-10.5594_J16267",
+        "orphan/10.5594-J16267/bibr4-10.5594_J16267",
+        "orphan/10.5594-J16267/bibr5-10.5594_J16267",
+        "orphan/10.5594-J16267/bibr6-10.5594_J16267",
+        "orphan/10.5594-J16267/bibr8-10.5594_J16267",
+        "orphan/10.5594-J16267/bibr9-10.5594_J16267",
+        "orphan/10.5594-J16267/bibr10-10.5594_J16267",
+        "orphan/10.5594-J16267/bibr11-10.5594_J16267",
+        "orphan/10.5594-J16267/bibr12-10.5594_J16267",
+        "orphan/10.5594-J16267/bibr13-10.5594_J16267"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteJournalRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T18:21:02.558Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/SMPTE%20Motion%20Imaging%20Journal/113/10-11/13/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.434Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — journal papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "volume": "113",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16267.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    }
+  }
+}

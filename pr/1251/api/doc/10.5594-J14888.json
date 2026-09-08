@@ -1,0 +1,262 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-J14888",
+  "document": {
+    "abbrevTitle": "SMPTE Mot. Imag. J",
+    "abbrevTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J14888.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "abstract": "Selecting an adequate file format for archiving has always been a complex issue. Several formats are available from a variety of vendors but in addition to the issue of storage media deterioration there is always the serious threat of technology becoming obsolete or no longer being supported by the vendor. Consequently, users experience interoperability during content exchange. Furthermore, with the introduction of HDTV in broadcasting and multiple distribution platforms (Mobile TV, T-DMB, DVB-H, IPTV) and image formats (720p/50, 1080p/50, etc.) compression scalability is now more of a requirement than before. Together with a need for higher quality preservation capability, metadata preservation is also a strong requirement for today's archive formats. JPEG 2000 is a fairly recent ISO open standard, based on wavelet technology. It provides a set of features such as spatial, temporal, and SNR scalability; lossless and lossy compression; and a large support for metadata, all of which are highly valuable for archiving HDTV content. The EBU Technical department has been investigating the JPEG 2000 compression system and, in particular, the best parameters for visually lossless preservation of HDTV content, depending on the format. The subjective quality was assessed at expert viewing sessions using a split screen for quality comparisons. This paper describes features of the JPEG 2000 standard, as well as its advantages and disadvantages in an archival environment. A performance evaluation of JPEG 2000 and recommendation on the JPEG 2000 settings suitable for HDTV archival is given.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J14888.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "authors": [
+      {
+        "bio": "Adi Kouadio obtained B.Sc. and M.Sc. degrees in communication systems from the Swiss Federal Institute of Technology in Lausanne, EPFL (Switzerland). After working for Fastcom Technology SA on several projects related to video-based object recognition, he entered the European Broadcasting Union's (EBU's) technical department in 2007, where he is responsible for compression technologies studies and evaluations for broadcast applications (HDTV production, contribution and distribution). Kouadio liaises with the ISO/IEC JTC1/SG26/WG1 (JPEG) and ISO/IEC JTC1/SG26/WG11 (MPEG) working groups on behalf of the EBU.",
+        "name": "Adi Kouadio"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from SMPTE canonical repository import (smpte-canonical-audit/canonicalLibrary.*.json); previous value was a placeholder",
+      "originalValue": "other",
+      "source": "parsed",
+      "updated": "2026-07-07T23:39:31.295Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J14888.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "year": "2009",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J14888.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J14888.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docId": "10.5594-J14888",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/J14888",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docLabel": "SMPTE Motion Imaging Journal ( Volume: 118, Issue: 8, 2009)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docTitle": "JPEG 2000: A Potential Solution for Archiving HDTV Content",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J14888.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "doi": "10.5594/J14888",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J14888.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/J14888",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/J14888",
+      "source": "inferred",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "issn": {
+      "electronic": "2160-2492",
+      "electronic$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J14888.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "print": "1545-0279",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J14888.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J14888.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08202015 BACKFILE JOURNAL FRESH/smptej_118_8/MIJR15Vol118No8.xml)",
+      "source": "parsed",
+      "updated": "2026-06-17T00:17:09.425Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "SMPTE Motion Imaging Journal",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "8",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J14888.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "pages": "33–40",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J14888.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publicationDate": "2009-11-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Month corrected from SMPTE canonical repository (registry had Jan-1 placeholder) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": "2009-01-01",
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J14888.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08202015 BACKFILE JOURNAL FRESH/smptej_118_8/MIJR15Vol118No8.xml)",
+        "source": "parsed",
+        "updated": "2026-06-17T00:17:09.425Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J14888.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-J14888/bibr1-10.5594_J14888",
+        "orphan/10.5594-J14888/bibr2-10.5594_J14888",
+        "orphan/10.5594-J14888/bibr3-10.5594_J14888",
+        "orphan/10.5594-J14888/bibr4-10.5594_J14888",
+        "orphan/10.5594-J14888/bibr5-10.5594_J14888",
+        "orphan/10.5594-J14888/bibr6-10.5594_J14888"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteJournalRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T18:21:02.558Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/SMPTE%20Motion%20Imaging%20Journal/118/8/17/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.426Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — journal papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "volume": "118",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J14888.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    }
+  }
+}

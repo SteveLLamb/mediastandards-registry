@@ -1,0 +1,274 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "RFC3023",
+  "document": {
+    "abstract": "This document standardizes five new media types -- text/xml, application/xml, text/xml-external-parsed-entity, application/xml- external-parsed-entity, and application/xml-dtd -- for use in exchanging network entities that are related to the Extensible Markup Language (XML). This document also standardizes a convention (using the suffix '+xml') for naming media types outside of these five types when those media types represent XML MIME (Multipurpose Internet Mail Extensions) entities. [STANDARDS-TRACK]",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML abstract",
+      "originalValue": "This document standardizes five new media types -- text/xml, application/xml, text/xml-external-parsed-entity, application/xml- external-parsed-entity, and application/xml-dtd -- for use in exchanging network entities that are related to the Extensible Markup Language (XML).  This document also standardizes a convention (using the suffix '+xml') for naming media types outside of these five types when those media types represent XML MIME (Multipurpose Internet Mail Extensions) entities. [STANDARDS-TRACK]",
+      "overridden": true,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc3023/",
+      "updated": "2026-02-25T23:54:40.012Z",
+      "version": "extractDocs.js@commit:7e5f596609c6"
+    },
+    "authors": [
+      {
+        "name": "Simon St.Laurent"
+      },
+      {
+        "name": "Murata Makoto"
+      },
+      {
+        "name": "Dan Kohn"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc3023/",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "docId": "RFC3023",
+    "docId$meta": {
+      "confidence": "high",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docLabel": "IETF RFC 3023",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docNumber": "3023",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML technical report metadata",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc3023/",
+      "updated": "2026-02-23T20:16:03.248Z",
+      "version": "extractDocs.js@commit:a0cd014d979d"
+    },
+    "docTitle": "XML Media Types",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Mapped from Datatracker std_level or RFC status text",
+      "originalValue": "Specification",
+      "overridden": true,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc3023/",
+      "updated": "2026-02-23T20:16:03.248Z",
+      "version": "extractDocs.js@commit:a0cd014d979d"
+    },
+    "doi": "10.17487/RFC3023",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML citation_doi",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc3023/",
+      "updated": "2026-02-23T20:16:03.248Z",
+      "version": "extractDocs.js@commit:a0cd014d979d"
+    },
+    "href": "https://doi.org/10.17487/RFC3023",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI (https://doi.org/<doi>)",
+      "originalValue": "https://www.rfc-editor.org/info/rfc3023",
+      "overridden": true,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc3023/",
+      "updated": "2026-02-23T20:16:03.248Z",
+      "version": "extractDocs.js@commit:a0cd014d979d"
+    },
+    "issn": "2070-1721",
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML citation_issn",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc3023/",
+      "updated": "2026-02-23T20:16:03.248Z",
+      "version": "extractDocs.js@commit:a0cd014d979d"
+    },
+    "keywords": [
+      "XML",
+      "Extensible Markup Language",
+      "Web",
+      "Authority",
+      "HTTP",
+      "Hypertext Transfer Protocol",
+      "Media Type"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC index XML keywords",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc3023/",
+      "updated": "2026-02-25T23:54:40.012Z",
+      "version": "extractDocs.js@commit:7e5f596609c6"
+    },
+    "pages": "39",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from Datatracker doc.json pages",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc3023/",
+      "updated": "2026-02-23T20:16:03.248Z",
+      "version": "extractDocs.js@commit:a0cd014d979d"
+    },
+    "publicationDate": "2001-01-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from RFC HTML citation date",
+      "originalValue": "2020-01-21",
+      "overridden": true,
+      "source": "parsed",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc3023/",
+      "updated": "2026-02-24T22:12:38.571Z",
+      "version": "extractDocs.js@commit:ad663705eb41"
+    },
+    "publisher": "IETF",
+    "publisher$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "resolvedHref": "https://www.rfc-editor.org/info/rfc3023",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://www.rfc-editor.org/info/rfc3023/",
+      "updated": "2026-02-23T20:16:03.248Z",
+      "version": "extractDocs.js@commit:a0cd014d979d"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "amendedBy": [
+        "RFC6839"
+      ],
+      "amendedBy$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC info page relation <dl>",
+        "originalValue": [],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc3023/",
+        "updated": "2026-02-23T20:16:03.248Z",
+        "version": "extractDocs.js@commit:a0cd014d979d"
+      },
+      "amends": [
+        "RFC2048"
+      ],
+      "amends$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC info page relation <dl>",
+        "originalValue": [],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc3023/",
+        "updated": "2026-02-23T20:16:03.248Z",
+        "version": "extractDocs.js@commit:a0cd014d979d"
+      },
+      "errataExist": true,
+      "errataExist$meta": {
+        "confidence": "high",
+        "note": "Derived from presence of errata links on RFC/Datatracker pages",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc3023/",
+        "updated": "2026-02-23T20:16:03.248Z",
+        "version": "extractDocs.js@commit:a0cd014d979d"
+      },
+      "errataUrl": [
+        "https://www.rfc-editor.org/errata/rfc3023",
+        "https://www.rfc-editor.org/errata_search.php?rfc=3023",
+        "https://www.rfc-editor.org/rfc/inline-errata/rfc3023.html"
+      ],
+      "errataUrl$meta": {
+        "confidence": "high",
+        "note": "Parsed from errata links on RFC/Datatracker pages",
+        "originalValue": [
+          "https://www.rfc-editor.org/errata_search.php?rfc=3023",
+          "https://www.rfc-editor.org/rfc/inline-errata/rfc3023.html"
+        ],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc3023/",
+        "updated": "2026-02-25T23:54:40.012Z",
+        "version": "extractDocs.js@commit:7e5f596609c6"
+      },
+      "latestVersion": false,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Derived from supersession relationship fields",
+        "originalValue": null,
+        "source": "resolved",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc3023/",
+        "updated": "2026-02-23T20:16:03.248Z",
+        "version": "extractDocs.js@commit:a0cd014d979d"
+      },
+      "statusNote": "Proposed Standard",
+      "statusNote$meta": {
+        "confidence": "high",
+        "note": "Mapped from Datatracker doc.json std_level",
+        "originalValue": null,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc3023/",
+        "updated": "2026-02-23T20:16:03.248Z",
+        "version": "extractDocs.js@commit:a0cd014d979d"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededBy": [
+        "RFC7303"
+      ],
+      "supersededBy$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersedes": [
+        "RFC2376"
+      ],
+      "supersedes$meta": {
+        "confidence": "high",
+        "note": "Parsed from RFC info page relation <dl>",
+        "originalValue": [],
+        "overridden": true,
+        "source": "parsed",
+        "sourceUrl": "https://www.rfc-editor.org/info/rfc3023/",
+        "updated": "2026-02-23T20:16:03.248Z",
+        "version": "extractDocs.js@commit:a0cd014d979d"
+      }
+    }
+  }
+}

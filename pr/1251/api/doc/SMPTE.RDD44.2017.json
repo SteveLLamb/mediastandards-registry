@@ -1,0 +1,311 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.RDD44.2017",
+  "document": {
+    "abstract": "This Registered Disclosure Document (RDD) specifies the mapping of ProRes bitstreams into a subset of the MXF Generic Container (SMPTE ST 379-2). This document also defines application restrictions. The ProRes bitstream is documented by SMPTE RDD 36:2015. ProRes bitstreams are mapped into a Picture Essence Track of the MXF Generic Container with Frame Wrapping. This RDD defines the KLV coding, the required Keys (Universal Labels) and MXF Picture Essence Descriptor items.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rdd44-2017/rdd44-2017.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.867Z"
+    },
+    "approvalDate": "2017-04-04",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rdd44-2017/rdd44-2017.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.867Z"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rdd44-2017/rdd44-2017.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.867Z"
+      },
+      "year": "2017",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rdd44-2017/rdd44-2017.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.867Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rdd44-2017/rdd44-2017.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.867Z"
+    },
+    "docId": "SMPTE.RDD44.2017",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "manual",
+      "sourceUrl": "https://pub.smpte.org/doc/rdd44/20171123-pub/",
+      "updated": "2025-10-30T00:00:00Z"
+    },
+    "docLabel": "SMPTE RDD 44:2017",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docNumber": "44",
+    "docNumber$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "docSuiteTitle": "Material Exchange Format (MXF)",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "excludeChanges": true,
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-12-12T21:18:48.961Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docTitle": "Mapping and Application of Apple ProRes",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": "Material Exchange Format — Mapping and Application of Apple ProRes",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-12-12T21:18:48.961Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docType": "Registered Disclosure Document",
+    "docType$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "doi": "10.5594/SMPTE.RDD44.2017",
+    "doi$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "group": "smpte-31fs-tc",
+    "group$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.RDD44.2017",
+    "href$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rdd44-2017/rdd44-2017.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.867Z"
+    },
+    "isbn": "978-1-68303-080-5",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rdd44-2017/rdd44-2017.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.867Z"
+    },
+    "keywords": [
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Wrappers",
+      "File Formats",
+      "MXF",
+      "Label"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Scrubbed against src/main/config/site.json controlledKeywords (auto-fix renames + drop noise)",
+      "originalValue": [
+        "Communication",
+        "Networking and Broadcast Technologies",
+        "Wrappers",
+        "File Formats",
+        "MXF",
+        "File Format",
+        "Label"
+      ],
+      "source": "parsed",
+      "updated": "2026-06-17T17:18:30.093Z",
+      "version": "kw-scrub@v1"
+    },
+    "numberOfPages": "15",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "1–15",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rdd44-2017/rdd44-2017.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.867Z"
+    },
+    "productNumber": "SSD001961",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rdd44-2017/rdd44-2017.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.867Z"
+    },
+    "publicationDate": "2017-04-04",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "excludeChanges": true,
+      "source": "manual",
+      "updated": "2025-10-27T15:58:30.840Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-07-01T00:00:00Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rdd44-2017/rdd44-2017.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.867Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rdd44-2017/rdd44-2017.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.867Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rdd44-2017/rdd44-2017.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.867Z"
+    },
+    "references": {
+      "bibliographic": [
+        "R-REC-BT.2020-2",
+        "R-REC-BT.601-7",
+        "R-REC-BT.709-6",
+        "SMPTE.EG377-3.2013",
+        "SMPTE.RDD36.2015",
+        "orphan/SMPTE.RDD44.2017/ref-bib-1"
+      ],
+      "bibliographic$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-18T23:48:48.871Z"
+      },
+      "normative": [
+        "SMPTE.ST2067-5.2013",
+        "SMPTE.ST377-1.2011",
+        "SMPTE.ST379-2.2010"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-18T22:11:52.542Z"
+      }
+    },
+    "releaseTag": "20170404-pub",
+    "releaseTag$meta": {
+      "confidence": "medium",
+      "excludeChanges": true,
+      "source": "manual",
+      "updated": "2025-10-27T15:58:54.558Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/rdd44/20170404-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000007Na0",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-11-11T04:46:03.229Z",
+      "version": "extractDocs.js@commit:dea962f9e9d7"
+    },
+    "standardId": "21016",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/METADATA and PDFs ALL CONTENT/Standard/rdd44-2017/rdd44-2017.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.867Z"
+    },
+    "status": {
+      "active": false,
+      "active$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-10T19:32:17.267Z"
+      },
+      "latestVersion": false,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-10T19:32:17.267Z"
+      },
+      "superseded": true,
+      "superseded$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-07-01T00:00:00Z"
+      },
+      "supersededBy": [
+        "SMPTE.RDD44.2017-11"
+      ],
+      "supersededBy$meta": {
+        "confidence": "medium",
+        "excludeChanges": true,
+        "source": "manual",
+        "updated": "2025-10-27T15:59:33.169Z"
+      },
+      "supersededDate": "2022-06-01",
+      "supersededDate$meta": {
+        "confidence": "medium",
+        "excludeChanges": true,
+        "source": "manual",
+        "updated": "2025-10-27T15:59:33.169Z"
+      }
+    }
+  }
+}

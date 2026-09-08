@@ -1,0 +1,169 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST2029.2022",
+  "document": {
+    "docId": "SMPTE.ST2029.2022",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2029/20221012-pub/",
+      "updated": "2025-10-26T17:01:49.579Z"
+    },
+    "docLabel": "SMPTE ST 2029:2022",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2029/20221012-pub/",
+      "updated": "2025-10-26T17:01:49.579Z"
+    },
+    "docNumber": "2029",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2029/20221012-pub/",
+      "updated": "2025-10-26T17:01:49.579Z"
+    },
+    "docTitle": "Uniform Resource Names for SMPTE Resources",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2029/20221012-pub/",
+      "updated": "2025-10-26T17:01:49.579Z"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2029/20221012-pub/",
+      "updated": "2025-10-26T17:01:49.579Z"
+    },
+    "doi": "10.5594/SMPTE.ST2029.2022",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2029/20221012-pub/",
+      "updated": "2025-10-26T17:01:49.579Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST2029.2022",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2029/20221012-pub/",
+      "updated": "2025-10-26T17:01:49.579Z"
+    },
+    "keywords": [
+      "Identification",
+      "Metadata",
+      "URN"
+    ],
+    "keywords$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-10-26T20:08:51.443Z"
+    },
+    "publicationDate": "2022-10-12",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2029/20221012-pub/",
+      "updated": "2025-10-26T17:01:49.579Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2029/20221012-pub/",
+      "updated": "2025-10-26T17:01:49.579Z"
+    },
+    "references": {
+      "bibliographic": [
+        "RFC1737",
+        "RFC5119",
+        "RFC3986",
+        "RFC7950"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-10-26T20:09:15.562Z"
+      },
+      "normative": [
+        "SMPTE.ST298.1997",
+        "SMPTE.ST330.2022",
+        "RFC2141",
+        "RFC3406",
+        "RFC4122",
+        "RFC4234"
+      ],
+      "normative$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-10-26T20:09:15.562Z"
+      }
+    },
+    "releaseTag": "20221012-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2029/20221012-pub/",
+      "updated": "2025-10-26T17:01:49.579Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:49.579Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-26T17:01:49.579Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:49.579Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:01:49.579Z"
+      }
+    }
+  }
+}

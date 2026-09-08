@@ -1,0 +1,237 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-J07247",
+  "document": {
+    "abbrevTitle": "J SMPTE",
+    "abbrevTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J07247.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "abstract": "A joint subcommittee of the Television and Color Committees has been working to establish recommended practices for density and contrast range for color films for color television. During the subcommittee's work it became evident that optimum control of release print density range could be achieved only if the original photography were carefully controlled; therefore, it was felt essential to provide an appendix to the recommended practice which would discuss in some detail the “considerations in color film production for color television.” Certain factors in color TV film transmission and reception make it desirable to control the characteristics of the color print. The degree and type of controls that can be applied are affected by properties of the color film. The density range of the color print is most effectively and economically controlled in the staging and photography, rather than in the final printing. Reflectance of fully illuminated scene elements that are to be reproduced with good detail should be held between recommended maximum and minimum limits to control the “reference white” and “reference black” of each scene, and face tones should be properly related to these limits. For a fully lighted day interior scene, a lighting ratio of 2:1 is recommended. Higher ratios may be used for special effects and night scenes.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J07247.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "SMPTE Color Committee, c/o Eastman Kodak Co., Motion Picture Film Dept., 6706 Santa Monica Blvd., Hollywood 38, Calif.",
+        "name": "John M. Waner"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Vocabulary conformance to SMPTE ContentTypeEnum (2026-07-09): 'research-article' renamed to 'orig-research'. Registry vocab = SMPTE enum + 9 retained MSRBot values.",
+      "originalValue": "research-article",
+      "source": "resolved",
+      "updated": "2026-07-09T17:56:30.992Z",
+      "version": "articletype-conform@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J07247.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "year": "1964",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J07247.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J07247.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docId": "10.5594-J07247",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/J07247",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docLabel": "Journal of the SMPTE ( Volume: 73, Issue: 5, May 1964)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from journal title, volume, issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docTitle": "Considerations in Color Film Production for Color Television",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J07247.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "doi": "10.5594/J07247",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J07247.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/J07247",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/J07247",
+      "source": "inferred",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "issn": {
+      "print": "0361-4573",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J07247.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J07247.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/07302015 IBP DEPOSITS/Journal-256-Issues/smptej_73_5/MIJR15Vol73No5.xml)",
+      "source": "parsed",
+      "updated": "2026-06-16T16:11:59.617Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "Journal of the SMPTE",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "5",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J07247.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "pages": "411–414",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J07247.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publicationDate": "1964-05-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J07247.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/07302015 IBP DEPOSITS/Journal-256-Issues/smptej_73_5/MIJR15Vol73No5.xml)",
+        "source": "parsed",
+        "updated": "2026-06-16T16:11:59.617Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J07247.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/Journal%20of%20the%20SMPTE/73/5/5/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.414Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — journal articles default active",
+        "source": "inferred",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "volume": "73",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J07247.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    }
+  }
+}

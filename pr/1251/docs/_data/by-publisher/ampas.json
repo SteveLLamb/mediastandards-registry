@@ -1,0 +1,1853 @@
+[
+  {
+    "docId": "AMPAS.P.2013-001",
+    "docLabel": "AMPAS P-2013-001",
+    "docTitle": "Recommended Procedures for the Creation and Use of Digital Camera System Input Device Transforms (IDTs)",
+    "docType": "Procedure",
+    "group": "ampas-stc-aces",
+    "href": "https://www.dropbox.com/scl/fi/o0az9azz833t1sde8apfz/P-2013-001.pdf?rlkey=j7eqd4l0wpvbhpi72ayjvflka&e=1&dl=0",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2020-01-23",
+    "publisher": "AMPAS",
+    "references": {
+      "normative": [
+        "ISO.17321-2.2012",
+        "ISO.7589.2002",
+        "SMPTE.RP177.1993",
+        "SMPTE.ST2065-1.2012"
+      ],
+      "bibliographic": []
+    },
+    "status": {
+      "draft": true
+    },
+    "referencesResolved": {
+      "normative": [
+        {
+          "id": "ISO.17321-2.2012"
+        },
+        {
+          "id": "ISO.7589.2002"
+        },
+        {
+          "id": "SMPTE.RP177.1993"
+        },
+        {
+          "id": "SMPTE.ST2065-1.2012"
+        }
+      ],
+      "bibliographic": []
+    },
+    "referencedBy": [
+      "AMPAS.TB.2014-002",
+      "AMPAS.TB.2014-012",
+      "AMPAS.TB.2018-001"
+    ],
+    "referenceTree": [
+      "CIE.015.1986",
+      "CIE.015.2004",
+      "CIE.017.1987",
+      "IEEE.STD754.2008",
+      "ISO.17321-1.2006",
+      "ISO.17321-2.2012",
+      "ISO.22028-1.2004",
+      "ISO.3664.2000",
+      "ISO.7589.2002",
+      "R-REC-BT.709-6.201506",
+      "SMPTE.RP177.1993",
+      "SMPTE.RP431-2.2011",
+      "SMPTE.ST2065-1.2012",
+      "SMPTE.ST428-1.2006",
+      "SMPTE.ST431-1.2006",
+      "orphan/SMPTE.RP177.1993/ref-bib-1",
+      "orphan/SMPTE.RP177.1993/ref-bib-2",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-1",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-6"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Draft"
+  },
+  {
+    "docId": "AMPAS.P.2019-001",
+    "docLabel": "AMPAS P-2019-001",
+    "docTitle": "ACES Project Organization and Development Procedure",
+    "docType": "Procedure",
+    "group": "ampas-stc-aces",
+    "href": "https://aces.mp/P_2019-001",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2019-04-08",
+    "publisher": "AMPAS",
+    "resolvedHref": "https://www.dropbox.com/scl/fi/43aj0el0bldyxxpact5c3/P-2019-001.pdf?rlkey=rxc82mhbbqf3cb8sxgvceqja0&dl=0",
+    "status": {
+      "active": true
+    },
+    "docDependancy": false,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "AMPAS.S.2008-001",
+    "docLabel": "AMPAS S-2008-001",
+    "docSuiteTitle": "ACES",
+    "docTitle": "Academy Color Encoding Specification",
+    "docType": "Specification",
+    "group": "ampas-stc-aces",
+    "keywords": [
+      "ACES"
+    ],
+    "publisher": "AMPAS",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "SMPTE.ST2065-1.2012"
+      ],
+      "latestVersion": true
+    },
+    "msiLatestAny": "AMPAS.S.2008-001",
+    "msiLatestBase": "AMPAS.S.2008-001",
+    "isLatestAny": true,
+    "docBase": "AMPAS|S|2008|001",
+    "docBaseLabel": "AMPAS S 2008-001",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "AMPAS.S.2008-001",
+        "docLabel": "AMPAS S-2008-001",
+        "status": {
+          "active": false,
+          "superseded": true,
+          "supersededBy": [
+            "SMPTE.ST2065-1.2012"
+          ],
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "AMPAS.TB.2014-004"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Superseded"
+  },
+  {
+    "docId": "AMPAS.S.2013-001",
+    "docLabel": "AMPAS S-2013-001",
+    "docSuiteTitle": "ACES",
+    "docTitle": "ACESproxy - An Integer Log Encoding of ACES Image Data",
+    "docType": "Specification",
+    "group": "ampas-stc-aces",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-07-18",
+    "publisher": "AMPAS",
+    "references": {
+      "normative": [
+        "SMPTE.RP177.1993",
+        "SMPTE.ST2065-1.2012"
+      ],
+      "bibliographic": []
+    },
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "AMPAS.S.2013-001",
+    "msiLatestBase": "AMPAS.S.2013-001",
+    "isLatestAny": true,
+    "docBase": "AMPAS|S|2013|001",
+    "docBaseLabel": "AMPAS S 2013-001",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "AMPAS.S.2013-001",
+        "docLabel": "AMPAS S-2013-001",
+        "publicationDate": "2016-07-18",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencesResolved": {
+      "normative": [
+        {
+          "id": "SMPTE.RP177.1993"
+        },
+        {
+          "id": "SMPTE.ST2065-1.2012"
+        }
+      ],
+      "bibliographic": []
+    },
+    "referencedBy": [
+      "AMPAS.S.2014-003",
+      "AMPAS.S.2014-004",
+      "AMPAS.TB.2014-010",
+      "AMPAS.TB.2014-012"
+    ],
+    "referenceTree": [
+      "CIE.015.1986",
+      "CIE.015.2004",
+      "CIE.017.1987",
+      "IEEE.STD754.2008",
+      "ISO.17321-1.2006",
+      "ISO.22028-1.2004",
+      "ISO.3664.2000",
+      "R-REC-BT.709-6.201506",
+      "SMPTE.RP177.1993",
+      "SMPTE.RP431-2.2011",
+      "SMPTE.ST2065-1.2012",
+      "SMPTE.ST428-1.2006",
+      "SMPTE.ST431-1.2006",
+      "orphan/SMPTE.RP177.1993/ref-bib-1",
+      "orphan/SMPTE.RP177.1993/ref-bib-2",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-1",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-6"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "AMPAS.S.2014-002",
+    "docLabel": "AMPAS S-2014-002",
+    "docSuiteTitle": "ACES",
+    "docTitle": "Academy Color Encoding System – Versioning System",
+    "docType": "Specification",
+    "group": "ampas-stc-aces",
+    "href": "https://community.acescentral.com/uploads/short-url/hYpO9LQiUWVY3BFmfwgFstCM636.pdf",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2019-12-13",
+    "publisher": "AMPAS",
+    "references": {
+      "normative": [
+        "AMPAS.TB.2014-002",
+        "AMPAS.TB.2014-012",
+        "SMPTE.ST2065-1.2012"
+      ],
+      "bibliographic": []
+    },
+    "resolvedHref": "https://community.acescentral.com/uploads/default/original/2X/7/7df94d163d72ee5c835a46c8643a75eb636eaa98.pdf",
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "AMPAS.S.2014-002",
+    "msiLatestBase": "AMPAS.S.2014-002",
+    "isLatestAny": true,
+    "docBase": "AMPAS|S|2014|002",
+    "docBaseLabel": "AMPAS S 2014-002",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "AMPAS.S.2014-002",
+        "docLabel": "AMPAS S-2014-002",
+        "href": "https://community.acescentral.com/uploads/short-url/hYpO9LQiUWVY3BFmfwgFstCM636.pdf",
+        "publicationDate": "2019-12-13",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencesResolved": {
+      "normative": [
+        {
+          "id": "AMPAS.TB.2014-002"
+        },
+        {
+          "id": "AMPAS.TB.2014-012"
+        },
+        {
+          "id": "SMPTE.ST2065-1.2012"
+        }
+      ],
+      "bibliographic": []
+    },
+    "referencedBy": [
+      "AMPAS.S.2014-006",
+      "AMPAS.S.2019-001",
+      "AMPAS.TB.2014-002",
+      "SMPTE.ST2067-50.2018"
+    ],
+    "referenceTree": [
+      "AMPAS.P.2013-001",
+      "AMPAS.S.2013-001",
+      "AMPAS.S.2014-002",
+      "AMPAS.S.2014-003",
+      "AMPAS.S.2014-004",
+      "AMPAS.S.2014-006",
+      "AMPAS.TB.2014-002",
+      "AMPAS.TB.2014-009",
+      "AMPAS.TB.2014-010",
+      "AMPAS.TB.2014-012",
+      "ASC.CDL.R1-2.2009",
+      "CIE.015.1986",
+      "CIE.015.2004",
+      "CIE.017.1987",
+      "IEEE.STD754.2008",
+      "ISO.11664-1.2007",
+      "ISO.12232.2006",
+      "ISO.17321-1.2006",
+      "ISO.22028-1.2004",
+      "ISO.3664.2000",
+      "R-REC-BT.2020-2.201510",
+      "R-REC-BT.709-6.201506",
+      "RFC1321",
+      "RFC4122",
+      "SMPTE.RP177.1993",
+      "SMPTE.RP431-2.2011",
+      "SMPTE.ST12-1.2008",
+      "SMPTE.ST2065-1.2012",
+      "SMPTE.ST2065-2.2012",
+      "SMPTE.ST2065-3.2012",
+      "SMPTE.ST2065-4.2013",
+      "SMPTE.ST254.2008",
+      "SMPTE.ST268.2003",
+      "SMPTE.ST331.2011",
+      "SMPTE.ST428-1.2006",
+      "SMPTE.ST431-1.2006",
+      "UNICODE.STD.6.0.0",
+      "orphan/SMPTE.RP177.1993/ref-bib-1",
+      "orphan/SMPTE.RP177.1993/ref-bib-2",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-1",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-6",
+      "orphan/SMPTE.ST2065-4.2013/ref-bib-1",
+      "orphan/SMPTE.ST2065-4.2013/ref-bib-2"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "AMPAS.S.2014-003",
+    "docLabel": "AMPAS S-2014-003",
+    "docSuiteTitle": "ACES",
+    "docTitle": "ACEScc – A Logarithmic Encoding of ACES Data for use within Color Grading Systems",
+    "docType": "Specification",
+    "group": "ampas-stc-aces",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-07-18",
+    "publisher": "AMPAS",
+    "references": {
+      "normative": [
+        "AMPAS.S.2013-001",
+        "SMPTE.RP177.1993",
+        "SMPTE.ST2065-1.2012"
+      ],
+      "bibliographic": []
+    },
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "AMPAS.S.2014-003",
+    "msiLatestBase": "AMPAS.S.2014-003",
+    "isLatestAny": true,
+    "docBase": "AMPAS|S|2014|003",
+    "docBaseLabel": "AMPAS S 2014-003",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "AMPAS.S.2014-003",
+        "docLabel": "AMPAS S-2014-003",
+        "publicationDate": "2016-07-18",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencesResolved": {
+      "normative": [
+        {
+          "id": "AMPAS.S.2013-001"
+        },
+        {
+          "id": "SMPTE.RP177.1993"
+        },
+        {
+          "id": "SMPTE.ST2065-1.2012"
+        }
+      ],
+      "bibliographic": []
+    },
+    "referencedBy": [
+      "AMPAS.S.2014-004",
+      "AMPAS.TB.2014-010",
+      "AMPAS.TB.2014-012",
+      "AMPAS.TB.2018-001"
+    ],
+    "referenceTree": [
+      "AMPAS.S.2013-001",
+      "CIE.015.1986",
+      "CIE.015.2004",
+      "CIE.017.1987",
+      "IEEE.STD754.2008",
+      "ISO.17321-1.2006",
+      "ISO.22028-1.2004",
+      "ISO.3664.2000",
+      "R-REC-BT.709-6.201506",
+      "SMPTE.RP177.1993",
+      "SMPTE.RP431-2.2011",
+      "SMPTE.ST2065-1.2012",
+      "SMPTE.ST428-1.2006",
+      "SMPTE.ST431-1.2006",
+      "orphan/SMPTE.RP177.1993/ref-bib-1",
+      "orphan/SMPTE.RP177.1993/ref-bib-2",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-1",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-6"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "AMPAS.S.2014-004",
+    "docLabel": "AMPAS S-2014-004",
+    "docSuiteTitle": "ACES",
+    "docTitle": "ACEScg – A Working Space for CGI Render and Compositing",
+    "docType": "Specification",
+    "group": "ampas-stc-aces",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-03-29",
+    "publisher": "AMPAS",
+    "references": {
+      "normative": [
+        "AMPAS.S.2013-001",
+        "AMPAS.S.2014-003",
+        "SMPTE.RP177.1993",
+        "SMPTE.ST2065-1.2012"
+      ],
+      "bibliographic": []
+    },
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "AMPAS.S.2014-004",
+    "msiLatestBase": "AMPAS.S.2014-004",
+    "isLatestAny": true,
+    "docBase": "AMPAS|S|2014|004",
+    "docBaseLabel": "AMPAS S 2014-004",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "AMPAS.S.2014-004",
+        "docLabel": "AMPAS S-2014-004",
+        "publicationDate": "2016-03-29",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencesResolved": {
+      "normative": [
+        {
+          "id": "AMPAS.S.2013-001"
+        },
+        {
+          "id": "AMPAS.S.2014-003"
+        },
+        {
+          "id": "SMPTE.RP177.1993"
+        },
+        {
+          "id": "SMPTE.ST2065-1.2012"
+        }
+      ],
+      "bibliographic": []
+    },
+    "referencedBy": [
+      "AMPAS.TB.2014-012",
+      "AMPAS.TB.2018-001"
+    ],
+    "referenceTree": [
+      "AMPAS.S.2013-001",
+      "AMPAS.S.2014-003",
+      "CIE.015.1986",
+      "CIE.015.2004",
+      "CIE.017.1987",
+      "IEEE.STD754.2008",
+      "ISO.17321-1.2006",
+      "ISO.22028-1.2004",
+      "ISO.3664.2000",
+      "R-REC-BT.709-6.201506",
+      "SMPTE.RP177.1993",
+      "SMPTE.RP431-2.2011",
+      "SMPTE.ST2065-1.2012",
+      "SMPTE.ST428-1.2006",
+      "SMPTE.ST431-1.2006",
+      "orphan/SMPTE.RP177.1993/ref-bib-1",
+      "orphan/SMPTE.RP177.1993/ref-bib-2",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-1",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-6"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "AMPAS.S.2014-006",
+    "docLabel": "AMPAS S-2014-006",
+    "docSuiteTitle": "ACES",
+    "docTitle": "Common LUT Format (CLF) – A Common File Format for Look-Up Tables",
+    "docType": "Specification",
+    "group": "ampas-stc-aces",
+    "href": "https://community.acescentral.com/uploads/short-url/iHX8xsDczlEg7l7OtIbJrbPvm4C.pdf",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2021-07-22",
+    "publisher": "AMPAS",
+    "references": {
+      "normative": [
+        "AMPAS.S.2014-002",
+        "AMPAS.TB.2014-002",
+        "ASC.CDL.R1-2.2009",
+        "RFC3066"
+      ],
+      "bibliographic": []
+    },
+    "resolvedHref": "https://community.acescentral.com/uploads/default/original/2X/8/831f148aa5dcdb10a569255fa2341975ad31848e.pdf",
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "AMPAS.S.2014-006",
+    "msiLatestBase": "AMPAS.S.2014-006",
+    "isLatestAny": true,
+    "docBase": "AMPAS|S|2014|006",
+    "docBaseLabel": "AMPAS S 2014-006",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "AMPAS.S.2014-006",
+        "docLabel": "AMPAS S-2014-006",
+        "href": "https://community.acescentral.com/uploads/short-url/iHX8xsDczlEg7l7OtIbJrbPvm4C.pdf",
+        "publicationDate": "2021-07-22",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencesResolved": {
+      "normative": [
+        {
+          "id": "AMPAS.S.2014-002"
+        },
+        {
+          "id": "AMPAS.TB.2014-002"
+        },
+        {
+          "id": "ASC.CDL.R1-2.2009"
+        },
+        {
+          "id": "RFC3066"
+        }
+      ],
+      "bibliographic": []
+    },
+    "referencedBy": [
+      "AMPAS.TB.2014-002",
+      "AMPAS.TB.2014-010",
+      "AMPAS.TB.2014-012"
+    ],
+    "referenceTree": [
+      "AMPAS.P.2013-001",
+      "AMPAS.S.2013-001",
+      "AMPAS.S.2014-002",
+      "AMPAS.S.2014-003",
+      "AMPAS.S.2014-006",
+      "AMPAS.TB.2014-002",
+      "AMPAS.TB.2014-009",
+      "AMPAS.TB.2014-010",
+      "AMPAS.TB.2014-012",
+      "ASC.CDL.R1-2.2009",
+      "IEEE.STD754.2008",
+      "ISO.11664-1.2007",
+      "ISO.12232.2006",
+      "ISO.17321-2.2012",
+      "ISO.7589.2002",
+      "RFC1321",
+      "RFC3066",
+      "RFC4122",
+      "SMPTE.RP177.1993",
+      "SMPTE.ST12-1.2008",
+      "SMPTE.ST2065-1.2012",
+      "SMPTE.ST2065-2.2012",
+      "SMPTE.ST2065-3.2012",
+      "SMPTE.ST2065-4.2013",
+      "SMPTE.ST254.2008",
+      "SMPTE.ST268.2003",
+      "SMPTE.ST331.2011",
+      "UNICODE.STD.6.0.0",
+      "orphan/SMPTE.ST2065-4.2013/ref-bib-1",
+      "orphan/SMPTE.ST2065-4.2013/ref-bib-2"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "AMPAS.S.2016-001",
+    "docLabel": "AMPAS S-2016-001",
+    "docSuiteTitle": "ACES",
+    "docTitle": "ACEScct - A Quasi-Logarithmic Encoding of ACES Data for use within Color Grading Systems",
+    "docType": "Specification",
+    "group": "ampas-stc-aces",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-09-20",
+    "publisher": "AMPAS",
+    "references": {
+      "normative": [
+        "SMPTE.RP177.1993",
+        "SMPTE.ST2065-1.2012"
+      ],
+      "bibliographic": []
+    },
+    "resolvedHref": "https://www.dropbox.com/scl/fi/ashice0e57vn1plqf8uby/S-2016-001.pdf?rlkey=qrxz6sbaly0fp7o1m92m66w93&dl=0",
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "AMPAS.S.2016-001",
+    "msiLatestBase": "AMPAS.S.2016-001",
+    "isLatestAny": true,
+    "docBase": "AMPAS|S|2016|001",
+    "docBaseLabel": "AMPAS S 2016-001",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "AMPAS.S.2016-001",
+        "docLabel": "AMPAS S-2016-001",
+        "publicationDate": "2016-09-20",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencesResolved": {
+      "normative": [
+        {
+          "id": "SMPTE.RP177.1993"
+        },
+        {
+          "id": "SMPTE.ST2065-1.2012"
+        }
+      ],
+      "bibliographic": []
+    },
+    "referencedBy": [
+      "AMPAS.TB.2018-001"
+    ],
+    "referenceTree": [
+      "CIE.015.1986",
+      "CIE.015.2004",
+      "CIE.017.1987",
+      "IEEE.STD754.2008",
+      "ISO.17321-1.2006",
+      "ISO.22028-1.2004",
+      "ISO.3664.2000",
+      "R-REC-BT.709-6.201506",
+      "SMPTE.RP177.1993",
+      "SMPTE.RP431-2.2011",
+      "SMPTE.ST2065-1.2012",
+      "SMPTE.ST428-1.2006",
+      "SMPTE.ST431-1.2006",
+      "orphan/SMPTE.RP177.1993/ref-bib-1",
+      "orphan/SMPTE.RP177.1993/ref-bib-2",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-1",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-6"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "AMPAS.S.2019-001",
+    "docLabel": "AMPAS S-2019-001",
+    "docSuiteTitle": "ACES",
+    "docTitle": "ACES Metadata File (AMF)",
+    "docType": "Specification",
+    "group": "ampas-stc-aces",
+    "href": "https://community.acescentral.com/uploads/short-url/i0MIjbnAz0VA7AwHO5j7SPOCBrU.pdf",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2020-03-10",
+    "publisher": "AMPAS",
+    "references": {
+      "normative": [
+        "AMPAS.S.2014-002",
+        "AMPAS.TB.2014-010",
+        "ISO.11578.1998",
+        "ISO.8601.2004",
+        "SMPTE.RDD47.2018",
+        "SMPTE.ST2065-1.2012",
+        "SMPTE.ST2065-4.2013",
+        "SMPTE.ST2067-50.2018",
+        "SMPTE.ST2067-9.2018"
+      ],
+      "bibliographic": []
+    },
+    "resolvedHref": "https://www.dropbox.com/scl/fi/vgciceewplbtedvpu38f3/S-2019-001.pdf?rlkey=0jgyf44jcycvpbm4zk3iaf0mf&dl=0",
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "AMPAS.S.2019-001",
+    "msiLatestBase": "AMPAS.S.2019-001",
+    "isLatestAny": true,
+    "docBase": "AMPAS|S|2019|001",
+    "docBaseLabel": "AMPAS S 2019-001",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "AMPAS.S.2019-001",
+        "docLabel": "AMPAS S-2019-001",
+        "href": "https://community.acescentral.com/uploads/short-url/i0MIjbnAz0VA7AwHO5j7SPOCBrU.pdf",
+        "publicationDate": "2020-03-10",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencesResolved": {
+      "normative": [
+        {
+          "id": "AMPAS.S.2014-002"
+        },
+        {
+          "id": "AMPAS.TB.2014-010"
+        },
+        {
+          "id": "ISO.11578.1998"
+        },
+        {
+          "id": "ISO.8601.2004"
+        },
+        {
+          "id": "SMPTE.RDD47.2018"
+        },
+        {
+          "id": "SMPTE.ST2065-1.2012"
+        },
+        {
+          "id": "SMPTE.ST2065-4.2013"
+        },
+        {
+          "id": "SMPTE.ST2067-50.2018"
+        },
+        {
+          "id": "SMPTE.ST2067-9.2018"
+        }
+      ],
+      "bibliographic": []
+    },
+    "referenceTree": [
+      "AMPAS.P.2013-001",
+      "AMPAS.S.2013-001",
+      "AMPAS.S.2014-002",
+      "AMPAS.S.2014-003",
+      "AMPAS.S.2014-004",
+      "AMPAS.S.2014-006",
+      "AMPAS.TB.2014-002",
+      "AMPAS.TB.2014-009",
+      "AMPAS.TB.2014-010",
+      "AMPAS.TB.2014-012",
+      "ASC.CDL.R1-2.2009",
+      "CEA.608.2008",
+      "CEA.861.2015",
+      "IEC.61966-2-1.1999",
+      "IEC.61966-2-4.2006",
+      "IEEE.STD754.2008",
+      "ISO.10646-1.2000",
+      "ISO.10646.2003",
+      "ISO.10646.2017",
+      "ISO.11578.1998",
+      "ISO.11664-1.2019",
+      "ISO.11664-3.2012",
+      "ISO.12639.2004",
+      "ISO.14496-18.2004",
+      "ISO.15444-1.2004",
+      "ISO.15924.2004",
+      "ISO.15948.2004",
+      "ISO.3166-1.1997",
+      "ISO.3166-1.2006",
+      "ISO.639-2.1998",
+      "ISO.646.1991",
+      "ISO.8601.2004",
+      "R-REC-BT.2020",
+      "R-REC-BT.2020-2.201510",
+      "R-REC-BT.2035.201307",
+      "R-REC-BT.2100-1.201706",
+      "R-REC-BT.709-6.201506",
+      "RFC2045",
+      "RFC2046",
+      "RFC2141",
+      "RFC2302",
+      "RFC2396",
+      "RFC3023",
+      "RFC3066",
+      "RFC3629",
+      "RFC4051",
+      "RFC4122",
+      "RFC4246",
+      "RFC4452",
+      "RFC4539",
+      "RFC4634",
+      "RFC5646",
+      "SMPTE.RDD47.2018",
+      "SMPTE.RP177.1993",
+      "SMPTE.RP2052-10.2012",
+      "SMPTE.RP2052-11.2013",
+      "SMPTE.RP2057.2011",
+      "SMPTE.RP2057.2011Am1.2013",
+      "SMPTE.RP210.2012",
+      "SMPTE.RP224.2012",
+      "SMPTE.RP431-2.2011",
+      "SMPTE.ST12-1.2008",
+      "SMPTE.ST2001-1.2015",
+      "SMPTE.ST2016-1.2009",
+      "SMPTE.ST2029.2009",
+      "SMPTE.ST2065-1.2012",
+      "SMPTE.ST2065-4.2013",
+      "SMPTE.ST2065-5.2016",
+      "SMPTE.ST2067-100.2014",
+      "SMPTE.ST2067-101.2014",
+      "SMPTE.ST2067-102.2014",
+      "SMPTE.ST2067-2.2016",
+      "SMPTE.ST2067-20.2013",
+      "SMPTE.ST2067-20.2016",
+      "SMPTE.ST2067-21.2016",
+      "SMPTE.ST2067-3.2013",
+      "SMPTE.ST2067-3.2016",
+      "SMPTE.ST2067-5.2013",
+      "SMPTE.ST2067-5.2013Am1.2016",
+      "SMPTE.ST2067-50.2018",
+      "SMPTE.ST2067-8.2013",
+      "SMPTE.ST2067-9.2018",
+      "SMPTE.ST2080-1.2014",
+      "SMPTE.ST2080-3.2017",
+      "SMPTE.ST2084.2014",
+      "SMPTE.ST2086.2014",
+      "SMPTE.ST274.2008",
+      "SMPTE.ST296.2012",
+      "SMPTE.ST298.2009",
+      "SMPTE.ST330.2011",
+      "SMPTE.ST334-1.2007",
+      "SMPTE.ST334-2.2007",
+      "SMPTE.ST336.2007",
+      "SMPTE.ST377-1.2009",
+      "SMPTE.ST377-1.2011",
+      "SMPTE.ST377-1.2011Am1.2012",
+      "SMPTE.ST377-1.2011Am2.2012",
+      "SMPTE.ST377-4.2021",
+      "SMPTE.ST379-2.2010",
+      "SMPTE.ST382.2007",
+      "SMPTE.ST395.2003",
+      "SMPTE.ST400.2004",
+      "SMPTE.ST410.2008",
+      "SMPTE.ST429-17.2017",
+      "SMPTE.ST429-5.2009",
+      "SMPTE.ST429-6.2006",
+      "SMPTE.ST429-7.2006",
+      "SMPTE.ST429-8.2007",
+      "SMPTE.ST429-9.2014",
+      "SMPTE.ST430-2.2006",
+      "SMPTE.ST433.2008",
+      "SMPTE.ST433.2008Am1.2011",
+      "SMPTE.ST434.2006",
+      "SMPTE.ST436-1.2013",
+      "T-REC-H.265.201911",
+      "TIFF.r6.19920603",
+      "UNICODE.UTF.BOM",
+      "W3C.xml-names.20091208",
+      "W3C.xml.20040204",
+      "W3C.xml.20081126",
+      "W3C.xmldsig-core.20080610",
+      "W3C.xmlschema-1.20041028",
+      "W3C.xmlschema-2.20041028",
+      "orphan/SMPTE.RP2057.2011/ref-norm-10",
+      "orphan/SMPTE.RP2057.2011/ref-norm-7",
+      "orphan/SMPTE.RP2057.2011/ref-norm-9",
+      "orphan/SMPTE.ST2067-102.2014/ref-norm-3",
+      "orphan/SMPTE.ST2067-102.2014/ref-norm-4",
+      "orphan/SMPTE.ST2067-2.2016/ref-norm-25",
+      "orphan/SMPTE.ST2067-2.2016/ref-norm-26",
+      "orphan/SMPTE.ST2067-2.2016/ref-norm-27",
+      "orphan/SMPTE.ST2067-2.2016/ref-norm-28",
+      "orphan/SMPTE.ST2067-3.2016/ref-bib-5",
+      "orphan/SMPTE.ST2067-3.2016/ref-norm-10",
+      "orphan/SMPTE.ST2067-3.2016/ref-norm-11",
+      "orphan/SMPTE.ST2067-3.2016/ref-norm-12",
+      "orphan/SMPTE.ST2067-3.2016/ref-norm-13",
+      "orphan/SMPTE.ST2067-3.2016/ref-norm-9",
+      "orphan/SMPTE.ST2080-3.2017/ref-bib-1",
+      "orphan/SMPTE.ST2080-3.2017/ref-bib-4",
+      "orphan/SMPTE.ST2080-3.2017/ref-bib-5"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "AMPAS.TB.2014-001",
+    "docLabel": "AMPAS TB-2014-001",
+    "docTitle": "Academy Color Encoding System (ACES) Documentation Guide",
+    "docType": "Technical Bulletin",
+    "group": "ampas-stc-aces",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2020-04-01",
+    "publisher": "AMPAS",
+    "status": {
+      "active": true
+    },
+    "docDependancy": false,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "AMPAS.TB.2014-002",
+    "docLabel": "AMPAS TB-2014-002",
+    "docTitle": "Academy Color Encoding System (ACES) Version 1.0 User Experience Guidelines",
+    "docType": "Technical Bulletin",
+    "group": "ampas-stc-aces",
+    "href": "https://community.acescentral.com/uploads/short-url/1jOxLydhL9yEBkc2womffYKqfFi.pdf",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-03-29",
+    "publisher": "AMPAS",
+    "references": {
+      "normative": [
+        "AMPAS.P.2013-001",
+        "AMPAS.S.2014-002",
+        "AMPAS.S.2014-006",
+        "AMPAS.TB.2014-009",
+        "AMPAS.TB.2014-010",
+        "SMPTE.ST2065-1.2012",
+        "SMPTE.ST2065-2.2012",
+        "SMPTE.ST2065-3.2012",
+        "SMPTE.ST2065-4.2013"
+      ],
+      "bibliographic": []
+    },
+    "resolvedHref": "https://community.acescentral.com/uploads/default/original/2X/0/093f97cf7804fd98dd8963b667c8bb24c768460c.pdf",
+    "status": {
+      "active": true
+    },
+    "referencesResolved": {
+      "normative": [
+        {
+          "id": "AMPAS.P.2013-001"
+        },
+        {
+          "id": "AMPAS.S.2014-002"
+        },
+        {
+          "id": "AMPAS.S.2014-006"
+        },
+        {
+          "id": "AMPAS.TB.2014-009"
+        },
+        {
+          "id": "AMPAS.TB.2014-010"
+        },
+        {
+          "id": "SMPTE.ST2065-1.2012"
+        },
+        {
+          "id": "SMPTE.ST2065-2.2012"
+        },
+        {
+          "id": "SMPTE.ST2065-3.2012"
+        },
+        {
+          "id": "SMPTE.ST2065-4.2013"
+        }
+      ],
+      "bibliographic": []
+    },
+    "referencedBy": [
+      "AMPAS.S.2014-002",
+      "AMPAS.S.2014-006",
+      "AMPAS.TB.2014-012"
+    ],
+    "referenceTree": [
+      "10.5555-646755.705223",
+      "AES3.2009",
+      "AIM.BC4.1999",
+      "AMPAS.P.2013-001",
+      "AMPAS.S.2013-001",
+      "AMPAS.S.2014-002",
+      "AMPAS.S.2014-003",
+      "AMPAS.S.2014-006",
+      "AMPAS.TB.2014-002",
+      "AMPAS.TB.2014-009",
+      "AMPAS.TB.2014-010",
+      "ASC.CDL.R1-2.2009",
+      "CIE.015.2004",
+      "CIE.017.1987",
+      "IEEE.STD754.1985",
+      "IEEE.STD754.2008",
+      "ISO.10918-1.1994",
+      "ISO.10918-3.1997",
+      "ISO.11664-1.2007",
+      "ISO.12232.2006",
+      "ISO.13818-2.2000",
+      "ISO.17321-1.2006",
+      "ISO.17321-2.2012",
+      "ISO.22028-1.2004",
+      "ISO.3664.2000",
+      "ISO.5-1.1984",
+      "ISO.5-2.2001",
+      "ISO.5-3.2009",
+      "ISO.7589.2002",
+      "ISO.8601.2004",
+      "ISO.8859-1.1998",
+      "R-REC-BR.1352-3.2007",
+      "R-REC-BT.601-7.201103",
+      "R-REC-BT.709-6.201506",
+      "RFC1320",
+      "RFC1321",
+      "RFC3066",
+      "RFC4122",
+      "SMPTE.RP177.1993",
+      "SMPTE.RP180.1999",
+      "SMPTE.RP186.2008",
+      "SMPTE.RP204.2000",
+      "SMPTE.RP210.2012",
+      "SMPTE.RP431-2.2011",
+      "SMPTE.ST12-1.2008",
+      "SMPTE.ST12.1999",
+      "SMPTE.ST125.1995",
+      "SMPTE.ST170.2004",
+      "SMPTE.ST2065-1.2012",
+      "SMPTE.ST2065-2.2012",
+      "SMPTE.ST2065-3.2012",
+      "SMPTE.ST2065-4.2013",
+      "SMPTE.ST240.1999",
+      "SMPTE.ST254.2002",
+      "SMPTE.ST254.2008",
+      "SMPTE.ST268.2003",
+      "SMPTE.ST274.2003",
+      "SMPTE.ST291.2010",
+      "SMPTE.ST296.2001",
+      "SMPTE.ST305.2005",
+      "SMPTE.ST309.1999",
+      "SMPTE.ST312.2001",
+      "SMPTE.ST326.2000",
+      "SMPTE.ST328.2000",
+      "SMPTE.ST330.2004",
+      "SMPTE.ST331.2011",
+      "SMPTE.ST336.2007",
+      "SMPTE.ST337.2008",
+      "SMPTE.ST363",
+      "SMPTE.ST93.2005",
+      "SMPTE.ST96.1999",
+      "T-REC-X.509.1988",
+      "UNICODE.STD.6.0.0",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-1",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-6",
+      "orphan/SMPTE.ST2065-2.2012/ref-bib-2",
+      "orphan/SMPTE.ST2065-2.2012/ref-bib-3",
+      "orphan/SMPTE.ST2065-2.2012/ref-bib-4",
+      "orphan/SMPTE.ST2065-2.2012/ref-bib-5",
+      "orphan/SMPTE.ST2065-4.2013/ref-bib-1",
+      "orphan/SMPTE.ST2065-4.2013/ref-bib-2",
+      "orphan/SMPTE.ST268.2003/ref-bib-3",
+      "orphan/SMPTE.ST268.2003/ref-bib-4",
+      "orphan/SMPTE.ST331.2011/ref-bib-8"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "AMPAS.TB.2014-004",
+    "docLabel": "AMPAS TB-2014-004",
+    "docTitle": "Informative Notes on SMPTE ST 2065-1 – Academy Color Encoding Specification (ACES)",
+    "docType": "Technical Bulletin",
+    "group": "ampas-stc-aces",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-03-29",
+    "publisher": "AMPAS",
+    "references": {
+      "normative": [
+        "AMPAS.S.2008-001",
+        "SMPTE.ST2065-1.2012"
+      ],
+      "bibliographic": []
+    },
+    "status": {
+      "active": true
+    },
+    "referencesResolved": {
+      "normative": [
+        {
+          "id": "AMPAS.S.2008-001"
+        },
+        {
+          "id": "SMPTE.ST2065-1.2012"
+        }
+      ],
+      "bibliographic": []
+    },
+    "referenceTree": [
+      "AMPAS.S.2008-001",
+      "CIE.015.1986",
+      "CIE.015.2004",
+      "CIE.017.1987",
+      "IEEE.STD754.2008",
+      "ISO.17321-1.2006",
+      "ISO.22028-1.2004",
+      "ISO.3664.2000",
+      "R-REC-BT.709-6.201506",
+      "SMPTE.RP177.1993",
+      "SMPTE.RP431-2.2011",
+      "SMPTE.ST2065-1.2012",
+      "SMPTE.ST428-1.2006",
+      "SMPTE.ST431-1.2006",
+      "orphan/SMPTE.RP177.1993/ref-bib-1",
+      "orphan/SMPTE.RP177.1993/ref-bib-2",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-1",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-6"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "AMPAS.TB.2014-005",
+    "docLabel": "AMPAS TB-2014-005",
+    "docTitle": "Informative Notes on SMPTE ST 2065-2 – Academy Printing Density (APD) – Spectral Responsivities, Reference Measurement Device and Spectral Calculation and SMPTE ST 2065-3 Academy Density Exchange Encoding (ADX) – Encoding Printing Density (APD) Values",
+    "docType": "Technical Bulletin",
+    "group": "ampas-stc-aces",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-03-29",
+    "publisher": "AMPAS",
+    "references": {
+      "normative": [
+        "SMPTE.ST2065-2.2012",
+        "SMPTE.ST2065-3.2012"
+      ],
+      "bibliographic": []
+    },
+    "status": {
+      "active": true
+    },
+    "referencesResolved": {
+      "normative": [
+        {
+          "id": "SMPTE.ST2065-2.2012"
+        },
+        {
+          "id": "SMPTE.ST2065-3.2012"
+        }
+      ],
+      "bibliographic": []
+    },
+    "referenceTree": [
+      "ISO.5-1.1984",
+      "ISO.5-2.2001",
+      "ISO.5-3.2009",
+      "SMPTE.RP180.1999",
+      "SMPTE.ST2065-2.2012",
+      "SMPTE.ST2065-3.2012",
+      "orphan/SMPTE.ST2065-2.2012/ref-bib-2",
+      "orphan/SMPTE.ST2065-2.2012/ref-bib-3",
+      "orphan/SMPTE.ST2065-2.2012/ref-bib-4",
+      "orphan/SMPTE.ST2065-2.2012/ref-bib-5"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "AMPAS.TB.2014-006",
+    "docLabel": "AMPAS TB-2014-006",
+    "docTitle": "Informative Notes on SMPTE ST 2065-4 – ACES Image Container File Layout",
+    "docType": "Technical Bulletin",
+    "group": "ampas-stc-aces",
+    "href": "https://community.acescentral.com/uploads/short-url/azPBIL1oJicSCV08ro5AbzwUfQP.pdf",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-03-29",
+    "publisher": "AMPAS",
+    "references": {
+      "normative": [
+        "SMPTE.ST2065-4.2013"
+      ],
+      "bibliographic": []
+    },
+    "resolvedHref": "https://community.acescentral.com/uploads/default/original/2X/4/4a22aafa9f3e294771eca75d387226a22a234fa7.pdf",
+    "status": {
+      "active": true
+    },
+    "referencesResolved": {
+      "normative": [
+        {
+          "id": "SMPTE.ST2065-4.2013"
+        }
+      ],
+      "bibliographic": []
+    },
+    "referenceTree": [
+      "10.5555-646755.705223",
+      "AES3.2009",
+      "AIM.BC4.1999",
+      "CIE.015.2004",
+      "CIE.017.1987",
+      "IEEE.STD754.1985",
+      "IEEE.STD754.2008",
+      "ISO.10918-1.1994",
+      "ISO.10918-3.1997",
+      "ISO.11664-1.2007",
+      "ISO.12232.2006",
+      "ISO.13818-2.2000",
+      "ISO.17321-1.2006",
+      "ISO.22028-1.2004",
+      "ISO.3664.2000",
+      "ISO.8601.2004",
+      "ISO.8859-1.1998",
+      "R-REC-BR.1352-3.2007",
+      "R-REC-BT.601-7.201103",
+      "R-REC-BT.709-6.201506",
+      "RFC1320",
+      "RFC1321",
+      "RFC4122",
+      "SMPTE.RP177.1993",
+      "SMPTE.RP186.2008",
+      "SMPTE.RP204.2000",
+      "SMPTE.RP210.2012",
+      "SMPTE.RP431-2.2011",
+      "SMPTE.ST12-1.2008",
+      "SMPTE.ST12.1999",
+      "SMPTE.ST125.1995",
+      "SMPTE.ST170.2004",
+      "SMPTE.ST2065-1.2012",
+      "SMPTE.ST2065-4.2013",
+      "SMPTE.ST240.1999",
+      "SMPTE.ST254.2002",
+      "SMPTE.ST254.2008",
+      "SMPTE.ST268.2003",
+      "SMPTE.ST274.2003",
+      "SMPTE.ST291.2010",
+      "SMPTE.ST296.2001",
+      "SMPTE.ST305.2005",
+      "SMPTE.ST309.1999",
+      "SMPTE.ST312.2001",
+      "SMPTE.ST326.2000",
+      "SMPTE.ST328.2000",
+      "SMPTE.ST330.2004",
+      "SMPTE.ST331.2011",
+      "SMPTE.ST336.2007",
+      "SMPTE.ST337.2008",
+      "SMPTE.ST363",
+      "SMPTE.ST93.2005",
+      "SMPTE.ST96.1999",
+      "T-REC-X.509.1988",
+      "UNICODE.STD.6.0.0",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-1",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-6",
+      "orphan/SMPTE.ST2065-4.2013/ref-bib-1",
+      "orphan/SMPTE.ST2065-4.2013/ref-bib-2",
+      "orphan/SMPTE.ST268.2003/ref-bib-3",
+      "orphan/SMPTE.ST268.2003/ref-bib-4",
+      "orphan/SMPTE.ST331.2011/ref-bib-8"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "AMPAS.TB.2014-007",
+    "docLabel": "AMPAS TB-2014-007",
+    "docTitle": "Informative Notes on SMPTE ST 268:2014 – File Format for Digital Moving Picture Exchange (DPX)",
+    "docType": "Technical Bulletin",
+    "group": "ampas-stc-aces",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-03-29",
+    "publisher": "AMPAS",
+    "references": {
+      "normative": [
+        "SMPTE.ST268.2014"
+      ],
+      "bibliographic": []
+    },
+    "status": {
+      "active": true
+    },
+    "referencesResolved": {
+      "normative": [
+        {
+          "id": "SMPTE.ST268.2014"
+        }
+      ],
+      "bibliographic": []
+    },
+    "referenceTree": [
+      "AIM.BC4.1999",
+      "ARIB.STD-B4",
+      "CIE.015.2004",
+      "IEC.60169-8",
+      "IEC.60461.2010",
+      "IEC.61169-8",
+      "IEEE.STD754.1985",
+      "ISO.10526.1999",
+      "ISO.10527.2007",
+      "ISO.1223.2003",
+      "ISO.2022.1994",
+      "ISO.2906.2002",
+      "ISO.2907.2002",
+      "ISO.5768.1998",
+      "ISO.646.1991",
+      "ISO.8601.2004",
+      "ISO.8859-1.1998",
+      "R-REC-BT.1366-2",
+      "R-REC-BT.1700",
+      "R-REC-BT.601-7.201103",
+      "R-REC-BT.709-6.201506",
+      "R-REC-BT.799-4",
+      "SMPTE.EG1.1990",
+      "SMPTE.EG25.2003",
+      "SMPTE.EG27.2004",
+      "SMPTE.EG40.2012",
+      "SMPTE.RP135.2004",
+      "SMPTE.RP136.2004",
+      "SMPTE.RP160.1997",
+      "SMPTE.RP168.2009",
+      "SMPTE.RP169.1995",
+      "SMPTE.RP177.1993",
+      "SMPTE.RP179.2002",
+      "SMPTE.RP187.1995",
+      "SMPTE.ST12-1.2008",
+      "SMPTE.ST12-1.2014",
+      "SMPTE.ST12-2.2008",
+      "SMPTE.ST12-2.2014",
+      "SMPTE.ST125.2013",
+      "SMPTE.ST170.2004",
+      "SMPTE.ST195.2000",
+      "SMPTE.ST201.1996",
+      "SMPTE.ST2048-1.2011",
+      "SMPTE.ST2048-2.2011",
+      "SMPTE.ST2051.2010",
+      "SMPTE.ST2065-2.2012",
+      "SMPTE.ST2065-3.2012",
+      "SMPTE.ST233.2003",
+      "SMPTE.ST240.1999",
+      "SMPTE.ST254.2008",
+      "SMPTE.ST258.2004",
+      "SMPTE.ST259.2008",
+      "SMPTE.ST260.1999",
+      "SMPTE.ST262.1995",
+      "SMPTE.ST266.2012",
+      "SMPTE.ST268.2014",
+      "SMPTE.ST274.2008",
+      "SMPTE.ST291-1.2011",
+      "SMPTE.ST291.2011",
+      "SMPTE.ST292-1.2012",
+      "SMPTE.ST293.2003",
+      "SMPTE.ST296.2012",
+      "SMPTE.ST309.2012",
+      "SMPTE.ST318.1999",
+      "SMPTE.ST59.1998",
+      "SMPTE.ST7.2004",
+      "SMPTE.ST93.2005",
+      "SMPTE.ST96.2004",
+      "orphan/SMPTE.ST12-1.2014/ref-bib-2",
+      "orphan/SMPTE.ST125.2013/ref-bib-9",
+      "orphan/SMPTE.ST170.2004/ref-bib-1",
+      "orphan/SMPTE.ST170.2004/ref-bib-2",
+      "orphan/SMPTE.ST170.2004/ref-bib-3",
+      "orphan/SMPTE.ST268.2014/ref-bib-3",
+      "orphan/SMPTE.ST268.2014/ref-bib-4",
+      "orphan/SMPTE.ST296.2012/ref-bib-5",
+      "orphan/SMPTE.ST296.2012/ref-bib-6",
+      "orphan/SMPTE.ST296.2012/ref-bib-7",
+      "orphan/SMPTE.ST296.2012/ref-bib-8",
+      "orphan/SMPTE.ST296.2012/ref-norm-7"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "AMPAS.TB.2014-009",
+    "docLabel": "AMPAS TB-2014-009",
+    "docTitle": "Academy Color Encoding System (ACES) Clip-level Metadata File Format Definition and Usage",
+    "docType": "Technical Bulletin",
+    "group": "ampas-stc-aces",
+    "keywords": [
+      "ACES"
+    ],
+    "publisher": "AMPAS",
+    "status": {
+      "unknown": true
+    },
+    "referencedBy": [
+      "AMPAS.TB.2014-002",
+      "AMPAS.TB.2014-010",
+      "AMPAS.TB.2014-012"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Unknown"
+  },
+  {
+    "docId": "AMPAS.TB.2014-010",
+    "docLabel": "AMPAS TB-2014-010",
+    "docTitle": "Design, Integration and Use of ACES Look Modification Transforms",
+    "docType": "Technical Bulletin",
+    "group": "ampas-stc-aces",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-03-29",
+    "publisher": "AMPAS",
+    "references": {
+      "normative": [
+        "AMPAS.S.2013-001",
+        "AMPAS.S.2014-003",
+        "AMPAS.S.2014-006",
+        "AMPAS.TB.2014-009",
+        "ASC.CDL.R1-2.2009",
+        "SMPTE.ST2065-1.2012"
+      ],
+      "bibliographic": []
+    },
+    "status": {
+      "active": true
+    },
+    "referencesResolved": {
+      "normative": [
+        {
+          "id": "AMPAS.S.2013-001"
+        },
+        {
+          "id": "AMPAS.S.2014-003"
+        },
+        {
+          "id": "AMPAS.S.2014-006"
+        },
+        {
+          "id": "AMPAS.TB.2014-009"
+        },
+        {
+          "id": "ASC.CDL.R1-2.2009"
+        },
+        {
+          "id": "SMPTE.ST2065-1.2012"
+        }
+      ],
+      "bibliographic": []
+    },
+    "referencedBy": [
+      "AMPAS.S.2019-001",
+      "AMPAS.TB.2014-002",
+      "AMPAS.TB.2014-012"
+    ],
+    "referenceTree": [
+      "AMPAS.P.2013-001",
+      "AMPAS.S.2013-001",
+      "AMPAS.S.2014-002",
+      "AMPAS.S.2014-003",
+      "AMPAS.S.2014-006",
+      "AMPAS.TB.2014-002",
+      "AMPAS.TB.2014-009",
+      "AMPAS.TB.2014-010",
+      "ASC.CDL.R1-2.2009",
+      "CIE.015.1986",
+      "CIE.015.2004",
+      "CIE.017.1987",
+      "IEEE.STD754.2008",
+      "ISO.17321-1.2006",
+      "ISO.22028-1.2004",
+      "ISO.3664.2000",
+      "R-REC-BT.709-6.201506",
+      "RFC3066",
+      "SMPTE.RP177.1993",
+      "SMPTE.RP431-2.2011",
+      "SMPTE.ST2065-1.2012",
+      "SMPTE.ST2065-2.2012",
+      "SMPTE.ST2065-3.2012",
+      "SMPTE.ST2065-4.2013",
+      "SMPTE.ST428-1.2006",
+      "SMPTE.ST431-1.2006",
+      "orphan/SMPTE.RP177.1993/ref-bib-1",
+      "orphan/SMPTE.RP177.1993/ref-bib-2",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-1",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-6"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "AMPAS.TB.2014-012",
+    "docLabel": "AMPAS TB-2014-012",
+    "docTitle": "Academy Color Encoding System Version 1.0 Component Names",
+    "docType": "Technical Bulletin",
+    "group": "ampas-stc-aces",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-03-29",
+    "publisher": "AMPAS",
+    "references": {
+      "normative": [
+        "AMPAS.P.2013-001",
+        "AMPAS.S.2013-001",
+        "AMPAS.S.2014-003",
+        "AMPAS.S.2014-004",
+        "AMPAS.S.2014-006",
+        "AMPAS.TB.2014-002",
+        "AMPAS.TB.2014-009",
+        "AMPAS.TB.2014-010",
+        "ASC.CDL.R1-2.2009",
+        "R-REC-BT.2020-2.201510",
+        "SMPTE.ST2065-1.2012",
+        "SMPTE.ST2065-4.2013"
+      ],
+      "bibliographic": []
+    },
+    "status": {
+      "active": true
+    },
+    "referencesResolved": {
+      "normative": [
+        {
+          "id": "AMPAS.P.2013-001"
+        },
+        {
+          "id": "AMPAS.S.2013-001"
+        },
+        {
+          "id": "AMPAS.S.2014-003"
+        },
+        {
+          "id": "AMPAS.S.2014-004"
+        },
+        {
+          "id": "AMPAS.S.2014-006"
+        },
+        {
+          "id": "AMPAS.TB.2014-002"
+        },
+        {
+          "id": "AMPAS.TB.2014-009"
+        },
+        {
+          "id": "AMPAS.TB.2014-010"
+        },
+        {
+          "id": "ASC.CDL.R1-2.2009"
+        },
+        {
+          "id": "R-REC-BT.2020-2.201510"
+        },
+        {
+          "id": "SMPTE.ST2065-1.2012"
+        },
+        {
+          "id": "SMPTE.ST2065-4.2013"
+        }
+      ],
+      "bibliographic": []
+    },
+    "referencedBy": [
+      "AMPAS.S.2014-002",
+      "SMPTE.ST2067-50.2018"
+    ],
+    "referenceTree": [
+      "10.5555-646755.705223",
+      "AES3.2009",
+      "AIM.BC4.1999",
+      "AMPAS.P.2013-001",
+      "AMPAS.S.2013-001",
+      "AMPAS.S.2014-002",
+      "AMPAS.S.2014-003",
+      "AMPAS.S.2014-004",
+      "AMPAS.S.2014-006",
+      "AMPAS.TB.2014-002",
+      "AMPAS.TB.2014-009",
+      "AMPAS.TB.2014-010",
+      "ASC.CDL.R1-2.2009",
+      "CIE.015.2004",
+      "CIE.017.1987",
+      "IEEE.STD754.1985",
+      "IEEE.STD754.2008",
+      "ISO.10918-1.1994",
+      "ISO.10918-3.1997",
+      "ISO.11664-1.2007",
+      "ISO.12232.2006",
+      "ISO.13818-2.2000",
+      "ISO.17321-1.2006",
+      "ISO.17321-2.2012",
+      "ISO.22028-1.2004",
+      "ISO.3664.2000",
+      "ISO.7589.2002",
+      "ISO.8601.2004",
+      "ISO.8859-1.1998",
+      "R-REC-BR.1352-3.2007",
+      "R-REC-BT.2020-2.201510",
+      "R-REC-BT.601-7.201103",
+      "R-REC-BT.709-6.201506",
+      "RFC1320",
+      "RFC1321",
+      "RFC3066",
+      "RFC4122",
+      "SMPTE.RP177.1993",
+      "SMPTE.RP186.2008",
+      "SMPTE.RP204.2000",
+      "SMPTE.RP210.2012",
+      "SMPTE.RP431-2.2011",
+      "SMPTE.ST12-1.2008",
+      "SMPTE.ST12.1999",
+      "SMPTE.ST125.1995",
+      "SMPTE.ST170.2004",
+      "SMPTE.ST2065-1.2012",
+      "SMPTE.ST2065-4.2013",
+      "SMPTE.ST240.1999",
+      "SMPTE.ST254.2002",
+      "SMPTE.ST254.2008",
+      "SMPTE.ST268.2003",
+      "SMPTE.ST274.2003",
+      "SMPTE.ST291.2010",
+      "SMPTE.ST296.2001",
+      "SMPTE.ST305.2005",
+      "SMPTE.ST309.1999",
+      "SMPTE.ST312.2001",
+      "SMPTE.ST326.2000",
+      "SMPTE.ST328.2000",
+      "SMPTE.ST330.2004",
+      "SMPTE.ST331.2011",
+      "SMPTE.ST336.2007",
+      "SMPTE.ST337.2008",
+      "SMPTE.ST363",
+      "SMPTE.ST93.2005",
+      "SMPTE.ST96.1999",
+      "T-REC-X.509.1988",
+      "UNICODE.STD.6.0.0",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-1",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-6",
+      "orphan/SMPTE.ST2065-4.2013/ref-bib-1",
+      "orphan/SMPTE.ST2065-4.2013/ref-bib-2",
+      "orphan/SMPTE.ST268.2003/ref-bib-3",
+      "orphan/SMPTE.ST268.2003/ref-bib-4",
+      "orphan/SMPTE.ST331.2011/ref-bib-8"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  },
+  {
+    "docId": "AMPAS.TB.2014-013",
+    "docLabel": "AMPAS TB-2014-013",
+    "docTitle": "Alternate ACES Viewing Pipeline User Experience",
+    "docType": "Technical Bulletin",
+    "group": "ampas-stc-aces",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2016-03-29",
+    "publisher": "AMPAS",
+    "status": {
+      "draft": true
+    },
+    "docDependancy": false,
+    "currentStatus": "Draft"
+  },
+  {
+    "docId": "AMPAS.TB.2018-001",
+    "docLabel": "AMPAS TB-2018-01",
+    "docTitle": "Derivation of the ACES White Point CIE Chromaticity Coordinates",
+    "docType": "Technical Bulletin",
+    "group": "ampas-stc-aces",
+    "keywords": [
+      "ACES"
+    ],
+    "publicationDate": "2018-06-15",
+    "publisher": "AMPAS",
+    "references": {
+      "normative": [
+        "10.5594-J07544",
+        "AMPAS.P.2013-001",
+        "AMPAS.S.2014-003",
+        "AMPAS.S.2014-004",
+        "AMPAS.S.2016-001",
+        "CIE.015.2004",
+        "ISBN.9780470512449",
+        "ISBN.9780471399186",
+        "ISSN.15502716",
+        "SMPTE.RP177.1993",
+        "SMPTE.ST2065-1.2012"
+      ],
+      "bibliographic": []
+    },
+    "status": {
+      "active": true
+    },
+    "referencesResolved": {
+      "normative": [
+        {
+          "id": "10.5594-J07544"
+        },
+        {
+          "id": "AMPAS.P.2013-001"
+        },
+        {
+          "id": "AMPAS.S.2014-003"
+        },
+        {
+          "id": "AMPAS.S.2014-004"
+        },
+        {
+          "id": "AMPAS.S.2016-001"
+        },
+        {
+          "id": "CIE.015.2004"
+        },
+        {
+          "id": "ISBN.9780470512449"
+        },
+        {
+          "id": "ISBN.9780471399186"
+        },
+        {
+          "id": "ISSN.15502716"
+        },
+        {
+          "id": "SMPTE.RP177.1993"
+        },
+        {
+          "id": "SMPTE.ST2065-1.2012"
+        }
+      ],
+      "bibliographic": []
+    },
+    "referenceTree": [
+      "10.5594-J04880",
+      "10.5594-J05042",
+      "10.5594-J06225",
+      "10.5594-J07077",
+      "10.5594-J07287",
+      "10.5594-J07544",
+      "10.5594-J07620",
+      "10.5594-J07676",
+      "10.5594-J07753",
+      "10.5594-J07754",
+      "10.5594-J08143",
+      "10.5594-J11193",
+      "10.5594-J11290",
+      "10.5594-J12674",
+      "10.5594-J13466",
+      "10.5594-J13545",
+      "10.5594-J13810",
+      "10.5594-J13854",
+      "10.5594-J13899",
+      "10.5594-J13915",
+      "10.5594-J14540",
+      "10.5594-J14560",
+      "10.5594-J15533",
+      "10.5594-J16691",
+      "10.5594-J17054",
+      "AMPAS.P.2013-001",
+      "AMPAS.S.2013-001",
+      "AMPAS.S.2014-003",
+      "AMPAS.S.2014-004",
+      "AMPAS.S.2016-001",
+      "CIE.015.1986",
+      "CIE.015.2004",
+      "CIE.017.1987",
+      "IEEE.STD754.2008",
+      "ISBN.9780470512449",
+      "ISBN.9780471399186",
+      "ISO.17321-1.2006",
+      "ISO.17321-2.2012",
+      "ISO.22028-1.2004",
+      "ISO.3664.2000",
+      "ISO.7589.2002",
+      "ISSN.15502716",
+      "R-REC-BT.709-6.201506",
+      "SMPTE.RP177.1993",
+      "SMPTE.RP431-2.2011",
+      "SMPTE.ST2065-1.2012",
+      "SMPTE.ST428-1.2006",
+      "SMPTE.ST431-1.2006",
+      "orphan/10.5594-J07544/bibr10-10.5594_J07544",
+      "orphan/10.5594-J07544/bibr11-10.5594_J07544",
+      "orphan/10.5594-J07544/bibr12-10.5594_J07544",
+      "orphan/10.5594-J07544/bibr5-10.5594_J07544",
+      "orphan/10.5594-J07544/bibr6-10.5594_J07544",
+      "orphan/10.5594-J07544/bibr7-10.5594_J07544",
+      "orphan/10.5594-J07544/bibr8-10.5594_J07544",
+      "orphan/10.5594-J07544/ref-bib-1",
+      "orphan/10.5594-J07544/ref-bib-13",
+      "orphan/10.5594-J07544/ref-bib-14",
+      "orphan/10.5594-J07544/ref-bib-2",
+      "orphan/10.5594-J07544/ref-bib-3",
+      "orphan/10.5594-J07544/ref-bib-4",
+      "orphan/10.5594-J07544/ref-bib-9",
+      "orphan/10.5594-J07620/bibr1-10.5594_J07620",
+      "orphan/10.5594-J08143/bibr1-10.5594_J08143",
+      "orphan/10.5594-J08143/bibr10-10.5594_J08143",
+      "orphan/10.5594-J08143/bibr11-10.5594_J08143",
+      "orphan/10.5594-J08143/bibr3-10.5594_J08143",
+      "orphan/10.5594-J08143/bibr4-10.5594_J08143",
+      "orphan/10.5594-J08143/bibr7-10.5594_J08143",
+      "orphan/10.5594-J13466/bibr4-10.5594_J13466",
+      "orphan/10.5594-J13466/bibr5-10.5594_J13466",
+      "orphan/10.5594-J13466/bibr6-10.5594_J13466",
+      "orphan/10.5594-J13545/bibr1-10.5594_J13545",
+      "orphan/10.5594-J13545/bibr10-10.5594_J13545",
+      "orphan/10.5594-J13545/bibr2-10.5594_J13545",
+      "orphan/10.5594-J13545/bibr6-10.5594_J13545",
+      "orphan/10.5594-J13545/bibr7-10.5594_J13545",
+      "orphan/10.5594-J13545/bibr8-10.5594_J13545",
+      "orphan/10.5594-J13545/bibr9-10.5594_J13545",
+      "orphan/SMPTE.RP177.1993/ref-bib-1",
+      "orphan/SMPTE.RP177.1993/ref-bib-2",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-1",
+      "orphan/SMPTE.ST2065-1.2012/ref-bib-6"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  }
+]

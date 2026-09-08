@@ -1,0 +1,244 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-MOO-3004",
+  "document": {
+    "abstract": "As professional, uncompressed, high-performance media over IP production technologies and workflows move towards and beyond UHD resolutions, high frame rates, and wide color gamut video standards, the limitations of traditional timing mechanisms with legacy +/- 500 ns tolerance become apparent. Adopting synchronous low-latency professional media over IP standards like SMPTE ST 2110 imposes requirements for accurate packet pacing, and with increased frame rate and frame size, the number of packets that must be scheduled on the wire at a precise moment increases. This is particularly pronounced in environments leveraging pure and hardware-accelerated software implementations, where the demand for precision can far exceed legacy requirements and fall into the single-digit nanosecond range. When dealing with such a tight time error budget, the influence of every element in the chain becomes critical. It imposes requirements on the time server's performance, the network elements' characteristics, and even the adequacy of cabling. At the same time, the transition to 5G in the telecommunications industry imposed new requirements for the timing performance of the networks. These next-generation infrastructures mandate enhanced synchronization capabilities to support ultra-reliable, low-latency communication services. In response, the ITU-T defined several recommendations focusing on the overall timing performance of telecom networks as well as individual network elements. These recommendations ensure the high precision necessary for 5G networks by setting requirements and testing methods of parameters such as holdover, noise transfer, jitter, and wander performance of every element in the time transfer chain. The tight holdover requirements even led to the augmentation of traditionally used IEEE 1588 standard and Precision Time Protocol with physical layer frequency transfer solutions like Synchronous Ethernet. This paper analyzes the increasing timing performance requirements in the next-generation video standards when produced using current media over IP standards and aims to quantify them by running practical, real-world measurements. It scrutinizes the adequacy of existing recommendations in addressing these demands and evaluates the need to develop recommendations for timing performance for media, akin to the guidelines from the telecom industry.",
+    "abstract$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "authors": [
+      {
+        "name": "Thomas Kernen"
+      },
+      {
+        "name": "Nikolaus Kero"
+      },
+      {
+        "name": "Ievgen Kostiukevych"
+      },
+      {
+        "name": "Willem Vermost"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "copyright": {
+      "holder": "SMPTE",
+      "holder$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      },
+      "year": "2024",
+      "year$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docId": "10.5594-MOO-3004",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docLabel": "MTS 2024, Article 4 (pp. 1 to 19)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docTitle": "Advanced Timing for High-Performance Media: A Call for Precision and Innovation",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docType": "Conference Paper",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "doi": "10.5594/MOO/3004",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "href": "https://doi.org/10.5594/MOO/3004",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "isbn": {
+      "electronic": "978-1-61482-965-2",
+      "electronic$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "isbn$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "journalAcronym": "MTS",
+    "journalAcronym$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "journalTitle": "SMPTE 2024 Media Technology Summit",
+    "journalTitle$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "keywords": [
+      "Timing",
+      "PTP",
+      "ITU-T",
+      "Time & Sync",
+      "Packet-Pacing",
+      "Timing Performance",
+      "Time Transfer Chain",
+      "Telecom",
+      "Media",
+      "IP",
+      "ST 2110",
+      "Virtual Production",
+      "UHDTV",
+      "HFR",
+      "Synchronous Ethernet"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Keyword vocab dedup (keywordVocabDedup.js): case/punctuation duplicate forms merged; dimensional prefixes normalized (3d → 3D).",
+      "source": "resolved",
+      "updated": "2026-07-14T18:00:43.270Z"
+    },
+    "pages": "1–19",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publicationDate": "2024-10-21",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publisherLocation": {
+      "city": "Hollywood, CA",
+      "city$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-MOO-3004/ref1",
+        "orphan/10.5594-MOO-3004/ref2",
+        "orphan/10.5594-MOO-3004/ref3",
+        "orphan/10.5594-MOO-3004/ref4",
+        "orphan/10.5594-MOO-3004/ref5",
+        "orphan/10.5594-MOO-3004/ref6",
+        "SMPTE.ST2110-20.2022",
+        "orphan/10.5594-MOO-3004/ref8",
+        "orphan/10.5594-MOO-3004/ref9",
+        "orphan/10.5594-MOO-3004/ref10",
+        "orphan/10.5594-MOO-3004/ref11",
+        "orphan/10.5594-MOO-3004/ref12",
+        "orphan/10.5594-MOO-3004/ref13",
+        "orphan/10.5594-MOO-3004/ref14",
+        "orphan/10.5594-MOO-3004/ref15",
+        "orphan/10.5594-MOO-3004/ref16",
+        "orphan/10.5594-MOO-3004/ref17",
+        "orphan/10.5594-MOO-3004/ref18",
+        "orphan/10.5594-MOO-3004/ref19",
+        "orphan/10.5594-MOO-3004/ref20",
+        "orphan/10.5594-MOO-3004/ref21",
+        "orphan/10.5594-MOO-3004/ref22",
+        "orphan/10.5594-MOO-3004/ref23"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from the FTXML NLM <back><ref-list> via extractFtxmlRefs.js (source doc mapped through its content_batch sibling).",
+        "source": "parsed",
+        "updated": "2026-08-10T17:55:35.307Z"
+      }
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "volume": "00",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    }
+  }
+}

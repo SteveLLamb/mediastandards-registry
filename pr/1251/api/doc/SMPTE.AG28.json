@@ -1,0 +1,174 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.AG28",
+  "document": {
+    "abstract": "This administrative guideline specifies the structure of the standards document repository, which is the canonical collection of documents published by the SMPTE standards community.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML sec-scope section",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-01-07T23:19:18.373Z",
+      "version": "extractDocs.js@commit:499baa451f70"
+    },
+    "docId": "SMPTE.AG28",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/document-repo-spec/main/",
+      "updated": "2025-09-30T15:51:02.368Z"
+    },
+    "docLabel": "SMPTE AG 28",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/document-repo-spec/main/",
+      "updated": "2025-09-30T15:51:02.368Z"
+    },
+    "docNumber": "28",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/document-repo-spec/main/",
+      "updated": "2025-09-30T15:51:02.368Z"
+    },
+    "docSuiteTitle": "Document Library",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-12-12T21:34:13.066Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docTitle": "Repo Spec (Structure)",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": "Document Library Repo Spec (Structure)",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-12-12T21:34:13.066Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docType": "Administrative Guideline",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/document-repo-spec/main/",
+      "updated": "2025-09-30T15:51:02.368Z"
+    },
+    "group": "smpte-02c-st",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Working group parsed from HTML pubTC meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/document-repo-spec/main/",
+      "updated": "2025-09-30T15:51:02.368Z"
+    },
+    "href": "https://doc.smpte-doc.org/document-repo-spec/main/",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://doc.smpte-doc.org/document-repo-spec/main/",
+      "updated": "2025-09-30T15:51:02.368Z"
+    },
+    "publicationDate": "2025-02-26",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/document-repo-spec/main/",
+      "updated": "2025-09-30T15:51:02.368Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/document-repo-spec/main/",
+      "updated": "2025-09-30T15:51:02.368Z"
+    },
+    "references": {
+      "normative": [
+        "ISO.ICS",
+        "ISO.26324",
+        "ISO.2108"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": [],
+        "source": "parsed",
+        "updated": "2025-09-30T15:51:02.368Z"
+      }
+    },
+    "releaseTag": "20250226-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://doc.smpte-doc.org/document-repo-spec/main/",
+      "updated": "2025-09-30T15:51:02.368Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T15:51:02.368Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T15:51:02.368Z"
+      },
+      "state": "draft",
+      "state$meta": {
+        "confidence": "high",
+        "note": "State parsed from HTML pubState meta tag",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-09-30T15:51:02.368Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-09-30T15:51:02.368Z"
+      },
+      "versionless": true,
+      "versionless$meta": {
+        "confidence": "high",
+        "note": "Extracted directly from HTML",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-08T05:51:19.193Z"
+      }
+    }
+  }
+}

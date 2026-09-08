@@ -1,0 +1,277 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-J11534",
+  "document": {
+    "abbrevTitle": "SMPTE Mot. Imag. J",
+    "abbrevTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J11534.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "abstract": "The partial results of a collaborative research project conducted by researchers at Gjøvik University College and Lillehammer University College are described in this paper. The goal of the project is to develop methods and tools for improving the control of color information in the production and presentation of digital video. The project represents a unique attempt to bring together two scientific communities—graphic arts and television/video production—on a theme of common interest, namely color. The color quality achieved by a system for digital distribution and presentation of cinema commercials has been investigated. Results show that the “quality bottleneck” is the digital projector. The “business-type” projector does not yield sufficient image quality, especially in large theaters.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J11534.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "authors": [
+      {
+        "bio": "Jon Y. Hardeberg received an M.Sc. degree in signal processing from the Norwegian University of Science and Technology (NTNU, Trondheim, Norway) in 1995. He received a Ph.D. in signal and image processing from Ecole Nationale Supérieure des Télécommunications (Paris, France) in 1999, with a dissertation on color image acquisition and reproduction, using both colorimetric and multispectral approaches. He then worked for 2 1/2 years as a color scientist in Redmond, WA, designing, implementing, and evaluating color imaging system solutions for multifunction peripherals and other imaging devices and systems. He is currently an associate professor at the Norwegian Color Research Laboratory at Gjøvik University College in Norway, where he teaches and researches in the field of color imaging science. He is the Norwegian representative to CIE Division 8, and a member of IS&T, SPIE, ISCC, and IARIGAI.",
+        "name": "Jon Y. Hardeberg"
+      },
+      {
+        "bio": "Ivar Farup received an M.Sc. in theoretical physics from the Norwegian University of Science and Technology (NTNU, Trondheim, Norway) in 1994, and a Ph.D. in applied mathematics from the University of Oslo in 2000. Currently, he is an associate professor at Gjøvik University College where he is associated with the Norwegian Color Research Laboratory. He is a member of the IS&T.",
+        "name": "Ivar Farup"
+      },
+      {
+        "bio": "Gudmund Stjernvang began his career as a television engineer at the Norwegian Broadcasting Corp. (NRK, Oslo, Norway) in 1969. He then worked at NRK for almost 20 years, in miscellaneous parts of the production of radio and television. In 1988, he joined Gjøvik College of Engineering (Now Gjøvik University College) and in 1995 Lillehammer University College, where he now teaches sound and video technology in the bachelor programs, “Directing for Television” and “Professional Broadcasting.” Since 1996, he has also worked at Fabelaktiv (Hamar, Norway) as TOM (technical operation manager) for several TV productions.",
+        "name": "Gudmund Stjernvang"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from SMPTE canonical repository import (smpte-canonical-audit/canonicalLibrary.*.json); previous value was a placeholder",
+      "originalValue": "other",
+      "source": "parsed",
+      "updated": "2026-07-07T23:39:31.295Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J11534.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "year": "2005",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J11534.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J11534.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docId": "10.5594-J11534",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/J11534",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docLabel": "SMPTE Motion Imaging Journal ( Volume: 114, Issue: 4, April 2005)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docTitle": "Color Quality Analysis of a System for Digital Distribution and Projection of Cinema Commercials",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J11534.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "doi": "10.5594/J11534",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J11534.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/J11534",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/J11534",
+      "source": "inferred",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "issn": {
+      "electronic": "2160-2492",
+      "electronic$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J11534.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "print": "1545-0279",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J11534.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J11534.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/06042015 PROGRAMMATICALLY CONVERTED SAMPLES/Journals/smptej_114_4/MIJR15Vol114No4.xml)",
+      "source": "parsed",
+      "updated": "2026-06-16T18:14:32.753Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "SMPTE Motion Imaging Journal",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "4",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J11534.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "pages": "146–151",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J11534.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publicationDate": "2005-04-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J11534.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/06042015 PROGRAMMATICALLY CONVERTED SAMPLES/Journals/smptej_114_4/MIJR15Vol114No4.xml)",
+        "source": "parsed",
+        "updated": "2026-06-16T18:14:32.753Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J11534.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "10.5594-J13260",
+        "orphan/10.5594-J11534/bibr2-10.5594_J11534",
+        "orphan/10.5594-J11534/bibr3-10.5594_J11534",
+        "orphan/10.5594-J11534/bibr4-10.5594_J11534",
+        "orphan/10.5594-J11534/bibr5-10.5594_J11534",
+        "orphan/10.5594-J11534/bibr6-10.5594_J11534",
+        "orphan/10.5594-J11534/bibr7-10.5594_J11534",
+        "orphan/10.5594-J11534/bibr8-10.5594_J11534",
+        "orphan/10.5594-J11534/bibr9-10.5594_J11534",
+        "orphan/10.5594-J11534/bibr10-10.5594_J11534",
+        "orphan/10.5594-J11534/bibr11-10.5594_J11534",
+        "orphan/10.5594-J11534/bibr12-10.5594_J11534",
+        "orphan/10.5594-J11534/bibr13-10.5594_J11534",
+        "orphan/10.5594-J11534/bibr14-10.5594_J11534"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteJournalRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T18:21:02.558Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/SMPTE%20Motion%20Imaging%20Journal/114/4/13/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.421Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — journal papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "volume": "114",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J11534.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    }
+  }
+}

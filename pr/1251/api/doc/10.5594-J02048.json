@@ -1,0 +1,253 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-J02048",
+  "document": {
+    "abbrevTitle": "J SMPTE",
+    "abbrevTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02048.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "abstract": "Several years ago Ampex recognized the need for a new generation of high-writing-speed, one-field-per-scan video recorders that would have low initial and operating costs, while offering a simple but effective internal editing facility. A program was also established to investigate the feasibility of improving the slow motion capability of such a recorder. Various systems were considered; however, a head that moved relative to the rotating portion of the scanner and, therefore, transverse to the recorded track on the tape was ultimately selected. Two approaches to physically moving the head transverse to the recorded track were considered in some detail. The approach decided upon uses a piezoelectric element onto which the head transducer is mounted. A bi-morph bender element configuration was found to be ideal. This type of system formed the basis for the development of the Auto Scan Tracking (AST) system used in the VPR-1 and VPR-2 professional one-inch helical recorders. Some of the engineering advances required for the system are discussed, including flexure longevity, flexure stability in a dynamic environment, and maintenance of head-to-tape contact at large deflections.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02048.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "Ampex Corp. 401 Broadway. Redwood City. CA 94063.",
+        "name": "R. A. Hathaway"
+      },
+      {
+        "affiliation": "Ampex Corp. 401 Broadway. Redwood City. CA 94063.",
+        "name": "Ray Ravizza"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Vocabulary conformance to SMPTE ContentTypeEnum (2026-07-09): 'research-article' renamed to 'orig-research'. Registry vocab = SMPTE enum + 9 retained MSRBot values.",
+      "originalValue": "research-article",
+      "source": "resolved",
+      "updated": "2026-07-09T17:56:30.992Z",
+      "version": "articletype-conform@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02048.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "year": "1980",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02048.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02048.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docId": "10.5594-J02048",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/J02048",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docLabel": "SMPTE Journal ( Volume: 89, Issue: 12, December 1980)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from journal title, volume, issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docTitle": "Development and Design of the Ampex Auto Scan Tracking (AST) System",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02048.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "doi": "10.5594/J02048",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02048.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/J02048",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/J02048",
+      "source": "inferred",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "issn": {
+      "print": "0036-1682",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02048.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02048.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08202015 BACKFILE JOURNAL FRESH/smptej_89_12/MIJR15Vol89No12.xml)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:32:03.060Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "SMPTE Journal",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "12",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02048.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "pages": "931–934",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02048.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publicationDate": "1980-12-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02048.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08202015 BACKFILE JOURNAL FRESH/smptej_89_12/MIJR15Vol89No12.xml)",
+        "source": "parsed",
+        "updated": "2026-06-16T00:32:03.060Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02048.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "10.5594-J10481",
+        "orphan/10.5594-J02048/bibr2-10.5594_J02048"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteJournalRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T18:21:02.558Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/SMPTE%20Journal/89/12/5/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.405Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — journal articles default active",
+        "source": "inferred",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "volume": "89",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J02048.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    }
+  }
+}

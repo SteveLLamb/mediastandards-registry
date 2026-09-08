@@ -1,0 +1,274 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-J16774",
+  "document": {
+    "abbrevTitle": "J SMPTE",
+    "abbrevTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16774.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "abstract": "Disclosed is a patented sprocket assembly which allows 35mm projectors, or other film handling devices, to readily convert to accomodate either a 4-perf, or 3-perf pulldown 2mode. After an initial, fairly inexpensive modification to virtually any projector currently in use, including production interlock units, the changeover is simple, quick, and exact, whether from 4 to 3-perf mode, or vice-versa. Applications of the inclusion of a frequency synthesizer, allowing speed variances of 24 fps to 30 fps, as an immediate option, are also demonstrated. This combination could prove to be extremely useful, presently for television and for future proposed HDTV systems applications.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16774.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "Bunch-McLendon Studio, Inc. Houston, Tex.",
+        "bio": "Donald C. McLendon was born in Houston, Texas, 1933, U of H, Phi-Theta-Kappa 1956, IATSE apprenticeship 1946–1950. USMCR 1951–1954. Employment with several consulting engineering firms 1956–1960. With over 35 years in motion picture and television production he has earned feature credits as key grip, gaffer, sound mixer, and prope master. He has been Director of Photography since 1968. Instrumental in network's conversion from optical to magnetic sound-on film. He was sound mixer from arrival fo first Nagra units into the U.S., until DP. Cameraman on several features, with a number of assignments with CBS' “60 Minutes”. Founded Motion Picture Equipment Co. of Houstion in 1962. Formed Bunch-McLendon Studio in 1985. Began developmental work on 4-perf 3-perf conversions in late 1986 leading to invention and patent of the Duo-Sprocket in 1989.",
+        "name": "Don McLendon"
+      },
+      {
+        "affiliation": "Bunch-McLendon Studio, Inc. Houston, Tex.",
+        "bio": "Patrick Coakley was born in Panama C.Z. in 1930. He went into recording (cuttign record discs) for radio dramas, set up radio broadcasting stations, and was a film re-editor for distribution to British, Central, and South American countries. working for the first non-commercial TV station in the U.S. in Houston as an audio engineer editor, and live TV and film director. In the 1960s he se up color processing, trained personnel, and produced musical programming for KHOU, later as an educator in a co-op program at the High School for Performing & Visual Arts, At present he is Post Production Supervisor and Editor for Bunch-McLendon Studios. He is past chair Houston Section SMPTE, and UFPA.",
+        "name": "Pat Coakley"
+      },
+      {
+        "affiliation": "Bunch-McLendon Studio, Inc. Houston, Tex.",
+        "bio": "Kennneth N. McLendon was born in Houston, Texas in 1959. He graduated from Lutheran High School of Houston in 1977. He then attended Sam Houston State University from 1977–1981 majoring in General Business Administration, all the while continuing to work in film, TV, and stage. in 1981 he began to be assigned as an assistant cameraman to various productions around the country including CBS' “60 Minutes” He has been involved in numerous award winning production for Silver Lake Studios of Lufkin. Texas. and worked on films for the king of Saudi Arabia. His last four years have been spent in the development, construction, and various systems insallations, at Bunch-McLendon Studios, where he is supervisor of the camera department and production coordinator.",
+        "name": "Bob Jones"
+      },
+      {
+        "affiliation": "Bunch-McLendon Studio, Inc. Houston, Tex.",
+        "bio": "Robert F. Jones was born in Houston, Texas. in 1943. Upon graduating high school in 1961, he pursued his higher education at Madison Electronics Acudemy, and the University if Houston. In 1964 he enrolled in a tool & die maker's apprentice program, and worked in the trade after graduation. In 1972 he entered the exhibition industry us a projectionist, rising to the position of service technician within five years. He then teamed up with Bunch-McLendon Studios in 1984 as projection supervisor and has been instrumental in the design and fabricution of various projection systems.",
+        "name": "Ken McLendon"
+      },
+      {
+        "affiliation": "Bunch-McLendon Studio, Inc. Houston, Tex.",
+        "bio": "Michael Casper was born in Corpus Christi, Texas in 1961. His family moved to Houston in 1970. While attending high school at Cypress-Fairbanks he started working with his father's insurinc company and after gruduution in 1979, started his career in finance and marketing at Stephen F. Austin State University. In 1982. he found employment with the Home Company, a group speciulizing in commercial property and high-rise building management. During the mid-1980's, he accepted a position as Production Manager with a group filming on locution in Houston, which led to his joining the Hunch-McLendon Studio. He currently serves us the Production Coordinator and Administrative Assistunt.",
+        "name": "Mike Casper"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Vocabulary conformance to SMPTE ContentTypeEnum (2026-07-09): 'research-article' renamed to 'orig-research'. Registry vocab = SMPTE enum + 9 retained MSRBot values.",
+      "originalValue": "research-article",
+      "source": "resolved",
+      "updated": "2026-07-09T17:56:30.992Z",
+      "version": "articletype-conform@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16774.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "year": "1990",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16774.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16774.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docId": "10.5594-J16774",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/J16774",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docLabel": "SMPTE Journal ( Volume: 99, Issue: 1, January 1990)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docTitle": "35mm—The Next 100 Years—3 or 4 PERF, 24 or 30 FPS An Available Solution for the Dilemma",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16774.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "doi": "10.5594/J16774",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16774.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/J16774",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/J16774",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "issn": {
+      "print": "0036-1682",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16774.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16774.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/07132015 BACKFILE FOR JOURNAL/smptej_99_1/MIJR15Vol99No1.xml)",
+      "source": "parsed",
+      "updated": "2026-06-17T00:17:09.425Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "SMPTE Journal",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "1",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16774.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "pages": "38–52",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16774.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publicationDate": "1990-01-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16774.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/07132015 BACKFILE FOR JOURNAL/smptej_99_1/MIJR15Vol99No1.xml)",
+        "source": "parsed",
+        "updated": "2026-06-17T00:17:09.425Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16774.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-J16774/bibr1-10.5594_J16774",
+        "orphan/10.5594-J16774/bibr2-10.5594_J16774",
+        "orphan/10.5594-J16774/bibr3-10.5594_J16774",
+        "orphan/10.5594-J16774/bibr4-10.5594_J16774",
+        "orphan/10.5594-J16774/bibr5-10.5594_J16774",
+        "orphan/10.5594-J16774/bibr6-10.5594_J16774"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteJournalRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T18:21:02.558Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/SMPTE%20Journal/99/1/9/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.435Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — journal papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T21:44:19.125Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "volume": "99",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J16774.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T21:44:19.125Z",
+      "version": "smpte-journal-article-nlm@v1"
+    }
+  }
+}

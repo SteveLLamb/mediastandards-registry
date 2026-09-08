@@ -1,0 +1,259 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-J05687",
+  "document": {
+    "abbrevTitle": "J SMPTE",
+    "abbrevTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J05687.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "abstract": "Glass beads of 30- to 140-μm diameter and 50 to 100 m/s velocity emerging from a plasma flame (10,000 K) were photographed using a 16mm high-speed ciné camera in streak mode. The combined radiation from the hot particles and that reflected from the flame provided sufficient light intensity using 400 ASA reversal film. The narrow depth of field (±5 mm) was investigated using an illuminated spinning disc having a hole the same size as the particle. A stereo streak system was devised for particle location in two dimensions. Ghost images caused by internal lens reflection were identified on the film. A simple system for film analyzing was built and a semiautomatic electrical disc analog for measuring streak angle was devised and tested. Overall optical resolution was sufficient to enable particle accelerations (2,000 g) to be estimated from the changes of streak angle across the film.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J05687.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "Dept. of Chemical Engineering, McGill University, P.O. Box 6070, Montreal 101, P.Q., Canada. (Dr. Lewis is presently with the Ministry of Defence, Waltham Abbey, Essex, England",
+        "name": "J. A. Lewis"
+      },
+      {
+        "affiliation": "Research Associate at McGill University and also Director of Research and Development, Noranda Research Centre, 240 Hymus Blvd., Pointe Claire 730, P.Q., Canada.",
+        "name": "W. H. Gauvin"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Vocabulary conformance to SMPTE ContentTypeEnum (2026-07-09): 'research-article' renamed to 'orig-research'. Registry vocab = SMPTE enum + 9 retained MSRBot values.",
+      "originalValue": "research-article",
+      "source": "resolved",
+      "updated": "2026-07-09T17:56:30.992Z",
+      "version": "articletype-conform@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J05687.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "year": "1971",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J05687.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J05687.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docId": "10.5594-J05687",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/J05687",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docLabel": "Journal of the SMPTE ( Volume: 80, Issue: 12, December 1971)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from journal title, volume, issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docTitle": "Measurement of the Velocity of Particles Emerging from a Plasma Flame by High-Speed Cine-Streak Photography",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J05687.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "doi": "10.5594/J05687",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J05687.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/J05687",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/J05687",
+      "source": "inferred",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "issn": {
+      "print": "0361-4573",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J05687.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J05687.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08182015 BACKFILE JOURNAL FRESH/smptej_80_12/MIJR15Vol80No12.xml)",
+      "source": "parsed",
+      "updated": "2026-06-16T16:11:59.617Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "Journal of the SMPTE",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "12",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J05687.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "pages": "951–958",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J05687.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publicationDate": "1971-12-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J05687.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08182015 BACKFILE JOURNAL FRESH/smptej_80_12/MIJR15Vol80No12.xml)",
+        "source": "parsed",
+        "updated": "2026-06-16T16:11:59.617Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J05687.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-J05687/bibr1-10.5594_J05687",
+        "orphan/10.5594-J05687/bibr2-10.5594_J05687",
+        "orphan/10.5594-J05687/bibr3-10.5594_J05687",
+        "orphan/10.5594-J05687/bibr4-10.5594_J05687",
+        "orphan/10.5594-J05687/bibr5-10.5594_J05687",
+        "orphan/10.5594-J05687/bibr6-10.5594_J05687",
+        "orphan/10.5594-J05687/bibr7-10.5594_J05687",
+        "orphan/10.5594-J05687/bibr8-10.5594_J05687"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteJournalRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T18:21:02.558Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/Journal%20of%20the%20SMPTE/80/12/4/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.411Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — journal articles default active",
+        "source": "inferred",
+        "updated": "2026-05-22T19:19:44.900Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "volume": "80",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J05687.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T19:19:44.900Z",
+      "version": "smpte-journal-article-nlm@v1"
+    }
+  }
+}

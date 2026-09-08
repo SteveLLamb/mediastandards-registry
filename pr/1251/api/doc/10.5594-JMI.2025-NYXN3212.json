@@ -1,0 +1,233 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-JMI.2025-NYXN3212",
+  "document": {
+    "abbrevTitle": "SMPTE Motion Imaging Jour.",
+    "abbrevTitle$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "abstract": "The 3rd edition of JPEG XS introduces the Temporal Differential Coding (TDC) profile, further improving the compression efficiency over the XS High profile. TDC adds a wavelet-domain temporal prediction block using a single compressed frame buffer to reduce correlation between successive frames, especially in static regions, without requiring motion compensation or complex algorithms. It preserves JPEG XS's key features: lightweight, fast compression with low latency, near-lossless quality, and low complexity. Experiments indicate that TDC significantly improves detail preservation and edge sharpness, with Peak Signal-to-Noise Ratio (PSNR) gains exceeding 10 dB in graphics, e-sports, gaming, and desktop videos. And, for high-motion content, TDC maintains at least the same performance as XS High. Compatible across Central Processing Units (CPUs), Graphical Processing Units (GPUs), Field Programmable Gate Arrays (FP-GAs), and Application-Specific Integrated Circuits (ASICs), TDC offers a seamless upgrade for existing JPEG XS ecosystems. This paper details TDC's technical aspects and demonstrates its performance benefits, emphasizing that latency and complexity remain unaffected.",
+    "abstract$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "authors": [
+      {
+        "name": "Tim Bruylants"
+      },
+      {
+        "name": "Ben Runyan"
+      },
+      {
+        "name": "Jean-Baptiste Lorent"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "copyright": {
+      "holder": "SMPTE",
+      "holder$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      },
+      "year": "2025",
+      "year$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docId": "10.5594-JMI.2025-NYXN3212",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docLabel": "MIJ 2025, Volume 134, Number 5 (pp. 27 to 34)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docTitle": "JPEG XS 3rd Edition: The New Temporal Differential Coding (TDC) Profile",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "doi": "10.5594/JMI.2025/NYXN3212",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "href": "https://doi.org/10.5594/JMI.2025/NYXN3212",
+    "href$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "issn": {
+      "electronic": "2160-2492",
+      "electronic$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      },
+      "print": "1545-0279",
+      "print$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "issn$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "journalAcronym": "MIJ",
+    "journalAcronym$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "journalTitle": "SMPTE Motion Imaging Journal",
+    "journalTitle$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "keywords": [
+      "JPEG",
+      "XS",
+      "Video Compression",
+      "Low Complexity",
+      "Low Latency",
+      "Visually Lossless",
+      "Low Power"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Long-tail keyword cleanup (keywordLongTailApply.js): prose/contentless terms dropped, acronym casing + typos fixed, duplicate variants folded; all surviving terms indexed in controlledKeywords.",
+      "source": "resolved",
+      "updated": "2026-07-14T16:29:38.680Z"
+    },
+    "number": "5",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "pages": "27–34",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publicationDate": "2025-09-01",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "medium",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-JMI.2025-NYXN3212/ref1",
+        "orphan/10.5594-JMI.2025-NYXN3212/ref2",
+        "orphan/10.5594-JMI.2025-NYXN3212/ref3",
+        "orphan/10.5594-JMI.2025-NYXN3212/ref4",
+        "orphan/10.5594-JMI.2025-NYXN3212/ref5",
+        "orphan/10.5594-JMI.2025-NYXN3212/ref6",
+        "orphan/10.5594-JMI.2025-NYXN3212/ref7",
+        "orphan/10.5594-JMI.2025-NYXN3212/ref8",
+        "orphan/10.5594-JMI.2025-NYXN3212/ref9",
+        "orphan/10.5594-JMI.2025-NYXN3212/ref10",
+        "orphan/10.5594-JMI.2025-NYXN3212/ref11",
+        "orphan/10.5594-JMI.2025-NYXN3212/ref12",
+        "orphan/10.5594-JMI.2025-NYXN3212/ref13",
+        "orphan/10.5594-JMI.2025-NYXN3212/ref14",
+        "orphan/10.5594-JMI.2025-NYXN3212/ref15",
+        "orphan/10.5594-JMI.2025-NYXN3212/ref16",
+        "orphan/10.5594-JMI.2025-NYXN3212/ref17"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from the FTXML NLM <back><ref-list> via extractFtxmlRefs.js (source doc mapped through its content_batch sibling).",
+        "source": "parsed",
+        "updated": "2026-08-10T17:55:35.307Z"
+      }
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+        "source": "parsed",
+        "updated": "2026-07-10T20:01:10.986Z"
+      }
+    },
+    "volume": "134",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
+      "source": "parsed",
+      "updated": "2026-07-10T20:01:10.986Z"
+    }
+  }
+}

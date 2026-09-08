@@ -1,0 +1,94 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "ISO.23003-1.2007",
+  "document": {
+    "abstract": "ISO/IEC 23003-1:2007 (MPEG Surround) is efficient technology for multi-channel audio compression. Rather than performing a discrete coding of the individual audio input channels, MPEG Surround captures the spatial image of a multi-channel audio signal into a compact set of parameters that are used to synthesize a high quality multi-channel representation from a transmitted downmix signal. MPEG Surround extends traditional techniques for coding of two or more channels in a way that provides several significant advantages in terms of compression efficiency and user benefits. Firstly, it allows the transmission of multi-channel audio at bitrates, which so far have been used for the transmission of monophonic audio. Secondly, by its underlying structure, the multi-channel audio signal is transmitted in a backward compatible way, i.e. the technology can be used to upgrade existing distribution infrastructures for stereo or mono audio content (radio channels, Internet streaming, music downloads, etc.) towards the delivery of multi-channel audio while retaining full compatibility with existing receivers.\nKey features of MPEG Surround are:\nAgnostic to the underlying compression scheme. MPEG Surround is flexible to extend virtually any audio compression scheme including PCM, towards multi-channel.\nHigh quality binaural (virtual surround) representation on stereo headphones. Additionally, the binaural processing can be enabled in the MPEG Surround encoder, supporting virtual surround on legacy stereo playback devices.\nThe MPEG Surround generated stereo downmix can be rendered compatible to legacy matrix surround systems. In addition, MPEG Surround offers an \"Enhanced Matrix Mode\" which achieves a higher quality than competing surround sound technologies.\nFor the typical MPEG Surround decoding operation modes, a low power decoding variant is available.\nNext to typical stereo to 5.1 channel operation, MPEG Surround is scalable to its number of input and output channels. Furthermore, upon decoding, the channel configuration can be matched to the reproduction capabilities.\nThe bit rate overhead for MPEG Surround is flexible, allowing scalability from low bitrate applications such as Internet radio to high quality applications such as digital TV broadcasting.",
+    "abstract$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-05T17:47:03.700Z"
+    },
+    "docId": "ISO.23003-1.2007",
+    "docId$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-05T17:47:03.700Z"
+    },
+    "docLabel": "ISO/IEC 23003-1:2007",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-05T17:47:03.700Z"
+    },
+    "docNumber": "23003",
+    "docNumber$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-05T17:47:03.700Z"
+    },
+    "docPart": "1",
+    "docPart$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-05T17:47:03.700Z"
+    },
+    "docTitle": "Information technology — MPEG audio technologies Part 1: MPEG Surround",
+    "docTitle$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-05T17:47:03.700Z"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-05T17:47:03.700Z"
+    },
+    "href": "https://www.iso.org/standard/44159.html",
+    "href$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-05T17:47:03.700Z"
+    },
+    "publicationDate": "2007-02-01",
+    "publicationDate$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-05T17:47:03.700Z"
+    },
+    "publisher": "ISO/IEC",
+    "publisher$meta": {
+      "confidence": "medium",
+      "source": "manual",
+      "updated": "2025-12-05T17:47:03.700Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-12-05T17:47:03.700Z"
+      },
+      "amended": true,
+      "amended$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-12-05T17:47:03.700Z"
+      },
+      "amendedBy": [
+        "ISO.23003-1.2007Amd1.2008",
+        "ISO.23003-1.2007Amd2.2008",
+        "ISO.23003-1.2007Amd3.2016",
+        "ISO.23003-1.2007Amd4.2017"
+      ],
+      "amendedBy$meta": {
+        "confidence": "medium",
+        "source": "manual",
+        "updated": "2025-12-05T17:47:03.700Z"
+      }
+    }
+  }
+}

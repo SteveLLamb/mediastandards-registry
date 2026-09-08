@@ -1,0 +1,208 @@
+[
+  {
+    "abstract": "WSDL is an XML format for describing network services as a set of endpoints operating on messages containing either document-oriented or procedure-oriented information. The operations and messages are described abstractly, and then bound to a concrete network protocol and message format to define an endpoint. Related concrete endpoints are combined into abstract endpoints (services). WSDL is extensible to allow description of endpoints and their messages regardless of what message formats or network protocols are used to communicate, however, the only bindings described in this document describe how to use WSDL in conjunction with SOAP 1.1, HTTP GET/POST, and MIME.",
+    "authors": [
+      {
+        "name": "Erik Christensen"
+      },
+      {
+        "name": "Francisco Curbera"
+      },
+      {
+        "name": "Greg Meredith"
+      },
+      {
+        "name": "Sanjiva Weerawarana"
+      }
+    ],
+    "docId": "W3C.wsdl.20010315",
+    "docLabel": "W3C WSDL 1.1",
+    "docTitle": "Web Services Description Language",
+    "docType": "Note",
+    "href": "https://www.w3.org/TR/2001/NOTE-wsdl-20010315",
+    "publicationDate": "2001-03-15",
+    "publisher": "W3C",
+    "status": {
+      "active": false,
+      "superseded": true,
+      "supersededBy": [
+        "W3C.xkms2.20050628"
+      ],
+      "latestVersion": false
+    },
+    "msiLatestAny": "W3C.wsdl.20070626",
+    "msiLatestBase": "W3C.wsdl.20070626",
+    "isLatestAny": false,
+    "docBase": "W3C|wsdl||",
+    "docBaseLabel": "W3C wsdl",
+    "isLatestBase": false,
+    "docVersion": [
+      {
+        "docId": "W3C.wsdl.20010315",
+        "docLabel": "W3C WSDL 1.1",
+        "href": "https://www.w3.org/TR/2001/NOTE-wsdl-20010315",
+        "publicationDate": "2001-03-15",
+        "status": {
+          "active": false,
+          "superseded": true,
+          "supersededBy": [
+            "W3C.xkms2.20050628"
+          ],
+          "latestVersion": false
+        },
+        "isLatestBase": false,
+        "__isNewestInBase": false
+      },
+      {
+        "docId": "W3C.wsdl.20070626",
+        "docLabel": "W3C WSDL 2.0",
+        "href": "http://www.w3.org/TR/2007/REC-wsdl20-20070626",
+        "publicationDate": "2007-06-26",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "SMPTE.AG02"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Superseded"
+  },
+  {
+    "abstract": "This document describes the Web Services Description Language Version 2.0 (WSDL 2.0), an XML language for describing Web services. This specification defines the core language which can be used to describe Web services based on an abstract model of what the service offers. It also defines the conformance criteria for documents in this language.",
+    "authors": [
+      {
+        "name": "Roberto Chinnici"
+      },
+      {
+        "name": "Jean-Jacques Moreau"
+      },
+      {
+        "name": "Arthur Ryman"
+      },
+      {
+        "name": "Sanjiva Weerawarana"
+      }
+    ],
+    "docId": "W3C.wsdl.20070626",
+    "docLabel": "W3C WSDL 2.0",
+    "docTitle": "Web Services Description Language (WSDL) Version 2.0 Part 1: Core Language",
+    "docType": "Note",
+    "href": "http://www.w3.org/TR/2007/REC-wsdl20-20070626",
+    "publicationDate": "2007-06-26",
+    "publisher": "W3C",
+    "resolvedHref": "https://www.w3.org/TR/2007/REC-wsdl20-20070626/",
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "W3C.wsdl.20070626",
+    "msiLatestBase": "W3C.wsdl.20070626",
+    "isLatestAny": true,
+    "docBase": "W3C|wsdl||",
+    "docBaseLabel": "W3C wsdl",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "W3C.wsdl.20010315",
+        "docLabel": "W3C WSDL 1.1",
+        "href": "https://www.w3.org/TR/2001/NOTE-wsdl-20010315",
+        "publicationDate": "2001-03-15",
+        "status": {
+          "active": false,
+          "superseded": true,
+          "supersededBy": [
+            "W3C.xkms2.20050628"
+          ],
+          "latestVersion": false
+        },
+        "isLatestBase": false,
+        "__isNewestInBase": false
+      },
+      {
+        "docId": "W3C.wsdl.20070626",
+        "docLabel": "W3C WSDL 2.0",
+        "href": "http://www.w3.org/TR/2007/REC-wsdl20-20070626",
+        "publicationDate": "2007-06-26",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "docDependancy": false,
+    "currentStatus": "Active"
+  },
+  {
+    "authors": [
+      {
+        "name": "Donald Eastlake"
+      },
+      {
+        "name": "Joseph Reagle"
+      },
+      {
+        "name": "David Solo"
+      },
+      {
+        "name": "Frederick Hirsch"
+      },
+      {
+        "name": "Thomas Roessler"
+      },
+      {
+        "name": "Kelvin Yiu"
+      },
+      {
+        "name": "Pratik Datta"
+      },
+      {
+        "name": "Scott Cantor"
+      }
+    ],
+    "docId": "W3C.xmldsig-core2.20150723",
+    "docLabel": "W3C XML DSig Core 2.0",
+    "docTitle": "XML Signature Syntax and Processing Version 2.0",
+    "docType": "Note",
+    "href": "https://www.w3.org/TR/2015/NOTE-xmldsig-core2-20150723/",
+    "publicationDate": "2015-07-23",
+    "publisher": "W3C",
+    "status": {
+      "active": true,
+      "latestVersion": true
+    },
+    "msiLatestAny": "W3C.xmldsig-core2.20150723",
+    "msiLatestBase": "W3C.xmldsig-core2.20150723",
+    "isLatestAny": true,
+    "docBase": "W3C|xmldsig-core|2|",
+    "docBaseLabel": "W3C xmldsig-core 2",
+    "isLatestBase": true,
+    "__isNewestInBase": true,
+    "docVersion": [
+      {
+        "docId": "W3C.xmldsig-core2.20150723",
+        "docLabel": "W3C XML DSig Core 2.0",
+        "href": "https://www.w3.org/TR/2015/NOTE-xmldsig-core2-20150723/",
+        "publicationDate": "2015-07-23",
+        "status": {
+          "active": true,
+          "latestVersion": true
+        },
+        "isLatestBase": true,
+        "__isNewestInBase": true
+      }
+    ],
+    "referencedBy": [
+      "SMPTE.ST2131.2026-05"
+    ],
+    "docDependancy": true,
+    "currentStatus": "Active"
+  }
+]

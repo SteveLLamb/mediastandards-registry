@@ -1,0 +1,237 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-J12916",
+  "document": {
+    "abbrevTitle": "J SMPE",
+    "abbrevTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12916.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "abstract": "The California Consumers Corporation of Los Angeles set aside one of its large ice-storage buildings to introduce to the studios a new method of making realistic snow scenes. The purpose of the ice-storage building was to furnish a low-temperature sound-stage, where water ice could be used for snow, and enable the cast's, breaths to become visible, as actually occurs in cold or wintry climates. Snow is manufactured on the low-temperature sound-stage by means of specially constructed portable blowers, grinding 50-pound blocks of ice and expelling through suitable nozzle a fine, aerated snow, directed to the set where and when needed. The introduction of Technicolor to the low-temperature sound-stage created many new problems in ventilation, due to the low temperature of the atmosphere and quantity of air movement needed to remove gases and smoke from the stage during shooting periods. The unusual heat load requirements necessitated the construction of external bunker systems to augment the existing refrigeration for color production. This was accomplished by the combined use of water ice and ammonia refrigeration in these bunkers, giving a total refrigerating capacity of approximately 650 tons in the system to chill 64,000 cfm of fresh air to 20° F.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12916.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "R. Van Slyker Enterprises, Los Angeles, Calif.",
+        "name": "R. Van Slyker"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Vocabulary conformance to SMPTE ContentTypeEnum (2026-07-09): 'research-article' renamed to 'orig-research'. Registry vocab = SMPTE enum + 9 retained MSRBot values.",
+      "originalValue": "research-article",
+      "source": "resolved",
+      "updated": "2026-07-09T17:56:30.992Z",
+      "version": "articletype-conform@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12916.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "year": "1941",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12916.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12916.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docId": "10.5594-J12916",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/J12916",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docLabel": "Journal of the Society of Motion Picture Engineers ( Volume: 36, Issue: 4, April 1941)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from venue title, volume/issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docTitle": "Hollywood's Low-Temperature Sound-Stage",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12916.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "doi": "10.5594/J12916",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12916.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/J12916",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/J12916",
+      "source": "inferred",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "issn": {
+      "print": "0097-5834",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12916.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12916.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/07302015 IBP DEPOSITS/Journal-256-Issues/smptej_36_4/MIJR15Vol36No4.xml)",
+      "source": "parsed",
+      "updated": "2026-06-16T18:14:32.753Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "Journal of the Society of Motion Picture Engineers",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "4",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12916.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "pages": "403–410",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12916.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publicationDate": "1941-04-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12916.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/07302015 IBP DEPOSITS/Journal-256-Issues/smptej_36_4/MIJR15Vol36No4.xml)",
+        "source": "parsed",
+        "updated": "2026-06-16T18:14:32.753Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12916.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/Journal%20of%20the%20Society%20of%20Motion%20Picture%20Engineers/36/4/9/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.423Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — journal papers default active",
+        "source": "inferred",
+        "updated": "2026-05-22T20:40:11.684Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "volume": "36",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J12916.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T20:40:11.684Z",
+      "version": "smpte-journal-article-nlm@v1"
+    }
+  }
+}

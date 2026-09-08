@@ -1,0 +1,299 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-J04287",
+  "document": {
+    "abbrevTitle": "SMPTE J",
+    "abbrevTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04287.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "abstract": "This article expands upon the keynote address presented by Roland J. Zavada at the 133rd SMPTE Technical Conference in Los Angeles, CA, on October 26, 1991. It first appeared in the Journal in March 1992 and is presented here to provide some historical insight into SMPTE as we begin the year 2000. Part II will appear in the February Journal.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04287.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "Eastman Kodak Co., Rochester, NY",
+        "name": "Roland J. Zavada"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from SMPTE canonical repository import (smpte-canonical-audit/canonicalLibrary.*.json); previous value was a placeholder",
+      "originalValue": "other",
+      "source": "parsed",
+      "updated": "2026-07-07T23:39:31.295Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04287.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "year": "2000",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04287.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04287.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docId": "10.5594-J04287",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/J04287",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docLabel": "SMPTE Journal ( Volume: 109, Issue: 1, January 2000)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from journal title, volume, issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docTitle": "“Managing” the Moving Image—From an Engineering Point of View—Part I",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04287.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "doi": "10.5594/J04287",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04287.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/J04287",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/J04287",
+      "source": "inferred",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "issn": {
+      "print": "0036-1682",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04287.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04287.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/07132015 BACKFILE FOR JOURNAL/smptej_109_1/MIJR15Vol109No1.xml)",
+      "source": "parsed",
+      "updated": "2026-06-16T00:32:03.060Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "SMPTE Journal",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "1",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04287.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "pages": "40–55",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04287.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publicationDate": "2000-01-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04287.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/07132015 BACKFILE FOR JOURNAL/smptej_109_1/MIJR15Vol109No1.xml)",
+        "source": "parsed",
+        "updated": "2026-06-16T00:32:03.060Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04287.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "10.5594-J03139",
+        "10.5594-J08332",
+        "10.5594-J05054",
+        "10.5594-J02408",
+        "10.5594-J07850",
+        "10.5594-J12717",
+        "10.5594-J04997",
+        "10.5594-J09331",
+        "10.5594-J01364",
+        "10.5594-J00522",
+        "10.5594-J06665",
+        "orphan/10.5594-J04287/bibr1-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr2-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr3-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr4-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr5-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr6-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr7-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr9-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr10-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr11-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr12-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr13-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr14-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr15-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr16-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr17-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr18-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr19-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr21-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr23-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr24-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr25-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr26-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr27-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr28-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr31-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr32-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr33-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr34-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr35-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr36-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr37-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr38-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr39-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr40-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr42-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr45-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr47-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr48-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr50-10.5594_J04287",
+        "orphan/10.5594-J04287/bibr52-10.5594_J04287"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteJournalRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T19:24:11.238Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/SMPTE%20Journal/109/1/10/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.409Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — journal articles default active",
+        "source": "inferred",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "volume": "109",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04287.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST2059-1.2020",
+  "document": {
+    "docId": "SMPTE.ST2059-1.2020",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2059-1/20201209-pub/",
+      "updated": "2025-10-26T17:02:20.514Z"
+    },
+    "docLabel": "SMPTE ST 2059-1:2020",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2059-1/20201209-pub/",
+      "updated": "2025-10-26T17:02:20.514Z"
+    },
+    "docNumber": "2059",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2059-1/20201209-pub/",
+      "updated": "2025-10-26T17:02:20.514Z"
+    },
+    "docPart": "1",
+    "docPart$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubPart meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2059-1/20201209-pub/",
+      "updated": "2025-10-26T17:02:20.514Z"
+    },
+    "docSuiteTitle": "Precision Time Protocol in Professional Broadcast Applications",
+    "docSuiteTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubSuiteTitle meta tag, or derived from wrapper title for PDF releases",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2025-12-12T21:30:55.656Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docTitle": "Generation and Alignment of Interface Signals to the SMPTE Epoch",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubTitle, or derived from wrapper title for PDF releases",
+      "originalValue": "Precision Time Protocol in Professional Broadcast Applications — Generation and Alignment of Interface Signals to the SMPTE Epoch",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2025-12-12T21:30:55.656Z",
+      "version": "extractDocs.js@commit:e5213a0e988e"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2059-1/20201209-pub/",
+      "updated": "2025-10-26T17:02:20.514Z"
+    },
+    "doi": "10.5594/SMPTE.ST2059-1.2020",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2059-1/20201209-pub/",
+      "updated": "2025-10-26T17:02:20.514Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST2059-1.2020",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st2059-1/20201209-pub/",
+      "updated": "2025-10-26T17:02:20.514Z"
+    },
+    "publicationDate": "2020-12-09",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2059-1/20201209-pub/",
+      "updated": "2025-10-26T17:02:20.514Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2059-1/20201209-pub/",
+      "updated": "2025-10-26T17:02:20.514Z"
+    },
+    "releaseTag": "20201209-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st2059-1/20201209-pub/",
+      "updated": "2025-10-26T17:02:20.514Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:02:20.514Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-26T17:02:20.514Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:02:20.514Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-26T17:02:20.514Z"
+      }
+    }
+  }
+}

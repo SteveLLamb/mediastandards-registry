@@ -1,0 +1,275 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "10.5594-J04375",
+  "document": {
+    "abbrevTitle": "SMPTE J",
+    "abbrevTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04375.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "abstract": "Video servers and high-bandwidth local area networks are rapidly being adopted in broadcast and professional video applications. As the emphasis shifts from tape-machine replacement to simplification or re-engineering of operational processes, the required systems become more complex and the need for methodical system analysis becomes more acute. This paper develops a model that connects basic video facility requirements to technology-specific parameters necessary to specify the throughput of digital video platforms and networks. Although the basic model is simple, it is quantitative and permits practical scenarios to be analyzed. We have applied this model to a few sample systems, ranging in complexity from simple disk server architectures to networks with complex topology.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04375.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "authors": [
+      {
+        "affiliation": "Tektronix, Inc., Beaverton, OR 97077.",
+        "bio": "Ying Ki Kwong has been with Tektronix since 1991. While serving as research scientist in the company's research labs, he became interested in video technology and joined the Video & Networking Division. He served as systems engineer and then as manager of applications marketing for the Profile video server product line. Currently, Kwong is the manager of strategic technology partnerships. Kwong holds a Ph.D. in applied physics from Cornell University. He has published 15 articles in professional journals and has a patent pending in multimedia communication. He also participates in SMPTE standard activities.",
+        "name": "Ying Ki Kwong"
+      },
+      {
+        "affiliation": "Tektronix, Inc., Beaverton, OR 97077.",
+        "bio": "John Cvetko has been with Tektronix since 1994. Prior to working with Tektronix he was an engineer in the telecommunications field. His experience in global computer networking has been applied to the broadcast industry as broadcasters begin to develop high-speed video networks. While developing a video conferencing system for Tektronix he became interested in broadcast video, specifically, storage and networking of high bandwidth applications. As a corporate systems engineer at Tektronix he has had the opportunity to work on projects that lead the industry in the areas of networking, archive, and media management. Cvetko holds a B.A. from Eckerd College and has a patent pending in multimedia communication.",
+        "name": "John Cvetko"
+      },
+      {
+        "affiliation": "Tektronix, Inc., Beaverton, OR 97077.",
+        "bio": "Kylo Ginsberg is a design engineer at Tektronix. He has a B.A. in Computer Science and an M.A. in Rhetoric from the University of California at Berkeley, and an M.A. in English from Duke University.",
+        "name": "Kylo Ginsberg"
+      }
+    ],
+    "authors$meta": {
+      "confidence": "high",
+      "note": "Object form (schema 2.3.0) migrated from string form via migrateAuthorsToObjectForm.js; bio/affiliation backfilled from _source/SMPTE/HIGHWIRE/ NLM <contrib-group>+<aff>+<bio>",
+      "source": "parsed",
+      "updated": "2026-06-23T00:04:25.562Z",
+      "version": "authors-migrate-object-form@v1"
+    },
+    "contentType": "orig-research",
+    "contentType$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from SMPTE canonical repository import (smpte-canonical-audit/canonicalLibrary.*.json); previous value was a placeholder",
+      "originalValue": "other",
+      "source": "parsed",
+      "updated": "2026-07-07T23:39:31.295Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04375.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "year": "1998",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04375.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04375.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docId": "10.5594-J04375",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Derived from DOI 10.5594/J04375",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docLabel": "SMPTE Journal ( Volume: 107, Issue: 11, November 1998)",
+    "docLabel$meta": {
+      "confidence": "medium",
+      "note": "Composed from journal title, volume, issue and date",
+      "source": "inferred",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docTitle": "Applications of Digital Video: Bandwidth Requirements on Shared Media Servers and Networks",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04375.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "docType": "Journal Article",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "NLM <article> — SMPTE journal paper",
+      "source": "inferred",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "doi": "10.5594/J04375",
+    "doi$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04375.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "href": "https://doi.org/10.5594/J04375",
+    "href$meta": {
+      "confidence": "high",
+      "note": "Constructed from DOI 10.5594/J04375",
+      "source": "inferred",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "issn": {
+      "print": "0036-1682",
+      "print$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04375.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "issn$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04375.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "journalAcronym": "MIJR",
+    "journalAcronym$meta": {
+      "confidence": "high",
+      "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08182015 BACKFILE JOURNAL FRESH/smptej_107_11/MIJR15Vol107No11.xml)",
+      "source": "parsed",
+      "updated": "2026-06-16T16:11:59.617Z",
+      "version": "smpte-journal-issue-xml@v1"
+    },
+    "journalTitle": "SMPTE Journal",
+    "journalTitle$meta": {
+      "confidence": "high",
+      "note": "Era-accurate journal title from SMPTE canonical repository (periodical parent at time of publication) (smpte-canonical-audit/canonicalLibrary.*.json)",
+      "originalValue": null,
+      "source": "parsed",
+      "updated": "2026-07-08T00:35:38.133Z",
+      "version": "smpte-canonical-repo@v1"
+    },
+    "number": "11",
+    "number$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04375.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "pages": "970–977",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04375.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publicationDate": "1998-11-01",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Day absent in NLM source — padded to 01",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Normalised to registry \"SMPTE\" convention from NLM publisher-name (The Society of Motion Picture and Television Engineers)",
+      "source": "inferred",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04375.xml)",
+        "source": "parsed",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from journal_metadata XML (_source/SMPTE/APTARA/DL Project Files/08182015 BACKFILE JOURNAL FRESH/smptej_107_11/MIJR15Vol107No11.xml)",
+        "source": "parsed",
+        "updated": "2026-06-16T16:11:59.617Z",
+        "version": "smpte-journal-issue-xml@v1"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04375.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    },
+    "references": {
+      "bibliographic": [
+        "10.5594-J15791",
+        "10.5594-J17645",
+        "orphan/10.5594-J04375/bibr1-10.5594_J04375",
+        "orphan/10.5594-J04375/bibr2-10.5594_J04375",
+        "orphan/10.5594-J04375/bibr3-10.5594_J04375",
+        "orphan/10.5594-J04375/bibr4-10.5594_J04375",
+        "orphan/10.5594-J04375/bibr5-10.5594_J04375",
+        "orphan/10.5594-J04375/bibr6-10.5594_J04375",
+        "orphan/10.5594-J04375/bibr7-10.5594_J04375",
+        "orphan/10.5594-J04375/bibr8-10.5594_J04375",
+        "orphan/10.5594-J04375/bibr9-10.5594_J04375",
+        "orphan/10.5594-J04375/bibr10-10.5594_J04375",
+        "orphan/10.5594-J04375/bibr11-10.5594_J04375",
+        "orphan/10.5594-J04375/bibr12-10.5594_J04375",
+        "orphan/10.5594-J04375/bibr13-10.5594_J04375",
+        "orphan/10.5594-J04375/bibr14-10.5594_J04375",
+        "orphan/10.5594-J04375/bibr15-10.5594_J04375"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from NLM <ref-list> via extractSmpteJournalRefs.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-07-06T18:21:02.558Z"
+      }
+    },
+    "resolvedHref": "https://journal.smpte.org/periodicals/SMPTE%20Journal/107/11/13/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Backfilled from url.validate report #resolvedHref",
+      "originalValue": null,
+      "source": "resolved",
+      "updated": "2026-06-19T20:59:07.409Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "medium",
+        "note": "No explicit status in NLM source — journal articles default active",
+        "source": "inferred",
+        "updated": "2026-05-22T18:56:53.245Z",
+        "version": "smpte-journal-article-nlm@v1"
+      }
+    },
+    "volume": "107",
+    "volume$meta": {
+      "confidence": "high",
+      "note": "Parsed from NLM article XML (_source/SMPTE/HIGHWIRE/Source Bak/smptej/10.5594_J04375.xml)",
+      "source": "parsed",
+      "updated": "2026-05-22T18:56:53.245Z",
+      "version": "smpte-journal-article-nlm@v1"
+    }
+  }
+}

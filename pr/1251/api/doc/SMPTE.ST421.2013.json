@@ -1,0 +1,328 @@
+{
+  "$schema": "/api/schemas/documents.schema.json",
+  "apiVersion": "1.0.0",
+  "generatedAt": "2026-09-08T17:21:57.675Z",
+  "sourcePath": "src/main/data/docs",
+  "docId": "SMPTE.ST421.2013",
+  "document": {
+    "abstract": "This document defines the bitstream syntax and semantics for compressed video data in VC-1 format, and specifies constraints that are required for conformant bitstreams. It also describes the complete process required to decode the bitstream. The compression algorithm is not specified in this standard. The video formats supported by VC-1 include progressive and interlaced video sampled in the form of Y luma samples and C<inf>b</inf>, C<inf>r</inf> color-difference in 8-bit per component sample values resulting from a 4:2:0 sampling grid. The decoding process outputs 8-bit per component video samples corresponding to the original 4:2:0 sampling grid. The display rendering process by which decoded Y, C<inf>b</inf>, C<inf>r</inf> samples are converted to a visible image or to a video output signal in a complete decoding system or device are not specified in VC-1. A VC-1 bitstream may convey additional metadata and user data which shall be accounted for in the buffer model. Metadata included in VC-1 streams is not used by the decoding process, but is passed to the display rendering process for the identification and reconstruction of the sampled video format, sample aspect ratio, color space, etc.",
+    "abstract$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2013_1/st0421-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.860Z"
+    },
+    "approvalDate": "2013-10-08",
+    "approvalDate$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json); Zoho is canonical for SMPTE standards metadata, registry value overwritten",
+      "originalValue": "2013",
+      "overridden": true,
+      "source": "parsed",
+      "updated": "2026-06-15T20:27:42.872Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "copyright": {
+      "holder": "Society of Motion Picture and Television Engineers, Inc.",
+      "holder$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2013_1/st0421-2013.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.860Z"
+      },
+      "year": "2013",
+      "year$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2013_1/st0421-2013.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.860Z"
+      }
+    },
+    "copyright$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2013_1/st0421-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.860Z"
+    },
+    "docId": "SMPTE.ST421.2013",
+    "docId$meta": {
+      "confidence": "high",
+      "note": "Calculated from parsed/inferred metadata",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st421/20131008-pub/",
+      "updated": "2025-10-21T04:40:51.268Z"
+    },
+    "docLabel": "SMPTE ST 421:2013",
+    "docLabel$meta": {
+      "confidence": "high",
+      "note": "Constructed from parsed/inferred typenumber/number/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st421/20131008-pub/",
+      "updated": "2025-10-21T04:40:51.268Z"
+    },
+    "docNumber": "421",
+    "docNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubNumber meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st421/20131008-pub/",
+      "updated": "2025-10-21T04:40:51.268Z"
+    },
+    "docTitle": "VC-1 Compressed Video Bitstream Format and Decoding Process",
+    "docTitle$meta": {
+      "confidence": "high",
+      "note": "Concatenated suite title and publication title",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st421/20131008-pub/",
+      "updated": "2025-10-21T04:40:51.268Z"
+    },
+    "docType": "Standard",
+    "docType$meta": {
+      "confidence": "high",
+      "note": "Publication type parsed from HTML",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st421/20131008-pub/",
+      "updated": "2025-10-21T04:40:51.268Z"
+    },
+    "doi": "10.5594/SMPTE.ST421.2013",
+    "doi$meta": {
+      "confidence": "medium",
+      "note": "Constructed from parsed/inferred type/date",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st421/20131008-pub/",
+      "updated": "2025-10-21T04:40:51.268Z"
+    },
+    "familyId": "421",
+    "familyId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2013_1/st0421-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.860Z"
+    },
+    "group": "smpte-10e-tc",
+    "group$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2013_1/st0421-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.860Z"
+    },
+    "href": "https://doi.org/10.5594/SMPTE.ST421.2013",
+    "href$meta": {
+      "confidence": "high",
+      "note": "URL generated and verified via redirect resolution",
+      "originalValue": null,
+      "source": "resolved",
+      "sourceUrl": "https://pub.smpte.org/doc/st421/20131008-pub/",
+      "updated": "2025-10-21T04:40:51.268Z"
+    },
+    "icsCodes": [
+      {
+        "code": "33.160.01",
+        "description": "Audio, video and audiovisual systems in general"
+      },
+      {
+        "code": "33.170",
+        "description": "Television and radio broadcasting"
+      }
+    ],
+    "icsCodes$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2013_1/st0421-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.860Z"
+    },
+    "isbn": "978-1-61482-770-2",
+    "isbn$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2013_1/st0421-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.860Z"
+    },
+    "keywords": [
+      "Communication",
+      "Networking and Broadcast Technologies",
+      "Television",
+      "Compression"
+    ],
+    "keywords$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2013_1/st0421-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.860Z"
+    },
+    "numberOfPages": "493",
+    "numberOfPages$meta": {
+      "confidence": "high",
+      "note": "Cross-filled from Zoho standards export (_source/SMPTE/Zoho/SMPTE Standards Document Zoho Export 2026-05-21.json)",
+      "source": "parsed",
+      "updated": "2026-06-15T20:12:21.844Z",
+      "version": "smpte-zoho-standards@v1"
+    },
+    "pages": "i–493",
+    "pages$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2013_1/st0421-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.860Z"
+    },
+    "productNumber": "SSD001745",
+    "productNumber$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2013_1/st0421-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.860Z"
+    },
+    "publicationDate": "2013-10-08",
+    "publicationDate$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML pubDateTime meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st421/20131008-pub/",
+      "updated": "2025-10-21T04:40:51.268Z"
+    },
+    "publisher": "SMPTE",
+    "publisher$meta": {
+      "confidence": "high",
+      "note": "Parsed from HTML publisher meta tag",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st421/20131008-pub/",
+      "updated": "2025-10-21T04:40:51.268Z"
+    },
+    "publisherLocation": {
+      "city": "White Plains, NY",
+      "city$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2013_1/st0421-2013.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.860Z"
+      },
+      "country": "USA",
+      "country$meta": {
+        "confidence": "high",
+        "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2013_1/st0421-2013.xml)",
+        "source": "parsed",
+        "updated": "2026-05-12T21:55:08.860Z"
+      }
+    },
+    "publisherLocation$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2013_1/st0421-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.860Z"
+    },
+    "references": {
+      "bibliographic": [
+        "ISO.13818-2.2000",
+        "SMPTE.RP227",
+        "SMPTE.RP186",
+        "SMPTE.ST328.2000",
+        "ISO.14496-10",
+        "R-REC-BT.1358",
+        "T-REC-H.320",
+        "T-REC-H.263",
+        "orphan/SMPTE.ST421.2013/ref-bib-1",
+        "orphan/SMPTE.ST421.2013/ref-bib-3",
+        "orphan/SMPTE.ST421.2013/ref-bib-8",
+        "orphan/SMPTE.ST421.2013/ref-bib-9"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Resolved from sibling -ref.xml via resolveSmpteSourceRefs.v2.js (orphan-slug-mint)",
+        "source": "parsed",
+        "updated": "2026-06-22T23:05:50.315Z"
+      },
+      "normative": [
+        "ISO.13818-1.2000",
+        "SMPTE.ST274.2008",
+        "SMPTE.ST293.2003",
+        "SMPTE.ST296.2012",
+        "R-REC-BT.17001",
+        "R-REC-BT.601-5",
+        "R-REC-BT.709-5",
+        "R-REC-BT.1361"
+      ],
+      "normative$meta": {
+        "confidence": "high",
+        "note": "Extracted from sibling -ref.xml via extractSmpteSourceRefs.js",
+        "source": "parsed",
+        "updated": "2026-05-18T23:48:48.871Z"
+      }
+    },
+    "releaseTag": "20131008-pub",
+    "releaseTag$meta": {
+      "confidence": "high",
+      "note": "Release tag parsed from URL folder structure",
+      "originalValue": null,
+      "source": "parsed",
+      "sourceUrl": "https://pub.smpte.org/doc/st421/20131008-pub/",
+      "updated": "2025-10-21T04:40:51.268Z"
+    },
+    "resolvedHref": "https://pub.smpte.org/doc/st421/20131008-pub/",
+    "resolvedHref$meta": {
+      "confidence": "high",
+      "note": "Final URL resolved via URL redirect verification",
+      "originalValue": "https://my.smpte.org/s/product-details?id=a1BVR0000007Nfz",
+      "overridden": true,
+      "source": "resolved",
+      "updated": "2025-10-30T22:52:30.959Z",
+      "version": "extractDocs.js@commit:ee2844fb1cf2"
+    },
+    "standardId": "20829",
+    "standardId$meta": {
+      "confidence": "high",
+      "note": "Parsed from sibling XML (_source/SMPTE/APTARA/DL Project Files/08262015 STANDARDS REVISED DEPOSIT/smptes_st-421-2013_1/st0421-2013.xml)",
+      "source": "parsed",
+      "updated": "2026-05-12T21:55:08.860Z"
+    },
+    "status": {
+      "active": true,
+      "active$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s) and other status values",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-21T04:40:51.268Z"
+      },
+      "amended": false,
+      "amended$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #amendments",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-21T04:40:51.268Z"
+      },
+      "latestVersion": true,
+      "latestVersion$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-21T04:40:51.268Z"
+      },
+      "stabilized": true,
+      "stabilized$meta": {
+        "confidence": "high",
+        "note": "Parsed from wrapper #state",
+        "originalValue": null,
+        "source": "parsed",
+        "updated": "2025-10-21T04:40:51.268Z"
+      },
+      "superseded": false,
+      "superseded$meta": {
+        "confidence": "high",
+        "note": "Calculated from the releaseTag(s)",
+        "originalValue": null,
+        "source": "resolved",
+        "updated": "2025-10-21T04:40:51.268Z"
+      }
+    }
+  }
+}
