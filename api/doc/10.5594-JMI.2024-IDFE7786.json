@@ -1,7 +1,7 @@
 {
   "$schema": "/api/schemas/documents.schema.json",
   "apiVersion": "1.0.0",
-  "generatedAt": "2026-09-01T10:24:55.582Z",
+  "generatedAt": "2026-09-08T16:54:34.061Z",
   "sourcePath": "src/main/data/docs",
   "docId": "10.5594-JMI.2024-IDFE7786",
   "document": {
@@ -164,6 +164,42 @@
       "note": "Ingested from SMPTE canonical content_batch via ingestNlmCanonicalDocs.js",
       "source": "parsed",
       "updated": "2026-07-10T20:01:10.986Z"
+    },
+    "references": {
+      "bibliographic": [
+        "orphan/10.5594-JMI.2024-IDFE7786/ref1",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref2",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref3",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref4",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref5",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref6",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref7",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref8",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref9",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref10",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref11",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref12",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref13",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref14",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref15",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref16",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref17",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref18",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref19",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref20",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref21",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref22",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref23",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref24",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref25",
+        "orphan/10.5594-JMI.2024-IDFE7786/ref26"
+      ],
+      "bibliographic$meta": {
+        "confidence": "medium",
+        "note": "Extracted from the FTXML NLM <back><ref-list> via extractFtxmlRefs.js (source doc mapped through its content_batch sibling).",
+        "source": "parsed",
+        "updated": "2026-08-10T17:55:35.307Z"
+      }
     },
     "status": {
       "active": true,
